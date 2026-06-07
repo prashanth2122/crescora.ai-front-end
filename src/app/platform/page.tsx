@@ -9,6 +9,7 @@ import { WorkflowVisual } from "@/components/site/workflow-visual";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { CheckCircle2 } from "lucide-react";
 
 export const metadata = siteContent.platform.metadata;
 
@@ -50,9 +51,10 @@ export default function PlatformPage() {
               <h3 className="mt-4 text-2xl font-semibold tracking-tight text-zinc-950">{page.team.title}</h3>
               <div className="mt-6 space-y-3">
                 {trustPoints.map((point) => (
-                  <p key={point} className="text-sm leading-7 text-zinc-700">
-                    {point}
-                  </p>
+                  <div key={point} className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
+                    <p className="text-sm leading-7 text-zinc-700">{point}</p>
+                  </div>
                 ))}
               </div>
             </CardContent>

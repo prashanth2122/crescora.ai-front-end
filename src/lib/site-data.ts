@@ -3,34 +3,34 @@ import { industriesSeo } from "@/lib/india-seo-data";
 
 export const { site, navigation, footerGroups } = siteContent;
 
-export const homepagePainPoints = siteContent.homepage.painPoints;
+export const homepagePainPoints = siteContent.homepage.pain.cards;
 
 export const homepageOutcomes = siteContent.homepage.outcomes.items;
 
 export const homepageCapabilities = [
   {
     title: "Guided enquiry handling",
-    text: "Keep every client enquiry moving with a repeatable path from first reply to booked next step.",
+    text: "Keep every enquiry moving through clear questions, reply paths, and next steps.",
   },
   {
     title: "Multi-channel response",
-    text: "Handle WhatsApp, web chat, voice, and team inboxes without losing the thread of the conversation.",
+    text: "Handle WhatsApp, website chat, and other customer messages without losing conversation context.",
   },
   {
     title: "Human review and escalation",
-    text: "Route sensitive, complex, or high-value cases to the right person with context intact.",
+    text: "Route sensitive, complex, or high-value cases to the right person with full context.",
   },
   {
     title: "Consistent business responses",
-    text: "Keep replies aligned to your business rules, offers, and approved response patterns.",
+    text: "Keep replies aligned with your business rules, offers, and approved response patterns.",
   },
   {
     title: "Connected follow-up actions",
-    text: "Update records, create tasks, and trigger reminders when a step needs to move forward.",
+    text: "Update records, create tasks, trigger reminders, and move the next step forward.",
   },
   {
     title: "Progress visibility",
-    text: "Track response speed, open items, and outcome status in a way the team can act on.",
+    text: "Track response speed, open items, handovers, and outcomes your team can act on.",
   },
 ] as const;
 
@@ -42,65 +42,32 @@ export const industryCards = industriesSeo.map((industry) => ({
   text: industry.description,
 }));
 
-export const useCases = [
-  {
-    title: "WhatsApp Automation",
-    slug: "whatsapp-automation",
-    href: "/use-cases/whatsapp-automation",
-    text: "Turn WhatsApp enquiries into automated business workflows with qualification, booking, reminders, follow-up, and escalation.",
-  },
-  {
-    title: "Appointment Booking",
-    slug: "appointment-booking-automation",
-    href: "/use-cases/appointment-booking-automation",
-    text: "Reduce back-and-forth by automating availability checks, confirmation, reminders, and rescheduling.",
-  },
-  {
-    title: "Payment Follow-Up",
-    slug: "payment-follow-up-automation",
-    href: "/use-cases/payment-follow-up-automation",
-    text: "Send structured payment reminders and escalate unresolved cases to the right team.",
-  },
-  {
-    title: "Document Collection",
-    slug: "document-collection-automation",
-    href: "/use-cases/document-collection-automation",
-    text: "Request, collect, and follow up on documents without manual chasing.",
-  },
-  {
-    title: "Customer Support",
-    slug: "customer-support-automation",
-    href: "/use-cases/customer-support-automation",
-    text: "Handle repetitive support queries and route complex tickets with context.",
-  },
-  {
-    title: "Human Handoff",
-    slug: "human-handoff-automation",
-    href: "/use-cases/human-handoff-automation",
-    text: "Move conversations to humans with full history and the right next action.",
-  },
-] as const;
+export const useCases = siteContent.useCasesIndex.cards;
 
 export const pricingPackages = [
   {
+    label: "FIRST WORKFLOW",
     title: "Starter",
-    bestFor: "First project rollout",
-    text: "Launch one or two focused client workflows to prove value quickly.",
+    bestFor: "First pilot, lead capture, FAQ, or booking workflow.",
+    includes: ["One focused workflow", "Basic setup and testing", "Demo walkthrough"],
   },
   {
+    label: "GROWING OPERATIONS",
     title: "Growth",
-    bestFor: "Expanding operations",
-    text: "Scale into multiple client journeys with stronger follow-up and wider coverage.",
+    bestFor: "Teams handling repeated enquiries across sales, support, or booking.",
+    includes: ["Multiple workflows", "Stronger follow-ups and reminders", "Wider coverage"],
   },
   {
+    label: "CROSS-TEAM DELIVERY",
     title: "Business",
-    bestFor: "Cross-team delivery",
-    text: "Expand into more teams and more routes for enquiries, follow-ups, and handoffs.",
+    bestFor: "Sales, support, operations, admissions, and admin teams.",
+    includes: ["Multiple teams and routes", "Handoffs and connected systems", "Reporting and visibility"],
   },
   {
+    label: "COMPLEX ROLLOUTS",
     title: "Enterprise",
-    bestFor: "Complex rollouts",
-    text: "Support larger teams, custom requirements, and broader rollout planning.",
+    bestFor: "Multi-location, process-heavy, or custom integration requirements.",
+    includes: ["Custom workflows", "Advanced integrations", "Rollout planning and support"],
   },
 ] as const;
 
@@ -109,11 +76,11 @@ export const faqItems = siteContent.homepage.faq.items;
 export const leadFormOptions = siteContent.leadForm.options;
 
 export const homepageFlowSteps = [
-  "Customer enquiry received",
-  "Intent detected",
-  "Workflow started",
-  "Booking/payment/document step completed",
-  "Reminder scheduled",
-  "Human handoff available",
-  "Outcome logged",
+  "New customer enquiry received",
+  "Bot understands customer need",
+  "Lead details captured",
+  "Booking, payment, or document step completed",
+  "Follow-up reminder scheduled",
+  "Sales or support team notified",
+  "Outcome tracked in dashboard",
 ] as const;

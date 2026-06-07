@@ -27,12 +27,12 @@ export const siteContent = {
   site: {
     name: "Crescora AI",
     product: "FLOW",
-    productFull: "FLOW by Crescora",
+    productFull: "FLOW by Crescora AI",
     legalName: "Crescora",
     seoTitle: "FLOW Automation for Customer Conversations & Workflows",
     tagline: "Book more client projects from faster enquiry handling and follow-ups.",
     description:
-      "FLOW by Crescora helps client businesses turn enquiries into booked calls, clear follow-ups, and completed projects across WhatsApp, web chat, voice, and team inboxes.",
+      "FLOW by Crescora AI helps client businesses turn enquiries into booked calls, clear follow-ups, and completed projects across WhatsApp, web chat, voice, and team inboxes.",
     marketFocus:
       "India-led, about 90% focused on India, with the remaining 10% open to worldwide customers.",
   },
@@ -43,14 +43,14 @@ export const siteContent = {
       closeOverlayLabel: "Close menu overlay",
     },
     footer: {
-      intro: "India-led, premium in presentation, and built for businesses that need practical client project flows across customer operations.",
+      intro: "Built for Indian businesses that want practical automation across enquiries, bookings, follow-ups, support, payments, and operations.",
       allRightsReserved: "All rights reserved.",
       companyReferenceLabel: "Company reference:",
       productLabel: "Product:",
     },
     workflowVisual: {
-      eyebrow: "FLOW project flow",
-      title: "Client enquiry to completed project step",
+      eyebrow: "FLOW automation journey",
+      title: "Customer enquiry to completed workflow",
       badge: "Business flow",
       stepLabel: "Step",
     },
@@ -81,7 +81,7 @@ export const siteContent = {
       workflowDesign: "Workflow design",
       workflowDesignTitle: "A typical rollout starts with the highest-friction client path.",
       workflowDesignDescription:
-        "FLOW moves from first reply to next action to handoff while keeping the conversation clear for staff.",
+        "FLOW moves from first reply to next action to handover while keeping the conversation clear for staff.",
       operationalControls: "Operational controls",
       whatImproves: "What improves",
       rollout: "Rollout",
@@ -120,6 +120,7 @@ export const siteContent = {
       links: [
         { label: "Hospitals", href: "/industries/hospitals" },
         { label: "Clinics", href: "/industries/clinics" },
+        { label: "Education", href: "/industries/education" },
         { label: "Real Estate", href: "/industries/real-estate" },
         { label: "Support Teams", href: "/industries/support-teams" },
         { label: "Service Businesses", href: "/industries/service-businesses" },
@@ -131,7 +132,7 @@ export const siteContent = {
         { label: "About", href: "/about" },
         { label: "Contact", href: "/contact" },
         { label: "Blog", href: "/blog" },
-        { label: "Proof", href: "/resources" },
+        { label: "Pilot Program", href: "/proof" },
       ],
     },
     {
@@ -145,8 +146,8 @@ export const siteContent = {
     },
   ] as const,
   ctas: {
-    bookProjectDemo: { label: "Book Project Demo", href: "/contact" },
-    requestScopeCall: { label: "Request Scope Call", href: "/contact" },
+    bookProjectDemo: { label: "Book Free Demo", href: "/contact" },
+    requestScopeCall: { label: "Discuss My Workflow", href: "/contact" },
     talkToSales: { label: "Talk to Sales", href: "/contact" },
     requestDemo: { label: "Request Demo", href: "/contact" },
     requestWhatsAppWorkflowDemo: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
@@ -157,51 +158,135 @@ export const siteContent = {
     viewBlog: { label: "View Blog", href: "/blog" },
     viewTemplates: { label: "View Industry Templates", href: "/templates" },
     findMyUseCase: { label: "Find My Use Case", href: "/contact" },
+    getProjectScope: { label: "Get Project Scope", href: "/contact" },
     openComparison: { label: "Open comparison", href: "#" },
-    openProofPage: { label: "Open proof page", href: "#" },
-    openUseCase: { label: "Open use case", href: "#" },
+    openProofPage: { label: "Open workflow example →", href: "#" },
+    openUseCase: { label: "Open use case →", href: "#" },
     seePricing: { label: "See Pricing", href: "/pricing" },
     viewWorkflow: { label: "View workflows", href: "#" },
-    viewIndustryWorkflow: { label: "View Industry Workflows", href: "#" },
+    viewIndustryWorkflow: { label: "View Industry Workflows", href: "/industries" },
   } as const,
   homepage: {
     hero: {
       badge: "Crescora AI presents FLOW",
-      title: "Automate customer conversations, workflows, and follow-ups.",
+      title: "Automate customer enquiries, WhatsApp follow-ups, and business workflows.",
       description:
-        "FLOW by Crescora helps Indian businesses automate customer conversations, bookings, follow-ups, support, payments, and workflow operations across WhatsApp, web chat, voice, and team inboxes.",
+        "FLOW by Crescora AI helps Indian businesses capture leads, answer repeated questions, book appointments, collect documents, confirm payments, and hand over complex cases to the right team.",
       builtForLabel: "Built for",
       builtForText:
-        "Hospitals, clinics, real estate teams, support teams, and service businesses.",
+        "Hospitals, clinics, real estate teams, education businesses, support teams, and service companies.",
       stats: [
         { value: "70-90%", label: "repetitive customer workflows automated" },
         { value: "5", label: "first-release industries prioritized" },
         { value: "4", label: "pricing packages with clear growth paths" },
       ],
     },
-    painPoints: [
-      "Missed customer leads",
-      "Manual WhatsApp replies",
-      "Repetitive support questions",
-      "Appointment chaos",
-      "Payment and document delays",
-      "No visibility into team performance",
+    painSpotlights: [
+      {
+        title: "Missed customer leads",
+        text: "Website and WhatsApp enquiries go unanswered when your team is busy or offline.",
+      },
+      {
+        title: "Manual WhatsApp follow-ups",
+        text: "Staff spend hours repeating the same answers about pricing, availability, and booking.",
+      },
+      {
+        title: "Repetitive support questions",
+        text: "Your team keeps typing simple answers instead of focusing on higher-value customers.",
+      },
     ],
     pain: {
       eyebrow: "Pain",
       title: "Your business is not losing customers because of demand. It is losing them because of delay.",
       description:
         "Every missed reply, delayed follow-up, repeated question, manual booking, pending payment, and forgotten lead creates revenue leakage. FLOW turns these gaps into automated workflows.",
-      cardText:
-        "FLOW structures the follow-up or workflow that is otherwise handled manually.",
-      warningText:
-        "Delays and manual handling create revenue leakage, operational drag, and poor customer experience.",
+      cards: [
+        {
+          title: "Missed customer leads",
+          text: "Delays and manual handling create revenue leakage, operational drag, and poor customer experience.",
+        },
+        {
+          title: "Manual WhatsApp follow-ups",
+          text: "Teams spend hours repeating the same answers instead of moving the conversation forward.",
+        },
+        {
+          title: "Repetitive support questions",
+          text: "Repeated questions keep piling up and slow the team down across every channel.",
+        },
+        {
+          title: "Appointment booking chaos",
+          text: "Slots, confirmations, and reschedules stay fragmented across calls, chats, and reminders.",
+        },
+        {
+          title: "Payment and document delays",
+          text: "Reminders, payment checks, and document follow-ups keep slipping through the cracks.",
+        },
+        {
+          title: "No visibility into team performance",
+          text: "Owners cannot easily see what converted, what stalled, or what needs attention next.",
+        },
+      ],
+    },
+    automation: {
+      eyebrow: "What FLOW automates",
+      title: "Start with workflows that move revenue, service, and follow-up forward.",
+      description:
+        "Use FLOW to standardize the customer journeys your team already handles manually, then expand automation once the process is proven.",
+      cards: [
+        {
+          title: "Lead capture and qualification",
+          text: "Capture enquiries from web and WhatsApp, ask the right questions, and route high-intent leads to your team.",
+        },
+        {
+          title: "WhatsApp enquiry and follow-up automation",
+          text: "Answer common questions, share next steps, and continue follow-ups even after business hours.",
+        },
+        {
+          title: "Appointment booking",
+          text: "Check availability, confirm slots, send reminders, and reduce back-and-forth calls for every booking.",
+        },
+        {
+          title: "FAQ and support automation",
+          text: "Resolve repeated questions quickly and escalate complex issues with full context.",
+        },
+        {
+          title: "Document collection",
+          text: "Request IDs, forms, reports, and documents without repeated manual follow-ups.",
+        },
+        {
+          title: "Payment confirmation",
+          text: "Send payment reminders, capture status updates, and move unresolved cases to your team.",
+        },
+        {
+          title: "Human handover",
+          text: "Escalate sensitive, high-value, or complex cases with full history and a clear next action.",
+        },
+        {
+          title: "CRM and API sync",
+          text: "Send leads, bookings, payments, and support details to your CRM or internal systems.",
+        },
+      ],
+    },
+    pilot: {
+      eyebrow: "14-day pilot",
+      title: "Start with one workflow and prove it in 14 days.",
+      description: "One bot. One business workflow. One measurable outcome.",
+      bullets: [
+        "One complete automation flow",
+        "Up to 15 workflow steps",
+        "Web or WhatsApp setup",
+        "Basic FAQ or scripted response flow",
+        "Demo walkthrough with your team",
+        "Optimization suggestions after testing",
+      ],
+      primaryCta: { label: "Book Free Demo", href: "/contact" },
+      secondaryCta: { label: "View Industry Workflows", href: "/industries" },
     },
     outcomes: {
       eyebrow: "Outcomes",
       title: "FLOW does not just answer. It gets work done.",
       description:
-        "After a customer message, FLOW can qualify, book, collect, remind, escalate, update records, and report outcomes automatically.",
+        "After a customer message, FLOW can qualify leads, book appointments, collect documents, send reminders, escalate cases, update records, and report outcomes automatically.",
       items: [
         "Enquiry -> appointment booked",
         "Lead -> site visit scheduled",
@@ -211,51 +296,95 @@ export const siteContent = {
         "Complex issue -> routed to human with context",
       ],
       automationClaim:
-        "Automate up to 70-90% of repetitive customer conversations and follow-up workflows.",
+        "Automate up to 70-90% of repetitive customer conversations and follow-up tasks.",
       automationSupport:
-        "Not 100% automation. Better automation with human handoff built in for complex, sensitive, and high-value cases.",
+        "Built with human handover for complex, sensitive, and high-value cases, so automation supports your team instead of replacing control.",
       results: [
         "Faster first response",
         "Consistent follow-up execution",
         "Lower manual operations load",
         "Human control preserved",
       ],
+      impactLabel: "Expected impact",
     },
     industries: {
       eyebrow: "Industries",
       title: "See how FLOW works in your industry.",
-      description: "Start with workflows that directly affect revenue and operations in your business.",
+      description: "Start with workflows that directly improve revenue, response time, and operations.",
+    },
+    blog: {
+      eyebrow: "Blog",
+      title: "Explore practical automation guidance.",
+      description:
+        "Use these articles to understand use cases, compare options, and learn how FLOW works in real business workflows.",
+      primaryCta: { label: "Explore Articles", href: "/blog" },
+      secondaryCta: { label: "Browse Solutions", href: "/solutions" },
+      cards: [
+        {
+          slug: "how-whatsapp-automation-helps-small-businesses-in-india",
+          category: "WhatsApp Automation",
+          title: "How WhatsApp Automation Helps Small Businesses in India",
+          description: "See how FLOW can handle enquiries, reminders, and follow-ups for small teams.",
+        },
+        {
+          slug: "best-ai-chatbot-use-cases-for-hospitals-and-clinics",
+          category: "Healthcare",
+          title: "Best AI Chatbot Use Cases for Hospitals and Clinics",
+          description: "Learn where chatbot automation helps front desks, intake teams, and patient support.",
+        },
+        {
+          slug: "how-to-automate-appointment-booking-using-whatsapp",
+          category: "Appointments",
+          title: "How to Automate Appointment Booking Using WhatsApp",
+          description: "Understand a simple booking flow for enquiry capture, slot confirmation, and reminders.",
+        },
+        {
+          slug: "whatsapp-chatbot-vs-website-chatbot-which-is-better",
+          category: "Comparison",
+          title: "WhatsApp Chatbot vs Website Chatbot: Which Is Better?",
+          description: "Compare where each channel fits and when a website form or WhatsApp flow works best.",
+        },
+      ],
     },
     howItWorks: {
       eyebrow: "How it works",
-      title: "The business flow behind the promise.",
+      title: "How FLOW turns messages into completed workflows.",
       description:
-        "FLOW keeps enquiry handling, follow-up, handoff, and outcome tracking in one simple client journey.",
+        "FLOW keeps enquiry handling, follow-up, handover, and outcome tracking connected in one simple customer journey.",
       teamLabel: "What the team sees",
       teamDescription:
-        "FLOW gives your team a clear path from enquiry to next step, with reminders, handoff, records, and progress visibility built into the process.",
+        "FLOW gives your team a clear path from enquiry to next step, with reminders, handover, records, and progress visibility built into the process.",
       sectionDescription:
-        "Keep enquiry handling, follow-up, handoff, and outcome tracking in one simple client journey.",
+        "Keep enquiry handling, follow-up, handover, and outcome tracking in one simple customer journey.",
     },
     beforeAfter: {
       beforeLabel: "Before",
       afterLabel: "After FLOW",
-      beforeItems: ["Leads delayed", "Follow-ups missed", "Staff overloaded", "No clear visibility"],
+      beforeItems: [
+        "Leads delayed or missed",
+        "Follow-ups depend on staff memory",
+        "Repeated questions overload the team",
+        "Payments and documents need manual chasing",
+        "No clear view of drop-offs or outcomes",
+      ],
       afterItems: [
-        "Faster responses",
+        "Faster first response",
         "Automated follow-ups",
-        "Consistent process execution",
-        "Better conversion visibility",
+        "Consistent customer journeys",
+        "Human handover with full context",
+        "Better visibility into leads, bookings, and outcomes",
       ],
     },
     trust: {
       eyebrow: "Trust and control",
-      title: "AI handles routine work. Your team controls critical decisions.",
+      title: "AI handles routine work. Your team keeps control, visibility, and fallback.",
       points: [
-        "Human review for sensitive or high-value conversations",
-        "Clear escalation paths",
-        "Visible progress for the team",
-        "Configured around your business process, not guesswork",
+        "Human handover for sensitive or high-value conversations",
+        "Fallback paths when a step fails or a user drops off",
+        "API failure handling, retries, and safe escalation",
+        "Preview before publishing and pre-launch runtime testing",
+        "Workspace-based bot management with clear access",
+        "Visible progress for team action and outcome tracking",
       ],
     },
     faq: {
@@ -264,27 +393,27 @@ export const siteContent = {
         {
           question: "Is FLOW only for WhatsApp?",
           answer:
-            "No. FLOW works across WhatsApp, web chat, voice, and team inboxes so client conversations do not stall in one place.",
+            "No. FLOW can support customer journeys across web chat, WhatsApp, and other connected channels depending on your setup.",
         },
         {
           question: "Will AI replace our team?",
           answer:
-            "No. FLOW handles repetitive work and routes important conversations to people with full context.",
+            "No. FLOW is designed to handle repetitive work and route complex, sensitive, or high-value conversations to your team with context.",
         },
         {
           question: "How quickly can we launch?",
           answer:
-            "Most teams start with one high-value client journey first, then expand once the process is proven.",
+            "A focused pilot workflow can usually be planned, built, and tested in around 14 days, depending on content, approvals, and integrations.",
         },
         {
           question: "Can FLOW work with our current setup?",
           answer:
-            "Yes. FLOW is designed to fit into your current process and support the tools your team already uses.",
+            "Yes. FLOW can connect with CRMs, booking systems, payment tools, support tools, and internal APIs where access is available.",
         },
         {
           question: "Can we start small?",
           answer:
-            "Yes. The Starter package is designed for one or two focused workflows with a clear business case.",
+            "Yes. The best starting point is one high-impact workflow, such as lead capture, appointment booking, FAQ support, or payment/document follow-up.",
         },
       ],
     },
@@ -292,59 +421,79 @@ export const siteContent = {
       eyebrow: "Pricing",
       title: "Start with high-impact workflows. Scale as you grow.",
       description:
-        "Choose a package that matches your current automation maturity, then expand channels and workflows over time.",
+        "Start with one focused workflow, then expand to more teams, channels, integrations, and customer journeys as you grow.",
+      note:
+        "Pricing depends on workflow scope, channels, integrations, automation complexity, and support requirements. We'll recommend the right package after reviewing your use case.",
     },
     finalCta: {
       eyebrow: "Final CTA",
       title: "Stop losing leads and time to manual follow-ups.",
-      description: "Get an industry-specific demo of how FLOW can automate your customer operations.",
-      primary: { label: "Book Project Demo", href: "/contact" },
-      secondary: { label: "Request Scope Call", href: "/contact" },
+      description: "See how FLOW by Crescora AI can automate one high-impact customer workflow for your business.",
+      primary: { label: "Book Free Demo", href: "/contact" },
+      secondary: { label: "Discuss My Workflow", href: "/contact" },
     },
   },
   leadForm: {
-    badge: "Project enquiry",
-    title: "Book a project demo for your client business",
+    badge: "Workflow enquiry",
+    title: "Book a free workflow demo",
     description:
-      "Tell us your industry and highest-priority client journey. We will map a practical project plan for your team.",
+      "Tell us your industry and highest-priority workflow. We will review your current process and suggest the best automation pilot for your team.",
     secureLabel: "Secure form handling",
-    submitIdle: "Book Project Demo",
+    submitIdle: "Request Free Workflow Demo",
     submitLoading: "Submitting...",
     validationError: "Please complete all required fields before submitting.",
+    invalidContactError: "Please enter a valid email address and phone number.",
     successMessage:
-      "Your project demo request is confirmed. Our team will contact you with a practical rollout plan for your business.",
+      "Thanks - your demo request is received. Our team will contact you shortly with a suggested workflow plan.",
     errorMessage: "We could not submit your request right now. Please retry or contact us directly.",
+    note: "We'll review your workflow and suggest the best pilot path. No spam",
     labels: {
       fullName: "Full name",
       companyName: "Company name",
       workEmail: "Work email",
-      phoneOrWhatsapp: "Phone or WhatsApp",
+      country: "Country",
+      phoneOrWhatsapp: "Phone / WhatsApp number with country code",
       industry: "Industry",
-      primaryUseCase: "Primary use case",
+      primaryUseCase: "Primary workflow to automate",
       monthlyEnquiryVolume: "Monthly enquiry volume",
-      timeline: "Timeline",
+      timeline: "Expected timeline",
+      preferredChannel: "Preferred channel",
       currentTools: "Current tools",
-      keyProblem: "Key problem",
+      keyProblem: "Main problem to solve",
     },
     hints: {
       currentTools: "Optional",
       keyProblem: "Optional",
+      preferredChannel: "Optional",
     },
     placeholders: {
       fullName: "Your name",
       companyName: "Company / business name",
       workEmail: "name@company.com",
-      phoneOrWhatsapp: "+91...",
-      currentTools: "Website, WhatsApp, email, team inbox, etc.",
-      keyProblem: "Describe the client journey or process gap you want to improve.",
+      phoneOrWhatsapp: "+91 98765 43210",
+      country: "Select country",
+      currentTools: "Website, WhatsApp, CRM, Google Sheets, team inbox, etc.",
+      keyProblem:
+        "Example: missed leads, manual appointment booking, repeated support questions, payment follow-up, document collection...",
     },
     selectPlaceholders: {
       industry: "Select industry",
-      primaryUseCase: "Select project type",
+      primaryUseCase: "Select workflow",
       monthlyEnquiryVolume: "Select monthly enquiry volume",
-      timeline: "Select timeline",
+      timeline: "Expected timeline",
+      preferredChannel: "Select channel",
     },
     options: {
+      countries: [
+        { label: "India (+91)", value: "India", dialingCode: "91", example: "+91 98765 43210", minDigits: 10, maxDigits: 10 },
+        { label: "United States (+1)", value: "United States", dialingCode: "1", example: "+1 415 555 0123", minDigits: 10, maxDigits: 10 },
+        { label: "United Kingdom (+44)", value: "United Kingdom", dialingCode: "44", example: "+44 7700 900123", minDigits: 10, maxDigits: 10 },
+        { label: "United Arab Emirates (+971)", value: "United Arab Emirates", dialingCode: "971", example: "+971 50 123 4567", minDigits: 9, maxDigits: 9 },
+        { label: "Singapore (+65)", value: "Singapore", dialingCode: "65", example: "+65 9123 4567", minDigits: 8, maxDigits: 8 },
+        { label: "Australia (+61)", value: "Australia", dialingCode: "61", example: "+61 412 345 678", minDigits: 9, maxDigits: 9 },
+        { label: "Canada (+1)", value: "Canada", dialingCode: "1", example: "+1 416 555 0123", minDigits: 10, maxDigits: 10 },
+        { label: "Other", value: "Other", dialingCode: "", example: "+[country code] [number]", minDigits: 8, maxDigits: 15 },
+      ],
       industries: ["Healthcare", "Real Estate", "Education", "Local Services", "Other"],
       useCases: [
         "Lead Capture and Qualification",
@@ -356,62 +505,283 @@ export const siteContent = {
       ],
       timelines: ["Immediate", "Within 30 Days", "Within 60-90 Days", "Exploring Options"],
       volumes: ["0-200", "200-1000", "1000-5000", "5000+"],
+      channels: ["Website chat", "WhatsApp", "Both", "Not sure"],
     },
   },
   about: {
     metadata: {
       title: "About | Crescora AI",
-      description: "Crescora AI helps client businesses turn enquiries into booked projects.",
+      description: "Crescora AI helps Indian businesses turn enquiries into automated workflows.",
     },
     hero: {
-      eyebrow: "About",
-      title: "Crescora AI helps client businesses win more projects.",
+      eyebrow: "About Crescora AI",
+      title: "Crescora AI builds practical automation for customer conversations and business workflows.",
       description:
-        "Our mission is to turn customer enquiries into booked next steps through a simple, credible, and controlled business flow.",
-      primaryCta: { label: "Book Project Demo", href: "/contact" },
-      secondaryCta: { label: "Talk to Sales", href: "/contact" },
+        "We help Indian businesses turn enquiries, repeated questions, bookings, follow-ups, payments, documents, and support requests into structured automated workflows with human control where it matters.",
+      primaryCta: { label: "Book Free Demo", href: "/contact" },
+      secondaryCta: { label: "Explore FLOW", href: "/platform" },
+    },
+    whoWeAre: {
+      title: "Who we are",
+      paragraphs: [
+        "Crescora AI is the company behind FLOW, a business automation platform designed to help teams manage customer conversations, workflow steps, and follow-ups in a more structured way.",
+        "FLOW is built for businesses that depend on daily customer interactions across WhatsApp, website chat, calls, forms, and internal tools. Instead of handling every enquiry manually, teams can use FLOW to guide customers through clear journeys such as lead capture, appointment booking, document collection, payment confirmation, FAQ support, and human handover.",
+      ],
     },
     mission: {
-      title: "Mission",
-      description: "Turn customer conversations into booked meetings, clear follow-ups, and completed projects.",
+      title: "Our mission",
+      description:
+        "Our mission is to help businesses reduce manual follow-up work and respond to customers faster without losing human control.",
+      support:
+        "We believe automation should not replace teams. It should help teams focus on important conversations while routine steps are handled consistently.",
+      card: "Turn customer conversations into completed business outcomes.",
+    },
+    whatWeBuild: {
+      title: "What we build",
+      description: "We build automation systems that connect customer messages to business actions.",
+      items: [
+        "Lead capture and qualification",
+        "WhatsApp enquiry handling",
+        "Appointment booking",
+        "FAQ and support automation",
+        "Document collection",
+        "Payment confirmation",
+        "Follow-up reminders",
+        "Human handover",
+        "CRM and API sync",
+        "Outcome tracking",
+      ],
+    },
+    whyWeBuiltFlow: {
+      title: "Why we built FLOW",
+      paragraphs: [
+        "Many businesses do not lose customers because demand is low. They lose customers because responses are delayed, follow-ups are missed, documents are pending, payments are not tracked, and support teams repeat the same answers every day.",
+        "FLOW was built to solve this gap. It gives businesses a clear way to move from customer enquiry to next step, while keeping important decisions under team control.",
+      ],
     },
     belief: {
-      title: "Belief",
+      title: "Our belief",
       description:
-        "Keep the process simple, keep humans for critical decisions, and build trust from the first interaction.",
+        "Automation should be simple, controlled, and useful from the first workflow. We believe the best automation starts small: one business problem, one customer journey, one measurable outcome. Once that workflow works, businesses can expand into more channels, teams, integrations, and use cases.",
+      card: "Start small. Prove value. Scale with confidence.",
     },
-    cta: { label: "Book Project Demo", href: "/contact" },
+    whoWeHelp: {
+      title: "Who we help",
+      description: "FLOW is built for businesses that handle repeated customer conversations and operational follow-ups.",
+      cards: [
+        {
+          title: "Hospitals and Clinics",
+          text: "Appointments, patient FAQs, reminders, document collection, and safe handover.",
+        },
+        {
+          title: "Real Estate Teams",
+          text: "Lead qualification, project details, site visit booking, follow-ups, and sales handover.",
+        },
+        {
+          title: "Education and Coaching",
+          text: "Admission enquiries, course FAQs, demo class booking, document collection, and counselor routing.",
+        },
+        {
+          title: "Support Teams",
+          text: "FAQ automation, issue capture, ticket creation, escalation, and customer updates.",
+        },
+        {
+          title: "Service Businesses",
+          text: "Bookings, reminders, payment follow-ups, service requests, and customer communication.",
+        },
+        {
+          title: "Diagnostics and Labs",
+          text: "Test enquiries, home collection booking, report updates, payment confirmation, and notifications.",
+        },
+      ],
+    },
+    howWeWork: {
+      title: "How we work with businesses",
+      description:
+        "We do not start by forcing a large automation rollout. We start by identifying one high-impact workflow that can create visible business value quickly.",
+      steps: [
+        {
+          title: "Discover",
+          text: "We understand your customer journey, repeated questions, manual steps, channels, and current tools.",
+        },
+        {
+          title: "Design",
+          text: "We map the workflow, messages, decisions, fallback paths, handover rules, and success outcomes.",
+        },
+        {
+          title: "Build",
+          text: "We configure the automation flow, forms, reminders, FAQs, integrations, and team routing.",
+        },
+        {
+          title: "Test",
+          text: "We test real user scenarios, invalid inputs, handover cases, and edge conditions before launch.",
+        },
+        {
+          title: "Launch",
+          text: "We help you start with one practical workflow and monitor early usage.",
+        },
+        {
+          title: "Improve",
+          text: "We review drop-offs, repeated questions, and missed opportunities to improve the workflow over time.",
+        },
+      ],
+    },
+    different: {
+      title: "What makes Crescora AI different",
+      cards: [
+        {
+          title: "Business-first automation",
+          text: "We focus on outcomes like faster response, better lead handling, fewer missed follow-ups, and improved visibility.",
+        },
+        {
+          title: "Human control built in",
+          text: "Sensitive, complex, or high-value cases can be routed to the right person with context.",
+        },
+        {
+          title: "Workflow approach",
+          text: "FLOW is not only a chatbot. It connects customer messages to business steps, records, reminders, and team actions.",
+        },
+        {
+          title: "Built for Indian businesses",
+          text: "Our positioning, workflows, and examples are designed around practical business needs in India.",
+        },
+        {
+          title: "Start small, expand later",
+          text: "Businesses can begin with one workflow and scale into more use cases after the process is proven.",
+        },
+      ],
+    },
+    trust: {
+      title: "Built for controlled automation",
+      description:
+        "FLOW is designed to support routine automation while keeping teams in control of important decisions.",
+      bullets: [
+        "Human handover for sensitive or high-value conversations",
+        "Fallback paths when a step fails or a user drops off",
+        "API failure handling, retries, and safe escalation",
+        "Preview before publishing and pre-launch testing",
+        "Workspace-based bot management with clear access",
+        "Visible progress for team action and outcome tracking",
+      ],
+    },
+    product: {
+      title: "Crescora AI and FLOW",
+      description:
+        "Crescora AI is the company. FLOW is our automation product for customer conversations and business workflows.",
+      details: [
+        "When businesses use FLOW, they get a structured way to automate customer journeys such as enquiries, bookings, follow-ups, document collection, payment confirmation, support routing, and team handover.",
+        "Company: Crescora AI",
+        "Product: FLOW",
+        "Public name: FLOW by Crescora AI",
+      ],
+    },
+    pilot: {
+      title: "Start with a focused pilot",
+      description:
+        "The best way to begin is with one high-impact workflow. For example, a hospital appointment flow, real estate lead qualification flow, education admission enquiry flow, or customer support FAQ flow.",
+      bullets: [
+        "One complete automation flow",
+        "Up to 15 workflow steps",
+        "Web or WhatsApp setup",
+        "Basic FAQ or scripted response flow",
+        "Demo walkthrough with your team",
+        "Optimization suggestions after testing",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
+    },
+    finalCta: {
+      title: "Ready to automate your first customer workflow?",
+      description: "Tell us your industry and current process. We’ll suggest the best starting workflow for your business.",
+      primary: { label: "Book Free Demo", href: "/contact" },
+      secondary: { label: "Discuss My Workflow", href: "/contact" },
+    },
+    cta: { label: "Book Free Demo", href: "/contact" },
   },
   contact: {
     metadata: {
-      title: "Book FLOW Project Demo | Client Business Automation",
+      title: "Contact | Crescora AI",
       description:
-        "Book an industry-specific FLOW demo and get a practical rollout recommendation for your client operations.",
+        "Contact Crescora AI for sales, support, CEO correspondence, and office location details.",
     },
     hero: {
       eyebrow: "Contact",
-      title: "Book your FLOW project demo.",
+      title: "Contact Crescora AI.",
       description:
-        "Tell us your industry and highest-priority client journey. We will map a practical rollout for your team.",
+        "Reach the right team for sales, support, or company correspondence. We will map the next step for your workflow or question.",
+    },
+    details: {
+      eyebrow: "Direct contact",
+      title: "Sales, support, and office details.",
+      description:
+        "Use these contact points for new demos, technical help, executive correspondence, or office visits.",
+      items: [
+        {
+          label: "Sales",
+          value: "sale@crescora.ai",
+          href: "mailto:sale@crescora.ai",
+        },
+        {
+          label: "Support",
+          value: "support@crescora.ai",
+          href: "mailto:support@crescora.ai",
+        },
+        {
+          label: "CEO",
+          value: "navya@crescora.ai",
+          href: "mailto:navya@crescora.ai",
+        },
+        {
+          label: "Address",
+          value: "2nd floor, Urbanrise Oncloud 33, Bachupally, Hyderabad, Telangana, India",
+        },
+      ],
     },
   },
   pricing: {
     metadata: {
       title: "FLOW Pricing | Business Automation Packages",
-      description: "Explore package-based plans for client journeys, follow-ups, and project scale.",
+      description: "Explore package-based plans for customer workflow automation, follow-ups, and rollout support.",
     },
     hero: {
       eyebrow: "Pricing",
-      title: "Pricing that scales with your project needs.",
+      title: "Pricing that scales with your automation needs.",
       description:
-        "Start with one focused client journey, then expand to more teams and more business flows as you grow.",
-      primaryCta: { label: "Talk to Sales", href: "/contact" },
-      secondaryCta: { label: "Book Project Demo", href: "/contact" },
+        "Start with one focused workflow, then expand to more teams, channels, integrations, and customer journeys as you grow.",
+      primaryCta: { label: "Book Free Demo", href: "/contact" },
+      secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     },
-    note: "Package-based pricing aligned to project scope, channels, and support requirements.",
+    note:
+      "Pricing depends on workflow scope, selected channels, integrations, automation complexity, and support requirements. We’ll recommend the right package after reviewing your use case.",
     ctas: {
-      primary: { label: "Talk to Sales", href: "/contact" },
-      secondary: { label: "Request Scope Call", href: "/contact" },
+      primary: { label: "Book Free Demo", href: "/contact" },
+      secondary: { label: "Get Project Scope", href: "/contact" },
+    },
+    faq: {
+      eyebrow: "Pricing FAQ",
+      title: "Common pricing questions before you book a demo.",
+      description: "These answers help buyers understand how FLOW pricing works when the rollout starts with one workflow.",
+      items: [
+        {
+          question: "Can I start with one workflow?",
+          answer:
+            "Yes. Most clients start with one high-impact workflow such as lead capture, appointment booking, FAQ support, or payment and document follow-up.",
+        },
+        {
+          question: "Do I need WhatsApp from day one?",
+          answer:
+            "No. You can start with web chat or a demo workflow and add WhatsApp once the flow is approved.",
+        },
+        {
+          question: "Does pricing change with integrations?",
+          answer:
+            "Yes. CRM, payment, booking, or custom API integrations can affect setup and support scope.",
+        },
+        {
+          question: "Can we upgrade later?",
+          answer:
+            "Yes. You can expand from one workflow to more teams, channels, and automations over time.",
+        },
+      ],
     },
   },
   trust: {
@@ -428,111 +798,160 @@ export const siteContent = {
       primaryCta: { label: "Contact Sales", href: "/contact" },
       secondaryCta: { label: "Book Project Demo", href: "/contact" },
     },
-    handoffBadge: "Human handoff",
+    handoffBadge: "Human handover",
     handoffTitle: "Human review is part of the process from the start.",
     dependableBadge: "What keeps it dependable",
     dependableText:
-      "FLOW keeps the client journey moving with reminders, follow-up steps, handoff, records, and clear progress visibility.",
+      "FLOW keeps the client journey moving with reminders, follow-up steps, handover, records, and clear progress visibility.",
     controlTitle: "Responsible claims and clear boundaries",
     controlText:
       "FLOW supports business process control. Regulatory and legal claims should only be made after formal review and verification for your deployment context.",
     cta: { label: "Book Project Demo", href: "/contact" },
   },
-  platform: {
-    metadata: {
-      title: "How FLOW Works | Client Project Automation",
-      description:
-        "See how FLOW helps your team handle enquiries, follow-ups, and project handoff with control.",
-    },
-    hero: {
-      eyebrow: "How It Works",
-      title: "See how FLOW fits your team.",
-      description:
-        "FLOW helps you handle enquiries, follow-ups, and handoff in a simple business flow your team can use every day.",
-      primaryCta: { label: "Book Project Demo", href: "/contact" },
-      secondaryCta: { label: "Talk to Sales", href: "/contact" },
-    },
-    section: {
-      eyebrow: "What you get",
-      title: "Built for client projects that need structure and follow-through.",
-      description:
-        "FLOW helps your team stay consistent with enquiry handling, reminders, handoff, and outcome tracking.",
-    },
-    team: {
-      badge: "Team control",
-      title: "The team stays in control of important decisions.",
-      startLabel: "Start here",
-      startTitle: "See how FLOW fits your first project rollout.",
-      startText:
-        "We use your current setup, customer journey, and team structure to recommend the right starting point.",
-      cta: { label: "Book Project Demo", href: "/contact" },
-    },
-  },
-  industriesIndex: {
-    metadata: {
-      title: "Industries | FLOW by Crescora",
-      description: "Industry workflows built for real operations.",
-    },
-    hero: {
-      eyebrow: "Industries",
-      title: "Industry workflows built for real operations.",
-      description: "See how FLOW automates repetitive customer operations in your business context.",
-      primaryCta: { label: "Book Project Demo", href: "/contact" },
-      secondaryCta: { label: "Request Scope Call", href: "/contact" },
-    },
-    phaseTwo: {
-      eyebrow: "Phase 2",
-      title: "Expand local-language and state-specific variants after the five core verticals.",
-      description:
-        "Use Search Console demand, proof, and conversion data to expand beyond the initial vertical set without creating thin pages.",
-    },
-  },
-  useCasesIndex: {
-    metadata: {
-      title: "Use Cases | FLOW by Crescora",
-      description: "Choose the workflow you want to automate first.",
-    },
-    hero: {
-      eyebrow: "Use Cases",
-      title: "Choose the workflow you want to automate first.",
-      description:
-        "Start with the use case that directly affects your response speed, revenue, or operations.",
-      primaryCta: { label: "Find My Use Case", href: "/contact" },
-      secondaryCta: { label: "Book Project Demo", href: "/contact" },
-    },
-    cards: [
-      {
-        title: "WhatsApp Automation",
-        href: "/use-cases/whatsapp-automation",
-        text: "Turn WhatsApp enquiries into automated business workflows with qualification, booking, reminders, follow-up, and escalation.",
+    platform: {
+      metadata: {
+        title: "How FLOW Works | Client Project Automation",
+        description:
+          "See how FLOW helps your team handle enquiries, follow-ups, and project handover with control.",
       },
-      {
-        title: "Appointment Booking",
-        href: "/use-cases/appointment-booking-automation",
-        text: "Reduce back-and-forth by automating availability checks, confirmation, reminders, and rescheduling.",
+      hero: {
+        eyebrow: "How It Works",
+        title: "See how FLOW turns enquiries into completed workflows.",
+        description:
+          "FLOW helps your team handle enquiries, follow-ups, handovers, reminders, and outcome tracking in one simple business workflow.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       },
-      {
-        title: "Payment Follow-Up",
-        href: "/use-cases/payment-follow-up-automation",
-        text: "Send structured payment reminders and escalate unresolved cases to the right team.",
+      section: {
+        eyebrow: "What you get",
+        title: "Built for business workflows that need structure and follow-through.",
+        description:
+          "FLOW helps your team stay consistent with enquiry handling, reminders, handover, records, and outcome tracking.",
       },
-      {
-        title: "Document Collection",
-        href: "/use-cases/document-collection-automation",
-        text: "Request, collect, and follow up on documents without manual chasing.",
+      team: {
+        badge: "Team control",
+        title: "The team stays in control of important decisions.",
+        startLabel: "Start here",
+        startTitle: "See how FLOW can automate your first workflow.",
+        startText:
+          "We review your current setup, customer journey, and team structure to recommend the right starting point.",
+        cta: { label: "Book Free Demo", href: "/contact" },
       },
-      {
-        title: "Customer Support",
-        href: "/use-cases/customer-support-automation",
-        text: "Handle repetitive support queries and route complex tickets with context.",
+    },
+    industriesIndex: {
+      metadata: {
+        title: "Industries | FLOW by Crescora",
+        description: "Industry workflows built for real operations.",
       },
-      {
-        title: "Human Handoff",
-        href: "/use-cases/human-handoff-automation",
-        text: "Move conversations to humans with full history and the right next action.",
+      hero: {
+        eyebrow: "Industries",
+        title: "Industry workflows FLOW can automate for your business.",
+        description:
+          "Start with one proven workflow in your industry, then expand into more customer journeys, channels, and follow-ups.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       },
-    ],
-  },
+      phaseTwo: {
+        eyebrow: "Need another industry?",
+        title: "Don't see your industry here?",
+        description:
+          "If your business handles enquiries, bookings, documents, payments, support, or follow-ups, FLOW can be adapted to your workflow.",
+      },
+      seoLandingPages: {
+        eyebrow: "SEO landing pages",
+        title: "Explore more automation solution pages.",
+        description:
+          "Each page explains a practical workflow, use case, and demo path for a specific industry or business problem.",
+      },
+    },
+    useCasesIndex: {
+      metadata: {
+        title: "Use Cases | FLOW by Crescora",
+        description: "Choose the workflow you want to automate first.",
+      },
+      hero: {
+        eyebrow: "Use Cases",
+        title: "Choose the workflow you want to automate first.",
+        description:
+          "Start with the workflow that affects your response speed, revenue, support load, or daily operations the most.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Find My Use Case", href: "/contact" },
+      },
+      cards: [
+        {
+          title: "WhatsApp Automation",
+          href: "/use-cases/whatsapp-automation",
+          text: "Turn WhatsApp enquiries into automated business workflows with qualification, booking, reminders, follow-up, and escalation.",
+        },
+        {
+          title: "Lead Capture & Qualification",
+          href: "/use-cases/lead-capture-qualification",
+          text: "Capture enquiries from website, WhatsApp, ads, or landing pages. Ask the right questions and send qualified leads to your team.",
+        },
+        {
+          title: "Appointment Booking",
+          href: "/use-cases/appointment-booking-automation",
+          text: "Reduce back-and-forth by automating availability checks, slot confirmation, reminders, and rescheduling.",
+        },
+        {
+          title: "Payment Follow-Up",
+          href: "/use-cases/payment-follow-up-automation",
+          text: "Send payment reminders, capture payment status, and escalate unresolved cases to the right team.",
+        },
+        {
+          title: "Document Collection",
+          href: "/use-cases/document-collection-automation",
+          text: "Request, collect, and follow up on documents without repeated manual chasing.",
+        },
+        {
+          title: "Customer Support",
+          href: "/use-cases/customer-support-automation",
+          text: "Handle repeated support questions and route complex tickets with full context.",
+        },
+        {
+          title: "FAQ Automation",
+          href: "/use-cases/faq-automation",
+          text: "Answer repeated questions about pricing, availability, services, documents, timings, and next steps.",
+        },
+        {
+          title: "Human Handoff",
+          href: "/use-cases/human-handoff-automation",
+          text: "Move sensitive, complex, or high-value conversations to humans with conversation history and next action.",
+        },
+        {
+          title: "CRM & API Sync",
+          href: "/use-cases/crm-api-sync",
+          text: "Send captured leads, appointments, payments, and support details to CRM, Google Sheets, booking systems, or internal tools.",
+        },
+        {
+          title: "Reminder Automation",
+          href: "/use-cases/reminder-automation",
+          text: "Send follow-ups for appointments, payments, pending documents, abandoned enquiries, and scheduled callbacks.",
+        },
+        {
+          title: "Ticket Creation & Escalation",
+          href: "/use-cases/ticket-creation-escalation",
+          text: "Capture issue details, create support tickets, and escalate complex cases with full context.",
+        },
+        {
+          title: "Feedback & Review Collection",
+          href: "/use-cases/feedback-collection",
+          text: "Collect customer feedback after appointments, service completion, delivery, or support resolution.",
+        },
+      ],
+      moreWorkflowsLabel: "More workflows FLOW can automate",
+      moreWorkflows: [
+        "Site Visit Booking",
+        "Admission Enquiry Automation",
+        "Demo Class / Consultation Booking",
+        "Internal Team Notifications",
+      ],
+      ctaTitle: "Not sure where to start?",
+      ctaDescription:
+        "Tell us your industry and current workflow. We will suggest the best first automation.",
+      ctaPrimary: { label: "Book Free Demo", href: "/contact" },
+      ctaSecondary: { label: "Discuss My Workflow", href: "/contact" },
+    },
   resources: {
     metadata: {
       title: "Resources | FLOW by Crescora",
@@ -590,26 +1009,43 @@ export const siteContent = {
   },
   proofIndex: {
     metadata: {
-      title: "Proof | Illustrative Workflow Case Studies",
+      title: "Workflow Examples | FLOW by Crescora",
       description:
-        "Illustrative proof pages for healthcare, real estate, and education automation rollout patterns.",
+        "Workflow examples for healthcare, real estate, and education automation rollout patterns.",
     },
     hero: {
-      eyebrow: "Proof",
-      title: "Illustrative proof pages for industry-specific workflow automation.",
+      eyebrow: "Workflow examples",
+      title: "See how FLOW can work in real business scenarios.",
       description:
-        "These pages are implementation narratives, not named customer claims, and they are written to support enterprise buying decisions.",
-      primaryCta: { label: "Book Project Demo", href: "/contact" },
-      secondaryCta: { label: "Request Scope Call", href: "/contact" },
+        "Explore practical workflow examples for healthcare, real estate, and education teams. Each example shows the customer journey, automation steps, team handover points, and expected business outcomes.",
+      primaryCta: { label: "Book Free Demo", href: "/contact" },
+      secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     },
     notice:
-      "The goal of these pages is to show the operating model, the rollout sequence, and the expected business impact. They should read like a real implementation story without inventing customer claims.",
+      "These examples are designed to help you understand how a FLOW pilot can be planned, built, tested, and expanded for your industry. They focus on workflow structure, team control, handover points, and measurable outcomes.",
     section: {
-      eyebrow: "Illustrative stories",
-      title: "Three proof narratives for the first release industries.",
+      eyebrow: "Workflow examples",
+      title: "Workflow examples for priority industries.",
       description:
-        "Each page shows the operational flow and the controls that keep the rollout enterprise-ready.",
+        "Each example shows how a business can move from manual enquiry handling to a structured automation workflow with clear controls and handover paths.",
     },
+    includes: {
+      eyebrow: "What each workflow example includes",
+      title: "What each workflow example includes",
+      description:
+        "Every example is structured around the same operating model so buyers can understand the rollout pattern before they book a pilot.",
+      items: [
+        "Customer enquiry scenario",
+        "Manual process pain points",
+        "FLOW automation journey",
+        "Human handover points",
+        "Data captured",
+        "Follow-up actions",
+        "Expected business outcomes",
+        "Suggested 14-day pilot scope",
+      ],
+    },
+    cta: { label: "Book Free Demo", href: "/contact" },
   },
   industries: {
     healthcare: {
@@ -873,6 +1309,138 @@ export const siteContent = {
       },
       items: ["Escalation rules", "Context transfer", "Priority routing", "SLA visibility"],
       cta: { label: "Request Demo", href: "/contact" },
+    },
+    leadCaptureQualification: {
+      metadata: {
+        title: "Lead Capture and Qualification Automation | FLOW by Crescora",
+        description:
+          "Capture enquiries from web, WhatsApp, ads, or landing pages and qualify them before they reach your team.",
+      },
+      hero: {
+        eyebrow: "Use case",
+        title: "Capture enquiries and qualify leads automatically.",
+        description:
+          "FLOW asks the right questions, scores intent, and routes qualified leads to sales or the right team.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      items: [
+        "Web, WhatsApp, and ad enquiry capture",
+        "Qualification questions and intent scoring",
+        "Qualified lead routing with context",
+        "Follow-up for incomplete enquiries",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
+    },
+    faqAutomation: {
+      metadata: {
+        title: "FAQ Automation for Business | FLOW by Crescora",
+        description:
+          "Answer repeated questions about pricing, availability, services, documents, timings, and next steps.",
+      },
+      hero: {
+        eyebrow: "Use case",
+        title: "Answer repeated questions before they slow your team down.",
+        description:
+          "FLOW handles routine FAQ conversations and escalates anything complex with full context.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      items: [
+        "Pricing and availability answers",
+        "Service and timing FAQs",
+        "Document and next-step guidance",
+        "Escalation when a human is needed",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
+    },
+    crmApiSync: {
+      metadata: {
+        title: "CRM and API Sync Automation | FLOW by Crescora",
+        description:
+          "Send captured leads, appointments, payments, and support details to CRM, Google Sheets, booking systems, or internal tools.",
+      },
+      hero: {
+        eyebrow: "Use case",
+        title: "Sync customer actions to your CRM and internal tools.",
+        description:
+          "FLOW can send leads, bookings, payments, and support updates into the systems your team already uses.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      items: [
+        "CRM lead creation and updates",
+        "Google Sheets or dashboard sync",
+        "Booking and payment status push",
+        "Internal API handoff for downstream teams",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
+    },
+    reminderAutomation: {
+      metadata: {
+        title: "Reminder Automation for Business | FLOW by Crescora",
+        description:
+          "Send follow-ups for appointments, payments, pending documents, abandoned enquiries, and scheduled callbacks.",
+      },
+      hero: {
+        eyebrow: "Use case",
+        title: "Send follow-up reminders at the right time.",
+        description:
+          "FLOW triggers reminders for the next step so enquiries, bookings, and payments do not stall silently.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      items: [
+        "Appointment reminders",
+        "Payment follow-ups",
+        "Pending document nudges",
+        "Callback and abandoned enquiry follow-ups",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
+    },
+    ticketCreationEscalation: {
+      metadata: {
+        title: "Ticket Creation and Escalation Automation | FLOW by Crescora",
+        description:
+          "Capture issue details, create support tickets, and escalate complex cases with full context.",
+      },
+      hero: {
+        eyebrow: "Use case",
+        title: "Create support tickets and escalate complex cases.",
+        description:
+          "FLOW captures issue details, creates the ticket, and routes it with context so nothing gets lost.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      items: [
+        "Issue intake and classification",
+        "Ticket creation and assignment",
+        "Escalation for complex cases",
+        "Status updates and ownership tracking",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
+    },
+    feedbackCollection: {
+      metadata: {
+        title: "Feedback and Review Collection Automation | FLOW by Crescora",
+        description:
+          "Collect customer feedback after appointments, service completion, delivery, or support resolution.",
+      },
+      hero: {
+        eyebrow: "Use case",
+        title: "Collect feedback and reviews after each customer action.",
+        description:
+          "FLOW requests ratings or comments after appointments, service completion, delivery, or support resolution.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      items: [
+        "Post-appointment feedback",
+        "Service completion ratings",
+        "Delivery follow-up requests",
+        "Review capture and reporting",
+      ],
+      cta: { label: "Book Free Demo", href: "/contact" },
     },
   },
   legal: {

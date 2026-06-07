@@ -63,17 +63,17 @@ export const proofCards = [
   {
     title: "Healthcare Front Desk Automation",
     href: "/proof/healthcare-front-desk-automation",
-    text: "Illustrative proof page for appointment intake, reminders, document collection, payment follow-up, and sensitive handoff.",
+    text: "See how a hospital or clinic can automate appointment intake, patient reminders, document collection, payment follow-up, and safe handover for sensitive cases.",
   },
   {
     title: "Real Estate Lead Operations",
     href: "/proof/real-estate-lead-operations",
-    text: "Illustrative proof page for fast lead response, qualification, site visit booking, assignment, and follow-up discipline.",
+    text: "See how real estate teams can qualify leads, share project details, book site visits, assign sales follow-ups, and track outcomes from enquiry to visit.",
   },
   {
     title: "Education Admissions Workflow",
     href: "/proof/education-admissions-workflow",
-    text: "Illustrative proof page for enquiry handling, demo bookings, counselor handoff, and admissions follow-up.",
+    text: "See how schools, colleges, and coaching teams can handle admission enquiries, demo class bookings, counselor handover, document collection, and follow-ups.",
   },
 ] as const;
 

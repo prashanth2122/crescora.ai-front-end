@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
+import { enLocaleCopy } from "@/lib/locales/en";
 import {
   buildLocalizedHref,
   getLocaleFromPath,
@@ -42,3 +43,12 @@ test("keeps locale prefix helper deterministic", () => {
   assert.equal(withLocalePrefix("/hi/blog", "en"), "/blog");
 });
 
+test("footer copy reflects the cleaned public-facing labels", () => {
+  assert.equal(
+    enLocaleCopy.footer.intro,
+    "Built for Indian businesses that want practical automation across enquiries, bookings, follow-ups, support, payments, and operations.",
+  );
+  assert.equal(enLocaleCopy.ctas.requestScopeCall.label, "Discuss My Workflow");
+  assert.equal(enLocaleCopy.footerGroups[1].links[2].label, "Education");
+  assert.equal(enLocaleCopy.footerGroups[2].links[3].label, "Pilot Program");
+});

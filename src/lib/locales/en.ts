@@ -1,12 +1,12 @@
 import type { LocaleCopy } from "@/lib/locales";
 
-const productName = "FLOW by Crescora";
+const productName = "FLOW by Crescora AI";
 
 export const enLocaleCopy: LocaleCopy = {
   site: {
     seoTitle: "FLOW Automation for Customer Conversations & Workflows",
     description:
-      "FLOW by Crescora helps client businesses turn enquiries into booked calls, clear follow-ups, and completed projects across WhatsApp, web chat, voice, and team inboxes.",
+      "FLOW by Crescora AI helps client businesses turn enquiries into booked calls, clear follow-ups, and completed projects across WhatsApp, web chat, voice, and team inboxes.",
   },
   language: {
     label: "Language",
@@ -21,7 +21,7 @@ export const enLocaleCopy: LocaleCopy = {
   footer: {
     title: `${productName} turns customer conversations into automated business outcomes.`,
     intro:
-      "India-led, premium in presentation, and built for businesses that need practical client project flows across customer operations.",
+      "Built for Indian businesses that want practical automation across enquiries, bookings, follow-ups, support, payments, and operations.",
     allRightsReserved: "All rights reserved.",
     companyReferenceLabel: "Company reference:",
     productLabel: "Product:",
@@ -53,6 +53,7 @@ export const enLocaleCopy: LocaleCopy = {
       links: [
         { label: "Hospitals", href: "/industries/hospitals" },
         { label: "Clinics", href: "/industries/clinics" },
+        { label: "Education", href: "/industries/education" },
         { label: "Real Estate", href: "/industries/real-estate" },
         { label: "Support Teams", href: "/industries/support-teams" },
         { label: "Service Businesses", href: "/industries/service-businesses" },
@@ -64,7 +65,7 @@ export const enLocaleCopy: LocaleCopy = {
         { label: "About", href: "/about" },
         { label: "Contact", href: "/contact" },
         { label: "Blog", href: "/blog" },
-        { label: "Proof", href: "/resources" },
+        { label: "Pilot Program", href: "/proof" },
       ],
     },
     {
@@ -78,8 +79,8 @@ export const enLocaleCopy: LocaleCopy = {
     },
   ],
   ctas: {
-    bookProjectDemo: { label: "Book Project Demo", href: "/contact" },
-    requestScopeCall: { label: "Request Scope Call", href: "/contact" },
+    bookProjectDemo: { label: "Book Free Demo", href: "/contact" },
+    requestScopeCall: { label: "Discuss My Workflow", href: "/contact" },
     talkToSales: { label: "Talk to Sales", href: "/contact" },
     viewSolutions: { label: "View Solutions", href: "/solutions" },
     viewBlog: { label: "View Blog", href: "/blog" },
@@ -97,4 +98,3 @@ export const enLocaleCopy: LocaleCopy = {
     openStateHub: "Open state hub",
   },
 };
-

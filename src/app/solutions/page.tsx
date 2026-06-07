@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,13 +42,19 @@ export default function SolutionsPage() {
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {solutionPages.map((page) => (
-            <Card key={page.slug} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-              <CardContent className="p-6">
+            <Card
+              key={page.slug}
+              className="flex h-full flex-col border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]"
+            >
+              <CardContent className="flex h-full flex-col p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{page.keywordTarget}</p>
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{page.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{page.description}</p>
-                <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={`/solutions/${page.slug}`}>Open solution page</Link>
+                <Button asChild variant="link" className="mt-auto h-auto w-fit p-0 text-zinc-950 hover:no-underline">
+                  <Link href={`/solutions/${page.slug}`} className="inline-flex items-center gap-1">
+                    Open solution page
+                    <ArrowRight className="size-3.5" aria-hidden="true" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>

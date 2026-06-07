@@ -1,12 +1,12 @@
 import type { LocaleCopy } from "@/lib/locales";
 
-const productName = "FLOW by Crescora";
+const productName = "FLOW by Crescora AI";
 
 export const hiLocaleCopy: LocaleCopy = {
   site: {
     seoTitle: "FLOW के लिए Hindi SEO Foundation",
     description:
-      "FLOW by Crescora ग्राहक पूछताछ को booked calls, स्पष्ट follow-ups, और completed projects में बदलने में मदद करता है.",
+      "FLOW by Crescora AI ग्राहक पूछताछ को booked calls, स्पष्ट follow-ups, और completed projects में बदलने में मदद करता है.",
   },
   language: {
     label: "भाषा",
@@ -21,7 +21,7 @@ export const hiLocaleCopy: LocaleCopy = {
   footer: {
     title: `${productName} ग्राहक बातचीत को ऑटोमेटेड बिज़नेस नतीजों में बदलता है.`,
     intro:
-      "भारत-केंद्रित, प्रीमियम प्रस्तुति के साथ, और उन व्यवसायों के लिए बनाया गया है जिन्हें ग्राहक संचालन के लिए व्यावहारिक प्रोजेक्ट फ़्लो चाहिए.",
+      "भारतीय व्यवसायों के लिए बनाया गया है जो पूछताछ, बुकिंग, फ़ॉलो-अप, सपोर्ट, भुगतान और संचालन में व्यावहारिक ऑटोमेशन चाहते हैं.",
     allRightsReserved: "सर्वाधिकार सुरक्षित.",
     companyReferenceLabel: "कंपनी संदर्भ:",
     productLabel: "प्रोडक्ट:",
@@ -53,6 +53,7 @@ export const hiLocaleCopy: LocaleCopy = {
       links: [
         { label: "अस्पताल", href: "/industries/hospitals" },
         { label: "क्लिनिक", href: "/industries/clinics" },
+        { label: "शिक्षा", href: "/industries/education" },
         { label: "रियल एस्टेट", href: "/industries/real-estate" },
         { label: "सपोर्ट टीम", href: "/industries/support-teams" },
         { label: "सेवा व्यवसाय", href: "/industries/service-businesses" },
@@ -64,7 +65,7 @@ export const hiLocaleCopy: LocaleCopy = {
         { label: "हमारे बारे में", href: "/about" },
         { label: "संपर्क", href: "/contact" },
         { label: "ब्लॉग", href: "/blog" },
-        { label: "प्रूफ", href: "/resources" },
+        { label: "पायलट प्रोग्राम", href: "/proof" },
       ],
     },
     {
@@ -78,8 +79,8 @@ export const hiLocaleCopy: LocaleCopy = {
     },
   ],
   ctas: {
-    bookProjectDemo: { label: "प्रोजेक्ट डेमो बुक करें", href: "/contact" },
-    requestScopeCall: { label: "स्कोप कॉल अनुरोध करें", href: "/contact" },
+    bookProjectDemo: { label: "फ्री डेमो बुक करें", href: "/contact" },
+    requestScopeCall: { label: "मेरे वर्कफ़्लो पर चर्चा करें", href: "/contact" },
     talkToSales: { label: "सेल्स से बात करें", href: "/contact" },
     viewSolutions: { label: "समाधान देखें", href: "/solutions" },
     viewBlog: { label: "ब्लॉग देखें", href: "/blog" },
@@ -97,4 +98,3 @@ export const hiLocaleCopy: LocaleCopy = {
     openStateHub: "स्टेट हब खोलें",
   },
 };
-

@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node --max-old-space-size=2048 ./node_modules/next/dist/bin/next dev --webpack",
+    "dev:turbo": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/locales.test.ts src/lib/page-copy/hi.test.ts"
+    "test": "tsx --test src/lib/locales.test.ts src/lib/page-copy/hi.test.ts src/lib/site-content.test.ts src/app/api/lead/route.test.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

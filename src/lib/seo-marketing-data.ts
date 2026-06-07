@@ -94,9 +94,9 @@ function buildBlogSections(title: string, keywordTarget: string): BlogSection[] 
 export const solutionPages: SeoLandingPage[] = [
   {
     slug: "whatsapp-automation",
-    title: "WhatsApp Business Automation in India | FLOW by Crescora",
+    title: "WhatsApp Business Automation in India | FLOW by Crescora AI",
     h1: "Automate WhatsApp conversations, follow-ups, and workflow actions.",
-    keywordTarget: "WhatsApp business automation India",
+    keywordTarget: "WhatsApp business automation",
     description:
       "A solution page for businesses that need repeatable response handling, booking, reminders, payments, and human handoff on WhatsApp.",
     intro:
@@ -142,9 +142,9 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "ai-chatbot-builder",
-    title: "No-Code AI Chatbot Builder in India | FLOW by Crescora",
+    title: "No-Code AI Chatbot Builder in India | FLOW by Crescora AI",
     h1: "Build a business chatbot that books, routes, and follows up.",
-    keywordTarget: "AI chatbot builder India",
+    keywordTarget: "AI chatbot builder",
     description:
       "A solution page for buyers searching for a no-code chatbot builder with workflow actions, handoff, and multi-channel support.",
     intro:
@@ -190,9 +190,9 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "workflow-automation",
-    title: "Business Workflow Automation Software in India | FLOW",
+    title: "Business Workflow Automation Software in India | FLOW by Crescora AI",
     h1: "Automate customer-facing workflows from enquiry to outcome.",
-    keywordTarget: "workflow automation software India",
+    keywordTarget: "workflow automation software",
     description:
       "A solution page for teams that want a clear business workflow layer for conversations, tasks, reminders, and records.",
     intro:
@@ -238,9 +238,9 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "customer-support-automation",
-    title: "Customer Support Automation for Small Business in India | FLOW",
+    title: "Customer Support Automation for Small Businesses in India | FLOW by Crescora AI",
     h1: "Automate support triage, FAQ resolution, and handoff.",
-    keywordTarget: "customer support automation for small business India",
+    keywordTarget: "customer support automation for small business",
     description:
       "A solution page for support buyers who need FAQ handling, queue deflection, and context-rich escalation.",
     intro:
@@ -283,6 +283,294 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Compare FLOW vs chatbots", "/compare/flow-vs-chatbots", "Decision-stage comparison for support buyers."),
     ],
     ctaLabel: "Request support demo",
+  },
+  {
+    slug: "appointment-booking-automation",
+    title: "Appointment Booking Automation | FLOW by Crescora AI",
+    h1: "Automate appointment booking, reminders, and rescheduling.",
+    keywordTarget: "appointment booking automation",
+    description:
+      "A solution page for businesses that need availability checks, slot confirmation, reminders, and rescheduling without manual back-and-forth.",
+    intro:
+      "Use this page to show how FLOW turns booking enquiries into confirmed appointments and reduces coordination load for staff.",
+    sections: [
+      {
+        eyebrow: "Problem",
+        title: "Where booking requests usually slow down",
+        description: "Show the friction that happens between enquiry and confirmed slot.",
+        bullets: [
+          "Teams waste time checking availability manually.",
+          "Customers drop off while waiting for confirmation.",
+          "Reminder calls and reschedules pile up across the week.",
+        ],
+      },
+      {
+        eyebrow: "Workflow",
+        title: "What FLOW automates for bookings",
+        description: "The page should make the booking path obvious.",
+        bullets: [
+          "Availability check and slot selection.",
+          "Reminder sequence and confirmation follow-up.",
+          "Rescheduling support with human handover when needed.",
+        ],
+      },
+      {
+        eyebrow: "CTA",
+        title: "What to do next",
+        description: "Push the visitor toward the demo and the workflow menu.",
+        bullets: [
+          "Open the booking template.",
+          "Compare the booking flow with manual scheduling.",
+          "Book a demo for your team.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      relatedLink("Booking templates", "/templates", "Launch-ready booking flow assets."),
+      relatedLink("WhatsApp automation", "/solutions/whatsapp-automation", "Channel automation for booking enquiries."),
+      relatedLink("Book a demo", "/contact", "Discuss your appointment workflow."),
+    ],
+    ctaLabel: "Request booking demo",
+  },
+  {
+    slug: "lead-capture-automation",
+    title: "Lead Capture Automation | FLOW by Crescora AI",
+    h1: "Capture leads and qualify them before they reach your team.",
+    keywordTarget: "lead capture automation",
+    description:
+      "A solution page for businesses that want website, WhatsApp, and ad enquiries captured and qualified consistently.",
+    intro:
+      "This page should explain how FLOW asks qualifying questions, captures contact details, and routes high-intent leads with context.",
+    sections: [
+      {
+        eyebrow: "Problem",
+        title: "Why lead capture breaks down",
+        description: "Manual lead capture often loses context before the sales team gets involved.",
+        bullets: [
+          "Forms and chats are inconsistent across channels.",
+          "High-intent leads are not filtered quickly enough.",
+          "The sales team receives incomplete details.",
+        ],
+      },
+      {
+        eyebrow: "Workflow",
+        title: "What FLOW automates for leads",
+        description: "Focus on the qualification journey, not just capture.",
+        bullets: [
+          "Lead capture from web, WhatsApp, and ads.",
+          "Qualification questions and routing.",
+          "Follow-up for incomplete enquiries.",
+        ],
+      },
+      {
+        eyebrow: "CTA",
+        title: "What to do next",
+        description: "Lead readers into the demo and workflow paths.",
+        bullets: [
+          "Open the lead capture template.",
+          "Compare FLOW against manual enquiry handling.",
+          "Book a lead automation demo.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      relatedLink("Lead capture workflows", "/templates", "Templates for enquiry qualification and routing."),
+      relatedLink("Real estate automation", "/industries/real-estate", "A high-intent industry use case."),
+      relatedLink("Book a demo", "/contact", "Map your lead routing path."),
+    ],
+    ctaLabel: "Request lead capture demo",
+  },
+  {
+    slug: "payment-reminder-automation",
+    title: "Payment Reminder Automation | FLOW by Crescora AI",
+    h1: "Automate payment reminders and status follow-up.",
+    keywordTarget: "payment reminder automation",
+    description:
+      "A solution page for teams that need reminder sequences, payment status capture, and escalation for overdue cases.",
+    intro:
+      "Use this page to show how FLOW keeps reminders timely, structured, and tied to the right next action.",
+    sections: [
+      {
+        eyebrow: "Problem",
+        title: "Why payment follow-up slips",
+        description: "Manual chasing is slow and easy to lose track of.",
+        bullets: [
+          "Payment reminders are sent inconsistently.",
+          "Status updates are scattered across chats and sheets.",
+          "Overdue cases are not escalated on time.",
+        ],
+      },
+      {
+        eyebrow: "Workflow",
+        title: "What FLOW automates for payments",
+        description: "Show the reminder loop and escalation path.",
+        bullets: [
+          "Scheduled reminders and status prompts.",
+          "Payment confirmation capture.",
+          "Escalation for unresolved cases.",
+        ],
+      },
+      {
+        eyebrow: "CTA",
+        title: "What to do next",
+        description: "Direct the visitor into the rollout conversation.",
+        bullets: [
+          "Open the payment reminder template.",
+          "Compare FLOW with manual follow-up.",
+          "Book a demo for collections workflows.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      relatedLink("Payment templates", "/templates", "Reminder workflows for due and overdue cases."),
+      relatedLink("WhatsApp automation", "/solutions/whatsapp-automation", "Channel-specific payment follow-up."),
+      relatedLink("Book a demo", "/contact", "Talk through your payment workflow."),
+    ],
+    ctaLabel: "Request payment demo",
+  },
+  {
+    slug: "document-collection-automation",
+    title: "Document Collection Automation | FLOW by Crescora AI",
+    h1: "Collect documents without repeated manual chasing.",
+    keywordTarget: "document collection automation",
+    description:
+      "A solution page for businesses that need IDs, forms, reports, and supporting documents gathered with less back-and-forth.",
+    intro:
+      "This page should show how FLOW keeps document requests, follow-up, and completion tracking in one workflow.",
+    sections: [
+      {
+        eyebrow: "Problem",
+        title: "Where document collection usually breaks",
+        description: "Missing files and repeated follow-up are the real friction points.",
+        bullets: [
+          "Staff repeat the same document request many times.",
+          "Incomplete submissions slow down onboarding and processing.",
+          "Nobody knows which items are still pending.",
+        ],
+      },
+      {
+        eyebrow: "Workflow",
+        title: "What FLOW automates for documents",
+        description: "Keep the request chain visible and controlled.",
+        bullets: [
+          "Document request workflow.",
+          "Missing item reminders.",
+          "Intake tracking and human review.",
+        ],
+      },
+      {
+        eyebrow: "CTA",
+        title: "What to do next",
+        description: "Move the buyer toward the relevant automation path.",
+        bullets: [
+          "Open the document collection template.",
+          "Compare FLOW against manual chasing.",
+          "Book a workflow demo.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      relatedLink("Document templates", "/templates", "Templates for intake and follow-up."),
+      relatedLink("Education automation", "/industries/education", "Admissions and document-heavy workflows."),
+      relatedLink("Book a demo", "/contact", "Plan your document workflow."),
+    ],
+    ctaLabel: "Request document demo",
+  },
+  {
+    slug: "crm-api-workflow-automation",
+    title: "CRM and API Workflow Automation | FLOW by Crescora AI",
+    h1: "Send leads, bookings, and updates into your CRM and tools.",
+    keywordTarget: "CRM and API workflow automation",
+    description:
+      "A solution page for businesses that need customer actions pushed into CRMs, spreadsheets, booking systems, or internal APIs.",
+    intro:
+      "Use this page to explain how FLOW keeps customer actions synchronized with the systems your teams already use.",
+    sections: [
+      {
+        eyebrow: "Problem",
+        title: "Where disconnected systems slow teams down",
+        description: "Manual re-entry causes delay, mistakes, and missing visibility.",
+        bullets: [
+          "Teams retype the same lead or booking data across tools.",
+          "Status changes do not reach downstream systems.",
+          "Reporting becomes fragmented across systems.",
+        ],
+      },
+      {
+        eyebrow: "Workflow",
+        title: "What FLOW automates across systems",
+        description: "The page should show concrete data movement.",
+        bullets: [
+          "CRM lead creation and updates.",
+          "Spreadsheet or dashboard sync.",
+          "Internal API handoff for downstream teams.",
+        ],
+      },
+      {
+        eyebrow: "CTA",
+        title: "What to do next",
+        description: "Route the reader into a practical demo conversation.",
+        bullets: [
+          "Open the CRM sync template.",
+          "Compare FLOW against manual data entry.",
+          "Book a demo for your stack.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      relatedLink("CRM sync templates", "/templates", "Practical workflow-to-system templates."),
+      relatedLink("Workflow automation", "/solutions/workflow-automation", "The broader product layer."),
+      relatedLink("Book a demo", "/contact", "Map your integration path."),
+    ],
+    ctaLabel: "Request integration demo",
+  },
+  {
+    slug: "human-handover-automation",
+    title: "Human Handover Automation | FLOW by Crescora AI",
+    h1: "Move sensitive or complex conversations to the right person.",
+    keywordTarget: "human handover automation",
+    description:
+      "A solution page for businesses that need structured handover, context transfer, and escalation visibility.",
+    intro:
+      "This page should make it clear that FLOW supports automation without losing human control when the case becomes high value or sensitive.",
+    sections: [
+      {
+        eyebrow: "Problem",
+        title: "Why handover needs structure",
+        description: "Context gets lost when a conversation just gets passed along.",
+        bullets: [
+          "Sensitive conversations need a human decision.",
+          "The next person often lacks full context.",
+          "Teams need visibility into who owns the next action.",
+        ],
+      },
+      {
+        eyebrow: "Workflow",
+        title: "What FLOW automates around handover",
+        description: "Keep the escalation path clear and trackable.",
+        bullets: [
+          "Handover rules and priority routing.",
+          "Context transfer and next-action visibility.",
+          "SLA and escalation tracking.",
+        ],
+      },
+      {
+        eyebrow: "CTA",
+        title: "What to do next",
+        description: "Move the reader into the rollout conversation.",
+        bullets: [
+          "Open the handover template.",
+          "Compare FLOW with basic bot escalation.",
+          "Book a demo for your support or sales team.",
+        ],
+      },
+    ],
+    relatedLinks: [
+      relatedLink("Handover templates", "/templates", "Templates that keep human control visible."),
+      relatedLink("Customer support automation", "/solutions/customer-support-automation", "Context-rich escalation and support."),
+      relatedLink("Book a demo", "/contact", "Discuss your escalation path."),
+    ],
+    ctaLabel: "Request handover demo",
   },
 ];
 
@@ -414,7 +702,7 @@ export const demoFlowTemplates: DemoFlowTemplate[] = [
 export const industrySeoLandingPages: SeoLandingPage[] = [
   {
     slug: "hospital-automation",
-    title: "Hospital Automation Software in India | FLOW by Crescora",
+    title: "Hospital Automation Software in India | FLOW by Crescora AI",
     h1: "Automate hospital appointments, patient support, reminders, and handoffs.",
     keywordTarget: "hospital automation software India",
     description:

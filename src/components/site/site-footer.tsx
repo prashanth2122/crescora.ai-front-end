@@ -2,6 +2,7 @@ import Link from "next/link";
 import { headers } from "next/headers";
 
 import { Separator } from "@/components/ui/separator";
+import { siteContent } from "@/lib/site-content";
 import { site } from "@/lib/site-data";
 import { buildLocalizedHref, getLocaleCopy, resolveLocaleFromHeaders } from "@/lib/locales";
 
@@ -18,6 +19,24 @@ export async function SiteFooter() {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">{site.name}</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{copy.footer.title}</h2>
             <p className="mt-4 max-w-lg text-base leading-8 text-zinc-600">{copy.footer.intro}</p>
+            <div className="mt-8 grid gap-3 rounded-3xl border border-zinc-200 bg-zinc-50/80 p-5 text-sm text-zinc-600 sm:grid-cols-2">
+              {siteContent.contact.details.items.map((item) => {
+                const isAddress = item.label === "Address";
+
+                return (
+                  <div key={item.label} className="space-y-1">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">{item.label}</p>
+                    {isAddress ? (
+                      <p className="leading-7 text-zinc-700">{item.value}</p>
+                    ) : (
+                      <a className="leading-7 text-zinc-700 hover:text-zinc-950 hover:underline" href={item.href}>
+                        {item.value}
+                      </a>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2">
@@ -46,9 +65,6 @@ export async function SiteFooter() {
         <div className="flex flex-col gap-3 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
             Copyright {new Date().getFullYear()} {site.name}. {copy.footer.allRightsReserved}
-          </p>
-          <p>
-            {copy.footer.companyReferenceLabel} {site.legalName}. {copy.footer.productLabel} {site.productFull}.
           </p>
         </div>
       </div>
