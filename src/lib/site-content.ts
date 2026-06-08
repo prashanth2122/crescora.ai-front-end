@@ -717,8 +717,8 @@ export const siteContent = {
       items: [
         {
           label: "Sales",
-          value: "sale@crescora.ai",
-          href: "mailto:sale@crescora.ai",
+          value: "sales@crescora.ai",
+          href: "mailto:sales@crescora.ai",
         },
         {
           label: "Support",

@@ -68,7 +68,7 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.contact.metadata.title, "Contact | Crescora AI");
   assert.equal(siteContent.contact.hero.title, "Contact Crescora AI.");
   assert.equal(siteContent.contact.details.items.length, 4);
-  assert.equal(siteContent.contact.details.items[0].value, "sale@crescora.ai");
+  assert.equal(siteContent.contact.details.items[0].value, "sales@crescora.ai");
   assert.equal(siteContent.contact.details.items[1].value, "support@crescora.ai");
   assert.equal(siteContent.contact.details.items[2].value, "navya@crescora.ai");
   assert.equal(siteContent.contact.details.items[3].value, "2nd floor, Urbanrise Oncloud 33, Bachupally, Hyderabad, Telangana, India");
