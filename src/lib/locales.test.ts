@@ -51,4 +51,5 @@ test("footer copy reflects the cleaned public-facing labels", () => {
   assert.equal(enLocaleCopy.ctas.requestScopeCall.label, "Discuss My Workflow");
   assert.equal(enLocaleCopy.footerGroups[1].links[2].label, "Education");
   assert.equal(enLocaleCopy.footerGroups[2].links[3].label, "Pilot Program");
+  assert.equal(enLocaleCopy.footerGroups[3].links[2].href, "/cookies");
 });

@@ -1,25 +1,13 @@
-import { siteContent } from "@/lib/site-content";
-import { PageShell } from "@/components/site/page-shell";
-import { PageHero } from "@/components/site/page-hero";
-import { Card, CardContent } from "@/components/ui/card";
+import type { Metadata } from "next";
 
-export const metadata = siteContent.legal.terms.metadata;
+import { LegalPage } from "@/components/site/legal-page";
+import { termsOfServiceContent } from "@/lib/terms-of-service-content";
+
+export const metadata: Metadata = {
+  title: { absolute: termsOfServiceContent.metadata.title },
+  description: termsOfServiceContent.metadata.description,
+};
 
 export default function TermsPage() {
-  const page = siteContent.legal.terms;
-
-  return (
-    <PageShell>
-      <PageHero eyebrow={page.hero.eyebrow} title={page.hero.title} description={page.hero.description} />
-      <section className="mx-auto w-full max-w-4xl px-4 pb-20 sm:px-6 lg:px-8">
-        <Card className="border-zinc-200 bg-white">
-          <CardContent className="space-y-4 p-6 text-sm leading-7 text-zinc-600 sm:p-8">
-            {page.body.map((item) => (
-              <p key={item}>{item}</p>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
-    </PageShell>
-  );
+  return <LegalPage page={termsOfServiceContent} showContactCard={false} />;
 }

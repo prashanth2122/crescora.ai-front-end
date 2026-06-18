@@ -48,6 +48,12 @@ This keeps route components thin and makes future localization work straightforw
 - the about page now includes structured sections for who we are, mission, product relationship, pilot program, and final CTA so the company story stays centralized
 - the homepage industry, blog, and solution sections are intentionally rewritten in customer-facing language while keeping the underlying SEO routes and links intact
 - the proof route now uses workflow-example language, a public rollout note, and a structured includes section instead of defensive illustrative-proof wording
+- the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
+- the privacy policy now renders at `/privacy`
+- the terms of service now render at `/terms`
+- the cookie policy now renders at `/cookies`
+- the acceptable use policy now renders at `/acceptable-use`
+- the legacy `siteContent.legal.acceptableUse` entry reuses the same acceptable-use policy content so older callers stay in sync
 - page transitions now use CSS-based entry animation so content paints immediately instead of waiting on a hydration timer
 - contact details are centralized in `src/lib/site-content.ts` and shown on the contact page plus the footer for sales, support, CEO correspondence, and office location
 - the platform hero, workflow visual, capability cards, and start-here CTA are also centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts`

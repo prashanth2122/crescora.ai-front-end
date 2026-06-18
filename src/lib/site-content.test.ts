@@ -2,9 +2,15 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { proofCards } from "@/lib/decision-pages";
+import { acceptableUsePolicyContent } from "@/lib/acceptable-use-policy-content";
 import { isValidPhoneForCountry } from "@/lib/lead-form-validation";
+import { cookiePolicyContent } from "@/lib/cookie-policy-content";
+import { privacyPolicyContent } from "@/lib/privacy-policy-content";
+import { enLocaleCopy } from "@/lib/locales/en";
+import { hiLocaleCopy } from "@/lib/locales/hi";
 import { solutionPages } from "@/lib/seo-marketing-data";
 import { siteContent } from "@/lib/site-content";
+import { termsOfServiceContent } from "@/lib/terms-of-service-content";
 import { homepageFlowSteps, useCases } from "@/lib/site-data";
 
 test("homepage copy reflects the conversion-focused messaging", () => {
@@ -40,6 +46,15 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.ctas.requestScopeCall.label, "Discuss My Workflow");
   assert.equal(siteContent.ctas.getProjectScope.label, "Get Project Scope");
   assert.ok(siteContent.ctas.openUseCase.label.startsWith("Open use case"));
+  assert.equal(siteContent.footerGroups[3].links[1].href, "/terms");
+  assert.equal(siteContent.footerGroups[3].links[2].href, "/cookies");
+  assert.equal(siteContent.footerGroups[3].links[3].href, "/acceptable-use");
+  assert.equal(enLocaleCopy.footerGroups[3].links[1].href, "/terms");
+  assert.equal(enLocaleCopy.footerGroups[3].links[2].href, "/cookies");
+  assert.equal(enLocaleCopy.footerGroups[3].links[3].href, "/acceptable-use");
+  assert.equal(hiLocaleCopy.footerGroups[3].links[1].href, "/terms");
+  assert.equal(hiLocaleCopy.footerGroups[3].links[2].href, "/cookies");
+  assert.equal(hiLocaleCopy.footerGroups[3].links[3].href, "/acceptable-use");
   assert.equal(siteContent.industriesIndex.hero.title, "Industry workflows FLOW can automate for your business.");
   assert.equal(siteContent.industriesIndex.phaseTwo.title, "Don't see your industry here?");
   assert.equal(siteContent.industriesIndex.seoLandingPages.title, "Explore more automation solution pages.");
@@ -125,4 +140,84 @@ test("proof page copy uses workflow example language", () => {
   assert.equal(siteContent.proofIndex.includes.items.length, 8);
   assert.equal(siteContent.ctas.openProofPage.label, "Open workflow example →");
   assert.equal(proofCards[0].text, "See how a hospital or clinic can automate appointment intake, patient reminders, document collection, payment follow-up, and safe handover for sensitive cases.");
+});
+
+test("legal page copy is structured and no longer placeholder text", () => {
+  assert.equal(siteContent.legal.privacy.metadata.title, "Privacy Policy | Crescora AI");
+  assert.equal(siteContent.legal.privacy.updatedOn, "June 18, 2026");
+  assert.equal(siteContent.legal.privacy.sections.length, 6);
+  assert.equal(siteContent.legal.privacy.sections[0].title, "Information we collect");
+  assert.ok(siteContent.legal.privacy.sections[0].paragraphs[0].includes("work email"));
+  assert.equal(siteContent.legal.terms.sections[1].title, "Service scope");
+  assert.equal(siteContent.legal.cookies.sections[0].title, "Current cookie behavior");
+  assert.equal(siteContent.legal.acceptableUse.metadata.title, "Acceptable Use Policy | Crescora Flow");
+  assert.equal(siteContent.legal.acceptableUse.sections.length, 14);
+  assert.equal(siteContent.legal.acceptableUse.sections[0].title, "1. General Rule");
+  assert.ok(!siteContent.legal.privacy.hero.description.includes("placeholder"));
+  assert.ok(!siteContent.legal.terms.metadata.description.includes("Finalize this page with legal review"));
+});
+
+test("privacy policy page uses the supplied Crescora Flow copy", () => {
+  assert.equal(privacyPolicyContent.metadata.title, "Privacy Policy | Crescora Flow");
+  assert.equal(
+    privacyPolicyContent.metadata.description,
+    "Learn how Crescora Flow collects, uses, protects, and manages personal data across AI automation, workspaces, channels, integrations, and customer conversations.",
+  );
+  assert.equal(privacyPolicyContent.dateLabel, "Effective date");
+  assert.equal(privacyPolicyContent.updatedOn, "06-June 2026");
+  assert.equal(privacyPolicyContent.sections.length, 16);
+  assert.equal(privacyPolicyContent.sections[0].title, "1. Scope of this Policy");
+  assert.equal(privacyPolicyContent.sections[1].title, "2. Our Role in Data Processing");
+  assert.equal(privacyPolicyContent.sections[2].bullets?.[0], "Account and workspace information: name, email address, phone number, password credentials, role, workspace name, organization details, member permissions, login activity, 2FA status, invitation status, and account preferences.");
+  assert.equal(privacyPolicyContent.sections[3].title, "4. How We Use Information");
+  assert.equal(privacyPolicyContent.sections[12].title, "13. Your Rights");
+  assert.ok(privacyPolicyContent.sections[15].bullets?.includes("Email: support@crescora.ai"));
+});
+
+test("cookie policy page uses the supplied Crescora Flow copy", () => {
+  assert.equal(cookiePolicyContent.metadata.title, "Cookie Policy | Crescora Flow");
+  assert.equal(
+    cookiePolicyContent.metadata.description,
+    "Understand how Crescora Flow uses cookies and similar technologies for authentication, security, preferences, analytics, performance, and marketing.",
+  );
+  assert.equal(cookiePolicyContent.dateLabel, "Effective date");
+  assert.equal(cookiePolicyContent.updatedOn, "06-June 2026");
+  assert.equal(cookiePolicyContent.sections.length, 10);
+  assert.equal(cookiePolicyContent.sections[0].title, "1. What Are Cookies?");
+  assert.equal(cookiePolicyContent.sections[2].bullets?.[0], "Strictly necessary cookies: Required for the website and application to function. They support login, authentication, security, session management, CSRF protection, load balancing, and workspace access.");
+  assert.equal(cookiePolicyContent.sections[3].tables?.[0].headers[0], "Category");
+  assert.equal(cookiePolicyContent.sections[3].tables?.[0].rows[0][0], "Essential");
+  assert.equal(cookiePolicyContent.sections[9].bullets?.[1], "Email: support@crescora.ai");
+});
+
+test("terms of service page uses the supplied Crescora Flow copy", () => {
+  assert.equal(termsOfServiceContent.metadata.title, "Terms of Service | Crescora Flow");
+  assert.equal(
+    termsOfServiceContent.metadata.description,
+    "Review the terms that govern access to Crescora Flow, including workspaces, automation flows, AI features, integrations, billing, acceptable use, and service limitations.",
+  );
+  assert.equal(termsOfServiceContent.dateLabel, "Effective date");
+  assert.equal(termsOfServiceContent.updatedOn, "06-June 2026");
+  assert.equal(termsOfServiceContent.sections.length, 22);
+  assert.equal(termsOfServiceContent.sections[0].title, "1. About Crescora Flow");
+  assert.equal(termsOfServiceContent.sections[3].title, "4. Customer Content");
+  assert.equal(termsOfServiceContent.sections[8].bullets?.[0], "Fees are exclusive of taxes.");
+  assert.equal(termsOfServiceContent.sections[16].title, "17. Disclaimers");
+  assert.equal(termsOfServiceContent.sections[21].title, "22. Contact");
+});
+
+test("acceptable use policy page uses the supplied Crescora Flow copy", () => {
+  assert.equal(acceptableUsePolicyContent.metadata.title, "Acceptable Use Policy | Crescora Flow");
+  assert.equal(
+    acceptableUsePolicyContent.metadata.description,
+    "Crescora Flow's Acceptable Use Policy explains prohibited uses, AI safety expectations, messaging rules, data restrictions, platform abuse rules, and enforcement actions.",
+  );
+  assert.equal(acceptableUsePolicyContent.dateLabel, "Effective date");
+  assert.equal(acceptableUsePolicyContent.updatedOn, "06-June 2026");
+  assert.equal(acceptableUsePolicyContent.sections.length, 14);
+  assert.equal(acceptableUsePolicyContent.sections[0].title, "1. General Rule");
+  assert.equal(acceptableUsePolicyContent.sections[3].title, "4. AI Misuse");
+  assert.equal(acceptableUsePolicyContent.sections[5].bullets?.[0], "Collect personal data without lawful basis or consent where required.");
+  assert.equal(acceptableUsePolicyContent.sections[12].bullets?.[0], "Abuse reports: support@crescora.ai");
+  assert.equal(acceptableUsePolicyContent.sections[12].bullets?.[1], "General support: support@crescora.ai");
 });

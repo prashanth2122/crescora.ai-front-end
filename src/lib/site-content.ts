@@ -1,3 +1,5 @@
+import { acceptableUsePolicyContent } from "@/lib/acceptable-use-policy-content";
+
 export type Cta = {
   label: string;
   href: string;
@@ -21,6 +23,27 @@ type SplitCardPage = {
   hero: PageHeroCopy;
   cards: Array<{ title: string; text: string }>;
   cta?: Cta;
+};
+
+type LegalSectionCopy = {
+  title: string;
+  paragraphs?: readonly string[];
+  bullets?: readonly string[];
+  tables?: readonly LegalTableCopy[];
+};
+
+type LegalTableCopy = {
+  caption?: string;
+  headers: readonly string[];
+  rows: readonly (readonly string[])[];
+};
+
+type LegalPageCopy = {
+  metadata: MetadataCopy;
+  hero: PageHeroCopy;
+  dateLabel?: string;
+  updatedOn: string;
+  sections: readonly LegalSectionCopy[];
 };
 
 export const siteContent = {
@@ -1447,66 +1470,161 @@ export const siteContent = {
     privacy: {
       metadata: {
         title: "Privacy Policy | Crescora AI",
-        description: "This page should be finalized with legal review before public launch.",
+        description:
+          "Learn what information Crescora AI collects, how it is used, and the choices available to site visitors and prospects.",
       },
       hero: {
         eyebrow: "Legal",
         title: "Privacy Policy",
         description:
-          "This page should be finalized with legal review before public launch. It currently acts as the policy placeholder for the production build.",
+          "This policy explains the information we collect through the website, demo forms, and related communications, and how we use that information to respond to requests and operate our business.",
       },
-      body: [
-        "Document the data collected, purpose, retention, sharing, user rights, and contact channels.",
-        "Review this policy with legal counsel before launch.",
+      updatedOn: "June 18, 2026",
+      sections: [
+        {
+          title: "Information we collect",
+          paragraphs: [
+            "When you contact us or request a demo, we may collect your name, company name, work email, phone or WhatsApp number, country, industry, primary use case, expected timeline, monthly enquiry volume, preferred channel, current tools, and the problem you want to solve.",
+            "We may also collect page URL, referrer URL, and campaign parameters such as UTM values when they are submitted with a form so we can understand where the request came from and follow up in context.",
+          ],
+        },
+        {
+          title: "How we use information",
+          paragraphs: [
+            "We use this information to respond to enquiries, schedule demos, prepare proposals, operate the website, keep records of our communications, and improve the relevance of our content and follow-up process.",
+            "We may also use the information to support security, detect abuse, maintain service quality, and meet legal or regulatory obligations when applicable.",
+          ],
+        },
+        {
+          title: "How we share information",
+          paragraphs: [
+            "We share personal information only when it is needed to run the business, such as with team members who handle sales or support, with service providers that help us operate the website or process enquiries, or when disclosure is required by law.",
+            "If our business is involved in a merger, acquisition, or similar transaction, the relevant records may be transferred as part of that process.",
+          ],
+        },
+        {
+          title: "Retention and security",
+          paragraphs: [
+            "We keep personal information for as long as needed to manage the enquiry, maintain business records, support the customer relationship, or meet legal, tax, or accounting requirements.",
+            "We use administrative, technical, and physical safeguards intended to protect information, but no online system can be guaranteed to be completely secure.",
+          ],
+        },
+        {
+          title: "Your choices",
+          paragraphs: [
+            "You can request access to, correction of, or deletion of the information you have submitted to us, and you can ask us to stop sending non-essential marketing messages.",
+            "If you want to update your details or ask how we handle a specific record, contact us using the details below.",
+          ],
+        },
+        {
+          title: "Contact us",
+          paragraphs: [
+            "For privacy questions or data requests, contact the Crescora AI team and we will route your request to the right person.",
+          ],
+        },
       ],
     },
     terms: {
       metadata: {
         title: "Terms of Service | Crescora AI",
-        description: "Finalize this page with legal review before launch.",
+        description:
+          "Review the rules for using the Crescora AI website, materials, and services before engaging with the platform.",
       },
       hero: {
         eyebrow: "Legal",
         title: "Terms of Service",
         description:
-          "Finalize this page with legal review before launch. It should define scope, responsibilities, limitations, and acceptable use.",
+          "These terms describe how the website and related services may be used, what responsibilities apply to visitors and customers, and which limits govern our relationship.",
       },
-      body: [
-        "Document service scope, responsibilities, limitations, payment terms, and liability framework.",
-        "Review this policy with legal counsel before launch.",
+      updatedOn: "June 18, 2026",
+      sections: [
+        {
+          title: "Using the website",
+          paragraphs: [
+            "You may use this website for lawful business and informational purposes. You agree not to interfere with the site, attempt unauthorized access, or use the content in a way that violates applicable law or third-party rights.",
+          ],
+        },
+        {
+          title: "Service scope",
+          paragraphs: [
+            "Crescora AI provides business automation software, implementation support, and related services. The exact scope, timelines, deliverables, and pricing for paid work are defined in the applicable proposal, order form, or service agreement.",
+            "We may update, add, or discontinue website features or service descriptions as the product evolves.",
+          ],
+        },
+        {
+          title: "User submissions and materials",
+          paragraphs: [
+            "If you submit business information, files, prompts, or other materials to us, you confirm that you have the right to share them and that they do not contain unlawful or infringing content.",
+            "You are responsible for the accuracy of the information you submit and for any decisions made using your own account or business data.",
+          ],
+        },
+        {
+          title: "Intellectual property",
+          paragraphs: [
+            "The website, brand assets, copy, and other content we provide remain the property of Crescora AI or its licensors unless we agree otherwise in writing.",
+            "You may not copy, reproduce, distribute, or create derivative works from our materials except where allowed by law or by a written license.",
+          ],
+        },
+        {
+          title: "Disclaimer and liability",
+          paragraphs: [
+            "The website is provided on an as-is basis. We do not guarantee that it will always be uninterrupted, error-free, or available at every moment.",
+            "To the maximum extent permitted by law, Crescora AI is not liable for indirect, incidental, or consequential damages arising from use of the website or reliance on its content.",
+          ],
+        },
+        {
+          title: "Contact",
+          paragraphs: [
+            "If you have questions about these terms or want a written agreement for a project, contact the Crescora AI team before you begin implementation.",
+          ],
+        },
       ],
     },
     cookies: {
       metadata: {
         title: "Cookie Policy | Crescora AI",
-        description: "Document analytics, preference management, and consent behavior before launch.",
+        description:
+          "Understand how Crescora AI handles cookies, similar technologies, and browser-based preferences on the website.",
       },
       hero: {
         eyebrow: "Legal",
         title: "Cookie Policy",
-        description: "Document analytics, preference management, and consent behavior before launch.",
-      },
-      body: [
-        "Describe analytics cookies, preference management, and consent handling.",
-        "Review this policy with legal counsel before launch.",
-      ],
-    },
-    acceptableUse: {
-      metadata: {
-        title: "Acceptable Use Policy | Crescora AI",
-        description: "Define abuse, spam, harmful automation, and unauthorized data use before launch.",
-      },
-      hero: {
-        eyebrow: "Legal",
-        title: "Acceptable Use Policy",
         description:
-          "Define abuse, spam, harmful automation, and unauthorized data use before launch.",
+          "This policy explains the current cookie and storage behavior on the website and how you can control browser-based preferences.",
       },
-      body: [
-        "Restrict abuse, spam, deceptive automation, and unauthorized data use.",
-        "Review this policy with legal counsel before launch.",
+      updatedOn: "June 18, 2026",
+      sections: [
+        {
+          title: "Current cookie behavior",
+          paragraphs: [
+            "The checked-in website does not intentionally rely on marketing cookies or a cookie banner flow. Any non-essential tracking should be added explicitly and documented before use.",
+            "Browser, hosting, or embedded services may still set technical data needed to deliver the page, protect the site, or support third-party features if they are introduced later.",
+          ],
+        },
+        {
+          title: "How we use similar technologies",
+          paragraphs: [
+            "If we add analytics, preference storage, or embedded tools in the future, they will be used to understand site performance, remember choices, or support the requested feature.",
+            "We will keep the implementation limited to what is needed for the feature and update this policy if the behavior changes.",
+          ],
+        },
+        {
+          title: "Your controls",
+          paragraphs: [
+            "You can usually control cookies and local storage through your browser settings, including blocking or deleting stored data.",
+            "If the site later adds a consent tool, you can use it to manage non-essential categories before they are activated.",
+          ],
+        },
+        {
+          title: "Changes and contact",
+          paragraphs: [
+            "If we change how the site uses cookies or similar technologies, we will update this policy to reflect the new behavior.",
+            "Questions about cookie handling can be sent to the Crescora AI team using the contact details on the website.",
+          ],
+        },
       ],
     },
+    acceptableUse: acceptableUsePolicyContent,
   },
   notFound: {
     title: "This page does not exist.",
@@ -1519,3 +1637,4 @@ export const siteContent = {
 export type SiteContent = typeof siteContent;
 export type PageHeroData = PageHeroCopy;
 export type SplitCardPageData = SplitCardPage;
+export type LegalPageData = LegalPageCopy;
