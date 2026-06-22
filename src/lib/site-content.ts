@@ -199,25 +199,11 @@ export const siteContent = {
       builtForText:
         "Hospitals, clinics, real estate teams, education businesses, support teams, and service companies.",
       stats: [
-        { value: "70-90%", label: "repetitive customer workflows automated" },
-        { value: "5", label: "first-release industries prioritized" },
-        { value: "4", label: "pricing packages with clear growth paths" },
+        { value: "70-90%", label: "repetitive customer conversations automated" },
+        { value: "14 days", label: "to launch a focused first workflow" },
+        { value: "1 workflow", label: "to prove value before scaling wider" },
       ],
     },
-    painSpotlights: [
-      {
-        title: "Missed customer leads",
-        text: "Website and WhatsApp enquiries go unanswered when your team is busy or offline.",
-      },
-      {
-        title: "Manual WhatsApp follow-ups",
-        text: "Staff spend hours repeating the same answers about pricing, availability, and booking.",
-      },
-      {
-        title: "Repetitive support questions",
-        text: "Your team keeps typing simple answers instead of focusing on higher-value customers.",
-      },
-    ],
     pain: {
       eyebrow: "Pain",
       title: "Your business is not losing customers because of demand. It is losing them because of delay.",
@@ -251,49 +237,41 @@ export const siteContent = {
       ],
     },
     automation: {
-      eyebrow: "What FLOW automates",
-      title: "Start with workflows that move revenue, service, and follow-up forward.",
+      eyebrow: "What FLOW can automate first",
+      title: "Start with the workflow that slows your team down the most.",
       description:
-        "Use FLOW to standardize the customer journeys your team already handles manually, then expand automation once the process is proven.",
+        "Pick one high-friction customer journey, automate the repetitive steps, and keep humans in control of the exceptions.",
       cards: [
         {
           title: "Lead capture and qualification",
-          text: "Capture enquiries from web and WhatsApp, ask the right questions, and route high-intent leads to your team.",
+          text: "Capture enquiries from web or WhatsApp, ask the right questions, and route serious leads to your team.",
         },
         {
-          title: "WhatsApp enquiry and follow-up automation",
-          text: "Answer common questions, share next steps, and continue follow-ups even after business hours.",
+          title: "WhatsApp enquiry and follow-up",
+          text: "Reply faster, share next steps, and keep follow-ups moving even when your team is offline.",
         },
         {
           title: "Appointment booking",
-          text: "Check availability, confirm slots, send reminders, and reduce back-and-forth calls for every booking.",
+          text: "Confirm slots, send reminders, and reduce back-and-forth for every booking.",
         },
         {
-          title: "FAQ and support automation",
+          title: "Support and FAQ automation",
           text: "Resolve repeated questions quickly and escalate complex issues with full context.",
         },
         {
-          title: "Document collection",
-          text: "Request IDs, forms, reports, and documents without repeated manual follow-ups.",
+          title: "Payment and document follow-up",
+          text: "Send reminders, collect updates, and stop manual chasing across pending steps.",
         },
         {
-          title: "Payment confirmation",
-          text: "Send payment reminders, capture status updates, and move unresolved cases to your team.",
-        },
-        {
-          title: "Human handover",
-          text: "Escalate sensitive, high-value, or complex cases with full history and a clear next action.",
-        },
-        {
-          title: "CRM and API sync",
-          text: "Send leads, bookings, payments, and support details to your CRM or internal systems.",
+          title: "Human handover with context",
+          text: "Move sensitive, high-value, or stalled conversations to the right person with full history.",
         },
       ],
     },
     pilot: {
       eyebrow: "14-day pilot",
       title: "Start with one workflow and prove it in 14 days.",
-      description: "One bot. One business workflow. One measurable outcome.",
+      description: "One workflow. One business problem. One measurable outcome.",
       bullets: [
         "One complete automation flow",
         "Up to 15 workflow steps",
@@ -306,22 +284,19 @@ export const siteContent = {
       secondaryCta: { label: "View Industry Workflows", href: "/industries" },
     },
     outcomes: {
-      eyebrow: "Outcomes",
-      title: "FLOW does not just answer. It gets work done.",
+      eyebrow: "Workflow outcomes",
+      title: "From first message to next action.",
       description:
-        "After a customer message, FLOW can qualify leads, book appointments, collect documents, send reminders, escalate cases, update records, and report outcomes automatically.",
+        "FLOW keeps the customer journey moving with structured replies, reminders, escalation, and outcome tracking.",
       items: [
-        "Enquiry -> appointment booked",
-        "Lead -> site visit scheduled",
-        "Student question -> demo class booked",
-        "Payment due -> reminder sent and status updated",
-        "Document request -> intake completed",
-        "Complex issue -> routed to human with context",
+        "Enquiry -> qualified lead captured",
+        "Booking request -> appointment confirmed",
+        "Payment or document request -> reminder and status updated",
+        "Complex case -> routed to a human with context",
       ],
-      automationClaim:
-        "Automate up to 70-90% of repetitive customer conversations and follow-up tasks.",
+      automationClaim: "Automate up to 70-90% of repetitive customer conversations.",
       automationSupport:
-        "Built with human handover for complex, sensitive, and high-value cases, so automation supports your team instead of replacing control.",
+        "Use automation for the routine path, then hand over the exceptions without losing visibility or control.",
       results: [
         "Faster first response",
         "Consistent follow-up execution",
@@ -335,67 +310,40 @@ export const siteContent = {
       title: "See how FLOW works in your industry.",
       description: "Start with workflows that directly improve revenue, response time, and operations.",
     },
-    blog: {
-      eyebrow: "Blog",
-      title: "Explore practical automation guidance.",
+    explore: {
+      eyebrow: "Explore deeper",
+      title: "Open the page that matches your buying question.",
       description:
-        "Use these articles to understand use cases, compare options, and learn how FLOW works in real business workflows.",
-      primaryCta: { label: "Explore Articles", href: "/blog" },
-      secondaryCta: { label: "Browse Solutions", href: "/solutions" },
+        "Use the homepage for the overview, then go deeper by industry, solution, pricing, or practical guides.",
       cards: [
         {
-          slug: "how-whatsapp-automation-helps-small-businesses-in-india",
-          category: "WhatsApp Automation",
-          title: "How WhatsApp Automation Helps Small Businesses in India",
-          description: "See how FLOW can handle enquiries, reminders, and follow-ups for small teams.",
+          title: "Industry workflows",
+          description:
+            "See how FLOW fits hospitals, clinics, real estate, education, support, and service businesses.",
+          href: "/industries",
+          ctaLabel: "Browse industries",
         },
         {
-          slug: "best-ai-chatbot-use-cases-for-hospitals-and-clinics",
-          category: "Healthcare",
-          title: "Best AI Chatbot Use Cases for Hospitals and Clinics",
-          description: "Learn where chatbot automation helps front desks, intake teams, and patient support.",
+          title: "Automation solutions",
+          description:
+            "Compare workflow types such as WhatsApp automation, support, bookings, documents, and follow-up.",
+          href: "/solutions",
+          ctaLabel: "Browse solutions",
         },
         {
-          slug: "how-to-automate-appointment-booking-using-whatsapp",
-          category: "Appointments",
-          title: "How to Automate Appointment Booking Using WhatsApp",
-          description: "Understand a simple booking flow for enquiry capture, slot confirmation, and reminders.",
+          title: "Pricing and rollout",
+          description:
+            "See how to start with one workflow, understand package shape, and plan the right rollout path.",
+          href: "/pricing",
+          ctaLabel: "See pricing",
         },
         {
-          slug: "whatsapp-chatbot-vs-website-chatbot-which-is-better",
-          category: "Comparison",
-          title: "WhatsApp Chatbot vs Website Chatbot: Which Is Better?",
-          description: "Compare where each channel fits and when a website form or WhatsApp flow works best.",
+          title: "Practical guides",
+          description:
+            "Read articles that explain use cases, channel decisions, and rollout patterns in plain language.",
+          href: "/blog",
+          ctaLabel: "Explore articles",
         },
-      ],
-    },
-    howItWorks: {
-      eyebrow: "How it works",
-      title: "How FLOW turns messages into completed workflows.",
-      description:
-        "FLOW keeps enquiry handling, follow-up, handover, and outcome tracking connected in one simple customer journey.",
-      teamLabel: "What the team sees",
-      teamDescription:
-        "FLOW gives your team a clear path from enquiry to next step, with reminders, handover, records, and progress visibility built into the process.",
-      sectionDescription:
-        "Keep enquiry handling, follow-up, handover, and outcome tracking in one simple customer journey.",
-    },
-    beforeAfter: {
-      beforeLabel: "Before",
-      afterLabel: "After FLOW",
-      beforeItems: [
-        "Leads delayed or missed",
-        "Follow-ups depend on staff memory",
-        "Repeated questions overload the team",
-        "Payments and documents need manual chasing",
-        "No clear view of drop-offs or outcomes",
-      ],
-      afterItems: [
-        "Faster first response",
-        "Automated follow-ups",
-        "Consistent customer journeys",
-        "Human handover with full context",
-        "Better visibility into leads, bookings, and outcomes",
       ],
     },
     trust: {
@@ -440,20 +388,12 @@ export const siteContent = {
         },
       ],
     },
-    pricing: {
-      eyebrow: "Pricing",
-      title: "Start with high-impact workflows. Scale as you grow.",
-      description:
-        "Start with one focused workflow, then expand to more teams, channels, integrations, and customer journeys as you grow.",
-      note:
-        "Pricing depends on workflow scope, channels, integrations, automation complexity, and support requirements. We'll recommend the right package after reviewing your use case.",
-    },
     finalCta: {
-      eyebrow: "Final CTA",
-      title: "Stop losing leads and time to manual follow-ups.",
-      description: "See how FLOW by Crescora AI can automate one high-impact customer workflow for your business.",
+      eyebrow: "Next step",
+      title: "Book a focused workflow demo.",
+      description: "We will review your current process and recommend the first workflow worth automating.",
       primary: { label: "Book Free Demo", href: "/contact" },
-      secondary: { label: "Discuss My Workflow", href: "/contact" },
+      secondary: { label: "See Pricing", href: "/pricing" },
     },
   },
   leadForm: {

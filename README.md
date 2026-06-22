@@ -40,13 +40,12 @@ This keeps route components thin and makes future localization work straightforw
 - swap the active content source in one place
 - keep page structure and copy separate
 - homepage conversion copy, CTA labels, automation cards, outcomes copy, trust / FAQ / pricing text, and the right-side flow steps are centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts` so the public messaging can evolve without changing the route shell
-- the homepage now uses `Book Free Demo` and `View Industry Workflows` as the primary conversion path from the hero and pilot sections
-- homepage terminology now prefers `handover` over `handoff`, the workflow step copy uses the booking/payment/document wording, and the FAQ accordion is expanded by default so answers remain visible in page captures
-- the homepage pricing cards now include the workflow-scope clarity note beneath the package grid
+- the homepage now uses `Book Free Demo` and `View Industry Workflows` as the primary conversion path from the hero and pilot sections, while the full workflow enquiry form stays on `/contact`
+- homepage terminology now prefers `handover` over `handoff`, the workflow step copy uses the booking/payment/document wording, and the homepage FAQ is collapsed by default so the route stays easier to scan
 - the shared header currently omits the language switcher and keeps only navigation plus sales/demo CTAs
 - the about page uses the same product-first CTA labels and automation-focused positioning so it stays aligned with the rest of the site
 - the about page now includes structured sections for who we are, mission, product relationship, pilot program, and final CTA so the company story stays centralized
-- the homepage industry, blog, and solution sections are intentionally rewritten in customer-facing language while keeping the underlying SEO routes and links intact
+- the homepage now stays focused on hero, pain, workflow automation, featured industries, pilot scope, trust / FAQ, and a compact deeper-links block; detailed solutions, pricing, blog content, and the full lead intake live on their dedicated routes
 - the proof route now uses workflow-example language, a public rollout note, and a structured includes section instead of defensive illustrative-proof wording
 - the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
 - the privacy policy now renders at `/privacy`
