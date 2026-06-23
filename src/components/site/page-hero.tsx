@@ -26,6 +26,7 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section
+      data-analytics-area="page_hero"
       className={cn(
         "mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20",
         className,
@@ -60,12 +61,16 @@ export function PageHero({
             >
               {primaryCta ? (
                 <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
-                  <Link href={primaryCta.href}>{primaryCta.label}</Link>
+                  <Link href={primaryCta.href} data-analytics-role="cta">
+                    {primaryCta.label}
+                  </Link>
                 </Button>
               ) : null}
               {secondaryCta ? (
                 <Button asChild variant="outline" className="h-12 rounded-full px-6">
-                  <Link href={secondaryCta.href}>{secondaryCta.label}</Link>
+                  <Link href={secondaryCta.href} data-analytics-role="cta">
+                    {secondaryCta.label}
+                  </Link>
                 </Button>
               ) : null}
             </div>

@@ -714,7 +714,7 @@ export const siteContent = {
       secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     },
     note:
-      "Pricing depends on workflow scope, selected channels, integrations, automation complexity, and support requirements. We’ll recommend the right package after reviewing your use case.",
+      "Package pricing starts from the listed monthly rates and can still change with workflow scope, selected channels, integrations, automation complexity, and support requirements. We’ll recommend the right package after reviewing your use case.",
     ctas: {
       primary: { label: "Book Free Demo", href: "/contact" },
       secondary: { label: "Get Project Scope", href: "/contact" },
@@ -1419,13 +1419,13 @@ export const siteContent = {
         description:
           "This policy explains the information we collect through the website, demo forms, and related communications, and how we use that information to respond to requests and operate our business.",
       },
-      updatedOn: "June 18, 2026",
+      updatedOn: "June 23, 2026",
       sections: [
         {
           title: "Information we collect",
           paragraphs: [
             "When you contact us or request a demo, we may collect your name, company name, work email, phone or WhatsApp number, country, industry, primary use case, expected timeline, monthly enquiry volume, preferred channel, current tools, and the problem you want to solve.",
-            "We may also collect page URL, referrer URL, and campaign parameters such as UTM values when they are submitted with a form so we can understand where the request came from and follow up in context.",
+            "We may also collect page URL, referrer URL, campaign parameters such as UTM values, and high-level website interaction data such as page views, CTA clicks, contact-page visits, scroll depth, and lead-form funnel events so we can understand where an enquiry came from and how visitors move through the site.",
           ],
         },
         {
@@ -1476,7 +1476,7 @@ export const siteContent = {
         description:
           "These terms describe how the website and related services may be used, what responsibilities apply to visitors and customers, and which limits govern our relationship.",
       },
-      updatedOn: "June 18, 2026",
+      updatedOn: "June 23, 2026",
       sections: [
         {
           title: "Using the website",
@@ -1537,15 +1537,15 @@ export const siteContent = {
         {
           title: "Current cookie behavior",
           paragraphs: [
-            "The checked-in website does not intentionally rely on marketing cookies or a cookie banner flow. Any non-essential tracking should be added explicitly and documented before use.",
-            "Browser, hosting, or embedded services may still set technical data needed to deliver the page, protect the site, or support third-party features if they are introduced later.",
+            "The checked-in website now loads Google tag / Google Analytics on the public marketing site to measure page views, CTA clicks, contact-page traffic, scroll depth, lead-form funnel events, and frontend performance metrics.",
+            "The checked-in site still does not ship a cookie banner or preference center. Browser, hosting, or embedded services may also set technical data needed to deliver the page, protect the site, or support third-party features.",
           ],
         },
         {
           title: "How we use similar technologies",
           paragraphs: [
-            "If we add analytics, preference storage, or embedded tools in the future, they will be used to understand site performance, remember choices, or support the requested feature.",
-            "We will keep the implementation limited to what is needed for the feature and update this policy if the behavior changes.",
+            "Analytics is currently used to understand site performance, campaign quality, contact intent, and lead-form completion patterns so we can improve the marketing funnel and page experience.",
+            "We still keep the implementation limited to operational analytics rather than ad personalization, and we will update this policy again if the behavior changes materially.",
           ],
         },
         {

@@ -16,7 +16,10 @@ export default function ContactPage() {
         title={siteContent.contact.hero.title}
         description={siteContent.contact.hero.description}
       />
-      <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <section
+        data-analytics-area="contact_details"
+        className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8"
+      >
         <SectionHeading
           eyebrow={siteContent.contact.details.eyebrow}
           title={siteContent.contact.details.title}

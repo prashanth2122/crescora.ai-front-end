@@ -20,9 +20,16 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/90 backdrop-blur-xl">
+      <header
+        data-analytics-area="site_header"
+        className="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/90 backdrop-blur-xl"
+      >
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:grid lg:grid-cols-[auto_1fr_auto] lg:px-8">
-          <Link href={buildLocalizedHref("/", locale)} className="flex items-center">
+          <Link
+            href={buildLocalizedHref("/", locale)}
+            data-analytics-role="brand"
+            className="flex items-center"
+          >
             <Image
               src="/header-logo.png"
               alt={site.name}
@@ -34,7 +41,10 @@ export function SiteHeader() {
             />
           </Link>
 
-          <nav className="hidden items-center justify-center gap-5 lg:flex">
+          <nav
+            data-analytics-area="site_header_nav"
+            className="hidden items-center justify-center gap-5 lg:flex"
+          >
             {desktopNavItems.map((item) => (
               <Link
                 key={item.href}
@@ -50,12 +60,16 @@ export function SiteHeader() {
             <div className="hidden items-center gap-4 xl:flex">
               <Link
                 href={buildLocalizedHref(copy.ctas.talkToSales.href, locale)}
+                data-analytics-role="cta"
                 className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950"
               >
                 {copy.ctas.talkToSales.label}
               </Link>
               <Button asChild className="bg-zinc-950 text-white hover:bg-zinc-800">
-                <Link href={buildLocalizedHref(copy.ctas.bookProjectDemo.href, locale)}>
+                <Link
+                  href={buildLocalizedHref(copy.ctas.bookProjectDemo.href, locale)}
+                  data-analytics-role="cta"
+                >
                   {copy.ctas.bookProjectDemo.label}
                 </Link>
               </Button>
@@ -102,7 +116,7 @@ export function SiteHeader() {
             </div>
 
             <div className="flex-1 overflow-auto px-4 py-5">
-              <nav className="flex flex-col gap-2">
+              <nav data-analytics-area="mobile_nav" className="flex flex-col gap-2">
                 {copy.navigation.map((item) => (
                   <Link
                     key={item.href}
@@ -120,6 +134,7 @@ export function SiteHeader() {
               <div className="mt-5 grid gap-3">
                 <Link
                   href={buildLocalizedHref(copy.ctas.talkToSales.href, locale)}
+                  data-analytics-role="cta"
                   onClick={() => setMobileOpen(false)}
                   className="rounded-2xl border border-zinc-200 px-4 py-3 text-center text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-950"
                 >
@@ -128,6 +143,7 @@ export function SiteHeader() {
                 <Button asChild className="justify-center rounded-2xl bg-zinc-950 text-white hover:bg-zinc-800">
                   <Link
                     href={buildLocalizedHref(copy.ctas.bookProjectDemo.href, locale)}
+                    data-analytics-role="cta"
                     onClick={() => setMobileOpen(false)}
                   >
                     {copy.ctas.bookProjectDemo.label}

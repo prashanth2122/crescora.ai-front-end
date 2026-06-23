@@ -31,6 +31,12 @@ export default function PricingPage() {
               <CardContent className="flex h-full flex-col p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{pkg.label}</p>
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{pkg.title}</h2>
+                <div className="mt-4">
+                  <p className="text-3xl font-semibold tracking-tight text-zinc-950">{pkg.price}</p>
+                  {pkg.priceDetail ? (
+                    <p className="mt-1 text-sm font-medium leading-6 text-zinc-500">{pkg.priceDetail}</p>
+                  ) : null}
+                </div>
                 <p className="mt-3 text-sm font-medium leading-7 text-zinc-950">Best for</p>
                 <p className="text-sm leading-7 text-zinc-600">{pkg.bestFor}</p>
                 <p className="mt-4 text-sm font-medium leading-7 text-zinc-950">Includes</p>

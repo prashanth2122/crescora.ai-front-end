@@ -13,7 +13,7 @@ export const privacyPolicyContent = {
       'This Privacy Policy explains how Crescora AI, operating as Crescora Flow and Crescora AI ("Crescora", "we", "our", or "us"), collects, uses, stores, shares, and protects information when you use our websites, applications, workspaces, automation builder, web chat widget, AI features, integrations, and related services.',
   },
   dateLabel: "Effective date",
-  updatedOn: "06-June 2026",
+  updatedOn: "23-June 2026",
   sections: [
     {
       title: "1. Scope of this Policy",
@@ -46,8 +46,8 @@ export const privacyPolicyContent = {
         "Channel and integration data: configuration and delivery data related to WhatsApp, Telegram, email, SMS, payment providers, CRM systems, calendars, helpdesks, APIs, webhooks, or other integrations.",
         "Billing and commercial information: plan selection, billing contact details, subscription status, invoice details, checkout references, payment verification status, usage limits, credits, and transaction metadata. We do not intentionally store full card details unless a payment provider makes such storage available to us under applicable compliance standards.",
         "AI and model usage data: prompts, context, generated responses, classification results, extracted fields, model routing metadata, evaluation results, guardrail decisions, fallback outputs, and observability logs. Unless we clearly state otherwise or receive explicit permission, customer workspace content is not used to train general-purpose foundation models owned by Crescora.",
-        "Device, log, and security data: IP address, device type, browser type, operating system, timestamps, pages viewed, referring URLs, login attempts, error logs, security events, usage metrics, and diagnostic data.",
-        "Cookies and similar technologies: cookies and similar technologies for authentication, security, preferences, analytics, and performance. More details are available in our Cookie Policy.",
+        "Device, log, and security data: IP address, device type, browser type, operating system, timestamps, pages viewed, navigation events, contact-page visits, scroll depth, referring URLs, campaign parameters, lead-form funnel events, Core Web Vitals, login attempts, error logs, security events, usage metrics, and diagnostic data.",
+        "Cookies and similar technologies: cookies and similar technologies for authentication, security, preferences, analytics, and performance, including Google tag / Google Analytics on the public website. More details are available in our Cookie Policy.",
       ],
     },
     {
@@ -63,6 +63,7 @@ export const privacyPolicyContent = {
         "Send transactional notifications, alerts, reminders, and service messages.",
         "Process subscriptions, billing, payments, and invoices.",
         "Monitor reliability, quality, usage, cost, errors, and platform performance.",
+        "Measure website navigation, contact intent, and lead-form completion funnels.",
         "Detect abuse, spam, unauthorized access, fraud, and security incidents.",
         "Improve product functionality, user experience, and operational safety.",
         "Provide customer support, onboarding, demos, and account assistance.",

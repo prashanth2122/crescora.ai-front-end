@@ -44,29 +44,43 @@ export const industryCards = industriesSeo.map((industry) => ({
 
 export const useCases = siteContent.useCasesIndex.cards;
 
-export const pricingPackages = [
+export type PricingPackage = {
+  label: string;
+  title: string;
+  price: string;
+  priceDetail?: string;
+  bestFor: string;
+  includes: readonly string[];
+};
+
+export const pricingPackages: readonly PricingPackage[] = [
   {
     label: "FIRST WORKFLOW",
     title: "Starter",
-    bestFor: "First pilot, lead capture, FAQ, or booking workflow.",
+    price: "₹10,000/mo",
+    bestFor: "First workflow for small teams starting automation.",
     includes: ["One focused workflow", "Basic setup and testing", "Demo walkthrough"],
   },
   {
     label: "GROWING OPERATIONS",
     title: "Growth",
-    bestFor: "Teams handling repeated enquiries across sales, support, or booking.",
+    price: "₹49,999/mo",
+    bestFor: "Best value plan for most hospitals, clinics, real estate teams, and service businesses.",
     includes: ["Multiple workflows", "Stronger follow-ups and reminders", "Wider coverage"],
   },
   {
     label: "CROSS-TEAM DELIVERY",
     title: "Business",
-    bestFor: "Sales, support, operations, admissions, and admin teams.",
+    price: "₹99,999/mo",
+    bestFor: "For serious operations with teams, handoffs, integrations, and reporting.",
     includes: ["Multiple teams and routes", "Handoffs and connected systems", "Reporting and visibility"],
   },
   {
     label: "COMPLEX ROLLOUTS",
     title: "Enterprise",
-    bestFor: "Multi-location, process-heavy, or custom integration requirements.",
+    price: "Custom",
+    priceDetail: "from ₹2,49,999/mo",
+    bestFor: "For multi-location and complex rollout requirements.",
     includes: ["Custom workflows", "Advanced integrations", "Rollout planning and support"],
   },
 ] as const;

@@ -11,7 +11,7 @@ import { hiLocaleCopy } from "@/lib/locales/hi";
 import { solutionPages } from "@/lib/seo-marketing-data";
 import { siteContent } from "@/lib/site-content";
 import { termsOfServiceContent } from "@/lib/terms-of-service-content";
-import { homepageFlowSteps, useCases } from "@/lib/site-data";
+import { homepageFlowSteps, pricingPackages, useCases } from "@/lib/site-data";
 
 test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.site.productFull, "FLOW by Crescora AI");
@@ -72,9 +72,18 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.pricing.hero.description, "Start with one focused workflow, then expand to more teams, channels, integrations, and customer journeys as you grow.");
   assert.equal(siteContent.pricing.ctas.primary.label, "Book Free Demo");
   assert.equal(siteContent.pricing.ctas.secondary.label, "Get Project Scope");
-  assert.ok(siteContent.pricing.note.startsWith("Pricing depends on workflow scope"));
+  assert.ok(siteContent.pricing.note.startsWith("Package pricing starts from the listed monthly rates"));
   assert.equal(siteContent.pricing.faq.items.length, 4);
   assert.equal(siteContent.pricing.faq.items[0].question, "Can I start with one workflow?");
+  assert.equal(pricingPackages[0].price, "₹10,000/mo");
+  assert.equal(pricingPackages[0].bestFor, "First workflow for small teams starting automation.");
+  assert.equal(pricingPackages[1].price, "₹49,999/mo");
+  assert.equal(pricingPackages[1].bestFor, "Best value plan for most hospitals, clinics, real estate teams, and service businesses.");
+  assert.equal(pricingPackages[2].price, "₹99,999/mo");
+  assert.equal(pricingPackages[2].bestFor, "For serious operations with teams, handoffs, integrations, and reporting.");
+  assert.equal(pricingPackages[3].price, "Custom");
+  assert.equal(pricingPackages[3].priceDetail, "from ₹2,49,999/mo");
+  assert.equal(pricingPackages[3].bestFor, "For multi-location and complex rollout requirements.");
   assert.ok(siteContent.homepage.faq.items.every((item) => item.answer.length > 0));
   assert.equal(siteContent.useCases.leadCaptureQualification.hero.title, "Capture enquiries and qualify leads automatically.");
   assert.equal(siteContent.useCases.reminderAutomation.items[0], "Appointment reminders");
@@ -143,12 +152,14 @@ test("proof page copy uses workflow example language", () => {
 
 test("legal page copy is structured and no longer placeholder text", () => {
   assert.equal(siteContent.legal.privacy.metadata.title, "Privacy Policy | Crescora AI");
-  assert.equal(siteContent.legal.privacy.updatedOn, "June 18, 2026");
+  assert.equal(siteContent.legal.privacy.updatedOn, "June 23, 2026");
   assert.equal(siteContent.legal.privacy.sections.length, 6);
   assert.equal(siteContent.legal.privacy.sections[0].title, "Information we collect");
   assert.ok(siteContent.legal.privacy.sections[0].paragraphs[0].includes("work email"));
+  assert.ok(siteContent.legal.privacy.sections[0].paragraphs[1].includes("lead-form funnel events"));
   assert.equal(siteContent.legal.terms.sections[1].title, "Service scope");
   assert.equal(siteContent.legal.cookies.sections[0].title, "Current cookie behavior");
+  assert.ok(siteContent.legal.cookies.sections[0].paragraphs[0].includes("Google tag / Google Analytics"));
   assert.equal(siteContent.legal.acceptableUse.metadata.title, "Acceptable Use Policy | Crescora Flow");
   assert.equal(siteContent.legal.acceptableUse.sections.length, 14);
   assert.equal(siteContent.legal.acceptableUse.sections[0].title, "1. General Rule");
@@ -163,13 +174,14 @@ test("privacy policy page uses the supplied Crescora Flow copy", () => {
     "Learn how Crescora Flow collects, uses, protects, and manages personal data across AI automation, workspaces, channels, integrations, and customer conversations.",
   );
   assert.equal(privacyPolicyContent.dateLabel, "Effective date");
-  assert.equal(privacyPolicyContent.updatedOn, "06-June 2026");
+  assert.equal(privacyPolicyContent.updatedOn, "23-June 2026");
   assert.equal(privacyPolicyContent.sections.length, 16);
   assert.equal(privacyPolicyContent.sections[0].title, "1. Scope of this Policy");
   assert.equal(privacyPolicyContent.sections[1].title, "2. Our Role in Data Processing");
   assert.equal(privacyPolicyContent.sections[2].bullets?.[0], "Account and workspace information: name, email address, phone number, password credentials, role, workspace name, organization details, member permissions, login activity, 2FA status, invitation status, and account preferences.");
   assert.equal(privacyPolicyContent.sections[3].title, "4. How We Use Information");
   assert.equal(privacyPolicyContent.sections[12].title, "13. Your Rights");
+  assert.ok(privacyPolicyContent.sections[2].bullets?.[6].includes("lead-form funnel events"));
   assert.ok(privacyPolicyContent.sections[15].bullets?.includes("Email: support@crescora.ai"));
 });
 
@@ -180,12 +192,14 @@ test("cookie policy page uses the supplied Crescora Flow copy", () => {
     "Understand how Crescora Flow uses cookies and similar technologies for authentication, security, preferences, analytics, performance, and marketing.",
   );
   assert.equal(cookiePolicyContent.dateLabel, "Effective date");
-  assert.equal(cookiePolicyContent.updatedOn, "06-June 2026");
+  assert.equal(cookiePolicyContent.updatedOn, "23-June 2026");
   assert.equal(cookiePolicyContent.sections.length, 10);
   assert.equal(cookiePolicyContent.sections[0].title, "1. What Are Cookies?");
   assert.equal(cookiePolicyContent.sections[2].bullets?.[0], "Strictly necessary cookies: Required for the website and application to function. They support login, authentication, security, session management, CSRF protection, load balancing, and workspace access.");
   assert.equal(cookiePolicyContent.sections[3].tables?.[0].headers[0], "Category");
   assert.equal(cookiePolicyContent.sections[3].tables?.[0].rows[0][0], "Essential");
+  assert.ok(cookiePolicyContent.sections[4].paragraphs?.[1].includes("Google tag / Google Analytics"));
+  assert.equal(cookiePolicyContent.sections[6].paragraphs?.[0], "The checked-in marketing site does not currently include a cookie banner or preference center.");
   assert.equal(cookiePolicyContent.sections[9].bullets?.[1], "Email: support@crescora.ai");
 });
 

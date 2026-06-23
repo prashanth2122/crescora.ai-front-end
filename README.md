@@ -30,6 +30,27 @@ npm run dev:turbo
 
 These changes only affect local development. Production builds and Vercel deploys do not use the `dev` script.
 
+## Analytics
+
+The public site now includes a Google tag / GA4 integration for the marketing funnel.
+
+- default measurement ID fallback: `G-027GJ53KYV`
+- override it with `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- production sends analytics automatically when a measurement ID is available
+- local development does **not** send analytics unless you opt in with `NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV=true`
+
+The shared analytics layer emits:
+
+- `page_browse` on route views
+- `contact_intent_click` when a visitor clicks through to `/contact`
+- `cta_click` and `navigation_click` for tracked link interactions
+- `scroll_depth` at 25 / 50 / 75 / 90 percent
+- `page_engaged` after 15 seconds on a route
+- `lead_form_view`, `lead_form_start`, `lead_form_field_complete`, `lead_form_submit`, `lead_form_success`, `lead_form_failure`, and `lead_form_validation_error`
+- `web_vital` for frontend performance metrics reported through `useReportWebVitals`
+
+The lead-form analytics intentionally avoid PII. Names, email addresses, phone numbers, company names, and free-text answers are not sent as event parameters.
+
 ## Content Structure
 
 User-facing copy is centralized in `src/lib/site-content.ts`, with shared page data re-exported from `src/lib/site-data.ts` and `src/lib/decision-pages.ts`.
@@ -58,7 +79,7 @@ This keeps route components thin and makes future localization work straightforw
 - the platform hero, workflow visual, capability cards, and start-here CTA are also centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts`
 - the industries hub now uses customer-facing priority cards, a compact more-industries chip list, a public CTA box, and a clearer SEO landing-page heading
 - the use-cases hub now surfaces 12 workflow cards, icon-backed card treatments, a more-workflows chip strip, and a help-me-choose CTA block with matching detail pages for the expanded menu
-- the pricing page now uses automation-first wording, package guidance with best-for/includes details, a pricing FAQ, and a demo-first CTA path
+- the pricing page now uses automation-first wording, explicit tier pricing, package guidance with best-for/includes details, a pricing FAQ, and a demo-first CTA path
 - the solutions hub keeps the query-led structure but now uses equal-height cards and arrow-style solution links for clearer scanning
 - the lead form copy, country selector, country-aware phone validation, validation copy, and optional channel qualification field are centralized in `src/components/site/lead-form.tsx` and `src/lib/site-content.ts`
 - the public lead form now posts to the local `/api/lead` route, which forwards submissions to the backend customer-intake API using a short-lived token; the shared backend origin lives in `src/lib/app-config.ts` and can still be overridden with `CUSTOMER_INTAKE_API_BASE_URL` (default `http://localhost:4000`)

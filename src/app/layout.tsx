@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { GoogleTag } from "@/components/analytics/google-tag";
+import { SiteAnalytics } from "@/components/analytics/site-analytics";
+import { AnalyticsWebVitals } from "@/components/analytics/web-vitals";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { site } from "@/lib/site-data";
@@ -52,12 +55,19 @@ export default async function RootLayout({
   const locale = resolveLocaleFromHeaders(requestHeaders);
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html
+      lang={locale}
+      data-scroll-behavior="smooth"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
+        <SiteAnalytics />
+        <AnalyticsWebVitals />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
       </body>
+      <GoogleTag />
     </html>
   );
 }

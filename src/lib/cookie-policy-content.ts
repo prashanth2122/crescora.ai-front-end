@@ -13,7 +13,7 @@ export const cookiePolicyContent = {
       "This Cookie Policy explains how Crescora AI, operating as Crescora Flow and Crescora AI, uses cookies and similar technologies on https://crescora.ai, our application, dashboard, web widget, and related services.",
   },
   dateLabel: "Effective date",
-  updatedOn: "06-June 2026",
+  updatedOn: "23-June 2026",
   sections: [
     {
       title: "1. What Are Cookies?",
@@ -30,6 +30,7 @@ export const cookiePolicyContent = {
         "Protect accounts, sessions, and workspaces.",
         "Remember preferences such as theme, region, or workspace context.",
         "Improve website and app performance.",
+        "Measure page views, navigation intent, scroll depth, form progression, submissions, and web performance on the marketing site.",
         "Understand product usage and improve user experience.",
         "Detect errors, abuse, fraud, or suspicious activity.",
         "Measure marketing or campaign performance where permitted.",
@@ -41,7 +42,7 @@ export const cookiePolicyContent = {
       bullets: [
         "Strictly necessary cookies: Required for the website and application to function. They support login, authentication, security, session management, CSRF protection, load balancing, and workspace access.",
         "Preference cookies: Remember settings such as language, theme, layout, workspace context, or previously selected preferences.",
-        "Analytics and performance cookies: Help us understand how users interact with our website and product, which pages are visited, which features are used, and where errors or performance issues occur. We use this information to improve the product, reliability, onboarding, and user experience.",
+        "Analytics and performance cookies: Help us understand how users interact with our website and product, which pages are visited, which CTAs or routes lead to contact intent, how far visitors scroll, how the lead form is used, and where errors or performance issues occur. We use this information to improve the product, reliability, onboarding, and user experience.",
         "Security and abuse prevention cookies: Help detect suspicious login attempts, bot abuse, spam, fraud, excessive requests, and unauthorized activity.",
         "Marketing cookies: If enabled, help measure campaigns, understand referral sources, and show relevant product communication. We do not use marketing cookies where consent is required unless appropriate consent has been collected.",
       ],
@@ -67,6 +68,7 @@ export const cookiePolicyContent = {
       title: "5. Third-Party Cookies",
       paragraphs: [
         "Some cookies may be set by third-party providers that support hosting, analytics, payments, customer support, security, email, advertising, or embedded content.",
+        "The public marketing site currently uses Google tag / Google Analytics for website analytics and lead-funnel measurement.",
         "Third-party providers may process cookie data according to their own privacy and cookie policies.",
       ],
     },
@@ -84,8 +86,8 @@ export const cookiePolicyContent = {
     {
       title: "7. Cookie Consent",
       paragraphs: [
-        "Where required by law, we ask for consent before placing non-essential cookies.",
-        "You can change or withdraw cookie preferences at any time by using the cookie settings link in the website footer or app settings, if available.",
+        "The checked-in marketing site does not currently include a cookie banner or preference center.",
+        "Browser settings are the current control surface unless and until a consent tool is added for jurisdictions or deployments that require consent-gated analytics.",
       ],
     },
     {

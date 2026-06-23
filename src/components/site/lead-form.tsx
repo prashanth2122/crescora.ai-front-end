@@ -1,11 +1,18 @@
 "use client";
 
 import type { FormEvent, ReactNode } from "react";
-import { useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 
 import { leadFormOptions } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
 import { isValidPhoneForCountry } from "@/lib/lead-form-validation";
+import {
+  ANALYTICS_ENABLED,
+  buildLeadFormProgress,
+  buildLeadFormSelectionSnapshot,
+  getPageAnalyticsContext,
+  trackEvent,
+} from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -51,8 +58,24 @@ const initialState: FormState = {
   keyProblem: "",
 };
 
+const requiredFields: Array<keyof FormState> = [
+  "fullName",
+  "companyName",
+  "workEmail",
+  "country",
+  "phoneOrWhatsapp",
+  "industry",
+  "primaryUseCase",
+  "monthlyEnquiryVolume",
+  "timeline",
+];
+
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+}
+
+function getCompletedRequiredFieldCount(form: FormState) {
+  return requiredFields.filter((field) => form[field].trim()).length;
 }
 
 export function LeadForm() {
@@ -61,11 +84,93 @@ export function LeadForm() {
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [message, setMessage] = useState<string>("");
+  const containerRef = useRef<HTMLDivElement>(null);
+  const hasTrackedFormViewRef = useRef(false);
+  const hasTrackedFormStartRef = useRef(false);
+  const trackedCompletedFieldsRef = useRef<Set<keyof FormState>>(new Set());
+
+  const trackFormView = useEffectEvent(() => {
+    trackEvent("lead_form_view", {
+      ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+      form_variant: "workflow_demo_contact",
+    });
+  });
+
+  useEffect(() => {
+    if (!ANALYTICS_ENABLED || hasTrackedFormViewRef.current || !containerRef.current) {
+      return;
+    }
+
+    if (typeof IntersectionObserver === "undefined") {
+      hasTrackedFormViewRef.current = true;
+      trackFormView();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (!entry || !entry.isIntersecting || entry.intersectionRatio < 0.35) {
+          return;
+        }
+
+        hasTrackedFormViewRef.current = true;
+        trackFormView();
+        observer.disconnect();
+      },
+      { threshold: [0.35] },
+    );
+
+    observer.observe(containerRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   function updateField<K extends keyof FormState>(
     field: K,
     value: FormState[K],
   ) {
     setForm((current) => ({ ...current, [field]: value }));
+  }
+
+  function trackFormStart() {
+    if (hasTrackedFormStartRef.current) {
+      return;
+    }
+
+    hasTrackedFormStartRef.current = true;
+    trackEvent("lead_form_start", {
+      ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+      form_variant: "workflow_demo_contact",
+    });
+  }
+
+  function trackRequiredFieldCompletion(
+    field: keyof FormState,
+    value: string,
+    fieldType: "input" | "select",
+  ) {
+    if (!requiredFields.includes(field) || !value.trim()) {
+      return;
+    }
+
+    if (trackedCompletedFieldsRef.current.has(field)) {
+      return;
+    }
+
+    trackedCompletedFieldsRef.current.add(field);
+    trackEvent("lead_form_field_complete", {
+      ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+      form_variant: "workflow_demo_contact",
+      field_name: field,
+      field_type: fieldType,
+      ...buildLeadFormProgress(
+        trackedCompletedFieldsRef.current.size,
+        requiredFields.length,
+      ),
+    });
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -75,36 +180,62 @@ export function LeadForm() {
     const selectedCountry =
       leadFormOptions.countries.find((item) => item.value === form.country) ??
       leadFormOptions.countries[0];
-
-    const requiredFields: Array<keyof FormState> = [
-      "fullName",
-      "companyName",
-      "workEmail",
-      "country",
-      "phoneOrWhatsapp",
-      "industry",
-      "primaryUseCase",
-      "monthlyEnquiryVolume",
-      "timeline",
-    ];
-
     const missing = requiredFields.filter((field) => !form[field].trim());
+    const completedRequiredFields = getCompletedRequiredFieldCount(form);
+    const progress = buildLeadFormProgress(
+      completedRequiredFields,
+      requiredFields.length,
+    );
+    const selectionSnapshot = buildLeadFormSelectionSnapshot(form);
     if (missing.length > 0) {
+      trackEvent("lead_form_validation_error", {
+        ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+        form_variant: "workflow_demo_contact",
+        validation_type: "missing_required_fields",
+        missing_fields: missing.join("|"),
+        missing_fields_count: missing.length,
+        ...progress,
+      });
       setStatus("error");
       setMessage(siteContent.leadForm.validationError);
       return;
     }
 
+    const invalidFields: string[] = [];
     if (
-      !isValidEmail(form.workEmail) ||
-      !isValidPhoneForCountry(form.phoneOrWhatsapp, selectedCountry)
+      !isValidEmail(form.workEmail)
     ) {
+      invalidFields.push("workEmail");
+    }
+
+    if (!isValidPhoneForCountry(form.phoneOrWhatsapp, selectedCountry)) {
+      invalidFields.push("phoneOrWhatsapp");
+    }
+
+    if (invalidFields.length > 0) {
+      trackEvent("lead_form_validation_error", {
+        ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+        form_variant: "workflow_demo_contact",
+        validation_type: "invalid_contact_details",
+        invalid_fields: invalidFields.join("|"),
+        invalid_fields_count: invalidFields.length,
+        ...progress,
+      });
       setStatus("error");
       setMessage(siteContent.leadForm.invalidContactError);
       return;
     }
 
+    let failureTracked = false;
+
     try {
+      trackEvent("lead_form_submit", {
+        ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+        form_variant: "workflow_demo_contact",
+        ...selectionSnapshot,
+        ...progress,
+      });
+
       const pageUrl = window.location.href;
       const referrerUrl = document.referrer || null;
       const currentUrl = new URL(pageUrl);
@@ -128,20 +259,50 @@ export function LeadForm() {
       });
 
       if (!response.ok) {
+        failureTracked = true;
+        trackEvent("lead_form_failure", {
+          ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+          form_variant: "workflow_demo_contact",
+          failure_stage: "api_response",
+          http_status: response.status,
+          ...selectionSnapshot,
+          ...progress,
+        });
         throw new Error("Submission failed");
       }
 
+      trackEvent("lead_form_success", {
+        ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+        form_variant: "workflow_demo_contact",
+        ...selectionSnapshot,
+        ...progress,
+      });
       setStatus("success");
       setMessage(siteContent.leadForm.successMessage);
       setForm(initialState);
+      hasTrackedFormStartRef.current = false;
+      trackedCompletedFieldsRef.current = new Set();
     } catch {
+      if (!failureTracked) {
+        trackEvent("lead_form_failure", {
+          ...getPageAnalyticsContext(window.location.pathname, window.location.search),
+          form_variant: "workflow_demo_contact",
+          failure_stage: "network_or_runtime",
+          ...selectionSnapshot,
+          ...progress,
+        });
+      }
       setStatus("error");
       setMessage(siteContent.leadForm.errorMessage);
     }
   }
 
   return (
-    <Card className="border-zinc-200/80 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-8">
+    <Card
+      ref={containerRef}
+      data-analytics-area="lead_form"
+      className="border-zinc-200/80 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-8"
+    >
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <Badge
@@ -172,7 +333,13 @@ export function LeadForm() {
           <Input
             id="fullName"
             value={form.fullName}
-            onChange={(event) => updateField("fullName", event.target.value)}
+            onChange={(event) => {
+              trackFormStart();
+              updateField("fullName", event.target.value);
+            }}
+            onBlur={(event) =>
+              trackRequiredFieldCompletion("fullName", event.target.value, "input")
+            }
             placeholder={siteContent.leadForm.placeholders.fullName}
           />
         </Field>
@@ -184,7 +351,13 @@ export function LeadForm() {
           <Input
             id="companyName"
             value={form.companyName}
-            onChange={(event) => updateField("companyName", event.target.value)}
+            onChange={(event) => {
+              trackFormStart();
+              updateField("companyName", event.target.value);
+            }}
+            onBlur={(event) =>
+              trackRequiredFieldCompletion("companyName", event.target.value, "input")
+            }
             placeholder={siteContent.leadForm.placeholders.companyName}
           />
         </Field>
@@ -197,7 +370,13 @@ export function LeadForm() {
             id="workEmail"
             type="email"
             value={form.workEmail}
-            onChange={(event) => updateField("workEmail", event.target.value)}
+            onChange={(event) => {
+              trackFormStart();
+              updateField("workEmail", event.target.value);
+            }}
+            onBlur={(event) =>
+              trackRequiredFieldCompletion("workEmail", event.target.value, "input")
+            }
             placeholder={siteContent.leadForm.placeholders.workEmail}
           />
         </Field>
@@ -210,7 +389,11 @@ export function LeadForm() {
             <select
               id="country"
               value={form.country}
-              onChange={(event) => updateField("country", event.target.value)}
+              onChange={(event) => {
+                trackFormStart();
+                updateField("country", event.target.value);
+                trackRequiredFieldCompletion("country", event.target.value, "select");
+              }}
               className="h-8 w-full appearance-none rounded-lg border border-input bg-transparent px-2.5 pr-8 py-1 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80"
             >
               {leadFormOptions.countries.map((item) => (
@@ -230,8 +413,16 @@ export function LeadForm() {
           <Input
             id="phoneOrWhatsapp"
             value={form.phoneOrWhatsapp}
-            onChange={(event) =>
-              updateField("phoneOrWhatsapp", event.target.value)
+            onChange={(event) => {
+              trackFormStart();
+              updateField("phoneOrWhatsapp", event.target.value);
+            }}
+            onBlur={(event) =>
+              trackRequiredFieldCompletion(
+                "phoneOrWhatsapp",
+                event.target.value,
+                "input",
+              )
             }
             placeholder={siteContent.leadForm.placeholders.phoneOrWhatsapp}
           />
@@ -243,7 +434,11 @@ export function LeadForm() {
         >
           <Select
             value={form.industry}
-            onValueChange={(value) => updateField("industry", value)}
+            onValueChange={(value) => {
+              trackFormStart();
+              updateField("industry", value);
+              trackRequiredFieldCompletion("industry", value, "select");
+            }}
           >
             <SelectTrigger id="industry">
               <SelectValue
@@ -266,7 +461,11 @@ export function LeadForm() {
         >
           <Select
             value={form.primaryUseCase}
-            onValueChange={(value) => updateField("primaryUseCase", value)}
+            onValueChange={(value) => {
+              trackFormStart();
+              updateField("primaryUseCase", value);
+              trackRequiredFieldCompletion("primaryUseCase", value, "select");
+            }}
           >
             <SelectTrigger id="primaryUseCase">
               <SelectValue
@@ -291,9 +490,15 @@ export function LeadForm() {
         >
           <Select
             value={form.monthlyEnquiryVolume}
-            onValueChange={(value) =>
-              updateField("monthlyEnquiryVolume", value)
-            }
+            onValueChange={(value) => {
+              trackFormStart();
+              updateField("monthlyEnquiryVolume", value);
+              trackRequiredFieldCompletion(
+                "monthlyEnquiryVolume",
+                value,
+                "select",
+              );
+            }}
           >
             <SelectTrigger id="monthlyEnquiryVolume">
               <SelectValue
@@ -318,7 +523,11 @@ export function LeadForm() {
         >
           <Select
             value={form.timeline}
-            onValueChange={(value) => updateField("timeline", value)}
+            onValueChange={(value) => {
+              trackFormStart();
+              updateField("timeline", value);
+              trackRequiredFieldCompletion("timeline", value, "select");
+            }}
           >
             <SelectTrigger id="timeline">
               <SelectValue
@@ -342,7 +551,10 @@ export function LeadForm() {
           >
             <Select
               value={form.preferredChannel}
-              onValueChange={(value) => updateField("preferredChannel", value)}
+              onValueChange={(value) => {
+                trackFormStart();
+                updateField("preferredChannel", value);
+              }}
             >
               <SelectTrigger id="preferredChannel">
                 <SelectValue
@@ -370,9 +582,10 @@ export function LeadForm() {
             <Input
               id="currentTools"
               value={form.currentTools}
-              onChange={(event) =>
-                updateField("currentTools", event.target.value)
-              }
+              onChange={(event) => {
+                trackFormStart();
+                updateField("currentTools", event.target.value);
+              }}
               placeholder={siteContent.leadForm.placeholders.currentTools}
             />
           </Field>
@@ -386,9 +599,10 @@ export function LeadForm() {
             <Textarea
               id="keyProblem"
               value={form.keyProblem}
-              onChange={(event) =>
-                updateField("keyProblem", event.target.value)
-              }
+              onChange={(event) => {
+                trackFormStart();
+                updateField("keyProblem", event.target.value);
+              }}
               placeholder={siteContent.leadForm.placeholders.keyProblem}
               className="min-h-32"
             />
@@ -398,6 +612,7 @@ export function LeadForm() {
         <div className="sm:col-span-2 flex flex-col gap-4 pt-2">
           <Button
             type="submit"
+            data-analytics-role="cta"
             className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800"
             disabled={status === "submitting"}
           >
