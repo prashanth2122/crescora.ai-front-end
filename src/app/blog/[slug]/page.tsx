@@ -4,7 +4,7 @@ import { SeoBlogPage } from "@/components/site/seo-blog-page";
 import { PageShell } from "@/components/site/page-shell";
 import { articleSchemaForPost, blogPosts } from "@/lib/seo-marketing-data";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
-import { createArticleMetadata } from "@/lib/seo";
+import { buildRouteSocialImagePath, createArticleMetadata } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
 
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Params }) {
       publishedTime: post.publishedAt,
       modifiedTime: post.modifiedAt,
       authors: [post.author],
-      imagePath: post.representativeImagePath,
+      imagePath: buildRouteSocialImagePath(`/blog/${post.slug}`),
     }),
   };
 }

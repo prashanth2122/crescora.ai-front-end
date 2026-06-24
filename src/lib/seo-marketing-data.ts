@@ -1,4 +1,4 @@
-import { buildAbsoluteUrl, buildRepresentativeImageJsonLd, editorialAuthor, siteOrigin } from "@/lib/seo";
+import { buildAbsoluteUrl, buildRepresentativeImageJsonLd, buildRouteSocialImagePath, editorialAuthor, siteOrigin } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 
 type LandingSection = {
@@ -926,7 +926,7 @@ export const articleSchemaForPost = (post: BlogPost) => ({
     name: siteContent.site.name,
     url: siteOrigin,
   },
-  image: [buildRepresentativeImageJsonLd(post.representativeImagePath)],
+  image: [buildRepresentativeImageJsonLd(buildRouteSocialImagePath(`/blog/${post.slug}`))],
   datePublished: post.publishedAt,
   dateModified: post.modifiedAt,
 });

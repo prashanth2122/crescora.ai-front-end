@@ -1,15 +1,18 @@
-import { siteContent } from "@/lib/site-content";
+import { comparisonPages } from "@/lib/decision-pages";
 import { createSocialImageResponse, socialImageContentType, socialImageSize } from "@/lib/seo-social-image";
 
+const page = comparisonPages["flow-vs-crm-only"];
+
 export const runtime = "edge";
-export const alt = `${siteContent.site.name} ${siteContent.site.product} website`;
+export const alt = page.title;
 export const size = socialImageSize;
 export const contentType = socialImageContentType;
 
 export default function Image() {
   return createSocialImageResponse({
-    eyebrow: "Website",
-    title: siteContent.site.tagline,
-    description: siteContent.site.description,
+    eyebrow: "Comparison",
+    title: page.title,
+    description: page.metadata.description,
+    accentLabel: "Compare",
   });
 }

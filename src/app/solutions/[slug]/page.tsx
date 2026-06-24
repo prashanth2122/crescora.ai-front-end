@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { RevenueSolutionPage } from "@/components/site/revenue-solution-page";
 import { PageShell } from "@/components/site/page-shell";
-import { createPageMetadata } from "@/lib/seo";
+import { buildRouteSocialImagePath, createPageMetadata } from "@/lib/seo";
 import { revenuePages, revenuePagesBySlug } from "@/lib/revenue-pages";
 
 type Params = Promise<{ slug: string }>;
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: Params }) {
     title: page.title,
     description: page.description,
     path: `/solutions/${page.slug}`,
+    imagePath: buildRouteSocialImagePath(`/solutions/${page.slug}`),
   });
 }
 

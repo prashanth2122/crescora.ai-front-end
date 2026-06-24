@@ -9,6 +9,24 @@ type JsonLdImage = {
   height?: number;
 };
 
+type FaqSchemaItem = {
+  question: string;
+  answer: string;
+};
+
+type ItemListSchemaItem = {
+  name: string;
+  url: string;
+  description?: string;
+};
+
+type PageSchemaInput = {
+  type?: "WebPage" | "AboutPage" | "CollectionPage" | "ContactPage";
+  name: string;
+  description: string;
+  path: string;
+};
+
 type PageMetadataInput = {
   title: string;
   description: string;
@@ -94,6 +112,12 @@ function buildImage(imagePath: string, imageAlt: string) {
 
 export function buildAbsoluteUrl(path: string): string {
   return new URL(normalizePath(path), siteOrigin).toString();
+}
+
+export function buildRouteSocialImagePath(path: string): string {
+  const normalizedPath = normalizePath(path);
+
+  return normalizedPath === "/" ? defaultSeoImagePath : `${normalizedPath}/opengraph-image`;
 }
 
 export function buildMetadataTitle(title: string): string {
@@ -297,3 +321,53 @@ export const whatsappAutomationServicesListSchema = {
     name: item,
   })),
 };
+
+export function buildFaqPageSchema(items: readonly FaqSchemaItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+export function buildItemListSchema(name: string, items: readonly ItemListSchemaItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+      ...(item.description ? { description: item.description } : {}),
+    })),
+  };
+}
+
+export function buildPageSchema({
+  type = "WebPage",
+  name,
+  description,
+  path,
+}: PageSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": type,
+    name,
+    description,
+    url: buildAbsoluteUrl(path),
+    isPartOf: {
+      "@type": "WebSite",
+      name: site.name,
+      url: siteOrigin,
+    },
+  };
+}

@@ -7,7 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { buildAbsoluteUrl, buildRepresentativeImageJsonLd, siteOrigin } from "@/lib/seo";
+import { buildAbsoluteUrl, buildFaqPageSchema, buildRepresentativeImageJsonLd, buildRouteSocialImagePath, siteOrigin } from "@/lib/seo";
 import type { RevenuePage } from "@/lib/revenue-pages";
 import { siteContent } from "@/lib/site-content";
 import type { BreadcrumbItem } from "@/lib/india-seo-data";
@@ -91,7 +91,7 @@ function buildServiceSchema(page: RevenuePage) {
       url: siteOrigin,
     },
     url: buildAbsoluteUrl(`/solutions/${page.slug}`),
-    image: buildRepresentativeImageJsonLd(),
+    image: buildRepresentativeImageJsonLd(buildRouteSocialImagePath(`/solutions/${page.slug}`)),
     areaServed: ["India", "United States", "United Kingdom", "United Arab Emirates", "Singapore"],
   };
 }
@@ -116,6 +116,7 @@ export function RevenueSolutionPage({ page, breadcrumbs }: RevenueSolutionPagePr
       <SeoJsonLd data={buildServiceSchema(page)} />
       <SeoJsonLd data={buildExamplesSchema(page)} />
       <SeoJsonLd data={buildBreadcrumbSchema(breadcrumbs)} />
+      <SeoJsonLd data={buildFaqPageSchema(page.faq)} />
 
       <PageHero
         eyebrow="Solution"

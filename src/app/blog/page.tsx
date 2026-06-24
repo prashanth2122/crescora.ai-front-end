@@ -7,7 +7,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
-import { createPageMetadata } from "@/lib/seo";
+import { buildRouteSocialImagePath, createPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import { blogPosts } from "@/lib/seo-marketing-data";
 
@@ -16,6 +16,7 @@ export const metadata = {
     title: "Blog",
     description: "Operational articles and implementation notes from the Crescora team.",
     path: "/blog",
+    imagePath: buildRouteSocialImagePath("/blog"),
   }),
 };
 
@@ -31,7 +32,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Blog"
         title="Editorial notes, rollout ideas, and product guidance."
-        description="This hub will carry long-form operational content. Until the article library is fully rewritten, it stays out of the search index."
+        description="Explore operational articles, implementation notes, and workflow guidance that connect product decisions to real rollout outcomes."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.viewSolutions}
       />
@@ -39,8 +40,8 @@ export default function BlogPage() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Posts"
-          title="Current draft articles"
-          description="Each article links back to the relevant solution, proof, or comparison page while the editorial layer is being rebuilt."
+          title="Articles for operators and buyers"
+          description="Each article ties operational context back to the relevant solution, proof, comparison, or workflow page."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {blogPosts.map((post) => (

@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { createExactPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
@@ -22,12 +24,18 @@ import {
   Workflow,
   Wrench,
 } from "lucide-react";
+import { buildAbsoluteUrl, buildPageSchema, organizationSchema } from "@/lib/seo";
 
 export const metadata = createExactPageMetadata({
   title: siteContent.about.metadata.title,
   description: siteContent.about.metadata.description,
   path: "/about",
 });
+
+const aboutBreadcrumbs = buildBreadcrumbSchema([
+  { name: "Home", href: buildAbsoluteUrl("/") },
+  { name: "About", href: buildAbsoluteUrl("/about") },
+]);
 
 export default function AboutPage() {
   const {
@@ -53,6 +61,17 @@ export default function AboutPage() {
 
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          type: "AboutPage",
+          name: siteContent.about.metadata.title,
+          description: siteContent.about.metadata.description,
+          path: "/about",
+        })}
+      />
+      <SeoJsonLd data={organizationSchema} />
+      <SeoJsonLd data={aboutBreadcrumbs} />
+
       <PageHero
         eyebrow={hero.eyebrow}
         title={hero.title}

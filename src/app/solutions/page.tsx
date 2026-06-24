@@ -8,7 +8,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
-import { createPageMetadata } from "@/lib/seo";
+import { buildRouteSocialImagePath, createPageMetadata } from "@/lib/seo";
 import { revenuePages } from "@/lib/revenue-pages";
 import { siteContent } from "@/lib/site-content";
 
@@ -17,6 +17,7 @@ export const metadata = {
     title: "Solutions",
     description: "Primary revenue pages for WhatsApp automation, AI chatbots, workflow automation, support, booking, and connected business operations.",
     path: "/solutions",
+    imagePath: buildRouteSocialImagePath("/solutions"),
   }),
 };
 

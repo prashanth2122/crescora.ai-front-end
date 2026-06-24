@@ -92,7 +92,8 @@ The SEO stack now uses a single production host, shared metadata helpers, self-c
 
 Core implementation points:
 
-- `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, and `https://www.crescora.ai` URL generation
+- `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, FAQ/page/item-list schema, and `https://www.crescora.ai` URL generation
+- `src/lib/seo-social-image.tsx` is the shared route-image renderer used by Open Graph image files for share previews on key hub and detail routes
 - public route files should use `createPageMetadata`, `createExactPageMetadata`, or `createLocalizedMetadata` instead of exporting partial `{ title, description }` objects because Next.js metadata merging is shallow and can otherwise inherit the root homepage canonical/Open Graph values
 - `next.config.ts` redirects requests for `crescora.ai` to `https://www.crescora.ai/:path*`
 - `src/app/robots.ts` and `src/app/sitemap.ts` only publish the production host
@@ -172,11 +173,12 @@ The homepage now links into the solution and blog layers so the SEO graph is rea
 The shared metadata and structured-data rules now include:
 
 - `src/app/layout.tsx` for site-wide defaults and the non-duplicating title template
-- `src/lib/seo.ts` for canonical host generation, robots, Open Graph, article metadata, and JSON-LD sanitization
+- `src/lib/seo.ts` for canonical host generation, robots, Open Graph, article metadata, FAQ/page/item-list schema helpers, and JSON-LD sanitization
+- route-specific `opengraph-image.tsx` files on key solution, compare, proof, and blog routes so share metadata no longer points at a single global image
 - `src/lib/seo-marketing-data.ts` for article authorship, published/modified dates, and representative image metadata on blog content
-- homepage, solution, comparison, proof, and article JSON-LD without FAQ schema
+- homepage FAQ schema, pricing FAQ schema, solution-page FAQ schema, and route-level page / breadcrumb / item-list JSON-LD on key commercial routes
 
-Meta keywords and typo-targeting metadata are intentionally removed. FAQ content can still be rendered for users, but FAQ schema is no longer used as a search coverage strategy.
+Meta keywords and typo-targeting metadata are intentionally removed. FAQ schema is limited to pages where the questions and answers are already visible in the rendered UI.
 
 ## Learn More
 

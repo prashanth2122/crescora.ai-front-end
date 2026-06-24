@@ -2,9 +2,11 @@ import { LeadForm } from "@/components/site/lead-form";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MapPin, UserRound } from "lucide-react";
-import { createExactPageMetadata } from "@/lib/seo";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
+import { buildAbsoluteUrl, buildPageSchema, createExactPageMetadata, organizationSchema } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 
 export const metadata = createExactPageMetadata({
@@ -13,9 +15,25 @@ export const metadata = createExactPageMetadata({
   path: "/contact",
 });
 
+const contactBreadcrumbs = buildBreadcrumbSchema([
+  { name: "Home", href: buildAbsoluteUrl("/") },
+  { name: "Contact", href: buildAbsoluteUrl("/contact") },
+]);
+
 export default function ContactPage() {
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          type: "ContactPage",
+          name: siteContent.contact.metadata.title,
+          description: siteContent.contact.metadata.description,
+          path: "/contact",
+        })}
+      />
+      <SeoJsonLd data={organizationSchema} />
+      <SeoJsonLd data={contactBreadcrumbs} />
+
       <PageHero
         eyebrow={siteContent.contact.hero.eyebrow}
         title={siteContent.contact.hero.title}

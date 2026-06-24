@@ -4,6 +4,7 @@ import Link from "next/link";
 import { trustPoints } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
 import {
+  buildFaqPageSchema,
   createPageMetadata,
   homepageServicesListSchema,
   organizationSchema,
@@ -110,6 +111,7 @@ export default function HomePage() {
       <SeoJsonLd data={websiteSchema} />
       <SeoJsonLd data={softwareSchema} />
       <SeoJsonLd data={homepageServicesListSchema} />
+      <SeoJsonLd data={buildFaqPageSchema(faq.items)} />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-12">
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-[0_30px_120px_rgba(15,23,42,0.28)]">

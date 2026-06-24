@@ -13,7 +13,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = {
   ...createPageMetadata({
     title: "Workflow Library",
-    description: "Internal workflow blueprints and launch paths that support the primary solution pages.",
+    description: "Workflow references, rollout patterns, and automation paths for common customer operations.",
     path: "/workflows",
   }),
 };
@@ -29,8 +29,8 @@ export default function WorkflowsHubPage() {
       <SeoJsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Workflows"
-        title="Workflow blueprints that support the primary solution pages."
-        description="These pages remain available for internal linking and sales conversations, but the solution pages now carry the indexable commercial intent."
+        title="Workflow references for common automation paths."
+        description="Explore workflow pages that show how qualification, booking, reminders, support, payments, and handoff patterns are typically structured."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
@@ -39,7 +39,7 @@ export default function WorkflowsHubPage() {
         <SectionHeading
           eyebrow="Landing pages"
           title="Workflow references and rollout patterns."
-          description="Use these pages as supporting blueprints, not as primary index targets."
+          description="Use these pages to understand the operating steps, business context, and launch shape behind each workflow."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {workflows.map((workflow) => (

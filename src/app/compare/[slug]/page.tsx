@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { ComparisonPageTemplate } from "@/components/site/decision-pages";
 import { comparisonPages } from "@/lib/decision-pages";
-import { createExactPageMetadata } from "@/lib/seo";
+import { buildRouteSocialImagePath, createExactPageMetadata } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
 
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: { params: Params }) {
     title: page.metadata.title,
     description: page.metadata.description,
     path: `/compare/${slug}`,
+    imagePath: buildRouteSocialImagePath(`/compare/${slug}`),
   });
 }
 

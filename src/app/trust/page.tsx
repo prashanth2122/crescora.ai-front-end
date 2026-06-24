@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { trustPoints } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
@@ -8,7 +10,7 @@ import { WorkflowVisual } from "@/components/site/workflow-visual";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { createExactPageMetadata } from "@/lib/seo";
+import { buildAbsoluteUrl, buildPageSchema, createExactPageMetadata } from "@/lib/seo";
 
 export const metadata = createExactPageMetadata({
   title: siteContent.trust.metadata.title,
@@ -16,9 +18,23 @@ export const metadata = createExactPageMetadata({
   path: "/trust",
 });
 
+const trustBreadcrumbs = buildBreadcrumbSchema([
+  { name: "Home", href: buildAbsoluteUrl("/") },
+  { name: "Trust", href: buildAbsoluteUrl("/trust") },
+]);
+
 export default function TrustPage() {
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          name: siteContent.trust.metadata.title,
+          description: siteContent.trust.metadata.description,
+          path: "/trust",
+        })}
+      />
+      <SeoJsonLd data={trustBreadcrumbs} />
+
       <PageHero
         eyebrow={siteContent.trust.hero.eyebrow}
         title={siteContent.trust.hero.title}

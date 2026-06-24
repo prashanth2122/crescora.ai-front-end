@@ -13,7 +13,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = {
   ...createPageMetadata({
     title: "Workflow Templates",
-    description: "Launch assets and supporting templates that now roll up into the primary solution pages.",
+    description: "Template pages and launch-ready workflow patterns for common business automation use cases.",
     path: "/templates",
   }),
 };
@@ -30,7 +30,7 @@ export default function TemplatesHubPage() {
       <PageHero
         eyebrow="Templates"
         title="Template library for rollout conversations."
-        description="Templates remain useful for demos and internal linking, but they no longer compete with the primary solution pages in search."
+        description="Browse template pages that help teams understand common launch patterns, handoff logic, and automation setup paths."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
@@ -39,7 +39,7 @@ export default function TemplatesHubPage() {
         <SectionHeading
           eyebrow="Template pages"
           title="Supporting template pages"
-          description="Use these pages as implementation references and route commercial search intent to the solution pages."
+          description="Use these pages as implementation references for how a workflow can be structured, adapted, and launched."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {templates.map((template) => (

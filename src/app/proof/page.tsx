@@ -1,6 +1,8 @@
 import Link from "next/link";
 
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { proofCards } from "@/lib/decision-pages";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
@@ -8,19 +10,45 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
-import { createExactPageMetadata } from "@/lib/seo";
+import { buildAbsoluteUrl, buildItemListSchema, buildPageSchema, buildRouteSocialImagePath, createExactPageMetadata } from "@/lib/seo";
 
 export const metadata = createExactPageMetadata({
   title: siteContent.proofIndex.metadata.title,
   description: siteContent.proofIndex.metadata.description,
   path: "/proof",
+  imagePath: buildRouteSocialImagePath("/proof"),
 });
+
+const proofBreadcrumbs = buildBreadcrumbSchema([
+  { name: "Home", href: buildAbsoluteUrl("/") },
+  { name: "Proof", href: buildAbsoluteUrl("/proof") },
+]);
+
+const proofPagesSchema = buildItemListSchema(
+  "FLOW proof pages",
+  proofCards.map((item) => ({
+    name: item.title,
+    url: buildAbsoluteUrl(item.href),
+    description: item.text,
+  })),
+);
 
 export default function ProofPage() {
   const { hero, notice, section, includes, cta } = siteContent.proofIndex;
 
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          type: "CollectionPage",
+          name: siteContent.proofIndex.metadata.title,
+          description: siteContent.proofIndex.metadata.description,
+          path: "/proof",
+        })}
+      />
+      <SeoJsonLd data={proofBreadcrumbs} />
+      <SeoJsonLd data={proofPagesSchema} />
+
       <PageHero
         eyebrow={hero.eyebrow}
         title={hero.title}

@@ -1,23 +1,51 @@
 import Link from "next/link";
 
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { comparisonCards } from "@/lib/decision-pages";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { createExactPageMetadata } from "@/lib/seo";
+import { buildAbsoluteUrl, buildItemListSchema, buildPageSchema, buildRouteSocialImagePath, createExactPageMetadata } from "@/lib/seo";
 
 export const metadata = createExactPageMetadata({
   title: siteContent.compareIndex.metadata.title,
   description: siteContent.compareIndex.metadata.description,
   path: "/compare",
+  imagePath: buildRouteSocialImagePath("/compare"),
 });
+
+const compareBreadcrumbs = buildBreadcrumbSchema([
+  { name: "Home", href: buildAbsoluteUrl("/") },
+  { name: "Compare", href: buildAbsoluteUrl("/compare") },
+]);
+
+const comparePagesSchema = buildItemListSchema(
+  "FLOW comparison pages",
+  comparisonCards.map((item) => ({
+    name: item.title,
+    url: buildAbsoluteUrl(item.href),
+    description: item.text,
+  })),
+);
 
 export default function ComparePage() {
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          type: "CollectionPage",
+          name: siteContent.compareIndex.metadata.title,
+          description: siteContent.compareIndex.metadata.description,
+          path: "/compare",
+        })}
+      />
+      <SeoJsonLd data={compareBreadcrumbs} />
+      <SeoJsonLd data={comparePagesSchema} />
+
       <PageHero
         eyebrow={siteContent.compareIndex.hero.eyebrow}
         title={siteContent.compareIndex.hero.title}

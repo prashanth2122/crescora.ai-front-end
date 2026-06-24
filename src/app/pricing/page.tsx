@@ -2,12 +2,20 @@ import Link from "next/link";
 
 import { pricingPackages } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { createExactPageMetadata } from "@/lib/seo";
+import {
+  buildAbsoluteUrl,
+  buildFaqPageSchema,
+  buildItemListSchema,
+  buildPageSchema,
+  createExactPageMetadata,
+} from "@/lib/seo";
 
 export const metadata = createExactPageMetadata({
   title: siteContent.pricing.metadata.title,
@@ -15,9 +23,34 @@ export const metadata = createExactPageMetadata({
   path: "/pricing",
 });
 
+const pricingBreadcrumbs = buildBreadcrumbSchema([
+  { name: "Home", href: buildAbsoluteUrl("/") },
+  { name: "Pricing", href: buildAbsoluteUrl("/pricing") },
+]);
+
+const pricingPackagesSchema = buildItemListSchema(
+  "FLOW pricing packages",
+  pricingPackages.map((pkg) => ({
+    name: pkg.title,
+    url: buildAbsoluteUrl("/pricing"),
+    description: `${pkg.price}${pkg.priceDetail ? ` (${pkg.priceDetail})` : ""} - Best for ${pkg.bestFor}`,
+  })),
+);
+
 export default function PricingPage() {
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          name: siteContent.pricing.metadata.title,
+          description: siteContent.pricing.metadata.description,
+          path: "/pricing",
+        })}
+      />
+      <SeoJsonLd data={pricingBreadcrumbs} />
+      <SeoJsonLd data={pricingPackagesSchema} />
+      <SeoJsonLd data={buildFaqPageSchema(siteContent.pricing.faq.items)} />
+
       <PageHero
         eyebrow={siteContent.pricing.hero.eyebrow}
         title={siteContent.pricing.hero.title}
