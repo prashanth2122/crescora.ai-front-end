@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/analytics.test.ts src/lib/locales.test.ts src/lib/page-copy/hi.test.ts src/lib/site-content.test.ts src/app/api/lead/route.test.ts"
+    "test": "tsx --test src/lib/analytics.test.ts src/lib/locales.test.ts src/lib/page-copy/hi.test.ts src/lib/seo.test.ts src/lib/site-content.test.ts src/app/api/lead/route.test.ts"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

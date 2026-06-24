@@ -18,6 +18,7 @@ export const metadata = createLocalizedMetadata(
   "/hi/compare",
   page.metadata.title,
   page.metadata.description,
+  { noIndex: true },
 );
 
 const breadcrumbSchema = buildBreadcrumbSchema(page.breadcrumb);
@@ -57,4 +58,3 @@ export default function HindiComparePage() {
     </PageShell>
   );
 }
-

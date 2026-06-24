@@ -7,6 +7,8 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
+import { createPageMetadata } from "@/lib/seo";
+import { templateCanonicalMap } from "@/lib/seo-route-map";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema, seoSoftwareSchema, templateBySlug, templates } from "@/lib/india-seo-data";
 
@@ -25,9 +27,15 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 
   return {
-    title: template.title,
-    description: template.description,
-    alternates: { canonical: `/templates/${template.slug}` },
+    ...createPageMetadata({
+      title: template.title,
+      description: template.description,
+      path: `/templates/${template.slug}`,
+      noIndex: true,
+      alternates: {
+        canonical: templateCanonicalMap[template.slug] ?? "/templates",
+      },
+    }),
   };
 }
 
@@ -40,9 +48,9 @@ export default async function TemplatePage({ params }: { params: Params }) {
   }
 
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "Templates", href: "https://crescora.ai/templates" },
-    { name: template.title, href: `https://crescora.ai/templates/${template.slug}` },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "Templates", href: "https://www.crescora.ai/templates" },
+    { name: template.title, href: `https://www.crescora.ai/templates/${template.slug}` },
   ]);
 
   return (

@@ -1,14 +1,16 @@
+"use client";
+
 import Link from "next/link";
-import { headers } from "next/headers";
+import { usePathname } from "next/navigation";
 
 import { Separator } from "@/components/ui/separator";
 import { siteContent } from "@/lib/site-content";
 import { site } from "@/lib/site-data";
-import { buildLocalizedHref, getLocaleCopy, resolveLocaleFromHeaders } from "@/lib/locales";
+import { buildLocalizedHref, getLocaleCopy, getLocaleFromPath } from "@/lib/locales";
 
-export async function SiteFooter() {
-  const requestHeaders = await headers();
-  const locale = resolveLocaleFromHeaders(requestHeaders);
+export function SiteFooter() {
+  const pathname = usePathname();
+  const locale = getLocaleFromPath(pathname ?? "/");
   const copy = getLocaleCopy(locale);
 
   return (

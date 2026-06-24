@@ -67,6 +67,7 @@ This keeps route components thin and makes future localization work straightforw
 - the about page uses the same product-first CTA labels and automation-focused positioning so it stays aligned with the rest of the site
 - the about page now includes structured sections for who we are, mission, product relationship, pilot program, and final CTA so the company story stays centralized
 - the homepage now stays focused on hero, pain, workflow automation, featured industries, pilot scope, trust / FAQ, and a compact deeper-links block; detailed solutions, pricing, blog content, and the full lead intake live on their dedicated routes
+- the homepage now also carries a shared SEO coverage section for channels, integrations, and service categories so core search intent stays centralized in `src/lib/site-content.ts`
 - the proof route now uses workflow-example language, a public rollout note, and a structured includes section instead of defensive illustrative-proof wording
 - the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
 - the privacy policy now renders at `/privacy`
@@ -87,23 +88,27 @@ This keeps route components thin and makes future localization work straightforw
 
 ## SEO Architecture
 
-India-focused SEO content is centralized in `src/lib/india-seo-data.ts` and rendered through reusable route templates.
+The SEO stack now uses a single production host, shared metadata helpers, curated indexable routes, and explicit noindex/canonical handling for generated route families.
 
-The current route tree covers:
+Core implementation points:
 
-- `/india` for the national SEO hub
-- `/india/[state]` for state hubs
-- `/india/[state]/workflows/[workflow]` for state-workflow pages
-- `/india/[state]/industries/[industry]` for state-industry pages
-- `/workflows` and `/workflows/[workflow]` for workflow landing pages
-- `/templates` and `/templates/[template]` for launch templates
-- `/industries/[industry]` for industry SEO pages
+- `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, and `https://www.crescora.ai` URL generation
+- `next.config.ts` redirects requests for `crescora.ai` to `https://www.crescora.ai/:path*`
+- `src/app/robots.ts` and `src/app/sitemap.ts` only publish the production host
+- `src/app/sitemap.ts` uses source-file mtimes for `lastModified` instead of `new Date()`
+- `src/lib/revenue-pages.ts` is the canonical source for the primary solution pages
+- `src/lib/seo-route-map.ts` defines the canonical targets used when generated or overlapping routes are intentionally demoted
 
-The same data file also provides route registries, breadcrumb schema helpers, and the state/workflow/template/industry copy used across those pages.
+The current route families are split into two groups:
+
+- indexable primary routes: `/`, `/solutions`, `/solutions/[slug]`, `/industries`, curated industry pages, `/compare`, `/proof`, `/platform`, `/pricing`, `/trust`, `/resources`, `/about`, `/contact`, and legal pages
+- noindexed supporting or generated routes: `/blog`, `/blog/[slug]`, `/workflows`, `/workflows/[workflow]`, `/templates`, `/templates/[template]`, `/use-cases`, `/use-cases/[slug]`, the legacy static `use-cases/*` pages, `/india`, `/india/[state]`, `/india/[state]/workflows/[workflow]`, `/india/[state]/industries/[industry]`, and `/hi/*`
+
+The noindexed route families are still available for internal linking and sales conversations, but they are canonically folded back into the primary commercial pages so they do not compete in search.
 
 ## Multilingual Foundation
 
-Locale support is centralized in `src/lib/locales.ts` and activated through `middleware.ts`.
+Locale support is centralized in `src/lib/locales.ts`.
 The actual copy payload is split by language in:
 
 - `src/lib/locales/en.ts`
@@ -115,16 +120,12 @@ Route-specific multilingual page copy lives in:
 
 The current foundation includes:
 
-- locale-aware request headers (`x-locale` and `x-current-path`)
-- locale detection from the pathname prefix
+- locale detection from static pathname segments
 - shared `en` and `hi` route helpers
 - localized navigation and footer copy from language-specific files
 - localized hub/page body copy from page-specific language files
-- a compact dropdown language switcher in the global header
-- a mobile header that keeps the menu trigger pinned to the right edge for easier one-hand access
-- a compact desktop header that shows only the core nav items, with the full link set kept in the mobile drawer and footer
 - localized entry routes under `/hi`
-- locale-aware metadata helpers for canonical and `hreflang` output
+- locale-aware metadata helpers for canonical and `hreflang` output without request-time middleware
 - a cropped header logo asset in the header via `public/header-logo.png`
 
 Current Hindi entry routes:
@@ -143,20 +144,38 @@ The foundation is intentionally partial:
 - shared chrome is localized now
 - SEO hub routes are localized now
 - deeper content pages still fall back to English until translated variants are added
+- Hindi routes live on static `/hi/*` segments so they can be prerendered and cached cleanly
 - the helper layer makes it safe to expand locale coverage without changing route structure later
 
 ## SEO Content Marketing
 
-Informational and product-intent SEO assets are centralized in `src/lib/seo-marketing-data.ts`.
+Primary commercial pages are centralized in `src/lib/revenue-pages.ts`, while supporting marketing content and older generated SEO assets remain in `src/lib/seo-marketing-data.ts`.
 
-That layer powers:
+The current commercial setup uses:
 
-- `/solutions` and `/solutions/[slug]` for main product-intent queries
-- `/blog` and `/blog/[slug]` for informational content and internal linking
-- `/compare/[slug]` for additional decision-stage comparison pages
-- `/industries/[slug]` for keyword-specific industry landing pages
+- `/solutions` and `src/app/solutions/[slug]/page.tsx` for the primary revenue pages
+- `src/components/site/revenue-solution-page.tsx` for the shared product-page layout
+- visible implementation details, examples, proof points, outcomes, related links, and FAQ accordions on each primary solution page
+- product-surface panels embedded in the primary solution pages to show the operator, builder, and dashboard views referenced in the copy
+
+Supporting content remains available, but is intentionally demoted from search:
+
+- `/blog` and `/blog/[slug]`
+- `/workflows` and `/workflows/[workflow]`
+- `/templates` and `/templates/[template]`
+- `/use-cases` and the legacy `use-cases/*` routes
+- generated India and dynamic industry SEO routes
 
 The homepage now links into the solution and blog layers so the SEO graph is reachable from the root page, not just from the sitemap.
+
+The shared metadata and structured-data rules now include:
+
+- `src/app/layout.tsx` for site-wide defaults and the non-duplicating title template
+- `src/lib/seo.ts` for canonical host generation, robots, Open Graph, article metadata, and JSON-LD sanitization
+- `src/lib/seo-marketing-data.ts` for article authorship, published/modified dates, and representative image metadata on blog content
+- homepage, solution, comparison, proof, and article JSON-LD without FAQ schema
+
+Meta keywords and typo-targeting metadata are intentionally removed. FAQ content can still be rendered for users, but FAQ schema is no longer used as a search coverage strategy.
 
 ## Learn More
 

@@ -8,19 +8,22 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
+import { createPageMetadata } from "@/lib/seo";
+import { revenuePages } from "@/lib/revenue-pages";
 import { siteContent } from "@/lib/site-content";
-import { solutionPages } from "@/lib/seo-marketing-data";
 
 export const metadata = {
-  title: "Solutions | FLOW by Crescora",
-  description: "SEO landing pages for WhatsApp automation, AI chatbot builder, workflow automation, and customer support automation.",
-  alternates: { canonical: "/solutions" },
+  ...createPageMetadata({
+    title: "Solutions",
+    description: "Primary revenue pages for WhatsApp automation, AI chatbots, workflow automation, support, booking, and connected business operations.",
+    path: "/solutions",
+  }),
 };
 
 export default function SolutionsPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "Solutions", href: "https://crescora.ai/solutions" },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "Solutions", href: "https://www.crescora.ai/solutions" },
   ]);
 
   return (
@@ -28,20 +31,20 @@ export default function SolutionsPage() {
       <SeoJsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Solutions"
-        title="Solutions pages target the exact pain buyers search for."
-        description="These pages capture the strongest product-intent keywords from the brief and route readers into the right workflow, industry, template, or comparison page."
+        title="Primary revenue pages built around the workflows buyers actually need to launch."
+        description="Each solution page now carries implementation detail, product surfaces, rollout examples, FAQs, and proof signals so the commercial intent stays on the strongest URL."
         primaryCta={siteContent.ctas.bookProjectDemo}
-        secondaryCta={siteContent.ctas.viewTemplates}
+        secondaryCta={siteContent.ctas.requestScopeCall}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Main pages"
-          title="Build around the query, not the product category."
-          description="Each page below is written for a specific search intent from the pasted brief."
+          title="Keep the commercial intent on a single canonical page per workflow category."
+          description="These are the URLs that now own the primary search demand while overlapping template, workflow, and draft article routes are demoted from the index."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {solutionPages.map((page) => (
+          {revenuePages.map((page) => (
             <Card
               key={page.slug}
               className="flex h-full flex-col border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]"

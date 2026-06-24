@@ -4,6 +4,8 @@ import { PageShell } from "@/components/site/page-shell";
 import { SeoLandingPage } from "@/components/site/seo-landing-page";
 import { buildBreadcrumbSchema, seoSoftwareSchema } from "@/lib/india-seo-data";
 import { industrySeoLandingPages } from "@/lib/seo-marketing-data";
+import { createPageMetadata } from "@/lib/seo";
+import { industryCanonicalMap } from "@/lib/seo-route-map";
 
 type Params = Promise<{ slug: string }>;
 
@@ -22,9 +24,15 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 
   return {
-    title: page.title,
-    description: page.description,
-    alternates: { canonical: `/industries/${page.slug}` },
+    ...createPageMetadata({
+      title: page.title,
+      description: page.description,
+      path: `/industries/${page.slug}`,
+      noIndex: true,
+      alternates: {
+        canonical: industryCanonicalMap[page.slug] ?? "/industries",
+      },
+    }),
   };
 }
 
@@ -37,9 +45,9 @@ export default async function IndustrySeoAliasPage({ params }: { params: Params 
   }
 
   const breadcrumbs = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "Industries", href: "https://crescora.ai/industries" },
-    { name: page.title, href: `https://crescora.ai/industries/${page.slug}` },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "Industries", href: "https://www.crescora.ai/industries" },
+    { name: page.title, href: `https://www.crescora.ai/industries/${page.slug}` },
   ]);
 
   return (
@@ -53,7 +61,7 @@ export default async function IndustrySeoAliasPage({ params }: { params: Params 
         sections={page.sections}
         relatedLinks={page.relatedLinks}
         ctaLabel={page.ctaLabel}
-        schema={seoSoftwareSchema}
+        schemas={[seoSoftwareSchema]}
         breadcrumbs={breadcrumbs}
         extraCtaHref="/templates"
         extraCtaLabel="View Industry Templates"

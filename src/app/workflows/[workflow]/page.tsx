@@ -7,6 +7,8 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
+import { createPageMetadata } from "@/lib/seo";
+import { workflowCanonicalMap } from "@/lib/seo-route-map";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema, seoSoftwareSchema, workflowBySlug, workflows } from "@/lib/india-seo-data";
 
@@ -25,9 +27,15 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 
   return {
-    title: workflow.title,
-    description: workflow.description,
-    alternates: { canonical: `/workflows/${workflow.slug}` },
+    ...createPageMetadata({
+      title: workflow.title,
+      description: workflow.description,
+      path: `/workflows/${workflow.slug}`,
+      noIndex: true,
+      alternates: {
+        canonical: workflowCanonicalMap[workflow.slug] ?? "/workflows",
+      },
+    }),
   };
 }
 
@@ -40,9 +48,9 @@ export default async function WorkflowPage({ params }: { params: Params }) {
   }
 
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "Workflows", href: "https://crescora.ai/workflows" },
-    { name: workflow.title, href: `https://crescora.ai/workflows/${workflow.slug}` },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "Workflows", href: "https://www.crescora.ai/workflows" },
+    { name: workflow.title, href: `https://www.crescora.ai/workflows/${workflow.slug}` },
   ]);
 
   return (

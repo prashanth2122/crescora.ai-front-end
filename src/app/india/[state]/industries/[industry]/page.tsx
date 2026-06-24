@@ -7,6 +7,7 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
+import { createPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import {
   buildBreadcrumbSchema,
@@ -36,9 +37,12 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 
   return {
-    title: `${industry.title} in ${state.name} | FLOW`,
-    description: `${industry.description} ${state.description}`,
-    alternates: { canonical: `/india/${state.slug}/industries/${industry.slug}` },
+    ...createPageMetadata({
+      title: `${industry.title} in ${state.name}`,
+      description: `${industry.description} ${state.description}`,
+      path: `/india/${state.slug}/industries/${industry.slug}`,
+      noIndex: true,
+    }),
   };
 }
 
@@ -52,10 +56,10 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
   }
 
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "India SEO", href: "https://crescora.ai/india" },
-    { name: state.name, href: `https://crescora.ai/india/${state.slug}` },
-    { name: industry.name, href: `https://crescora.ai/india/${state.slug}/industries/${industry.slug}` },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "India SEO", href: "https://www.crescora.ai/india" },
+    { name: state.name, href: `https://www.crescora.ai/india/${state.slug}` },
+    { name: industry.name, href: `https://www.crescora.ai/india/${state.slug}/industries/${industry.slug}` },
   ]);
 
   return (

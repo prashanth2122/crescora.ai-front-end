@@ -1,12 +1,22 @@
 import Link from "next/link";
 
 import { siteContent } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
+import { useCaseCanonicalMap } from "@/lib/seo-route-map";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-export const metadata = siteContent.useCases.payment.metadata;
+export const metadata = createPageMetadata({
+  title: siteContent.useCases.payment.metadata.title,
+  description: siteContent.useCases.payment.metadata.description,
+  path: "/use-cases/payment-follow-up-automation",
+  noIndex: true,
+  alternates: {
+    canonical: useCaseCanonicalMap["payment-follow-up-automation"],
+  },
+});
 
 export default function PaymentFollowUpPage() {
   const page = siteContent.useCases.payment;

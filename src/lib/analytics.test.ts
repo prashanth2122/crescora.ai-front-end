@@ -47,19 +47,19 @@ test("analytics context includes locale, sections, and marketing params", () => 
 test("analytics helpers normalize events and link targets", () => {
   assert.equal(sanitizeEventName("Lead Form Success"), "lead_form_success");
   assert.equal(
-    getDestinationPath("/contact?utm_source=google", "https://crescora.ai"),
+    getDestinationPath("/contact?utm_source=google", "https://www.crescora.ai"),
     "/contact",
   );
   assert.equal(
-    getLinkTargetType("/contact", "https://crescora.ai"),
+    getLinkTargetType("/contact", "https://www.crescora.ai"),
     "internal",
   );
   assert.equal(
-    getLinkTargetType("mailto:sales@crescora.ai", "https://crescora.ai"),
+    getLinkTargetType("mailto:sales@crescora.ai", "https://www.crescora.ai"),
     "mailto",
   );
   assert.equal(
-    getLinkTargetType("https://example.com", "https://crescora.ai"),
+    getLinkTargetType("https://example.com", "https://www.crescora.ai"),
     "external",
   );
 });

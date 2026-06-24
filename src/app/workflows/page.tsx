@@ -8,16 +8,20 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema, workflows } from "@/lib/india-seo-data";
+import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = {
-  title: "Workflow Pages | FLOW by Crescora",
-  description: "Search-intent workflow landing pages for WhatsApp, booking, payments, reminders, document collection, support, and handoff.",
-  alternates: { canonical: "/workflows" },
+  ...createPageMetadata({
+    title: "Workflow Library",
+    description: "Internal workflow blueprints and launch paths that support the primary solution pages.",
+    path: "/workflows",
+    noIndex: true,
+  }),
 };
 
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", href: "https://crescora.ai" },
-  { name: "Workflows", href: "https://crescora.ai/workflows" },
+  { name: "Home", href: "https://www.crescora.ai" },
+  { name: "Workflows", href: "https://www.crescora.ai/workflows" },
 ]);
 
 export default function WorkflowsHubPage() {
@@ -26,8 +30,8 @@ export default function WorkflowsHubPage() {
       <SeoJsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Workflows"
-        title="Workflow pages are the core of the India SEO architecture."
-        description="Each page targets a buyer job, keeps the page commercially specific, and can support a state or industry variant when proof exists."
+        title="Workflow blueprints that support the primary solution pages."
+        description="These pages remain available for internal linking and sales conversations, but the solution pages now carry the indexable commercial intent."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
@@ -35,8 +39,8 @@ export default function WorkflowsHubPage() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Landing pages"
-          title="Build search intent around jobs buyers already search for."
-          description="The report says workflow pages should drive the main non-brand conversions."
+          title="Workflow references and rollout patterns."
+          description="Use these pages as supporting blueprints, not as primary index targets."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {workflows.map((workflow) => (

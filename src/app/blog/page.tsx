@@ -7,19 +7,23 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
+import { createPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import { blogPosts } from "@/lib/seo-marketing-data";
 
 export const metadata = {
-  title: "Blog | FLOW by Crescora",
-  description: "SEO blog posts covering WhatsApp automation, appointments, support, payments, real estate, hospitals, and workflow automation in India.",
-  alternates: { canonical: "/blog" },
+  ...createPageMetadata({
+    title: "Blog",
+    description: "Operational articles and implementation notes from the Crescora team.",
+    path: "/blog",
+    noIndex: true,
+  }),
 };
 
 export default function BlogPage() {
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "Blog", href: "https://crescora.ai/blog" },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "Blog", href: "https://www.crescora.ai/blog" },
   ]);
 
   return (
@@ -27,8 +31,8 @@ export default function BlogPage() {
       <SeoJsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Blog"
-        title="Blog content captures informational search intent and supports the money pages."
-        description="These posts are written to support the solution, industry, template, and comparison routes from the pasted brief."
+        title="Editorial notes, rollout ideas, and product guidance."
+        description="This hub will carry long-form operational content. Until the article library is fully rewritten, it stays out of the search index."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.viewSolutions}
       />
@@ -36,8 +40,8 @@ export default function BlogPage() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Posts"
-          title="Publish articles that link back to the commercial pages."
-          description="The brief recommends 2 posts per week; this hub gives you a scalable route tree for that cadence."
+          title="Current draft articles"
+          description="Each article links back to the relevant solution, proof, or comparison page while the editorial layer is being rebuilt."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {blogPosts.map((post) => (

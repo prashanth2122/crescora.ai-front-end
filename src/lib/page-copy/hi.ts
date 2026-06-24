@@ -6,8 +6,8 @@ export const hiPageCopy = {
         "Hindi route structure, locale-aware navigation, and multilingual metadata foundations for FLOW by Crescora.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "हिन्दी", href: "https://crescora.ai/hi" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "हिन्दी", href: "https://www.crescora.ai/hi" },
     ],
     hero: {
       eyebrow: "हिन्दी",
@@ -72,8 +72,8 @@ export const hiPageCopy = {
         "Hindi entry point for solution-led searches covering WhatsApp automation, workflow automation, and customer support automation.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "समाधान", href: "https://crescora.ai/hi/solutions" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "समाधान", href: "https://www.crescora.ai/hi/solutions" },
     ],
     hero: {
       eyebrow: "समाधान",
@@ -95,8 +95,8 @@ export const hiPageCopy = {
         "Hindi content hub for informational searches, internal linking, and future translated articles.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "ब्लॉग", href: "https://crescora.ai/hi/blog" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "ब्लॉग", href: "https://www.crescora.ai/hi/blog" },
     ],
     hero: {
       eyebrow: "ब्लॉग",
@@ -119,8 +119,8 @@ export const hiPageCopy = {
         "Hindi decision-stage comparison hub for buyers narrowing down FLOW against other automation options.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "तुलना", href: "https://crescora.ai/hi/compare" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "तुलना", href: "https://www.crescora.ai/hi/compare" },
     ],
     hero: {
       eyebrow: "तुलना",
@@ -142,8 +142,8 @@ export const hiPageCopy = {
         "Hindi template hub for WhatsApp, booking, payments, document collection, and support workflow launches.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "टेम्पलेट", href: "https://crescora.ai/hi/templates" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "टेम्पलेट", href: "https://www.crescora.ai/hi/templates" },
     ],
     hero: {
       eyebrow: "टेम्पलेट",
@@ -165,8 +165,8 @@ export const hiPageCopy = {
         "Hindi workflow hub for search-intent pages around WhatsApp, booking, payments, reminders, support, and handoff.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "वर्कफ़्लो", href: "https://crescora.ai/hi/workflows" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "वर्कफ़्लो", href: "https://www.crescora.ai/hi/workflows" },
     ],
     hero: {
       eyebrow: "वर्कफ़्लो",
@@ -188,8 +188,8 @@ export const hiPageCopy = {
         "Hindi industry hub for healthcare, clinics, real estate, support teams, and service businesses.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "इंडस्ट्रीज़", href: "https://crescora.ai/hi/industries" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "इंडस्ट्रीज़", href: "https://www.crescora.ai/hi/industries" },
     ],
     hero: {
       eyebrow: "इंडस्ट्रीज़",
@@ -217,8 +217,8 @@ export const hiPageCopy = {
         "Hindi regional SEO hub for states, workflows, templates, industries, local SEO, and technical foundations.",
     },
     breadcrumb: [
-      { name: "होम", href: "https://crescora.ai/hi" },
-      { name: "इंडिया", href: "https://crescora.ai/hi/india" },
+      { name: "होम", href: "https://www.crescora.ai/hi" },
+      { name: "इंडिया", href: "https://www.crescora.ai/hi/india" },
     ],
     hero: {
       eyebrow: "इंडिया SEO",

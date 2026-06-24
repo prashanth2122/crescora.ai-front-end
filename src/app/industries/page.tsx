@@ -4,18 +4,16 @@ import { siteContent } from "@/lib/site-content";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
-import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
-import { industrySeoLandingPages } from "@/lib/seo-marketing-data";
 
 export const metadata = siteContent.industriesIndex.metadata;
 
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", href: "https://crescora.ai" },
-  { name: "Industries", href: "https://crescora.ai/industries" },
+  { name: "Home", href: "https://www.crescora.ai" },
+  { name: "Industries", href: "https://www.crescora.ai/industries" },
 ]);
 
 const featuredIndustryCards = [
@@ -172,28 +170,6 @@ export default function IndustriesPage() {
               <Link href={siteContent.ctas.requestScopeCall.href}>{siteContent.ctas.requestScopeCall.label}</Link>
             </Button>
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={siteContent.industriesIndex.seoLandingPages.eyebrow}
-          title={siteContent.industriesIndex.seoLandingPages.title}
-          description={siteContent.industriesIndex.seoLandingPages.description}
-        />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {industrySeoLandingPages.map((industry) => (
-            <Card key={industry.slug} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-              <CardContent className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{industry.keywordTarget}</p>
-                <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{industry.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-zinc-600">{industry.description}</p>
-                <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={`/industries/${industry.slug}`}>Open solution page</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </section>
     </PageShell>

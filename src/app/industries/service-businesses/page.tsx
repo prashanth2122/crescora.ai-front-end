@@ -22,9 +22,9 @@ export default function ServiceBusinessesIndustryPage() {
       <IndustrySeoPage
         industry={industry}
         breadcrumbs={[
-          { name: "Home", href: "https://crescora.ai" },
-          { name: "Industries", href: "https://crescora.ai/industries" },
-          { name: "Service Businesses", href: "https://crescora.ai/industries/service-businesses" },
+          { name: "Home", href: "https://www.crescora.ai" },
+          { name: "Industries", href: "https://www.crescora.ai/industries" },
+          { name: "Service Businesses", href: "https://www.crescora.ai/industries/service-businesses" },
         ]}
         backHref="/industries"
         backLabel="Back to industries"

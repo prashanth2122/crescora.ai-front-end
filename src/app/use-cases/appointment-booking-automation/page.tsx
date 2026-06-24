@@ -1,12 +1,22 @@
 import Link from "next/link";
 
 import { siteContent } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
+import { useCaseCanonicalMap } from "@/lib/seo-route-map";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-export const metadata = siteContent.useCases.appointment.metadata;
+export const metadata = createPageMetadata({
+  title: siteContent.useCases.appointment.metadata.title,
+  description: siteContent.useCases.appointment.metadata.description,
+  path: "/use-cases/appointment-booking-automation",
+  noIndex: true,
+  alternates: {
+    canonical: useCaseCanonicalMap["appointment-booking-automation"],
+  },
+});
 
 export default function AppointmentBookingPage() {
   const page = siteContent.useCases.appointment;

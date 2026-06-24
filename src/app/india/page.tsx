@@ -17,15 +17,20 @@ import {
   templates,
   workflows,
 } from "@/lib/india-seo-data";
+import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = {
-  ...indiaSeo.metadata,
-  alternates: { canonical: "/india" },
+  ...createPageMetadata({
+    title: indiaSeo.metadata.title,
+    description: indiaSeo.metadata.description,
+    path: "/india",
+    noIndex: true,
+  }),
 };
 
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", href: "https://crescora.ai" },
-  { name: "India SEO", href: "https://crescora.ai/india" },
+  { name: "Home", href: "https://www.crescora.ai" },
+  { name: "India SEO", href: "https://www.crescora.ai/india" },
 ]);
 
 export default function IndiaSeoHubPage() {

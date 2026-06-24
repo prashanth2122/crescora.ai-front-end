@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import { GoogleTag } from "@/components/analytics/google-tag";
 import { SiteAnalytics } from "@/components/analytics/site-analytics";
 import { AnalyticsWebVitals } from "@/components/analytics/web-vitals";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { createPageMetadata, siteMetadataBase } from "@/lib/seo";
 import { site } from "@/lib/site-data";
-import { getLocaleCopy, resolveLocaleFromHeaders } from "@/lib/locales";
+import { getLocaleCopy } from "@/lib/locales";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,48 +21,40 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const locale = resolveLocaleFromHeaders(requestHeaders);
-  const copy = getLocaleCopy(locale);
+const copy = getLocaleCopy("en");
 
-  return {
-    metadataBase: new URL("https://crescora.ai"),
-    title: {
-      default: `${site.name} | ${copy.site.seoTitle}`,
-      template: `%s | ${site.name}`,
-    },
+export const metadata: Metadata = {
+  ...createPageMetadata({
+    title: copy.site.seoTitle,
     description: copy.site.description,
-    openGraph: {
-      title: `${site.name} | ${copy.site.seoTitle}`,
-      description: copy.site.description,
-      type: "website",
-      siteName: site.name,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${site.name} | ${copy.site.seoTitle}`,
-      description: copy.site.description,
-    },
-  };
-}
+    path: "/",
+  }),
+  metadataBase: siteMetadataBase,
+  applicationName: site.productFull,
+  category: "Business automation software",
+  creator: site.name,
+  publisher: site.name,
+  title: {
+    default: `${copy.site.seoTitle} | ${site.productFull}`,
+    template: "%s",
+  },
+};
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const requestHeaders = await headers();
-  const locale = resolveLocaleFromHeaders(requestHeaders);
-
   return (
     <html
-      lang={locale}
+      lang="en"
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <SiteAnalytics />
+        <Suspense fallback={null}>
+          <SiteAnalytics />
+        </Suspense>
         <AnalyticsWebVitals />
         <SiteHeader />
         <main className="flex-1">{children}</main>

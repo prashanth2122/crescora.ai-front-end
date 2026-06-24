@@ -26,6 +26,7 @@ export const metadata = createLocalizedMetadata(
   "/hi/india",
   page.metadata.title,
   page.metadata.description,
+  { noIndex: true },
 );
 
 const breadcrumbSchema = buildBreadcrumbSchema(page.breadcrumb);

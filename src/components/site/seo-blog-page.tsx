@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,17 @@ type SeoBlogPageProps = {
 };
 
 export function SeoBlogPage({ post, schema, breadcrumbs }: SeoBlogPageProps) {
+  const publishedLabel = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(post.publishedAt));
+  const modifiedLabel = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(post.modifiedAt));
+
   return (
     <>
       <SeoJsonLd data={schema} />
@@ -34,6 +46,11 @@ export function SeoBlogPage({ post, schema, breadcrumbs }: SeoBlogPageProps) {
             <CardContent className="p-6 sm:p-8">
               <SectionHeading eyebrow="Keyword target" title={post.keywordTarget} description={post.summary} />
               <p className="mt-6 text-sm leading-7 text-zinc-600">{post.description}</p>
+              <div className="mt-6 flex flex-wrap gap-3 text-xs font-medium uppercase tracking-[0.22em] text-zinc-500">
+                <span>Author: {post.author}</span>
+                <span>Published: {publishedLabel}</span>
+                <span>Updated: {modifiedLabel}</span>
+              </div>
             </CardContent>
           </Card>
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
@@ -49,6 +66,20 @@ export function SeoBlogPage({ post, schema, breadcrumbs }: SeoBlogPageProps) {
             </CardContent>
           </Card>
         </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <Card className="overflow-hidden border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+          <CardContent className="p-0">
+            <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Representative image</p>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">Each article now carries a representative image, visible authorship, and publication metadata instead of relying only on the page title.</p>
+            </div>
+            <div className="relative aspect-[16/7] w-full">
+              <Image src={post.representativeImagePath} alt={post.title} fill className="object-cover" sizes="100vw" />
+            </div>
+          </CardContent>
+        </Card>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

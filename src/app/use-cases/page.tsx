@@ -22,8 +22,16 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.useCasesIndex.metadata;
+export const metadata = {
+  ...createPageMetadata({
+    title: "Use Cases",
+    description: siteContent.useCasesIndex.hero.description,
+    path: "/use-cases",
+    noIndex: true,
+  }),
+};
 
 const useCaseIcons = {
   "WhatsApp Automation": MessageSquareText,

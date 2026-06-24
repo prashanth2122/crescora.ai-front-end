@@ -1,3 +1,4 @@
+import { buildAbsoluteUrl, buildRepresentativeImageJsonLd, editorialAuthor, siteOrigin } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 
 type LandingSection = {
@@ -38,6 +39,10 @@ export type BlogPost = {
   keywordTarget: string;
   description: string;
   summary: string;
+  author: string;
+  publishedAt: string;
+  modifiedAt: string;
+  representativeImagePath: string;
   sections: BlogSection[];
   relatedLinks: RelatedLink[];
   ctaLabel: string;
@@ -94,13 +99,13 @@ function buildBlogSections(title: string, keywordTarget: string): BlogSection[] 
 export const solutionPages: SeoLandingPage[] = [
   {
     slug: "whatsapp-automation",
-    title: "WhatsApp Business Automation in India | FLOW by Crescora AI",
-    h1: "Automate WhatsApp conversations, follow-ups, and workflow actions.",
-    keywordTarget: "WhatsApp business automation",
+    title: "WhatsApp Automation Workflows and AI Chatbots in India | FLOW by Crescora AI",
+    h1: "Automate WhatsApp conversations, AI follow-ups, and customer workflow actions.",
+    keywordTarget: "WhatsApp automation workflows",
     description:
-      "A solution page for businesses that need repeatable response handling, booking, reminders, payments, and human handoff on WhatsApp.",
+      "A solution page for businesses that need AI-powered WhatsApp automation, website chatbot handoff, social messaging follow-up, booking, reminders, payments, support, and human handoff.",
     intro:
-      "Use this page to explain how FLOW handles first response, qualification, reminders, escalation, and outcome logging from the channel buyers already use.",
+      "Use this page to explain how FLOW handles first response, qualification, reminders, escalation, website chatbot handoff, and outcome logging from the channel buyers already use most.",
     sections: [
       {
         eyebrow: "Problem",
@@ -114,12 +119,12 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "How it works",
-        title: "What FLOW automates on WhatsApp",
-        description: "The page should be explicit about the workflow, not just the channel.",
+        title: "What FLOW automates across WhatsApp and connected channels",
+        description: "The page should be explicit about the workflow, AI layer, and connected business systems.",
         bullets: [
-          "Lead capture and qualification.",
-          "Appointment booking and confirmations.",
-          "Payment reminders, document collection, and escalation.",
+          "Lead capture, qualification, and CRM routing.",
+          "Appointment booking, confirmations, and reminder flows.",
+          "Website chatbots, Instagram/Facebook handoff, payments, documents, and escalation.",
         ],
       },
       {
@@ -142,22 +147,22 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "ai-chatbot-builder",
-    title: "No-Code AI Chatbot Builder in India | FLOW by Crescora AI",
-    h1: "Build a business chatbot that books, routes, and follows up.",
-    keywordTarget: "AI chatbot builder",
+    title: "AI Chatbots for Websites, WhatsApp, and Social Media | FLOW by Crescora AI",
+    h1: "Deploy AI chatbots across website chat, WhatsApp, and social messaging.",
+    keywordTarget: "AI chatbot for website and WhatsApp",
     description:
-      "A solution page for buyers searching for a no-code chatbot builder with workflow actions, handoff, and multi-channel support.",
+      "A solution page for buyers searching for AI chatbots that work across websites, WhatsApp, Instagram, Facebook Messenger, and workflow-driven business operations.",
     intro:
-      "This page should frame FLOW as a builder for customer conversations and business workflows, not just a FAQ bot or widget.",
+      "This page should frame FLOW as a builder for customer conversations and workflow automation, not just a FAQ bot or website widget.",
     sections: [
       {
         eyebrow: "Buyer intent",
-        title: "What people mean when they search for an AI chatbot builder",
-        description: "The page should show outcomes such as booking, lead capture, and support routing.",
+        title: "What buyers expect from a business AI chatbot",
+        description: "The page should show outcomes such as booking, lead capture, support routing, and multi-channel consistency.",
         bullets: [
           "No-code setup with business-friendly controls.",
-          "Works across WhatsApp and web chat.",
-          "Supports AI answers and human escalation.",
+          "Works across websites, WhatsApp, and social messaging.",
+          "Supports AI answers, integrations, and human escalation.",
         ],
       },
       {
@@ -183,7 +188,7 @@ export const solutionPages: SeoLandingPage[] = [
     ],
     relatedLinks: [
       relatedLink("Customer support automation", "/solutions/customer-support-automation", "A close-fit use case for chatbot buyers."),
-      relatedLink("Compare FLOW vs chatbot builders", "/compare/flow-vs-chatbot-builder", "See how workflows differ from basic bots."),
+      relatedLink("Compare FLOW vs chatbots", "/compare/flow-vs-chatbots", "See how workflow automation differs from basic bots."),
       relatedLink("Templates", "/templates", "Ready-made launch assets for common workflows."),
     ],
     ctaLabel: "Request builder demo",
@@ -597,12 +602,15 @@ const blogSpecs = [
   ["Why small businesses need conversation automation", "Small Business", "small business conversation automation"],
 ] as const;
 
-export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTarget]) => {
+export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTarget], index) => {
   const slug = title
     .toLowerCase()
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
+
+  const publishedAt = new Date(Date.UTC(2026, 4, 12 + index)).toISOString();
+  const modifiedAt = index % 3 === 0 ? new Date(Date.UTC(2026, 5, 24)).toISOString() : publishedAt;
 
   return {
     slug,
@@ -611,6 +619,10 @@ export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTar
     keywordTarget,
     description: `Practical SEO article for ${keywordTarget} with business-focused examples for Indian buyers.`,
     summary: `Use this article to target ${keywordTarget} while linking into solution, industry, comparison, and template pages.`,
+    author: editorialAuthor,
+    publishedAt,
+    modifiedAt,
+    representativeImagePath: "/opengraph-image",
     sections: buildBlogSections(title, keywordTarget),
     relatedLinks: [
       relatedLink("Solutions hub", "/solutions", "Browse the core solution pages."),
@@ -904,13 +916,45 @@ export const articleSchemaForPost = (post: BlogPost) => ({
   "@type": "Article",
   headline: post.title,
   description: post.description,
-  mainEntityOfPage: `https://crescora.ai/blog/${post.slug}`,
+  mainEntityOfPage: buildAbsoluteUrl(`/blog/${post.slug}`),
   author: {
     "@type": "Organization",
-    name: siteContent.site.name,
+    name: post.author,
   },
   publisher: {
     "@type": "Organization",
     name: siteContent.site.name,
+    url: siteOrigin,
   },
+  image: [buildRepresentativeImageJsonLd(post.representativeImagePath)],
+  datePublished: post.publishedAt,
+  dateModified: post.modifiedAt,
+});
+
+export const serviceSchemaForSolutionPage = (page: SeoLandingPage) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: page.title,
+  description: page.description,
+  serviceType: page.keywordTarget,
+  provider: {
+    "@type": "Organization",
+    name: siteContent.site.name,
+    url: siteOrigin,
+  },
+  url: buildAbsoluteUrl(`/solutions/${page.slug}`),
+  areaServed: ["India", "United States", "United Kingdom", "United Arab Emirates", "Singapore"],
+});
+
+export const itemListSchemaForSolutionPage = (page: SeoLandingPage) => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${page.h1} service list`,
+  itemListElement: page.sections
+    .flatMap((section) => section.bullets)
+    .map((bullet, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: bullet,
+    })),
 });

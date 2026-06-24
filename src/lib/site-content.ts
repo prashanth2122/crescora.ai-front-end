@@ -52,10 +52,10 @@ export const siteContent = {
     product: "FLOW",
     productFull: "FLOW by Crescora AI",
     legalName: "Crescora",
-    seoTitle: "FLOW Automation for Customer Conversations & Workflows",
+    seoTitle: "WhatsApp Automation, AI Chatbots, and Workflow Automation Software",
     tagline: "Book more client projects from faster enquiry handling and follow-ups.",
     description:
-      "FLOW by Crescora AI helps client businesses turn enquiries into booked calls, clear follow-ups, and completed projects across WhatsApp, web chat, voice, and team inboxes.",
+      "FLOW by Crescora AI helps businesses run WhatsApp automation workflows, AI chatbots for websites, and connected customer workflows across social messaging, bookings, support, payments, and internal tools.",
     marketFocus:
       "India-led, about 90% focused on India, with the remaining 10% open to worldwide customers.",
   },
@@ -192,12 +192,12 @@ export const siteContent = {
   homepage: {
     hero: {
       badge: "Crescora AI presents FLOW",
-      title: "Automate customer enquiries, WhatsApp follow-ups, and business workflows.",
+      title: "WhatsApp automation, AI chatbots, and workflow automation for customer conversations.",
       description:
-        "FLOW by Crescora AI helps Indian businesses capture leads, answer repeated questions, book appointments, collect documents, confirm payments, and hand over complex cases to the right team.",
+        "FLOW by Crescora AI helps businesses automate WhatsApp conversations, website chatbots, Instagram and Facebook follow-ups, appointment booking, lead qualification, document collection, payment reminders, support replies, and human handover.",
       builtForLabel: "Built for",
       builtForText:
-        "Hospitals, clinics, real estate teams, education businesses, support teams, and service companies.",
+        "Teams handling enquiries across WhatsApp, website chat, Instagram, Facebook Messenger, calls, and internal business tools.",
       stats: [
         { value: "70-90%", label: "repetitive customer conversations automated" },
         { value: "14 days", label: "to launch a focused first workflow" },
@@ -238,17 +238,17 @@ export const siteContent = {
     },
     automation: {
       eyebrow: "What FLOW can automate first",
-      title: "Start with the workflow that slows your team down the most.",
+      title: "Start with the WhatsApp, website chat, or follow-up workflow that slows your team down most.",
       description:
-        "Pick one high-friction customer journey, automate the repetitive steps, and keep humans in control of the exceptions.",
+        "Pick one high-friction customer journey, automate the repetitive steps with AI where it helps, and keep humans in control of the exceptions.",
       cards: [
         {
           title: "Lead capture and qualification",
-          text: "Capture enquiries from web or WhatsApp, ask the right questions, and route serious leads to your team.",
+          text: "Capture enquiries from website chat, forms, ads, or WhatsApp, ask the right questions, and route serious leads to your team.",
         },
         {
           title: "WhatsApp enquiry and follow-up",
-          text: "Reply faster, share next steps, and keep follow-ups moving even when your team is offline.",
+          text: "Reply faster with AI-assisted logic, share next steps, and keep WhatsApp follow-ups moving even when your team is offline.",
         },
         {
           title: "Appointment booking",
@@ -256,7 +256,7 @@ export const siteContent = {
         },
         {
           title: "Support and FAQ automation",
-          text: "Resolve repeated questions quickly and escalate complex issues with full context.",
+          text: "Resolve repeated questions across web chat and social messaging, then escalate complex issues with full context.",
         },
         {
           title: "Payment and document follow-up",
@@ -265,6 +265,44 @@ export const siteContent = {
         {
           title: "Human handover with context",
           text: "Move sensitive, high-value, or stalled conversations to the right person with full history.",
+        },
+      ],
+    },
+    coverage: {
+      eyebrow: "Channels and integrations",
+      title: "Run one automation layer across customer channels and business systems.",
+      description:
+        "FLOW is built for WhatsApp automation workflows, AI chatbots for websites, social messaging handoff, and the tools your team already uses.",
+      cards: [
+        {
+          title: "Customer channels",
+          description: "Meet customers where they already start the conversation.",
+          items: [
+            "WhatsApp automation for enquiries, replies, reminders, and follow-up",
+            "Website chatbots and lead forms connected to one workflow",
+            "Instagram DM and Facebook Messenger routing into shared operations",
+            "Email, calls, and team inbox follow-up when a human takes over",
+          ],
+        },
+        {
+          title: "Core integrations",
+          description: "Keep customer actions synced with the rest of the business.",
+          items: [
+            "CRM lead capture, updates, and qualification sync",
+            "Calendar and appointment booking integrations",
+            "Payment links, status updates, and reminder triggers",
+            "Google Sheets, helpdesk tools, dashboards, and internal APIs",
+          ],
+        },
+        {
+          title: "Services teams automate first",
+          description: "Start with the service that removes the biggest operational drag.",
+          items: [
+            "Lead capture, qualification, and demo booking",
+            "Support replies, FAQ handling, and ticket escalation",
+            "Document collection, KYC intake, and payment follow-up",
+            "Customer onboarding, reminders, feedback requests, and human handoff",
+          ],
         },
       ],
     },
@@ -326,7 +364,7 @@ export const siteContent = {
         {
           title: "Automation solutions",
           description:
-            "Compare workflow types such as WhatsApp automation, support, bookings, documents, and follow-up.",
+            "Compare workflow types such as WhatsApp automation, AI website chatbots, support, bookings, documents, and follow-up.",
           href: "/solutions",
           ctaLabel: "Browse solutions",
         },
@@ -364,7 +402,7 @@ export const siteContent = {
         {
           question: "Is FLOW only for WhatsApp?",
           answer:
-            "No. FLOW can support customer journeys across web chat, WhatsApp, and other connected channels depending on your setup.",
+            "No. FLOW can support customer journeys across website chat, WhatsApp, Instagram, Facebook Messenger, and other connected channels depending on your setup.",
         },
         {
           question: "Will AI replace our team?",
@@ -379,7 +417,7 @@ export const siteContent = {
         {
           question: "Can FLOW work with our current setup?",
           answer:
-            "Yes. FLOW can connect with CRMs, booking systems, payment tools, support tools, and internal APIs where access is available.",
+            "Yes. FLOW can connect with CRMs, booking systems, payment tools, helpdesk platforms, Google Sheets, and internal APIs where access is available.",
         },
         {
           question: "Can we start small?",
@@ -1140,15 +1178,15 @@ export const siteContent = {
   useCases: {
     whatsapp: {
       metadata: {
-        title: "WhatsApp Automation for Business | FLOW by Crescora",
+        title: "WhatsApp Automation Workflows and AI Chatbots | FLOW by Crescora",
         description:
-          "Turn WhatsApp enquiries into automated workflows for lead handling, booking, reminders, payments, document collection, and human handoff.",
+          "Run AI-powered WhatsApp automation workflows for lead handling, website chatbot handoff, social messaging follow-up, booking, reminders, payments, document collection, support, and human handoff.",
       },
       hero: {
         eyebrow: "Use case",
-        title: "Turn WhatsApp enquiries into automated business workflows.",
+        title: "Run AI-powered WhatsApp automation workflows for leads, bookings, support, and follow-up.",
         description:
-          "FLOW automates lead capture, replies, appointment booking, payment follow-ups, reminders, document collection, and escalation from WhatsApp conversations.",
+          "FLOW automates WhatsApp lead capture, AI-assisted replies, appointment booking, payment follow-ups, reminders, document collection, support triage, and escalation while staying connected to website chatbots and business systems.",
         primaryCta: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
         secondaryCta: { label: "Request Scope Call", href: "/contact" },
       },
@@ -1159,14 +1197,48 @@ export const siteContent = {
         "Inconsistent follow-up execution",
         "No structured outcome tracking",
       ],
-      automationTitle: "What FLOW automates on WhatsApp",
+      automationTitle: "What FLOW automates with WhatsApp AI workflows",
       automations: [
-        "Instant first-response logic",
-        "Lead qualification and tagging",
+        "Instant first-response logic and AI-assisted answers",
+        "Lead qualification, routing, and CRM tagging",
+        "Appointment, demo, and callback booking",
+        "Payment reminder and collections workflows",
+        "Document intake, missing-item reminders, and updates",
+        "Human handoff for complex, sensitive, or high-value requests",
+      ],
+      coverageTitle: "Connect WhatsApp automation to the rest of your funnel",
+      coverageDescription:
+        "The strongest WhatsApp automations are not isolated bots. They stay connected to website chat, social messaging, and the tools your team works from every day.",
+      coverageCards: [
+        {
+          title: "Connected channels",
+          items: [
+            "WhatsApp Business conversations and follow-up sequences",
+            "Website chatbots and lead forms feeding the same workflow",
+            "Instagram DM and Facebook Messenger escalation into operations",
+            "Team inbox or call-back handoff when a person needs to take over",
+          ],
+        },
+        {
+          title: "Business integrations",
+          items: [
+            "CRM, booking calendar, and lead assignment sync",
+            "Payment links, status checks, and reminder triggers",
+            "Google Sheets, helpdesk queues, and reporting dashboards",
+            "Internal APIs for downstream operations and status updates",
+          ],
+        },
+      ],
+      serviceTitle: "Services teams launch first on WhatsApp",
+      serviceDescription:
+        "Start with the workflow your team repeats every day, then expand to adjacent services once the first automation proves value.",
+      services: [
+        "Lead capture and qualification",
         "Appointment and demo booking",
-        "Payment reminder workflows",
-        "Document intake and follow-up",
-        "Human handoff for complex requests",
+        "Support replies and FAQ handling",
+        "Document collection and onboarding",
+        "Payment reminders and collections follow-up",
+        "Human handoff with full conversation context",
       ],
       exampleFlowTitle: "Example flow",
       exampleFlow: [

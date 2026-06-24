@@ -7,6 +7,7 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
+import { createPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import {
   buildBreadcrumbSchema,
@@ -35,9 +36,12 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 
   return {
-    title: `${workflow.title} in ${state.name} | FLOW`,
-    description: `${workflow.keywordTarget} for ${state.name}. ${state.description}`,
-    alternates: { canonical: `/india/${state.slug}/workflows/${workflow.slug}` },
+    ...createPageMetadata({
+      title: `${workflow.title} in ${state.name}`,
+      description: `${workflow.keywordTarget} for ${state.name}. ${state.description}`,
+      path: `/india/${state.slug}/workflows/${workflow.slug}`,
+      noIndex: true,
+    }),
   };
 }
 
@@ -52,10 +56,10 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
 
   const primaryIndustrySlug = getStatePrimaryIndustrySlug(state.slug);
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "India SEO", href: "https://crescora.ai/india" },
-    { name: state.name, href: `https://crescora.ai/india/${state.slug}` },
-    { name: workflow.title, href: `https://crescora.ai/india/${state.slug}/workflows/${workflow.slug}` },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "India SEO", href: "https://www.crescora.ai/india" },
+    { name: state.name, href: `https://www.crescora.ai/india/${state.slug}` },
+    { name: workflow.title, href: `https://www.crescora.ai/india/${state.slug}/workflows/${workflow.slug}` },
   ]);
 
   return (

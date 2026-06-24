@@ -8,6 +8,8 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/lib/site-content";
+import { createPageMetadata } from "@/lib/seo";
+import { useCaseCanonicalMap } from "@/lib/seo-route-map";
 
 type Params = Promise<{ slug: string }>;
 
@@ -23,7 +25,6 @@ const useCasePages = {
 type UseCaseSlug = keyof typeof useCasePages;
 
 const pagesBySlug = new Map(Object.entries(useCasePages) as Array<[UseCaseSlug, (typeof useCasePages)[UseCaseSlug]]>);
-
 export function generateStaticParams() {
   return Object.keys(useCasePages).map((slug) => ({ slug }));
 }
@@ -37,9 +38,15 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 
   return {
-    title: page.metadata.title,
-    description: page.metadata.description,
-    alternates: { canonical: `/use-cases/${slug}` },
+    ...createPageMetadata({
+      title: page.metadata.title,
+      description: page.metadata.description,
+      path: `/use-cases/${slug}`,
+      noIndex: true,
+      alternates: {
+        canonical: useCaseCanonicalMap[slug as UseCaseSlug] ?? "/use-cases",
+      },
+    }),
   };
 }
 

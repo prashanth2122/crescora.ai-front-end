@@ -1,4 +1,7 @@
 import type { MetadataRoute } from "next";
+import { siteOrigin } from "@/lib/seo";
+
+const siteHost = new URL(siteOrigin).host;
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://crescora.ai/sitemap.xml",
+    sitemap: `${siteOrigin}/sitemap.xml`,
+    host: siteHost,
   };
 }
-

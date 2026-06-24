@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 
 import { enLocaleCopy } from "@/lib/locales/en";
 import { hiLocaleCopy } from "@/lib/locales/hi";
+import { createPageMetadata, siteMetadataBase } from "@/lib/seo";
 
 export const supportedLocales = ["en", "hi"] as const;
 export type Locale = (typeof supportedLocales)[number];
 
 export const defaultLocale: Locale = "en";
-
-const metadataBase = new URL("https://crescora.ai");
 
 const localizedRouteRoots = [
   "/",
@@ -195,30 +194,31 @@ export function getLocaleCopy(locale: Locale): LocaleCopy {
   return localeCopy[locale];
 }
 
-export function resolveLocaleFromHeaders(requestHeaders: Headers): Locale {
-  const explicitLocale = requestHeaders.get("x-locale");
-  if (isLocale(explicitLocale)) {
-    return explicitLocale;
-  }
-
-  return getLocaleFromPath(requestHeaders.get("x-current-path") ?? "/");
-}
-
-export function createLocalizedMetadata(pathname: string, title: string, description: string): Metadata {
+export function createLocalizedMetadata(
+  pathname: string,
+  title: string,
+  description: string,
+  options: { noIndex?: boolean } = {},
+): Metadata {
   const canonicalPath = getLocalizedRoutePath(pathname, getLocaleFromPath(pathname));
+  const locale = getLocaleFromPath(pathname);
 
   return {
-    metadataBase,
-    title,
-    description,
-    alternates: {
-      canonical: canonicalPath,
-      languages: {
-        en: getLocalizedRoutePath(pathname, "en"),
-        hi: getLocalizedRoutePath(pathname, "hi"),
-        "x-default": getLocalizedRoutePath(pathname, "en"),
+    ...createPageMetadata({
+      title,
+      description,
+      path: canonicalPath,
+      locale: locale === "hi" ? "hi_IN" : "en_IN",
+      noIndex: options.noIndex ?? false,
+      alternates: {
+        canonical: canonicalPath,
+        languages: {
+          en: getLocalizedRoutePath(pathname, "en"),
+          hi: getLocalizedRoutePath(pathname, "hi"),
+          "x-default": getLocalizedRoutePath(pathname, "en"),
+        },
       },
-    },
+    }),
+    metadataBase: siteMetadataBase,
   };
 }
-

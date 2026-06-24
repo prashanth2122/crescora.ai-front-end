@@ -8,16 +8,20 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema, templates } from "@/lib/india-seo-data";
+import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = {
-  title: "Workflow Templates | FLOW by Crescora",
-  description: "Template-led landing pages for WhatsApp, booking, payments, document collection, support, RAG, real estate, service businesses, billing, and observability.",
-  alternates: { canonical: "/templates" },
+  ...createPageMetadata({
+    title: "Workflow Templates",
+    description: "Launch assets and supporting templates that now roll up into the primary solution pages.",
+    path: "/templates",
+    noIndex: true,
+  }),
 };
 
 const breadcrumbSchema = buildBreadcrumbSchema([
-  { name: "Home", href: "https://crescora.ai" },
-  { name: "Templates", href: "https://crescora.ai/templates" },
+  { name: "Home", href: "https://www.crescora.ai" },
+  { name: "Templates", href: "https://www.crescora.ai/templates" },
 ]);
 
 export default function TemplatesHubPage() {
@@ -26,8 +30,8 @@ export default function TemplatesHubPage() {
       <SeoJsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Templates"
-        title="Templates are the launch assets behind the SEO strategy."
-        description="The report recommends template-led pages to turn commercial intent into practical rollout assets with screenshots, triggers, and handoff logic."
+        title="Template library for rollout conversations."
+        description="Templates remain useful for demos and internal linking, but they no longer compete with the primary solution pages in search."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
@@ -35,8 +39,8 @@ export default function TemplatesHubPage() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Template pages"
-          title="Build pages that help teams start quickly."
-          description="These pages are BOFU and should include what is included, screenshots, and operational logic."
+          title="Supporting template pages"
+          description="Use these pages as implementation references and route commercial search intent to the solution pages."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {templates.map((template) => (

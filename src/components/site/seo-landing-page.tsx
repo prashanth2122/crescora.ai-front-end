@@ -30,7 +30,7 @@ type SeoLandingPageProps = {
   sections: Section[];
   relatedLinks: RelatedLink[];
   ctaLabel: string;
-  schema?: Record<string, unknown>;
+  schemas?: Record<string, unknown>[];
   breadcrumbs?: Record<string, unknown>;
   extraCtaHref?: string;
   extraCtaLabel?: string;
@@ -45,14 +45,14 @@ export function SeoLandingPage({
   sections,
   relatedLinks,
   ctaLabel,
-  schema,
+  schemas,
   breadcrumbs,
   extraCtaHref,
   extraCtaLabel,
 }: SeoLandingPageProps) {
   return (
     <>
-      {schema ? <SeoJsonLd data={schema} /> : null}
+      {schemas?.map((schema, index) => <SeoJsonLd key={index} data={schema} />) ?? null}
       {breadcrumbs ? <SeoJsonLd data={breadcrumbs} /> : null}
       <PageHero
         eyebrow={eyebrow}

@@ -4,9 +4,9 @@ const productName = "FLOW by Crescora AI";
 
 export const enLocaleCopy: LocaleCopy = {
   site: {
-    seoTitle: "FLOW Automation for Customer Conversations & Workflows",
+    seoTitle: "WhatsApp Automation, AI Chatbots, and Workflow Automation Software",
     description:
-      "FLOW by Crescora AI helps client businesses turn enquiries into booked calls, clear follow-ups, and completed projects across WhatsApp, web chat, voice, and team inboxes.",
+      "FLOW by Crescora AI helps businesses run WhatsApp automation workflows, AI chatbots for websites, and connected customer workflows across social messaging, bookings, support, payments, and internal tools.",
   },
   language: {
     label: "Language",

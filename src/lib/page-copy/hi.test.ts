@@ -6,7 +6,7 @@ import { hiPageCopy } from "@/lib/page-copy/hi";
 test("Hindi home page copy includes the multilingual hub route set", () => {
   assert.equal(hiPageCopy.home.routeCards.length, 7);
   assert.equal(hiPageCopy.home.routeCards[0].href, "/hi/solutions");
-  assert.equal(hiPageCopy.home.breadcrumb[1].href, "https://crescora.ai/hi");
+  assert.equal(hiPageCopy.home.breadcrumb[1].href, "https://www.crescora.ai/hi");
 });
 
 test("Hindi India hub page copy keeps the localized hero labels together", () => {

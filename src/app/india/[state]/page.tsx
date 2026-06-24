@@ -8,6 +8,7 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
+import { createPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import {
   buildBreadcrumbSchema,
@@ -35,9 +36,12 @@ export async function generateMetadata({ params }: StatePageProps) {
   }
 
   return {
-    title: state.title,
-    description: state.description,
-    alternates: { canonical: `/india/${state.slug}` },
+    ...createPageMetadata({
+      title: state.title,
+      description: state.description,
+      path: `/india/${state.slug}`,
+      noIndex: true,
+    }),
   };
 }
 
@@ -51,9 +55,9 @@ export default async function StatePage({ params }: StatePageProps) {
 
   const primaryIndustrySlug = getStatePrimaryIndustrySlug(state.slug);
   const breadcrumbSchema = buildBreadcrumbSchema([
-    { name: "Home", href: "https://crescora.ai" },
-    { name: "India SEO", href: "https://crescora.ai/india" },
-    { name: state.name, href: `https://crescora.ai/india/${state.slug}` },
+    { name: "Home", href: "https://www.crescora.ai" },
+    { name: "India SEO", href: "https://www.crescora.ai/india" },
+    { name: state.name, href: `https://www.crescora.ai/india/${state.slug}` },
   ]);
 
   return (

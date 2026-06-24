@@ -1051,7 +1051,7 @@ export const seoOrganizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: siteContent.site.name,
-  url: "https://crescora.ai",
+  url: "https://www.crescora.ai",
   description: siteContent.site.description,
 };
 
@@ -1062,5 +1062,5 @@ export const seoSoftwareSchema = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   description: siteContent.site.description,
-  url: "https://crescora.ai",
+  url: "https://www.crescora.ai",
 };

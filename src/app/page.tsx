@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { trustPoints } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
+import {
+  createPageMetadata,
+  homepageServicesListSchema,
+  organizationSchema,
+  softwareSchema,
+  websiteSchema,
+} from "@/lib/seo";
 import { PageShell } from "@/components/site/page-shell";
 import { SectionHeading } from "@/components/site/section-heading";
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { WorkflowVisual } from "@/components/site/workflow-visual";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -26,6 +35,14 @@ import {
 
 const automationIcons = [MessageSquareText, Workflow, CalendarDays, Headphones, BadgeCheck, ArrowRight];
 const exploreIcons = [Building2, Workflow, BadgeCheck, Sparkles];
+
+export const metadata: Metadata = {
+  ...createPageMetadata({
+    title: "WhatsApp Automation, AI Chatbots, and Workflow Automation",
+    description: siteContent.homepage.hero.description,
+    path: "/",
+  }),
+};
 
 const homepageIndustryCards = [
   {
@@ -78,6 +95,7 @@ export default function HomePage() {
     pain,
     automation,
     outcomes,
+    coverage,
     industries,
     pilot,
     explore,
@@ -88,6 +106,11 @@ export default function HomePage() {
 
   return (
     <PageShell>
+      <SeoJsonLd data={organizationSchema} />
+      <SeoJsonLd data={websiteSchema} />
+      <SeoJsonLd data={softwareSchema} />
+      <SeoJsonLd data={homepageServicesListSchema} />
+
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-12">
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-[0_30px_120px_rgba(15,23,42,0.28)]">
           <div className="bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.28),transparent_22%),radial-gradient(circle_at_top_right,rgba(168,85,247,0.22),transparent_22%),linear-gradient(135deg,#050816_0%,#0b1220_50%,#111827_100%)] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
@@ -217,6 +240,26 @@ export default function HomePage() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading eyebrow={coverage.eyebrow} title={coverage.title} description={coverage.description} />
+
+        <div className="mt-10 grid gap-4 lg:grid-cols-3">
+          {coverage.cards.map((card) => (
+            <Card key={card.title} className="border-zinc-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.05)]">
+              <CardContent className="p-6">
+                <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{card.title}</h2>
+                <p className="mt-3 text-sm leading-7 text-zinc-600">{card.description}</p>
+                <ul className="mt-5 space-y-3 text-sm leading-7 text-zinc-700">
+                  {card.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
