@@ -8,8 +8,8 @@ export const contentType = socialImageContentType;
 export default function Image() {
   return createSocialImageResponse({
     eyebrow: "Compare",
-    title: "Decision-stage workflow comparisons for buyers choosing the right operating model.",
-    description: "Compare FLOW with chatbots, manual WhatsApp, generic automation, and CRM-led process designs.",
+    title: "Compare Crescora FLOW with leading AI automation platforms and workflow alternatives.",
+    description: "Yellow.ai, Kore.ai, Gupshup, Intercom, Zendesk AI, and workflow-level comparisons in one decision-stage cluster.",
     accentLabel: "Compare",
   });
 }

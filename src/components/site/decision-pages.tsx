@@ -1,15 +1,21 @@
 import Link from "next/link";
 
+import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
+import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
+import { buildAbsoluteUrl, buildFaqPageSchema, buildItemListSchema, buildPageSchema } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import type { ComparisonPageData, ProofPageData } from "@/lib/decision-pages";
 
 export function ComparisonPageTemplate({
+  path,
+  metadata,
   title,
   eyebrow,
   description,
@@ -18,9 +24,39 @@ export function ComparisonPageTemplate({
   whyFlowWins,
   whenAlternativeFits,
   rolloutSteps,
+  faq,
+  relatedPages,
 }: ComparisonPageData) {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", href: buildAbsoluteUrl("/") },
+    { name: "Compare", href: buildAbsoluteUrl("/compare") },
+    { name: title, href: buildAbsoluteUrl(path) },
+  ]);
+  const relatedPagesSchema = relatedPages?.length
+    ? buildItemListSchema(
+        `${title} related comparisons`,
+        relatedPages.map((item) => ({
+          name: item.title,
+          url: buildAbsoluteUrl(item.href),
+          description: item.text,
+        })),
+      )
+    : null;
+  const faqSchema = faq?.length ? buildFaqPageSchema(faq) : null;
+
   return (
     <PageShell>
+      <SeoJsonLd
+        data={buildPageSchema({
+          name: metadata.title,
+          description: metadata.description,
+          path,
+        })}
+      />
+      <SeoJsonLd data={breadcrumbSchema} />
+      {relatedPagesSchema ? <SeoJsonLd data={relatedPagesSchema} /> : null}
+      {faqSchema ? <SeoJsonLd data={faqSchema} /> : null}
+
       <PageHero
         eyebrow={eyebrow}
         title={title}
@@ -100,6 +136,49 @@ export function ComparisonPageTemplate({
           </Card>
         </div>
       </section>
+
+      {relatedPages?.length ? (
+        <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Related comparisons"
+            title="Keep the decision cluster internally connected."
+            description="These adjacent pages help buyers compare the workflow fit from a few different angles without bouncing back to search."
+          />
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {relatedPages.map((item) => (
+              <Card key={item.href} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-6">
+                  <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{item.title}</h2>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p>
+                  <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
+                    <Link href={item.href}>{siteContent.ctas.openComparison.label}</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {faq?.length ? (
+        <section className="mx-auto w-full max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="FAQ"
+            title="Questions that usually come up before rollout."
+            description="The FAQ is only shown when the answers are visible on the page and specific to the comparison topic."
+          />
+          <div className="mt-10 rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
+            <Accordion type="single" collapsible className="w-full">
+              {faq.map((item) => (
+                <AccordionItem key={item.question} value={item.question}>
+                  <AccordionTrigger>{item.question}</AccordionTrigger>
+                  <AccordionContent className="text-zinc-600">{item.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+      ) : null}
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">

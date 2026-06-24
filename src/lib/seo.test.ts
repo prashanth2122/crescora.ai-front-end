@@ -42,6 +42,8 @@ test("sitemap publishes each indexable route once on the production host", () =>
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(urls.every((url) => url === siteOrigin || url.startsWith(`${siteOrigin}/`)));
   assert.ok(urls.includes(`${siteOrigin}/blog`));
+  assert.ok(urls.includes(`${siteOrigin}/compare/yellow-ai-alternative`));
+  assert.ok(urls.includes(`${siteOrigin}/compare/zendesk-ai-alternative`));
   assert.ok(urls.includes(`${siteOrigin}/hi`));
   assert.ok(urls.includes(`${siteOrigin}/india/maharashtra/workflows/whatsapp-automation`));
 });
@@ -68,6 +70,10 @@ test("route social image builder maps routes to metadata image endpoints", () =>
   assert.equal(
     buildRouteSocialImagePath("/compare/flow-vs-chatbots"),
     "/compare/flow-vs-chatbots/opengraph-image",
+  );
+  assert.equal(
+    buildRouteSocialImagePath("/compare/yellow-ai-alternative"),
+    "/compare/yellow-ai-alternative/opengraph-image",
   );
 });
 
@@ -149,7 +155,7 @@ test("schema helpers publish FAQ, page, and item-list JSON-LD with stable URLs",
 
 test("representative route modules publish self-canonical metadata instead of inheriting the homepage graph", async () => {
   const compareDetailMetadata = await generateCompareDetailMetadata({
-    params: Promise.resolve({ slug: "flow-vs-chatbot-builder" }),
+    params: Promise.resolve({ slug: "yellow-ai-alternative" }),
   });
 
   const routeAssertions = [
@@ -158,7 +164,7 @@ test("representative route modules publish self-canonical metadata instead of in
     { metadata: healthcareIndustryMetadata, canonical: "/industries/healthcare" },
     { metadata: privacyPageMetadata, canonical: "/privacy" },
     { metadata: proofExampleMetadata, canonical: "/proof/healthcare-front-desk-automation" },
-    { metadata: compareDetailMetadata, canonical: "/compare/flow-vs-chatbot-builder" },
+    { metadata: compareDetailMetadata, canonical: "/compare/yellow-ai-alternative" },
   ];
 
   for (const route of routeAssertions) {
@@ -174,7 +180,7 @@ test("marketing route metadata publishes route-specific social image urls", asyn
     params: Promise.resolve({ slug: "whatsapp-automation" }),
   });
   const compareDetailMetadata = await generateCompareDetailMetadata({
-    params: Promise.resolve({ slug: "flow-vs-chatbot-builder" }),
+    params: Promise.resolve({ slug: "yellow-ai-alternative" }),
   });
   const blogMetadata = await generateBlogPostMetadata({
     params: Promise.resolve({ slug: "how-whatsapp-automation-helps-small-businesses-in-india" }),
@@ -196,7 +202,7 @@ test("marketing route metadata publishes route-specific social image urls", asyn
     typeof compareOpenGraph?.images?.[0] === "string"
       ? compareOpenGraph?.images?.[0]
       : compareOpenGraph?.images?.[0]?.url,
-    `${siteOrigin}/compare/flow-vs-chatbot-builder/opengraph-image`,
+    `${siteOrigin}/compare/yellow-ai-alternative/opengraph-image`,
   );
   assert.equal(
     typeof blogOpenGraph?.images?.[0] === "string"
@@ -214,6 +220,7 @@ test("public hub copy matches the indexable SEO strategy", () => {
   const blogHtml = renderToStaticMarkup(BlogPage());
   const workflowsHtml = renderToStaticMarkup(WorkflowsHubPage());
   const templatesHtml = renderToStaticMarkup(TemplatesHubPage());
+  const compareHtml = renderToStaticMarkup(ComparePage());
 
   assert.match(blogHtml, /Articles for operators and buyers/);
   assert.doesNotMatch(blogHtml, /draft articles|search index/i);
@@ -223,6 +230,10 @@ test("public hub copy matches the indexable SEO strategy", () => {
 
   assert.match(templatesHtml, /launch patterns, handoff logic, and automation setup paths/i);
   assert.doesNotMatch(templatesHtml, /no longer compete|route commercial search intent/i);
+
+  assert.match(compareHtml, /Compare AI Automation Platforms: Why Growing Businesses Choose Crescora FLOW/);
+  assert.match(compareHtml, /yellow-ai-alternative/);
+  assert.doesNotMatch(compareHtml, /seo keywords|internal seo page strategy/i);
 });
 
 test("article metadata includes authorship and publication dates", () => {
@@ -271,9 +282,21 @@ test("representative pages emit FAQ and discovery JSON-LD on indexable commercia
 
   assert.match(compareHtml, /"@type":"CollectionPage"/);
   assert.match(compareHtml, /"@type":"ItemList"/);
+  assert.match(compareHtml, /"@type":"FAQPage"/);
 
   assert.match(proofHtml, /"@type":"CollectionPage"/);
   assert.match(proofHtml, /"@type":"ItemList"/);
 
   assert.match(solutionHtml, /"@type":"FAQPage"/);
+});
+
+test("compare hub metadata publishes the production comparison title and canonical", () => {
+  const compareOpenGraph = compareHubMetadata.openGraph as { title?: string; url?: string } | undefined;
+
+  assert.deepEqual(compareHubMetadata.title, {
+    absolute: "Crescora FLOW vs Other AI Automation Platforms | AI Workflow Automation for Businesses",
+  });
+  assert.equal(compareHubMetadata.description, "Compare Crescora FLOW with leading AI automation platforms. See why businesses choose FLOW for customer conversations, workflows, follow-ups, payments, appointments, handover, and operations.");
+  assert.equal(compareHubMetadata.alternates?.canonical, "/compare");
+  assert.equal(compareOpenGraph?.url, `${siteOrigin}/compare`);
 });

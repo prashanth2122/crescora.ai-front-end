@@ -101,6 +101,7 @@ Core implementation points:
 - `src/app/sitemap.ts` uses source-file mtimes for `lastModified` instead of `new Date()`
 - `src/lib/revenue-pages.ts` is the canonical source for the primary solution pages
 - generated blog, workflow, template, use-case, India, industry, comparison, proof, and Hindi routes are included in the sitemap
+- `/compare` is now the primary AI automation platform comparison page, with visible FAQ markup, competitor-intent internal links, and a supporting cluster for `/compare/yellow-ai-alternative`, `/compare/kore-ai-alternative`, `/compare/gupshup-alternative`, `/compare/intercom-alternative`, and `/compare/zendesk-ai-alternative`
 
 Current indexable route families include:
 

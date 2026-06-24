@@ -11,6 +11,11 @@ const compareSlugs = [
   "flow-vs-whatsapp-chatbot-tools",
   "flow-vs-manual-customer-support",
   "flow-vs-zapier-for-indian-businesses",
+  "yellow-ai-alternative",
+  "kore-ai-alternative",
+  "gupshup-alternative",
+  "intercom-alternative",
+  "zendesk-ai-alternative",
 ] as const;
 
 export function generateStaticParams() {
