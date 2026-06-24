@@ -88,23 +88,24 @@ This keeps route components thin and makes future localization work straightforw
 
 ## SEO Architecture
 
-The SEO stack now uses a single production host, shared metadata helpers, curated indexable routes, and explicit noindex/canonical handling for generated route families.
+The SEO stack now uses a single production host, shared metadata helpers, self-canonical public routes, localized alternates, and sitemap coverage generated from the application route data.
 
 Core implementation points:
 
 - `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, and `https://www.crescora.ai` URL generation
+- public route files should use `createPageMetadata`, `createExactPageMetadata`, or `createLocalizedMetadata` instead of exporting partial `{ title, description }` objects because Next.js metadata merging is shallow and can otherwise inherit the root homepage canonical/Open Graph values
 - `next.config.ts` redirects requests for `crescora.ai` to `https://www.crescora.ai/:path*`
 - `src/app/robots.ts` and `src/app/sitemap.ts` only publish the production host
 - `src/app/sitemap.ts` uses source-file mtimes for `lastModified` instead of `new Date()`
 - `src/lib/revenue-pages.ts` is the canonical source for the primary solution pages
-- `src/lib/seo-route-map.ts` defines the canonical targets used when generated or overlapping routes are intentionally demoted
+- generated blog, workflow, template, use-case, India, industry, comparison, proof, and Hindi routes are included in the sitemap
 
-The current route families are split into two groups:
+Current indexable route families include:
 
-- indexable primary routes: `/`, `/solutions`, `/solutions/[slug]`, `/industries`, curated industry pages, `/compare`, `/proof`, `/platform`, `/pricing`, `/trust`, `/resources`, `/about`, `/contact`, and legal pages
-- noindexed supporting or generated routes: `/blog`, `/blog/[slug]`, `/workflows`, `/workflows/[workflow]`, `/templates`, `/templates/[template]`, `/use-cases`, `/use-cases/[slug]`, the legacy static `use-cases/*` pages, `/india`, `/india/[state]`, `/india/[state]/workflows/[workflow]`, `/india/[state]/industries/[industry]`, and `/hi/*`
-
-The noindexed route families are still available for internal linking and sales conversations, but they are canonically folded back into the primary commercial pages so they do not compete in search.
+- primary company, product, pricing, trust, resources, contact, and legal pages
+- `/solutions`, `/industries`, `/use-cases`, `/blog`, `/workflows`, `/templates`, `/compare`, and `/proof` hubs and detail pages
+- `/india`, every generated state page, configured state-workflow pages, and state-primary-industry pages
+- localized Hindi hubs under `/hi/*`, with self-canonicals and English/Hindi `hreflang` alternates
 
 ## Multilingual Foundation
 
@@ -158,7 +159,7 @@ The current commercial setup uses:
 - visible implementation details, examples, proof points, outcomes, related links, and FAQ accordions on each primary solution page
 - product-surface panels embedded in the primary solution pages to show the operator, builder, and dashboard views referenced in the copy
 
-Supporting content remains available, but is intentionally demoted from search:
+Supporting content is indexable and included in the sitemap:
 
 - `/blog` and `/blog/[slug]`
 - `/workflows` and `/workflows/[workflow]`

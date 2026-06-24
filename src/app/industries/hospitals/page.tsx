@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { IndustrySeoPage } from "@/components/site/industry-seo-page";
 import { PageShell } from "@/components/site/page-shell";
 import { industryBySlug } from "@/lib/india-seo-data";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createExactPageMetadata({
   title: "Hospital WhatsApp Automation and Patient Flows | FLOW",
   description: "Automate patient communication, reminders, document collection, and human handoff for hospitals.",
-  alternates: { canonical: "/industries/hospitals" },
-};
+  path: "/industries/hospitals",
+});
 
 export default function HospitalsIndustryPage() {
   const industry = industryBySlug.get("hospitals");

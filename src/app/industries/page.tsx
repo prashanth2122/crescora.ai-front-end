@@ -8,8 +8,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.industriesIndex.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.industriesIndex.metadata.title,
+  description: siteContent.industriesIndex.metadata.description,
+  path: "/industries",
+});
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", href: "https://www.crescora.ai" },

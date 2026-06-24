@@ -15,7 +15,6 @@ export const metadata = {
     title: "Workflow Templates",
     description: "Launch assets and supporting templates that now roll up into the primary solution pages.",
     path: "/templates",
-    noIndex: true,
   }),
 };
 

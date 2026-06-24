@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { siteContent } from "@/lib/site-content";
 import { createPageMetadata } from "@/lib/seo";
-import { useCaseCanonicalMap } from "@/lib/seo-route-map";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { Card, CardContent } from "@/components/ui/card";
@@ -12,10 +11,6 @@ export const metadata = createPageMetadata({
   title: siteContent.useCases.customerSupport.metadata.title,
   description: siteContent.useCases.customerSupport.metadata.description,
   path: "/use-cases/customer-support-automation",
-  noIndex: true,
-  alternates: {
-    canonical: useCaseCanonicalMap["customer-support-automation"],
-  },
 });
 
 export default function CustomerSupportPage() {

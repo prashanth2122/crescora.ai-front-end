@@ -8,7 +8,6 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { createPageMetadata } from "@/lib/seo";
-import { templateCanonicalMap } from "@/lib/seo-route-map";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema, seoSoftwareSchema, templateBySlug, templates } from "@/lib/india-seo-data";
 
@@ -31,10 +30,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: template.title,
       description: template.description,
       path: `/templates/${template.slug}`,
-      noIndex: true,
-      alternates: {
-        canonical: templateCanonicalMap[template.slug] ?? "/templates",
-      },
     }),
   };
 }

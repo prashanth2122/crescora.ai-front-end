@@ -31,7 +31,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       modifiedTime: post.modifiedAt,
       authors: [post.author],
       imagePath: post.representativeImagePath,
-      noIndex: true,
     }),
   };
 }

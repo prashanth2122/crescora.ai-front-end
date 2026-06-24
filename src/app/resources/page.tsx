@@ -7,8 +7,13 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.resources.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.resources.metadata.title,
+  description: siteContent.resources.metadata.description,
+  path: "/resources",
+});
 
 export default function ResourcesPage() {
   return (

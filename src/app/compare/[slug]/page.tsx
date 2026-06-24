@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 
 import { ComparisonPageTemplate } from "@/components/site/decision-pages";
 import { comparisonPages } from "@/lib/decision-pages";
+import { createExactPageMetadata } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
 
@@ -24,10 +25,11 @@ export async function generateMetadata({ params }: { params: Params }) {
     return {};
   }
 
-  return {
-    ...page.metadata,
-    alternates: { canonical: `/compare/${slug}` },
-  };
+  return createExactPageMetadata({
+    title: page.metadata.title,
+    description: page.metadata.description,
+    path: `/compare/${slug}`,
+  });
 }
 
 export default async function CompareDetailPage({ params }: { params: Params }) {

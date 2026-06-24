@@ -4,9 +4,14 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MapPin, UserRound } from "lucide-react";
+import { createExactPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 
-export const metadata = siteContent.contact.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.contact.metadata.title,
+  description: siteContent.contact.metadata.description,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

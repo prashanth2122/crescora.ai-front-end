@@ -7,8 +7,13 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.industries.healthcare.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.industries.healthcare.metadata.title,
+  description: siteContent.industries.healthcare.metadata.description,
+  path: "/industries/healthcare",
+});
 
 export default function HealthcarePage() {
   const page = siteContent.industries.healthcare;

@@ -41,7 +41,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: `${industry.title} in ${state.name}`,
       description: `${industry.description} ${state.description}`,
       path: `/india/${state.slug}/industries/${industry.slug}`,
-      noIndex: true,
     }),
   };
 }

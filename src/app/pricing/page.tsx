@@ -7,8 +7,13 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.pricing.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.pricing.metadata.title,
+  description: siteContent.pricing.metadata.description,
+  path: "/pricing",
+});
 
 export default function PricingPage() {
   return (

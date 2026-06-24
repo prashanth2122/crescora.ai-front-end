@@ -8,8 +8,13 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.proofIndex.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.proofIndex.metadata.title,
+  description: siteContent.proofIndex.metadata.description,
+  path: "/proof",
+});
 
 export default function ProofPage() {
   const { hero, notice, section, includes, cta } = siteContent.proofIndex;

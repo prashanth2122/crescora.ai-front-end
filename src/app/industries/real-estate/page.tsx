@@ -7,8 +7,13 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.industries.realEstate.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.industries.realEstate.metadata.title,
+  description: siteContent.industries.realEstate.metadata.description,
+  path: "/industries/real-estate",
+});
 
 export default function RealEstatePage() {
   const page = siteContent.industries.realEstate;

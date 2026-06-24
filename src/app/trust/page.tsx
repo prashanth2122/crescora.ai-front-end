@@ -8,8 +8,13 @@ import { WorkflowVisual } from "@/components/site/workflow-visual";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.trust.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.trust.metadata.title,
+  description: siteContent.trust.metadata.description,
+  path: "/trust",
+});
 
 export default function TrustPage() {
   return (

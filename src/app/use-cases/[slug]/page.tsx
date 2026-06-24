@@ -9,7 +9,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/lib/site-content";
 import { createPageMetadata } from "@/lib/seo";
-import { useCaseCanonicalMap } from "@/lib/seo-route-map";
 
 type Params = Promise<{ slug: string }>;
 
@@ -42,10 +41,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: page.metadata.title,
       description: page.metadata.description,
       path: `/use-cases/${slug}`,
-      noIndex: true,
-      alternates: {
-        canonical: useCaseCanonicalMap[slug as UseCaseSlug] ?? "/use-cases",
-      },
     }),
   };
 }

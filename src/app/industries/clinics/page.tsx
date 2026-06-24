@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { IndustrySeoPage } from "@/components/site/industry-seo-page";
 import { PageShell } from "@/components/site/page-shell";
 import { industryBySlug } from "@/lib/india-seo-data";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createExactPageMetadata({
   title: "Clinic Appointment Automation and Follow-Up | FLOW",
   description: "Automate clinic appointments, reminders, and handoff for clinics and outpatient teams.",
-  alternates: { canonical: "/industries/clinics" },
-};
+  path: "/industries/clinics",
+});
 
 export default function ClinicsIndustryPage() {
   const industry = industryBySlug.get("clinics");

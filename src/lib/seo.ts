@@ -168,6 +168,27 @@ export function createPageMetadata({
   };
 }
 
+export function createExactPageMetadata(input: PageMetadataInput): Metadata {
+  const metadata = createPageMetadata(input);
+
+  return {
+    ...metadata,
+    title: { absolute: input.title },
+    openGraph: metadata.openGraph
+      ? {
+          ...metadata.openGraph,
+          title: input.title,
+        }
+      : undefined,
+    twitter: metadata.twitter
+      ? {
+          ...metadata.twitter,
+          title: input.title,
+        }
+      : undefined,
+  };
+}
+
 export function createArticleMetadata({
   publishedTime,
   modifiedTime,

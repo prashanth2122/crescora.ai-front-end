@@ -8,7 +8,6 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { createPageMetadata } from "@/lib/seo";
-import { workflowCanonicalMap } from "@/lib/seo-route-map";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema, seoSoftwareSchema, workflowBySlug, workflows } from "@/lib/india-seo-data";
 
@@ -31,10 +30,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: workflow.title,
       description: workflow.description,
       path: `/workflows/${workflow.slug}`,
-      noIndex: true,
-      alternates: {
-        canonical: workflowCanonicalMap[workflow.slug] ?? "/workflows",
-      },
     }),
   };
 }

@@ -24,7 +24,6 @@ export const metadata = {
     title: indiaSeo.metadata.title,
     description: indiaSeo.metadata.description,
     path: "/india",
-    noIndex: true,
   }),
 };
 

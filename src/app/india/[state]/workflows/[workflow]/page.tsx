@@ -40,7 +40,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: `${workflow.title} in ${state.name}`,
       description: `${workflow.keywordTarget} for ${state.name}. ${state.description}`,
       path: `/india/${state.slug}/workflows/${workflow.slug}`,
-      noIndex: true,
     }),
   };
 }

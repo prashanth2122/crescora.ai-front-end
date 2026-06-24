@@ -29,7 +29,6 @@ export const metadata = {
     title: "Use Cases",
     description: siteContent.useCasesIndex.hero.description,
     path: "/use-cases",
-    noIndex: true,
   }),
 };
 

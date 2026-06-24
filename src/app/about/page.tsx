@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { createExactPageMetadata } from "@/lib/seo";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
@@ -22,7 +23,11 @@ import {
   Wrench,
 } from "lucide-react";
 
-export const metadata = siteContent.about.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.about.metadata.title,
+  description: siteContent.about.metadata.description,
+  path: "/about",
+});
 
 export default function AboutPage() {
   const {

@@ -8,7 +8,6 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { createPageMetadata, whatsappAutomationSchema, whatsappAutomationServicesListSchema } from "@/lib/seo";
-import { useCaseCanonicalMap } from "@/lib/seo-route-map";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -18,10 +17,6 @@ export const metadata: Metadata = {
     title: "WhatsApp Automation Workflows and AI Chatbots",
     description: siteContent.useCases.whatsapp.metadata.description,
     path: "/use-cases/whatsapp-automation",
-    noIndex: true,
-    alternates: {
-      canonical: useCaseCanonicalMap["whatsapp-automation"],
-    },
   }),
 };
 

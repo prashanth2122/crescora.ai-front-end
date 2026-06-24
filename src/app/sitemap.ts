@@ -2,9 +2,20 @@ import { statSync } from "node:fs";
 import { join } from "node:path";
 import type { MetadataRoute } from "next";
 
-import { comparisonCards } from "@/lib/decision-pages";
+import { comparisonPages, proofCards } from "@/lib/decision-pages";
+import {
+  seoIndustryRoutes,
+  seoStateRoutes,
+  seoTemplateRoutes,
+  seoWorkflowRoutes,
+} from "@/lib/india-seo-data";
+import { localizedEntryRoutes } from "@/lib/locales";
 import { revenuePages } from "@/lib/revenue-pages";
 import { siteOrigin } from "@/lib/seo";
+import {
+  blogRoutes,
+  industryLandingRoutes,
+} from "@/lib/seo-marketing-data";
 
 type SitemapEntry = {
   path: string;
@@ -13,7 +24,7 @@ type SitemapEntry = {
   priority: number;
 };
 
-const indexableRoutes: SitemapEntry[] = [
+const staticEntries: SitemapEntry[] = [
   { path: "/", sourceFile: "src/app/page.tsx", changeFrequency: "weekly", priority: 1 },
   { path: "/platform", sourceFile: "src/app/platform/page.tsx", changeFrequency: "monthly", priority: 0.8 },
   { path: "/pricing", sourceFile: "src/app/pricing/page.tsx", changeFrequency: "monthly", priority: 0.8 },
@@ -30,16 +41,42 @@ const indexableRoutes: SitemapEntry[] = [
   { path: "/industries/education", sourceFile: "src/app/industries/education/page.tsx", changeFrequency: "monthly", priority: 0.75 },
   { path: "/industries/support-teams", sourceFile: "src/app/industries/support-teams/page.tsx", changeFrequency: "monthly", priority: 0.7 },
   { path: "/industries/service-businesses", sourceFile: "src/app/industries/service-businesses/page.tsx", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/use-cases", sourceFile: "src/app/use-cases/page.tsx", changeFrequency: "monthly", priority: 0.75 },
+  { path: "/blog", sourceFile: "src/app/blog/page.tsx", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/workflows", sourceFile: "src/app/workflows/page.tsx", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/templates", sourceFile: "src/app/templates/page.tsx", changeFrequency: "weekly", priority: 0.75 },
+  { path: "/india", sourceFile: "src/app/india/page.tsx", changeFrequency: "weekly", priority: 0.8 },
   { path: "/compare", sourceFile: "src/app/compare/page.tsx", changeFrequency: "monthly", priority: 0.65 },
   { path: "/proof", sourceFile: "src/app/proof/page.tsx", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/proof/healthcare-front-desk-automation", sourceFile: "src/lib/decision-pages.ts", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/proof/real-estate-lead-operations", sourceFile: "src/lib/decision-pages.ts", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/proof/education-admissions-workflow", sourceFile: "src/lib/decision-pages.ts", changeFrequency: "monthly", priority: 0.6 },
   { path: "/privacy", sourceFile: "src/lib/privacy-policy-content.ts", changeFrequency: "yearly", priority: 0.3 },
   { path: "/terms", sourceFile: "src/lib/terms-of-service-content.ts", changeFrequency: "yearly", priority: 0.3 },
   { path: "/cookies", sourceFile: "src/lib/cookie-policy-content.ts", changeFrequency: "yearly", priority: 0.3 },
   { path: "/acceptable-use", sourceFile: "src/lib/acceptable-use-policy-content.ts", changeFrequency: "yearly", priority: 0.3 },
-  ...comparisonCards.map((card) => ({
+];
+
+const useCaseSlugs = [
+  "lead-capture-qualification",
+  "faq-automation",
+  "crm-api-sync",
+  "reminder-automation",
+  "ticket-creation-escalation",
+  "feedback-collection",
+  "whatsapp-automation",
+  "appointment-booking-automation",
+  "customer-support-automation",
+  "document-collection-automation",
+  "payment-follow-up-automation",
+  "human-handoff-automation",
+] as const;
+
+const generatedEntries: SitemapEntry[] = [
+  ...Object.keys(comparisonPages).map((slug) => ({
+    path: `/compare/${slug}`,
+    sourceFile: "src/lib/decision-pages.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  })),
+  ...proofCards.map((card) => ({
     path: card.href,
     sourceFile: "src/lib/decision-pages.ts",
     changeFrequency: "monthly" as const,
@@ -51,7 +88,59 @@ const indexableRoutes: SitemapEntry[] = [
     changeFrequency: "weekly" as const,
     priority: 0.8,
   })),
+  ...useCaseSlugs.map((slug) => ({
+    path: `/use-cases/${slug}`,
+    sourceFile: "src/lib/site-content.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  })),
+  ...blogRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/seo-marketing-data.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  })),
+  ...industryLandingRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/seo-marketing-data.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  })),
+  ...seoTemplateRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/india-seo-data.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  })),
+  ...seoStateRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/india-seo-data.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.65,
+  })),
+  ...seoWorkflowRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/india-seo-data.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  })),
+  ...seoIndustryRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/india-seo-data.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  })),
+  ...localizedEntryRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/page-copy/hi.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.55,
+  })),
 ];
+
+export const indexableRoutes = [...staticEntries, ...generatedEntries].filter(
+  (entry, index, entries) => entries.findIndex((candidate) => candidate.path === entry.path) === index,
+);
 
 function getFileLastModified(sourceFile: string) {
   const absolutePath = join(/* turbopackIgnore: true */ process.cwd(), sourceFile);

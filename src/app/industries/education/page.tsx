@@ -7,8 +7,13 @@ import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.industries.education.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.industries.education.metadata.title,
+  description: siteContent.industries.education.metadata.description,
+  path: "/industries/education",
+});
 
 export default function EducationPage() {
   const page = siteContent.industries.education;

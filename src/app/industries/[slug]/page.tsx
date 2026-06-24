@@ -5,7 +5,6 @@ import { SeoLandingPage } from "@/components/site/seo-landing-page";
 import { buildBreadcrumbSchema, seoSoftwareSchema } from "@/lib/india-seo-data";
 import { industrySeoLandingPages } from "@/lib/seo-marketing-data";
 import { createPageMetadata } from "@/lib/seo";
-import { industryCanonicalMap } from "@/lib/seo-route-map";
 
 type Params = Promise<{ slug: string }>;
 
@@ -28,10 +27,6 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: page.title,
       description: page.description,
       path: `/industries/${page.slug}`,
-      noIndex: true,
-      alternates: {
-        canonical: industryCanonicalMap[page.slug] ?? "/industries",
-      },
     }),
   };
 }

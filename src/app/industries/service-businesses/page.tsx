@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { IndustrySeoPage } from "@/components/site/industry-seo-page";
 import { PageShell } from "@/components/site/page-shell";
 import { industryBySlug } from "@/lib/india-seo-data";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createExactPageMetadata({
   title: "Service Business Booking and Collections | FLOW",
   description: "Automate bookings, reminders, billing, and collections follow-up for service businesses.",
-  alternates: { canonical: "/industries/service-businesses" },
-};
+  path: "/industries/service-businesses",
+});
 
 export default function ServiceBusinessesIndustryPage() {
   const industry = industryBySlug.get("service-businesses");

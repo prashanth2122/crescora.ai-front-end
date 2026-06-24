@@ -40,7 +40,6 @@ export async function generateMetadata({ params }: StatePageProps) {
       title: state.title,
       description: state.description,
       path: `/india/${state.slug}`,
-      noIndex: true,
     }),
   };
 }

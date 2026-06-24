@@ -18,7 +18,6 @@ export const metadata = createLocalizedMetadata(
   "/hi/blog",
   page.metadata.title,
   page.metadata.description,
-  { noIndex: true },
 );
 
 const breadcrumbSchema = buildBreadcrumbSchema(page.breadcrumb);

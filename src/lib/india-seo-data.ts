@@ -1026,13 +1026,13 @@ export function getStatePrimaryIndustrySlug(stateSlug: string) {
 
 export const seoStateRoutes = indiaStates.map((state) => `/india/${state.slug}`);
 
-export const seoWorkflowRoutes = workflows.flatMap((workflow) =>
-  indiaStates.slice(0, 12).map((state) => `/india/${state.slug}/workflows/${workflow.slug}`),
+export const seoWorkflowRoutes = indiaStates.flatMap((state) =>
+  state.workflowSlugs.map((workflowSlug) => `/india/${state.slug}/workflows/${workflowSlug}`),
 );
 
 export const seoIndustryRoutes = [
   ...industriesSeo.map((industry) => `/industries/${industry.slug}`),
-  ...indiaStates.slice(0, 12).map((state) => `/india/${state.slug}/industries/${getStatePrimaryIndustrySlug(state.slug)}`),
+  ...indiaStates.map((state) => `/india/${state.slug}/industries/${getStatePrimaryIndustrySlug(state.slug)}`),
 ];
 
 export const seoTemplateRoutes = templates.map((template) => `/templates/${template.slug}`);

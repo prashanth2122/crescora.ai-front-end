@@ -10,8 +10,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.platform.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.platform.metadata.title,
+  description: siteContent.platform.metadata.description,
+  path: "/platform",
+});
 
 export default function PlatformPage() {
   const page = siteContent.platform;

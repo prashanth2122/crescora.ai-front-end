@@ -15,7 +15,6 @@ export const metadata = {
     title: "Workflow Library",
     description: "Internal workflow blueprints and launch paths that support the primary solution pages.",
     path: "/workflows",
-    noIndex: true,
   }),
 };
 

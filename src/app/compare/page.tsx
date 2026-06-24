@@ -7,8 +7,13 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { createExactPageMetadata } from "@/lib/seo";
 
-export const metadata = siteContent.compareIndex.metadata;
+export const metadata = createExactPageMetadata({
+  title: siteContent.compareIndex.metadata.title,
+  description: siteContent.compareIndex.metadata.description,
+  path: "/compare",
+});
 
 export default function ComparePage() {
   return (

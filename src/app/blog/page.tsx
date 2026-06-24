@@ -16,7 +16,6 @@ export const metadata = {
     title: "Blog",
     description: "Operational articles and implementation notes from the Crescora team.",
     path: "/blog",
-    noIndex: true,
   }),
 };
 
