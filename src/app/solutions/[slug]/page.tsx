@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { RevenueSolutionPage } from "@/components/site/revenue-solution-page";
 import { PageShell } from "@/components/site/page-shell";
-import { buildRouteSocialImagePath, createPageMetadata } from "@/lib/seo";
+import { buildRouteSocialImagePath, createExactPageMetadata, createPageMetadata } from "@/lib/seo";
 import { revenuePages, revenuePagesBySlug } from "@/lib/revenue-pages";
 
 type Params = Promise<{ slug: string }>;
@@ -19,12 +19,14 @@ export async function generateMetadata({ params }: { params: Params }) {
     return {};
   }
 
-  return createPageMetadata({
-    title: page.title,
-    description: page.description,
+  const metadataInput = {
+    title: page.metadataTitle ?? page.title,
+    description: page.metadataDescription ?? page.description,
     path: `/solutions/${page.slug}`,
     imagePath: buildRouteSocialImagePath(`/solutions/${page.slug}`),
-  });
+  };
+
+  return page.metadataTitle ? createExactPageMetadata(metadataInput) : createPageMetadata(metadataInput);
 }
 
 export default async function SolutionPage({ params }: { params: Params }) {

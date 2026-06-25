@@ -4,6 +4,17 @@ type SummaryCard = {
   description: string;
 };
 
+type ActionLink = {
+  label: string;
+  href: string;
+};
+
+type SectionCopy = {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+};
+
 type ScreenshotPanel = {
   eyebrow: string;
   title: string;
@@ -41,16 +52,41 @@ type RelatedLink = {
   label: string;
   href: string;
   description: string;
+  ctaLabel?: string;
+};
+
+type FinalCta = {
+  eyebrow?: string;
+  title: string;
+  description: string;
+  note?: string;
+  primaryCta: ActionLink;
+  secondaryCta?: ActionLink;
 };
 
 export type RevenuePage = {
   slug: string;
   title: string;
+  metadataTitle?: string;
   heroTitle: string;
   heroDescription: string;
   description: string;
+  metadataDescription?: string;
   keywordTarget: string;
   updatedAt: string;
+  heroEyebrow?: string;
+  heroPrimaryCta?: ActionLink;
+  heroSecondaryCta?: ActionLink;
+  heroSupportLine?: string;
+  overviewSection?: SectionCopy;
+  screenshotsSection?: SectionCopy;
+  implementationSection?: SectionCopy;
+  examplesSection?: SectionCopy;
+  examplesSupportLine?: string;
+  proofSection?: SectionCopy;
+  outcomesSection?: SectionCopy;
+  faqSection?: SectionCopy;
+  relatedSection?: SectionCopy;
   summaryCards: SummaryCard[];
   screenshots: ScreenshotPanel[];
   implementation: ImplementationPhase[];
@@ -61,6 +97,7 @@ export type RevenuePage = {
   relatedLinks: RelatedLink[];
   ctaLabel: string;
   ctaHref: string;
+  finalCta?: FinalCta;
 };
 
 function link(label: string, href: string, description: string): RelatedLink {
@@ -74,37 +111,93 @@ function page(input: RevenuePage): RevenuePage {
 export const revenuePages = [
   page({
     slug: "whatsapp-automation",
-    title: "WhatsApp Automation Workflows for Sales, Support, and Follow-Up",
-    heroTitle: "Automate WhatsApp conversations without losing the operational next step.",
+    title: "WhatsApp automation workflows for sales, support, and follow-up",
+    metadataTitle: "WhatsApp Automation Workflows for Sales, Support, Booking, Payments, and Follow-Ups | Crescora FLOW",
+    heroTitle: "Automate WhatsApp conversations without losing the next business step.",
     heroDescription:
-      "FLOW turns WhatsApp from a shared inbox into a controlled workflow for lead qualification, booking, reminders, support, payment follow-up, and human takeover.",
+      "Crescora FLOW turns WhatsApp enquiries into structured workflows for lead qualification, booking, reminders, support, payment follow-up, CRM updates, and human handover - so every conversation has ownership, context, and a clear next action.",
     description:
-      "Production-ready WhatsApp automation for businesses that need fast replies, structured handover, connected systems, and visible operational outcomes.",
+      "Turn WhatsApp from a busy shared inbox into a controlled workflow system. Capture the right fields, route the conversation correctly, trigger the next action, and keep the team aligned on what happens after the customer sends the first message.",
+    metadataDescription:
+      "Automate WhatsApp enquiries, lead qualification, appointment booking, reminders, support routing, payment follow-ups, CRM updates, and human handover with Crescora FLOW.",
     keywordTarget: "WhatsApp automation workflows",
     updatedAt: "2026-06-24",
+    heroEyebrow: "WhatsApp Automation",
+    heroPrimaryCta: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
+    heroSecondaryCta: { label: "Discuss My WhatsApp Workflow", href: "/contact" },
+    heroSupportLine:
+      "Built for WhatsApp + Web automation, lead capture, booking, reminders, support routing, payment follow-ups, and context-rich handover.",
+    overviewSection: {
+      eyebrow: "What this page covers",
+      title: "WhatsApp automation workflows for sales, support, and follow-up",
+      description:
+        "Turn WhatsApp from a busy shared inbox into a controlled workflow system. Capture the right fields, route the conversation correctly, trigger the next action, and keep the team aligned on what happens after the customer sends the first message.",
+    },
+    screenshotsSection: {
+      eyebrow: "Product screenshots",
+      title: "See how WhatsApp conversations become trackable workflows",
+      description:
+        "Each view shows how WhatsApp enquiries move from first message to tracked next step, with the queue state, captured fields, and handover readiness visible to the team.",
+    },
+    implementationSection: {
+      eyebrow: "Implementation",
+      title: "A production rollout path, not a generic feature list.",
+      description:
+        "Start with one high-impact WhatsApp workflow, prove the queue behavior and follow-up discipline, then expand into adjacent teams, channels, and system actions.",
+    },
+    examplesSection: {
+      eyebrow: "Examples",
+      title: "WhatsApp use cases grounded in customer operations",
+      description:
+        "Each use case keeps the same operating model: capture intent, move the customer to the next controlled action, and keep handover quality visible.",
+    },
+    examplesSupportLine:
+      "These rollout paths are supported through forms, appointments, payments, notifications, records, scheduler, FAQ, handover, API or connector, and analytics nodes inside FLOW.",
+    proofSection: {
+      eyebrow: "Proof",
+      title: "What your team verifies during the pilot",
+      description:
+        "The pilot should confirm that capture quality, queue visibility, follow-up discipline, and escalation handling all stay visible under real operating load.",
+    },
+    outcomesSection: {
+      eyebrow: "Outcomes",
+      title: "The operating improvements buyers expect to see.",
+      description: "Keep the pilot anchored to workflow discipline, queue clarity, and measurable next-step movement.",
+    },
+    faqSection: {
+      eyebrow: "FAQ",
+      title: "Implementation questions buyers ask before rollout",
+      description: "The answers stay practical, channel-specific, and grounded in rollout decisions the team actually has to make.",
+    },
+    relatedSection: {
+      eyebrow: "Related pages",
+      title: "Explore the next step for your rollout",
+      description:
+        "Guide buyers from one WhatsApp workflow into proof, pricing, and commercial planning instead of fragmenting the intent across thin supporting pages.",
+    },
     summaryCards: [
-      { label: "Channels", value: "WhatsApp + web", description: "Run the same qualification and handoff logic across customer entry points." },
-      { label: "Handover", value: "Context preserved", description: "Every takeover includes captured answers, intent, and pending next actions." },
-      { label: "Pilot scope", value: "14-day rollout", description: "Start with one production workflow, one team, and one measurable conversion path." },
+      { label: "Channel coverage", value: "WhatsApp + Web", description: "Run the same qualification and handoff logic across the channels where enquiries actually begin." },
+      { label: "Operating model", value: "Context preserved", description: "Every handover includes the captured answers, intent, workflow state, and the next required action." },
+      { label: "Launch scope", value: "14-day rollout", description: "Start with one production workflow, one team, and one measurable conversion path before expanding." },
     ],
     screenshots: [
       {
-        eyebrow: "Inbox surface",
+        eyebrow: "Lead capture view",
         title: "Lead capture and qualification happen inside the first conversation.",
-        description: "The operator sees the conversation state, the captured lead fields, and the next step before a human ever needs to intervene.",
+        description: "The first customer exchange captures intent, service fit, and the next commercial step without forcing the team to reconstruct context later.",
         variant: "inbox",
-        primaryItems: ["Ask intent and service type", "Capture name, city, and urgency", "Route qualified conversations to sales or support"],
+        primaryItems: ["Capture intent and service type", "Collect the fields needed for qualification", "Move qualified conversations to callback, booking, or support routing"],
         secondaryItems: ["Lead source: WhatsApp ad", "Status: Qualified", "Next action: Book callback"],
-        footer: "Use this view to control first response, qualification quality, and handoff readiness.",
+        footer: "This matters because qualification quality is visible in the first conversation, not reconstructed later from scattered messages.",
       },
       {
-        eyebrow: "Operations dashboard",
-        title: "Managers track response discipline, open conversations, and follow-up leakage.",
-        description: "The same workflow produces operational metrics instead of relying on manual inbox reviews.",
+        eyebrow: "Operations visibility",
+        title: "Managers see queue state, follow-up discipline, and handover readiness in one place.",
+        description: "The workflow turns a busy inbox into a measurable operating queue with visible ownership and pending actions.",
         variant: "dashboard",
-        primaryItems: ["First-response SLA", "Open handovers", "Pending payment or document reminders"],
+        primaryItems: ["Monitor new enquiries and queue age", "Review qualified, pending, and escalated conversations", "Inspect where follow-up or manual takeover is still required"],
         secondaryItems: ["Today: 38 new enquiries", "Qualified: 21", "Escalated: 4"],
-        footer: "Proof comes from visible queue movement, not generic chatbot claims.",
+        footer: "This matters because managers can see where conversations are moving, stalling, or leaking before that leakage becomes lost revenue or poor service.",
       },
     ],
     implementation: [
@@ -119,33 +212,45 @@ export const revenuePages = [
         items: ["CRM or sheet sync", "Booking and callback triggers", "Payment, document, or support updates"],
       },
       {
-        title: "Launch with audit visibility",
-        summary: "Go live with clear metrics and exception handling from day one.",
+        title: "Launch with visibility",
+        summary: "Go live with measurable queue behavior, exception handling, and team reporting from day one.",
         items: ["Review unresolved paths", "Verify escalation timing", "Measure conversions and missed follow-ups"],
       },
     ],
     examples: [
       {
         title: "Sales lead workflow",
-        description: "Qualify inbound enquiries before the rep steps in.",
-        items: ["Ask project type and budget range", "Collect location and preferred timing", "Schedule callback for qualified leads"],
+        description: "Qualify inbound enquiries before a rep spends time on them.",
+        items: ["Capture the enquiry source and need", "Ask the qualification questions that matter", "Schedule the next commercial step for qualified leads"],
       },
       {
         title: "Post-sale support workflow",
-        description: "Answer repeated questions, then escalate complex cases with context.",
-        items: ["Resolve common service queries", "Create support tickets for unresolved cases", "Notify the owning team with full conversation history"],
+        description: "Answer repeated questions, then escalate complex cases with context and ownership.",
+        items: ["Handle repeated service questions", "Route unresolved cases into the right queue", "Preserve context for the next human owner"],
+      },
+      {
+        title: "Appointment booking workflow",
+        description: "Move enquiries into confirmed slots with reminders and clear follow-up states.",
+        items: ["Offer the right booking options", "Confirm the selected slot", "Send reminders and handle reschedules or exceptions"],
+      },
+      {
+        title: "Payment follow-up workflow",
+        description: "Run reminder and status messaging without losing exception ownership.",
+        items: ["Send payment or fee reminders", "Capture reply or completion state", "Escalate disputed or overdue cases with context"],
       },
     ],
     proofPoints: [
-      { label: "Operator proof", value: "Captured fields", description: "You can verify exactly what the workflow collected before handoff." },
-      { label: "Team proof", value: "Queue visibility", description: "Managers see which conversations are waiting, booked, escalated, or stalled." },
-      { label: "Commercial proof", value: "Booked next steps", description: "The pilot is measured by booked calls, confirmed appointments, or completed follow-up actions." },
+      { label: "Pilot check", value: "Captured fields", description: "Verify that the workflow collected the exact qualification and routing data the team needs." },
+      { label: "Pilot check", value: "Queue visibility", description: "Managers should see which conversations are open, qualified, pending, or escalated at any moment." },
+      { label: "Pilot check", value: "Follow-up accuracy", description: "Confirm that reminders, callbacks, and next-step triggers happen on time and in the right state." },
+      { label: "Pilot check", value: "Escalation quality", description: "When automation stops, the human owner should receive the full context and a clear next action." },
     ],
     outcomes: [
-      "Faster first responses during and after business hours.",
-      "Cleaner lead routing before human time is spent.",
-      "Less follow-up leakage between message and booking.",
-      "A visible escalation path for high-value conversations.",
+      "Faster first response.",
+      "Cleaner lead routing.",
+      "Less follow-up leakage.",
+      "Visible escalation path.",
+      "Better tracking of open, qualified, pending, and escalated conversations.",
     ],
     faq: [
       {
@@ -160,14 +265,31 @@ export const revenuePages = [
         question: "Do we need a CRM before starting?",
         answer: "No. Teams often start with sheet or inbox updates and add CRM synchronization once the live workflow is stable.",
       },
+      {
+        question: "Do WhatsApp templates and provider costs apply?",
+        answer: "Yes. If the rollout uses outbound template messages or provider-linked delivery, those commercial and approval requirements should be planned as part of the pilot scope.",
+      },
+      {
+        question: "Can the same workflow run on website chat too?",
+        answer: "Yes. FLOW can reuse the same qualification, routing, and handover logic across WhatsApp and website chat when the operating model should stay aligned.",
+      },
     ],
     relatedLinks: [
-      link("Workflow examples", "/proof", "See rollout-oriented proof pages for healthcare, real estate, and education."),
-      link("Pricing", "/pricing", "Choose a first-workflow pilot or a broader multi-team rollout."),
-      link("Contact sales", "/contact", "Map your current WhatsApp journey with the Crescora team."),
+      { ...link("Workflow examples", "/proof", "Review rollout-oriented proof pages that show how Crescora FLOW is launched in real customer operations."), ctaLabel: "View Examples ->" },
+      { ...link("Pricing", "/pricing", "Choose a first-workflow pilot or a broader multi-team rollout based on scope, systems, and team coverage."), ctaLabel: "View Pricing ->" },
+      { ...link("Contact sales", "/contact", "Map your current WhatsApp journey, handover points, and rollout priorities with the Crescora team."), ctaLabel: "Talk to Sales ->" },
     ],
     ctaLabel: "Request WhatsApp workflow demo",
     ctaHref: "/contact",
+    finalCta: {
+      eyebrow: "Next step",
+      title: "Ready to turn WhatsApp enquiries into a workflow?",
+      description:
+        "Use FLOW to bring structure to leads, bookings, support questions, payments, reminders, and human handovers without losing ownership or queue visibility.",
+      note: "Start with one WhatsApp workflow. Prove value. Expand into more channels and teams.",
+      primaryCta: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
+      secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+    },
   }),
   page({
     slug: "ai-chatbot-builder",

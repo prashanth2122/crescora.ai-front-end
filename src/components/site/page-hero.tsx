@@ -11,6 +11,7 @@ type PageHeroProps = {
   description: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  supportText?: string;
   visual?: ReactNode;
   className?: string;
 };
@@ -21,6 +22,7 @@ export function PageHero({
   description,
   primaryCta,
   secondaryCta,
+  supportText,
   visual,
   className,
 }: PageHeroProps) {
@@ -75,6 +77,14 @@ export function PageHero({
               ) : null}
             </div>
           )}
+          {supportText ? (
+            <p
+              className="mt-5 max-w-2xl text-sm leading-7 text-zinc-500"
+              style={{ animation: "rise-up 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both", animationDelay: "360ms" }}
+            >
+              {supportText}
+            </p>
+          ) : null}
         </div>
 
         {visual ? (

@@ -167,6 +167,7 @@ The current commercial setup uses:
 
 - `/solutions` and `src/app/solutions/[slug]/page.tsx` for the primary revenue pages
 - `src/components/site/revenue-solution-page.tsx` for the shared product-page layout
+- page-specific hero copy, section headings, metadata overrides, and final CTA variants are configured in `src/lib/revenue-pages.ts` so individual solution pages can be upgraded without forking the layout
 - visible implementation details, examples, proof points, outcomes, related links, and FAQ accordions on each primary solution page
 - product-surface panels embedded in the primary solution pages to show the operator, builder, and dashboard views referenced in the copy
 
@@ -177,6 +178,8 @@ Supporting content is indexable and included in the sitemap:
 - `/templates` and `/templates/[template]`
 - `/use-cases` and the legacy `use-cases/*` routes
 - generated India and dynamic industry SEO routes
+
+Workflow detail pages are driven from `src/lib/india-seo-data.ts`. The route at `src/app/workflows/[workflow]/page.tsx` now supports page-specific public workflow sections, exact metadata overrides, hero visuals, workflow diagram blocks, section-level descriptions, launch-coverage blocks, context-checklist blocks, observability blocks, FAQ blocks, and workflow-specific CTA blocks when a workflow entry defines a `publicPage` payload.
 
 The homepage now links into the solution and blog layers so the SEO graph is reachable from the root page, not just from the sitemap.
 

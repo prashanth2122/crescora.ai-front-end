@@ -14,6 +14,7 @@ import ProofPage from "@/app/proof/page";
 import { metadata as proofExampleMetadata } from "@/app/proof/healthcare-front-desk-automation/page";
 import { generateMetadata as generateSolutionMetadata } from "@/app/solutions/[slug]/page";
 import TemplatesHubPage from "@/app/templates/page";
+import WorkflowDetailPage, { generateMetadata as generateWorkflowMetadata } from "@/app/workflows/[workflow]/page";
 import WorkflowsHubPage from "@/app/workflows/page";
 import sitemap, { indexableRoutes } from "@/app/sitemap";
 import { RevenueSolutionPage } from "@/components/site/revenue-solution-page";
@@ -185,13 +186,47 @@ test("marketing route metadata publishes route-specific social image urls", asyn
   const blogMetadata = await generateBlogPostMetadata({
     params: Promise.resolve({ slug: "how-whatsapp-automation-helps-small-businesses-in-india" }),
   });
+  const workflowMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "appointment-booking" }),
+  });
+  const remindersMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "reminders" }),
+  });
+  const customerSupportMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "customer-support" }),
+  });
+  const knowledgeAssistantMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "rag-knowledge-assistant" }),
+  });
+  const handoffMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "human-handoff" }),
+  });
+  const billingMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "billing" }),
+  });
 
-  const solutionOpenGraph = solutionMetadata.openGraph as { images?: Array<{ url?: string } | string> } | undefined;
+  const solutionOpenGraph = solutionMetadata.openGraph as { title?: string; images?: Array<{ url?: string } | string> } | undefined;
+  const solutionTwitter = solutionMetadata.twitter as { title?: string } | undefined;
   const compareOpenGraph = compareDetailMetadata.openGraph as { images?: Array<{ url?: string } | string> } | undefined;
   const blogOpenGraph = blogMetadata.openGraph as { images?: Array<{ url?: string } | string> } | undefined;
   const blogTwitter = blogMetadata.twitter as { images?: string[] } | undefined;
+  const workflowOpenGraph = workflowMetadata.openGraph as { title?: string; url?: string } | undefined;
+  const remindersOpenGraph = remindersMetadata.openGraph as { title?: string; url?: string } | undefined;
+  const customerSupportOpenGraph = customerSupportMetadata.openGraph as { title?: string; url?: string } | undefined;
+  const knowledgeAssistantOpenGraph = knowledgeAssistantMetadata.openGraph as { title?: string; url?: string } | undefined;
+  const handoffOpenGraph = handoffMetadata.openGraph as { title?: string; url?: string } | undefined;
+  const billingOpenGraph = billingMetadata.openGraph as { title?: string; url?: string } | undefined;
 
   assert.deepEqual(solutionMetadata.alternates?.canonical, "/solutions/whatsapp-automation");
+  assert.deepEqual(solutionMetadata.title, {
+    absolute: "WhatsApp Automation Workflows for Sales, Support, Booking, Payments, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    solutionMetadata.description,
+    "Automate WhatsApp enquiries, lead qualification, appointment booking, reminders, support routing, payment follow-ups, CRM updates, and human handover with Crescora FLOW.",
+  );
+  assert.equal(solutionOpenGraph?.title, "WhatsApp Automation Workflows for Sales, Support, Booking, Payments, and Follow-Ups | Crescora FLOW");
+  assert.equal(solutionTwitter?.title, "WhatsApp Automation Workflows for Sales, Support, Booking, Payments, and Follow-Ups | Crescora FLOW");
   assert.equal(
     typeof solutionOpenGraph?.images?.[0] === "string"
       ? solutionOpenGraph?.images?.[0]
@@ -214,6 +249,333 @@ test("marketing route metadata publishes route-specific social image urls", asyn
     blogTwitter?.images?.[0],
     `${siteOrigin}/blog/how-whatsapp-automation-helps-small-businesses-in-india/opengraph-image`,
   );
+  assert.deepEqual(workflowMetadata.title, {
+    absolute: "Appointment Booking Automation for WhatsApp, Web, Reminders, Rescheduling, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    workflowMetadata.description,
+    "Automate appointment booking, slot confirmation, reminders, rescheduling, payment follow-ups, staff handover, and booking status tracking with Crescora FLOW.",
+  );
+  assert.equal(workflowMetadata.alternates?.canonical, "/workflows/appointment-booking");
+  assert.equal(workflowOpenGraph?.title, "Appointment Booking Automation for WhatsApp, Web, Reminders, Rescheduling, and Follow-Ups | Crescora FLOW");
+  assert.equal(workflowOpenGraph?.url, `${siteOrigin}/workflows/appointment-booking`);
+  assert.deepEqual(remindersMetadata.title, {
+    absolute: "Reminder Automation Software for Follow-Ups, Appointments, Payments, Documents, and Renewals | Crescora FLOW",
+  });
+  assert.equal(
+    remindersMetadata.description,
+    "Automate reminders for appointments, payments, missing documents, callbacks, renewals, no-shows, and follow-ups with Crescora FLOW. Schedule, track, retry, and escalate reminder workflows.",
+  );
+  assert.equal(remindersMetadata.alternates?.canonical, "/workflows/reminders");
+  assert.equal(remindersOpenGraph?.title, "Reminder Automation Software for Follow-Ups, Appointments, Payments, Documents, and Renewals | Crescora FLOW");
+  assert.equal(remindersOpenGraph?.url, `${siteOrigin}/workflows/reminders`);
+  assert.deepEqual(customerSupportMetadata.title, {
+    absolute: "Customer Support Automation for FAQs, Issue Triage, Ticket Routing, Human Handover, and Analytics | Crescora FLOW",
+  });
+  assert.equal(
+    customerSupportMetadata.description,
+    "Automate customer support workflows with FAQ resolution, issue triage, ticket creation, priority routing, human handover, status updates, queue visibility, and support analytics using Crescora FLOW.",
+  );
+  assert.equal(customerSupportMetadata.alternates?.canonical, "/workflows/customer-support");
+  assert.equal(customerSupportOpenGraph?.title, "Customer Support Automation for FAQs, Issue Triage, Ticket Routing, Human Handover, and Analytics | Crescora FLOW");
+  assert.equal(customerSupportOpenGraph?.url, `${siteOrigin}/workflows/customer-support`);
+  assert.deepEqual(knowledgeAssistantMetadata.title, {
+    absolute: "RAG Knowledge Assistant for Support Teams, FAQ Automation, Grounded Answers, and Human Handover | Crescora FLOW",
+  });
+  assert.equal(
+    knowledgeAssistantMetadata.description,
+    "Build a RAG knowledge assistant with Crescora FLOW. Answer customer FAQs from approved knowledge, detect gaps, avoid unsupported AI responses, and hand off low-confidence questions to support teams.",
+  );
+  assert.equal(knowledgeAssistantMetadata.alternates?.canonical, "/workflows/rag-knowledge-assistant");
+  assert.equal(knowledgeAssistantOpenGraph?.title, "RAG Knowledge Assistant for Support Teams, FAQ Automation, Grounded Answers, and Human Handover | Crescora FLOW");
+  assert.equal(knowledgeAssistantOpenGraph?.url, `${siteOrigin}/workflows/rag-knowledge-assistant`);
+  assert.deepEqual(handoffMetadata.title, {
+    absolute: "Human Handoff Automation for Escalation, Context Transfer, SLA Visibility, and Support Routing | Crescora FLOW",
+  });
+  assert.equal(
+    handoffMetadata.description,
+    "Automate human handoff workflows with context-rich escalation, queue assignment, SLA visibility, support routing, sales handover, billing escalation, and conversation tracking using Crescora FLOW.",
+  );
+  assert.equal(handoffMetadata.alternates?.canonical, "/workflows/human-handoff");
+  assert.equal(handoffOpenGraph?.title, "Human Handoff Automation for Escalation, Context Transfer, SLA Visibility, and Support Routing | Crescora FLOW");
+  assert.equal(handoffOpenGraph?.url, `${siteOrigin}/workflows/human-handoff`);
+  assert.deepEqual(billingMetadata.title, {
+    absolute: "Billing and Collections Automation for Payment Reminders, Failed Payments, Disputes, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    billingMetadata.description,
+    "Automate billing reminders, payment links, collections follow-ups, failed-payment recovery, receipt capture, overdue escalation, dispute handover, and payment status tracking with Crescora FLOW.",
+  );
+  assert.equal(billingMetadata.alternates?.canonical, "/workflows/billing");
+  assert.equal(billingOpenGraph?.title, "Billing and Collections Automation for Payment Reminders, Failed Payments, Disputes, and Follow-Ups | Crescora FLOW");
+  assert.equal(billingOpenGraph?.url, `${siteOrigin}/workflows/billing`);
+});
+
+test("payment workflow metadata publishes the production title and canonical", async () => {
+  const paymentMetadata = await generateWorkflowMetadata({
+    params: Promise.resolve({ workflow: "payments" }),
+  });
+  const paymentOpenGraph = paymentMetadata.openGraph as { title?: string; url?: string } | undefined;
+
+  assert.deepEqual(paymentMetadata.title, {
+    absolute: "Payment Automation for Collections, Payment Reminders, Failed Payment Recovery, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    paymentMetadata.description,
+    "Automate payment reminders, payment links, collections follow-ups, failed-payment recovery, receipt confirmation, overdue escalation, and billing handover with Crescora FLOW.",
+  );
+  assert.equal(paymentMetadata.alternates?.canonical, "/workflows/payments");
+  assert.equal(paymentOpenGraph?.title, "Payment Automation for Collections, Payment Reminders, Failed Payment Recovery, and Follow-Ups | Crescora FLOW");
+  assert.equal(paymentOpenGraph?.url, `${siteOrigin}/workflows/payments`);
+});
+
+test("whatsapp solution page renders the page-specific rollout copy and CTA labels", () => {
+  const whatsappPage = revenuePages.find((page) => page.slug === "whatsapp-automation");
+
+  assert.ok(whatsappPage);
+  if (!whatsappPage) {
+    throw new Error("Expected whatsapp revenue page to exist");
+  }
+
+  const html = renderToStaticMarkup(
+    RevenueSolutionPage({
+      page: whatsappPage,
+      breadcrumbs: [
+        { name: "Home", href: siteOrigin },
+        { name: "Solutions", href: `${siteOrigin}/solutions` },
+        { name: whatsappPage.title, href: `${siteOrigin}/solutions/${whatsappPage.slug}` },
+      ],
+    }),
+  );
+
+  assert.match(html, /Automate WhatsApp conversations without losing the next business step\./);
+  assert.match(html, /Built for WhatsApp \+ Web automation, lead capture, booking, reminders, support routing, payment follow-ups, and context-rich handover\./);
+  assert.match(html, /See how WhatsApp conversations become trackable workflows/);
+  assert.match(html, /WhatsApp use cases grounded in customer operations/);
+  assert.match(html, /Implementation questions buyers ask before rollout/);
+  assert.match(html, /View Examples -&gt;/);
+  assert.match(html, /Ready to turn WhatsApp enquiries into a workflow\?/);
+  assert.match(html, /Start with one WhatsApp workflow\. Prove value\. Expand into more channels and teams\./);
+});
+
+test("document collection workflow page renders customer-facing document workflow content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "document-collection" }),
+    }),
+  );
+
+  assert.match(html, /Automate document collection, missing-file follow-ups, KYC intake, and review routing\./);
+  assert.match(html, /Book Document Workflow Demo/);
+  assert.match(html, /Document workflows FLOW can automate/);
+  assert.match(html, /KYC document collection/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /Example document collection journey/);
+  assert.match(html, /Built for document workflows with privacy, review, and control/);
+  assert.match(html, /Outcomes document-heavy teams can track/);
+  assert.match(html, /Ready to automate your document collection workflow\?/);
+  assert.match(html, /Start with one document workflow\. Prove value\. Expand into review, approval, reminders, and status tracking\./);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Google/);
+});
+
+test("whatsapp workflow page renders customer-facing whatsapp workflow content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "whatsapp-automation" }),
+    }),
+  );
+
+  assert.match(html, /Launch a WhatsApp automation workflow for leads, bookings, reminders, support, and follow-ups\./);
+  assert.match(html, /Book WhatsApp Workflow Demo/);
+  assert.match(html, /Start from a proven WhatsApp automation structure\./);
+  assert.match(html, /What this WhatsApp workflow template includes/);
+  assert.match(html, /Example WhatsApp automation journey/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /WhatsApp workflows businesses can launch first/);
+  assert.match(html, /What to measure during the WhatsApp workflow pilot/);
+  assert.match(html, /Common questions before launching WhatsApp workflow automation/);
+  assert.match(html, /Ready to launch your WhatsApp automation workflow\?/);
+  assert.match(html, /Start with one WhatsApp workflow\. Prove value\. Expand into more channels, teams, and integrations\./);
+  assert.match(html, /New/);
+  assert.match(html, /Escalated/);
+  assert.doesNotMatch(
+    html,
+    /Open India hub|BOFU landing page|Google(?:&#x27;|’|')s guidance|Search target|Keep the page structured and commercially explicit/i,
+  );
+});
+
+test("appointment booking workflow page renders customer-facing booking content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "appointment-booking" }),
+    }),
+  );
+
+  assert.match(html, /Automate appointment booking, confirmations, reminders, rescheduling, and follow-ups\./);
+  assert.match(html, /Book Appointment Workflow Demo/);
+  assert.match(html, /Turn appointment enquiries into confirmed next steps\./);
+  assert.match(html, /What this appointment workflow can automate/);
+  assert.match(html, /Example appointment booking journey/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /Appointment workflows businesses can launch first/);
+  assert.match(html, /What to measure during the appointment workflow pilot/);
+  assert.match(html, /Common questions before launching appointment booking automation/);
+  assert.match(html, /Ready to automate your appointment booking workflow\?/);
+  assert.match(html, /Start with one appointment workflow\. Prove value\. Expand into payments, reminders, rescheduling, and customer follow-ups\./);
+  assert.match(html, /Requested/);
+  assert.match(html, /Escalated/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search target|Keep the page structured and commercially explicit/i);
+});
+
+test("payment workflow page renders customer-facing payment content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "payments" }),
+    }),
+  );
+
+  assert.match(html, /Automate payment reminders, collections follow-ups, confirmations, and overdue escalation\./);
+  assert.match(html, /Book Payment Workflow Demo/);
+  assert.match(html, /Stop chasing pending payments manually\./);
+  assert.match(html, /Give failed or overdue payments a clear recovery path\./);
+  assert.match(html, /What this payment workflow can automate/);
+  assert.match(html, /Example payment automation journey/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /Payment workflows businesses can launch first/);
+  assert.match(html, /Built for payment workflows with control/);
+  assert.match(html, /What to measure during the payment workflow pilot/);
+  assert.match(html, /Common questions before launching payment automation/);
+  assert.match(html, /Ready to automate your payment follow-up workflow\?/);
+  assert.match(html, /Start with one payment reminder workflow\. Prove value\. Expand into verification, receipts, billing escalation, and collection visibility\./);
+  assert.match(html, /Requested/);
+  assert.match(html, /Closed/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search target|Keep the page structured and commercially explicit/i);
+});
+
+test("reminders workflow page renders customer-facing reminder content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "reminders" }),
+    }),
+  );
+
+  assert.match(html, /Automate reminders for appointments, payments, documents, callbacks, renewals, and follow-ups\./);
+  assert.match(html, /Book Reminder Workflow Demo/);
+  assert.match(html, /Stop depending on staff memory for follow-ups\./);
+  assert.match(html, /Recover missed actions before they become lost opportunities\./);
+  assert.match(html, /What this reminder workflow can automate/);
+  assert.match(html, /Example reminder automation journey/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /Reminder workflows businesses can launch first/);
+  assert.match(html, /Built for reminder workflows with timing control/);
+  assert.match(html, /What to measure during the reminder workflow pilot/);
+  assert.match(html, /Common questions before launching reminder automation/);
+  assert.match(html, /Ready to automate your reminder and follow-up workflow\?/);
+  assert.match(html, /Start with one reminder workflow\. Prove value\. Expand into payments, documents, bookings, support, and renewals\./);
+  assert.match(html, /Scheduled/);
+  assert.match(html, /Expired/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search Target|Keep the page structured and commercially explicit/i);
+});
+
+test("customer support workflow page renders customer-facing support content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "customer-support" }),
+    }),
+  );
+
+  assert.match(html, /Automate customer support FAQs, issue triage, ticket routing, and human handover\./);
+  assert.match(html, /Book Support Workflow Demo/);
+  assert.match(html, /Discuss My Support Workflow/);
+  assert.match(html, /What this customer support workflow can automate/);
+  assert.match(html, /Turn repeated support questions into structured workflows\./);
+  assert.match(html, /Escalate complex cases with context, not confusion\./);
+  assert.match(html, /How support conversations move through FLOW/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /What support teams can monitor during rollout/);
+  assert.match(html, /Ready to automate your customer support workflow\?/);
+  assert.match(html, /Start with FAQ and triage\. Prove value\. Expand into ticketing, handover, analytics, and support visibility\./);
+  assert.match(html, /New/);
+  assert.match(html, /Closed/);
+  assert.match(html, /Open cases/);
+  assert.match(html, /Handover volume/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search target|support bot template|Keep the page structured and commercially explicit|convert search intent into a demo request/i);
+});
+
+test("knowledge assistant workflow page renders customer-facing grounded-answer content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "rag-knowledge-assistant" }),
+    }),
+  );
+
+  assert.match(html, /Answer customer questions from approved knowledge - and hand off when confidence is low\./);
+  assert.match(html, /Book Knowledge Assistant Demo/);
+  assert.match(html, /Discuss My Support Workflow/);
+  assert.match(html, /Answer from approved business knowledge, not random AI guesses\./);
+  assert.match(html, /Hand off low-confidence or sensitive questions to humans\./);
+  assert.match(html, /What this knowledge assistant workflow can automate/);
+  assert.match(html, /How a controlled knowledge assistant should operate/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /Built for knowledge workflows with control/);
+  assert.match(html, /Knowledge assistant workflows businesses can launch first/);
+  assert.match(html, /What to measure during the knowledge assistant pilot/);
+  assert.match(html, /Ready to build a controlled knowledge assistant workflow\?/);
+  assert.match(html, /Start with one knowledge area\. Prove answer quality\. Expand into more FAQs, documents, channels, and support workflows\./);
+  assert.match(html, /Answered/);
+  assert.match(html, /Published/);
+  assert.match(html, /Gap Tracking/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search target|knowledge base chatbot template|Keep the page structured and commercially explicit|convert search intent into a demo request/i);
+});
+
+test("human handoff workflow page renders customer-facing escalation content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "human-handoff" }),
+    }),
+  );
+
+  assert.match(html, /Escalate complex conversations to the right human team with full context\./);
+  assert.match(html, /Book Handoff Workflow Demo/);
+  assert.match(html, /Stop handing off conversations without the story\./);
+  assert.match(html, /Route each handoff to the right owner, queue, or team\./);
+  assert.match(html, /What this human handoff workflow can automate/);
+  assert.match(html, /When automation should hand off to a human/);
+  assert.match(html, /Example human handoff journey/);
+  assert.match(html, /What context should be transferred to the human team/);
+  assert.match(html, /Built for human handoff with operational control/);
+  assert.match(html, /What to measure during the handoff workflow pilot/);
+  assert.match(html, /Common questions before launching human handoff automation/);
+  assert.match(html, /Ready to build a context-rich human handoff workflow\?/);
+  assert.match(html, /Start with one handoff workflow\. Prove value\. Expand into queues, SLA visibility, agent console, and outcome tracking\./);
+  assert.match(html, /Triggered/);
+  assert.match(html, /Failed/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search target|Keep the page structured and commercially explicit/i);
+});
+
+test("billing workflow page renders customer-facing billing and collections content", async () => {
+  const html = renderToStaticMarkup(
+    await WorkflowDetailPage({
+      params: Promise.resolve({ workflow: "billing" }),
+    }),
+  );
+
+  assert.match(html, /Automate billing reminders, collections follow-ups, payment status updates, and exception handover\./);
+  assert.match(html, /Book Billing Workflow Demo/);
+  assert.match(html, /Stop chasing customers manually for billing updates\./);
+  assert.match(html, /Give overdue, failed, or disputed payments a clear path\./);
+  assert.match(html, /What this billing workflow can automate/);
+  assert.match(html, /Example billing and collections journey/);
+  assert.match(html, /Before FLOW vs After FLOW/);
+  assert.match(html, /Billing workflows service teams can launch first/);
+  assert.match(html, /Built for billing workflows with control/);
+  assert.match(html, /What to measure during the billing workflow pilot/);
+  assert.match(html, /Ready to automate your billing and collections workflow\?/);
+  assert.match(html, /Start with one billing follow-up workflow\. Prove value\. Expand into verification, receipts, disputes, escalation, and collection visibility\./);
+  assert.match(html, /Requested/);
+  assert.match(html, /Disputed/);
+  assert.match(html, /Razorpay/);
+  assert.doesNotMatch(html, /Open India hub|BOFU landing page|Search target|billing automation template|Keep the page structured and commercially explicit|convert search intent into a demo request/i);
 });
 
 test("public hub copy matches the indexable SEO strategy", () => {

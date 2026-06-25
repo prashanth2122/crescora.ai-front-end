@@ -5,6 +5,7 @@ type SectionHeadingProps = {
   title: string;
   description?: string;
   align?: "left" | "center";
+  tone?: "default" | "inverse";
   className?: string;
 };
 
@@ -13,6 +14,7 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  tone = "default",
   className,
 }: SectionHeadingProps) {
   return (
@@ -21,15 +23,15 @@ export function SectionHeading({
       style={{ animation: "rise-up 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both" }}
     >
       {eyebrow ? (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
+        <p className={cn("mb-3 text-xs font-semibold uppercase tracking-[0.3em]", tone === "inverse" ? "text-white/50" : "text-zinc-500")}>
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">
+      <h2 className={cn("text-3xl font-semibold tracking-tight sm:text-4xl", tone === "inverse" ? "text-white" : "text-zinc-950")}>
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-8 text-zinc-600 sm:text-lg">
+        <p className={cn("mt-4 text-base leading-8 sm:text-lg", tone === "inverse" ? "text-white/70" : "text-zinc-600")}>
           {description}
         </p>
       ) : null}

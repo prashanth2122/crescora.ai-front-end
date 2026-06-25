@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import { GoogleTag } from "@/components/analytics/google-tag";
@@ -10,16 +9,6 @@ import { SiteHeader } from "@/components/site/site-header";
 import { createPageMetadata, siteMetadataBase } from "@/lib/seo";
 import { site } from "@/lib/site-data";
 import { getLocaleCopy } from "@/lib/locales";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const copy = getLocaleCopy("en");
 
@@ -49,7 +38,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
         <Suspense fallback={null}>
