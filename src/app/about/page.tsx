@@ -19,7 +19,10 @@ import {
   GraduationCap,
   Headphones,
   Hospital,
+  LineChart,
   MessageSquareText,
+  RefreshCw,
+  ShieldCheck,
   Sparkles,
   Workflow,
   Wrench,
@@ -58,6 +61,9 @@ export default function AboutPage() {
   const helpIcons = [Hospital, Building2, GraduationCap, Headphones, Wrench, FileText];
   const stepIcons = [ArrowRight, Workflow, MessageSquareText, CheckCircle2, BadgeCheck, Sparkles];
   const differentIcons = [BadgeCheck, CheckCircle2, Workflow, Sparkles, Building2];
+  const trustIcons = [ShieldCheck, LineChart, BadgeCheck, RefreshCw];
+  const heroStepLabels = hero.workflowSteps ?? [];
+  const heroSignals = hero.workflowSignals ?? [];
 
   return (
     <PageShell>
@@ -78,6 +84,36 @@ export default function AboutPage() {
         description={hero.description}
         primaryCta={hero.primaryCta}
         secondaryCta={hero.secondaryCta}
+        visual={
+          <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(244,244,245,0.96)_100%)] p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">FLOW operating path</p>
+            <div className="mt-6 space-y-3">
+              {heroStepLabels.map((step, index) => (
+                <div key={step} className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-950 text-sm font-semibold text-white">
+                    {index + 1}
+                  </div>
+                  <div className="min-w-0 flex-1 rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm font-medium text-zinc-900 shadow-[0_10px_30px_rgba(15,23,42,0.04)]">
+                    {step}
+                  </div>
+                  {index < heroStepLabels.length - 1 ? (
+                    <ArrowRight className="hidden h-4 w-4 shrink-0 text-zinc-400 sm:block" />
+                  ) : null}
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {heroSignals.map((signal) => (
+                <div
+                  key={signal}
+                  className="rounded-2xl border border-zinc-200 bg-white/90 px-4 py-3 text-sm leading-6 text-zinc-700 shadow-[0_10px_30px_rgba(15,23,42,0.04)]"
+                >
+                  {signal}
+                </div>
+              ))}
+            </div>
+          </div>
+        }
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
@@ -126,6 +162,7 @@ export default function AboutPage() {
             );
           })}
         </div>
+        <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-600">{whatWeBuild.support}</p>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
@@ -222,33 +259,59 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-0 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-            <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Trust and control" title={trust.title} description={trust.description} />
+        <div className="rounded-[1.9rem] border border-zinc-900/90 bg-[linear-gradient(180deg,#111827_0%,#0f172a_100%)] p-6 text-white shadow-[0_24px_80px_rgba(15,23,42,0.16)] sm:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/50">Trust and control</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{trust.title}</h2>
+              <p className="mt-4 max-w-2xl text-base leading-8 text-white/72">{trust.description}</p>
               <div className="mt-6 space-y-3">
                 {trust.bullets.map((bullet) => (
                   <div key={bullet} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
-                    <p className="text-sm leading-7 text-zinc-700">{bullet}</p>
+                    <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-300" />
+                    <p className="text-sm leading-7 text-white/80">{bullet}</p>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
 
-          <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-            <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Product relationship" title={product.title} description={product.description} />
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                {product.details.map((detail) => (
-                  <div key={detail} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm leading-7 text-zinc-700">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {trust.cards.map((card, index) => {
+                const Icon = trustIcons[index % trustIcons.length];
+
+                return (
+                  <div key={card.title} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-zinc-950">
+                      <Icon className="h-4 w-4" />
+                    </div>
+                    <p className="mt-4 text-base font-semibold tracking-tight text-white">{card.title}</p>
+                    <p className="mt-3 text-sm leading-7 text-white/72">{card.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mt-10 border-t border-white/10 pt-8">
+            <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/50">Company and product</p>
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">{product.title}</h3>
+                <p className="mt-4 max-w-2xl text-base leading-8 text-white/72">{product.description}</p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {product.details.map((detail, index) => (
+                  <div
+                    key={detail}
+                    className={`rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-white/80 ${index === 0 ? "sm:col-span-2" : ""}`}
+                  >
                     {detail}
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -282,7 +345,7 @@ export default function AboutPage() {
 
       <section className="mx-auto w-full max-w-7xl px-4 py-0 sm:px-6 lg:px-8">
         <div className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
-          <SectionHeading eyebrow="Final CTA" title={finalCta.title} description={finalCta.description} />
+          <SectionHeading eyebrow="Final CTA" title={finalCta.title} description={finalCta.summary ?? finalCta.description} />
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
               <Link href={finalCta.primary.href}>{finalCta.primary.label}</Link>
@@ -291,6 +354,7 @@ export default function AboutPage() {
               <Link href={finalCta.secondary.href}>{finalCta.secondary.label}</Link>
             </Button>
           </div>
+          {finalCta.note ? <p className="mt-5 text-sm leading-7 text-zinc-500">{finalCta.note}</p> : null}
         </div>
       </section>
     </PageShell>

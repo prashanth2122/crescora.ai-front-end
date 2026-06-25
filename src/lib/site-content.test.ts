@@ -11,7 +11,7 @@ import { hiLocaleCopy } from "@/lib/locales/hi";
 import { solutionPages } from "@/lib/seo-marketing-data";
 import { siteContent } from "@/lib/site-content";
 import { termsOfServiceContent } from "@/lib/terms-of-service-content";
-import { homepageFlowSteps, pricingPackages, useCases } from "@/lib/site-data";
+import { homepageFlowSteps, pricingPackages, pricingPackagesByRegion, pricingRegions, useCases } from "@/lib/site-data";
 
 test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.site.productFull, "FLOW by Crescora AI");
@@ -56,8 +56,14 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(hiLocaleCopy.footerGroups[3].links[1].href, "/terms");
   assert.equal(hiLocaleCopy.footerGroups[3].links[2].href, "/cookies");
   assert.equal(hiLocaleCopy.footerGroups[3].links[3].href, "/acceptable-use");
-  assert.equal(siteContent.industriesIndex.hero.title, "Industry workflows FLOW can automate for your business.");
-  assert.equal(siteContent.industriesIndex.phaseTwo.title, "Don't see your industry here?");
+  assert.equal(siteContent.industriesIndex.hero.title, "AI workflow automation for every service business.");
+  assert.equal(siteContent.industriesIndex.hero.trustLine, "Built for hospitals, clinics, schools, real estate, labs, coaching centers, finance teams, support teams, and service businesses.");
+  assert.equal(siteContent.industriesIndex.hero.previewSteps.length, 6);
+  assert.equal(siteContent.industriesIndex.proofStrip.capabilities.length, 10);
+  assert.equal(siteContent.industriesIndex.cards.length, 10);
+  assert.equal(siteContent.industriesIndex.cards[0].ctaLabel, "View Hospital Workflow");
+  assert.equal(siteContent.industriesIndex.engineSection.title, "One workflow engine. Multiple industries. Real business outcomes.");
+  assert.equal(siteContent.industriesIndex.phaseTwo.title, "Don't see your exact industry? We can still automate your workflow.");
   assert.equal(siteContent.industriesIndex.seoLandingPages.title, "Explore more automation solution pages.");
   assert.equal(siteContent.useCasesIndex.hero.description, "Start with the workflow that affects your response speed, revenue, support load, or daily operations the most.");
   assert.equal(siteContent.useCasesIndex.cards.length, 12);
@@ -65,27 +71,53 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.useCasesIndex.cards[10].title, "Ticket Creation & Escalation");
   assert.equal(useCases.length, 12);
   assert.equal(useCases[0].title, "WhatsApp Automation");
+  assert.equal(siteContent.workflowsIndex.hero.title, "Launch-ready workflows for leads, bookings, payments, support, and follow-ups.");
+  assert.equal(siteContent.workflowsIndex.hero.trustLine, "Built for real operations, not basic chatbot replies.");
+  assert.equal(siteContent.workflowsIndex.proofStrip.capabilities.length, 9);
+  assert.equal(siteContent.workflowsIndex.section.eyebrow, "Automation Blueprints");
+  assert.equal(siteContent.workflowsIndex.cards.length, 10);
+  assert.equal(siteContent.workflowsIndex.cards[0].title, "WhatsApp Automation Workflow for Leads, Support, and Follow-Ups");
+  assert.equal(siteContent.workflowsIndex.cards[6].title, "Knowledge Assistant Workflow for Fast, Controlled Customer Answers");
+  assert.equal(siteContent.workflowsIndex.whyItMatters.cards.length, 4);
+  assert.equal(siteContent.workflowsIndex.finalCta.title, "Want a workflow built around your exact process?");
+  assert.equal(siteContent.templatesIndex.hero.title, "Ready-to-use FLOW templates for leads, bookings, payments, support, and follow-ups.");
+  assert.equal(siteContent.templatesIndex.hero.trustLine, "Built for real customer operations, not basic chatbot replies.");
+  assert.equal(siteContent.templatesIndex.launchStrip.items.length, 7);
+  assert.equal(siteContent.templatesIndex.filters.length, 8);
+  assert.equal(siteContent.templatesIndex.cards.length, 15);
+  assert.equal(siteContent.templatesIndex.cards[0].title, "WhatsApp Automation Template for Leads, Support, and Follow-Ups");
+  assert.equal(siteContent.templatesIndex.cards[0].featured, true);
+  assert.equal(siteContent.templatesIndex.cards[5].tag, "AI Knowledge");
+  assert.equal(siteContent.templatesIndex.whyItMatters.cards.length, 4);
+  assert.equal(siteContent.templatesIndex.finalCta.title, "Need a template for your exact business process?");
   assert.equal(siteContent.platform.hero.title, "See how FLOW turns enquiries into completed workflows.");
   assert.equal(siteContent.platform.section.title, "Built for business workflows that need structure and follow-through.");
   assert.equal(siteContent.platform.team.startTitle, "See how FLOW can automate your first workflow.");
   assert.equal(siteContent.platform.hero.primaryCta.label, "Book Free Demo");
   assert.equal(siteContent.platform.hero.secondaryCta.label, "Discuss My Workflow");
-  assert.equal(siteContent.pricing.hero.title, "Pricing that scales with your automation needs.");
-  assert.equal(siteContent.pricing.hero.description, "Start with one focused workflow, then expand to more teams, channels, integrations, and customer journeys as you grow.");
+  assert.equal(siteContent.pricing.hero.title, "Launch one workflow first. Scale automation as your business grows.");
+  assert.equal(siteContent.pricing.hero.description, "Start with a focused automation for leads, bookings, payments, documents, reminders, support, or handovers. Expand into more teams, channels, integrations, and customer journeys when your operations are ready.");
+  assert.equal(siteContent.pricing.hero.trustLine, "Plans are designed for real business workflows, not basic chatbot replies.");
+  assert.equal(siteContent.pricing.regionSelector.label, "Billing region");
+  assert.equal(siteContent.pricing.included.items.length, 6);
   assert.equal(siteContent.pricing.ctas.primary.label, "Book Free Demo");
   assert.equal(siteContent.pricing.ctas.secondary.label, "Get Project Scope");
-  assert.ok(siteContent.pricing.note.startsWith("Package pricing starts from the listed monthly rates"));
-  assert.equal(siteContent.pricing.faq.items.length, 4);
-  assert.equal(siteContent.pricing.faq.items[0].question, "Can I start with one workflow?");
+  assert.ok(siteContent.pricing.scopeNote.startsWith("Package pricing starts from the listed monthly rate."));
+  assert.equal(siteContent.pricing.factors.items.length, 5);
+  assert.equal(siteContent.pricing.faq.items.length, 5);
+  assert.equal(siteContent.pricing.faq.items[0].question, "Do you have separate pricing for India and global customers?");
+  assert.equal(pricingRegions[0].label, "India - INR ₹");
   assert.equal(pricingPackages[0].price, "₹10,000/mo");
-  assert.equal(pricingPackages[0].bestFor, "First workflow for small teams starting automation.");
+  assert.equal(pricingPackages[0].bestFor, "Small teams launching their first focused automation.");
   assert.equal(pricingPackages[1].price, "₹49,999/mo");
-  assert.equal(pricingPackages[1].bestFor, "Best value plan for most hospitals, clinics, real estate teams, and service businesses.");
+  assert.equal(pricingPackages[1].badge, "Most Popular");
   assert.equal(pricingPackages[2].price, "₹99,999/mo");
-  assert.equal(pricingPackages[2].bestFor, "For serious operations with teams, handoffs, integrations, and reporting.");
+  assert.equal(pricingPackages[2].bestFor, "Teams that need automation across departments, routes, handovers, integrations, and reporting.");
   assert.equal(pricingPackages[3].price, "Custom");
-  assert.equal(pricingPackages[3].priceDetail, "from ₹2,49,999/mo");
-  assert.equal(pricingPackages[3].bestFor, "For multi-location and complex rollout requirements.");
+  assert.equal(pricingPackages[3].priceDetail, "Typically starts from ₹2,49,999/mo based on rollout scope.");
+  assert.equal(pricingPackages[3].ctaLabel, "Talk to Sales");
+  assert.equal(pricingPackagesByRegion.global[0].price, "$199/mo");
+  assert.equal(pricingPackagesByRegion.global[3].priceDetail, "Typically starts from $2,999/mo based on rollout scope.");
   assert.ok(siteContent.homepage.faq.items.every((item) => item.answer.length > 0));
   assert.equal(siteContent.useCases.whatsapp.metadata.title, "WhatsApp Automation Workflows and AI Chatbots | FLOW by Crescora");
   assert.equal(siteContent.useCases.whatsapp.services.length, 6);
@@ -99,6 +131,93 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.equal(siteContent.contact.details.items[1].value, "support@crescora.ai");
   assert.equal(siteContent.contact.details.items[2].value, "navya@crescora.ai");
   assert.equal(siteContent.contact.details.items[3].value, "2nd floor, Urbanrise Oncloud 33, Bachupally, Hyderabad, Telangana, India");
+  assert.equal(siteContent.industries.hospitals.metadata.title, "Hospital Automation Software for Appointments, Patient Enquiries, Reports, and Follow-Ups | Crescora FLOW");
+  assert.equal(siteContent.industries.hospitals.hero.eyebrow, "Hospital automation");
+  assert.equal(siteContent.industries.hospitals.hero.primaryCta.label, "Book Hospital Demo");
+  assert.equal(siteContent.industries.hospitals.overviewCards.length, 2);
+  assert.equal(siteContent.industries.hospitals.workflowSection.cards.length, 7);
+  assert.equal(siteContent.industries.hospitals.workflowSection.cards[3].title, "Lab tests and reports");
+  assert.equal(siteContent.industries.hospitals.comparison.rows.length, 6);
+  assert.equal(siteContent.industries.hospitals.patientJourney.steps.length, 8);
+  assert.ok(siteContent.industries.hospitals.safety.emergencyNote.includes("should not replace emergency medical care"));
+  assert.equal(siteContent.industries.hospitals.startingWorkflows.cards.length, 5);
+  assert.equal(siteContent.industries.hospitals.finalCta.title, "Ready to automate your hospital front desk workflow?");
+  assert.equal(siteContent.industries.clinics.metadata.title, "Clinic Appointment Automation Software for Bookings, Reminders, Follow-Ups, and Patient Support | Crescora FLOW");
+  assert.equal(siteContent.industries.clinics.hero.eyebrow, "Clinic automation");
+  assert.equal(siteContent.industries.clinics.hero.primaryCta.label, "Book Clinic Demo");
+  assert.equal(siteContent.industries.clinics.overviewCards.length, 2);
+  assert.equal(siteContent.industries.clinics.workflowSection.cards.length, 7);
+  assert.equal(siteContent.industries.clinics.workflowSection.cards[5].title, "Clinic FAQs");
+  assert.ok(siteContent.industries.clinics.workflowSection.supportLine.includes("appointment, payment, form"));
+  assert.equal(siteContent.industries.clinics.comparison.rows.length, 6);
+  assert.equal(siteContent.industries.clinics.patientJourney.steps.length, 8);
+  assert.ok(siteContent.industries.clinics.safety.emergencyNote.includes("should not replace emergency care or medical diagnosis"));
+  assert.equal(siteContent.industries.clinics.startingWorkflows.cards.length, 5);
+  assert.equal(siteContent.industries.clinics.finalCta.title, "Ready to automate your clinic appointment workflow?");
+  assert.equal(
+    siteContent.industries.education.metadata.title,
+    "Education Automation Software for Admissions, Demo Bookings, Fee Reminders, and Follow-Ups | Crescora FLOW",
+  );
+  assert.equal(siteContent.industries.education.hero.eyebrow, "Education automation");
+  assert.equal(siteContent.industries.education.hero.secondaryCta.label, "Discuss My Admissions Workflow");
+  assert.equal(siteContent.industries.education.hero.previewSteps.length, 6);
+  assert.equal(siteContent.industries.education.painPoints.length, 6);
+  assert.equal(siteContent.industries.education.workflows.length, 8);
+  assert.equal(siteContent.industries.education.workflows[7].title, "Support and FAQ automation");
+  assert.equal(siteContent.industries.education.journey.steps.length, 9);
+  assert.equal(siteContent.industries.education.comparison.rows.length, 6);
+  assert.equal(siteContent.industries.education.trust.cards.length, 5);
+  assert.equal(siteContent.industries.education.metrics.items.length, 7);
+  assert.equal(siteContent.industries.education.finalCta.title, "Ready to automate your admissions follow-up workflow?");
+  assert.equal(
+    siteContent.industries.realEstate.metadata.title,
+    "Real Estate Automation Software for Lead Qualification, Site Visits, and Follow-Ups | Crescora FLOW",
+  );
+  assert.equal(siteContent.industries.realEstate.hero.eyebrow, "Real estate automation");
+  assert.equal(siteContent.industries.realEstate.hero.secondaryCta.label, "Discuss My Sales Workflow");
+  assert.equal(siteContent.industries.realEstate.hero.previewSteps.length, 6);
+  assert.equal(siteContent.industries.realEstate.painPoints.length, 7);
+  assert.equal(siteContent.industries.realEstate.painPoints[6].title, "No clear pipeline visibility");
+  assert.equal(siteContent.industries.realEstate.workflows.length, 8);
+  assert.equal(siteContent.industries.realEstate.workflows[2].title, "Project matching and brochure sharing");
+  assert.equal(siteContent.industries.realEstate.projectSharing.items.length, 9);
+  assert.equal(siteContent.industries.realEstate.journey.steps.length, 9);
+  assert.equal(siteContent.industries.realEstate.comparison.rows.length, 6);
+  assert.equal(siteContent.industries.realEstate.trust.cards.length, 5);
+  assert.equal(siteContent.industries.realEstate.metrics.items.length, 6);
+  assert.equal(siteContent.industries.realEstate.finalCta.title, "Ready to automate your real estate lead follow-up workflow?");
+  assert.equal(
+    siteContent.industries.supportTeams.metadata.title,
+    "Customer Support Automation Software for FAQ, Triage, Ticket Routing, and Escalation | Crescora FLOW",
+  );
+  assert.equal(siteContent.industries.supportTeams.hero.eyebrow, "Customer support automation");
+  assert.equal(siteContent.industries.supportTeams.hero.secondaryCta.label, "Discuss My Support Workflow");
+  assert.equal(siteContent.industries.supportTeams.hero.previewSteps.length, 6);
+  assert.equal(siteContent.industries.supportTeams.overviewCards.length, 2);
+  assert.equal(siteContent.industries.supportTeams.painPoints.length, 6);
+  assert.equal(siteContent.industries.supportTeams.workflows.length, 8);
+  assert.equal(siteContent.industries.supportTeams.workflows[2].title, "Ticket creation");
+  assert.equal(siteContent.industries.supportTeams.journey.steps.length, 8);
+  assert.equal(siteContent.industries.supportTeams.comparison.rows.length, 6);
+  assert.equal(siteContent.industries.supportTeams.difference.cards.length, 5);
+  assert.equal(siteContent.industries.supportTeams.observability.cards.length, 6);
+  assert.equal(siteContent.industries.supportTeams.metrics.items.length, 6);
+  assert.equal(siteContent.industries.supportTeams.finalCta.title, "Ready to automate your support workflow?");
+  assert.equal(
+    siteContent.industries.serviceBusinesses.metadata.title,
+    "Service Business Automation Software for Bookings, Payments, Reminders, and Follow-Ups | Crescora FLOW",
+  );
+  assert.equal(siteContent.industries.serviceBusinesses.hero.eyebrow, "Service business automation");
+  assert.equal(siteContent.industries.serviceBusinesses.hero.primaryCta.label, "Book Service Business Demo");
+  assert.equal(siteContent.industries.serviceBusinesses.hero.previewSteps.length, 7);
+  assert.equal(siteContent.industries.serviceBusinesses.overviewCards.length, 2);
+  assert.equal(siteContent.industries.serviceBusinesses.painPoints.length, 6);
+  assert.equal(siteContent.industries.serviceBusinesses.workflows.length, 8);
+  assert.equal(siteContent.industries.serviceBusinesses.workflows[2].title, "Payment and collection follow-ups");
+  assert.equal(siteContent.industries.serviceBusinesses.journey.steps.length, 9);
+  assert.equal(siteContent.industries.serviceBusinesses.comparison.rows.length, 6);
+  assert.equal(siteContent.industries.serviceBusinesses.metrics.items.length, 6);
+  assert.equal(siteContent.industries.serviceBusinesses.finalCta.title, "Ready to automate your service booking workflow?");
   assert.equal(siteContent.leadForm.badge, "Workflow enquiry");
   assert.equal(siteContent.leadForm.title, "Book a free workflow demo");
   assert.equal(
@@ -121,24 +240,40 @@ test("homepage copy reflects the conversion-focused messaging", () => {
 
 test("about page copy reflects the workflow example positioning", () => {
   assert.equal(siteContent.about.metadata.title, "About | Crescora AI");
-  assert.equal(siteContent.about.metadata.description, "Crescora AI helps Indian businesses turn enquiries into automated workflows.");
+  assert.equal(
+    siteContent.about.metadata.description,
+    "Crescora AI builds AI workflow automation for enquiries, follow-ups, bookings, support, and business operations.",
+  );
   assert.equal(siteContent.about.hero.eyebrow, "About Crescora AI");
-  assert.equal(siteContent.about.hero.title, "Crescora AI builds practical automation for customer conversations and business workflows.");
-  assert.equal(siteContent.about.hero.description, "We help Indian businesses turn enquiries, repeated questions, bookings, follow-ups, payments, documents, and support requests into structured automated workflows with human control where it matters.");
+  assert.equal(siteContent.about.hero.title, "Crescora AI builds practical automation for customer conversations, workflows, and follow-ups.");
+  assert.equal(
+    siteContent.about.hero.description,
+    "We help businesses turn enquiries, repeated questions, bookings, payments, documents, support requests, and follow-ups into structured workflows with human control where it matters.",
+  );
+  assert.equal(siteContent.about.hero.workflowSteps?.length, 6);
+  assert.equal(siteContent.about.hero.workflowSignals?.[0], "Runtime execution and workflow validation");
   assert.equal(siteContent.about.hero.primaryCta.label, "Book Free Demo");
   assert.equal(siteContent.about.hero.secondaryCta.label, "Explore FLOW");
   assert.equal(siteContent.about.whoWeAre.title, "Who we are");
   assert.equal(siteContent.about.mission.description, "Our mission is to help businesses reduce manual follow-up work and respond to customers faster without losing human control.");
+  assert.equal(siteContent.about.mission.card, "Turn every customer request into a clear, trackable workflow.");
   assert.equal(siteContent.about.whatWeBuild.items.length, 10);
+  assert.ok(siteContent.about.whatWeBuild.support?.includes("fallback paths"));
   assert.equal(siteContent.about.whyWeBuiltFlow.paragraphs.length, 2);
   assert.equal(siteContent.about.belief.card, "Start small. Prove value. Scale with confidence.");
   assert.equal(siteContent.about.whoWeHelp.cards.length, 6);
   assert.equal(siteContent.about.howWeWork.steps.length, 6);
   assert.equal(siteContent.about.different.cards.length, 5);
+  assert.equal(siteContent.about.different.cards[3].title, "India-first, global-ready");
+  assert.equal(siteContent.about.trust.title, "Built for automation with control");
+  assert.equal(siteContent.about.trust.cards?.length, 4);
   assert.equal(siteContent.about.trust.bullets.length, 6);
-  assert.equal(siteContent.about.product.details[0], "When businesses use FLOW, they get a structured way to automate customer journeys such as enquiries, bookings, follow-ups, document collection, payment confirmation, support routing, and team handover.");
+  assert.equal(siteContent.about.product.title, "Crescora AI is the company. FLOW is the product.");
+  assert.equal(siteContent.about.product.details[0], "FLOW combines workflow builder, runtime execution, reminders, integrations, human handover, analytics, and monitoring in one product layer.");
   assert.equal(siteContent.about.pilot.cta.label, "Book Free Demo");
-  assert.equal(siteContent.about.finalCta.title, "Ready to automate your first customer workflow?");
+  assert.equal(siteContent.about.finalCta.title, "Ready to turn your customer workflow into automation?");
+  assert.equal(siteContent.about.finalCta.note, "Start with one workflow. Prove value. Expand with confidence.");
+  assert.ok(siteContent.about.finalCta.summary?.includes("documents, payments, support, or follow-ups"));
   assert.equal(siteContent.about.finalCta.secondary.label, "Discuss My Workflow");
   assert.equal(siteContent.about.cta.label, "Book Free Demo");
 });
@@ -146,12 +281,22 @@ test("about page copy reflects the workflow example positioning", () => {
 test("proof page copy uses workflow example language", () => {
   assert.equal(siteContent.proofIndex.metadata.title, "Workflow Examples | FLOW by Crescora");
   assert.equal(siteContent.proofIndex.hero.eyebrow, "Workflow examples");
-  assert.equal(siteContent.proofIndex.hero.title, "See how FLOW can work in real business scenarios.");
-  assert.equal(siteContent.proofIndex.notice, "These examples are designed to help you understand how a FLOW pilot can be planned, built, tested, and expanded for your industry. They focus on workflow structure, team control, handover points, and measurable outcomes.");
-  assert.equal(siteContent.proofIndex.section.title, "Workflow examples for priority industries.");
+  assert.equal(siteContent.proofIndex.hero.title, "See how FLOW moves customer requests from enquiry to outcome.");
+  assert.equal(siteContent.proofIndex.hero.trustLine, "Built for real operations - intake, routing, reminders, payments, documents, handover, analytics, and continuous improvement.");
+  assert.equal(siteContent.proofIndex.hero.previewSteps?.length, 6);
+  assert.equal(siteContent.proofIndex.notice, "These examples show how a FLOW pilot can be planned, built, tested, and expanded for your industry. They are designed to help teams understand workflow structure, customer journey, team ownership, handover points, and measurable business outcomes before rollout.");
+  assert.equal(siteContent.proofIndex.section.title, "Workflow examples for high-impact business operations.");
+  assert.equal(siteContent.proofIndex.comparison.rows.length, 6);
   assert.equal(siteContent.proofIndex.includes.items.length, 8);
+  assert.equal(siteContent.proofIndex.includes.items[4], "Follow-up and reminder steps");
+  assert.equal(siteContent.proofIndex.metrics.items.length, 6);
+  assert.equal(siteContent.proofIndex.credibility.cards.length, 4);
+  assert.equal(siteContent.proofIndex.finalCta.title, "Ready to map your workflow into a FLOW pilot?");
+  assert.equal(siteContent.proofIndex.finalCta.note, "Start with one workflow. Measure the outcome. Expand with confidence.");
   assert.equal(siteContent.ctas.openProofPage.label, "Open workflow example →");
-  assert.equal(proofCards[0].text, "See how a hospital or clinic can automate appointment intake, patient reminders, document collection, payment follow-up, and safe handover for sensitive cases.");
+  assert.equal(proofCards[0].text, "See how hospitals and clinics can automate appointment intake, patient details collection, doctor or department routing, payment follow-up, lab report requests, reminders, and staff handover for urgent or complex cases.");
+  assert.equal(proofCards[1].ctaLabel, "View Real Estate Example →");
+  assert.equal(proofCards[2].outcomeTags?.length, 3);
 });
 
 test("legal page copy is structured and no longer placeholder text", () => {

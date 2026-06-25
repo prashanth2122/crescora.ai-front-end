@@ -408,17 +408,23 @@ export const proofCards = [
   {
     title: "Healthcare Front Desk Automation",
     href: "/proof/healthcare-front-desk-automation",
-    text: "See how a hospital or clinic can automate appointment intake, patient reminders, document collection, payment follow-up, and safe handover for sensitive cases.",
+    text: "See how hospitals and clinics can automate appointment intake, patient details collection, doctor or department routing, payment follow-up, lab report requests, reminders, and staff handover for urgent or complex cases.",
+    ctaLabel: "View Healthcare Example →",
+    outcomeTags: ["Reduce missed enquiries", "Improve follow-up discipline", "Route cases faster"],
   },
   {
     title: "Real Estate Lead Operations",
     href: "/proof/real-estate-lead-operations",
-    text: "See how real estate teams can qualify leads, share project details, book site visits, assign sales follow-ups, and track outcomes from enquiry to visit.",
+    text: "See how real estate teams can qualify property leads, collect budget and location preferences, share project details, schedule site visits, send reminders, and route hot leads to sales teams.",
+    ctaLabel: "View Real Estate Example →",
+    outcomeTags: ["Qualify faster", "Book more visits", "Route hot leads sooner"],
   },
   {
     title: "Education Admissions Workflow",
     href: "/proof/education-admissions-workflow",
-    text: "See how schools, colleges, and coaching teams can handle admission enquiries, demo class bookings, counselor handover, document collection, and follow-ups.",
+    text: "See how schools, colleges, and coaching centers can manage admission enquiries, course or batch questions, demo class booking, document collection, fee reminders, and counsellor handover.",
+    ctaLabel: "View Education Example →",
+    outcomeTags: ["Respond faster", "Collect the right details", "Improve counsellor handover"],
   },
 ] as const;
 

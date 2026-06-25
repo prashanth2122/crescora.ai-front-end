@@ -1,14 +1,12 @@
-import Link from "next/link";
-
-import { pricingPackages } from "@/lib/site-data";
+import { defaultPricingRegion, pricingPackagesByRegion, pricingRegions } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
+import { PricingPackagesSection } from "@/components/site/pricing-packages-section";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
   buildAbsoluteUrl,
   buildFaqPageSchema,
@@ -30,11 +28,13 @@ const pricingBreadcrumbs = buildBreadcrumbSchema([
 
 const pricingPackagesSchema = buildItemListSchema(
   "FLOW pricing packages",
-  pricingPackages.map((pkg) => ({
-    name: pkg.title,
-    url: buildAbsoluteUrl("/pricing"),
-    description: `${pkg.price}${pkg.priceDetail ? ` (${pkg.priceDetail})` : ""} - Best for ${pkg.bestFor}`,
-  })),
+  pricingRegions.flatMap((region) =>
+    pricingPackagesByRegion[region.value].map((pkg) => ({
+      name: `${pkg.title} (${region.label})`,
+      url: buildAbsoluteUrl("/pricing"),
+      description: `${pkg.price}${pkg.priceDetail ? ` (${pkg.priceDetail})` : ""} - Best for ${pkg.bestFor}`,
+    })),
+  ),
 );
 
 export default function PricingPage() {
@@ -60,48 +60,55 @@ export default function PricingPage() {
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="grid gap-4 lg:grid-cols-4">
-          {pricingPackages.map((pkg) => (
-            <Card
-              key={pkg.title}
-              className="flex h-full flex-col border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]"
-            >
-              <CardContent className="flex h-full flex-col p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{pkg.label}</p>
-                <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{pkg.title}</h2>
-                <div className="mt-4">
-                  <p className="text-3xl font-semibold tracking-tight text-zinc-950">{pkg.price}</p>
-                  {pkg.priceDetail ? (
-                    <p className="mt-1 text-sm font-medium leading-6 text-zinc-500">{pkg.priceDetail}</p>
-                  ) : null}
-                </div>
-                <p className="mt-3 text-sm font-medium leading-7 text-zinc-950">Best for</p>
-                <p className="text-sm leading-7 text-zinc-600">{pkg.bestFor}</p>
-                <p className="mt-4 text-sm font-medium leading-7 text-zinc-950">Includes</p>
-                <ul className="mt-2 space-y-2 text-sm leading-7 text-zinc-600">
-                  {pkg.includes.map((item) => (
-                    <li key={item} className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="rounded-[1.75rem] border border-zinc-200 bg-white/85 px-6 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+          <p className="text-sm font-medium leading-7 text-zinc-700">{siteContent.pricing.hero.trustLine}</p>
         </div>
 
-        <div className="mt-6 rounded-[1.5rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-          <p className="text-sm leading-7 text-zinc-600">{siteContent.pricing.note}</p>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
-              <Link href={siteContent.pricing.ctas.primary.href}>{siteContent.pricing.ctas.primary.label}</Link>
-            </Button>
-            <Button asChild variant="outline" className="h-12 rounded-full px-6">
-              <Link href={siteContent.pricing.ctas.secondary.href}>{siteContent.pricing.ctas.secondary.label}</Link>
-            </Button>
+        <section className="mt-8 rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">
+            {siteContent.pricing.included.title}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            {siteContent.pricing.included.items.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-700"
+              >
+                {item}
+              </span>
+            ))}
           </div>
-        </div>
+        </section>
+
+        <PricingPackagesSection
+          defaultRegion={defaultPricingRegion}
+          regionLabel={siteContent.pricing.regionSelector.label}
+          regionHelperText={siteContent.pricing.regionSelector.helperText}
+          regionOptions={pricingRegions}
+          regionNotes={siteContent.pricing.regionNotes}
+          packagesByRegion={pricingPackagesByRegion}
+          scopeNote={siteContent.pricing.scopeNote}
+          primaryCta={siteContent.pricing.ctas.primary}
+          secondaryCta={siteContent.pricing.ctas.secondary}
+        />
+
+        <section className="mt-16">
+          <SectionHeading
+            eyebrow={siteContent.pricing.factors.eyebrow}
+            title={siteContent.pricing.factors.title}
+            description={siteContent.pricing.factors.description}
+          />
+          <div className="mt-10 grid gap-4 lg:grid-cols-5">
+            {siteContent.pricing.factors.items.map((item) => (
+              <Card key={item.title} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold tracking-tight text-zinc-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
 
         <section className="mt-16">
           <SectionHeading

@@ -51,6 +51,9 @@ export type PricingPackage = {
   priceDetail?: string;
   bestFor: string;
   includes: readonly string[];
+  ctaLabel: string;
+  featured?: boolean;
+  badge?: string;
 };
 
 export const pricingPackages: readonly PricingPackage[] = [
@@ -58,32 +61,117 @@ export const pricingPackages: readonly PricingPackage[] = [
     label: "FIRST WORKFLOW",
     title: "Starter",
     price: "₹10,000/mo",
-    bestFor: "First workflow for small teams starting automation.",
-    includes: ["One focused workflow", "Basic setup and testing", "Demo walkthrough"],
+    bestFor: "Small teams launching their first focused automation.",
+    includes: [
+      "1 focused workflow",
+      "Web chat or demo workflow setup",
+      "Basic flow setup and testing",
+      "Lead capture, FAQ, booking, or follow-up use case",
+      "Demo walkthrough and launch guidance",
+    ],
+    ctaLabel: "Start with Starter",
   },
   {
     label: "GROWING OPERATIONS",
     title: "Growth",
     price: "₹49,999/mo",
-    bestFor: "Best value plan for most hospitals, clinics, real estate teams, and service businesses.",
-    includes: ["Multiple workflows", "Stronger follow-ups and reminders", "Wider coverage"],
+    bestFor:
+      "Clinics, real estate teams, coaching centers, labs, and service businesses that need multiple automated customer journeys.",
+    includes: [
+      "Multiple workflows",
+      "Customer follow-ups and reminders",
+      "Appointment, lead, support, or payment workflow",
+      "Basic reporting and workflow improvements",
+      "Wider channel coverage based on scope",
+    ],
+    ctaLabel: "Choose Growth",
+    featured: true,
+    badge: "Most Popular",
   },
   {
     label: "CROSS-TEAM DELIVERY",
     title: "Business",
     price: "₹99,999/mo",
-    bestFor: "For serious operations with teams, handoffs, integrations, and reporting.",
-    includes: ["Multiple teams and routes", "Handoffs and connected systems", "Reporting and visibility"],
+    bestFor:
+      "Teams that need automation across departments, routes, handovers, integrations, and reporting.",
+    includes: [
+      "Multi-team workflows and routing",
+      "Human handoff and escalation paths",
+      "CRM, sheet, booking, or API sync support",
+      "Reporting and operational visibility",
+      "Priority workflow optimization",
+    ],
+    ctaLabel: "Choose Business",
   },
   {
     label: "COMPLEX ROLLOUTS",
     title: "Enterprise",
     price: "Custom",
-    priceDetail: "from ₹2,49,999/mo",
-    bestFor: "For multi-location and complex rollout requirements.",
-    includes: ["Custom workflows", "Advanced integrations", "Rollout planning and support"],
+    priceDetail: "Typically starts from ₹2,49,999/mo based on rollout scope.",
+    bestFor:
+      "Multi-location teams, regulated workflows, complex integrations, and advanced rollout requirements.",
+    includes: [
+      "Custom workflow architecture",
+      "Advanced integrations",
+      "Governance, approvals, and audit-ready workflows",
+      "Rollout planning and dedicated support",
+      "Multi-team automation strategy",
+    ],
+    ctaLabel: "Talk to Sales",
   },
 ] as const;
+
+export type PricingRegion = "india" | "global";
+
+export const defaultPricingRegion: PricingRegion = "india";
+
+export const pricingRegions = [
+  { value: "india", label: siteContent.pricing.regionSelector.indiaLabel },
+  { value: "global", label: siteContent.pricing.regionSelector.globalLabel },
+] as const satisfies ReadonlyArray<{ value: PricingRegion; label: string }>;
+
+const globalPricingPackages: readonly PricingPackage[] = [
+  {
+    label: "FIRST WORKFLOW",
+    title: "Starter",
+    price: "$199/mo",
+    bestFor: pricingPackages[0].bestFor,
+    includes: pricingPackages[0].includes,
+    ctaLabel: pricingPackages[0].ctaLabel,
+  },
+  {
+    label: "GROWING OPERATIONS",
+    title: "Growth",
+    price: "$599/mo",
+    bestFor: pricingPackages[1].bestFor,
+    includes: pricingPackages[1].includes,
+    ctaLabel: pricingPackages[1].ctaLabel,
+    featured: pricingPackages[1].featured,
+    badge: pricingPackages[1].badge,
+  },
+  {
+    label: "CROSS-TEAM DELIVERY",
+    title: "Business",
+    price: "$1,199/mo",
+    bestFor: pricingPackages[2].bestFor,
+    includes: pricingPackages[2].includes,
+    ctaLabel: pricingPackages[2].ctaLabel,
+  },
+  {
+    label: "COMPLEX ROLLOUTS",
+    title: "Enterprise",
+    price: "Custom",
+    priceDetail: "Typically starts from $2,999/mo based on rollout scope.",
+    bestFor: pricingPackages[3].bestFor,
+    includes: pricingPackages[3].includes,
+    ctaLabel: pricingPackages[3].ctaLabel,
+  },
+] as const;
+
+export const pricingPackagesByRegion = {
+  india: pricingPackages,
+  global: globalPricingPackages,
+} as const satisfies Record<PricingRegion, readonly PricingPackage[]>;
 
 export const faqItems = siteContent.homepage.faq.items;
 

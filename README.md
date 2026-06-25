@@ -65,10 +65,10 @@ This keeps route components thin and makes future localization work straightforw
 - homepage terminology now prefers `handover` over `handoff`, the workflow step copy uses the booking/payment/document wording, and the homepage FAQ is collapsed by default so the route stays easier to scan
 - the shared header currently omits the language switcher and keeps only navigation plus sales/demo CTAs
 - the about page uses the same product-first CTA labels and automation-focused positioning so it stays aligned with the rest of the site
-- the about page now includes structured sections for who we are, mission, product relationship, pilot program, and final CTA so the company story stays centralized
+- the about page now includes a workflow-path hero visual, stronger platform and trust proof, a clearer Crescora-vs-FLOW product relationship section, and a stronger bottom CTA so the company story stays centralized in `src/lib/site-content.ts`
 - the homepage now stays focused on hero, pain, workflow automation, featured industries, pilot scope, trust / FAQ, and a compact deeper-links block; detailed solutions, pricing, blog content, and the full lead intake live on their dedicated routes
 - the homepage now also carries a shared SEO coverage section for channels, integrations, and service categories so core search intent stays centralized in `src/lib/site-content.ts`
-- the proof route now uses workflow-example language, a public rollout note, and a structured includes section instead of defensive illustrative-proof wording
+- the proof route now uses workflow-example language, a stronger enquiry-to-outcome hero, richer industry example cards, a before-vs-after comparison block, pilot outcome metrics, and a stronger workflow-pilot CTA
 - the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
 - the privacy policy now renders at `/privacy`
 - the terms of service now render at `/terms`
@@ -78,9 +78,17 @@ This keeps route components thin and makes future localization work straightforw
 - page transitions now use CSS-based entry animation so content paints immediately instead of waiting on a hydration timer
 - contact details are centralized in `src/lib/site-content.ts` and shown on the contact page plus the footer for sales, support, CEO correspondence, and office location
 - the platform hero, workflow visual, capability cards, and start-here CTA are also centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts`
-- the industries hub now uses customer-facing priority cards, a compact more-industries chip list, a public CTA box, and a clearer SEO landing-page heading
+- the industries hub now uses a stronger workflow-first hero, a platform proof strip, outcome-focused industry cards, a broader workflow-engine section, and a tighter public CTA
+- `/industries/hospitals` now uses dedicated hospital-facing copy, a patient-workflow hero visual, safety/handover guidance, workflow-specific sections, and a stronger hospital-demo CTA instead of the generic SEO-template page
+- `/industries/clinics` now uses dedicated clinic-facing copy, a clinic-workflow hero visual, workflow/support sections, safety/human-control guidance, and a stronger clinic-demo CTA instead of the generic SEO-template page
+- `/industries/education` now uses dedicated admissions-focused copy, a right-side workflow-path hero visual, richer enquiry-to-admission workflow sections, trust/control guidance, outcome metrics, and a stronger education-demo CTA instead of the generic SEO-template page
+- `/industries/real-estate` now uses dedicated sales-workflow copy, a buyer-path hero visual, richer qualification and project-sharing sections, trust/control plus metrics coverage, and a stronger real-estate CTA instead of the generic SEO-template page
+- `/industries/support-teams` now uses dedicated support-automation copy, a support-workflow hero visual, safe triage and escalation messaging, observability coverage, outcome metrics, and a stronger support-demo CTA instead of the generic SEO-template page
+- `/industries/service-businesses` now uses dedicated booking-and-collections copy, a service-workflow hero visual, richer booking/payment sections, before-vs-after proof, outcome metrics, and a stronger service-business CTA instead of the generic SEO-template page
 - the use-cases hub now surfaces 12 workflow cards, icon-backed card treatments, a more-workflows chip strip, and a help-me-choose CTA block with matching detail pages for the expanded menu
-- the pricing page now uses automation-first wording, explicit tier pricing, package guidance with best-for/includes details, a pricing FAQ, and a demo-first CTA path
+- the workflows hub now uses launch-ready blueprint positioning, a customer-journey proof strip, richer workflow template cards, a why-templates-matter section, and a stronger bottom CTA
+- the templates hub now uses ready-to-use template positioning, a launch-coverage strip, filter chips, richer request-template cards, and a stronger bottom CTA
+- the pricing page now uses automation-first wording, India/global billing-region pricing, richer best-for/includes tier detail, pricing-scope education, and an expanded FAQ plus CTA path
 - the solutions hub keeps the query-led structure but now uses equal-height cards and arrow-style solution links for clearer scanning
 - the lead form copy, country selector, country-aware phone validation, validation copy, and optional channel qualification field are centralized in `src/components/site/lead-form.tsx` and `src/lib/site-content.ts`
 - the public lead form now posts to the local `/api/lead` route, which forwards submissions to the backend customer-intake API using a short-lived token; the shared backend origin lives in `src/lib/app-config.ts` and can still be overridden with `CUSTOMER_INTAKE_API_BASE_URL` (default `http://localhost:4000`)

@@ -512,21 +512,29 @@ export const siteContent = {
   about: {
     metadata: {
       title: "About | Crescora AI",
-      description: "Crescora AI helps Indian businesses turn enquiries into automated workflows.",
+      description:
+        "Crescora AI builds AI workflow automation for enquiries, follow-ups, bookings, support, and business operations.",
     },
     hero: {
       eyebrow: "About Crescora AI",
-      title: "Crescora AI builds practical automation for customer conversations and business workflows.",
+      title: "Crescora AI builds practical automation for customer conversations, workflows, and follow-ups.",
       description:
-        "We help Indian businesses turn enquiries, repeated questions, bookings, follow-ups, payments, documents, and support requests into structured automated workflows with human control where it matters.",
+        "We help businesses turn enquiries, repeated questions, bookings, payments, documents, support requests, and follow-ups into structured workflows with human control where it matters.",
+      workflowSteps: ["Enquiry", "Qualification", "Booking", "Reminder", "Handover", "Outcome"],
+      workflowSignals: [
+        "Runtime execution and workflow validation",
+        "Human handover and approval controls",
+        "Queue status, reminders, and retries",
+        "Analytics, records, and API sync",
+      ],
       primaryCta: { label: "Book Free Demo", href: "/contact" },
       secondaryCta: { label: "Explore FLOW", href: "/platform" },
     },
     whoWeAre: {
       title: "Who we are",
       paragraphs: [
-        "Crescora AI is the company behind FLOW, a business automation platform designed to help teams manage customer conversations, workflow steps, and follow-ups in a more structured way.",
-        "FLOW is built for businesses that depend on daily customer interactions across WhatsApp, website chat, calls, forms, and internal tools. Instead of handling every enquiry manually, teams can use FLOW to guide customers through clear journeys such as lead capture, appointment booking, document collection, payment confirmation, FAQ support, and human handover.",
+        "Crescora AI builds automation systems for businesses that depend on fast customer response and consistent follow-up.",
+        "Our product, FLOW, helps teams convert scattered customer conversations into structured workflows. A customer enquiry can be captured, qualified, routed, booked, followed up, synced to records, and escalated to a human team when required.",
       ],
     },
     mission: {
@@ -535,11 +543,13 @@ export const siteContent = {
         "Our mission is to help businesses reduce manual follow-up work and respond to customers faster without losing human control.",
       support:
         "We believe automation should not replace teams. It should help teams focus on important conversations while routine steps are handled consistently.",
-      card: "Turn customer conversations into completed business outcomes.",
+      card: "Turn every customer request into a clear, trackable workflow.",
     },
     whatWeBuild: {
       title: "What we build",
       description: "We build automation systems that connect customer messages to business actions.",
+      support:
+        "Each workflow can be designed with intake, routing, reminders, payments, records, handover, analytics, and fallback paths so the customer journey does not depend only on manual effort.",
       items: [
         "Lead capture and qualification",
         "WhatsApp enquiry handling",
@@ -556,8 +566,8 @@ export const siteContent = {
     whyWeBuiltFlow: {
       title: "Why we built FLOW",
       paragraphs: [
-        "Many businesses do not lose customers because demand is low. They lose customers because responses are delayed, follow-ups are missed, documents are pending, payments are not tracked, and support teams repeat the same answers every day.",
-        "FLOW was built to solve this gap. It gives businesses a clear way to move from customer enquiry to next step, while keeping important decisions under team control.",
+        "Many businesses are not losing revenue because they lack demand. They lose revenue because customer requests get stuck between chats, calls, forms, spreadsheets, team members, and manual follow-ups.",
+        "FLOW was built to bring those steps into one structured operating flow. It helps teams respond faster, capture the right information, automate routine actions, escalate exceptions, and track outcomes with more visibility.",
       ],
     },
     belief: {
@@ -572,27 +582,27 @@ export const siteContent = {
       cards: [
         {
           title: "Hospitals and Clinics",
-          text: "Appointments, patient FAQs, reminders, document collection, and safe handover.",
+          text: "Appointment booking, patient FAQs, reminders, document collection, payment updates, report requests, and staff handover.",
         },
         {
           title: "Real Estate Teams",
-          text: "Lead qualification, project details, site visit booking, follow-ups, and sales handover.",
+          text: "Lead qualification, project details, site visit booking, budget capture, follow-ups, reminders, and sales handover.",
         },
         {
           title: "Education and Coaching",
-          text: "Admission enquiries, course FAQs, demo class booking, document collection, and counselor routing.",
+          text: "Admission enquiries, course FAQs, demo class booking, document collection, fee reminders, and counsellor routing.",
         },
         {
           title: "Support Teams",
-          text: "FAQ automation, issue capture, ticket creation, escalation, and customer updates.",
+          text: "FAQ automation, issue capture, ticket creation, escalation, status updates, and customer follow-ups.",
         },
         {
           title: "Service Businesses",
-          text: "Bookings, reminders, payment follow-ups, service requests, and customer communication.",
+          text: "Bookings, reminders, payment follow-ups, service requests, customer updates, and repeat-visit communication.",
         },
         {
           title: "Diagnostics and Labs",
-          text: "Test enquiries, home collection booking, report updates, payment confirmation, and notifications.",
+          text: "Test enquiries, home collection booking, report updates, payment confirmation, reminders, and notifications.",
         },
       ],
     },
@@ -603,7 +613,7 @@ export const siteContent = {
       steps: [
         {
           title: "Discover",
-          text: "We understand your customer journey, repeated questions, manual steps, channels, and current tools.",
+          text: "We understand your customer journey, repeated questions, manual steps, current tools, and where customers or teams get stuck.",
         },
         {
           title: "Design",
@@ -615,7 +625,7 @@ export const siteContent = {
         },
         {
           title: "Test",
-          text: "We test real user scenarios, invalid inputs, handover cases, and edge conditions before launch.",
+          text: "We test real user scenarios, invalid inputs, handover cases, edge conditions, and fallback paths before launch.",
         },
         {
           title: "Launch",
@@ -623,7 +633,7 @@ export const siteContent = {
         },
         {
           title: "Improve",
-          text: "We review drop-offs, repeated questions, and missed opportunities to improve the workflow over time.",
+          text: "We review drop-offs, repeated questions, missed opportunities, support escalations, and workflow outcomes to improve the automation over time.",
         },
       ],
     },
@@ -643,8 +653,8 @@ export const siteContent = {
           text: "FLOW is not only a chatbot. It connects customer messages to business steps, records, reminders, and team actions.",
         },
         {
-          title: "Built for Indian businesses",
-          text: "Our positioning, workflows, and examples are designed around practical business needs in India.",
+          title: "India-first, global-ready",
+          text: "FLOW is designed around practical business needs in India, with workflows that can scale for global service teams as the business grows.",
         },
         {
           title: "Start small, expand later",
@@ -653,27 +663,45 @@ export const siteContent = {
       ],
     },
     trust: {
-      title: "Built for controlled automation",
+      title: "Built for automation with control",
       description:
-        "FLOW is designed to support routine automation while keeping teams in control of important decisions.",
+        "FLOW is designed to help teams automate routine work without losing visibility or ownership.",
+      cards: [
+        {
+          title: "Human handover",
+          text: "Escalate sensitive, urgent, or complex conversations to the right team with context.",
+        },
+        {
+          title: "Workflow visibility",
+          text: "Track conversations, pending tasks, reminders, drop-offs, and outcomes in one operating flow.",
+        },
+        {
+          title: "Governed automation",
+          text: "Use approvals, audit history, retries, and role-based controls where the process requires accountability.",
+        },
+        {
+          title: "Continuous improvement",
+          text: "Review delays, repeated questions, support patterns, and workflow results to improve launch quality over time.",
+        },
+      ],
       bullets: [
         "Human handover for sensitive or high-value conversations",
         "Fallback paths when a step fails or a user drops off",
         "API failure handling, retries, and safe escalation",
         "Preview before publishing and pre-launch testing",
-        "Workspace-based bot management with clear access",
-        "Visible progress for team action and outcome tracking",
+        "Role-based access, approvals, and audit history where required",
+        "Visible progress for team action, reporting, and outcome tracking",
       ],
     },
     product: {
-      title: "Crescora AI and FLOW",
+      title: "Crescora AI is the company. FLOW is the product.",
       description:
-        "Crescora AI is the company. FLOW is our automation product for customer conversations and business workflows.",
+        "Together they give teams one operating layer for customer conversations, workflow automation, follow-ups, and business visibility.",
       details: [
-        "When businesses use FLOW, they get a structured way to automate customer journeys such as enquiries, bookings, follow-ups, document collection, payment confirmation, support routing, and team handover.",
+        "FLOW combines workflow builder, runtime execution, reminders, integrations, human handover, analytics, and monitoring in one product layer.",
         "Company: Crescora AI",
         "Product: FLOW",
-        "Public name: FLOW by Crescora AI",
+        "Rollout model: launch one workflow first, then expand to more channels, teams, records, and use cases.",
       ],
     },
     pilot: {
@@ -691,7 +719,10 @@ export const siteContent = {
       cta: { label: "Book Free Demo", href: "/contact" },
     },
     finalCta: {
-      title: "Ready to automate your first customer workflow?",
+      title: "Ready to turn your customer workflow into automation?",
+      note: "Start with one workflow. Prove value. Expand with confidence.",
+      summary:
+        "Tell us how your team currently handles enquiries, bookings, documents, payments, support, or follow-ups. We will map your process and show the fastest FLOW automation to launch first.",
       description: "Tell us your industry and current process. We’ll suggest the best starting workflow for your business.",
       primary: { label: "Book Free Demo", href: "/contact" },
       secondary: { label: "Discuss My Workflow", href: "/contact" },
@@ -740,47 +771,112 @@ export const siteContent = {
   },
   pricing: {
     metadata: {
-      title: "FLOW Pricing | Business Automation Packages",
-      description: "Explore package-based plans for customer workflow automation, follow-ups, and rollout support.",
+      title: "FLOW Pricing | India and Global Automation Packages",
+      description:
+        "Explore India and global package-based plans for workflow automation, rollout support, and scoped implementation.",
     },
     hero: {
       eyebrow: "Pricing",
-      title: "Pricing that scales with your automation needs.",
+      title: "Launch one workflow first. Scale automation as your business grows.",
       description:
-        "Start with one focused workflow, then expand to more teams, channels, integrations, and customer journeys as you grow.",
+        "Start with a focused automation for leads, bookings, payments, documents, reminders, support, or handovers. Expand into more teams, channels, integrations, and customer journeys when your operations are ready.",
+      trustLine: "Plans are designed for real business workflows, not basic chatbot replies.",
       primaryCta: { label: "Book Free Demo", href: "/contact" },
       secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     },
-    note:
-      "Package pricing starts from the listed monthly rates and can still change with workflow scope, selected channels, integrations, automation complexity, and support requirements. We’ll recommend the right package after reviewing your use case.",
+    regionSelector: {
+      label: "Billing region",
+      helperText:
+        "Pricing changes by billing region, workflow scope, selected channels, integrations, automation complexity, and support requirements.",
+      indiaLabel: "India - INR ₹",
+      globalLabel: "Rest of World - USD $",
+    },
+    included: {
+      title: "Every plan includes",
+      items: [
+        "Workflow planning and setup guidance",
+        "Automation testing before launch",
+        "Customer-facing conversation flow",
+        "Admin visibility for workflow activity",
+        "Human handover path where required",
+        "Upgrade path as your workflow grows",
+      ],
+    },
+    scopeNote:
+      "Package pricing starts from the listed monthly rate. Final pricing is confirmed after understanding your workflow scope, selected channels, integrations, automation complexity, message volume, AI usage, and support needs. We recommend the right package after reviewing your use case.",
+    regionNotes: {
+      india:
+        "India pricing is shown in INR for India-billed customers. Final pricing still depends on workflow scope, selected channels, integrations, AI usage, support level, and rollout complexity.",
+      global:
+        "USD pricing is for customers outside India. Final pricing depends on workflow scope, selected channels, integrations, AI usage, support level, and rollout complexity.",
+    },
     ctas: {
       primary: { label: "Book Free Demo", href: "/contact" },
       secondary: { label: "Get Project Scope", href: "/contact" },
     },
+    factors: {
+      eyebrow: "What affects pricing",
+      title: "What affects your final pricing?",
+      description:
+        "The listed plan gives the starting package. Final scope depends on how much workflow depth, channel coverage, integration work, and rollout support your team needs.",
+      items: [
+        {
+          title: "Workflow scope",
+          description:
+            "Number of workflows, branches, forms, reminders, handovers, and business rules.",
+        },
+        {
+          title: "Channels",
+          description:
+            "Web chat, WhatsApp, and other approved customer touchpoints your workflow needs to support.",
+        },
+        {
+          title: "Integrations",
+          description:
+            "CRM, Google Sheets, booking tools, payment systems, internal APIs, or custom systems.",
+        },
+        {
+          title: "AI and automation depth",
+          description:
+            "FAQ answers, AI extraction, grounded responses, routing, summaries, and workflow logic.",
+        },
+        {
+          title: "Support and rollout",
+          description:
+            "Testing, optimization, team training, multi-location rollout, and ongoing support.",
+        },
+      ],
+    },
     faq: {
       eyebrow: "Pricing FAQ",
       title: "Common pricing questions before you book a demo.",
-      description: "These answers help buyers understand how FLOW pricing works when the rollout starts with one workflow.",
+      description:
+        "These answers help buyers understand how FLOW pricing works when the rollout starts with one workflow.",
       items: [
         {
-          question: "Can I start with one workflow?",
+          question: "Do you have separate pricing for India and global customers?",
           answer:
-            "Yes. Most clients start with one high-impact workflow such as lead capture, appointment booking, FAQ support, or payment and document follow-up.",
+            "Yes. India pricing is shown in INR and Rest of World pricing is shown in USD. Select your billing region from the pricing dropdown to view the correct package rates.",
+        },
+        {
+          question: "Are WhatsApp, SMS, payment gateway, and AI provider costs included?",
+          answer:
+            "Provider charges for WhatsApp, SMS, payment gateways, and AI services can vary based on your selected rollout scope, channels, usage volume, and support requirements. We confirm those costs during the scope discussion before launch.",
+        },
+        {
+          question: "Can I start with one workflow and upgrade later?",
+          answer:
+            "Yes. Most businesses start with one high-impact workflow such as lead capture, appointment booking, payment reminders, FAQ support, or document follow-up, then expand into more workflows over time.",
+        },
+        {
+          question: "Is setup included in the monthly price?",
+          answer:
+            "Basic setup and testing are included based on the selected plan. Complex integrations, custom workflows, multi-location rollout, or advanced automation may require separate implementation scope.",
         },
         {
           question: "Do I need WhatsApp from day one?",
           answer:
-            "No. You can start with web chat or a demo workflow and add WhatsApp once the flow is approved.",
-        },
-        {
-          question: "Does pricing change with integrations?",
-          answer:
-            "Yes. CRM, payment, booking, or custom API integrations can affect setup and support scope.",
-        },
-        {
-          question: "Can we upgrade later?",
-          answer:
-            "Yes. You can expand from one workflow to more teams, channels, and automations over time.",
+            "No. You can start with web chat or a demo workflow first, then add WhatsApp or other approved channels after the workflow is validated and approved.",
         },
       ],
     },
@@ -845,18 +941,190 @@ export const siteContent = {
         description: "Industry workflows built for real operations.",
       },
       hero: {
-        eyebrow: "Industries",
-        title: "Industry workflows FLOW can automate for your business.",
+        eyebrow: "Industry workflows",
+        title: "AI workflow automation for every service business.",
         description:
-          "Start with one proven workflow in your industry, then expand into more customer journeys, channels, and follow-ups.",
+          "Start with a proven industry workflow and automate the steps your team repeats every day - enquiries, bookings, documents, payments, reminders, support requests, approvals, and human handovers.",
         primaryCta: { label: "Book Free Demo", href: "/contact" },
         secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+        trustLine:
+          "Built for hospitals, clinics, schools, real estate, labs, coaching centers, finance teams, support teams, and service businesses.",
+        previewLabel: "Workflow preview",
+        previewTitle: "Enquiry to outcome, in one governed flow.",
+        previewSteps: [
+          "Enquiry",
+          "Qualification",
+          "Booking",
+          "Payment",
+          "Reminder",
+          "Handover",
+        ],
+      },
+      proofStrip: {
+        eyebrow: "Platform proof",
+        title: "Built to automate real operations, not just answer chats.",
+        description:
+          "FLOW supports conversation nodes, business logic, timing and reliability controls, integrations, records, documents, appointments, payments, human handoff, language handling, analytics, and AI-assisted steps.",
+        capabilities: [
+          "Lead Capture",
+          "Appointment Booking",
+          "Payments",
+          "Document Intake",
+          "Support Routing",
+          "Human Handoff",
+          "Reminders",
+          "Analytics",
+          "Knowledge Base",
+          "Governance",
+        ],
+        platformLine:
+          "50+ workflow node types, multi-channel automation, human handoff, payments, records, analytics, and governance.",
+      },
+      cards: [
+        {
+          title: "Hospitals",
+          href: "/industries/hospitals",
+          description:
+            "Automate appointment booking, patient intake, doctor routing, payments, lab report requests, admission enquiries, insurance support, reminders, and emergency handover.",
+          ctaLabel: "View Hospital Workflow",
+        },
+        {
+          title: "Clinics",
+          href: "/industries/clinics",
+          description:
+            "Reduce front-desk pressure with automated appointment booking, patient details collection, consultation fee collection, doctor availability checks, and follow-up reminders.",
+          ctaLabel: "View Clinic Workflow",
+        },
+        {
+          title: "Real Estate",
+          href: "/industries/real-estate",
+          description:
+            "Qualify property leads, collect budget and location preferences, share matching projects, schedule site visits, send reminders, and route hot leads to sales teams.",
+          ctaLabel: "View Real Estate Workflow",
+        },
+        {
+          title: "Education / Admissions",
+          href: "/industries/education",
+          description:
+            "Handle admission enquiries, collect student details, explain courses or programs, schedule counselling calls, send fee reminders, and route parents to the right team.",
+          ctaLabel: "View Education Workflow",
+        },
+        {
+          title: "Coaching Centers / EdTech",
+          href: "/contact",
+          description:
+            "Capture course enquiries, qualify students, book demo classes, share batch details, send payment reminders, and follow up with students and parents automatically.",
+          ctaLabel: "Discuss My Workflow",
+        },
+        {
+          title: "Diagnostics / Labs",
+          href: "/templates/lab-report-notification-flow",
+          description:
+            "Automate test enquiries, home sample collection requests, report status checks, payment confirmation, patient reminders, and support handover for urgent cases.",
+          ctaLabel: "View Lab Workflow",
+        },
+        {
+          title: "Customer Support Teams",
+          href: "/industries/support-teams",
+          description:
+            "Classify repeated questions, capture issue details, create support cases, route urgent requests, escalate unhappy customers, and track resolution status.",
+          ctaLabel: "View Support Workflow",
+        },
+        {
+          title: "Service Businesses",
+          href: "/industries/service-businesses",
+          description:
+            "Automate bookings, service requests, payment follow-ups, reminders, customer updates, technician assignment, and repeat-visit follow-ups from one workflow.",
+          ctaLabel: "View Service Workflow",
+        },
+        {
+          title: "Salons / Spas / Wellness",
+          href: "/contact",
+          description:
+            "Book slots, promote packages, confirm payments, send visit reminders, collect feedback, and bring customers back with automated repeat-visit follow-ups.",
+          ctaLabel: "Discuss My Workflow",
+        },
+        {
+          title: "Insurance / Finance Services",
+          href: "/contact",
+          description:
+            "Collect leads, capture documents, track application status, send payment reminders, route policy or claim questions, and hand off sensitive cases to advisors.",
+          ctaLabel: "Discuss My Workflow",
+        },
+      ],
+      engineSection: {
+        eyebrow: "Workflow engine",
+        title: "One workflow engine. Multiple industries. Real business outcomes.",
+        description:
+          "FLOW helps teams move customer requests from enquiry to completion without scattered chats, manual follow-ups, missed payments, or unclear ownership. Each workflow can collect data, apply business rules, trigger AI assistance, send updates, create records, schedule reminders, and escalate exceptions to the right person.",
+        outcomes: [
+          {
+            title: "Capture every enquiry",
+            description:
+              "Turn website, chat, social, and campaign enquiries into structured workflows.",
+          },
+          {
+            title: "Respond faster",
+            description:
+              "Give customers instant next steps while your team focuses on high-value work.",
+          },
+          {
+            title: "Stop manual follow-ups",
+            description:
+              "Automate reminders for bookings, payments, documents, visits, and callbacks.",
+          },
+          {
+            title: "Route work clearly",
+            description:
+              "Send each request to the right department, agent, queue, or approval path.",
+          },
+          {
+            title: "Keep humans in control",
+            description:
+              "Use handover, review, approval, and audit trails for sensitive or complex cases.",
+          },
+          {
+            title: "Track what is pending",
+            description:
+              "Give owners and managers visibility into open tasks, delays, escalations, and outcomes.",
+          },
+        ],
+      },
+      moreIndustries: {
+        eyebrow: "Industry fit",
+        title: "FLOW can be adapted to almost any repeatable business workflow.",
+        description:
+          "If your team handles enquiries, bookings, documents, payments, approvals, support, reminders, or follow-ups, FLOW can turn that process into a governed automation workflow.",
+        chips: [
+          "Ecommerce",
+          "Retail stores",
+          "Restaurants and cloud kitchens",
+          "Travel agencies",
+          "Hotels and resorts",
+          "Gyms and fitness centers",
+          "Automobile dealers",
+          "Repair and maintenance services",
+          "Logistics and courier businesses",
+          "HR and recruitment agencies",
+          "Legal service firms",
+          "Accounting and tax consultants",
+          "Interior design firms",
+          "Construction companies",
+          "Event management companies",
+          "Packers and movers",
+          "Local service providers",
+          "B2B agencies",
+          "SaaS support teams",
+          "Manufacturing operations teams",
+        ],
       },
       phaseTwo: {
         eyebrow: "Need another industry?",
-        title: "Don't see your industry here?",
+        title: "Don't see your exact industry? We can still automate your workflow.",
         description:
-          "If your business handles enquiries, bookings, documents, payments, support, or follow-ups, FLOW can be adapted to your workflow.",
+          "If your business receives enquiries, collects information, books appointments, sends reminders, handles payments, manages support, or follows up with customers, FLOW can be configured around your process.",
+        trustLine:
+          "Share your current process. We'll show how it can be converted into an automated customer workflow.",
       },
       seoLandingPages: {
         eyebrow: "SEO landing pages",
@@ -953,6 +1221,355 @@ export const siteContent = {
       ctaPrimary: { label: "Book Free Demo", href: "/contact" },
       ctaSecondary: { label: "Discuss My Workflow", href: "/contact" },
     },
+    workflowsIndex: {
+      metadata: {
+        title: "Workflow Templates | FLOW by Crescora",
+        description: "Launch-ready workflows for leads, bookings, payments, support, and follow-ups.",
+      },
+      hero: {
+        eyebrow: "Workflow Templates",
+        title: "Launch-ready workflows for leads, bookings, payments, support, and follow-ups.",
+        description:
+          "Explore proven automation blueprints that show how customer requests move from intake to qualification, booking, reminders, payments, support, handover, reporting, and resolution.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+        trustLine: "Built for real operations, not basic chatbot replies.",
+      },
+      proofStrip: {
+        eyebrow: "FLOW can coordinate the full customer journey.",
+        title: "Capture, qualify, route, book, collect payment, send reminders, sync records, escalate, and track outcomes in one workflow layer.",
+        description:
+          "FLOW supports conversation nodes, business logic, timing and reliability controls, integrations, records, document intake, appointments, payments, human handoff, AI assistance, and operational visibility.",
+        capabilities: [
+          "Capture",
+          "Qualify",
+          "Route",
+          "Book",
+          "Collect Payment",
+          "Send Reminder",
+          "Sync Records",
+          "Escalate",
+          "Track Outcome",
+        ],
+      },
+      section: {
+        eyebrow: "Automation Blueprints",
+        title: "Automation blueprints for the workflows your team repeats every day.",
+        description:
+          "Use these workflow templates to understand how FLOW can automate common business processes from first customer message to final outcome. Start with one workflow, validate the result, then expand into more channels, teams, and integrations.",
+      },
+      cards: [
+        {
+          eyebrow: "WhatsApp Automation Template",
+          title: "WhatsApp Automation Workflow for Leads, Support, and Follow-Ups",
+          href: "/workflows/whatsapp-automation",
+          text: "Turn WhatsApp enquiries into structured workflows for lead capture, qualification, booking, reminders, support routing, and human handover.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Appointment Booking Workflow",
+          title: "Appointment Booking Workflow for Scheduling, Confirmation, and Reminders",
+          href: "/workflows/appointment-booking",
+          text: "Automate slot selection, customer details, booking confirmation, rescheduling, payment collection, reminders, and exception handover.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Payment Follow-Up Workflow",
+          title: "Payment Automation for Collections, Billing, and Follow-Up",
+          href: "/workflows/payments",
+          text: "Send payment links, reminders, confirmations, failed-payment recovery messages, receipts, and internal alerts when action is needed.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Reminder Automation Workflow",
+          title: "Reminder Automation for Appointments, Payments, Documents, and Callbacks",
+          href: "/workflows/reminders",
+          text: "Automate timely reminders for pending payments, missed documents, abandoned enquiries, scheduled calls, service visits, and renewal follow-ups.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Document Collection Workflow",
+          title: "Document Collection Workflow for Intake, KYC, Verification, and Missing Items",
+          href: "/workflows/document-collection",
+          text: "Collect files, request missing documents, validate submissions, extract key details, trigger review, and keep customers updated without manual chasing.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Support Automation Workflow",
+          title: "Customer Support Workflow for FAQ, Triage, Escalation, and Resolution",
+          href: "/workflows/customer-support",
+          text: "Classify issues, answer repeated questions, collect case details, create tickets, route urgent requests, and escalate unresolved cases with full context.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Knowledge Automation Workflow",
+          title: "Knowledge Assistant Workflow for Fast, Controlled Customer Answers",
+          href: "/workflows/rag-knowledge-assistant",
+          text: "Answer repeated questions from approved business knowledge, reduce support load, and escalate low-confidence or sensitive cases to a human team.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Human Handoff Workflow",
+          title: "Human Handoff Workflow for Escalation, Ownership, and Context Transfer",
+          href: "/workflows/human-handoff",
+          text: "Move urgent, sensitive, or high-value conversations to the right person with customer details, conversation history, priority, and next-step context.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Billing Automation Workflow",
+          title: "Billing and Collections Workflow for Service Teams",
+          href: "/workflows/billing",
+          text: "Automate invoice reminders, payment status updates, failed-payment follow-ups, customer confirmations, and team alerts for unresolved billing cases.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+        {
+          eyebrow: "Conversation Visibility Workflow",
+          title: "Conversation Tracking Workflow for Teams, Managers, and Support Leaders",
+          href: "/workflows/observability",
+          text: "Track open conversations, pending tasks, escalations, handovers, unresolved requests, and workflow outcomes from one operational view.",
+          ctaLabel: "View Workflow Blueprint →",
+        },
+      ],
+      whyItMatters: {
+        eyebrow: "Why workflow templates matter",
+        title: "Most teams do not fail because they lack tools. They fail because the work path is unclear.",
+        description:
+          "FLOW templates give each process a clear path: capture the request, collect the right data, apply business rules, automate routine steps, escalate exceptions, and track the result.",
+        cards: [
+          {
+            title: "Launch faster",
+            text: "Start from a proven workflow instead of building from zero.",
+          },
+          {
+            title: "Reduce manual work",
+            text: "Automate repeated questions, reminders, routing, and updates.",
+          },
+          {
+            title: "Keep control",
+            text: "Use human handover, approvals, audit logs, and role-based workflows for sensitive steps.",
+          },
+          {
+            title: "Improve over time",
+            text: "Track outcomes, bottlenecks, escalations, and customer drop-offs.",
+          },
+        ],
+        supportLine:
+          "FLOW is designed to move requests through structured intake, AI understanding, business-rule routing, human control, automated communication, and operational visibility.",
+      },
+      finalCta: {
+        eyebrow: "Workflow planning",
+        title: "Want a workflow built around your exact process?",
+        description:
+          "Tell us how your team currently handles enquiries, bookings, payments, documents, support, or follow-ups. We will map your process and show the fastest automation workflow to launch first.",
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
+    },
+    templatesIndex: {
+      metadata: {
+        title: "Template Library | FLOW by Crescora",
+        description: "Ready-to-use FLOW templates for leads, bookings, payments, support, and follow-ups.",
+      },
+      hero: {
+        eyebrow: "Templates",
+        title: "Ready-to-use FLOW templates for leads, bookings, payments, support, and follow-ups.",
+        description:
+          "Start from proven automation templates instead of building from zero. Use FLOW templates to launch faster across enquiries, appointment booking, payment reminders, document collection, support routing, knowledge answers, and human handover.",
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+        trustLine: "Built for real customer operations, not basic chatbot replies.",
+      },
+      launchStrip: {
+        eyebrow: "What every FLOW template helps you launch",
+        title: "Each template is designed to reduce setup time and give your team a proven automation starting point.",
+        items: [
+          "Customer greeting and intent capture",
+          "Required data collection",
+          "Business-rule based routing",
+          "Reminder and follow-up steps",
+          "Human handover for exceptions",
+          "Optional payment, document, or CRM/API steps",
+          "Testing and launch guidance",
+        ],
+        supportLine:
+          "This matches FLOW's actual capability coverage across conversation, logic, reliability, integrations, records, document intake, appointments, payments, handover, language, and AI nodes.",
+      },
+      section: {
+        eyebrow: "Template Library",
+        title: "Choose a template and launch faster.",
+        description:
+          "Each template gives your team a proven starting point for a real business workflow. Pick a template, adapt the questions, connect the required channels, test the flow, and launch with human handover where needed.",
+      },
+      filters: [
+        "All",
+        "Healthcare",
+        "Real Estate",
+        "Support",
+        "Payments",
+        "Documents",
+        "Service Business",
+        "AI Knowledge",
+      ],
+      cards: [
+        {
+          tag: "Popular Template",
+          title: "WhatsApp Automation Template for Leads, Support, and Follow-Ups",
+          href: "/templates/whatsapp-automation-template",
+          text: "Launch a WhatsApp workflow that captures enquiries, qualifies users, answers common questions, sends reminders, routes requests, and escalates complex cases to your team.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Service Business", "Support"],
+          featured: true,
+        },
+        {
+          tag: "Healthcare",
+          title: "Clinic Appointment Booking Template",
+          href: "/templates/clinic-appointment-bot-template",
+          text: "Automate appointment enquiries, patient details collection, doctor availability, slot confirmation, reminders, consultation fee follow-up, and front-desk handover.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Healthcare"],
+          featured: true,
+        },
+        {
+          tag: "Payments",
+          title: "Payment Reminder Template for Collections and Follow-Ups",
+          href: "/templates/payment-reminder-template",
+          text: "Send payment reminders, share payment links, confirm successful payments, recover failed payments, and alert your team when manual follow-up is required.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Payments"],
+          featured: true,
+        },
+        {
+          tag: "Documents",
+          title: "Document Collection Template for KYC, Forms, and Missing Files",
+          href: "/templates/document-collection-template",
+          text: "Collect required documents, request missing files, validate submissions, trigger review, and keep customers updated without repeated manual chasing.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Documents"],
+        },
+        {
+          tag: "Support",
+          title: "Customer Support Template for FAQ, Triage, and Escalation",
+          href: "/templates/customer-support-bot-template",
+          text: "Handle repeated questions, classify customer issues, capture details, create support context, and escalate urgent or unresolved cases to the right team.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Support"],
+          featured: true,
+        },
+        {
+          tag: "AI Knowledge",
+          title: "Knowledge Assistant Template for Controlled Customer Answers",
+          href: "/templates/rag-knowledge-assistant-template",
+          text: "Answer questions from approved business knowledge, reduce repetitive support load, and hand off low-confidence or sensitive cases to a human agent.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["AI Knowledge", "Support"],
+        },
+        {
+          tag: "Real Estate",
+          title: "Real Estate Lead Qualification Template",
+          href: "/templates/real-estate-lead-qualification-template",
+          text: "Qualify property leads by budget, location, project interest, timeline, and site-visit intent, then route high-value buyers to your sales team.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Real Estate"],
+          featured: true,
+        },
+        {
+          tag: "Service Business",
+          title: "Service Booking Template with Reminders and Follow-Ups",
+          href: "/templates/service-business-booking-template",
+          text: "Turn service enquiries into confirmed bookings with customer details, preferred time, service type, reminders, payment follow-up, and technician/team routing.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Service Business"],
+        },
+        {
+          tag: "Billing",
+          title: "Billing and Collections Template for Service Teams",
+          href: "/templates/billing-and-collections-template",
+          text: "Automate billing reminders, payment status updates, unresolved payment alerts, customer confirmations, and escalation for delayed collections.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Payments", "Service Business"],
+        },
+        {
+          tag: "Operations",
+          title: "Conversation Visibility Template for Teams and Managers",
+          href: "/templates/observability-dashboard-template",
+          text: "Track open conversations, pending requests, escalations, handovers, delayed responses, support issues, and workflow outcomes from one operational view.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Support", "Service Business"],
+        },
+        {
+          tag: "Hospital",
+          title: "Hospital Appointment Booking Template",
+          href: "/templates/hospital-appointment-booking-flow",
+          text: "Handle patient enquiries, department selection, doctor routing, slot booking, payment follow-up, reminders, report requests, and hospital staff handover.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Healthcare"],
+        },
+        {
+          tag: "Real Estate",
+          title: "Real Estate Lead Follow-Up Template",
+          href: "/templates/real-estate-lead-followup-flow",
+          text: "Move property leads from enquiry to site visit with qualification, project sharing, callback scheduling, visit reminders, and sales team handover.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Real Estate"],
+        },
+        {
+          tag: "Support",
+          title: "Customer Support FAQ Template",
+          href: "/templates/customer-support-faq-flow",
+          text: "Answer common support questions using approved responses, collect missing details, route unresolved issues, and escalate customers who need human help.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Support"],
+        },
+        {
+          tag: "Payments",
+          title: "Payment Reminder Flow Template",
+          href: "/templates/payment-reminder-flow",
+          text: "Create a clear payment follow-up journey with reminders, confirmation messages, failed-payment recovery, team alerts, and escalation when payment is delayed.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Payments"],
+        },
+        {
+          tag: "Diagnostics / Labs",
+          title: "Lab Report Notification Template",
+          href: "/templates/lab-report-notification-flow",
+          text: "Notify patients when reports are ready, collect mobile number or report ID, share status updates, and route urgent or unresolved cases to staff.",
+          ctaLabel: "Request This Template →",
+          filterGroups: ["Healthcare"],
+        },
+      ],
+      whyItMatters: {
+        eyebrow: "Why start from a template?",
+        title: "Most businesses know what they want to automate, but lose time deciding the exact flow structure.",
+        description:
+          "FLOW templates give your team a proven path so you can start faster, reduce implementation mistakes, and customize only what matters.",
+        cards: [
+          {
+            title: "Launch faster",
+            text: "Start from a working workflow structure instead of building from zero.",
+          },
+          {
+            title: "Customize safely",
+            text: "Adapt questions, branches, messages, reminders, and handover rules to your business.",
+          },
+          {
+            title: "Avoid missed steps",
+            text: "Use templates that already consider fallback, escalation, reminders, and support paths.",
+          },
+          {
+            title: "Expand later",
+            text: "Start with one template, then add more workflows, channels, integrations, and analytics.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Template planning",
+        title: "Need a template for your exact business process?",
+        description:
+          "Tell us how your team handles enquiries, bookings, payments, documents, support, or follow-ups today. We will recommend the right FLOW template and show how it can be adapted to your business.",
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
+    },
   resources: {
     metadata: {
       title: "Resources | FLOW by Crescora",
@@ -1012,39 +1629,140 @@ export const siteContent = {
     metadata: {
       title: "Workflow Examples | FLOW by Crescora",
       description:
-        "Workflow examples for healthcare, real estate, and education automation rollout patterns.",
+        "Workflow examples for healthcare, real estate, and education workflows from enquiry to outcome.",
     },
     hero: {
       eyebrow: "Workflow examples",
-      title: "See how FLOW can work in real business scenarios.",
+      title: "See how FLOW moves customer requests from enquiry to outcome.",
       description:
-        "Explore practical workflow examples for healthcare, real estate, and education teams. Each example shows the customer journey, automation steps, team handover points, and expected business outcomes.",
+        "Explore practical automation examples for healthcare, real estate, and education. Each example shows the customer journey, manual process gaps, FLOW automation steps, human handover points, and business outcomes to track.",
+      trustLine:
+        "Built for real operations - intake, routing, reminders, payments, documents, handover, analytics, and continuous improvement.",
+      previewSteps: ["Customer Enquiry", "Data Capture", "Business Rules", "Automation", "Human Handover", "Outcome"],
+      previewMetrics: ["Response speed", "Lead capture rate", "Booking completion", "Follow-up completion"],
       primaryCta: { label: "Book Free Demo", href: "/contact" },
       secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     },
     notice:
-      "These examples are designed to help you understand how a FLOW pilot can be planned, built, tested, and expanded for your industry. They focus on workflow structure, team control, handover points, and measurable outcomes.",
+      "These examples show how a FLOW pilot can be planned, built, tested, and expanded for your industry. They are designed to help teams understand workflow structure, customer journey, team ownership, handover points, and measurable business outcomes before rollout.",
     section: {
       eyebrow: "Workflow examples",
-      title: "Workflow examples for priority industries.",
+      title: "Workflow examples for high-impact business operations.",
       description:
-        "Each example shows how a business can move from manual enquiry handling to a structured automation workflow with clear controls and handover paths.",
+        "Each example shows how a business can move from manual enquiry handling to a structured automation workflow with clear steps, team control, and human handover where needed.",
+    },
+    comparison: {
+      eyebrow: "Before FLOW vs After FLOW",
+      title: "What changes when the workflow becomes structured.",
+      description:
+        "These examples are believable because they map the same operational shift across industries: less manual coordination, clearer ownership, and measurable outcomes.",
+      rows: [
+        {
+          before: "Enquiries are handled manually across chats and calls",
+          after: "Every enquiry enters a structured workflow",
+        },
+        {
+          before: "Teams ask the same questions repeatedly",
+          after: "FLOW collects required details automatically",
+        },
+        {
+          before: "Follow-ups depend on staff memory",
+          after: "Reminders and status updates are automated",
+        },
+        {
+          before: "Payments and documents are chased manually",
+          after: "Payment and document workflows are tracked",
+        },
+        {
+          before: "Complex cases lose context during handover",
+          after: "Human teams receive conversation history and next steps",
+        },
+        {
+          before: "Managers lack visibility",
+          after: "Outcomes, delays, and handovers can be tracked",
+        },
+      ],
     },
     includes: {
       eyebrow: "What each workflow example includes",
       title: "What each workflow example includes",
       description:
-        "Every example is structured around the same operating model so buyers can understand the rollout pattern before they book a pilot.",
+        "Every example is structured around the same operating model so buyers can clearly understand what gets automated, what remains under human control, and how rollout success can be measured.",
       items: [
         "Customer enquiry scenario",
         "Manual process pain points",
         "FLOW automation journey",
-        "Human handover points",
         "Data captured",
-        "Follow-up actions",
-        "Expected business outcomes",
+        "Follow-up and reminder steps",
+        "Human handover points",
+        "Expected outcomes to track",
         "Suggested 14-day pilot scope",
       ],
+    },
+    metrics: {
+      eyebrow: "Pilot outcome metrics",
+      title: "Outcomes to measure during a FLOW pilot.",
+      description:
+        "These examples do not promise fixed results. They show the operating outcomes teams should measure once the workflow goes live.",
+      items: [
+        {
+          title: "Response speed",
+          text: "How quickly customers receive the first useful reply.",
+        },
+        {
+          title: "Lead capture rate",
+          text: "How many enquiries are converted into structured records.",
+        },
+        {
+          title: "Booking completion",
+          text: "How many users complete appointment, demo, visit, or callback booking.",
+        },
+        {
+          title: "Follow-up completion",
+          text: "How many pending payments, documents, or enquiries receive timely reminders.",
+        },
+        {
+          title: "Handover quality",
+          text: "How many complex cases reach the right team with full context.",
+        },
+        {
+          title: "Drop-off points",
+          text: "Where customers stop responding or fail to complete the workflow.",
+        },
+      ],
+    },
+    credibility: {
+      eyebrow: "Why these examples are practical",
+      title: "FLOW is not only a chatbot response layer.",
+      description:
+        "FLOW supports structured workflow execution using conversation nodes, logic, timing and reliability nodes, integrations, records, document intake, appointment booking, payment collection, human handover, language handling, and AI nodes.",
+      cards: [
+        {
+          title: "Structured intake",
+          text: "Capture the right details before your team gets involved.",
+        },
+        {
+          title: "Business rules",
+          text: "Route requests based on intent, status, priority, department, or workflow stage.",
+        },
+        {
+          title: "Human control",
+          text: "Escalate sensitive, urgent, or high-value cases to the right person.",
+        },
+        {
+          title: "Outcome tracking",
+          text: "Measure bookings, payments, support cases, follow-ups, and drop-offs.",
+        },
+      ],
+    },
+    finalCta: {
+      eyebrow: "Next step",
+      title: "Ready to map your workflow into a FLOW pilot?",
+      description:
+        "Tell us your industry, current process, and the workflow that creates the most delay - enquiries, bookings, payments, documents, support, or follow-ups. We will recommend the best starting workflow and show how a 14-day pilot can be structured.",
+      note: "Start with one workflow. Measure the outcome. Expand with confidence.",
+      primary: { label: "Book Free Demo", href: "/contact" },
+      secondary: { label: "Discuss My Workflow", href: "/contact" },
     },
     cta: { label: "Book Free Demo", href: "/contact" },
   },
@@ -1094,85 +1812,1210 @@ export const siteContent = {
         "FLOW supports operational workflows and human escalation. It is not a replacement for clinical judgment or medical decision-making.",
       cta: { label: "Request Healthcare Demo", href: "/contact" },
     },
-    realEstate: {
+    hospitals: {
       metadata: {
-        title: "Real Estate Lead and Follow-Up Automation | FLOW by Crescora",
+        title:
+          "Hospital Automation Software for Appointments, Patient Enquiries, Reports, and Follow-Ups | Crescora FLOW",
         description:
-          "Automate real estate lead capture, qualification, site visit booking, routing, and follow-ups across customer channels.",
+          "Automate hospital appointment booking, patient intake, lab report status, payment reminders, document collection, billing enquiries, and human handover with Crescora FLOW.",
       },
       hero: {
-        eyebrow: "Real Estate",
+        eyebrow: "Hospital automation",
+        title: "Hospital automation for appointments, patient enquiries, reminders, reports, and staff handover.",
+        description:
+          "Crescora FLOW helps hospitals and clinics automate front-desk conversations across Web, WhatsApp, Telegram, email, and SMS. Capture patient details, route requests, book appointments, send reminders, collect documents, follow up on payments, handle report status requests, and escalate urgent or complex cases to the right team.",
+        trustLine:
+          "Built for appointment booking, patient intake, lab reports, payment follow-ups, document collection, reminders, and human handover.",
+        previewSteps: ["Patient Enquiry", "Department", "Details", "Slot / Report", "Reminder", "Handover", "Outcome"],
+        primaryCta: { label: "Book Hospital Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Patient workflows",
+          title: "Automate the front-desk work your team repeats every day.",
+          text: "FLOW can handle appointment enquiries, doctor or department selection, patient details collection, slot confirmation, reminder messages, lab report requests, billing questions, and staff handover without forcing every request through manual calls.",
+        },
+        {
+          eyebrow: "Human control",
+          title: "Keep urgent and sensitive cases under hospital staff control.",
+          text: "Automation should support hospital teams, not replace them. FLOW can route emergency, billing, insurance, admission, report, and unresolved patient cases to the correct staff queue with conversation context and next-step visibility.",
+        },
+      ],
+      workflowSection: {
+        eyebrow: "Hospital workflows",
+        title: "Hospital workflows FLOW can automate",
+        description:
+          "Start with the hospital workflow that creates the most front-desk pressure, then expand into more patient journeys after the first rollout is stable.",
+        cards: [
+          {
+            title: "Appointment booking",
+            text: "Let patients choose a department, select a doctor or service, share basic details, pick an available slot, receive confirmation, and get reminder messages before the visit.",
+          },
+          {
+            title: "Patient intake",
+            text: "Collect patient name, mobile number, age, location, symptoms or visit reason, preferred department, and visit type before the front desk gets involved.",
+          },
+          {
+            title: "Doctor availability",
+            text: "Share available doctors, OPD timing, consultation type, and basic visit instructions in a structured way.",
+          },
+          {
+            title: "Lab tests and reports",
+            text: "Handle lab test enquiries, report status checks, report ID collection, patient mobile verification, report-ready notifications, and staff handover when the report cannot be found.",
+          },
+          {
+            title: "Payment and billing follow-up",
+            text: "Send consultation fee reminders, payment links, payment confirmations, billing status updates, and unresolved payment escalation to the billing team.",
+          },
+          {
+            title: "Admission and insurance enquiries",
+            text: "Collect admission-related questions, insurance details, required documents, and route complex cases to admission or insurance staff.",
+          },
+          {
+            title: "Emergency and critical cases",
+            text: "Show clear emergency guidance and route urgent requests to human support immediately. The workflow should not attempt to diagnose or handle emergencies as a normal automation path.",
+          },
+        ],
+      },
+      comparison: {
+        eyebrow: "Before FLOW vs After FLOW",
+        title: "What changes when front-desk requests move into a structured workflow.",
+        rows: [
+          {
+            before: "Patients call repeatedly for appointments",
+            after: "Patients can start appointment booking from chat",
+          },
+          {
+            before: "Front desk asks the same questions again and again",
+            after: "FLOW collects required details before staff involvement",
+          },
+          {
+            before: "Follow-ups depend on manual reminders",
+            after: "Appointment, payment, and report reminders can be automated",
+          },
+          {
+            before: "Report status requests interrupt staff",
+            after: "FLOW collects report ID and mobile number before routing",
+          },
+          {
+            before: "Billing and insurance queries get mixed with general enquiries",
+            after: "Requests can be routed to the right team",
+          },
+          {
+            before: "Urgent cases may not get enough context",
+            after: "Emergency and sensitive cases can move to human handover quickly",
+          },
+        ],
+      },
+      patientJourney: {
+        eyebrow: "Patient journey",
+        title: "Example hospital patient journey",
+        description:
+          "This shows how FLOW works as an operating layer, not only a chatbot reply layer.",
+        steps: [
+          "Patient starts a chat from website, WhatsApp, or another supported channel.",
+          "FLOW asks what the patient needs: appointment, report, billing, insurance, admission, lab test, or support.",
+          "Patient selects department or service.",
+          "FLOW collects required details.",
+          "Appointment, report, payment, or document workflow starts.",
+          "Confirmation and reminder messages are sent.",
+          "Urgent, unclear, or sensitive cases move to hospital staff with full context.",
+          "Managers can track conversations, handovers, and workflow outcomes.",
+        ],
+        supportLine:
+          "FLOW supports conversation nodes, logic and control, timing and reliability, integrations, records, document intake, appointment, payment, handover, language, and AI nodes.",
+      },
+      safety: {
+        eyebrow: "Trust and safety",
+        title: "Built for hospital workflows with safety and control",
+        emergencyNote:
+          "For medical emergencies, patients should contact the hospital emergency number or visit the nearest emergency department. FLOW can route urgent requests but should not replace emergency medical care.",
+        cards: [
+          {
+            title: "Emergency guidance",
+            text: "Critical or emergency-related conversations should show clear instructions and move to human escalation immediately.",
+          },
+          {
+            title: "Human handover",
+            text: "Complex cases can be transferred to front desk, billing, insurance, admission, emergency, or support teams.",
+          },
+          {
+            title: "Audit-ready workflows",
+            text: "Sensitive actions such as consent, document handling, payment, and escalation can be tracked with structured workflow records.",
+          },
+          {
+            title: "Fallback paths",
+            text: "If automation cannot complete a request, FLOW should guide the patient to the next safe step instead of leaving the conversation incomplete.",
+          },
+        ],
+        supportLine:
+          "FLOW requires fallback and observability paths for critical nodes, retries and timeout handling for external dependencies, and clear safety messaging for medical workflows.",
+      },
+      startingWorkflows: {
+        eyebrow: "Best starting workflows",
+        title: "Best hospital workflows to automate first",
+        cards: [
+          {
+            step: "1",
+            title: "Appointment booking",
+            text: "Best for reducing front-desk calls and improving patient response speed.",
+          },
+          {
+            step: "2",
+            title: "Lab report status",
+            text: "Best for reducing repeated report enquiries and collecting report ID or mobile number before staff involvement.",
+          },
+          {
+            step: "3",
+            title: "Payment follow-up",
+            text: "Best for consultation fees, pending payments, billing confirmations, and failed payment recovery.",
+          },
+          {
+            step: "4",
+            title: "Insurance and admission enquiry",
+            text: "Best for collecting documents, routing complex questions, and reducing back-and-forth communication.",
+          },
+          {
+            step: "5",
+            title: "Patient support and handover",
+            text: "Best for routing unresolved cases to the right department with context.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Hospital demo",
+        title: "Ready to automate your hospital front desk workflow?",
+        description:
+          "Tell us how your hospital currently handles appointments, patient enquiries, reports, billing, insurance, admissions, and follow-ups. We will map your current process and show the fastest FLOW workflow to launch first.",
+        note: "Start with one workflow. Prove value. Expand into more patient journeys.",
+        primary: { label: "Book Hospital Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
+    },
+    clinics: {
+      metadata: {
+        title:
+          "Clinic Appointment Automation Software for Bookings, Reminders, Follow-Ups, and Patient Support | Crescora FLOW",
+        description:
+          "Automate clinic appointment booking, patient intake, consultation reminders, payment follow-ups, FAQs, repeat visits, and staff handover with Crescora FLOW.",
+      },
+      hero: {
+        eyebrow: "Clinic automation",
+        title: "Clinic appointment automation for bookings, reminders, patient follow-ups, and front-desk support.",
+        description:
+          "Crescora FLOW helps clinics automate daily patient conversations across Web, WhatsApp, Telegram, email, and SMS. Capture patient details, book appointments, send reminders, collect consultation fees, answer common questions, manage follow-ups, and hand off sensitive or urgent cases to clinic staff.",
+        trustLine:
+          "Built for appointment booking, patient intake, consultation reminders, payment follow-ups, FAQs, repeat visits, and human handover.",
+        previewSteps: ["Patient Enquiry", "Service / Doctor", "Details", "Slot", "Reminder", "Follow-Up", "Handover"],
+        primaryCta: { label: "Book Clinic Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Front-desk automation",
+          title: "Reduce repeated calls and manual appointment coordination.",
+          text: "FLOW can help clinics handle appointment enquiries, patient details, preferred doctor or service, available slots, confirmation messages, reminders, consultation fee follow-ups, and rescheduling requests without every step depending on manual staff response.",
+        },
+        {
+          eyebrow: "Patient follow-up",
+          title: "Keep patients informed before and after the visit.",
+          text: "FLOW can send visit reminders, collect missing details, share basic instructions, follow up after consultations, collect feedback, and route unresolved or sensitive cases to clinic staff with conversation context.",
+        },
+      ],
+      workflowSection: {
+        eyebrow: "Clinic workflows",
+        title: "Clinic workflows FLOW can automate",
+        description:
+          "Start with the clinic workflow that creates the most front-desk friction, then expand into more patient support journeys after the first rollout is stable.",
+        cards: [
+          {
+            title: "Appointment booking",
+            text: "Let patients request an appointment, choose a service or doctor, share basic details, select a preferred slot, and receive confirmation.",
+          },
+          {
+            title: "Patient intake",
+            text: "Collect patient name, mobile number, age, location, visit reason, preferred date, and consultation type before staff involvement.",
+          },
+          {
+            title: "Consultation reminders",
+            text: "Send reminders before appointments so patients do not forget visits and staff do not need to call manually.",
+          },
+          {
+            title: "Consultation fee follow-up",
+            text: "Send payment links, fee reminders, confirmation messages, and billing handover when payment needs staff support.",
+          },
+          {
+            title: "Follow-up visits",
+            text: "Remind patients about review visits, repeat consultations, prescription follow-ups, or doctor-advised next steps.",
+          },
+          {
+            title: "Clinic FAQs",
+            text: "Answer repeated questions about timings, doctor availability, consultation fees, services, location, documents, and next steps.",
+          },
+          {
+            title: "Patient support handover",
+            text: "Move sensitive, unclear, urgent, or high-value cases to clinic staff with patient details and conversation history.",
+          },
+        ],
+        supportLine:
+          "FLOW supports the exact building blocks needed for these journeys, including appointment, payment, form, notification, FAQ, record, scheduler, handover, and AI nodes.",
+      },
+      comparison: {
+        eyebrow: "Before FLOW vs After FLOW",
+        title: "What changes when clinic coordination becomes structured.",
+        rows: [
+          {
+            before: "Staff answer the same appointment questions repeatedly",
+            after: "Patients can start appointment booking through chat",
+          },
+          {
+            before: "Patient details are collected manually on calls",
+            after: "FLOW collects required details before staff involvement",
+          },
+          {
+            before: "Reminders depend on front-desk memory",
+            after: "Appointment and follow-up reminders can be automated",
+          },
+          {
+            before: "Payment follow-ups are manual",
+            after: "Fee reminders and payment confirmations can be structured",
+          },
+          {
+            before: "Missed calls become missed appointments",
+            after: "Enquiries can be captured even when staff are busy",
+          },
+          {
+            before: "Sensitive cases lose context",
+            after: "Human handover can include patient details and conversation history",
+          },
+        ],
+      },
+      patientJourney: {
+        eyebrow: "Patient journey",
+        title: "Example clinic patient journey",
+        description:
+          "This shows the operational story behind clinic appointment automation instead of reducing the page to a single keyword phrase.",
+        steps: [
+          "Patient starts a chat from website, WhatsApp, or another supported channel.",
+          "FLOW asks what the patient needs: appointment, fee details, doctor availability, follow-up visit, report query, or clinic support.",
+          "Patient selects the service or doctor.",
+          "FLOW collects patient details and preferred appointment time.",
+          "Appointment confirmation is sent.",
+          "Reminder is sent before the visit.",
+          "Payment or consultation fee follow-up happens where required.",
+          "Sensitive, urgent, or unclear cases move to clinic staff with full context.",
+        ],
+        supportLine:
+          "FLOW supports clinic communication and workflow routing through appointment, payment, form, notification, FAQ, record, scheduler, handover, language, and AI nodes.",
+      },
+      safety: {
+        eyebrow: "Trust and safety",
+        title: "Built for clinic workflows with human control",
+        emergencyNote:
+          "FLOW supports clinic communication and workflow routing. It should not replace emergency care or medical diagnosis.",
+        cards: [
+          {
+            title: "Sensitive case handover",
+            text: "When a patient request is urgent, unclear, or sensitive, FLOW can route it to clinic staff instead of continuing as a normal automated conversation.",
+          },
+          {
+            title: "Clear fallback paths",
+            text: "If a patient gives incomplete information or the automation cannot complete the request, the flow should guide them to the next safe step.",
+          },
+          {
+            title: "Controlled patient communication",
+            text: "Use approved messages for confirmations, reminders, payment updates, and follow-ups.",
+          },
+          {
+            title: "Operational visibility",
+            text: "Track appointment enquiries, completed bookings, pending follow-ups, handovers, and unresolved cases.",
+          },
+        ],
+        supportLine:
+          "For medical or high-risk flows, FLOW requires explicit safety messaging and escalation paths rather than vague automation-only handling.",
+      },
+      startingWorkflows: {
+        eyebrow: "Best clinic workflows to start with",
+        title: "Best clinic workflows to automate first",
+        cards: [
+          {
+            step: "1",
+            title: "Appointment booking",
+            text: "Best for reducing repeated front-desk calls and improving response speed.",
+          },
+          {
+            step: "2",
+            title: "Reminder automation",
+            text: "Best for reducing no-shows and manual calling before visits.",
+          },
+          {
+            step: "3",
+            title: "Consultation fee follow-up",
+            text: "Best for clinics that collect fees before or after booking.",
+          },
+          {
+            step: "4",
+            title: "Patient follow-up",
+            text: "Best for review visits, repeat consultations, prescription follow-ups, and feedback.",
+          },
+          {
+            step: "5",
+            title: "FAQ and support routing",
+            text: "Best for repeated questions about timing, fees, services, location, and doctor availability.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Clinic demo",
+        title: "Ready to automate your clinic appointment workflow?",
+        description:
+          "Tell us how your clinic currently handles patient enquiries, appointment booking, reminders, consultation fees, follow-ups, and staff handover. We will map your current process and show the fastest FLOW workflow to launch first.",
+        note: "Start with appointment booking. Prove value. Expand into reminders, payments, follow-ups, and patient support.",
+        primary: { label: "Book Clinic Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
+    },
+    realEstate: {
+      metadata: {
+        title: "Real Estate Automation Software for Lead Qualification, Site Visits, and Follow-Ups | Crescora FLOW",
+        description:
+          "Automate real estate lead capture, buyer qualification, project sharing, site visit booking, sales rep assignment, CRM sync, reminders, and follow-ups with Crescora FLOW.",
+      },
+      hero: {
+        eyebrow: "Real estate automation",
         title: "Convert property enquiries into scheduled visits and qualified opportunities.",
         description:
-          "FLOW by Crescora helps real estate teams respond faster, qualify leads consistently, schedule visits, and automate follow-ups.",
+          "Crescora FLOW helps real estate teams respond faster, qualify buyer intent, collect budget and location preferences, share project details, schedule site visits, assign leads to sales reps, send reminders, and automate follow-ups across Web, WhatsApp, Telegram, email, and SMS.",
+        trustLine:
+          "Built for lead capture, buyer qualification, project sharing, site visit booking, sales handover, CRM sync, and follow-up automation.",
+        previewSteps: ["Property Enquiry", "Budget/Location", "Project Match", "Site Visit", "Sales Rep", "Follow-Up"],
         primaryCta: { label: "Request Real Estate Demo", href: "/contact" },
-        secondaryCta: { label: "Request Scope Call", href: "/contact" },
+        secondaryCta: { label: "Discuss My Sales Workflow", href: "/contact" },
       },
       painTitle: "Your leads are valuable. Delayed follow-up is expensive.",
+      painDescription:
+        "Real estate enquiries lose value quickly when buyers wait for a callback, receive generic replies, or are not routed to the right sales person on time.",
       painPoints: [
-        "Missed and stale leads",
-        "Slow first response",
-        "Manual lead qualification",
-        "Site visit coordination friction",
-        "Lead ownership confusion",
-        "Weak follow-up consistency",
+        {
+          title: "Missed and stale leads",
+          text: "High-intent buyers drop off when enquiries are not captured and followed up quickly.",
+        },
+        {
+          title: "Slow first response",
+          text: "Delayed replies reduce trust and push prospects toward competing projects.",
+        },
+        {
+          title: "Manual lead qualification",
+          text: "Sales teams waste time calling leads without knowing budget, location, property type, or timeline.",
+        },
+        {
+          title: "Site visit coordination friction",
+          text: "Visit scheduling becomes slow when availability, location, reminders, and confirmation are handled manually.",
+        },
+        {
+          title: "Lead ownership confusion",
+          text: "Managers struggle to know which sales rep owns which lead and what the next action is.",
+        },
+        {
+          title: "Weak follow-up consistency",
+          text: "Follow-ups depend on individual discipline instead of a structured process.",
+        },
+        {
+          title: "No clear pipeline visibility",
+          text: "Teams cannot easily see which leads are new, qualified, visit-booked, visited, negotiation-stage, or cold.",
+        },
       ],
       workflowTitle: "What FLOW automates for real estate teams",
+      workflowDescription:
+        "FLOW connects property enquiries to a structured sales workflow - from first message to qualification, project matching, site visit scheduling, sales rep handover, CRM updates, reminders, and follow-up tracking.",
       workflows: [
-        "Lead capture and response automation",
-        "Qualification logic and routing",
-        "Site visit scheduling",
-        "Reminder and confirmation flows",
-        "Sales rep assignment",
-        "Lead status updates",
-        "Escalation for high-intent opportunities",
+        {
+          title: "Lead capture and response automation",
+          text: "Capture website, WhatsApp, ad campaign, and social enquiries instantly, then start a structured buyer conversation.",
+        },
+        {
+          title: "Qualification logic and routing",
+          text: "Ask budget, location, property type, BHK, timeline, possession preference, and buying intent before routing the lead.",
+        },
+        {
+          title: "Project matching and brochure sharing",
+          text: "Share matching projects, location details, floor plans, price range, amenities, or brochures based on buyer preference.",
+        },
+        {
+          title: "Site visit scheduling",
+          text: "Let buyers request a site visit, choose a preferred date or time, receive confirmation, and get reminders before the visit.",
+        },
+        {
+          title: "Reminder and confirmation flows",
+          text: "Send reminders for scheduled visits, callbacks, document sharing, payment steps, and follow-up conversations.",
+        },
+        {
+          title: "Sales rep assignment",
+          text: "Route qualified leads to the right sales person based on project, location, budget, language, or availability.",
+        },
+        {
+          title: "Lead status updates",
+          text: "Track lead stage such as new enquiry, qualified, visit scheduled, visit completed, follow-up pending, negotiation, or closed.",
+        },
+        {
+          title: "Escalation for high-intent opportunities",
+          text: "Move hot buyers, urgent site visit requests, and high-budget leads to the sales team with full conversation context.",
+        },
       ],
-      beforeTitle: "Before",
-      beforeText:
-        "Leads spread across channels and phones, with inconsistent follow-up timing and manual assignment.",
-      afterTitle: "After FLOW",
-      afterText:
-        "Faster qualification and routing, automated visit coordination, and visible lead progression and ownership.",
-      cta: { label: "Request Real Estate Demo", href: "/contact" },
+      projectSharing: {
+        eyebrow: "Project sharing",
+        title: "Share the right property details at the right time",
+        description:
+          "FLOW can help real estate teams present project information in a structured way instead of sending random messages manually.",
+        items: [
+          "Project overview",
+          "Location and nearby landmarks",
+          "Budget range",
+          "BHK and unit type",
+          "Floor plan or brochure link",
+          "Amenities",
+          "Possession timeline",
+          "Site visit CTA",
+          "Sales rep callback option",
+        ],
+        supportLine:
+          "FLOW includes media and carousel nodes for sending brochures, images, rich cards, plans, service choices, and next-step CTAs where the channel supports them.",
+      },
+      journey: {
+        eyebrow: "Buyer journey",
+        title: "Example real estate buyer journey",
+        description:
+          "This page should show that FLOW is a structured sales workflow layer, not only a real estate chatbot.",
+        steps: [
+          "Buyer starts a chat from website, WhatsApp, ad campaign, or social channel.",
+          "FLOW asks what they are looking for: apartment, villa, plot, commercial space, rental, resale, or project details.",
+          "Buyer shares preferred location, budget, property type, BHK, possession timeline, and contact details.",
+          "FLOW qualifies the buyer and shows relevant project options or captures request details.",
+          "Buyer requests a site visit or callback.",
+          "FLOW confirms the preferred time and sends reminders.",
+          "The lead is assigned to the right sales rep with conversation history and buyer preferences.",
+          "CRM or sheet records can be updated with lead status.",
+          "Follow-up reminders continue until the buyer is contacted, visit is completed, or status changes.",
+        ],
+        supportLine:
+          "FLOW's shared schema supports conversation logic, timing and reliability, communication integrations, records, forms, appointments, handover, analytics, and AI-assisted steps as one structured automation path.",
+      },
+      comparison: {
+        eyebrow: "Before FLOW vs After FLOW",
+        title: "What changes when property enquiries move into one structured sales workflow.",
+        rows: [
+          {
+            before: "Leads are scattered across ads, WhatsApp, calls, forms, and phones",
+            after: "Every enquiry enters a structured sales workflow",
+          },
+          {
+            before: "Sales reps call without enough buyer context",
+            after: "FLOW captures budget, location, property type, and timeline first",
+          },
+          {
+            before: "Site visits are coordinated manually",
+            after: "Visit requests, confirmations, and reminders can be automated",
+          },
+          {
+            before: "Lead ownership is unclear",
+            after: "Leads can be assigned to the right sales rep or project team",
+          },
+          {
+            before: "Follow-ups depend on memory",
+            after: "Reminder and follow-up flows keep the lead moving",
+          },
+          {
+            before: "Managers lack visibility",
+            after: "Lead stages, handovers, pending follow-ups, and outcomes can be tracked",
+          },
+        ],
+      },
+      trust: {
+        eyebrow: "Trust and control",
+        title: "Built for real estate sales teams with visibility and control",
+        cards: [
+          {
+            title: "Sales handover with context",
+            text: "Move qualified or high-intent buyers to the right sales rep with budget, location, property type, timeline, and conversation history.",
+          },
+          {
+            title: "CRM and sheet sync",
+            text: "Send captured leads, visit requests, and status updates to CRM, Google Sheets, booking systems, or internal tools.",
+          },
+          {
+            title: "Follow-up discipline",
+            text: "Automate reminders so prospects do not go cold after the first enquiry or missed callback.",
+          },
+          {
+            title: "Manager visibility",
+            text: "Track open leads, site visit requests, assigned reps, pending follow-ups, and conversion stages.",
+          },
+          {
+            title: "Human control where it matters",
+            text: "Let automation handle repetitive intake and reminders while sales teams handle negotiation, relationship-building, and closing.",
+          },
+        ],
+        supportLine:
+          "The product already includes conversation queue operations, assignment, session status updates, analytics, and outcome surfaces, which makes this visibility and control positioning credible.",
+      },
+      metrics: {
+        eyebrow: "Outcome metrics",
+        title: "Outcomes real estate teams can track",
+        items: [
+          {
+            title: "First response speed",
+            text: "How quickly new property enquiries receive a useful reply.",
+          },
+          {
+            title: "Lead qualification rate",
+            text: "How many enquiries provide budget, location, property type, and timeline details.",
+          },
+          {
+            title: "Site visit booking rate",
+            text: "How many qualified buyers schedule a visit or callback.",
+          },
+          {
+            title: "Follow-up completion",
+            text: "How many buyers receive reminders after enquiry, project sharing, missed call, or site visit.",
+          },
+          {
+            title: "Sales handover quality",
+            text: "How many hot leads reach the right sales rep with complete context.",
+          },
+          {
+            title: "Pipeline visibility",
+            text: "How many leads are new, qualified, visit-booked, visited, follow-up pending, negotiation-stage, or cold.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Real estate demo",
+        title: "Ready to automate your real estate lead follow-up workflow?",
+        description:
+          "Tell us how your team currently handles property enquiries, lead qualification, project sharing, site visit scheduling, sales rep assignment, CRM updates, and follow-ups. We'll map your current process and show the fastest FLOW workflow to launch first.",
+        note: "Start with lead capture and site visit booking. Prove value. Expand into CRM sync, reminders, and sales pipeline visibility.",
+        primary: { label: "Request Real Estate Demo", href: "/contact" },
+        secondary: { label: "Discuss My Sales Workflow", href: "/contact" },
+      },
     },
     education: {
       metadata: {
-        title: "Education Enquiry and Admissions Automation | FLOW by Crescora",
+        title:
+          "Education Automation Software for Admissions, Demo Bookings, Fee Reminders, and Follow-Ups | Crescora FLOW",
         description:
-          "Automate education enquiries, demo class booking, fee reminders, and admissions follow-up with human counselor handoff.",
+          "Automate education enquiries, demo class booking, admission follow-ups, fee reminders, counsellor routing, document collection, and student support with Crescora FLOW.",
       },
       hero: {
-        eyebrow: "Education",
+        eyebrow: "Education automation",
         title: "Automate enquiries, demo bookings, fee reminders, and admissions follow-ups.",
         description:
-          "FLOW by Crescora helps education teams respond faster to student and parent enquiries while keeping counselor handoff for high-intent conversations.",
+          "Crescora FLOW helps schools, colleges, coaching centers, and EdTech teams respond faster to student and parent enquiries, collect the right details, book demo classes, send fee reminders, route high-intent leads to counsellors, and track every admissions follow-up.",
+        trustLine:
+          "Built for admissions enquiries, demo class booking, counsellor routing, fee reminders, document follow-up, and student status updates.",
+        previewSteps: ["Enquiry", "Course Interest", "Demo Booking", "Counsellor", "Fee Reminder", "Admission"],
         primaryCta: { label: "Request Education Demo", href: "/contact" },
-        secondaryCta: { label: "Request Scope Call", href: "/contact" },
+        secondaryCta: { label: "Discuss My Admissions Workflow", href: "/contact" },
       },
-      painTitle: "Admissions pipeline performance depends on follow-up speed and consistency.",
+      painTitle: "Admissions growth depends on fast response, consistent follow-up, and clear ownership.",
+      painDescription:
+        "Education teams lose admissions when enquiries are answered late, demo class requests are not followed up, counsellors miss high-intent students, fee reminders are delayed, and parent questions are repeated across calls, chats, and forms.",
       painPoints: [
         "Repetitive course and fee questions",
         "Manual counseling coordination",
         "Missed demo class opportunities",
         "Weak admission follow-up",
         "Delayed fee reminders",
+        "No clear enquiry visibility",
       ],
       workflowTitle: "What FLOW automates for education teams",
+      workflowDescription:
+        "FLOW connects student and parent conversations to structured admissions actions - from first enquiry to demo booking, fee follow-up, document collection, counsellor handover, and admission status tracking.",
       workflows: [
-        "Course enquiry response",
-        "Demo class booking",
-        "Admission checklist and reminders",
-        "Fee reminder and follow-up messages",
-        "Counselor routing for high-intent students",
-        "Interaction tracking and status updates",
+        {
+          title: "Course enquiry response",
+          text: "Answer questions about courses, batches, eligibility, fees, schedules, location, demo classes, and admission steps.",
+        },
+        {
+          title: "Student and parent details capture",
+          text: "Collect name, phone number, grade or course interest, location, preferred batch, enquiry source, and follow-up preference.",
+        },
+        {
+          title: "Demo class booking",
+          text: "Let students or parents request a demo class, select a preferred time, receive confirmation, and get reminders.",
+        },
+        {
+          title: "Admission checklist and reminders",
+          text: "Share required documents, admission steps, pending items, and follow-up reminders.",
+        },
+        {
+          title: "Fee reminder and payment follow-up",
+          text: "Send fee reminders, payment follow-up messages, status updates, and escalation alerts when manual action is needed.",
+        },
+        {
+          title: "Counsellor routing for high-intent students",
+          text: "Route serious enquiries to the right counsellor with student details, course interest, conversation history, and next step.",
+        },
+        {
+          title: "Interaction tracking and status updates",
+          text: "Track enquiry stage, demo booked, follow-up pending, payment pending, document pending, and admission completed.",
+        },
+        {
+          title: "Support and FAQ automation",
+          text: "Handle repeated questions while routing complex or sensitive cases to staff with full context.",
+        },
       ],
-      beforeTitle: "Before",
-      beforeText:
-        "Admissions follow-up depends on staff memory, with inconsistent counseling response times and low visibility into enquiry progress.",
-      afterTitle: "After FLOW",
-      afterText:
-        "Automated follow-up workflow consistency, faster counselor routing, and clearer admissions funnel visibility.",
-      cta: { label: "Request Education Demo", href: "/contact" },
+      journey: {
+        eyebrow: "Admissions journey",
+        title: "Example education admissions journey",
+        description:
+          "This page should show the full operational value of admissions automation, not only a list of features.",
+        steps: [
+          "Student or parent starts a chat from website, WhatsApp, or another supported channel.",
+          "FLOW asks what they need: course details, admission process, fee structure, demo class, documents, payment, or counsellor call.",
+          "FLOW captures student details and course interest.",
+          "The system answers common questions from approved content or routes to staff when needed.",
+          "Demo class or counselling call is booked.",
+          "Reminder is sent before the demo or call.",
+          "Fee and document follow-ups are sent based on admission stage.",
+          "High-intent or unresolved enquiries move to a counsellor with full conversation context.",
+          "Managers can track enquiry progress, drop-offs, pending follow-ups, and conversion stages.",
+        ],
+        supportLine:
+          "FLOW can coordinate intake, routing, reminders, records, payments, documents, human handover, and analytics-backed workflow improvement.",
+      },
+      comparison: {
+        eyebrow: "Before FLOW vs After FLOW",
+        title: "What changes when admissions work moves into one structured flow.",
+        rows: [
+          {
+            before: "Enquiries are scattered across calls, forms, WhatsApp, and website chat",
+            after: "Every enquiry enters a structured admissions workflow",
+          },
+          {
+            before: "Staff answer the same course and fee questions repeatedly",
+            after: "Common questions are answered automatically from approved content",
+          },
+          {
+            before: "Demo bookings depend on manual coordination",
+            after: "Demo class requests, confirmations, and reminders can be automated",
+          },
+          {
+            before: "Counsellors receive incomplete lead details",
+            after: "FLOW collects student details before handover",
+          },
+          {
+            before: "Fee reminders depend on staff memory",
+            after: "Fee follow-ups can be scheduled and tracked",
+          },
+          {
+            before: "Managers lack visibility into enquiry stages",
+            after: "Admissions teams can track pending, contacted, demo-booked, payment-pending, and converted leads",
+          },
+        ],
+      },
+      trust: {
+        eyebrow: "Trust and control",
+        title: "Built for admissions teams with human control",
+        cards: [
+          {
+            title: "Counsellor handover",
+            text: "Move high-intent, sensitive, or complex enquiries to the right counsellor with full context.",
+          },
+          {
+            title: "Approved answers",
+            text: "Use controlled responses for course details, fees, timings, admission steps, and documents.",
+          },
+          {
+            title: "Follow-up discipline",
+            text: "Automate reminders so interested students do not disappear after the first enquiry.",
+          },
+          {
+            title: "Admissions visibility",
+            text: "Track open enquiries, demo bookings, pending payments, document follow-ups, and conversion stages.",
+          },
+          {
+            title: "Safe fallback paths",
+            text: "When FLOW cannot complete an enquiry, it should guide the student or parent to the next clear step instead of ending the conversation.",
+          },
+        ],
+        supportLine:
+          "The FLOW playbook emphasizes clear happy paths, fallback paths, error paths, meaningful variables, retries, timeout handling, and human escalation where needed.",
+      },
+      metrics: {
+        eyebrow: "Outcome metrics",
+        title: "Outcomes education teams can track",
+        items: [
+          {
+            title: "First response speed",
+            text: "How quickly students and parents receive a useful reply.",
+          },
+          {
+            title: "Enquiry capture rate",
+            text: "How many visitors become structured student enquiries.",
+          },
+          {
+            title: "Demo booking rate",
+            text: "How many interested leads book a demo class or counselling call.",
+          },
+          {
+            title: "Follow-up completion",
+            text: "How many pending enquiries receive timely reminders.",
+          },
+          {
+            title: "Fee reminder progress",
+            text: "How many payment-pending students receive structured follow-up.",
+          },
+          {
+            title: "Counsellor handover quality",
+            text: "How many high-intent students reach counsellors with complete context.",
+          },
+          {
+            title: "Admissions pipeline visibility",
+            text: "How many enquiries are new, contacted, demo-booked, pending payment, document-pending, or admitted.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Education demo",
+        title: "Ready to automate your admissions follow-up workflow?",
+        description:
+          "Tell us how your team currently handles student enquiries, demo class bookings, counselling calls, fee reminders, admission documents, and follow-ups. We will map your current process and show the fastest FLOW workflow to launch first.",
+        note: "Start with one admissions workflow. Prove value. Expand into counselling, payments, documents, and student support.",
+        primary: { label: "Request Education Demo", href: "/contact" },
+        secondary: { label: "Discuss My Admissions Workflow", href: "/contact" },
+      },
+    },
+    supportTeams: {
+      metadata: {
+        title: "Customer Support Automation Software for FAQ, Triage, Ticket Routing, and Escalation | Crescora FLOW",
+        description:
+          "Automate customer support FAQs, issue triage, ticket creation, human handover, status updates, escalation, and support visibility with Crescora FLOW.",
+      },
+      hero: {
+        eyebrow: "Customer support automation",
+        title: "Automate support triage, repeated answers, ticket routing, and human escalation.",
+        description:
+          "Crescora FLOW helps support teams respond faster, reduce repetitive questions, capture issue details, route requests, create support context, escalate urgent cases, and track unresolved conversations across Web, WhatsApp, Telegram, email, and SMS.",
+        trustLine:
+          "Built for FAQ automation, issue triage, ticket creation, escalation, SLA visibility, support handover, and conversation tracking.",
+        previewSteps: ["Customer Issue", "Category", "FAQ / Ticket", "Priority", "Handover", "Status Update"],
+        primaryCta: { label: "Request Support Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Support triage",
+          title: "Turn repeated support questions into structured workflows.",
+          text: "FLOW can classify support requests, ask the right follow-up questions, collect issue details, answer common queries from approved knowledge, and route unresolved cases to the right support team.",
+        },
+        {
+          eyebrow: "Human escalation",
+          title: "Escalate complex cases with context, not confusion.",
+          text: "When automation cannot resolve a request, FLOW can move the conversation to a human team with issue type, customer details, conversation history, priority, and next-step context.",
+        },
+      ],
+      overviewSupportLine:
+        "The FLOW playbook specifically supports support deflection with safe escalation using grounded answers, fallback handling, and handover when the issue cannot be resolved automatically.",
+      painTitle: "Support teams lose time when every issue starts from zero.",
+      painDescription:
+        "Support workload increases when customers ask repeated questions, agents collect the same details again and again, urgent cases are not prioritized, and managers cannot see which conversations are stuck.",
+      painPoints: [
+        {
+          title: "Repeated questions",
+          text: "Agents spend too much time answering the same pricing, policy, service, or process questions.",
+        },
+        {
+          title: "Slow first response",
+          text: "Customers wait too long before receiving a useful answer or next step.",
+        },
+        {
+          title: "Incomplete issue details",
+          text: "Support teams receive vague requests without category, urgency, customer details, or required context.",
+        },
+        {
+          title: "Manual ticket routing",
+          text: "Issues are assigned manually, causing delays and ownership confusion.",
+        },
+        {
+          title: "Poor handover context",
+          text: "Customers repeat the same story when the case moves from bot to human.",
+        },
+        {
+          title: "Weak support visibility",
+          text: "Managers struggle to see pending, escalated, unresolved, and repeated issues.",
+        },
+      ],
+      workflowTitle: "Support workflows FLOW can automate",
+      workflowDescription:
+        "FLOW can coordinate FAQ automation, issue triage, ticket creation, handover, SLA visibility, queue control, and follow-up tracking as one structured support workflow instead of isolated bot replies.",
+      workflows: [
+        {
+          title: "FAQ resolution",
+          text: "Answer repeated questions about pricing, services, availability, order status, documents, policies, support steps, timings, and common issues using approved business knowledge.",
+        },
+        {
+          title: "Issue triage",
+          text: "Ask the right questions based on the customer's issue type, urgency, product, department, account status, or support category.",
+        },
+        {
+          title: "Ticket creation",
+          text: "Capture customer details, issue description, attachments, priority, and support category before creating a support case or sending it to the team.",
+        },
+        {
+          title: "Human handover",
+          text: "Move unresolved, urgent, angry, sensitive, or high-value conversations to the right support person with context.",
+        },
+        {
+          title: "Status updates",
+          text: "Send updates for open requests, pending documents, payment issues, service requests, callbacks, and unresolved cases.",
+        },
+        {
+          title: "SLA and queue visibility",
+          text: "Help teams see which conversations are waiting, assigned, escalated, or unresolved.",
+        },
+        {
+          title: "Feedback collection",
+          text: "Collect feedback after support resolution and route low ratings or negative comments for follow-up.",
+        },
+        {
+          title: "CRM and helpdesk sync",
+          text: "Send captured issue details, status updates, and handover context to CRM, Google Sheets, helpdesk tools, or internal APIs.",
+        },
+      ],
+      journey: {
+        eyebrow: "Support journey",
+        title: "Example customer support journey",
+        description:
+          "This page should show that FLOW is a support workflow system, not just a support chatbot.",
+        steps: [
+          "Customer starts a chat from website, WhatsApp, or another supported channel.",
+          "FLOW asks what the customer needs: FAQ, order or status query, billing issue, technical issue, document request, complaint, or human support.",
+          "FLOW captures issue category, customer details, urgency, and required context.",
+          "Simple questions are answered from approved knowledge.",
+          "Account-specific or unresolved issues are routed to a support workflow or team.",
+          "Urgent or negative-sentiment cases move to priority handover.",
+          "The support team receives issue details and conversation history.",
+          "Managers can track open cases, escalations, unresolved conversations, and support outcomes.",
+        ],
+        supportLine:
+          "FLOW can coordinate support deflection, queue assignment, ticket context capture, escalation, handover, knowledge-grounded replies, notifications, and outcome tracking inside one workflow layer.",
+      },
+      comparison: {
+        eyebrow: "Before FLOW vs After FLOW",
+        title: "What changes when customer support runs through one structured workflow.",
+        rows: [
+          {
+            before: "Customers ask the same questions repeatedly",
+            after: "FLOW answers common questions from approved knowledge",
+          },
+          {
+            before: "Agents spend time collecting basic issue details",
+            after: "FLOW captures issue type, priority, and required information first",
+          },
+          {
+            before: "Complex cases lose context during handover",
+            after: "Human teams receive conversation history and next steps",
+          },
+          {
+            before: "Support requests are scattered across chats and inboxes",
+            after: "Every request can enter a structured support workflow",
+          },
+          {
+            before: "Managers cannot easily see pending or escalated cases",
+            after: "Queue, handover, and status visibility improve operational control",
+          },
+          {
+            before: "Follow-ups depend on manual effort",
+            after: "Reminders and status updates can be automated",
+          },
+        ],
+      },
+      difference: {
+        eyebrow: "More than FAQ replies",
+        title: "What makes this different from a basic support bot",
+        cards: [
+          {
+            title: "Understand the request",
+            text: "Capture issue category, customer details, urgency, and missing information.",
+          },
+          {
+            title: "Answer safely",
+            text: "Use approved FAQ or knowledge responses for repeated questions.",
+          },
+          {
+            title: "Route correctly",
+            text: "Send billing, technical, service, complaint, or sales-support cases to the right team.",
+          },
+          {
+            title: "Escalate with context",
+            text: "Move sensitive, angry, urgent, or unresolved customers to a human agent.",
+          },
+          {
+            title: "Track outcomes",
+            text: "Measure unresolved cases, repeated questions, handovers, response delays, and drop-offs.",
+          },
+        ],
+        supportLine:
+          "FLOW supports queue assignment, handover, FAQ, language handling, notifications, analytics, audit logs, and support-oriented workflow patterns, which makes this positioning credible.",
+      },
+      observability: {
+        eyebrow: "Observability",
+        title: "Make support observability real, not a vague promise",
+        description:
+          "Support leaders need to see queue health, handover quality, and unresolved conversations without stitching together multiple inboxes manually.",
+        cards: [
+          {
+            title: "Open cases",
+            text: "Track how many requests are active and which categories are building up.",
+          },
+          {
+            title: "Assigned cases",
+            text: "See which issues already have an owner and which ones are still waiting.",
+          },
+          {
+            title: "Escalations",
+            text: "Measure how many conversations moved to urgent or human-priority handling.",
+          },
+          {
+            title: "Repeated questions",
+            text: "Spot which FAQs or issue types appear most often so knowledge gaps can be fixed.",
+          },
+          {
+            title: "SLA risk",
+            text: "See which conversations are at risk of missing response or handover targets.",
+          },
+          {
+            title: "Handover volume",
+            text: "Track how often automation routes cases to humans and whether context quality is improving.",
+          },
+        ],
+      },
+      metrics: {
+        eyebrow: "Outcome metrics",
+        title: "Outcomes support teams can track",
+        items: [
+          {
+            title: "First response speed",
+            text: "How quickly customers receive a useful first reply.",
+          },
+          {
+            title: "FAQ deflection rate",
+            text: "How many repeated questions are answered without human involvement.",
+          },
+          {
+            title: "Issue capture quality",
+            text: "How many support cases include category, urgency, customer details, and required context.",
+          },
+          {
+            title: "Escalation quality",
+            text: "How many handovers include full conversation history and next-step context.",
+          },
+          {
+            title: "Resolution progress",
+            text: "How many cases are open, assigned, escalated, pending customer response, or closed.",
+          },
+          {
+            title: "Repeated issue patterns",
+            text: "Which questions, complaints, and support categories appear most often.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Support demo",
+        title: "Ready to automate your support workflow?",
+        description:
+          "Tell us how your team currently handles repeated questions, issue triage, ticket creation, escalation, status updates, and support follow-ups. We'll map your current process and show the fastest FLOW workflow to launch first.",
+        note: "Start with FAQ and triage. Prove value. Expand into ticketing, handover, analytics, and support visibility.",
+        primary: { label: "Request Support Demo", href: "/contact" },
+        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+      },
+    },
+    serviceBusinesses: {
+      metadata: {
+        title: "Service Business Automation Software for Bookings, Payments, Reminders, and Follow-Ups | Crescora FLOW",
+        description:
+          "Automate service business bookings, customer enquiries, payment reminders, collections, service updates, staff handover, feedback, and follow-ups with Crescora FLOW.",
+      },
+      hero: {
+        eyebrow: "Service business automation",
+        title: "Automate service bookings, reminders, payments, collections, and customer follow-ups.",
+        description:
+          "Crescora FLOW helps service businesses respond faster, capture customer requests, confirm bookings, send reminders, collect payments, manage service updates, route requests to the right team, and follow up with customers across Web, WhatsApp, Telegram, email, and SMS.",
+        trustLine:
+          "Built for booking requests, payment reminders, collections, service updates, customer support, repeat visits, and human handover.",
+        previewSteps: ["Enquiry", "Service Type", "Booking", "Reminder", "Payment", "Completion", "Feedback"],
+        primaryCta: { label: "Book Service Business Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Booking automation",
+          title: "Turn service enquiries into confirmed bookings.",
+          text: "FLOW can collect customer details, service type, preferred date and time, location, contact number, booking notes, and urgency level before routing the request to your team or confirming the next step.",
+        },
+        {
+          eyebrow: "Payments and follow-ups",
+          title: "Stop chasing customers manually for reminders and payments.",
+          text: "FLOW can send appointment reminders, payment follow-ups, pending collection alerts, service status updates, feedback requests, and repeat-visit messages so your team does not depend only on manual calling.",
+        },
+      ],
+      overviewSupportLine:
+        "FLOW has the required workflow building blocks for this journey, including forms, appointments, payments, notifications, records, handover, AI, FAQ, scheduler, and communication nodes.",
+      painTitle: "Service teams lose revenue when bookings and follow-ups depend on manual work.",
+      painDescription:
+        "Service businesses often lose customers because enquiries are missed, booking details are incomplete, reminders are delayed, payments are not followed up, and teams do not have clear ownership of each request.",
+      painPoints: [
+        {
+          title: "Missed service enquiries",
+          text: "Customers drop off when nobody responds quickly enough.",
+        },
+        {
+          title: "Manual booking coordination",
+          text: "Staff spend time collecting basic details instead of closing bookings.",
+        },
+        {
+          title: "Incomplete customer details",
+          text: "Teams receive requests without service type, location, timing, or urgency.",
+        },
+        {
+          title: "Delayed payment follow-up",
+          text: "Collections depend on manual calls and reminders.",
+        },
+        {
+          title: "No clear service ownership",
+          text: "Requests are passed between team members without clear accountability.",
+        },
+        {
+          title: "Weak repeat-visit follow-up",
+          text: "Customers are not reminded to book again after service completion.",
+        },
+      ],
+      workflowTitle: "Service workflows FLOW can automate",
+      workflowDescription:
+        "FLOW can coordinate booking requests, reminders, payments, customer support, routing, status updates, reviews, and repeat-service follow-ups as one structured operational workflow.",
+      workflows: [
+        {
+          title: "Service booking requests",
+          text: "Capture the customer name, phone number, service type, preferred time, location, and request details.",
+        },
+        {
+          title: "Appointment and visit reminders",
+          text: "Send reminders before scheduled visits, consultations, home services, pickups, or callbacks.",
+        },
+        {
+          title: "Payment and collection follow-ups",
+          text: "Share payment links, send pending payment reminders, confirm payments, and alert your team when manual action is needed.",
+        },
+        {
+          title: "Customer support and issue routing",
+          text: "Capture complaints, service issues, refund requests, rescheduling requests, and route them to the right team.",
+        },
+        {
+          title: "Technician or staff assignment",
+          text: "Route service requests based on location, service type, urgency, or team availability.",
+        },
+        {
+          title: "Service status updates",
+          text: "Notify customers when a booking is confirmed, rescheduled, completed, delayed, or awaiting payment.",
+        },
+        {
+          title: "Feedback and review collection",
+          text: "Collect customer feedback after service completion and route poor ratings for follow-up.",
+        },
+        {
+          title: "Repeat booking follow-ups",
+          text: "Bring customers back with reminders for renewals, maintenance, repeat visits, or package-based services.",
+        },
+      ],
+      journey: {
+        eyebrow: "Service journey",
+        title: "Example service business journey",
+        description:
+          "This page should feel like a real operational workflow, not just a service booking bot.",
+        steps: [
+          "Customer starts a chat from website, WhatsApp, or another supported channel.",
+          "FLOW asks what they need: new booking, reschedule, payment, complaint, service update, or support.",
+          "Customer selects the service type.",
+          "FLOW collects contact details, location, preferred date or time, and request notes.",
+          "Booking or callback request is confirmed.",
+          "Reminder is sent before the service.",
+          "Payment or collection follow-up is sent where required.",
+          "Completed service can trigger feedback, review collection, or repeat-booking follow-up.",
+          "Urgent, unclear, or unhappy customer cases move to human handover with context.",
+        ],
+        supportLine:
+          "FLOW's runtime and product surfaces support conversation tracking, handover, queue status, analytics, scheduling, reminders, payment steps, and operational visibility.",
+      },
+      comparison: {
+        eyebrow: "Before FLOW vs After FLOW",
+        title: "What changes when service bookings and follow-ups run through one structured workflow.",
+        rows: [
+          {
+            before: "Enquiries come from calls, website forms, WhatsApp, and social messages",
+            after: "Every enquiry enters a structured service workflow",
+          },
+          {
+            before: "Staff collect the same booking details manually",
+            after: "FLOW collects customer, service, time, and location details first",
+          },
+          {
+            before: "Reminders depend on staff memory",
+            after: "Booking, payment, and service reminders can be automated",
+          },
+          {
+            before: "Payment follow-ups are manual",
+            after: "Payment links, reminders, confirmations, and failed-payment recovery can be structured",
+          },
+          {
+            before: "Service ownership is unclear",
+            after: "Requests can be routed to the right staff, technician, or support team",
+          },
+          {
+            before: "Customers do not get timely updates",
+            after: "FLOW can send booking, delay, completion, and follow-up updates",
+          },
+        ],
+      },
+      metrics: {
+        eyebrow: "Outcome metrics",
+        title: "Outcomes service businesses can track",
+        items: [
+          {
+            title: "First response speed",
+            text: "How quickly customers receive a useful first reply.",
+          },
+          {
+            title: "Booking completion rate",
+            text: "How many enquiries become confirmed bookings or callbacks.",
+          },
+          {
+            title: "Payment follow-up progress",
+            text: "How many pending payments receive reminders and confirmations.",
+          },
+          {
+            title: "Service request quality",
+            text: "How many bookings include service type, location, timing, and contact details.",
+          },
+          {
+            title: "Handover quality",
+            text: "How many urgent or complex cases reach the right team with context.",
+          },
+          {
+            title: "Repeat booking opportunities",
+            text: "How many completed services trigger follow-up, review, or repeat-visit messages.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Service business demo",
+        title: "Ready to automate your service booking workflow?",
+        description:
+          "Tell us how your business currently handles enquiries, bookings, reminders, payments, collections, service updates, and customer follow-ups. We'll map your current process and show the fastest FLOW workflow to launch first.",
+        note: "Start with one booking or payment follow-up workflow. Prove value. Expand into support, reminders, reviews, and repeat visits.",
+        primary: { label: "Book Service Business Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
     },
   },
   useCases: {

@@ -225,10 +225,10 @@ test("public hub copy matches the indexable SEO strategy", () => {
   assert.match(blogHtml, /Articles for operators and buyers/);
   assert.doesNotMatch(blogHtml, /draft articles|search index/i);
 
-  assert.match(workflowsHtml, /Workflow references for common automation paths/);
+  assert.match(workflowsHtml, /Launch-ready workflows for leads, bookings, payments, support, and follow-ups/);
   assert.doesNotMatch(workflowsHtml, /internal linking|primary index targets/i);
 
-  assert.match(templatesHtml, /launch patterns, handoff logic, and automation setup paths/i);
+  assert.match(templatesHtml, /Ready-to-use FLOW templates for leads, bookings, payments, support, and follow-ups/i);
   assert.doesNotMatch(templatesHtml, /no longer compete|route commercial search intent/i);
 
   assert.match(compareHtml, /Compare AI Automation Platforms: Why Growing Businesses Choose Crescora FLOW/);
