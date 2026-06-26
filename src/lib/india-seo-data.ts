@@ -155,12 +155,135 @@ export type WorkflowSeo = {
 export type TemplateSeo = {
   slug: string;
   title: string;
+  metadataTitle?: string;
+  metadataDescription?: string;
   intent: string;
   keywordTarget: string;
   headline: string;
   description: string;
   included: string[];
   ctaLabel: string;
+  publicPage?: {
+    breadcrumbTitle?: string;
+    hero: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      supportLine: string;
+      primaryCta: {
+        label: string;
+        href: string;
+      };
+      secondaryCta: {
+        label: string;
+        href: string;
+      };
+      statusChips: string[];
+      visual: {
+        eyebrow: string;
+        title: string;
+        description: string;
+        note: string;
+        path: string[];
+      };
+    };
+    queueCard?: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      stats: Array<{
+        label: string;
+        value: string;
+      }>;
+      note: string;
+    };
+    overviewCards: Array<{
+      eyebrow: string;
+      title: string;
+      description: string;
+    }>;
+    includedSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    workflowSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      steps: string[];
+      supportLine: string;
+    };
+    setupNoteSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      note: string;
+    };
+    beforeAfterSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      rows: Array<{
+        before: string;
+        after: string;
+      }>;
+    };
+    useCasesSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    capabilitiesSection?: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    metricsSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    faqSection: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      items: Array<{
+        question: string;
+        answer: string;
+      }>;
+    };
+    finalCta: {
+      eyebrow: string;
+      title: string;
+      description: string;
+      note: string;
+      primary: {
+        label: string;
+        href: string;
+      };
+      secondary: {
+        label: string;
+        href: string;
+      };
+    };
+  };
 };
 
 export type IndustrySeo = {
@@ -300,8 +423,8 @@ export const indiaStates: IndiaStateSeo[] = [
     localFaqNote:
       "Add Marathi + English FAQ modules once the English hub is live.",
     localSeeds: [
-      "व्हाट्सऐप ऑटोमेशन महाराष्ट्र",
-      "अपॉइंटमेंट बुकिंग महाराष्ट्र",
+      "à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤®à¤¹à¤¾à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°",
+      "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤®à¤¹à¤¾à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°",
     ],
   },
   {
@@ -326,8 +449,8 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use city-specific examples and Hindi-first FAQ modules where search console supports it.",
     localFaqNote: "English first, then Hindi modules validated by query data.",
     localSeeds: [
-      "व्हाट्सऐप ऑटोमेशन उत्तर प्रदेश",
-      "अपॉइंटमेंट बुकिंग उत्तर प्रदेश",
+      "à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤‰à¤¤à¥à¤¤à¤° à¤ªà¥à¤°à¤¦à¥‡à¤¶",
+      "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤‰à¤¤à¥à¤¤à¤° à¤ªà¥à¤°à¤¦à¥‡à¤¶",
     ],
   },
   {
@@ -351,7 +474,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Add Tamil-language support examples, regional screenshots, and state-specific proof blocks.",
     localFaqNote: "Use Tamil + English FAQ modules once demand is confirmed.",
-    localSeeds: ["வாட்ஸ்அப் ஆட்டோமேஷன் தமிழ்நாடு", "அபாயின்ட்மெண்ட் புக்கிங்"],
+    localSeeds: ["à®µà®¾à®Ÿà¯à®¸à¯à®…à®ªà¯ à®†à®Ÿà¯à®Ÿà¯‹à®®à¯‡à®·à®©à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯", "à®…à®ªà®¾à®¯à®¿à®©à¯à®Ÿà¯à®®à¯†à®£à¯à®Ÿà¯ à®ªà¯à®•à¯à®•à®¿à®™à¯"],
   },
   {
     slug: "west-bengal",
@@ -371,7 +494,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use local proof blocks and Bengali FAQ once the page is indexed.",
     localFaqNote:
       "State page should combine Bengali + English FAQs where it matters.",
-    localSeeds: ["হোয়াটসঅ্যাপ অটোমেশন পশ্চিমবঙ্গ", "অ্যাপয়েন্টমেন্ট বুকিং"],
+    localSeeds: ["à¦¹à§‹à¦¯à¦¼à¦¾à¦Ÿà¦¸à¦…à§à¦¯à¦¾à¦ª à¦…à¦Ÿà§‹à¦®à§‡à¦¶à¦¨ à¦ªà¦¶à§à¦šà¦¿à¦®à¦¬à¦™à§à¦—", "à¦…à§à¦¯à¦¾à¦ªà¦¯à¦¼à§‡à¦¨à§à¦Ÿà¦®à§‡à¦¨à§à¦Ÿ à¦¬à§à¦•à¦¿à¦‚"],
   },
   {
     slug: "karnataka",
@@ -390,7 +513,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Use observability screenshots and Kannada FAQ modules to differentiate the page.",
     localFaqNote: "Kannada + English FAQs are a priority localized module.",
-    localSeeds: ["ವಾಟ್ಸಾಪ್ ಆಟೋಮೇಷನ್ ಕರ್ನಾಟಕ", "ಸಪೋರ್ಟ್ ಬಾಟ್ ಕರ್ನಾಟಕ"],
+    localSeeds: ["à²µà²¾à²Ÿà³à²¸à²¾à²ªà³ à²†à²Ÿà³‹à²®à³‡à²·à²¨à³ à²•à²°à³à²¨à²¾à²Ÿà²•", "à²¸à²ªà³‹à²°à³à²Ÿà³ à²¬à²¾à²Ÿà³ à²•à²°à³à²¨à²¾à²Ÿà²•"],
   },
   {
     slug: "madhya-pradesh",
@@ -409,8 +532,8 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof: "Use regional examples and Hindi-first supporting modules.",
     localFaqNote: "Local proof beats generic feature claims for this state.",
     localSeeds: [
-      "व्हाट्सऐप ऑटोमेशन मध्य प्रदेश",
-      "अपॉइंटमेंट बुकिंग मध्य प्रदेश",
+      "à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤®à¤§à¥à¤¯ à¤ªà¥à¤°à¤¦à¥‡à¤¶",
+      "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤®à¤§à¥à¤¯ à¤ªà¥à¤°à¤¦à¥‡à¤¶",
     ],
   },
   {
@@ -431,7 +554,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "Local proof and FAQs should anchor the page, not generic SaaS filler.",
     localFaqNote:
       "Keep the page English-first until GSC proves a local-language split.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन राजस्थान", "रिमाइंडर ऑटोमेशन"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤°à¤¾à¤œà¤¸à¥à¤¥à¤¾à¤¨", "à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨"],
   },
   {
     slug: "gujarat",
@@ -449,7 +572,7 @@ export const indiaStates: IndiaStateSeo[] = [
     industryFocus: "Service businesses and billing/collections",
     localProof: "Use Gujarati + English FAQ modules only when demand is clear.",
     localFaqNote: "English first, then Gujarati or Hindi after GSC validation.",
-    localSeeds: ["વોટ્સએપ ઓટોમેશન ગુજરાત", "પેમેન્ટ રિમાઇન્ડર"],
+    localSeeds: ["àªµà«‹àªŸà«àª¸àªàªª àª“àªŸà«‹àª®à«‡àª¶àª¨ àª—à«àªœàª°àª¾àª¤", "àªªà«‡àª®à«‡àª¨à«àªŸ àª°àª¿àª®àª¾àª‡àª¨à«àª¡àª°"],
   },
   {
     slug: "bihar",
@@ -472,7 +595,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof: "Use practical examples, not generic AI language.",
     localFaqNote:
       "Hindi modules can be added after query data proves the split.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन बिहार", "अपॉइंटमेंट बुकिंग बिहार"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤¬à¤¿à¤¹à¤¾à¤°", "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤¬à¤¿à¤¹à¤¾à¤°"],
   },
   {
     slug: "andhra-pradesh",
@@ -495,7 +618,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof: "Use Telugu FAQ modules and state-specific screenshots.",
     localFaqNote:
       "Add Telugu + English local modules after English hub performance is clear.",
-    localSeeds: ["వాట్సాప్ ఆటోమేషన్ ఆంధ్రప్రదేశ్", "అపాయింట్మెంట్ బుకింగ్"],
+    localSeeds: ["à°µà°¾à°Ÿà±à°¸à°¾à°ªà± à°†à°Ÿà±‹à°®à±‡à°·à°¨à± à°†à°‚à°§à±à°°à°ªà±à°°à°¦à±‡à°¶à±", "à°…à°ªà°¾à°¯à°¿à°‚à°Ÿà±à°®à±†à°‚à°Ÿà± à°¬à±à°•à°¿à°‚à°—à±"],
   },
   {
     slug: "telangana",
@@ -513,7 +636,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Include Telugu FAQ and proof blocks to increase state relevance.",
     localFaqNote: "Telugu + English modules are a near-term priority.",
-    localSeeds: ["వాట్సాప్ ఆటోమేషన్ తెలంగాణ", "పేమెంట్ రిమైండర్"],
+    localSeeds: ["à°µà°¾à°Ÿà±à°¸à°¾à°ªà± à°†à°Ÿà±‹à°®à±‡à°·à°¨à± à°¤à±†à°²à°‚à°—à°¾à°£", "à°ªà±‡à°®à±†à°‚à°Ÿà± à°°à°¿à°®à±ˆà°‚à°¡à°°à±"],
   },
   {
     slug: "odisha",
@@ -533,7 +656,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "State proof blocks and localized FAQs will differentiate the page.",
     localFaqNote:
       "Keep the page English-first and add Odia after demand validation.",
-    localSeeds: ["వాట్సాప్ ఆటోమేషన్ ఒడిశా", "అప్పాయింట్మెంట్ బుకింగ్"],
+    localSeeds: ["à°µà°¾à°Ÿà±à°¸à°¾à°ªà± à°†à°Ÿà±‹à°®à±‡à°·à°¨à± à°’à°¡à°¿à°¶à°¾", "à°…à°ªà±à°ªà°¾à°¯à°¿à°‚à°Ÿà±à°®à±†à°‚à°Ÿà± à°¬à±à°•à°¿à°‚à°—à±"],
   },
   {
     slug: "jammu-and-kashmir",
@@ -552,7 +675,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Keep the page compact and only add unique regional proof when available.",
     localFaqNote: "English first, Hindi only after proven demand.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन जम्मू कश्मीर"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤œà¤®à¥à¤®à¥‚ à¤•à¤¶à¥à¤®à¥€à¤°"],
   },
   {
     slug: "uttarakhand",
@@ -571,7 +694,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Use state-specific examples without making the page a duplicate of the India hub.",
     localFaqNote: "Hindi modules only after GSC data confirms the opportunity.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन उत्तराखंड"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤‰à¤¤à¥à¤¤à¤°à¤¾à¤–à¤‚à¤¡"],
   },
   {
     slug: "himachal-pradesh",
@@ -589,7 +712,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Do not publish thin clone pages; keep the page compact and useful.",
     localFaqNote: "Hindi variants only after demand is visible.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन हिमाचल प्रदेश"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤¹à¤¿à¤®à¤¾à¤šà¤² à¤ªà¥à¤°à¤¦à¥‡à¤¶"],
   },
   {
     slug: "tripura",
@@ -608,7 +731,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Add Bengali FAQ modules and localized examples once pages gain traction.",
     localFaqNote: "English first, Bengali modules as demand grows.",
-    localSeeds: ["হোয়াটসঅ্যাপ অটোমেশন ত্রিপুরা"],
+    localSeeds: ["à¦¹à§‹à¦¯à¦¼à¦¾à¦Ÿà¦¸à¦…à§à¦¯à¦¾à¦ª à¦…à¦Ÿà§‹à¦®à§‡à¦¶à¦¨ à¦¤à§à¦°à¦¿à¦ªà§à¦°à¦¾"],
   },
   {
     slug: "goa",
@@ -627,7 +750,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use local business examples only when they are distinct from the India hub.",
     localFaqNote:
       "Test Konkani or Hindi only after GSC data proves the opportunity.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन गोवा"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤—à¥‹à¤µà¤¾"],
   },
   {
     slug: "puducherry",
@@ -646,7 +769,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Localized proof and Tamil FAQ modules should be added carefully.",
     localFaqNote: "English first; add Tamil when Search Console justifies it.",
-    localSeeds: ["வாட்ஸ்அப் ஆட்டோமேஷன் புதுச்சேரி"],
+    localSeeds: ["à®µà®¾à®Ÿà¯à®¸à¯à®…à®ªà¯ à®†à®Ÿà¯à®Ÿà¯‹à®®à¯‡à®·à®©à¯ à®ªà¯à®¤à¯à®šà¯à®šà¯‡à®°à®¿"],
   },
   {
     slug: "chandigarh",
@@ -664,7 +787,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Add Punjabi and Hindi modules only if Search Console shows demand.",
     localFaqNote: "English first, local languages later.",
-    localSeeds: ["ਵਾਟਸਐਪ ਆਟੋਮੇਸ਼ਨ ਚੰਡੀਗੜ੍ਹ"],
+    localSeeds: ["à¨µà¨¾à¨Ÿà¨¸à¨à¨ª à¨†à¨Ÿà©‹à¨®à©‡à¨¸à¨¼à¨¨ à¨šà©°à¨¡à©€à¨—à©œà©à¨¹"],
   },
   {
     slug: "manipur",
@@ -749,7 +872,7 @@ export const indiaStates: IndiaStateSeo[] = [
     industryFocus: "Service businesses",
     localProof: "Only expand with unique proof and demand evidence.",
     localFaqNote: "English first; Hindi after GSC data.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन अरुणाचल प्रदेश"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤…à¤°à¥à¤£à¤¾à¤šà¤² à¤ªà¥à¤°à¤¦à¥‡à¤¶"],
   },
   {
     slug: "sikkim",
@@ -784,7 +907,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Use local business context only if it is meaningfully distinct.",
     localFaqNote: "English first, Hindi modules only when justified.",
-    localSeeds: ["व्हाट्सऐप ऑटोमेशन अंडमान"],
+    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤…à¤‚à¤¡à¤®à¤¾à¤¨"],
   },
   {
     slug: "ladakh",
@@ -818,7 +941,7 @@ export const indiaStates: IndiaStateSeo[] = [
     industryFocus: "Service businesses",
     localProof: "Distinct proof is required before adding more content.",
     localFaqNote: "English first; Gujarati or Hindi after GSC data.",
-    localSeeds: ["વોટ્સએપ ઓટોમેશન દમણ અને દિયુ"],
+    localSeeds: ["àªµà«‹àªŸà«àª¸àªàªª àª“àªŸà«‹àª®à«‡àª¶àª¨ àª¦àª®àª£ àª…àª¨à«‡ àª¦àª¿àª¯à«"],
   },
   {
     slug: "lakshadweep",
@@ -1130,7 +1253,7 @@ export const workflows: WorkflowSeo[] = [
         eyebrow: "Next Step",
         title: "Ready to launch your WhatsApp automation workflow?",
         description:
-          "Tell us how your team currently handles WhatsApp enquiries, bookings, payments, documents, support questions, and follow-ups. We’ll map your process and show the fastest FLOW workflow to launch first.",
+          "Tell us how your team currently handles WhatsApp enquiries, bookings, payments, documents, support questions, and follow-ups. We'll map your process and show the fastest FLOW workflow to launch first.",
         note: "Start with one WhatsApp workflow. Prove value. Expand into more channels, teams, and integrations.",
         primary: { label: "Book WhatsApp Workflow Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
@@ -1432,7 +1555,7 @@ export const workflows: WorkflowSeo[] = [
         eyebrow: "Next Step",
         title: "Ready to automate your appointment booking workflow?",
         description:
-          "Tell us how your team currently handles appointment enquiries, slot confirmation, reminders, rescheduling, payments, cancellations, and staff handover. We’ll map your process and show the fastest FLOW workflow to launch first.",
+          "Tell us how your team currently handles appointment enquiries, slot confirmation, reminders, rescheduling, payments, cancellations, and staff handover. We'll map your process and show the fastest FLOW workflow to launch first.",
         note: "Start with one appointment workflow. Prove value. Expand into payments, reminders, rescheduling, and customer follow-ups.",
         primary: { label: "Book Appointment Workflow Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
@@ -1763,7 +1886,7 @@ export const workflows: WorkflowSeo[] = [
         eyebrow: "Next Step",
         title: "Ready to automate your payment follow-up workflow?",
         description:
-          "Tell us how your team currently handles payment reminders, pending collections, payment links, failed payments, receipts, billing handover, and overdue follow-ups. We’ll map your process and show the fastest FLOW workflow to launch first.",
+          "Tell us how your team currently handles payment reminders, pending collections, payment links, failed payments, receipts, billing handover, and overdue follow-ups. We'll map your process and show the fastest FLOW workflow to launch first.",
         note: "Start with one payment reminder workflow. Prove value. Expand into verification, receipts, billing escalation, and collection visibility.",
         primary: { label: "Book Payment Workflow Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
@@ -3399,7 +3522,7 @@ export const workflows: WorkflowSeo[] = [
         eyebrow: "Next Step",
         title: "Ready to build a context-rich human handoff workflow?",
         description:
-          "Tell us how your team currently handles escalations, urgent cases, sales handover, support routing, payment disputes, document review, and unresolved conversations. We’ll map your handoff rules, queue ownership, SLA expectations, and the fastest FLOW workflow to launch first.",
+          "Tell us how your team currently handles escalations, urgent cases, sales handover, support routing, payment disputes, document review, and unresolved conversations. We'll map your handoff rules, queue ownership, SLA expectations, and the fastest FLOW workflow to launch first.",
         note: "Start with one handoff workflow. Prove value. Expand into queues, SLA visibility, agent console, and outcome tracking.",
         primary: { label: "Book Handoff Workflow Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
@@ -4114,89 +4237,1820 @@ export const workflows: WorkflowSeo[] = [
 export const templates: TemplateSeo[] = [
   {
     slug: "whatsapp-automation-template",
-    title: "WhatsApp Automation Template | FLOW",
-    intent: "BOFU",
-    keywordTarget: "whatsapp workflow template",
-    headline: "Launch WhatsApp automations without starting from scratch",
+    title: "WhatsApp Automation Template",
+    metadataTitle: "WhatsApp Automation Template for Leads, Bookings, Payments, Support, and Follow-Ups | Crescora FLOW",
+    metadataDescription:
+      "Launch a WhatsApp automation template for lead capture, appointment booking, reminders, payment follow-ups, document requests, support routing, and human handover with Crescora FLOW.",
+    intent: "Popular Template",
+    keywordTarget: "WhatsApp automation template",
+    headline: "Start with a proven WhatsApp workflow structure.",
     description:
-      "A template page for fast-launch WhatsApp automation use cases.",
+      "A launch-ready WhatsApp template for lead capture, booking, reminders, support, payment follow-up, document requests, and human handover.",
     included: [
-      "Screenshots",
-      "triggers",
-      "handoff logic",
-      "integrations",
-      "CTA",
+      "Greeting and intent capture",
+      "Lead qualification",
+      "Booking and callback routing",
+      "Payment reminders and follow-up",
+      "Document follow-up",
+      "Support routing and human handover",
     ],
-    ctaLabel: "Book a demo",
+    ctaLabel: "Book WhatsApp Template Demo",
+    publicPage: {
+      breadcrumbTitle: "WhatsApp Automation Template",
+      hero: {
+        eyebrow: "WhatsApp Template",
+        title: "Launch a WhatsApp automation template for leads, bookings, reminders, support, and follow-ups.",
+        description:
+          "Start from a proven FLOW template that turns WhatsApp conversations into structured business workflows. Capture enquiries, qualify intent, collect details, book appointments, send reminders, follow up on payments, route support requests, and hand over complex conversations to your team.",
+        supportLine:
+          "Built for WhatsApp enquiries, lead capture, appointment booking, payment reminders, support routing, document follow-ups, and human handover.",
+        primaryCta: { label: "Book WhatsApp Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+        statusChips: [
+          "New",
+          "Qualified",
+          "Booked",
+          "Reminder Sent",
+          "Payment Pending",
+          "Escalated",
+          "Completed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From first WhatsApp message to a clear next action.",
+          description:
+            "Each step keeps the conversation moving toward a business outcome instead of leaving it in a shared inbox.",
+          note:
+            "Use one template to prove value, then expand into more conversations, channels, and workflows.",
+          path: [
+            "WhatsApp Message",
+            "Intent Capture",
+            "Data Collection",
+            "Qualification",
+            "Booking / Payment / Support",
+            "Reminder",
+            "Human Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Ready Template",
+          title: "Start with a proven WhatsApp workflow structure.",
+          description:
+            "This template gives your team a clear starting point for WhatsApp automation: greeting, intent capture, lead qualification, customer details, next-step routing, reminders, payment follow-up, support escalation, and outcome tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to move from chat to business action.",
+          description:
+            "The template can include message prompts, input fields, decision branches, reminder triggers, approved WhatsApp template messages, human handover rules, CRM or sheet updates, and fallback paths when automation cannot complete the request.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this WhatsApp automation template includes",
+        description:
+          "Use the template as a practical operating path, not just a chat script. Each part should help the conversation move toward a clear business outcome.",
+        items: [
+          {
+            title: "Greeting and intent capture",
+            description:
+              "Identify whether the customer needs sales help, appointment booking, payment support, document follow-up, FAQ support, service request, or human assistance.",
+          },
+          {
+            title: "Lead qualification",
+            description:
+              "Collect name, phone number, requirement, location, budget, urgency, preferred time, or service interest before routing the conversation.",
+          },
+          {
+            title: "Appointment or callback booking",
+            description:
+              "Capture booking preference, preferred date and time, service type, and confirmation details.",
+          },
+          {
+            title: "Payment reminder flow",
+            description:
+              "Send payment reminders, payment links, confirmation messages, and unresolved-payment escalation.",
+          },
+          {
+            title: "Document follow-up flow",
+            description:
+              "Request missing files, remind customers, and route submitted documents to the right team.",
+          },
+          {
+            title: "Customer support routing",
+            description:
+              "Answer repeated questions, capture issue details, and hand over unresolved cases with full context.",
+          },
+          {
+            title: "Human handover",
+            description:
+              "Move urgent, sensitive, high-value, or unclear conversations to a human team with captured answers and conversation history.",
+          },
+          {
+            title: "Outcome tracking",
+            description:
+              "Track whether the conversation was qualified, booked, followed up, escalated, completed, or still pending.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not only to reply on WhatsApp. The goal is to move each conversation toward a clear business result: qualified lead, booked appointment, completed payment, submitted document, resolved support case, or human handover.",
+        steps: [
+          "WhatsApp Message",
+          "Intent Capture",
+          "Data Collection",
+          "Qualification",
+          "Booking / Payment / Support",
+          "Reminder",
+          "Human Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps the workflow structured while still leaving room for a human team when automation should stop.",
+      },
+      setupNoteSection: {
+        eyebrow: "Important WhatsApp setup note",
+        title: "Keep provider setup and template approvals clear before launch.",
+        description:
+          "WhatsApp automation may require provider setup, business verification, approved templates for out-of-session messages, language variants, variable mapping, and message cost planning.",
+        note:
+          "WhatsApp provider setup, template approval, message categories, language variants, and messaging costs may vary by provider and business verification status. We confirm the correct setup path during workflow scoping.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should make the operational shift obvious: from manual inbox handling to a structured workflow that captures context and moves each conversation forward.",
+        rows: [
+          {
+            before: "WhatsApp messages pile up in a shared inbox",
+            after: "Each enquiry enters a structured workflow",
+          },
+          {
+            before: "Staff ask the same questions repeatedly",
+            after: "FLOW collects required details automatically",
+          },
+          {
+            before: "Leads are handed over without qualification",
+            after: "Buyer intent, urgency, and contact details are captured first",
+          },
+          {
+            before: "Reminders depend on staff memory",
+            after: "Follow-ups can be triggered by workflow status",
+          },
+          {
+            before: "Payments and documents are chased manually",
+            after: "Payment and document follow-ups can be tracked",
+          },
+          {
+            before: "Complex cases lose context",
+            after: "Human teams receive conversation history and captured fields",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the workflow that affects revenue, response time, or daily operations the most.",
+        items: [
+          {
+            title: "Sales lead capture",
+            description: "Qualify inbound WhatsApp enquiries and route serious leads to sales.",
+          },
+          {
+            title: "Appointment booking",
+            description:
+              "Collect customer details, preferred slot, and service requirement before confirmation.",
+          },
+          {
+            title: "Payment reminders",
+            description:
+              "Send payment follow-ups, confirmation messages, and overdue escalation alerts.",
+          },
+          {
+            title: "Document collection",
+            description:
+              "Request missing files, collect references, and route incomplete submissions.",
+          },
+          {
+            title: "Customer support",
+            description:
+              "Answer repeated questions and escalate unresolved cases to support teams.",
+          },
+          {
+            title: "Service booking",
+            description:
+              "Capture service type, location, preferred time, urgency, and staff assignment details.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable operating change. The goal is to improve follow-through, handover quality, and outcome visibility.",
+        items: [
+          {
+            title: "First response speed",
+            description: "How quickly WhatsApp users receive a useful first reply.",
+          },
+          {
+            title: "Lead capture quality",
+            description: "How many conversations include name, phone number, requirement, and next step.",
+          },
+          {
+            title: "Booking completion",
+            description:
+              "How many enquiries become booked appointments, demos, callbacks, or visits.",
+          },
+          {
+            title: "Follow-up completion",
+            description:
+              "How many payment, document, callback, or abandoned enquiries receive reminders.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many complex cases reach the right team with full context.",
+          },
+          {
+            title: "Outcome visibility",
+            description:
+              "How many conversations are new, qualified, booked, pending, escalated, completed, or dropped.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the template can move from idea to launch without surprises.",
+        items: [
+          {
+            question: "Can this template be customized for my business?",
+            answer:
+              "Yes. The template can be adapted to your industry, customer questions, lead fields, booking steps, payment process, support routing, and handover rules.",
+          },
+          {
+            question: "Can we start with only one WhatsApp workflow?",
+            answer:
+              "Yes. Most businesses should start with one high-impact workflow such as lead capture, appointment booking, payment reminders, document follow-up, or support routing.",
+          },
+          {
+            question: "Do WhatsApp templates need approval?",
+            answer:
+              "For messages outside the active conversation window, approved WhatsApp templates may be required. Template name, language, variables, category, and fallback paths should be confirmed before rollout.",
+          },
+          {
+            question: "Can this template work with website chat too?",
+            answer:
+              "Yes. FLOW can support the same workflow logic across WhatsApp and website chat depending on the rollout scope.",
+          },
+          {
+            question: "What happens when automation cannot complete the request?",
+            answer:
+              "FLOW can hand over the conversation to a human team with captured details, conversation history, issue type, priority, and next action.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your WhatsApp automation template?",
+        description:
+          "Tell us how your team currently handles WhatsApp enquiries, bookings, reminders, payments, documents, support questions, and handovers. We'll map your process and show how this FLOW template can be adapted for your business.",
+        note:
+          "Start with one WhatsApp template. Prove value. Expand into more channels, teams, and workflows.",
+        primary: { label: "Book WhatsApp Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "clinic-appointment-bot-template",
-    title: "Clinic Appointment Bot Template | FLOW",
-    intent: "BOFU",
-    keywordTarget: "clinic appointment chatbot",
-    headline: "A ready-made appointment workflow for clinics and hospitals",
-    description: "Show booking, reminders, and handoff for healthcare teams.",
+    title: "Clinic Appointment Bot Template",
+    metadataTitle: "Clinic Appointment Bot Template for Booking, Reminders, Fees, and Patient Handover | Crescora FLOW",
+    metadataDescription:
+      "Launch a clinic appointment booking template with Crescora FLOW. Automate patient enquiries, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
+    intent: "Healthcare Template",
+    keywordTarget: "clinic appointment booking template",
+    headline: "Launch a clinic-ready appointment workflow for patient enquiries, reminders, and handover.",
+    description:
+      "A launch-ready clinic template for appointment enquiries, patient intake, slot confirmation, reminders, fee follow-up, rescheduling, and staff handover.",
     included: [
-      "What is included",
-      "screenshots",
-      "triggers",
-      "handoff logic",
-      "CTA",
+      "Patient enquiry capture",
+      "Patient details collection",
+      "Doctor or service selection",
+      "Appointment slot booking",
+      "Confirmation and reminder automation",
+      "Fee follow-up, reschedule paths, and handover",
     ],
-    ctaLabel: "See the workflow",
+    ctaLabel: "Book Clinic Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Clinic Appointment Bot Template",
+      hero: {
+        eyebrow: "Clinic Template",
+        title: "Launch a clinic appointment booking template for patient enquiries, reminders, and staff handover.",
+        description:
+          "Start from a proven FLOW template that helps clinics and healthcare teams automate appointment enquiries, patient details collection, doctor or service selection, slot confirmation, reminders, consultation fee follow-up, rescheduling requests, and human handover for sensitive or urgent cases.",
+        supportLine:
+          "Built for clinics, hospitals, dental practices, diagnostics centers, wellness clinics, teleconsultation teams, and healthcare front desks.",
+        primaryCta: { label: "Book Clinic Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Clinic Workflow", href: "/contact" },
+        statusChips: [
+          "New Enquiry",
+          "Details Captured",
+          "Slot Selected",
+          "Confirmed",
+          "Reminder Sent",
+          "Rescheduled",
+          "Fee Pending",
+          "Staff Handover",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From patient enquiry to a confirmed clinic appointment.",
+          description:
+            "The workflow keeps appointment booking, reminders, fee follow-up, and handover visible instead of leaving them in a shared inbox.",
+          note:
+            "Start with appointment booking. Prove value. Expand into reminders, payments, follow-ups, reports, and patient support.",
+          path: [
+            "Patient Enquiry",
+            "Service / Doctor Selection",
+            "Patient Details",
+            "Date & Slot",
+            "Confirmation",
+            "Reminder",
+            "Payment / Reschedule",
+            "Staff Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Ready Template",
+          title: "Start with a clinic-ready appointment workflow.",
+          description:
+            "This template gives your team a structured starting point for clinic appointment automation: greeting, patient intent capture, doctor or service selection, patient details, preferred date and time, slot confirmation, reminders, fee follow-up, and staff handover.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to move from patient enquiry to confirmed appointment.",
+          description:
+            "The template can include patient intake questions, appointment slot capture, confirmation messages, reminder triggers, rescheduling paths, payment or fee follow-up, staff handover rules, fallback messages, and workflow status tracking.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this clinic appointment template includes",
+        description:
+          "Use the template as a practical workflow for front desk, booking, reminders, and staff handover instead of a static chat script.",
+        items: [
+          {
+            title: "Patient enquiry capture",
+            description:
+              "Understand whether the patient needs appointment booking, doctor availability, clinic timing, consultation fee details, follow-up visit, report query, or staff support.",
+          },
+          {
+            title: "Patient details collection",
+            description:
+              "Collect name, mobile number, age, location, preferred doctor or service, visit reason, and preferred appointment time.",
+          },
+          {
+            title: "Doctor or service selection",
+            description:
+              "Route the patient to the right doctor, department, consultation type, clinic service, or staff team.",
+          },
+          {
+            title: "Appointment slot booking",
+            description:
+              "Guide the patient through date and slot selection, then store the booking details for confirmation and next steps.",
+          },
+          {
+            title: "Confirmation message",
+            description:
+              "Send appointment confirmation with date, time, clinic location, doctor or service details, and arrival instructions.",
+          },
+          {
+            title: "Reminder automation",
+            description:
+              "Schedule reminders before the appointment so staff do not need to call every patient manually. FLOW's scheduler supports durable reminders with timezone, dedupe, expiry, and fallback handling.",
+          },
+          {
+            title: "Consultation fee follow-up",
+            description:
+              "Send fee reminders, payment links, payment confirmation instructions, or staff handover where payment needs support.",
+          },
+          {
+            title: "Reschedule or cancellation path",
+            description:
+              "Handle reschedule requests, unavailable slots, cancellations, and staff review where needed.",
+          },
+          {
+            title: "Human handover",
+            description:
+              "Route urgent, sensitive, unclear, or high-priority cases to clinic staff with patient details and conversation history.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not only to answer appointment questions. The goal is to move every patient enquiry toward a clear next step: confirmed appointment, reminder sent, fee followed up, reschedule requested, staff handover, or completed visit.",
+        steps: [
+          "Patient Enquiry",
+          "Service / Doctor Selection",
+          "Patient Details",
+          "Date & Slot",
+          "Confirmation",
+          "Reminder",
+          "Payment / Reschedule",
+          "Staff Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This workflow keeps booking, reminders, and escalation connected so the front desk can work from one clear process.",
+      },
+      setupNoteSection: {
+        eyebrow: "Important clinic workflow note",
+        title: "Keep medical safety and workflow routing explicit.",
+        description:
+          "This template should support appointment communication and clinic workflow routing. It should not replace emergency care, medical diagnosis, or clinical judgment.",
+        note:
+          "For urgent medical concerns or emergencies, patients should contact the clinic emergency number, call local emergency services, or visit the nearest emergency department. FLOW can help route urgent requests, but it should not replace medical care.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should make the operational shift obvious: from manual front-desk handling to a structured workflow that keeps appointment status visible.",
+        rows: [
+          {
+            before: "Front desk answers repeated appointment questions manually",
+            after: "Patients can start appointment booking through chat",
+          },
+          {
+            before: "Staff collect patient details again and again",
+            after: "FLOW collects required details before staff involvement",
+          },
+          {
+            before: "Slot confirmation happens through back-and-forth messages",
+            after: "Appointment date and slot flow becomes structured",
+          },
+          {
+            before: "Reminders depend on staff memory",
+            after: "Reminder messages can be scheduled automatically",
+          },
+          {
+            before: "Fee follow-ups are manual",
+            after: "Consultation fee reminders can be added to the workflow",
+          },
+          {
+            before: "Urgent or unclear cases lose context",
+            after: "Staff receive patient details and conversation history during handover",
+          },
+          {
+            before: "Managers lack visibility",
+            after: "Appointment status can be tracked as requested, confirmed, reminded, rescheduled, cancelled, completed, or escalated",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this clinic template for",
+        description:
+          "Start with the booking flow that matters most to the clinic, then expand into reminders, payments, and handover paths.",
+        items: [
+          {
+            title: "General clinic appointment booking",
+            description:
+              "Collect patient details, preferred doctor or service, appointment date, and slot preference.",
+          },
+          {
+            title: "Dental clinic booking",
+            description:
+              "Capture treatment interest, pain or visit reason, preferred dentist, timing, and reminder details.",
+          },
+          {
+            title: "Diagnostics appointment booking",
+            description:
+              "Collect test type, home collection preference, patient details, slot, and report follow-up option.",
+          },
+          {
+            title: "Teleconsultation booking",
+            description:
+              "Collect patient details, consultation type, preferred doctor, online slot, payment status, and confirmation.",
+          },
+          {
+            title: "Follow-up visit reminder",
+            description:
+              "Send reminders for review visits, repeat consultations, prescription follow-ups, and doctor-advised next steps.",
+          },
+          {
+            title: "Consultation fee follow-up",
+            description:
+              "Send payment reminder, confirmation message, and billing handover where required.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the rollout as an operational improvement, not just a chatbot launch. Measure booking flow quality, reminders, handover, and visibility.",
+        items: [
+          {
+            title: "Appointment enquiry capture",
+            description: "How many patient enquiries become structured appointment requests.",
+          },
+          {
+            title: "Booking completion",
+            description: "How many patients complete doctor or service selection and slot preference.",
+          },
+          {
+            title: "Reminder effectiveness",
+            description: "How many patients receive reminders before the appointment.",
+          },
+          {
+            title: "No-show recovery",
+            description: "How many missed appointments receive reschedule follow-up.",
+          },
+          {
+            title: "Fee follow-up progress",
+            description: "How many pending consultation fees receive reminders or confirmation.",
+          },
+          {
+            title: "Handover quality",
+            description: "How many urgent or unclear cases reach staff with complete patient context.",
+          },
+          {
+            title: "Workflow visibility",
+            description:
+              "How many appointments are requested, confirmed, rescheduled, cancelled, completed, no-show, or escalated.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the clinic workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this clinic appointment template be customized?",
+            answer:
+              "Yes. The template can be adapted for doctors, departments, services, consultation types, timings, fee rules, reminders, and handover paths.",
+          },
+          {
+            question: "Can patients book appointments from WhatsApp and website chat?",
+            answer:
+              "Yes. FLOW can support customer workflows across website chat, WhatsApp, Telegram, email, SMS, and connected systems depending on rollout scope.",
+          },
+          {
+            question: "Can FLOW send appointment reminders?",
+            answer:
+              "Yes. Reminder workflows can use scheduler and notification logic with timezone, dedupe, expiry, and fallback channel handling.",
+          },
+          {
+            question: "Can we collect consultation fees?",
+            answer:
+              "Yes. Where payment setup is configured, FLOW can support payment collection or payment confirmation steps before or after booking.",
+          },
+          {
+            question: "What happens when the patient request is urgent or unclear?",
+            answer:
+              "The workflow should route the case to clinic staff with patient details, conversation history, and next-step context.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your clinic appointment template?",
+        description:
+          "Tell us how your clinic currently handles patient enquiries, appointment booking, doctor availability, reminders, consultation fees, rescheduling, and staff handover. We'll map your process and show how this FLOW template can be adapted for your clinic.",
+        note:
+          "Start with appointment booking. Prove value. Expand into reminders, payments, follow-ups, reports, and patient support.",
+        primary: { label: "Book Clinic Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Clinic Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "payment-reminder-template",
-    title: "Payment Reminder Template | FLOW",
-    intent: "BOFU",
-    keywordTarget: "whatsapp payment reminder template",
-    headline: "Recover dues with automated reminders and escalation",
+    title: "Payment Reminder Template",
+    metadataTitle:
+      "Payment Reminder Template for Collections, Failed Payments, WhatsApp Follow-Ups, and Billing Handover | Crescora FLOW",
+    metadataDescription:
+      "Launch a payment reminder template with Crescora FLOW. Automate payment reminders, payment links, failed-payment recovery, reference capture, overdue escalation, and billing handover.",
+    intent: "Payment Template",
+    keywordTarget: "payment reminder template",
+    headline: "Launch a payment reminder template for collections, failed payments, and follow-ups.",
     description:
-      "A template focused on payment due, reminders, and exceptions.",
+      "A launch-ready payment template for reminders, payment links, failed-payment recovery, overdue escalation, and billing handover.",
     included: [
+      "Payment due reminder",
+      "Payment link or instruction sharing",
       "Reminder sequence",
-      "escalation logic",
-      "message examples",
-      "CTA",
+      "Payment reference capture",
+      "Failed-payment recovery",
+      "Overdue escalation and tracking",
     ],
-    ctaLabel: "Get the template",
+    ctaLabel: "Book Payment Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Payment Reminder Template",
+      hero: {
+        eyebrow: "Payment Template",
+        title: "Launch a payment reminder template for collections, failed payments, and follow-ups.",
+        description:
+          "Start from a proven FLOW template that helps businesses send payment reminders, share payment links, collect payment references, confirm successful payments, recover failed payments, escalate overdue cases, and track every payment follow-up from request to outcome.",
+        supportLine:
+          "Built for payment reminders, invoice follow-ups, consultation fees, booking tokens, subscription renewals, failed-payment recovery, overdue escalation, and billing handover.",
+        primaryCta: { label: "Book Payment Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Payment Workflow", href: "/contact" },
+        statusChips: [
+          "Payment Due",
+          "Reminder Sent",
+          "Link Shared",
+          "Paid",
+          "Failed",
+          "Pending",
+          "Overdue",
+          "Escalated",
+          "Closed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From payment due to a clear collection outcome.",
+          description:
+            "The workflow keeps reminders, payment confirmation, recovery, escalation, and visibility in one operating path.",
+          note:
+            "Start with one payment reminder template. Prove value. Expand into verification, receipts, billing escalation, and collection visibility.",
+          path: [
+            "Payment Due",
+            "Reminder Sent",
+            "Payment Link / Instructions",
+            "Customer Pays / Does Not Respond",
+            "Verify / Capture Reference",
+            "Paid / Failed / Overdue",
+            "Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Ready Template",
+          title: "Start with a proven payment reminder workflow.",
+          description:
+            "This template gives your team a structured starting point for payment follow-ups: payment due message, reminder sequence, payment link sharing, reference capture, payment confirmation, failed-payment recovery, overdue escalation, and final status tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to recover pending payments without manual chasing.",
+          description:
+            "The template can include reminder messages, payment status checks, payment reference capture, retry prompts, escalation rules, billing handover, WhatsApp template messages, SMS and email fallback, and collection outcome tracking.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this payment reminder template includes",
+        description:
+          "Use the template as a collection workflow, not just a reminder message sequence.",
+        items: [
+          {
+            title: "Payment due reminder",
+            description:
+              "Send a clear message explaining the amount due, reason for payment, due date, and next step.",
+          },
+          {
+            title: "Payment link or instruction sharing",
+            description:
+              "Share payment links or payment instructions through supported channels.",
+          },
+          {
+            title: "Reminder sequence",
+            description:
+              "Send follow-up reminders when the customer has not paid, responded, or confirmed payment.",
+          },
+          {
+            title: "Payment reference capture",
+            description:
+              "Collect transaction ID, screenshot, receipt number, invoice ID, order ID, or payment confirmation details.",
+          },
+          {
+            title: "Payment verification path",
+            description:
+              "Where payment provider support is configured, FLOW can verify payment status before moving the workflow forward.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "Guide customers after failed or pending payments with retry instructions, alternate support, or billing handover.",
+          },
+          {
+            title: "Overdue escalation",
+            description:
+              "Alert billing, sales, admissions, finance, support, or operations teams when payment remains unresolved.",
+          },
+          {
+            title: "Outcome tracking",
+            description:
+              "Track payment status as requested, reminder sent, link shared, paid, failed, pending, overdue, escalated, or closed.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not just to send reminders. The goal is to move every pending payment toward a clear result: paid, failed, pending, overdue, escalated, disputed, or closed.",
+        steps: [
+          "Payment Due",
+          "Reminder Sent",
+          "Payment Link / Instructions",
+          "Customer Pays / Does Not Respond",
+          "Verify / Capture Reference",
+          "Paid / Failed / Overdue",
+          "Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps collections, recovery, and escalation aligned so the team can see what happened at every step.",
+      },
+      setupNoteSection: {
+        eyebrow: "Important setup note",
+        title: "Confirm payment provider and messaging setup before rollout.",
+        description:
+          "Payment reminder workflows may depend on your payment provider, WhatsApp provider, message templates, business verification, and selected channels.",
+        note:
+          "WhatsApp payment reminders outside an active conversation may require approved template messages. Payment verification depends on the configured payment provider. We confirm template approval, variables, fallback channels, and payment verification setup during workflow scoping. FLOW's template-message node supports approved WhatsApp templates, language, variables, approval checks, and outcomes like sent, template not approved, variable missing, or failed.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show how the workflow changes payment follow-up from manual chasing to structured collection management.",
+        rows: [
+          {
+            before: "Staff manually chase customers for pending payments",
+            after: "FLOW can send structured reminders automatically",
+          },
+          {
+            before: "Customers are unsure how to pay or confirm payment",
+            after: "The workflow gives clear payment instructions and next steps",
+          },
+          {
+            before: "Payment references are scattered in chat messages",
+            after: "FLOW can collect references and attach them to the workflow",
+          },
+          {
+            before: "Failed payments are handled inconsistently",
+            after: "Failed payments can trigger retry, fallback, or billing handover",
+          },
+          {
+            before: "Overdue payments are not escalated clearly",
+            after: "Overdue cases can alert the right team",
+          },
+          {
+            before: "Managers lack collection visibility",
+            after: "Payment status can be tracked as pending, paid, failed, overdue, escalated, or closed",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the collection path that matters most, then expand to adjacent payment workflows.",
+        items: [
+          {
+            title: "Consultation fee reminders",
+            description:
+              "For clinics, hospitals, doctors, consultants, and teleconsultation teams.",
+          },
+          {
+            title: "Booking token payments",
+            description:
+              "For appointments, site visits, service bookings, demos, and reservations.",
+          },
+          {
+            title: "Invoice payment follow-ups",
+            description:
+              "For service businesses, agencies, vendors, B2B teams, and finance teams.",
+          },
+          {
+            title: "Admission or course fee reminders",
+            description:
+              "For schools, colleges, coaching centers, and EdTech teams.",
+          },
+          {
+            title: "Subscription renewal payments",
+            description:
+              "For memberships, SaaS plans, packages, maintenance plans, and recurring services.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "For customers whose payment failed, stayed pending, or needs manual verification.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the rollout as a collections improvement, not just a reminder flow.",
+        items: [
+          {
+            title: "Reminder delivery",
+            description: "How many payment reminders were sent successfully.",
+          },
+          {
+            title: "Payment completion",
+            description: "How many pending payments moved to paid status.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description: "How many failed or pending payments were retried, resolved, or escalated.",
+          },
+          {
+            title: "Overdue volume",
+            description: "How many cases remained unpaid after the reminder sequence.",
+          },
+          {
+            title: "Reference capture quality",
+            description: "How many customers submitted transaction ID, receipt, screenshot, or confirmation details.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many billing cases reached the team with customer details, amount, status, and conversation history.",
+          },
+          {
+            title: "Collection visibility",
+            description:
+              "How many payment workflows are requested, pending, paid, failed, overdue, escalated, or closed.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the payment workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this template be customized for my business?",
+            answer:
+              "Yes. The template can be adapted for your payment process, reminder timing, message tone, payment provider, billing team, escalation rules, and customer segments.",
+          },
+          {
+            question: "Can FLOW verify payment status automatically?",
+            answer:
+              "Where provider support is configured, FLOW can verify payment status. If automatic verification is not available, the template can collect payment references, screenshots, or manual confirmation details.",
+          },
+          {
+            question: "What happens when payment fails?",
+            answer:
+              "The workflow should give retry guidance, offer alternate help, or route the case to billing or support. It should not silently end after a failed payment.",
+          },
+          {
+            question: "Can reminders be sent through WhatsApp, SMS, or email?",
+            answer:
+              "Yes, depending on channel setup. WhatsApp reminders outside the active session may require approved templates.",
+          },
+          {
+            question: "Can this template update CRM, sheets, or internal records?",
+            answer:
+              "Yes, based on rollout scope. FLOW supports workflow-owned records, API calls, connectors, notifications, audit logs, and payment-related workflow steps.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your payment reminder template?",
+        description:
+          "Tell us how your team currently handles pending payments, payment links, reminders, failed payments, receipts, billing disputes, and overdue escalation. We'll map your process and show how this FLOW template can be adapted for your business.",
+        note:
+          "Start with one payment reminder template. Prove value. Expand into verification, receipts, billing escalation, and collection visibility.",
+        primary: { label: "Book Payment Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Payment Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "document-collection-template",
-    title: "Document Collection Template | FLOW",
-    intent: "BOFU",
-    keywordTarget: "document collection workflow",
-    headline: "Collect documents over chat without manual chasing",
-    description: "A template for KYC, intake, and missing-document workflows.",
+    title: "Document Collection Template",
+    metadataTitle:
+      "Document Collection Template for KYC, Intake, Missing Files, Review, and Follow-Ups | Crescora FLOW",
+    metadataDescription:
+      "Launch a document collection template with Crescora FLOW. Automate KYC intake, missing-document reminders, upload tracking, review routing, approval workflows, and customer follow-ups.",
+    intent: "Document Template",
+    keywordTarget: "document collection template",
+    headline: "Launch a document collection template for KYC, intake, missing files, and review workflows.",
+    description:
+      "A launch-ready document template for KYC intake, missing files, review routing, approval steps, and customer follow-ups.",
     included: [
-      "Triggers",
-      "upload tracking",
-      "reminders",
-      "handoff logic",
-      "CTA",
+      "Document request flow",
+      "Clear upload instructions",
+      "Accepted file checks",
+      "Missing-document reminders",
+      "Review routing",
+      "Status tracking and audit trail",
     ],
-    ctaLabel: "Launch faster",
+    ctaLabel: "Book Document Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Document Collection Template",
+      hero: {
+        eyebrow: "Document Template",
+        title: "Launch a document collection template for KYC, intake, missing files, and review workflows.",
+        description:
+          "Start from a practical FLOW template that helps teams collect required documents, track missing files, send follow-up reminders, route unclear submissions for review, and move every document request toward a clear outcome.",
+        supportLine:
+          "Built for KYC, admissions, insurance files, onboarding documents, claims, healthcare reports, payment proofs, and service forms.",
+        primaryCta: { label: "Book Document Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Document Workflow", href: "/contact" },
+        statusChips: [
+          "Requested",
+          "Submitted",
+          "Missing",
+          "Invalid",
+          "Under Review",
+          "Approved",
+          "Rejected",
+          "Escalated",
+          "Completed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From document request to a clear outcome.",
+          description:
+            "The workflow keeps document requests, validation, review routing, and customer updates visible instead of scattering them across chats and email.",
+          note:
+            "Start with one document template. Prove value. Expand into review, approval, reminders, and status tracking.",
+          path: [
+            "Document Request",
+            "Upload Instructions",
+            "File Submitted",
+            "Validation",
+            "Missing File Reminder",
+            "Review / Approval",
+            "Customer Update",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Collect documents over chat without manual chasing.",
+          description:
+            "This template gives your team a structured starting point for document workflows: request required files, explain upload instructions, collect references, track missing documents, send reminders, and move accepted submissions to the next step.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to collect, verify, and follow up on documents.",
+          description:
+            "The template can include document request triggers, upload instructions, accepted file rules, missing-file reminders, review routing, approval steps, human handover, status tracking, and completion messages.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this document collection template includes",
+        description:
+          "Use the template as a workflow for intake, verification, reminders, and review rather than a simple file request screen.",
+        items: [
+          {
+            title: "Document request flow",
+            description:
+              "Ask the customer for the required files based on the workflow type: KYC, admission, claim, onboarding, insurance, report, payment proof, or service request.",
+          },
+          {
+            title: "Clear upload instructions",
+            description:
+              "Tell users exactly what to upload, what file types are accepted, and what happens after submission.",
+          },
+          {
+            title: "Accepted file checks",
+            description:
+              "Use accepted file type and minimum document rules so the workflow does not proceed with incomplete or invalid submissions.",
+          },
+          {
+            title: "Missing-document reminders",
+            description:
+              "Send follow-ups when required documents are missing, incomplete, unclear, or not submitted.",
+          },
+          {
+            title: "Review routing",
+            description:
+              "Route unclear, low-confidence, sensitive, or incomplete submissions to staff review, approval, or handover.",
+          },
+          {
+            title: "Status tracking",
+            description:
+              "Track whether each request is pending, submitted, missing, invalid, under review, approved, rejected, escalated, or completed.",
+          },
+          {
+            title: "Customer updates",
+            description:
+              "Send clear next-step messages so customers know whether the document was received, needs correction, or is waiting for review.",
+          },
+          {
+            title: "Audit-ready actions",
+            description:
+              "Track key document workflow events such as request sent, document submitted, review required, approved, rejected, or escalated.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not only to collect files. The goal is to move every document request toward a clear result: submitted, missing, invalid, under review, approved, rejected, escalated, or completed.",
+        steps: [
+          "Document Request",
+          "Upload Instructions",
+          "File Submitted",
+          "Validation",
+          "Missing File Reminder",
+          "Review / Approval",
+          "Customer Update",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps requests, validation, review, and handover aligned so staff can see what happened at each step.",
+      },
+      setupNoteSection: {
+        eyebrow: "Built for document workflows with privacy and control",
+        title: "Handle document intake with clear consent, review paths, and traceability.",
+        description:
+          "The workflow should request only the documents required for the process, and sensitive cases should move to review or handover when needed.",
+        note:
+          "Use clear consent and upload instructions. Route low-confidence, incomplete, or sensitive submissions safely. Mask sensitive data in logs. Keep an audit trail for request, submission, review, approval, rejection, and escalation events. The playbook specifically requires privacy and compliance wording for document intake, accepted extension checks, minimum document constraints, and downstream use of the stored document list.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the operational shift from manual chasing to a structured, trackable document workflow.",
+        rows: [
+          {
+            before: "Staff repeatedly ask customers for missing documents",
+            after: "FLOW can send structured document requests and reminders",
+          },
+          {
+            before: "Customers are unsure what to upload",
+            after: "Upload instructions and accepted file rules are clear",
+          },
+          {
+            before: "Files are scattered across chats and emails",
+            after: "Documents can be connected to one workflow record",
+          },
+          {
+            before: "Invalid or incomplete files delay the process",
+            after: "The workflow can request corrections or re-upload",
+          },
+          {
+            before: "Sensitive files are handled casually",
+            after: "Review, approval, and handover paths can be added",
+          },
+          {
+            before: "Managers cannot track document status",
+            after: "Status can be tracked from request to completion",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the document workflow that matters most, then expand into review, approval, and follow-up paths.",
+        items: [
+          {
+            title: "KYC document collection",
+            description:
+              "Collect identity proof, address proof, forms, declarations, and verification files.",
+          },
+          {
+            title: "Admissions document intake",
+            description:
+              "Collect certificates, student forms, ID proof, parent details, and fee receipts.",
+          },
+          {
+            title: "Insurance and finance paperwork",
+            description:
+              "Collect claim forms, policy files, bank details, ID proof, and supporting documents.",
+          },
+          {
+            title: "Healthcare document workflows",
+            description:
+              "Collect prescriptions, reports, referral notes, insurance files, or patient documents.",
+          },
+          {
+            title: "Service business forms",
+            description:
+              "Collect invoices, warranty files, photos, payment screenshots, and request documents.",
+          },
+          {
+            title: "Employee or customer onboarding",
+            description:
+              "Collect onboarding forms, ID documents, agreements, and supporting paperwork.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable document workflow, not a generic file request.",
+        items: [
+          {
+            title: "Document submission rate",
+            description: "How many customers submit the required files.",
+          },
+          {
+            title: "Missing-document recovery",
+            description: "How many incomplete submissions are corrected after reminders.",
+          },
+          {
+            title: "Invalid upload rate",
+            description: "How many files fail type, size, format, or document-type checks.",
+          },
+          {
+            title: "Review queue volume",
+            description: "How many submissions require human review.",
+          },
+          {
+            title: "Completion time",
+            description: "How long it takes from document request to completed submission.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "Whether staff receive the file, customer details, reason for review, and next step together.",
+          },
+          {
+            title: "Outcome visibility",
+            description:
+              "How many requests are pending, submitted, missing, under review, approved, rejected, escalated, or completed.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the document workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this template be customized for my business?",
+            answer:
+              "Yes. The template can be adapted for your document types, upload instructions, accepted file rules, reminder timing, review process, approval rules, and handover team.",
+          },
+          {
+            question: "Can FLOW track missing documents?",
+            answer:
+              "Yes. The workflow can track whether required documents are submitted, missing, invalid, under review, approved, rejected, or escalated.",
+          },
+          {
+            question: "Can unclear documents go to human review?",
+            answer:
+              "Yes. Unclear, incomplete, low-confidence, or sensitive submissions can be routed to review, approval, or handover before the workflow continues.",
+          },
+          {
+            question: "Can this work on WhatsApp and website chat?",
+            answer:
+              "Yes. FLOW supports multi-channel customer workflows, including web widget chat and channel integrations such as WhatsApp and Telegram depending on rollout scope.",
+          },
+          {
+            question: "Can documents be processed with OCR or extraction?",
+            answer:
+              "Yes, where configured. File processing can support OCR, classification, field extraction, validation, summarization, confidence thresholds, and review routing.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your document collection template?",
+        description:
+          "Tell us how your team currently collects KYC files, forms, certificates, reports, payment proofs, claims, onboarding documents, or missing paperwork. We'll map your process and show how this FLOW template can reduce manual chasing, improve tracking, and route exceptions to the right team.",
+        note:
+          "Start with one document template. Prove value. Expand into review, approval, reminders, and status tracking.",
+        primary: { label: "Book Document Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Document Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "customer-support-bot-template",
     title: "Customer Support Bot Template | FLOW",
-    intent: "BOFU",
+    metadataTitle:
+      "Customer Support Bot Template for FAQ, Issue Triage, Human Handover, and Support Visibility | Crescora FLOW",
+    metadataDescription:
+      "Launch a customer support bot template with Crescora FLOW. Automate FAQ resolution, issue triage, support routing, human handover, status updates, and support analytics.",
+    intent: "Support Template",
     keywordTarget: "support bot template",
-    headline: "Resolve repetitive queries and escalate the rest cleanly",
-    description: "A support-focused template for FAQ and triage workflows.",
-    included: ["FAQ intents", "routing", "handoff", "analytics", "CTA"],
-    ctaLabel: "Watch demo",
+    headline: "Launch a customer support bot template for FAQ resolution, issue triage, and human handover.",
+    description:
+      "A launch-ready support template for FAQ resolution, issue triage, human handover, and support visibility.",
+    included: [
+      "FAQ resolution paths",
+      "Issue routing rules",
+      "Context-rich human handover",
+      "Support visibility and outcome tracking",
+      "Status updates",
+    ],
+    ctaLabel: "Book Support Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Customer Support Bot Template",
+      hero: {
+        eyebrow: "Support Template",
+        title: "Launch a customer support bot template for FAQ resolution, issue triage, and human handover.",
+        description:
+          "Start from a practical FLOW template that helps support teams answer repeated questions, capture issue details, classify customer requests, route unresolved cases, hand off conversations with context, and track support outcomes from first message to resolution.",
+        supportLine:
+          "Built for FAQ automation, issue triage, ticket context, priority routing, human handover, status updates, and support visibility.",
+        primaryCta: { label: "Book Support Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+        statusChips: [
+          "New",
+          "FAQ Resolved",
+          "Details Captured",
+          "Routed",
+          "Assigned",
+          "Escalated",
+          "Pending",
+          "Resolved",
+          "Closed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From customer question to a clear support outcome.",
+          description:
+            "The workflow keeps repeated questions, unresolved cases, and handover status visible instead of scattering support work across chats and email.",
+          note:
+            "Start with FAQ and triage. Prove value. Expand into ticketing, handover, analytics, and support visibility.",
+          path: [
+            "Customer Question",
+            "FAQ / Issue Category",
+            "Details Capture",
+            "Answer / Ticket Context",
+            "Human Handover",
+            "Status Update",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Support queue",
+        title: "Open cases, escalated cases, repeated questions, and unresolved conversations.",
+        description:
+          "This mock queue card shows the support work that needs attention right now so teams can see where conversations are piling up.",
+        stats: [
+          { label: "Open cases", value: "18" },
+          { label: "Escalated cases", value: "6" },
+          { label: "Repeated questions", value: "42" },
+          { label: "Unresolved conversations", value: "11" },
+        ],
+        note: "Queue visibility helps managers see where support needs attention before cases stall.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Resolve repetitive queries and escalate the rest clearly.",
+          description:
+            "This template gives your team a structured starting point for support automation: FAQ paths, issue categories, customer detail capture, fallback responses, priority routing, human handover, and support outcome tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to resolve, triage, and escalate support conversations.",
+          description:
+            "The template can include FAQ resolution paths, issue routing rules, required detail capture, escalation triggers, context-rich handover, queue visibility, status updates, feedback collection, and support analytics.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this customer support template includes",
+        description:
+          "Use the template as a workflow for answering common questions, capturing issue details, and moving every case toward a clear result.",
+        items: [
+          {
+            title: "FAQ resolution",
+            description:
+              "Answer repeated questions about pricing, services, availability, policies, documents, order status, support steps, timings, and next actions.",
+          },
+          {
+            title: "Issue triage",
+            description:
+              "Classify the customer request by category, urgency, department, product, service, or support type.",
+          },
+          {
+            title: "Customer detail capture",
+            description:
+              "Collect the information your team needs before handover: name, phone, order ID, issue type, urgency, message summary, or attachment reference.",
+          },
+          {
+            title: "Fallback handling",
+            description:
+              "When the bot cannot answer confidently, it should ask a clarifying question, provide a safe fallback, or route the user to support.",
+          },
+          {
+            title: "Human handover",
+            description:
+              "Move unresolved, angry, urgent, sensitive, or high-value conversations to the right team with full context.",
+          },
+          {
+            title: "Status updates",
+            description:
+              "Send updates when a case is received, assigned, escalated, waiting for customer response, resolved, or closed.",
+          },
+          {
+            title: "Support visibility",
+            description:
+              "Track repeated questions, unresolved issues, handovers, open conversations, and support outcomes.",
+          },
+          {
+            title: "Production rules",
+            description:
+              "FLOW's production rules recommend one clear happy path, fallback path, and error path, with observability for critical nodes.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not only to reply faster. The goal is to move every support conversation toward a clear result: answered, routed, assigned, escalated, resolved, or closed.",
+        steps: [
+          "Customer Question",
+          "FAQ / Issue Category",
+          "Details Capture",
+          "Answer / Ticket Context",
+          "Human Handover",
+          "Status Update",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps support work moving without losing context when a conversation leaves automation.",
+      },
+      setupNoteSection: {
+        eyebrow: "Support workflow note",
+        title: "Design the support flow around a clear happy path, fallback path, and error path.",
+        description:
+          "The workflow should answer approved questions first, gather issue context early, and hand over unresolved cases without losing the conversation.",
+        note:
+          "Support teams get the best result when the template has one clear success path, a safe fallback path, and an error path that routes unresolved issues to the right team with visibility on critical nodes.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from repetitive manual support to a structured, visible support workflow.",
+        rows: [
+          {
+            before: "Agents answer the same questions repeatedly",
+            after: "FLOW answers common questions from approved support content",
+          },
+          {
+            before: "Customers share incomplete issue details",
+            after: "FLOW captures issue category, urgency, and required fields first",
+          },
+          {
+            before: "Escalations lose context",
+            after: "Human teams receive customer details and conversation history",
+          },
+          {
+            before: "Support cases are routed manually",
+            after: "Issue routing can guide cases to the right team",
+          },
+          {
+            before: "Managers lack visibility",
+            after: "Open, escalated, pending, and resolved conversations can be tracked",
+          },
+          {
+            before: "Customers do not know the next step",
+            after: "FLOW can send clear status updates and handover messages",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the support workflow that matters most, then expand into escalation, ticketing, and analytics.",
+        items: [
+          {
+            title: "Customer FAQ support",
+            description: "Answer repeated questions before they reach your team.",
+          },
+          {
+            title: "Order or service status support",
+            description:
+              "Capture order ID, service request, or customer details before routing.",
+          },
+          {
+            title: "Billing support triage",
+            description:
+              "Route payment, invoice, refund, or receipt issues to the right team.",
+          },
+          {
+            title: "Complaint escalation",
+            description:
+              "Move angry or unresolved customers to a human with full context.",
+          },
+          {
+            title: "Technical support intake",
+            description:
+              "Collect issue type, screenshots, product details, and priority before handover.",
+          },
+          {
+            title: "Post-service feedback",
+            description: "Collect ratings and route poor feedback for follow-up.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable support workflow, not a generic chat bot.",
+        items: [
+          {
+            title: "FAQ resolution rate",
+            description: "How many repeated questions are answered without human involvement.",
+          },
+          {
+            title: "Issue capture quality",
+            description: "How many cases include required details before handover.",
+          },
+          {
+            title: "Handover quality",
+            description: "How many escalations reach the team with full conversation context.",
+          },
+          {
+            title: "Queue visibility",
+            description:
+              "How many conversations are new, waiting, assigned, escalated, or resolved.",
+          },
+          {
+            title: "Repeated issue patterns",
+            description: "Which questions or complaints appear most often.",
+          },
+          {
+            title: "Resolution progress",
+            description: "How many cases move from open to assigned, resolved, or closed.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the support workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this support template be customized?",
+            answer:
+              "Yes. The template can be adapted for your FAQs, support categories, ticket fields, escalation rules, status messages, and handover teams.",
+          },
+          {
+            question: "Can FLOW answer support questions automatically?",
+            answer:
+              "Yes. FLOW can answer common questions using FAQ or approved knowledge paths, then route unclear or unresolved questions to fallback or human handover.",
+          },
+          {
+            question: "What happens when the bot cannot resolve the issue?",
+            answer:
+              "The workflow should hand over to the right team with customer details, issue type, priority, conversation history, and next-step context.",
+          },
+          {
+            question: "Can managers see unresolved conversations?",
+            answer:
+              "Yes. FLOW includes conversation operations such as conversation list and queue, queue/ops metrics, assignment, session status updates, and agent reply surfaces.",
+          },
+          {
+            question: "Can this work across website chat and WhatsApp?",
+            answer:
+              "Yes. FLOW supports multi-channel customer workflows with web widget chat, WhatsApp, Telegram, email, SMS, and channel configuration depending on rollout scope.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your customer support bot template?",
+        description:
+          "Tell us how your team currently handles repeated questions, support requests, complaints, ticket routing, escalations, and follow-ups. We'll map your process and show how this FLOW template can reduce repetitive support work and improve handover quality.",
+        note:
+          "Start with FAQ and triage. Prove value. Expand into ticketing, handover, analytics, and support visibility.",
+        primary: { label: "Book Support Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "rag-knowledge-assistant-template",
-    title: "RAG Knowledge Assistant Template | FLOW",
-    intent: "BOFU / MOFU",
-    keywordTarget: "knowledge base chatbot template",
-    headline: "Answer from your docs, then hand off when needed",
+    title: "Knowledge Assistant Template | FLOW",
+    metadataTitle:
+      "Knowledge Assistant Template for RAG, FAQ Automation, Grounded Answers, and Human Handover | Crescora FLOW",
+    metadataDescription:
+      "Launch a knowledge assistant template with Crescora FLOW. Answer FAQs from approved documents, detect knowledge gaps, avoid unsupported AI answers, and hand off low-confidence questions to support teams.",
+    intent: "Knowledge Template",
+    keywordTarget: "knowledge assistant template",
+    headline: "Launch a knowledge assistant template for approved answers, FAQ automation, and human handover.",
     description:
-      "A template for retrieval-enabled support and knowledge workflows.",
-    included: ["Retrieval flow", "answer guardrails", "handoff logic", "CTA"],
-    ctaLabel: "Try the use case",
+      "A launch-ready knowledge assistant template for approved answers, fallback handling, gap detection, draft review, and human handover.",
+    included: [
+      "Approved knowledge search",
+      "Grounded answer generation",
+      "Fallback handling",
+      "Human handover",
+      "Knowledge gap detection",
+      "Draft review workflow",
+      "Support analytics",
+      "Knowledge improvement loop",
+    ],
+    ctaLabel: "Book Knowledge Assistant Demo",
+    publicPage: {
+      breadcrumbTitle: "Knowledge Assistant Template",
+      hero: {
+        eyebrow: "Knowledge Template",
+        title: "Launch a knowledge assistant template for approved answers, FAQ automation, and human handover.",
+        description:
+          "Start from a practical FLOW template that helps support teams answer repeated questions from approved documents, FAQs, policies, service information, pricing details, and process guides. When confidence is low or the question needs human judgment, FLOW can route the conversation to the right team with context.",
+        supportLine:
+          "Built for grounded answers, FAQ automation, knowledge retrieval, fallback handling, gap detection, answer quality review, and human handover.",
+        primaryCta: { label: "Book Knowledge Assistant Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+        statusChips: [
+          "Answered",
+          "Fallback",
+          "Low Confidence",
+          "Needs Human",
+          "Gap Detected",
+          "Draft Created",
+          "Reviewed",
+          "Published",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From knowledge search to a safe answer.",
+          description:
+            "The workflow keeps approved knowledge, fallback behavior, and human handover visible instead of letting the assistant guess.",
+          note:
+            "Start with one knowledge area. Prove answer quality. Expand into more FAQs, documents, channels, and support workflows.",
+          path: [
+            "Customer Question",
+            "Knowledge Search",
+            "Grounded Answer",
+            "Confidence Check",
+            "Answer / Fallback",
+            "Human Handoff",
+            "Gap Tracking",
+          ],
+        },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Answer from approved knowledge, then hand off when needed.",
+          description:
+            "This template gives your team a structured starting point for knowledge automation: customer question capture, approved knowledge search, grounded answer generation, confidence check, fallback message, human handover, and knowledge gap tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to answer safely from approved knowledge.",
+          description:
+            "The template can include knowledge retrieval paths, answer guardrails, fallback rules, low-confidence routing, human handover, repeated-question tracking, gap detection, review workflow, and support analytics.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this knowledge assistant template includes",
+        description:
+          "Use the template as a workflow for approved answers, fallback handling, and knowledge improvement rather than a generic chatbot.",
+        items: [
+          {
+            title: "Approved knowledge search",
+            description:
+              "Search FAQs, documents, policies, pricing notes, service guides, process instructions, or support content before answering.",
+          },
+          {
+            title: "Grounded answer generation",
+            description:
+              "Generate answers only from the approved context provided to the assistant.",
+          },
+          {
+            title: "Fallback handling",
+            description:
+              "When context is missing, weak, outdated, or unclear, the assistant should avoid guessing and guide the user to the next safe step.",
+          },
+          {
+            title: "Human handover",
+            description:
+              "Escalate sensitive, high-risk, unresolved, angry, or low-confidence questions to a human team with the original question and conversation history.",
+          },
+          {
+            title: "Knowledge gap detection",
+            description:
+              "Track repeated unanswered questions so your team can improve the knowledge base over time.",
+          },
+          {
+            title: "Draft review workflow",
+            description:
+              "Turn repeated gaps into draft knowledge updates that can be reviewed before publishing.",
+          },
+          {
+            title: "Support analytics",
+            description:
+              "Track answer rate, fallback rate, repeated questions, handover volume, unresolved topics, and knowledge improvement opportunities.",
+          },
+          {
+            title: "Knowledge operations",
+            description:
+              "FLOW's knowledge operations include KB search, document upload/parse, gap detection, and draft generation/review/publish workflows.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not to let AI answer everything. The goal is to answer safely when knowledge is strong, fallback when knowledge is weak, and hand off when a person should take over.",
+        steps: [
+          "Customer Question",
+          "Knowledge Search",
+          "Grounded Answer",
+          "Confidence Check",
+          "Answer / Fallback",
+          "Human Handoff",
+          "Gap Tracking",
+        ],
+        supportLine:
+          "This path keeps the assistant grounded in approved content and makes knowledge gaps visible for follow-up.",
+      },
+      setupNoteSection: {
+        eyebrow: "Built for knowledge workflows with control",
+        title: "Keep answers grounded in approved content.",
+        description:
+          "Answers should come from approved knowledge, not open-ended guessing.",
+        note:
+          "Approved content only. Use reviewed FAQs, documents, policies, pricing details, service information, and process guides. If the answer is not grounded enough, the assistant should say so, ask for clarification, or hand off. Sensitive, legal, medical, financial, account-specific, complaint, or high-risk questions should route to staff. Measure fallback rate, unresolved topics, repeated questions, and human handover volume. Use repeated gaps to improve your knowledge base instead of letting the same issue repeat. The ai-grounded node supports strict grounding, fallback responses, grounded/fallback route outcomes, and safe downstream handling through nodes like message, handover, API, condition, or end.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from repetitive manual answers to a structured, controlled knowledge workflow.",
+        rows: [
+          {
+            before: "Agents answer the same questions repeatedly",
+            after: "FLOW answers common questions from approved knowledge",
+          },
+          {
+            before: "Customers receive inconsistent answers",
+            after: "Responses follow controlled business content",
+          },
+          {
+            before: "AI may guess when information is missing",
+            after: "Low-confidence questions trigger fallback or handover",
+          },
+          {
+            before: "Support teams do not know what content is missing",
+            after: "Repeated unanswered questions become knowledge gaps",
+          },
+          {
+            before: "Handover loses context",
+            after: "Human teams receive the question and conversation history",
+          },
+          {
+            before: "Knowledge updates are scattered",
+            after: "Draft, review, and publish workflows can improve the knowledge base",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the knowledge area that matters most, then expand into more FAQs, documents, and support workflows.",
+        items: [
+          {
+            title: "Customer support FAQ assistant",
+            description:
+              "Answer repeated support questions and hand off unresolved cases.",
+          },
+          {
+            title: "Healthcare front-desk assistant",
+            description:
+              "Answer approved questions about timings, services, appointment steps, reports, and instructions while routing sensitive cases to staff.",
+          },
+          {
+            title: "Education admissions assistant",
+            description:
+              "Answer questions about courses, fees, batches, eligibility, documents, demo classes, and admission steps.",
+          },
+          {
+            title: "Real estate project assistant",
+            description:
+              "Answer approved questions about projects, locations, price range, amenities, brochures, and site visits.",
+          },
+          {
+            title: "Service business assistant",
+            description:
+              "Answer service availability, pricing, warranty, booking process, support steps, and next actions.",
+          },
+          {
+            title: "Internal team assistant",
+            description:
+              "Help staff find approved SOPs, escalation rules, process notes, and customer handling instructions.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable knowledge workflow, not a generic chatbot.",
+        items: [
+          {
+            title: "FAQ resolution rate",
+            description: "How many repeated questions are answered without human involvement.",
+          },
+          {
+            title: "Fallback rate",
+            description: "How often FLOW avoids answering because the knowledge is weak or missing.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many escalations include the original question, customer details, and conversation context.",
+          },
+          {
+            title: "Knowledge gap volume",
+            description: "Which topics repeatedly trigger fallback or human support.",
+          },
+          {
+            title: "Answer consistency",
+            description: "Whether responses stay aligned with approved business content.",
+          },
+          {
+            title: "Support load reduction",
+            description: "How many repeated questions stop reaching the human support team.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the knowledge assistant can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this template answer from our own documents and FAQs?",
+            answer:
+              "Yes. FLOW supports knowledge base operations, document upload/parse, search, and knowledge workflows depending on rollout scope.",
+          },
+          {
+            question: "What happens when the assistant is not confident?",
+            answer:
+              "The workflow should use fallback messaging, ask a clarifying question, or hand off to a human team instead of inventing an answer.",
+          },
+          {
+            question: "Can support teams review knowledge updates?",
+            answer:
+              "Yes. Repeated unanswered questions can become draft knowledge updates for review and publishing.",
+          },
+          {
+            question: "Can this work across website chat and WhatsApp?",
+            answer:
+              "Yes. FLOW supports multi-channel agents and channel operations, including web widget chat, WhatsApp, Telegram, email, and SMS depending on setup.",
+          },
+          {
+            question: "Can FLOW track knowledge gaps over time?",
+            answer:
+              "Yes. The workflow can track fallback topics, repeated questions, unresolved issues, and draft or published updates so the knowledge base keeps improving.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your knowledge assistant template?",
+        description:
+          "Tell us what your team answers repeatedly - FAQs, pricing, policies, documents, service steps, admissions, project details, support questions, or internal process guidance. We'll map your knowledge assistant workflow and show where FLOW should answer, fallback, or hand off.",
+        note:
+          "Start with one knowledge area. Prove answer quality. Expand into more FAQs, documents, channels, and support workflows.",
+        primary: { label: "Book Knowledge Assistant Demo", href: "/contact" },
+        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "real-estate-lead-qualification-template",
@@ -4217,126 +6071,2703 @@ export const templates: TemplateSeo[] = [
   {
     slug: "service-business-booking-template",
     title: "Service Business Booking Template | FLOW",
-    intent: "BOFU",
-    keywordTarget: "service booking bot",
-    headline: "Turn enquiries into bookings with reminders built in",
+    metadataTitle:
+      "Service Business Booking Template for Appointments, Reminders, Payments, Staff Assignment, and Follow-Ups | Crescora FLOW",
+    metadataDescription:
+      "Launch a service business booking template with Crescora FLOW. Automate customer enquiries, service booking, reminders, payment follow-ups, staff handover, service updates, feedback, and repeat bookings.",
+    intent: "Service Template",
+    keywordTarget: "service business booking template",
+    headline: "Launch a service booking template for enquiries, appointments, reminders, payments, and follow-ups.",
     description:
-      "A template for home services and other booking-driven businesses.",
-    included: ["Booking triggers", "reminders", "handoff", "CTA"],
-    ctaLabel: "See pricing",
+      "A launch-ready service booking template for enquiry capture, booking confirmation, reminders, payment follow-up, staff handover, and repeat-service workflows.",
+    included: [
+      "Service booking request flow",
+      "Customer detail capture",
+      "Service selection",
+      "Booking confirmation",
+      "Reminder automation",
+      "Payment follow-up",
+      "Staff or technician handover",
+      "Service status updates",
+      "Feedback and repeat booking",
+    ],
+    ctaLabel: "Book Service Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Service Business Booking Template",
+      hero: {
+        eyebrow: "Service Business Template",
+        title: "Launch a service booking template for enquiries, appointments, reminders, payments, and follow-ups.",
+        description:
+          "Start from a practical FLOW template that helps service businesses capture customer enquiries, collect service details, confirm bookings, send reminders, route requests to the right staff, follow up on payments, share service updates, collect feedback, and bring customers back for repeat visits.",
+        supportLine:
+          "Built for home services, salons, spas, wellness clinics, repair teams, cleaning services, consultants, agencies, maintenance teams, and booking-driven businesses.",
+        primaryCta: { label: "Book Service Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Booking Workflow", href: "/contact" },
+        statusChips: [
+          "New Enquiry",
+          "Details Captured",
+          "Slot Requested",
+          "Confirmed",
+          "Reminder Sent",
+          "Assigned",
+          "Payment Pending",
+          "Completed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From enquiry to service completion.",
+          description:
+            "The workflow keeps booking requests, reminders, payment follow-up, and handover visible so service teams can manage the entire customer journey in one path.",
+          note:
+            "Start with one booking workflow. Prove value. Expand into payments, staff assignment, feedback, and repeat bookings.",
+          path: [
+            "Customer Enquiry",
+            "Service Type",
+            "Customer Details",
+            "Location",
+            "Preferred Time",
+            "Booking Confirmation",
+            "Reminder",
+            "Payment / Staff Handover",
+            "Service Completed",
+            "Feedback / Repeat Booking",
+          ],
+        },
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Turn enquiries into confirmed bookings with reminders built in.",
+          description:
+            "This template gives your team a structured starting point for service booking automation: enquiry capture, service type, customer details, location, preferred date and time, booking confirmation, reminder messages, payment follow-up, staff handover, and outcome tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to move from enquiry to booked service.",
+          description:
+            "The template can include booking request flows, customer detail capture, service selection, location collection, reminder triggers, payment follow-up, staff or technician assignment, service status updates, feedback collection, and repeat-booking reminders.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this service booking template includes",
+        description:
+          "Use the template as a workflow for turning enquiries into confirmed bookings, then keeping the customer moving through reminders, payment, and follow-up.",
+        items: [
+          {
+            title: "Service enquiry capture",
+            description:
+              "Collect customer name, phone number, service type, location, preferred time, and request details.",
+          },
+          {
+            title: "Service selection",
+            description:
+              "Let customers choose the service they need: consultation, repair, cleaning, maintenance, salon slot, wellness session, pickup, delivery, or callback.",
+          },
+          {
+            title: "Booking request flow",
+            description:
+              "Capture preferred date and time, urgency, visit type, and special instructions before confirmation.",
+          },
+          {
+            title: "Booking confirmation",
+            description:
+              "Send a clear confirmation with date, time, location, service details, and next steps.",
+          },
+          {
+            title: "Reminder automation",
+            description:
+              "Send reminders before service visits, consultations, pickups, appointments, or callbacks.",
+          },
+          {
+            title: "Payment follow-up",
+            description:
+              "Send payment reminders, booking fee requests, payment links, receipt instructions, or billing handover where required.",
+          },
+          {
+            title: "Staff or technician handover",
+            description:
+              "Route the booking to the right person based on service type, location, urgency, or team availability.",
+          },
+          {
+            title: "Service status updates",
+            description:
+              "Notify customers when a booking is confirmed, rescheduled, delayed, completed, or waiting for payment.",
+          },
+          {
+            title: "Feedback and repeat booking",
+            description:
+              "Collect feedback after service completion and trigger repeat-visit or renewal follow-ups.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not only to reply to enquiries. The goal is to move every customer request toward a clear service outcome: booked, confirmed, reminded, assigned, paid, completed, reviewed, or followed up.",
+        steps: [
+          "Customer Enquiry",
+          "Service Type",
+          "Customer Details",
+          "Location",
+          "Preferred Time",
+          "Booking Confirmation",
+          "Reminder",
+          "Payment / Staff Handover",
+          "Service Completed",
+          "Feedback / Repeat Booking",
+        ],
+        supportLine:
+          "This path keeps bookings, reminders, payment follow-up, and post-service follow-through visible for the team.",
+      },
+      setupNoteSection: {
+        eyebrow: "Service workflow note",
+        title: "Keep the booking path focused on one clear outcome.",
+        description:
+          "The workflow should capture what the customer needs, assign it to the right team, and keep the booking moving until completion.",
+        note:
+          "Service teams get the best result when enquiry capture, confirmation, payment follow-up, and repeat-booking prompts are handled in one durable workflow rather than through manual back-and-forth.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual service coordination to a structured, trackable booking workflow.",
+        rows: [
+          {
+            before: "Enquiries arrive across calls, WhatsApp, forms, and website chat",
+            after: "Every enquiry can enter a structured booking workflow",
+          },
+          {
+            before: "Staff collect the same booking details manually",
+            after: "FLOW captures service type, location, time, and contact details first",
+          },
+          {
+            before: "Customers wait for confirmation",
+            after: "Booking confirmation can be sent with clear next steps",
+          },
+          {
+            before: "Reminders depend on staff memory",
+            after: "Reminder messages can be scheduled automatically",
+          },
+          {
+            before: "Payment follow-up is manual",
+            after: "Payment reminders and billing handover can be added",
+          },
+          {
+            before: "Staff assignment is unclear",
+            after: "Requests can be routed to the right team or technician",
+          },
+          {
+            before: "Customers are not followed up after service",
+            after: "Feedback and repeat-booking workflows can run after completion",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the service workflow that matters most, then expand into payments, staff assignment, feedback, and repeat bookings.",
+        items: [
+          {
+            title: "Home service bookings",
+            description:
+              "Cleaning, repairs, pest control, appliance service, plumbing, electrical work, and maintenance visits.",
+          },
+          {
+            title: "Salon and spa appointments",
+            description:
+              "Service selection, slot preference, confirmation, reminders, and repeat-visit follow-ups.",
+          },
+          {
+            title: "Consultation bookings",
+            description:
+              "Business, legal, finance, coaching, wellness, or professional consultation scheduling.",
+          },
+          {
+            title: "Repair and maintenance requests",
+            description:
+              "Collect issue details, photos, location, urgency, preferred visit time, and technician assignment.",
+          },
+          {
+            title: "Pickup and delivery services",
+            description:
+              "Capture pickup address, delivery address, preferred time, payment status, and service updates.",
+          },
+          {
+            title: "Recurring service reminders",
+            description:
+              "Maintenance renewals, package visits, follow-up appointments, subscription service reminders, and review requests.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable service workflow, not a generic booking page.",
+        items: [
+          {
+            title: "Enquiry capture quality",
+            description:
+              "How many enquiries include service type, customer details, location, and preferred time.",
+          },
+          {
+            title: "Booking completion rate",
+            description:
+              "How many enquiries become confirmed bookings, callbacks, or service visits.",
+          },
+          {
+            title: "Reminder effectiveness",
+            description:
+              "How many customers receive appointment, payment, or service reminders on time.",
+          },
+          {
+            title: "Payment follow-up progress",
+            description:
+              "How many pending payments receive reminders, confirmations, or escalation.",
+          },
+          {
+            title: "Staff handover quality",
+            description:
+              "How many bookings reach the right team with complete service context.",
+          },
+          {
+            title: "Service completion visibility",
+            description:
+              "How many jobs are requested, confirmed, assigned, rescheduled, completed, cancelled, or escalated.",
+          },
+          {
+            title: "Repeat booking opportunities",
+            description:
+              "How many completed services trigger review, renewal, maintenance, or repeat-visit follow-up.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the service booking workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this template be customized for my service business?",
+            answer:
+              "Yes. The template can be adapted for your service types, booking rules, service areas, staff assignment logic, reminder timing, payment process, and follow-up messages.",
+          },
+          {
+            question: "Can customers book from WhatsApp and website chat?",
+            answer:
+              "Yes. FLOW supports customer workflows across website chat, WhatsApp, Telegram, email, SMS, and connected systems depending on rollout scope.",
+          },
+          {
+            question: "Can FLOW send booking reminders automatically?",
+            answer:
+              "Yes. Reminder workflows can be scheduled using timezone-aware scheduler logic with dedupe, expiry, and fallback handling.",
+          },
+          {
+            question: "Can the workflow collect payment or booking fees?",
+            answer:
+              "Yes. FLOW supports payment workflows, payment acknowledgement, paid/failed routing, transaction details, and recovery paths where provider setup is configured.",
+          },
+          {
+            question: "Can bookings be routed to staff or technicians?",
+            answer:
+              "Yes. FLOW supports handover, queue, notifications, records, and assignment-oriented operating surfaces depending on rollout scope.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your service booking template?",
+        description:
+          "Tell us how your business currently handles enquiries, bookings, reminders, staff assignment, payments, service updates, and customer follow-ups. We'll map your process and show how this FLOW template can be adapted for your service workflow.",
+        note:
+          "Start with one booking workflow. Prove value. Expand into payments, staff assignment, feedback, and repeat bookings.",
+        primary: { label: "Book Service Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Booking Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "billing-and-collections-template",
     title: "Billing and Collections Template | FLOW",
+    metadataTitle:
+      "Billing and Collections Template for Payment Reminders, Failed Payments, Disputes, and Follow-Ups | Crescora FLOW",
+    metadataDescription:
+      "Launch a billing and collections template with Crescora FLOW. Automate payment reminders, invoice follow-ups, failed-payment recovery, receipt capture, overdue escalation, dispute routing, and billing handover.",
     intent: "BOFU",
-    keywordTarget: "collections workflow bot",
-    headline: "Automate reminders, follow-up, and exception handling",
-    description: "A template for billing, collections, and due-date workflows.",
-    included: ["Reminder schedule", "exceptions", "handoff", "CTA"],
-    ctaLabel: "Talk to sales",
+    keywordTarget: "billing and collections template",
+    headline:
+      "Launch a billing and collections template for reminders, payment follow-ups, overdue cases, and exception handover.",
+    description:
+      "A launch-ready billing workflow template for payment reminders, invoice follow-ups, failed-payment recovery, overdue escalation, dispute routing, and collection tracking.",
+    included: [
+      "Billing reminder flow",
+      "Payment link sharing",
+      "Reminder sequence",
+      "Payment reference capture",
+      "Payment verification",
+      "Failed-payment recovery",
+      "Overdue escalation",
+      "Dispute routing",
+      "Collection status tracking",
+    ],
+    ctaLabel: "Book Billing Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Billing and Collections Template",
+      hero: {
+        eyebrow: "Billing Template",
+        title:
+          "Launch a billing and collections template for reminders, payment follow-ups, overdue cases, and exception handover.",
+        description:
+          "Start from a practical FLOW template that helps teams send billing reminders, share payment links or instructions, capture transaction references, confirm payment status, recover failed payments, escalate overdue cases, route disputes, and track every collection workflow from due date to final outcome.",
+        supportLine:
+          "Built for invoice reminders, payment follow-ups, due-date alerts, failed-payment recovery, receipt capture, billing disputes, overdue escalation, finance handover, and collection visibility.",
+        primaryCta: { label: "Book Billing Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Billing Workflow", href: "/contact" },
+        statusChips: [
+          "Due",
+          "Reminder Sent",
+          "Link Shared",
+          "Paid",
+          "Failed",
+          "Pending",
+          "Overdue",
+          "Disputed",
+          "Escalated",
+          "Closed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From invoice due date to a clear collection outcome.",
+          description:
+            "The workflow keeps reminders, payment links, status checks, exceptions, and handover visible so billing teams can manage the entire collection journey in one path.",
+          note:
+            "Start with one billing follow-up template. Prove value. Expand into verification, disputes, escalation, and collection dashboards.",
+          path: [
+            "Invoice / Payment Due",
+            "Reminder Sent",
+            "Payment Link / Instructions",
+            "Customer Pays / Does Not Respond",
+            "Verify / Capture Reference",
+            "Paid / Failed / Overdue / Disputed",
+            "Billing Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Billing queue",
+        title: "Due, reminder sent, link shared, paid, failed, pending, overdue, disputed, escalated, and closed.",
+        description:
+          "This mock queue card shows where billing cases sit right now so finance and operations teams can act before collections stall.",
+        stats: [
+          { label: "Due payments", value: "24" },
+          { label: "Pending verification", value: "9" },
+          { label: "Overdue cases", value: "13" },
+          { label: "Open disputes", value: "5" },
+        ],
+        note:
+          "Queue visibility helps managers see unresolved billing cases before they turn into churn, write-offs, or delayed revenue.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Automate billing reminders, follow-ups, and exception handling.",
+          description:
+            "This template gives your team a structured starting point for billing workflows: payment due reminders, payment link sharing, reference capture, confirmation messages, failed-payment recovery, overdue escalation, billing handover, and collection status tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to recover payments and track collections.",
+          description:
+            "The template can include due-date reminder sequences, payment status checks, receipt or reference capture, failed-payment retry prompts, overdue escalation rules, dispute routing, billing team handover, audit-ready records, and final outcome tracking.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this billing and collections template includes",
+        description:
+          "Use the template as a workflow for turning open invoices and pending balances into clear outcomes, then keep each case moving through reminders, verification, escalation, and closure.",
+        items: [
+          {
+            title: "Billing reminder flow",
+            description:
+              "Send payment due messages for invoices, consultation fees, service charges, booking tokens, subscription renewals, or pending balances.",
+          },
+          {
+            title: "Payment link or instruction sharing",
+            description:
+              "Share payment links, bank or payment instructions, invoice details, or next-step payment guidance.",
+          },
+          {
+            title: "Reminder sequence",
+            description:
+              "Send structured follow-ups before due date, on due date, after due date, and after missed payment windows.",
+          },
+          {
+            title: "Payment reference capture",
+            description:
+              "Collect transaction ID, receipt number, screenshot, invoice ID, order ID, or customer confirmation details.",
+          },
+          {
+            title: "Payment verification path",
+            description:
+              "Where payment provider setup is configured, FLOW can verify payment status before moving the workflow forward.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "Guide customers after failed or pending payments with retry instructions, alternate help, or billing support handover.",
+          },
+          {
+            title: "Overdue escalation",
+            description:
+              "Alert billing, finance, sales, admissions, support, or operations teams when a payment remains unresolved.",
+          },
+          {
+            title: "Dispute routing",
+            description:
+              "Route wrong amount concerns, refund requests, duplicate payments, receipt issues, or invoice questions to the right team.",
+          },
+          {
+            title: "Collection status tracking",
+            description:
+              "Track each payment as requested, reminder sent, link shared, paid, failed, pending, overdue, disputed, escalated, or closed.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template workflow path",
+        description:
+          "The goal is not only to send reminders. The goal is to move every billing case toward a clear result: paid, pending, failed, overdue, disputed, escalated, or closed.",
+        steps: [
+          "Invoice / Payment Due",
+          "Reminder Sent",
+          "Payment Link / Instructions",
+          "Customer Pays / Does Not Respond",
+          "Verify / Capture Reference",
+          "Paid / Failed / Overdue / Disputed",
+          "Billing Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps payment reminders, verification, exceptions, and billing handover visible for the team.",
+      },
+      setupNoteSection: {
+        eyebrow: "Billing workflow note",
+        title: "Built for billing workflows with control",
+        description:
+          "If payment provider support is configured, FLOW can verify payment status before the workflow moves forward. Pending payments should stay in the verification or follow-up path instead of being treated as success too early.",
+        note:
+          "Store payment status, reference ID, amount, timestamp, reminder state, and escalation reason where required. Where provider setup is configured, FLOW can connect to Razorpay or another payment gateway, while WhatsApp follow-ups may require approved templates outside the active conversation window and message costs vary by channel.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual chasing to a structured, trackable billing workflow.",
+        rows: [
+          {
+            before: "Staff manually chase customers for payments",
+            after: "FLOW can send structured billing reminders",
+          },
+          {
+            before: "Payment references are scattered across chats",
+            after: "References can be captured inside the workflow",
+          },
+          {
+            before: "Failed payments are handled inconsistently",
+            after: "Failed payments can trigger retry, fallback, or handover",
+          },
+          {
+            before: "Overdue cases depend on staff memory",
+            after: "Escalation can happen when payment remains unresolved",
+          },
+          {
+            before: "Disputes move randomly between teams",
+            after: "Billing disputes can be routed to the right owner",
+          },
+          {
+            before: "Managers lack collection visibility",
+            after: "Payment status can be tracked from due date to closure",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the billing workflow that matters most, then expand into verification, disputes, escalation, and collection dashboards.",
+        items: [
+          {
+            title: "Invoice payment follow-up",
+            description:
+              "For service businesses, agencies, vendors, B2B teams, and finance teams.",
+          },
+          {
+            title: "Consultation fee reminders",
+            description:
+              "For clinics, hospitals, consultants, doctors, coaching centers, and professional services.",
+          },
+          {
+            title: "Booking token collection",
+            description:
+              "For appointments, site visits, reservations, service bookings, and demo confirmations.",
+          },
+          {
+            title: "Admission or course fee follow-up",
+            description:
+              "For schools, colleges, coaching centers, EdTech teams, and training institutes.",
+          },
+          {
+            title: "Subscription renewal billing",
+            description:
+              "For SaaS, memberships, packages, maintenance plans, and recurring services.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "For cases where payment failed, stayed pending, or needs manual confirmation.",
+          },
+          {
+            title: "Billing dispute routing",
+            description:
+              "For refund requests, duplicate payment claims, incorrect amount questions, and receipt issues.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable collections workflow, not a generic reminder page.",
+        items: [
+          {
+            title: "Reminder delivery",
+            description: "How many billing reminders were sent successfully.",
+          },
+          {
+            title: "Payment completion",
+            description: "How many pending payments moved to paid status.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "How many failed or pending payments were retried, resolved, or escalated.",
+          },
+          {
+            title: "Overdue volume",
+            description:
+              "How many cases remained unpaid after the reminder sequence.",
+          },
+          {
+            title: "Dispute volume",
+            description:
+              "How many billing cases became refund, receipt, duplicate payment, or wrong amount issues.",
+          },
+          {
+            title: "Reference capture quality",
+            description:
+              "How many customers submitted transaction IDs, receipt numbers, screenshots, or confirmation details.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many billing cases reached the team with customer details, amount, status, and conversation history.",
+          },
+          {
+            title: "Collection visibility",
+            description:
+              "How many billing workflows are requested, pending, paid, failed, overdue, disputed, escalated, or closed.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the billing workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this template be customized for our billing process?",
+            answer:
+              "Yes. The template can be adapted for your invoice types, payment stages, reminder timing, payment provider, billing team, escalation rules, and customer segments.",
+          },
+          {
+            question: "Can FLOW verify payment status automatically?",
+            answer:
+              "Where provider support is configured, FLOW can verify payment status. If automatic verification is not available, the template can collect transaction references, screenshots, or manual confirmation details.",
+          },
+          {
+            question: "What happens when payment fails or stays pending?",
+            answer:
+              "The workflow should give retry guidance, offer alternate support, or route the case to billing or finance. It should not end silently after a failed payment.",
+          },
+          {
+            question: "Can reminders be sent through WhatsApp, SMS, or email?",
+            answer:
+              "Yes, depending on channel setup. WhatsApp messages outside the active conversation window may require approved templates.",
+          },
+          {
+            question: "Can billing cases update CRM, sheets, or internal records?",
+            answer:
+              "Yes, based on rollout scope. FLOW supports records, API calls, connectors, notifications, audit logs, and workflow-owned structured data.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your billing and collections template?",
+        description:
+          "Tell us how your team currently handles invoices, pending payments, reminders, failed payments, receipts, disputes, overdue cases, and billing handover. We'll map your process and show how this FLOW template can reduce manual chasing and improve collection visibility.",
+        note:
+          "Start with one billing follow-up template. Prove value. Expand into verification, disputes, escalation, and collection dashboards.",
+        primary: { label: "Book Billing Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Billing Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "observability-dashboard-template",
     title: "Conversation Observability Dashboard Template | FLOW",
+    metadataTitle:
+      "Conversation Observability Dashboard Template for Workflow Analytics, Handover Tracking, SLA Visibility, and Customer Outcomes | Crescora FLOW",
+    metadataDescription:
+      "Launch a conversation observability dashboard template with Crescora FLOW. Track workflow stages, handovers, SLA risk, drop-offs, follow-ups, escalations, and customer outcomes.",
     intent: "BOFU / MOFU",
-    keywordTarget: "conversation dashboard template",
-    headline: "See resolution, leakage, escalation, and conversion in one view",
+    keywordTarget: "conversation observability dashboard template",
+    headline:
+      "Launch a conversation observability dashboard template for workflow visibility, leakage tracking, and outcome reporting.",
     description:
-      "A template for conversation analytics and operational visibility.",
-    included: ["Resolution rate", "leakage", "escalation", "conversion", "CTA"],
-    ctaLabel: "See dashboard",
+      "A launch-ready observability dashboard template for tracking customer conversations, workflow stages, handovers, SLA risk, drop-offs, follow-ups, escalations, and completed outcomes.",
+    included: [
+      "Conversation queue visibility",
+      "Workflow funnel tracking",
+      "Handover monitoring",
+      "SLA-risk view",
+      "Drop-off tracking",
+      "Repeated issue tracking",
+      "Outcome analytics",
+      "Improvement action path",
+    ],
+    ctaLabel: "Book Observability Template Demo",
+    publicPage: {
+      breadcrumbTitle: "Conversation Observability Dashboard Template",
+      hero: {
+        eyebrow: "Observability Template",
+        title:
+          "Launch a conversation observability dashboard template for workflow visibility, leakage tracking, and outcome reporting.",
+        description:
+          "Start from a practical FLOW template that helps teams track customer conversations, workflow stages, handovers, escalations, SLA risk, drop-offs, pending follow-ups, and completed outcomes across sales, support, booking, payment, document, and service workflows.",
+        supportLine:
+          "Built for conversation queues, workflow funnels, handover tracking, SLA visibility, drop-off analysis, repeated issue tracking, and business outcome reporting.",
+        primaryCta: { label: "Book Observability Template Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Dashboard Workflow", href: "/contact" },
+        statusChips: [
+          "New",
+          "Active",
+          "Waiting",
+          "Assigned",
+          "Escalated",
+          "SLA Risk",
+          "Resolved",
+          "Dropped",
+          "Completed",
+        ],
+        visual: {
+          eyebrow: "Dashboard preview",
+          title: "Customer Message to workflow insight.",
+          description:
+            "The workflow keeps queue pressure, handover state, drop-offs, and outcome movement visible so managers can see where conversations are getting stuck.",
+          note:
+            "Start with one dashboard view. Track the right events. Improve workflows with real operational data.",
+          path: [
+            "Customer Message",
+            "Workflow Stage",
+            "Event Tracked",
+            "Queue / Handover",
+            "Dashboard View",
+            "Bottleneck Found",
+            "Workflow Improved",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Queue + ops view",
+        title: "New, active, waiting, assigned, escalated, SLA risk, resolved, dropped, and completed.",
+        description:
+          "This mock dashboard card shows the operational surfaces teams need to understand where customer workflows are stalling and what needs attention.",
+        stats: [
+          { label: "Open conversations", value: "38" },
+          { label: "SLA risk", value: "12" },
+          { label: "Drop-offs", value: "9" },
+          { label: "Handovers", value: "17" },
+        ],
+        note:
+          "Track workflow events without exposing unnecessary sensitive data.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "See resolution, leakage, escalation, and conversion in one view.",
+          description:
+            "This template gives your team a structured starting point for conversation visibility: open conversations, workflow stages, handovers, queue pressure, SLA risk, drop-offs, completed outcomes, and follow-up leakage.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to track workflow health and customer outcomes.",
+          description:
+            "The template can include conversation status views, workflow funnel metrics, handover tracking, SLA-risk indicators, repeated question patterns, drop-off points, reminder leakage, conversion events, and dashboard actions for improvement.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this observability dashboard template includes",
+        description:
+          "Use the template as a dashboard for understanding what is moving, what is stalled, and what action should happen next.",
+        items: [
+          {
+            title: "Conversation queue visibility",
+            description:
+              "Track conversations by status: new, active, waiting, assigned, escalated, resolved, dropped, or completed.",
+          },
+          {
+            title: "Workflow funnel tracking",
+            description:
+              "See where users are in the journey: enquiry, qualification, booking, payment, document, support, handover, or completion.",
+          },
+          {
+            title: "Handover monitoring",
+            description:
+              "Track which conversations moved to humans, why they escalated, who owns them, and whether they are still pending.",
+          },
+          {
+            title: "SLA-risk view",
+            description:
+              "Surface conversations that are waiting too long, assigned late, stuck in queue, or approaching response-time breach.",
+          },
+          {
+            title: "Drop-off and leakage tracking",
+            description:
+              "Find where customers abandon bookings, payments, document uploads, support cases, callbacks, demos, or site visits.",
+          },
+          {
+            title: "Repeated issue tracking",
+            description:
+              "Identify repeated questions, failed answer paths, support categories, complaints, and workflow branches that need improvement.",
+          },
+          {
+            title: "Outcome analytics",
+            description:
+              "Track completed outcomes such as lead created, appointment booked, payment completed, document submitted, support resolved, handover closed, or workflow completed.",
+          },
+          {
+            title: "Improvement action path",
+            description:
+              "Turn dashboard insights into action: update FAQ, improve prompts, adjust reminders, add fallback, change handover rules, or fix weak workflow steps.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Template dashboard path",
+        description:
+          "The goal is not only to display analytics. The goal is to help managers see where customer workflows are leaking and what action should fix them.",
+        steps: [
+          "Customer Message",
+          "Workflow Stage",
+          "Event Tracked",
+          "Queue / Handover",
+          "Dashboard View",
+          "Bottleneck Found",
+          "Workflow Improved",
+        ],
+        supportLine:
+          "This path keeps customer movement, event tracking, queue state, and improvement actions visible in one place.",
+      },
+      setupNoteSection: {
+        eyebrow: "Observability note",
+        title: "Built for observability with clean data and privacy control",
+        description:
+          "Track workflow events without exposing unnecessary sensitive data. The playbook supports stable snake_case events, business-safe properties, dedupe, throttling, and non-blocking analytics behavior.",
+        note:
+          "Use stable event names such as lead_created, appointment_booked, payment_failed, payment_success, ai_fallback_triggered, and handover_created, and mask raw phone numbers, medical symptoms, document text, payment screenshots, or other sensitive free-text data.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual reporting to a structured, trackable dashboard workflow.",
+        rows: [
+          {
+            before: "Managers rely on manual updates from teams",
+            after: "Dashboards show open, pending, escalated, and completed conversations",
+          },
+          {
+            before: "Leads and support cases disappear inside chats",
+            after: "Each conversation can be tied to a workflow status",
+          },
+          {
+            before: "Follow-ups are hard to audit",
+            after: "Reminders, handovers, and outcome events can be tracked",
+          },
+          {
+            before: "Drop-offs are discovered too late",
+            after: "Teams can see where users stop responding",
+          },
+          {
+            before: "Escalations are invisible until customers complain",
+            after: "Handover volume, queue pressure, and SLA risk become visible",
+          },
+          {
+            before: "Performance is measured only after damage happens",
+            after: "Managers can monitor workflow health while work is active",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this template for",
+        description:
+          "Start with the operational view that matters most, then expand into funnel metrics, handover tracking, and outcome reporting.",
+        items: [
+          {
+            title: "Sales pipeline visibility",
+            description:
+              "Track lead created, qualified, callback requested, site visit booked, sales handover, and follow-up pending.",
+          },
+          {
+            title: "Support queue visibility",
+            description:
+              "Track FAQ resolved, issue captured, ticket created, assigned, escalated, unresolved, and closed.",
+          },
+          {
+            title: "Appointment workflow tracking",
+            description:
+              "Track appointment requested, slot selected, confirmed, reminder sent, rescheduled, no-show, and completed.",
+          },
+          {
+            title: "Payment follow-up tracking",
+            description:
+              "Track payment requested, reminder sent, link shared, paid, failed, pending, overdue, and escalated.",
+          },
+          {
+            title: "Document workflow visibility",
+            description:
+              "Track requested, submitted, missing, invalid, under review, approved, rejected, and escalated documents.",
+          },
+          {
+            title: "Knowledge assistant quality",
+            description:
+              "Track answered, fallback, low confidence, gap detected, handover created, reviewed, and published updates.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this template",
+        description:
+          "Treat the first rollout as a measurable observability dashboard, not a generic chart page.",
+        items: [
+          {
+            title: "Conversation volume",
+            description:
+              "How many conversations start by channel, source, workflow, or business category.",
+          },
+          {
+            title: "First response speed",
+            description:
+              "How quickly customers receive a useful first reply.",
+          },
+          {
+            title: "Workflow completion rate",
+            description:
+              "How many users complete the expected business journey.",
+          },
+          {
+            title: "Drop-off rate",
+            description:
+              "Where customers stop responding or fail to complete the next step.",
+          },
+          {
+            title: "Handover rate",
+            description:
+              "How many conversations require human help and why.",
+          },
+          {
+            title: "Queue aging",
+            description:
+              "How long conversations wait before assignment or resolution.",
+          },
+          {
+            title: "SLA risk",
+            description:
+              "How many cases approach or miss first-response targets.",
+          },
+          {
+            title: "Outcome quality",
+            description:
+              "How many leads, bookings, payments, documents, support cases, or escalations reach a completed state.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the observability dashboard can launch without ambiguity.",
+        items: [
+          {
+            question: "What is a conversation observability dashboard?",
+            answer:
+              "A conversation observability dashboard helps teams see what is happening across customer chats, workflow stages, handovers, delays, drop-offs, and completed outcomes.",
+          },
+          {
+            question: "Can this dashboard show unresolved conversations?",
+            answer:
+              "Yes. FLOW supports conversation operations, queue visibility, handover status, workflow events, analytics, and operational dashboards depending on rollout configuration.",
+          },
+          {
+            question: "What events should we track first?",
+            answer:
+              "Start with business-critical events such as lead_created, appointment_booked, payment_success, payment_failed, document_submitted, support_escalated, handover_created, and workflow_completed.",
+          },
+          {
+            question: "Can observability show where customers drop off?",
+            answer:
+              "Yes. If workflow events are designed correctly, teams can see where customers abandon booking, payment, document submission, support resolution, or follow-up journeys.",
+          },
+          {
+            question: "Can analytics include sensitive data?",
+            answer:
+              "Analytics should avoid raw PII and sensitive free-text data. Use masked, structured, business-safe properties wherever possible.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your conversation observability dashboard?",
+        description:
+          "Tell us how your team currently tracks conversations, handovers, follow-ups, escalations, payments, bookings, documents, and support outcomes. We'll map the dashboard views and workflow events your business should monitor first.",
+        note:
+          "Start with one dashboard view. Track the right events. Improve workflows with real operational data.",
+        primary: { label: "Book Observability Template Demo", href: "/contact" },
+        secondary: { label: "Discuss My Dashboard Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "hospital-appointment-booking-flow",
     title: "Hospital Appointment Booking Flow | FLOW",
+    metadataTitle:
+      "Hospital Appointment Booking Flow for OPD, Reminders, Payments, and Patient Handover | Crescora FLOW",
+    metadataDescription:
+      "Launch a hospital appointment booking flow with Crescora FLOW. Automate OPD enquiries, patient intake, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
     intent: "BOFU",
     keywordTarget: "hospital appointment booking flow",
     headline:
-      "Publish a hospital-ready flow that handles appointments, reminders, and handoff.",
+      "Launch a hospital appointment booking flow for OPD visits, reminders, payments, and staff handover.",
     description:
-      "A hospital-specific launch template for the appointment journey.",
+      "A hospital-ready workflow template for OPD enquiries, patient intake, doctor routing, slot booking, appointment confirmations, reminders, consultation fee follow-up, rescheduling, and front-desk handover.",
     included: [
-      "Problem",
-      "flow diagram",
-      "steps",
-      "nodes used",
-      "business benefit",
-      "CTA",
+      "Patient enquiry capture",
+      "Department and doctor routing",
+      "Patient details collection",
+      "Slot booking flow",
+      "Appointment confirmation",
+      "Reminder automation",
+      "Consultation fee follow-up",
+      "Reschedule and cancellation handling",
+      "Emergency and sensitive-case handover",
+      "Outcome tracking",
     ],
-    ctaLabel: "Use this automation for your business",
+    ctaLabel: "Book Hospital Workflow Demo",
+    publicPage: {
+      breadcrumbTitle: "Hospital Appointment Booking Flow",
+      hero: {
+        eyebrow: "Hospital Template",
+        title:
+          "Launch a hospital appointment booking flow for OPD visits, reminders, payments, and staff handover.",
+        description:
+          "Start from a hospital-ready FLOW template that helps front-desk teams capture patient enquiries, route by department or doctor, collect patient details, book appointment slots, send confirmations and reminders, handle consultation fee follow-ups, manage rescheduling, and escalate urgent or sensitive cases to staff.",
+        supportLine:
+          "Built for OPD appointments, doctor availability, patient intake, slot booking, consultation fee follow-up, appointment reminders, emergency escalation, and front-desk handover.",
+        primaryCta: { label: "Book Hospital Workflow Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Hospital Workflow", href: "/contact" },
+        statusChips: [
+          "New Enquiry",
+          "Details Captured",
+          "Department Selected",
+          "Slot Selected",
+          "Confirmed",
+          "Reminder Sent",
+          "Payment Pending",
+          "Rescheduled",
+          "Staff Handover",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From patient enquiry to a clear appointment outcome.",
+          description:
+            "The workflow keeps appointment requests, reminders, payments, rescheduling, and staff handover visible so front-desk teams can manage the full patient journey in one path.",
+          note:
+            "Start with appointment booking. Prove value. Expand into reminders, payments, reports, online consultations, and patient support.",
+          path: [
+            "Patient Enquiry",
+            "Department / Doctor Selection",
+            "Patient Details",
+            "Date & Slot",
+            "Confirmation",
+            "Payment / Reminder",
+            "Reschedule / Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Front-desk queue",
+        title:
+          "New enquiry, details captured, department selected, slot selected, confirmed, reminder sent, payment pending, rescheduled, and staff handover.",
+        description:
+          "This mock queue card shows where hospital booking cases sit right now so admins can act before appointments stall or sensitive requests are missed.",
+        stats: [
+          { label: "Open enquiries", value: "29" },
+          { label: "Pending slots", value: "11" },
+          { label: "Reschedules", value: "7" },
+          { label: "Handover cases", value: "6" },
+        ],
+        note:
+          "Track appointment events without exposing unnecessary sensitive data.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Publish a hospital-ready flow that handles appointments, reminders, and handoff.",
+          description:
+            "This template gives your team a structured starting point for hospital appointment automation: patient intent capture, department or doctor routing, patient details, slot selection, appointment confirmation, reminders, payment follow-up, rescheduling, and staff handover.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to move from patient enquiry to confirmed appointment.",
+          description:
+            "The template can include patient intake questions, department selection, doctor or service selection, date and slot capture, appointment confirmation, reminder triggers, consultation fee handling, emergency routing, cancellation or reschedule paths, and front-desk handover rules.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this hospital appointment flow includes",
+        description:
+          "Use the template as a workflow for turning patient enquiries into confirmed appointments, then keep each case moving through reminders, payments, and handover when needed.",
+        items: [
+          {
+            title: "Patient enquiry capture",
+            description:
+              "Understand whether the patient needs OPD booking, doctor availability, department help, online consultation, report query, payment support, rescheduling, or staff assistance.",
+          },
+          {
+            title: "Department and doctor routing",
+            description:
+              "Route patients by department, doctor, service type, consultation mode, urgency, or hospital branch.",
+          },
+          {
+            title: "Patient details collection",
+            description:
+              "Collect name, mobile number, age, gender, location, visit reason, preferred department, preferred doctor, and appointment preference.",
+          },
+          {
+            title: "Slot booking flow",
+            description:
+              "Guide the patient through date and slot selection, then store the selected booking details for confirmation and next steps.",
+          },
+          {
+            title: "Appointment confirmation",
+            description:
+              "Send clear confirmation with doctor or department, date, time, hospital location, arrival instructions, and required documents where applicable.",
+          },
+          {
+            title: "Reminder automation",
+            description:
+              "Schedule reminders before the appointment so front-desk teams do not need to manually call every patient.",
+          },
+          {
+            title: "Consultation fee follow-up",
+            description:
+              "Support consultation fee collection, payment confirmation, failed-payment recovery, or billing handover where required.",
+          },
+          {
+            title: "Reschedule and cancellation handling",
+            description:
+              "Allow patients to request a new time, cancel an appointment, or ask staff to help when slots are unavailable.",
+          },
+          {
+            title: "Emergency and sensitive-case handover",
+            description:
+              "Route emergency, high-risk, unclear, or sensitive patient requests to hospital staff instead of continuing normal automation.",
+          },
+          {
+            title: "Outcome tracking",
+            description:
+              "Track each appointment as requested, details captured, slot selected, confirmed, reminder sent, rescheduled, cancelled, payment pending, completed, no-show, or escalated.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Hospital appointment workflow path",
+        description:
+          "The goal is not only to answer appointment questions. The goal is to move every patient enquiry toward a clear hospital outcome: booked, confirmed, reminded, paid, rescheduled, escalated, completed, or handed over to staff.",
+        steps: [
+          "Patient Enquiry",
+          "Department / Doctor Selection",
+          "Patient Details",
+          "Date & Slot",
+          "Confirmation",
+          "Payment / Reminder",
+          "Reschedule / Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps appointment requests, reminders, payments, rescheduling, and handover visible for the front-desk team.",
+      },
+      setupNoteSection: {
+        eyebrow: "Healthcare safety note",
+        title: "Important hospital workflow note",
+        description:
+          "This flow should support appointment communication, hospital routing, and front-desk operations. It should not replace emergency care, medical diagnosis, or clinical judgment.",
+        note:
+          "For urgent medical concerns or emergencies, patients should contact the hospital emergency number, call local emergency services, or visit the nearest emergency department. FLOW can help route urgent requests, but it should not replace medical care.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual appointment handling to a structured, trackable hospital booking workflow.",
+        rows: [
+          {
+            before: "Front desk answers repeated appointment questions manually",
+            after: "Patients can start appointment booking through chat",
+          },
+          {
+            before: "Staff collect the same patient details repeatedly",
+            after: "FLOW captures required details before staff involvement",
+          },
+          {
+            before: "Doctor and department routing is manual",
+            after: "Patients can be routed based on department, service, or doctor preference",
+          },
+          {
+            before: "Slot confirmation happens through back-and-forth messages",
+            after: "Date and slot selection becomes structured",
+          },
+          {
+            before: "Reminders depend on staff memory",
+            after: "Appointment reminders can be scheduled automatically",
+          },
+          {
+            before: "Payment and consultation fee follow-up is manual",
+            after: "Payment status and fee follow-up can be connected to the workflow",
+          },
+          {
+            before: "Emergency or unclear cases lose context",
+            after: "Staff receive patient details and conversation history during handover",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this hospital flow for",
+        description:
+          "Start with the appointment workflow that matters most, then expand into reminders, payments, online consultations, and patient support.",
+        items: [
+          {
+            title: "OPD appointment booking",
+            description:
+              "Collect patient details, department, preferred doctor, date, and slot.",
+          },
+          {
+            title: "Doctor availability enquiry",
+            description:
+              "Answer availability questions and route patients to booking or front-desk help.",
+          },
+          {
+            title: "Online consultation booking",
+            description:
+              "Capture consultation type, patient details, payment status, and confirmation path.",
+          },
+          {
+            title: "Follow-up visit reminder",
+            description:
+              "Send review visit reminders, doctor-advised follow-up prompts, and reschedule options.",
+          },
+          {
+            title: "Consultation fee follow-up",
+            description:
+              "Send payment reminders, payment confirmation, and billing handover where required.",
+          },
+          {
+            title: "Emergency routing",
+            description:
+              "Move urgent or high-risk patient requests to hospital staff immediately.",
+          },
+          {
+            title: "Diagnostic or lab appointment",
+            description:
+              "Capture test type, home collection preference, patient details, and appointment slot.",
+          },
+          {
+            title: "Report or document support",
+            description:
+              "Collect report ID, patient mobile, or document query and route to the correct team.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this flow",
+        description:
+          "Treat the first rollout as a measurable hospital appointment workflow, not a generic booking page.",
+        items: [
+          {
+            title: "Appointment enquiry capture",
+            description:
+              "How many patient enquiries become structured appointment requests.",
+          },
+          {
+            title: "Booking completion rate",
+            description:
+              "How many patients complete department or doctor selection and slot preference.",
+          },
+          {
+            title: "Reminder effectiveness",
+            description:
+              "How many patients receive reminders before the appointment.",
+          },
+          {
+            title: "No-show and reschedule tracking",
+            description:
+              "How many appointments are missed, rescheduled, cancelled, or completed.",
+          },
+          {
+            title: "Payment follow-up progress",
+            description:
+              "How many consultation fees are pending, paid, failed, or escalated.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many urgent, unclear, or sensitive cases reach staff with complete patient context.",
+          },
+          {
+            title: "Front-desk workload reduction",
+            description:
+              "How many repeated appointment questions are handled before staff involvement.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the hospital booking flow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this hospital appointment flow be customized?",
+            answer:
+              "Yes. The flow can be adapted for your departments, doctors, branches, consultation types, timings, fee rules, reminder timing, and handover teams.",
+          },
+          {
+            question: "Can FLOW send appointment reminders?",
+            answer:
+              "Yes. Reminder workflows can be scheduled before the appointment using timezone-aware scheduler logic, dedupe rules, expiry handling, and fallback channels.",
+          },
+          {
+            question: "Can this flow collect consultation fees?",
+            answer:
+              "Yes. FLOW supports payment collection and verification paths where payment provider setup is configured. The payment node can store payment status and route paid or failed outcomes for recovery or handover.",
+          },
+          {
+            question: "Can patients book through WhatsApp and website chat?",
+            answer:
+              "Yes. FLOW supports web widget, WhatsApp, Telegram, email, SMS, templates, and multi-channel notification paths depending on rollout scope.",
+          },
+          {
+            question: "What happens when the patient request is urgent or unclear?",
+            answer:
+              "Urgent, sensitive, high-risk, or unclear requests should move to staff handover with patient details, conversation history, and next-step context.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your hospital appointment booking flow?",
+        description:
+          "Tell us how your hospital currently handles OPD appointments, doctor availability, patient intake, reminders, payments, rescheduling, emergency routing, and front-desk handover. We'll map your process and show how this FLOW template can be adapted for your hospital workflow.",
+        note:
+          "Start with appointment booking. Prove value. Expand into reminders, payments, reports, online consultations, and patient support.",
+        primary: { label: "Book Hospital Workflow Demo", href: "/contact" },
+        secondary: { label: "Discuss My Hospital Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "real-estate-lead-followup-flow",
     title: "Real Estate Lead Follow-Up Flow | FLOW",
+    metadataTitle:
+      "Real Estate Lead Follow-Up Flow for Property Enquiries, Site Visits, Sales Handover, and Reminders | Crescora FLOW",
+    metadataDescription:
+      "Launch a real estate lead follow-up flow with Crescora FLOW. Capture property enquiries, qualify buyers, share projects, book site visits, assign sales reps, and automate follow-ups.",
     intent: "BOFU",
-    keywordTarget: "real estate lead follow up flow",
+    keywordTarget: "real estate lead follow-up flow",
     headline:
-      "Show how property leads move from enquiry to visit booking and follow-up.",
+      "Launch a real estate lead follow-up flow for property enquiries, site visits, and sales handover.",
     description:
-      "A launch template for lead capture, qualification, and site-visit scheduling.",
+      "A launch-ready workflow template for property enquiries, lead qualification, project sharing, callback requests, site visit booking, sales rep assignment, reminders, and lead status tracking.",
     included: [
-      "Problem",
-      "flow diagram",
-      "steps",
-      "nodes used",
-      "business benefit",
-      "CTA",
+      "Property enquiry capture",
+      "Buyer qualification",
+      "Project sharing",
+      "Callback request flow",
+      "Site visit booking",
+      "Sales rep handover",
+      "Reminder automation",
+      "Post-visit follow-up",
+      "Lead status tracking",
     ],
-    ctaLabel: "Use this automation for your business",
+    ctaLabel: "Book Real Estate Follow-Up Demo",
+    publicPage: {
+      breadcrumbTitle: "Real Estate Lead Follow-Up Flow",
+      hero: {
+        eyebrow: "Real Estate Flow",
+        title:
+          "Launch a real estate lead follow-up flow for property enquiries, site visits, and sales handover.",
+        description:
+          "Start from a practical FLOW template that helps real estate teams capture property enquiries, qualify buyer intent, share project details, schedule site visits, assign leads to sales reps, send follow-up reminders, and track every lead from first message to next sales action.",
+        supportLine:
+          "Built for property enquiries, buyer qualification, project sharing, callback reminders, site visit booking, sales rep handover, post-visit follow-up, and lead status tracking.",
+        primaryCta: { label: "Book Real Estate Follow-Up Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Sales Workflow", href: "/contact" },
+        statusChips: [
+          "New Lead",
+          "Qualified",
+          "Project Shared",
+          "Callback Requested",
+          "Visit Booked",
+          "Assigned",
+          "Follow-Up Pending",
+          "Closed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From property enquiry to a clear sales outcome.",
+          description:
+            "The workflow keeps qualification, project sharing, site visits, reminders, and handover visible so sales teams can manage the full lead journey in one path.",
+          note:
+            "Start with lead qualification and site visit follow-up. Prove value. Expand into CRM sync, reminders, sales handover, and pipeline visibility.",
+          path: [
+            "Property Enquiry",
+            "Buyer Qualification",
+            "Project Shared",
+            "Callback / Site Visit",
+            "Sales Rep Handover",
+            "Reminder",
+            "Post-Visit Follow-Up",
+            "Lead Outcome",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Sales queue",
+        title: "New lead, qualified, project shared, callback requested, visit booked, assigned, follow-up pending, and closed.",
+        description:
+          "This mock queue card shows where property leads sit right now so sales teams can act before follow-up stalls or visits go cold.",
+        stats: [
+          { label: "Open leads", value: "34" },
+          { label: "Qualified", value: "14" },
+          { label: "Visits booked", value: "9" },
+          { label: "Follow-ups pending", value: "12" },
+        ],
+        note:
+          "Track lead events without exposing unnecessary sensitive data.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Move property leads from enquiry to visit booking and follow-up.",
+          description:
+            "This template gives your team a structured starting point for real estate follow-up: enquiry capture, buyer qualification, budget and location filters, project interest, callback request, site visit scheduling, sales rep assignment, reminder messages, and lead outcome tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to turn property enquiries into sales-ready opportunities.",
+          description:
+            "The template can include lead qualification questions, budget and location capture, project sharing, callback booking, site visit reminders, sales handover rules, CRM or sheet updates, post-visit follow-up, and pipeline status tracking.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this real estate follow-up flow includes",
+        description:
+          "Use the template as a workflow for turning property enquiries into booked visits and sales-ready opportunities, then keep each lead moving through reminders, handover, and follow-up.",
+        items: [
+          {
+            title: "Property enquiry capture",
+            description:
+              "Capture leads from WhatsApp, website chat, ads, social campaigns, landing pages, or manual sales sources.",
+          },
+          {
+            title: "Buyer qualification",
+            description:
+              "Ask for budget, preferred location, property type, BHK, buying timeline, possession preference, and project interest.",
+          },
+          {
+            title: "Project sharing",
+            description:
+              "Share project details, brochure links, location highlights, amenities, floor plans, price range, and visit options.",
+          },
+          {
+            title: "Callback request flow",
+            description:
+              "Let buyers request a sales callback and capture preferred time, language, project interest, and urgency.",
+          },
+          {
+            title: "Site visit booking",
+            description:
+              "Capture preferred visit date and time, project name, location preference, visitor details, and confirmation status.",
+          },
+          {
+            title: "Sales rep handover",
+            description:
+              "Route serious buyers to the right sales rep based on project, location, budget, language, or team ownership.",
+          },
+          {
+            title: "Reminder automation",
+            description:
+              "Send reminders before callbacks, site visits, document sharing, payment discussions, and post-visit follow-ups.",
+          },
+          {
+            title: "Post-visit follow-up",
+            description:
+              "Follow up after the site visit with feedback, next-step discussion, document request, pricing clarification, or sales handover.",
+          },
+          {
+            title: "Lead status tracking",
+            description:
+              "Track each lead as new, qualified, project shared, callback requested, visit booked, visited, follow-up pending, negotiation, cold, or closed.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Real estate lead follow-up path",
+        description:
+          "The goal is not only to reply to leads. The goal is to move every property enquiry toward a clear sales outcome: qualified, project shared, callback booked, site visit scheduled, assigned, followed up, or closed.",
+        steps: [
+          "Property Enquiry",
+          "Buyer Qualification",
+          "Project Shared",
+          "Callback / Site Visit",
+          "Sales Rep Handover",
+          "Reminder",
+          "Post-Visit Follow-Up",
+          "Lead Outcome",
+        ],
+        supportLine:
+          "This path keeps enquiries, project sharing, site visits, reminders, and sales handover visible for the team.",
+      },
+      setupNoteSection: {
+        eyebrow: "Sales workflow note",
+        title: "Keep the real estate follow-up path tied to one sales outcome.",
+        description:
+          "The workflow should capture the buyer's context, share the right project information, and keep the lead moving until there is a clear next step or closure.",
+        note:
+          "FLOW can support visual workflow orchestration, multi-channel agents, human handoff, SLA surfaces, analytics, records, WhatsApp and Telegram channels, scheduled jobs, and workflow-owned data storage.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual follow-up to a structured, trackable real estate lead workflow.",
+        rows: [
+          {
+            before: "Leads come from ads, WhatsApp, forms, calls, and social channels",
+            after: "Every enquiry can enter a structured sales workflow",
+          },
+          {
+            before: "Sales reps call without buyer context",
+            after: "FLOW captures budget, location, property type, and timeline first",
+          },
+          {
+            before: "Project details are shared inconsistently",
+            after: "Buyers receive structured project information and next-step options",
+          },
+          {
+            before: "Site visits are coordinated manually",
+            after: "Visit requests, confirmations, and reminders can be organized",
+          },
+          {
+            before: "Follow-up depends on individual sales discipline",
+            after: "Reminder flows keep leads moving after enquiry and site visit",
+          },
+          {
+            before: "Managers cannot see lead status clearly",
+            after: "Lead status can be tracked from enquiry to visit and follow-up",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this real estate follow-up flow for",
+        description:
+          "Start with the lead workflow that matters most, then expand into CRM sync, reminders, sales handover, and pipeline visibility.",
+        items: [
+          {
+            title: "New property enquiries",
+            description:
+              "Capture buyer details, budget range, location preference, and project interest.",
+          },
+          {
+            title: "Ad campaign leads",
+            description:
+              "Turn Facebook, Google, Instagram, website, and WhatsApp enquiries into structured lead records.",
+          },
+          {
+            title: "Project brochure follow-up",
+            description:
+              "Share brochure links, amenities, location details, price range, and callback options.",
+          },
+          {
+            title: "Site visit scheduling",
+            description:
+              "Capture project, preferred date and time, visitor details, and sales rep assignment.",
+          },
+          {
+            title: "Post-site-visit follow-up",
+            description:
+              "Send reminders after visits, collect feedback, and move interested buyers to next sales discussion.",
+          },
+          {
+            title: "Cold lead reactivation",
+            description:
+              "Follow up with older leads using project updates, new launch information, price revision, or site visit offers.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this flow",
+        description:
+          "Treat the first rollout as a measurable real estate sales workflow, not a generic lead page.",
+        items: [
+          {
+            title: "Lead capture quality",
+            description:
+              "How many leads include name, phone number, budget, location, property type, and timeline.",
+          },
+          {
+            title: "Qualification rate",
+            description:
+              "How many incoming leads become qualified buyer opportunities.",
+          },
+          {
+            title: "Project engagement",
+            description:
+              "How many buyers receive project details, brochure links, or site visit options.",
+          },
+          {
+            title: "Callback booking rate",
+            description:
+              "How many qualified leads request a sales callback.",
+          },
+          {
+            title: "Site visit booking rate",
+            description:
+              "How many qualified buyers book or request a site visit.",
+          },
+          {
+            title: "Sales handover quality",
+            description:
+              "How many leads reach the sales team with complete buyer context.",
+          },
+          {
+            title: "Follow-up completion",
+            description:
+              "How many leads receive reminders after enquiry, project sharing, callback, or site visit.",
+          },
+          {
+            title: "Pipeline visibility",
+            description:
+              "How many leads are new, qualified, project shared, visit booked, visited, negotiation-stage, cold, or closed.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the real estate workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this flow be customized for our projects?",
+            answer:
+              "Yes. The flow can be adapted for your project names, locations, price ranges, BHK types, possession timelines, sales teams, site visit rules, and follow-up process.",
+          },
+          {
+            question: "Can FLOW qualify real estate leads automatically?",
+            answer:
+              "Yes. FLOW can collect buyer details, budget, location preference, property type, timeline, and project interest before routing the lead to your sales team.",
+          },
+          {
+            question: "Can this flow schedule site visits?",
+            answer:
+              "Yes. The workflow can capture preferred visit date and time, project interest, buyer contact details, and route the visit request to the right sales owner.",
+          },
+          {
+            question: "Can FLOW send follow-up reminders after site visits?",
+            answer:
+              "Yes. Follow-ups can be scheduled after callbacks, brochure sharing, site visits, or missed responses using scheduler-style reminder logic.",
+          },
+          {
+            question: "Can leads be sent to CRM or Google Sheets?",
+            answer:
+              "Yes, based on rollout scope. FLOW supports records, API calls, connectors, notifications, analytics events, and workflow-owned structured data.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your real estate lead follow-up flow?",
+        description:
+          "Tell us how your team currently handles property enquiries, buyer qualification, project sharing, site visit booking, sales rep assignment, CRM updates, and follow-ups. We'll map your process and show how this FLOW template can be adapted for your sales workflow.",
+        note:
+          "Start with lead qualification and site visit follow-up. Prove value. Expand into CRM sync, reminders, sales handover, and pipeline visibility.",
+        primary: { label: "Book Real Estate Follow-Up Demo", href: "/contact" },
+        secondary: { label: "Discuss My Sales Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "customer-support-faq-flow",
     title: "Customer Support FAQ Flow | FLOW",
+    metadataTitle:
+      "Customer Support FAQ Flow for Approved Answers, Issue Triage, Human Handover, and Support Analytics | Crescora FLOW",
+    metadataDescription:
+      "Launch a customer support FAQ flow with Crescora FLOW. Automate approved answers, repeated questions, issue triage, fallback handling, human escalation, status updates, and support visibility.",
     intent: "BOFU",
     keywordTarget: "customer support faq flow",
     headline:
-      "Explain support answers, grounded responses, and human escalation.",
-    description: "A launch template for FAQ and support triage workflows.",
+      "Launch a customer support FAQ flow for approved answers, issue triage, and human escalation.",
+    description:
+      "A launch-ready workflow template for FAQ automation, approved answers, issue triage, fallback handling, human escalation, status updates, and support visibility.",
     included: [
-      "Problem",
-      "flow diagram",
-      "steps",
-      "nodes used",
-      "business benefit",
-      "CTA",
+      "FAQ question capture",
+      "Approved answer flow",
+      "Issue category routing",
+      "Clarifying questions",
+      "Fallback handling",
+      "Human escalation",
+      "Status updates",
+      "Outcome tracking",
     ],
-    ctaLabel: "Use this automation for your business",
+    ctaLabel: "Book Support FAQ Flow Demo",
+    publicPage: {
+      breadcrumbTitle: "Customer Support FAQ Flow",
+      hero: {
+        eyebrow: "Support FAQ Flow",
+        title:
+          "Launch a customer support FAQ flow for approved answers, issue triage, and human escalation.",
+        description:
+          "Start from a practical FLOW template that helps support teams answer repeated questions, guide customers to the right next step, capture issue details, route unresolved cases, escalate sensitive conversations, and track every support interaction from first question to resolution.",
+        supportLine:
+          "Built for FAQ automation, grounded responses, fallback handling, issue triage, support routing, human handover, status updates, and support visibility.",
+        primaryCta: { label: "Book Support FAQ Flow Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+        statusChips: [
+          "Question Asked",
+          "FAQ Answered",
+          "Clarification Needed",
+          "Fallback Triggered",
+          "Handover Created",
+          "Assigned",
+          "Resolved",
+          "Gap Detected",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From support question to a clear resolution path.",
+          description:
+            "The workflow keeps approved answers, clarifications, fallback handling, handover, and outcome tracking visible so support teams can manage the full conversation in one path.",
+          note:
+            "Start with FAQ resolution. Prove value. Expand into issue triage, ticket routing, handover, analytics, and knowledge improvement.",
+          path: [
+            "Customer Question",
+            "FAQ Category",
+            "Approved Answer / Clarifying Question",
+            "Resolved / Fallback",
+            "Human Handover",
+            "Status Update",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Support queue preview",
+        title: "Question asked, FAQ resolved, fallback triggered, handover created, and escalations in view.",
+        description:
+          "This mock queue card shows the support work that needs attention right now so teams can spot answer gaps and unresolved cases early.",
+        stats: [
+          { label: "Open cases", value: "22" },
+          { label: "FAQ resolved", value: "41" },
+          { label: "Fallback triggered", value: "8" },
+          { label: "Escalations", value: "6" },
+        ],
+        note:
+          "Queue visibility helps managers see unresolved support work before response quality drops.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Answer repeated support questions and escalate unresolved cases clearly.",
+          description:
+            "This template gives your team a structured starting point for customer support FAQ automation: question capture, approved answer lookup, fallback response, issue category routing, customer detail capture, human escalation, and support outcome tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to answer, triage, and escalate support questions.",
+          description:
+            "The flow can include FAQ categories, approved answer paths, confidence fallback rules, issue triage questions, support detail capture, human handover rules, status update messages, support queue routing, and analytics events for unresolved questions.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this customer support FAQ flow includes",
+        description:
+          "Use the template as a workflow for answering repeated support questions, then move each conversation toward clarification, escalation, or resolution when needed.",
+        items: [
+          {
+            title: "FAQ question capture",
+            description:
+              "Understand what the customer is asking about: pricing, service details, order status, documents, timings, policy, payment, refund, booking, technical issue, or human help.",
+          },
+          {
+            title: "Approved answer flow",
+            description:
+              "Answer common questions from approved support content instead of letting the bot guess or provide unsupported replies.",
+          },
+          {
+            title: "Issue category routing",
+            description:
+              "Route customers by support topic such as billing, account help, booking, service issue, product question, document help, complaint, or technical support.",
+          },
+          {
+            title: "Clarifying questions",
+            description:
+              "Ask for missing details before handover, such as name, phone number, order ID, issue type, urgency, screenshot, or service reference.",
+          },
+          {
+            title: "Fallback handling",
+            description:
+              "When the answer is unavailable, unclear, low-confidence, or outside approved content, the flow should give a safe fallback and move toward human support.",
+          },
+          {
+            title: "Human escalation",
+            description:
+              "Route unresolved, angry, urgent, sensitive, high-value, or repeated-failure cases to the right support team with full conversation context.",
+          },
+          {
+            title: "Status updates",
+            description:
+              "Send clear messages when a case is received, assigned, escalated, waiting for customer response, resolved, or closed.",
+          },
+          {
+            title: "Outcome tracking",
+            description:
+              "Track whether the interaction was answered, clarified, routed, escalated, resolved, closed, or marked as a knowledge gap.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Customer support FAQ workflow path",
+        description:
+          "The goal is not only to answer FAQs faster. The goal is to move every support question toward a clear result: answered, clarified, routed, escalated, resolved, or improved as a future knowledge update.",
+        steps: [
+          "Customer Question",
+          "FAQ Category",
+          "Approved Answer / Clarifying Question",
+          "Resolved / Fallback",
+          "Human Handover",
+          "Status Update",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps approved answers, fallback rules, human handover, and support outcomes visible in one workflow.",
+      },
+      setupNoteSection: {
+        eyebrow: "FLOW capabilities used",
+        title: "FLOW capabilities used in this flow",
+        description:
+          "The runtime supports FAQ and intent-based support flows with validation, execution, human oversight, and multi-channel delivery across web widget, WhatsApp, Telegram, email, SMS, API calls, and records.",
+        note:
+          "FAQ node for quick factual answers, intent routing for support categories, input and form steps for required details, safe fallback handling, human handover, queue and notification routing, and track-event analytics for FAQ resolved, fallback triggered, handover created, support escalated, or case closed.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from repetitive manual answering to a structured, trackable support FAQ workflow.",
+        rows: [
+          {
+            before: "Agents answer the same support questions repeatedly",
+            after: "FLOW can answer common questions from approved support content",
+          },
+          {
+            before: "Customers ask vague questions and give incomplete details",
+            after: "The flow captures issue category, urgency, and required fields",
+          },
+          {
+            before: "Unanswered questions are handled inconsistently",
+            after: "Fallback and escalation paths are defined upfront",
+          },
+          {
+            before: "Support handover loses context",
+            after: "Human teams receive customer details and conversation history",
+          },
+          {
+            before: "Managers do not know which FAQs are failing",
+            after: "Unanswered questions and fallback events can be tracked",
+          },
+          {
+            before: "Customers do not know the next step",
+            after: "The flow sends clear status and handover messages",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this support FAQ flow for",
+        description:
+          "Start with the FAQ categories that generate the most repetitive work, then expand into triage, routing, escalation, and knowledge improvement.",
+        items: [
+          {
+            title: "Common customer FAQs",
+            description:
+              "Answer repeated questions about pricing, services, timings, documents, availability, policies, and next steps.",
+          },
+          {
+            title: "Billing and payment questions",
+            description:
+              "Route invoice, receipt, payment status, refund, failed payment, or billing dispute questions.",
+          },
+          {
+            title: "Order or service status support",
+            description:
+              "Capture order ID, service reference, phone number, or request details before routing.",
+          },
+          {
+            title: "Complaint escalation",
+            description:
+              "Move angry or unresolved customers to a human support team with full context.",
+          },
+          {
+            title: "Technical support intake",
+            description:
+              "Collect issue description, screenshots, product or service details, urgency, and contact information.",
+          },
+          {
+            title: "Knowledge gap tracking",
+            description:
+              "Identify repeated unanswered questions so the support knowledge base can improve over time.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this flow",
+        description:
+          "Treat the first rollout as a measurable support workflow, not just an FAQ page.",
+        items: [
+          {
+            title: "FAQ resolution rate",
+            description:
+              "How many repeated questions are answered without human involvement.",
+          },
+          {
+            title: "Fallback rate",
+            description:
+              "How often the flow cannot answer and needs fallback or clarification.",
+          },
+          {
+            title: "Handover rate",
+            description:
+              "How many conversations move to human support and why.",
+          },
+          {
+            title: "Issue capture quality",
+            description:
+              "How many escalated cases include customer details, issue type, urgency, and summary.",
+          },
+          {
+            title: "Repeated unanswered topics",
+            description:
+              "Which questions appear often but are missing from the FAQ or knowledge base.",
+          },
+          {
+            title: "Support queue visibility",
+            description:
+              "How many cases are new, assigned, escalated, pending, resolved, or closed.",
+          },
+          {
+            title: "Resolution progress",
+            description:
+              "How many conversations move from question to answer, handover, resolution, or knowledge improvement.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the support FAQ flow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this FAQ flow be customized for our support team?",
+            answer:
+              "Yes. The flow can be adapted for your FAQ categories, support policies, customer fields, escalation rules, fallback messages, and handover teams.",
+          },
+          {
+            question: "Can FLOW answer repeated support questions automatically?",
+            answer:
+              "Yes. FLOW can answer common questions using FAQ or approved knowledge paths, then route unclear or unresolved questions to fallback or human handover.",
+          },
+          {
+            question: "What happens when the flow cannot answer?",
+            answer:
+              "The flow should ask for clarification, provide a safe fallback, or escalate to a human support team with customer details and conversation history.",
+          },
+          {
+            question: "Can this flow create support context before handover?",
+            answer:
+              "Yes. The flow can collect issue type, urgency, customer details, order ID, service reference, screenshot reference, or message summary before routing the case.",
+          },
+          {
+            question: "Can managers track unresolved FAQs?",
+            answer:
+              "Yes. The flow can track fallback events, handover volume, repeated unanswered topics, support categories, and resolution outcomes.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your customer support FAQ flow?",
+        description:
+          "Tell us how your team currently handles repeated questions, support requests, complaints, billing queries, unresolved issues, and human escalation. We'll map your FAQ flow and show how FLOW can reduce repetitive support load while keeping human control for complex cases.",
+        note:
+          "Start with FAQ resolution. Prove value. Expand into issue triage, ticket routing, handover, analytics, and knowledge improvement.",
+        primary: { label: "Book Support FAQ Flow Demo", href: "/contact" },
+        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "payment-reminder-flow",
     title: "Payment Reminder Flow | FLOW",
+    metadataTitle:
+      "Payment Reminder Flow for Collections, Failed Payments, Overdue Escalation, and Billing Follow-Ups | Crescora FLOW",
+    metadataDescription:
+      "Launch a payment reminder flow with Crescora FLOW. Automate payment reminders, payment links, failed-payment recovery, receipt capture, overdue escalation, billing handover, and payment status tracking.",
     intent: "BOFU",
     keywordTarget: "payment reminder flow",
-    headline: "Show a clear reminder and escalation journey for collections.",
-    description: "A launch template for payment follow-up and status updates.",
+    headline:
+      "Launch a payment reminder flow for pending collections, failed payments, overdue escalation, and status updates.",
+    description:
+      "A launch-ready workflow template for payment due reminders, payment links, failed-payment recovery, pending verification, overdue escalation, billing handover, and payment status tracking.",
     included: [
-      "Problem",
-      "flow diagram",
-      "steps",
-      "nodes used",
-      "business benefit",
-      "CTA",
+      "Payment due trigger",
+      "Reminder sequence",
+      "Payment link sharing",
+      "Payment reference capture",
+      "Payment verification",
+      "Failed-payment recovery",
+      "Overdue escalation",
+      "Payment status update",
     ],
-    ctaLabel: "Use this automation for your business",
+    ctaLabel: "Book Payment Reminder Flow Demo",
+    publicPage: {
+      breadcrumbTitle: "Payment Reminder Flow",
+      hero: {
+        eyebrow: "Payment Flow",
+        title:
+          "Launch a payment reminder flow for pending collections, failed payments, overdue escalation, and status updates.",
+        description:
+          "Start from a practical FLOW template that helps teams send payment reminders, share payment links, collect payment references, confirm payment status, recover failed payments, escalate overdue cases, and track every payment follow-up from due notice to final outcome.",
+        supportLine:
+          "Built for payment due reminders, invoice follow-ups, consultation fees, booking tokens, payment links, receipt capture, failed-payment recovery, overdue escalation, and billing handover.",
+        primaryCta: { label: "Book Payment Reminder Flow Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Payment Workflow", href: "/contact" },
+        statusChips: [
+          "Due",
+          "Reminder Sent",
+          "Link Shared",
+          "Paid",
+          "Failed",
+          "Pending",
+          "Overdue",
+          "Disputed",
+          "Escalated",
+          "Closed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From payment due notice to a clear collection outcome.",
+          description:
+            "The workflow keeps reminders, link sharing, verification, failed-payment recovery, and billing handover visible so teams can manage the collection path in one flow.",
+          note:
+            "Start with one payment reminder flow. Prove value. Expand into verification, receipts, billing escalation, and collection dashboards.",
+          path: [
+            "Payment Due",
+            "Reminder Sent",
+            "Payment Link / Instructions",
+            "Customer Pays / No Response",
+            "Verify / Capture Reference",
+            "Paid / Failed / Pending / Overdue",
+            "Billing Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Collections queue",
+        title: "Due, reminder sent, link shared, paid, failed, pending, overdue, disputed, escalated, and closed.",
+        description:
+          "This mock queue card shows where payment follow-ups sit right now so teams can act before collections stall or overdue cases are missed.",
+        stats: [
+          { label: "Due payments", value: "26" },
+          { label: "Pending verification", value: "10" },
+          { label: "Overdue cases", value: "12" },
+          { label: "Billing handovers", value: "5" },
+        ],
+        note:
+          "Track collection events without exposing unnecessary sensitive data.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Show a clear reminder and escalation journey for collections.",
+          description:
+            "This flow gives your team a structured payment follow-up path: payment due message, reminder sequence, payment link sharing, reference capture, verification status, failed-payment recovery, overdue escalation, billing handover, and outcome tracking.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to recover pending payments and track status.",
+          description:
+            "The flow can include due-date triggers, reminder timing, payment links, receipt or transaction reference capture, payment verification, retry prompts, overdue rules, billing team handover, status updates, and analytics events for paid, failed, pending, and escalated payments.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this payment reminder flow includes",
+        description:
+          "Use the template as a workflow for moving every pending payment toward a clear collection outcome instead of leaving reminders, receipts, and escalation scattered across channels.",
+        items: [
+          {
+            title: "Payment due trigger",
+            description:
+              "Start the flow when an invoice, booking fee, consultation fee, service charge, subscription, admission fee, or pending balance becomes due.",
+          },
+          {
+            title: "Reminder sequence",
+            description:
+              "Send structured reminders before the due date, on the due date, after missed payment, and before escalation.",
+          },
+          {
+            title: "Payment link or instruction sharing",
+            description:
+              "Share payment links, QR instructions, bank or payment details, invoice reference, or next-step payment guidance.",
+          },
+          {
+            title: "Payment reference capture",
+            description:
+              "Collect transaction ID, receipt number, screenshot reference, invoice ID, order ID, or customer confirmation details.",
+          },
+          {
+            title: "Payment verification path",
+            description:
+              "Where provider setup is configured, FLOW can verify payment status and route the customer based on confirmed result.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "If payment fails, the flow should offer retry guidance, alternate support, or billing handover instead of ending silently.",
+          },
+          {
+            title: "Overdue escalation",
+            description:
+              "If payment remains unresolved, alert billing, finance, sales, admissions, support, or operations teams.",
+          },
+          {
+            title: "Payment status update",
+            description:
+              "Track payment as due, reminder sent, link shared, paid, failed, pending, overdue, disputed, escalated, or closed.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Payment reminder workflow path",
+        description:
+          "The goal is not only to send payment reminders. The goal is to move every pending payment toward a clear result: paid, failed, pending, overdue, escalated, disputed, or closed.",
+        steps: [
+          "Payment Due",
+          "Reminder Sent",
+          "Payment Link / Instructions",
+          "Customer Pays / No Response",
+          "Verify / Capture Reference",
+          "Paid / Failed / Pending / Overdue",
+          "Billing Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps reminder timing, verification, failed-payment recovery, and billing handover visible in one workflow.",
+      },
+      setupNoteSection: {
+        eyebrow: "FLOW capabilities used",
+        title: "FLOW capabilities used in this flow",
+        description:
+          "The runtime supports durable reminder scheduling, payment verification, downstream status usage, human oversight, and multi-channel delivery across web widget, WhatsApp, SMS, email, API calls, and records.",
+        note:
+          "Scheduler and wait-until steps handle due-date reminders with timezone, dedupe, expiry, and fallback behavior. Template message or notification steps send reminders. The payment node tracks acknowledgement, verification, transaction details, and paid or failed outcomes. Record steps store status and invoice context. Track-event logs payment_reminder_sent, payment_success, payment_failed, payment_overdue, and handover_created. Handover and queue routes disputed, overdue, failed, or unclear cases to billing or finance.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual chasing to a structured, trackable payment follow-up workflow.",
+        rows: [
+          {
+            before: "Staff manually chase customers for payments",
+            after: "FLOW can send structured payment reminders",
+          },
+          {
+            before: "Customers are unsure how to pay or confirm",
+            after: "The flow gives payment instructions and next steps",
+          },
+          {
+            before: "Failed payments are handled inconsistently",
+            after: "Failed payments can trigger retry or billing handover",
+          },
+          {
+            before: "Payment references stay scattered in chats",
+            after: "References can be captured inside the workflow",
+          },
+          {
+            before: "Overdue cases depend on staff memory",
+            after: "Escalation can happen when payment remains unresolved",
+          },
+          {
+            before: "Managers lack collection visibility",
+            after: "Payment status can be tracked from due notice to closure",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this payment reminder flow for",
+        description:
+          "Start with the payment workflow that matters most, then expand into verification, receipts, billing escalation, and collection dashboards.",
+        items: [
+          {
+            title: "Consultation fee follow-up",
+            description:
+              "For clinics, hospitals, doctors, consultants, and online consultation teams.",
+          },
+          {
+            title: "Booking token reminders",
+            description:
+              "For appointments, service bookings, site visits, demo slots, and reservations.",
+          },
+          {
+            title: "Invoice payment follow-up",
+            description:
+              "For service businesses, agencies, vendors, B2B teams, and finance teams.",
+          },
+          {
+            title: "Admission or course fee reminders",
+            description:
+              "For schools, colleges, coaching centers, and EdTech teams.",
+          },
+          {
+            title: "Subscription renewal payments",
+            description:
+              "For SaaS, memberships, maintenance plans, packages, and recurring services.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "For customers whose payment failed, stayed pending, or needs manual confirmation.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this flow",
+        description:
+          "Treat the first rollout as a measurable collections workflow, not just a reminder sequence.",
+        items: [
+          {
+            title: "Reminder delivery",
+            description:
+              "How many payment reminders were sent successfully.",
+          },
+          {
+            title: "Payment completion",
+            description:
+              "How many pending payments moved to paid status.",
+          },
+          {
+            title: "Failed-payment recovery",
+            description:
+              "How many failed or pending payments were retried, resolved, or escalated.",
+          },
+          {
+            title: "Overdue volume",
+            description:
+              "How many cases remained unpaid after the reminder sequence.",
+          },
+          {
+            title: "Reference capture quality",
+            description:
+              "How many customers submitted transaction IDs, receipts, screenshots, or confirmation details.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many billing cases reached the team with customer details, amount, status, and conversation history.",
+          },
+          {
+            title: "Collection visibility",
+            description:
+              "How many payment workflows are due, pending, paid, failed, overdue, disputed, escalated, or closed.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the payment reminder flow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this payment reminder flow be customized?",
+            answer:
+              "Yes. The flow can be adapted for your payment stages, reminder timing, payment provider, invoice process, customer segments, and escalation rules.",
+          },
+          {
+            question: "Can FLOW verify payment status automatically?",
+            answer:
+              "Where provider support is configured, FLOW can verify payment status. If automatic verification is not available, the flow can collect transaction references, screenshots, or manual confirmation details.",
+          },
+          {
+            question: "What happens when payment fails?",
+            answer:
+              "The flow should offer retry guidance, alternate help, or billing handover. Failed payments should not end silently.",
+          },
+          {
+            question: "Can reminders be sent through WhatsApp, SMS, or email?",
+            answer:
+              "Yes, depending on channel setup. WhatsApp reminders outside an active conversation may require approved templates and fallback rules.",
+          },
+          {
+            question: "Can payment events be tracked in dashboards?",
+            answer:
+              "Yes. Use payment events such as payment_success, payment_failed, payment_overdue, and handover_created with PII-safe analytics and dedupe controls.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your payment reminder flow?",
+        description:
+          "Tell us how your team currently handles pending payments, payment links, reminders, failed payments, receipts, overdue cases, and billing handover. We'll map your process and show how this FLOW template can reduce manual chasing and improve collection visibility.",
+        note:
+          "Start with one payment reminder flow. Prove value. Expand into verification, receipts, billing escalation, and collection dashboards.",
+        primary: { label: "Book Payment Reminder Flow Demo", href: "/contact" },
+        secondary: { label: "Discuss My Payment Workflow", href: "/contact" },
+      },
+    },
   },
   {
     slug: "lab-report-notification-flow",
     title: "Lab Report Notification Flow | FLOW",
+    metadataTitle:
+      "Lab Report Notification Flow for Report-Ready Alerts, Secure Access, Receipt Confirmation, and Patient Handover | Crescora FLOW",
+    metadataDescription:
+      "Launch a lab report notification flow with Crescora FLOW. Notify patients when reports are ready, verify patient details, share secure access instructions, confirm receipt, handle failed delivery, and route report support cases to staff.",
     intent: "BOFU",
     keywordTarget: "lab report notification flow",
     headline:
-      "Show how healthcare teams can notify patients when reports are ready.",
+      "Launch a lab report notification flow for report-ready alerts, secure access, and patient confirmation.",
     description:
-      "A launch template for lab-report notifications and receipt confirmation.",
+      "A launch-ready workflow template for report-ready notifications, secure access guidance, receipt confirmation, failed-delivery fallback, and lab support handover.",
     included: [
-      "Problem",
-      "flow diagram",
-      "steps",
-      "nodes used",
-      "business benefit",
-      "CTA",
+      "Report-ready trigger",
+      "Patient lookup and verification",
+      "Report-ready notification",
+      "Secure report access",
+      "Receipt confirmation",
+      "Fallback delivery",
+      "Report support handover",
+      "Delivery and outcome tracking",
     ],
-    ctaLabel: "Use this automation for your business",
+    ctaLabel: "Book Lab Report Flow Demo",
+    publicPage: {
+      breadcrumbTitle: "Lab Report Notification Flow",
+      hero: {
+        eyebrow: "Lab Report Flow",
+        title:
+          "Launch a lab report notification flow for report-ready alerts, secure access, and patient confirmation.",
+        description:
+          "Start from a practical FLOW template that helps hospitals, clinics, and diagnostic labs notify patients when reports are ready, verify patient details, share secure report access instructions, confirm receipt, handle failed delivery, and route sensitive or unresolved cases to staff.",
+        supportLine:
+          "Built for report-ready notifications, patient mobile verification, report ID lookup, secure report links, SMS/WhatsApp/email fallback, receipt confirmation, and lab staff handover.",
+        primaryCta: { label: "Book Lab Report Flow Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Healthcare Workflow", href: "/contact" },
+        statusChips: [
+          "Report Ready",
+          "Patient Matched",
+          "Notification Sent",
+          "Delivered",
+          "Accessed",
+          "Confirmed",
+          "Failed",
+          "Handover",
+          "Closed",
+        ],
+        visual: {
+          eyebrow: "Workflow preview",
+          title: "From report-ready alert to confirmed receipt.",
+          description:
+            "The workflow keeps patient verification, secure access instructions, fallback delivery, and support handover visible so healthcare teams can manage report communication in one path.",
+          note:
+            "Start with report-ready notifications. Prove value. Expand into report status lookup, secure access, receipt confirmation, and lab support handover.",
+          path: [
+            "Report Ready",
+            "Patient Lookup",
+            "Verification",
+            "Notification Sent",
+            "Secure Link / Collection Instructions",
+            "Receipt Confirmation",
+            "Fallback / Handover",
+            "Outcome Tracking",
+          ],
+        },
+      },
+      queueCard: {
+        eyebrow: "Lab support queue",
+        title: "Report ready, patient matched, notification sent, delivered, accessed, confirmed, failed, handover, and closed.",
+        description:
+          "This mock queue card shows where report notifications sit right now so teams can spot failed delivery and unresolved patient access issues quickly.",
+        stats: [
+          { label: "Ready reports", value: "31" },
+          { label: "Delivered", value: "24" },
+          { label: "Fallbacks", value: "6" },
+          { label: "Support handovers", value: "4" },
+        ],
+        note:
+          "Share report access instructions, not sensitive report details, unless approved by policy.",
+      },
+      overviewCards: [
+        {
+          eyebrow: "Launch-Ready Structure",
+          title: "Notify patients when reports are ready, without manual calling.",
+          description:
+            "This flow gives your team a structured report notification path: report-ready trigger, patient contact lookup, delivery channel selection, secure report access message, receipt confirmation, failed-delivery fallback, and staff handover when support is needed.",
+        },
+        {
+          eyebrow: "What Is Included",
+          title: "Everything needed to notify patients and track report delivery safely.",
+          description:
+            "The flow can include report-ready triggers, patient mobile and report ID matching, WhatsApp, SMS, or email notification, secure link instructions, consent-aware delivery, receipt confirmation, failed-notification fallback, report support routing, and delivery status tracking.",
+        },
+      ],
+      includedSection: {
+        eyebrow: "What this template includes",
+        title: "What this lab report notification flow includes",
+        description:
+          "Use the template as a workflow for sending traceable report-ready notifications, then keep each case moving through confirmation, fallback, or staff support when needed.",
+        items: [
+          {
+            title: "Report-ready trigger",
+            description:
+              "Start the flow when the lab, LIS, HMS, CRM, or internal system marks a report as ready.",
+          },
+          {
+            title: "Patient lookup and verification",
+            description:
+              "Match the report with patient mobile number, report ID, appointment ID, lab ID, or booking reference before sending any report-related update.",
+          },
+          {
+            title: "Report-ready notification",
+            description:
+              "Send a clear message that the report is ready, where the patient can access it, and what they need to do next.",
+          },
+          {
+            title: "Secure report access",
+            description:
+              "Share a secure portal link, download instruction, collection instruction, or staff contact path instead of exposing sensitive report details directly in open chat.",
+          },
+          {
+            title: "Receipt confirmation",
+            description:
+              "Ask the patient to confirm whether they received or accessed the report.",
+          },
+          {
+            title: "Fallback delivery",
+            description:
+              "If WhatsApp delivery fails or the session is closed, route through approved WhatsApp template, SMS, email, or staff handover depending on setup.",
+          },
+          {
+            title: "Report support handover",
+            description:
+              "Route patients to lab or front-desk staff when the report is not found, mobile number mismatch occurs, link fails, or the patient asks for help.",
+          },
+          {
+            title: "Delivery and outcome tracking",
+            description:
+              "Track report notification as ready, sent, failed, delivered, accessed, confirmed, unresolved, escalated, or closed.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Lab report notification workflow path",
+        description:
+          "The goal is not only to tell patients that a report is ready. The goal is to make every report notification traceable, secure, confirmed, and recoverable when delivery fails.",
+        steps: [
+          "Report Ready",
+          "Patient Lookup",
+          "Verification",
+          "Notification Sent",
+          "Secure Link / Collection Instructions",
+          "Receipt Confirmation",
+          "Fallback / Handover",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "This path keeps report notifications, secure access, fallback delivery, and support handover visible in one workflow.",
+      },
+      setupNoteSection: {
+        eyebrow: "Healthcare privacy note",
+        title: "Important healthcare privacy note",
+        description:
+          "This flow should support report notification and access guidance. It should not explain, diagnose, or interpret medical results unless a qualified healthcare professional has approved that communication.",
+        note:
+          "Lab reports may contain sensitive health information. FLOW should notify patients that a report is ready and guide them to a secure access path. Medical interpretation, urgent findings, or sensitive report concerns should be routed to qualified hospital or lab staff.",
+      },
+      beforeAfterSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "The page should show the shift from manual report-ready communication to a structured, trackable lab notification workflow.",
+        rows: [
+          {
+            before: "Staff manually call or message patients when reports are ready",
+            after: "FLOW can trigger structured report-ready notifications",
+          },
+          {
+            before: "Patients repeatedly call the lab for report status",
+            after: "Patients receive clear status and next-step instructions",
+          },
+          {
+            before: "Report links or files are shared without a clear process",
+            after: "Secure access instructions and verification steps can be defined",
+          },
+          {
+            before: "Failed messages are missed",
+            after: "Failed delivery can route to fallback channels or staff",
+          },
+          {
+            before: "Staff do not know who received the report",
+            after: "Receipt confirmation and delivery status can be tracked",
+          },
+          {
+            before: "Report support cases lose context",
+            after: "Staff receive report ID, patient mobile, issue reason, and conversation history",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this lab report notification flow for",
+        description:
+          "Start with report-ready notifications, then expand into receipt confirmation, fallback channels, and report support handover.",
+        items: [
+          {
+            title: "Lab report ready alerts",
+            description:
+              "Notify patients when reports are ready for download, pickup, or portal access.",
+          },
+          {
+            title: "Diagnostics center report updates",
+            description:
+              "Send report status updates for blood tests, imaging, pathology, or package-based diagnostics.",
+          },
+          {
+            title: "Hospital lab notifications",
+            description:
+              "Route OPD, inpatient, or follow-up report notifications through structured patient communication.",
+          },
+          {
+            title: "Home sample collection reports",
+            description:
+              "Notify patients after home collection results are ready and provide secure next-step access.",
+          },
+          {
+            title: "Report receipt confirmation",
+            description:
+              "Ask patients to confirm whether they received or accessed the report successfully.",
+          },
+          {
+            title: "Report support escalation",
+            description:
+              "Route missing report, wrong mobile, failed link, report ID mismatch, or sensitive query cases to staff.",
+          },
+        ],
+      },
+      capabilitiesSection: {
+        eyebrow: "FLOW capabilities used",
+        title: "FLOW capabilities used in this flow",
+        description:
+          "Notification, template-message, API or connector, record, media, handover, track-event, and audit-log capabilities combine to make this workflow traceable and production-ready.",
+        items: [
+          {
+            title: "Notification node",
+            description:
+              "Sends WhatsApp, SMS, and email notifications with fallback strategy and delivery status tracking.",
+          },
+          {
+            title: "Template-message node",
+            description:
+              "Supports approved WhatsApp templates for report-ready messages outside the active session window.",
+          },
+          {
+            title: "API / connector node",
+            description:
+              "Can connect to lab, hospital, CRM, or report systems depending on rollout scope.",
+          },
+          {
+            title: "Record node",
+            description:
+              "Stores report notification status, report ID, patient reference, delivery result, and confirmation state.",
+          },
+          {
+            title: "Media node",
+            description:
+              "Can send supported media or document links where channel and policy allow.",
+          },
+          {
+            title: "Handover / queue",
+            description:
+              "Routes failed, sensitive, unclear, or support-needed cases to lab or front-desk staff.",
+          },
+          {
+            title: "Track-event / audit-log",
+            description:
+              "Tracks report-ready, notification-sent, delivery-failed, receipt-confirmed, and handover-created events.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this flow",
+        description:
+          "Treat the first rollout as a measurable healthcare notification workflow, not just a message blast.",
+        items: [
+          {
+            title: "Report notification delivery rate",
+            description:
+              "How many report-ready messages were sent successfully.",
+          },
+          {
+            title: "Fallback rate",
+            description:
+              "How many notifications required SMS, email, retry, or staff handover.",
+          },
+          {
+            title: "Receipt confirmation rate",
+            description:
+              "How many patients confirmed they received or accessed their report.",
+          },
+          {
+            title: "Report support volume",
+            description:
+              "How many patients needed help with report ID, link access, mobile mismatch, or download issues.",
+          },
+          {
+            title: "Delivery failure reasons",
+            description:
+              "Which failures happened most often: invalid phone, template issue, missing variable, opted-out user, failed link, or system error.",
+          },
+          {
+            title: "Handover quality",
+            description:
+              "How many lab support cases reached staff with patient mobile, report ID, issue type, and conversation history.",
+          },
+          {
+            title: "Operational visibility",
+            description:
+              "How many report notifications are ready, sent, delivered, failed, confirmed, escalated, or closed.",
+            },
+          ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the lab report notification flow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can this flow notify patients when reports are ready?",
+            answer:
+              "Yes. FLOW can trigger report-ready notifications through supported channels such as WhatsApp, SMS, email, or web chat depending on rollout scope and provider setup.",
+          },
+          {
+            question: "Can FLOW share the actual report file?",
+            answer:
+              "It depends on your privacy policy, channel setup, and report system. In many healthcare workflows, it is safer to share a secure portal link or pickup instruction instead of sending sensitive reports directly in chat.",
+          },
+          {
+            question: "Can patients confirm they received the report?",
+            answer:
+              "Yes. The flow can ask patients to confirm receipt or report access and store the status for lab or admin visibility.",
+          },
+          {
+            question: "What happens if the notification fails?",
+            answer:
+              "The flow should use fallback channels, retry logic, or staff handover. FLOW notification nodes support sent, partially sent, and failed outcomes with fallback design.",
+          },
+          {
+            question: "Can this connect with our lab software?",
+            answer:
+              "Yes, based on rollout scope. FLOW supports API, connector, record, notification, audit, and workflow-owned data patterns. Provider availability and system access need to be checked during implementation.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to launch your lab report notification flow?",
+        description:
+          "Tell us how your lab or hospital currently handles report-ready alerts, patient verification, report links, receipt confirmation, failed delivery, and report support. We'll map your process and show how FLOW can reduce manual calls while keeping report communication controlled and traceable.",
+        note:
+          "Start with report-ready notifications. Prove value. Expand into report status lookup, secure access, receipt confirmation, and lab support handover.",
+        primary: { label: "Book Lab Report Flow Demo", href: "/contact" },
+        secondary: { label: "Discuss My Healthcare Workflow", href: "/contact" },
+      },
+    },
   },
 ];
 
@@ -4501,3 +8932,4 @@ export const seoSoftwareSchema = {
   description: siteContent.site.description,
   url: "https://www.crescora.ai",
 };
+

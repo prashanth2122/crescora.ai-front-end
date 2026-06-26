@@ -13,7 +13,9 @@ import { metadata as privacyPageMetadata } from "@/app/privacy/page";
 import ProofPage from "@/app/proof/page";
 import { metadata as proofExampleMetadata } from "@/app/proof/healthcare-front-desk-automation/page";
 import { generateMetadata as generateSolutionMetadata } from "@/app/solutions/[slug]/page";
+import TemplateDetailPage, { generateMetadata as generateTemplateDetailMetadata } from "@/app/templates/[template]/page";
 import TemplatesHubPage from "@/app/templates/page";
+import UseCaseDetailPage, { generateMetadata as generateUseCaseDetailMetadata } from "@/app/use-cases/[slug]/page";
 import WorkflowDetailPage, { generateMetadata as generateWorkflowMetadata } from "@/app/workflows/[workflow]/page";
 import WorkflowsHubPage from "@/app/workflows/page";
 import sitemap, { indexableRoutes } from "@/app/sitemap";
@@ -174,6 +176,430 @@ test("representative route modules publish self-canonical metadata instead of in
     assert.equal(route.metadata.alternates?.canonical, route.canonical);
     assert.equal(openGraph?.url, `${siteOrigin}${route.canonical}`);
   }
+});
+
+test("whatsapp template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "whatsapp-automation-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "whatsapp-automation-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "WhatsApp Automation Template for Leads, Bookings, Payments, Support, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a WhatsApp automation template for lead capture, appointment booking, reminders, payment follow-ups, document requests, support routing, and human handover with Crescora FLOW.",
+  );
+  assert.match(html, /Launch a WhatsApp automation template for leads, bookings, reminders, support, and follow-ups\./);
+  assert.match(html, /Book WhatsApp Template Demo/);
+  assert.match(html, /What this WhatsApp automation template includes/);
+  assert.match(html, /What changes when FLOW runs the workflow/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|screenshots|handoff logic/i);
+});
+
+test("clinic template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "clinic-appointment-bot-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "clinic-appointment-bot-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Clinic Appointment Bot Template for Booking, Reminders, Fees, and Patient Handover | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a clinic appointment booking template with Crescora FLOW. Automate patient enquiries, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
+  );
+  assert.match(html, /Launch a clinic appointment booking template for patient enquiries, reminders, and staff handover\./);
+  assert.match(html, /Book Clinic Template Demo/);
+  assert.match(html, /What this clinic appointment template includes/);
+  assert.match(html, /Important clinic workflow note/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|screenshots|handoff logic/i);
+});
+
+test("payment reminder template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "payment-reminder-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "payment-reminder-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Payment Reminder Template for Collections, Failed Payments, WhatsApp Follow-Ups, and Billing Handover | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a payment reminder template with Crescora FLOW. Automate payment reminders, payment links, failed-payment recovery, reference capture, overdue escalation, and billing handover.",
+  );
+  assert.match(html, /Launch a payment reminder template for collections, failed payments, and follow-ups\./);
+  assert.match(html, /Book Payment Template Demo/);
+  assert.match(html, /What this payment reminder template includes/);
+  assert.match(html, /Important setup note/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show/i);
+});
+
+test("document collection template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "document-collection-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "document-collection-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Document Collection Template for KYC, Intake, Missing Files, Review, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a document collection template with Crescora FLOW. Automate KYC intake, missing-document reminders, upload tracking, review routing, approval workflows, and customer follow-ups.",
+  );
+  assert.match(
+    html,
+    /Launch a document collection template for KYC, intake, missing files, and review workflows\./,
+  );
+  assert.match(html, /Book Document Template Demo/);
+  assert.match(html, /What this document collection template includes/);
+  assert.match(html, /Built for document workflows with privacy and control/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show/i);
+});
+
+test("customer support bot template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "customer-support-bot-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "customer-support-bot-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Customer Support Bot Template for FAQ, Issue Triage, Human Handover, and Support Visibility | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a customer support bot template with Crescora FLOW. Automate FAQ resolution, issue triage, support routing, human handover, status updates, and support analytics.",
+  );
+  assert.match(
+    html,
+    /Launch a customer support bot template for FAQ resolution, issue triage, and human handover\./,
+  );
+  assert.match(html, /Book Support Template Demo/);
+  assert.match(html, /What this customer support template includes/);
+  assert.match(html, /Open cases, escalated cases, repeated questions, and unresolved conversations\./);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Watch demo/i);
+});
+
+test("knowledge assistant template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "rag-knowledge-assistant-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "rag-knowledge-assistant-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Knowledge Assistant Template for RAG, FAQ Automation, Grounded Answers, and Human Handover | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a knowledge assistant template with Crescora FLOW. Answer FAQs from approved documents, detect knowledge gaps, avoid unsupported AI answers, and hand off low-confidence questions to support teams.",
+  );
+  assert.match(
+    html,
+    /Launch a knowledge assistant template for approved answers, FAQ automation, and human handover\./,
+  );
+  assert.match(html, /Book Knowledge Assistant Demo/);
+  assert.match(html, /What this knowledge assistant template includes/);
+  assert.match(html, /Start with one knowledge area\. Prove answer quality\./);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Try the use case/i);
+});
+
+test("service business booking template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "service-business-booking-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "service-business-booking-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Service Business Booking Template for Appointments, Reminders, Payments, Staff Assignment, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a service business booking template with Crescora FLOW. Automate customer enquiries, service booking, reminders, payment follow-ups, staff handover, service updates, feedback, and repeat bookings.",
+  );
+  assert.match(
+    html,
+    /Launch a service booking template for enquiries, appointments, reminders, payments, and follow-ups\./,
+  );
+  assert.match(html, /Book Service Template Demo/);
+  assert.match(html, /What this service booking template includes/);
+  assert.match(html, /Start with one booking workflow\. Prove value\./);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|See pricing/i);
+});
+
+test("billing and collections template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "billing-and-collections-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "billing-and-collections-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Billing and Collections Template for Payment Reminders, Failed Payments, Disputes, and Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a billing and collections template with Crescora FLOW. Automate payment reminders, invoice follow-ups, failed-payment recovery, receipt capture, overdue escalation, dispute routing, and billing handover.",
+  );
+  assert.match(
+    html,
+    /Launch a billing and collections template for reminders, payment follow-ups, overdue cases, and exception handover\./,
+  );
+  assert.match(html, /Book Billing Template Demo/);
+  assert.match(html, /What this billing and collections template includes/);
+  assert.match(html, /Built for billing workflows with control/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Talk to sales/i);
+});
+
+test("observability dashboard template detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "observability-dashboard-template" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "observability-dashboard-template" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Conversation Observability Dashboard Template for Workflow Analytics, Handover Tracking, SLA Visibility, and Customer Outcomes | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a conversation observability dashboard template with Crescora FLOW. Track workflow stages, handovers, SLA risk, drop-offs, follow-ups, escalations, and customer outcomes.",
+  );
+  assert.match(
+    html,
+    /Launch a conversation observability dashboard template for workflow visibility, leakage tracking, and outcome reporting\./,
+  );
+  assert.match(html, /Book Observability Template Demo/);
+  assert.match(html, /What this observability dashboard template includes/);
+  assert.match(html, /Built for observability with clean data and privacy control/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|See dashboard/i);
+});
+
+test("hospital appointment booking flow detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "hospital-appointment-booking-flow" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "hospital-appointment-booking-flow" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Hospital Appointment Booking Flow for OPD, Reminders, Payments, and Patient Handover | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a hospital appointment booking flow with Crescora FLOW. Automate OPD enquiries, patient intake, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
+  );
+  assert.match(
+    html,
+    /Launch a hospital appointment booking flow for OPD visits, reminders, payments, and staff handover\./,
+  );
+  assert.match(html, /Book Hospital Workflow Demo/);
+  assert.match(html, /What this hospital appointment flow includes/);
+  assert.match(html, /Important hospital workflow note/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
+});
+
+test("real estate lead follow-up flow detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "real-estate-lead-followup-flow" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "real-estate-lead-followup-flow" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Real Estate Lead Follow-Up Flow for Property Enquiries, Site Visits, Sales Handover, and Reminders | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a real estate lead follow-up flow with Crescora FLOW. Capture property enquiries, qualify buyers, share projects, book site visits, assign sales reps, and automate follow-ups.",
+  );
+  assert.match(
+    html,
+    /Launch a real estate lead follow-up flow for property enquiries, site visits, and sales handover\./,
+  );
+  assert.match(html, /Book Real Estate Follow-Up Demo/);
+  assert.match(html, /What this real estate follow-up flow includes/);
+  assert.match(html, /Start with lead qualification and site visit follow-up\. Prove value\./);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
+});
+
+test("customer support faq flow detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "customer-support-faq-flow" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "customer-support-faq-flow" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Customer Support FAQ Flow for Approved Answers, Issue Triage, Human Handover, and Support Analytics | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a customer support FAQ flow with Crescora FLOW. Automate approved answers, repeated questions, issue triage, fallback handling, human escalation, status updates, and support visibility.",
+  );
+  assert.match(
+    html,
+    /Launch a customer support FAQ flow for approved answers, issue triage, and human escalation\./,
+  );
+  assert.match(html, /Book Support FAQ Flow Demo/);
+  assert.match(html, /What this customer support FAQ flow includes/);
+  assert.match(html, /FLOW capabilities used in this flow/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
+});
+
+test("payment reminder flow detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "payment-reminder-flow" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "payment-reminder-flow" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Payment Reminder Flow for Collections, Failed Payments, Overdue Escalation, and Billing Follow-Ups | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a payment reminder flow with Crescora FLOW. Automate payment reminders, payment links, failed-payment recovery, receipt capture, overdue escalation, billing handover, and payment status tracking.",
+  );
+  assert.match(
+    html,
+    /Launch a payment reminder flow for pending collections, failed payments, overdue escalation, and status updates\./,
+  );
+  assert.match(html, /Book Payment Reminder Flow Demo/);
+  assert.match(html, /What this payment reminder flow includes/);
+  assert.match(html, /FLOW capabilities used in this flow/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
+});
+
+test("lab report notification flow detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateTemplateDetailMetadata({
+    params: Promise.resolve({ template: "lab-report-notification-flow" }),
+  });
+  const html = renderToStaticMarkup(
+    await TemplateDetailPage({
+      params: Promise.resolve({ template: "lab-report-notification-flow" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute:
+      "Lab Report Notification Flow for Report-Ready Alerts, Secure Access, Receipt Confirmation, and Patient Handover | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Launch a lab report notification flow with Crescora FLOW. Notify patients when reports are ready, verify patient details, share secure access instructions, confirm receipt, handle failed delivery, and route report support cases to staff.",
+  );
+  assert.match(
+    html,
+    /Launch a lab report notification flow for report-ready alerts, secure access, and patient confirmation\./,
+  );
+  assert.match(html, /Book Lab Report Flow Demo/);
+  assert.match(html, /What this lab report notification flow includes/);
+  assert.match(html, /Important healthcare privacy note/);
+  assert.match(html, /FLOW capabilities used in this flow/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
+});
+
+test("lead capture use-case detail page publishes buyer-facing copy and exact metadata", async () => {
+  const metadata = await generateUseCaseDetailMetadata({
+    params: Promise.resolve({ slug: "lead-capture-qualification" }),
+  });
+  const html = renderToStaticMarkup(
+    await UseCaseDetailPage({
+      params: Promise.resolve({ slug: "lead-capture-qualification" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "Lead Capture and Qualification Automation for WhatsApp, Website, Ads, Sales Routing, and Follow-Ups | FLOW by Crescora AI",
+  );
+  assert.equal(
+    metadata.description,
+    "Capture enquiries and qualify leads automatically with Crescora FLOW. Convert WhatsApp, website, ad, and landing page enquiries into structured leads with routing, follow-ups, CRM updates, and outcome tracking.",
+  );
+  assert.match(html, /Capture enquiries and qualify leads automatically\./);
+  assert.match(html, /Book Lead Capture Demo/);
+  assert.match(html, /What FLOW captures before your team steps in/);
+  assert.match(html, /Lead capture and qualification path/);
+  assert.match(html, /Frequently asked questions/);
+  assert.doesNotMatch(html, /Request Scope Call|A practical rollout path for this workflow\./i);
 });
 
 test("marketing route metadata publishes route-specific social image urls", async () => {

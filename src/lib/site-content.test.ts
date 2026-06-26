@@ -121,7 +121,17 @@ test("homepage copy reflects the conversion-focused messaging", () => {
   assert.ok(siteContent.homepage.faq.items.every((item) => item.answer.length > 0));
   assert.equal(siteContent.useCases.whatsapp.metadata.title, "WhatsApp Automation Workflows and AI Chatbots | FLOW by Crescora");
   assert.equal(siteContent.useCases.whatsapp.services.length, 6);
+  assert.equal(
+    siteContent.useCases.leadCaptureQualification.metadata.title,
+    "Lead Capture and Qualification Automation for WhatsApp, Website, Ads, Sales Routing, and Follow-Ups",
+  );
   assert.equal(siteContent.useCases.leadCaptureQualification.hero.title, "Capture enquiries and qualify leads automatically.");
+  assert.equal(siteContent.useCases.leadCaptureQualification.hero.primaryCta.label, "Book Lead Capture Demo");
+  assert.equal(siteContent.useCases.leadCaptureQualification.captureSection?.items.length, 6);
+  assert.equal(siteContent.useCases.leadCaptureQualification.workflowSection?.steps.length, 8);
+  assert.equal(siteContent.useCases.leadCaptureQualification.useCasesSection?.items.length, 7);
+  assert.equal(siteContent.useCases.leadCaptureQualification.metricsSection?.items.length, 7);
+  assert.equal(siteContent.useCases.leadCaptureQualification.finalCta?.title, "Ready to automate your lead capture and qualification workflow?");
   assert.equal(siteContent.useCases.reminderAutomation.items[0], "Appointment reminders");
   assert.equal(siteContent.useCases.feedbackCollection.metadata.title, "Feedback and Review Collection Automation | FLOW by Crescora");
   assert.equal(siteContent.contact.metadata.title, "Contact | Crescora AI");

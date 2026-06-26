@@ -3190,17 +3190,25 @@ export const siteContent = {
     },
     leadCaptureQualification: {
       metadata: {
-        title: "Lead Capture and Qualification Automation | FLOW by Crescora",
+      title: "Lead Capture and Qualification Automation for WhatsApp, Website, Ads, Sales Routing, and Follow-Ups",
         description:
-          "Capture enquiries from web, WhatsApp, ads, or landing pages and qualify them before they reach your team.",
+          "Capture enquiries and qualify leads automatically with Crescora FLOW. Convert WhatsApp, website, ad, and landing page enquiries into structured leads with routing, follow-ups, CRM updates, and outcome tracking.",
       },
       hero: {
         eyebrow: "Use case",
         title: "Capture enquiries and qualify leads automatically.",
         description:
-          "FLOW asks the right questions, scores intent, and routes qualified leads to sales or the right team.",
-        primaryCta: { label: "Book Free Demo", href: "/contact" },
+          "Crescora FLOW helps businesses turn enquiries from website chat, WhatsApp, ads, landing pages, and campaigns into structured lead workflows. Ask the right questions, capture contact details, understand buyer intent, route qualified leads to the right team, and follow up when enquiries are incomplete.",
+        primaryCta: { label: "Book Lead Capture Demo", href: "/contact" },
         secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+        supportText:
+          "Built for inbound enquiries, lead qualification, buyer intent scoring, callback requests, sales routing, CRM updates, incomplete enquiry recovery, and follow-up automation.",
+      },
+      rollout: {
+        eyebrow: "What FLOW handles",
+        title: "A practical rollout path for lead capture and qualification",
+        description:
+          "Start with one high-intent enquiry source, capture the required lead details, qualify buyer intent, route serious opportunities to your team, and follow up with leads that do not complete the journey.",
       },
       items: [
         "Web, WhatsApp, and ad enquiry capture",
@@ -3208,7 +3216,239 @@ export const siteContent = {
         "Qualified lead routing with context",
         "Follow-up for incomplete enquiries",
       ],
-      cta: { label: "Book Free Demo", href: "/contact" },
+      itemDescriptions: [
+        "Capture enquiries from website chat, WhatsApp, landing pages, ad campaigns, social messages, and inbound forms. Every enquiry can enter a structured workflow instead of staying scattered across channels.",
+        "Ask the right questions based on your business: requirement, budget, location, urgency, timeline, service interest, preferred contact time, and buying intent.",
+        "Route hot leads to sales, support, admissions, front desk, real estate reps, service teams, or consultants with captured details and conversation history.",
+        "Recover leads that drop off before sharing details, choosing a slot, confirming interest, or requesting a callback. FLOW can trigger reminders and next-step prompts.",
+      ],
+      captureSection: {
+        eyebrow: "What FLOW captures",
+        title: "What FLOW captures before your team steps in",
+        description:
+          "Structure the enquiry first so your sales or operations team gets context instead of an unqualified message thread.",
+        items: [
+          {
+            title: "Customer identity",
+            description:
+              "Name, mobile number, email, preferred language, location, and channel source.",
+          },
+          {
+            title: "Business requirement",
+            description:
+              "Service needed, product interest, project interest, course interest, appointment need, support need, or consultation request.",
+          },
+          {
+            title: "Qualification details",
+            description:
+              "Budget, timeline, urgency, preferred date and time, location preference, customer type, and decision stage.",
+          },
+          {
+            title: "Lead source",
+            description:
+              "Website chat, WhatsApp, ad campaign, landing page, social message, QR campaign, referral, or manual entry.",
+          },
+          {
+            title: "Next action",
+            description:
+              "Book callback, schedule appointment, share brochure, send pricing, route to sales, collect payment, request documents, or hand over to staff.",
+          },
+          {
+            title: "Lead status",
+            description:
+              "New, captured, qualified, incomplete, callback requested, assigned, followed up, converted, cold, or closed.",
+          },
+        ],
+      },
+      workflowSection: {
+        eyebrow: "Workflow diagram",
+        title: "Lead capture and qualification path",
+        description:
+          "Map the enquiry from first message to a business-ready outcome instead of stopping at contact collection.",
+        steps: [
+          "Enquiry",
+          "Contact Capture",
+          "Requirement",
+          "Qualification",
+          "Intent Score",
+          "Sales Routing",
+          "Follow-Up",
+          "Outcome Tracking",
+        ],
+        supportLine:
+          "The goal is not only to collect leads. The goal is to move every enquiry toward a clear business result: qualified, assigned, booked, followed up, converted, or closed.",
+        statusChips: [
+          "New Enquiry",
+          "Details Captured",
+          "Qualified",
+          "High Intent",
+          "Assigned",
+          "Follow-Up Pending",
+          "Converted",
+        ],
+      },
+      comparisonSection: {
+        eyebrow: "Before and after",
+        title: "What changes when FLOW runs the workflow",
+        description:
+          "Show the shift from scattered enquiries to a structured lead workflow with routing and follow-up.",
+        rows: [
+          {
+            before: "Leads arrive from many channels and get missed",
+            after: "Every enquiry can enter a structured lead workflow",
+          },
+          {
+            before: "Staff ask the same questions manually",
+            after: "FLOW captures key lead details automatically",
+          },
+          {
+            before: "Sales teams receive incomplete leads",
+            after: "Qualified leads can include requirement, budget, urgency, and context",
+          },
+          {
+            before: "Hot leads wait too long",
+            after: "High-intent enquiries can be routed faster",
+          },
+          {
+            before: "Incomplete enquiries are forgotten",
+            after: "Follow-up reminders can recover dropped leads",
+          },
+          {
+            before: "Managers lack lead visibility",
+            after: "Lead status can be tracked from enquiry to outcome",
+          },
+        ],
+      },
+      useCasesSection: {
+        eyebrow: "Use cases",
+        title: "Use this workflow for",
+        description:
+          "Start with the lead source or business workflow that produces the most inbound volume, then expand into routing, reminders, and CRM sync.",
+        items: [
+          {
+            title: "Website lead capture",
+            description:
+              "Convert website visitors into structured enquiries with name, contact, requirement, and next step.",
+          },
+          {
+            title: "WhatsApp enquiry qualification",
+            description:
+              "Turn WhatsApp messages into qualified leads instead of unstructured chat threads.",
+          },
+          {
+            title: "Ad campaign lead routing",
+            description:
+              "Capture source, campaign, intent, and sales context before assigning the lead.",
+          },
+          {
+            title: "Real estate buyer qualification",
+            description:
+              "Collect budget, location, BHK, project interest, and site visit preference.",
+          },
+          {
+            title: "Education admissions enquiries",
+            description:
+              "Capture course interest, student details, batch preference, fee questions, and counsellor routing.",
+          },
+          {
+            title: "Service business bookings",
+            description:
+              "Capture service type, location, urgency, preferred time, and staff assignment.",
+          },
+          {
+            title: "Healthcare appointment enquiries",
+            description:
+              "Capture department, patient details, preferred slot, and front-desk handover when needed.",
+          },
+        ],
+      },
+      metricsSection: {
+        eyebrow: "Metrics",
+        title: "What to measure after launching this workflow",
+        description:
+          "Treat the pilot as a measurable lead system, not just a contact form replacement.",
+        items: [
+          {
+            title: "Lead capture rate",
+            description:
+              "How many visitors or enquiries become captured leads.",
+          },
+          {
+            title: "Qualification completion rate",
+            description:
+              "How many leads answer the required qualification questions.",
+          },
+          {
+            title: "Hot lead routing speed",
+            description:
+              "How quickly qualified leads reach the right team.",
+          },
+          {
+            title: "Incomplete enquiry recovery",
+            description:
+              "How many dropped leads respond after follow-up.",
+          },
+          {
+            title: "Callback booking rate",
+            description:
+              "How many leads request a call, demo, appointment, or visit.",
+          },
+          {
+            title: "Conversion visibility",
+            description:
+              "How many leads move from new to qualified, assigned, followed up, converted, or closed.",
+          },
+          {
+            title: "Source performance",
+            description:
+              "Which channels produce better leads: WhatsApp, website, ads, social, referrals, or landing pages.",
+          },
+        ],
+      },
+      faqSection: {
+        eyebrow: "FAQ",
+        title: "Frequently asked questions",
+        description:
+          "Answer the rollout questions before implementation so the lead workflow can launch without ambiguity.",
+        items: [
+          {
+            question: "Can FLOW capture leads from WhatsApp and website chat?",
+            answer:
+              "Yes. FLOW supports multi-channel customer workflows, including website chat, WhatsApp, Telegram, email, SMS, and connected systems depending on rollout scope.",
+          },
+          {
+            question: "Can FLOW qualify leads automatically?",
+            answer:
+              "Yes. FLOW can ask qualification questions, collect structured fields, classify intent, and route leads based on business rules.",
+          },
+          {
+            question: "Can leads be sent to CRM, Google Sheets, or internal tools?",
+            answer:
+              "Yes, based on rollout scope. FLOW supports records, API calls, connectors, notifications, analytics events, and workflow-owned structured data.",
+          },
+          {
+            question: "What happens when a lead does not complete the enquiry?",
+            answer:
+              "The workflow can trigger follow-up reminders, ask for missing details, offer a callback, or hand over the conversation to a human team.",
+          },
+          {
+            question: "Can high-value leads be routed faster?",
+            answer:
+              "Yes. Lead routing can use urgency, budget, source, location, customer type, or selected service to route serious enquiries to the right team.",
+          },
+        ],
+      },
+      finalCta: {
+        eyebrow: "Next step",
+        title: "Ready to automate your lead capture and qualification workflow?",
+        description:
+          "Tell us how your business currently handles enquiries from WhatsApp, website, ads, forms, and calls. We'll map your lead capture process, qualification questions, routing rules, follow-up sequence, and the fastest FLOW workflow to launch first.",
+        note:
+          "Start with one lead source. Prove value. Expand into routing, reminders, CRM sync, and pipeline visibility.",
+        primary: { label: "Book Lead Capture Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
+      },
+      cta: { label: "Book Lead Capture Demo", href: "/contact" },
     },
     faqAutomation: {
       metadata: {
