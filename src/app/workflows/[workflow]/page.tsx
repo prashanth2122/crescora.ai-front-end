@@ -73,6 +73,8 @@ function renderPublicWorkflowPage(workflow: WorkflowSeo) {
     return null;
   }
 
+  const workflowDiagramSection = page.workflowDiagramSection;
+
   return (
     <>
       <PageHero
@@ -85,22 +87,22 @@ function renderPublicWorkflowPage(workflow: WorkflowSeo) {
         visual={<WorkflowHeroVisual workflow={page} />}
       />
 
-      {page.workflowDiagramSection ? (
+      {workflowDiagramSection ? (
         <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
-                eyebrow={page.workflowDiagramSection.eyebrow}
-                title={page.workflowDiagramSection.title}
-                description={page.workflowDiagramSection.description}
+                eyebrow={workflowDiagramSection.eyebrow}
+                title={workflowDiagramSection.title}
+                description={workflowDiagramSection.description}
               />
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                {page.workflowDiagramSection.steps.map((step, index) => (
+                {workflowDiagramSection.steps.map((step, index) => (
                   <div key={step} className="flex items-center gap-3">
                     <div className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-900 shadow-[0_12px_30px_rgba(15,23,42,0.04)]">
                       {step}
                     </div>
-                    {index < page.workflowDiagramSection.steps.length - 1 ? (
+                    {index < workflowDiagramSection.steps.length - 1 ? (
                       <span aria-hidden className="hidden text-2xl text-zinc-300 md:block">
                         {'->'}
                       </span>
@@ -108,9 +110,9 @@ function renderPublicWorkflowPage(workflow: WorkflowSeo) {
                   </div>
                 ))}
               </div>
-              {page.workflowDiagramSection.supportLine ? (
+              {workflowDiagramSection.supportLine ? (
                 <p className="mt-6 max-w-5xl text-base leading-8 text-zinc-600">
-                  {page.workflowDiagramSection.supportLine}
+                  {workflowDiagramSection.supportLine}
                 </p>
               ) : null}
             </CardContent>
