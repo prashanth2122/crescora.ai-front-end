@@ -7,6 +7,10 @@ import BlogPostPage, { generateMetadata as generateBlogPostMetadata } from "@/ap
 import { generateMetadata as generateCompareDetailMetadata } from "@/app/compare/[slug]/page";
 import ComparePage, { metadata as compareHubMetadata } from "@/app/compare/page";
 import { metadata as healthcareIndustryMetadata } from "@/app/industries/healthcare/page";
+import CitySeoPage, { generateMetadata as generateIndiaCityMetadata } from "@/app/india/[state]/cities/[city]/page";
+import StateIndustryPage, { generateMetadata as generateIndiaStateIndustryMetadata } from "@/app/india/[state]/industries/[industry]/page";
+import IndiaStatePage, { generateMetadata as generateIndiaStateMetadata } from "@/app/india/[state]/page";
+import StateWorkflowPage, { generateMetadata as generateIndiaStateWorkflowMetadata } from "@/app/india/[state]/workflows/[workflow]/page";
 import HomePage from "@/app/page";
 import PricingPage from "@/app/pricing/page";
 import { metadata as privacyPageMetadata } from "@/app/privacy/page";
@@ -49,6 +53,7 @@ test("sitemap publishes each indexable route once on the production host", () =>
   assert.ok(urls.includes(`${siteOrigin}/compare/zendesk-ai-alternative`));
   assert.ok(urls.includes(`${siteOrigin}/hi`));
   assert.ok(urls.includes(`${siteOrigin}/india/maharashtra/workflows/whatsapp-automation`));
+  assert.ok(urls.includes(`${siteOrigin}/india/maharashtra/cities/mumbai`));
 });
 
 test("json-ld payloads are sanitized before rendering", () => {
@@ -1450,6 +1455,144 @@ test("whatsapp chatbot vs website chatbot blog post renders public comparison co
   assert.doesNotMatch(
     html,
     /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("maharashtra state hub renders generated state-seo content and exact metadata", async () => {
+  const metadata = await generateIndiaStateMetadata({
+    params: Promise.resolve({ state: "maharashtra" }),
+  });
+  const html = renderToStaticMarkup(
+    await IndiaStatePage({
+      params: Promise.resolve({ state: "maharashtra" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute: "AI Business Automation in Maharashtra, India | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps businesses in Maharashtra automate missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection across Mumbai, Pune, Nagpur, Nashik, Thane with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/maharashtra");
+  assert.match(html, /Why businesses in Maharashtra choose FLOW/);
+  assert.match(html, /High-impact WhatsApp automation workflows for Maharashtra/);
+  assert.match(html, /Industries we support in Maharashtra/);
+  assert.match(html, /Local language and customer experience coverage/);
+  assert.match(html, /How FLOW implementation works/);
+  assert.match(html, /FAQs for Maharashtra businesses/);
+  assert.match(html, /Ready to launch automation for your business in Maharashtra\?/);
+  assert.match(html, /Mumbai/);
+  assert.match(html, /Marathi/);
+  assert.match(html, /whatsapp automation maharashtra/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /State × workflow pages should|Use the page to prove|thin page farm|Why this state matters|Industry page should stay unique and proof-led/i,
+  );
+});
+
+test("maharashtra whatsapp workflow page renders generated state-workflow seo content and exact metadata", async () => {
+  const metadata = await generateIndiaStateWorkflowMetadata({
+    params: Promise.resolve({ state: "maharashtra", workflow: "whatsapp-automation" }),
+  });
+  const html = renderToStaticMarkup(
+    await StateWorkflowPage({
+      params: Promise.resolve({ state: "maharashtra", workflow: "whatsapp-automation" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "WhatsApp automation in Maharashtra for lead capture, bookings, support, and follow-ups | FLOW by Crescora AI",
+  );
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps businesses in Maharashtra use WhatsApp automation workflows to reduce missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection across Mumbai, Pune, Nagpur, Nashik, Thane with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/maharashtra/workflows/whatsapp-automation");
+  assert.match(html, /WhatsApp automation for businesses in Maharashtra/);
+  assert.match(html, /Why WhatsApp automation matters in Maharashtra/);
+  assert.match(html, /What this WhatsApp automation workflow can automate in Maharashtra/);
+  assert.match(html, /Where teams in Maharashtra use this workflow/);
+  assert.match(html, /How FLOW runs WhatsApp automation in Maharashtra/);
+  assert.match(html, /What changes after WhatsApp automation launches in Maharashtra/);
+  assert.match(html, /FAQs about WhatsApp automation in Maharashtra/);
+  assert.match(html, /Ready to launch WhatsApp automation in Maharashtra\?/);
+  assert.match(html, /Mumbai/);
+  assert.match(html, /Marathi/);
+  assert.match(html, /whatsapp automation maharashtra/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|Localized module|Page structure|Industry tie-in|Use the workflow page to show how FLOW solves|State Ã— industry pages should stay focused|This workflow page should link back|genuinely unique/i,
+  );
+});
+
+test("mumbai city page renders generated city-seo content and exact metadata", async () => {
+  const metadata = await generateIndiaCityMetadata({
+    params: Promise.resolve({ state: "maharashtra", city: "mumbai" }),
+  });
+  const html = renderToStaticMarkup(
+    await CitySeoPage({
+      params: Promise.resolve({ state: "maharashtra", city: "mumbai" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute: "AI Business Automation in Mumbai, Maharashtra, India | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps businesses in Mumbai, Maharashtra automate missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/maharashtra/cities/mumbai");
+  assert.match(html, /AI business automation for teams in Mumbai/);
+  assert.match(html, /Why businesses in Mumbai choose FLOW/);
+  assert.match(html, /High-impact automation workflows for Mumbai/);
+  assert.match(html, /Industries we support in Mumbai/);
+  assert.match(html, /How FLOW implementation works in Mumbai/);
+  assert.match(html, /FAQs for Mumbai businesses/);
+  assert.match(html, /Ready to launch automation for your business in Mumbai\?/);
+  assert.match(html, /Pune/);
+  assert.match(html, /Marathi/);
+  assert.match(html, /"@type":"FAQPage"/);
+});
+
+test("maharashtra service business page renders generated state-industry seo content and exact metadata", async () => {
+  const metadata = await generateIndiaStateIndustryMetadata({
+    params: Promise.resolve({ state: "maharashtra", industry: "service-businesses" }),
+  });
+  const html = renderToStaticMarkup(
+    await StateIndustryPage({
+      params: Promise.resolve({ state: "maharashtra", industry: "service-businesses" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "Service business automation in Maharashtra for bookings, reminders, collections, and follow-ups | FLOW by Crescora AI",
+  );
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps service business automation buyers in Maharashtra reduce missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection across Mumbai, Pune, Nagpur, Nashik, Thane with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/maharashtra/industries/service-businesses");
+  assert.match(html, /Service business automation for teams in Maharashtra/);
+  assert.match(html, /Why service business automation teams in Maharashtra choose FLOW/);
+  assert.match(html, /What service business automation should improve in Maharashtra/);
+  assert.match(html, /Relevant workflows for service businesses in Maharashtra/);
+  assert.match(html, /How FLOW implementation works for service businesses in Maharashtra/);
+  assert.match(html, /FAQs for service businesses in Maharashtra/);
+  assert.match(html, /Ready to launch service business automation in Maharashtra\?/);
+  assert.match(html, /Mumbai/);
+  assert.match(html, /Marathi/);
+  assert.match(html, /whatsapp automation maharashtra/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Commercial fit|Why it ranks|Page focus|Tie the page back to the state hub and workflow pages|State page should be distinct|Local proof prevents duplicate-thin state pages/i,
   );
 });
 

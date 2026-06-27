@@ -1,4 +1,7 @@
 import { siteContent } from "@/lib/site-content";
+import { seoCityRoutes } from "@/lib/city-seo-seeds";
+import { stateSeoSeedList } from "@/lib/state-seo-seeds";
+import { getStateWorkflowSlugs } from "@/lib/state-workflow-seo";
 
 export type Tier = "A" | "B" | "C";
 
@@ -8877,29 +8880,36 @@ export const statePrimaryIndustrySlug: Record<string, string> = {
   ladakh: "service-businesses",
   "dadra-and-nagar-haveli-and-daman-and-diu": "service-businesses",
   lakshadweep: "service-businesses",
+  assam: "service-businesses",
+  chhattisgarh: "service-businesses",
+  haryana: "service-businesses",
+  jharkhand: "service-businesses",
+  kerala: "service-businesses",
+  punjab: "service-businesses",
+  delhi: "support-teams",
 };
 
 export function getStatePrimaryIndustrySlug(stateSlug: string) {
   return statePrimaryIndustrySlug[stateSlug] ?? "service-businesses";
 }
 
-export const seoStateRoutes = indiaStates.map(
-  (state) => `/india/${state.slug}`,
-);
+export const seoStateRoutes = stateSeoSeedList.map((state) => `/india/${state.slug}`);
 
-export const seoWorkflowRoutes = indiaStates.flatMap((state) =>
-  state.workflowSlugs.map(
+export const seoWorkflowRoutes = stateSeoSeedList.flatMap((state) =>
+  getStateWorkflowSlugs(state.slug).map(
     (workflowSlug) => `/india/${state.slug}/workflows/${workflowSlug}`,
   ),
 );
 
 export const seoIndustryRoutes = [
   ...industriesSeo.map((industry) => `/industries/${industry.slug}`),
-  ...indiaStates.map(
+  ...stateSeoSeedList.map(
     (state) =>
       `/india/${state.slug}/industries/${getStatePrimaryIndustrySlug(state.slug)}`,
   ),
 ];
+
+export { seoCityRoutes };
 
 export const seoTemplateRoutes = templates.map(
   (template) => `/templates/${template.slug}`,
@@ -8910,6 +8920,7 @@ export const seoHubRoutes = ["/india", "/workflows", "/templates"];
 export const seoAllRoutes = [
   ...seoHubRoutes,
   ...seoStateRoutes,
+  ...seoCityRoutes,
   ...seoWorkflowRoutes,
   ...seoTemplateRoutes,
   ...seoIndustryRoutes,

@@ -99,6 +99,7 @@ This keeps route components thin and makes future localization work straightforw
 - the service-business workflow examples blog detail page now uses buyer-facing workflow examples, service-operations use cases, routing and handoff coverage, and workflow-specific CTAs instead of the internal planning template
 - the hospital demo chatbot blog detail page now uses buyer-facing hospital workflow copy, patient-journey demo coverage, safety-aware escalation messaging, and healthcare-specific CTAs instead of the internal planning template
 - blog detail pages now use the shared `public/blog/shared-blog-featured.png` visual for the in-article featured image while keeping per-route Open Graph metadata images on `/blog/[slug]/opengraph-image`
+- `/india/[state]` pages now use one reusable state-seo template driven by `src/lib/state-seo-seeds.ts`, with state-specific cities, languages, industries, workflow themes, FAQs, and CTA copy instead of internal audit placeholders
 - the pricing page now uses automation-first wording, India/global billing-region pricing, richer best-for/includes tier detail, pricing-scope education, and an expanded FAQ plus CTA path
 - the solutions hub keeps the query-led structure but now uses equal-height cards and arrow-style solution links for clearer scanning
 - the lead form copy, country selector, country-aware phone validation, validation copy, and optional channel qualification field are centralized in `src/components/site/lead-form.tsx` and `src/lib/site-content.ts`
@@ -180,6 +181,7 @@ The current commercial setup uses:
 - `src/components/site/revenue-solution-page.tsx` for the shared product-page layout
 - page-specific hero copy, section headings, metadata overrides, and final CTA variants are configured in `src/lib/revenue-pages.ts` so individual solution pages can be upgraded without forking the layout
 - repaired blog detail overrides in `src/lib/seo-marketing-data.ts` now replace internal SEO planning template copy with buyer-facing public content for high-priority slugs, with regression coverage in `src/lib/seo.test.ts`
+- `/india/[state]` pages now use one reusable state-seo template driven by `src/lib/state-seo-seeds.ts`, `/india/[state]/cities/[city]` pages use the city inventory in `src/lib/city-seo-seeds.ts`, `/india/[state]/workflows/[workflow]` pages use the reusable state-plus-workflow mapping in `src/lib/state-workflow-seo.ts`, and `/india/[state]/industries/[industry]` pages use the reusable state-plus-industry mapping in `src/lib/state-industry-seo.ts` so each route publishes real state-specific cities, languages, industries, workflow intent, FAQs, and CTA copy instead of internal placeholder guidance
 - visible implementation details, examples, proof points, outcomes, related links, and FAQ accordions on each primary solution page
 - product-surface panels embedded in the primary solution pages to show the operator, builder, and dashboard views referenced in the copy
 

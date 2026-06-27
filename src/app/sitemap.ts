@@ -4,6 +4,7 @@ import type { MetadataRoute } from "next";
 
 import { comparisonPages, proofCards } from "@/lib/decision-pages";
 import {
+  seoCityRoutes,
   seoIndustryRoutes,
   seoStateRoutes,
   seoTemplateRoutes,
@@ -117,6 +118,12 @@ const generatedEntries: SitemapEntry[] = [
     sourceFile: "src/lib/india-seo-data.ts",
     changeFrequency: "monthly" as const,
     priority: 0.65,
+  })),
+  ...seoCityRoutes.map((path) => ({
+    path,
+    sourceFile: "src/lib/city-seo-seeds.ts",
+    changeFrequency: "monthly" as const,
+    priority: 0.58,
   })),
   ...seoWorkflowRoutes.map((path) => ({
     path,
