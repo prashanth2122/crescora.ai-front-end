@@ -3,7 +3,7 @@ import test from "node:test";
 
 import { metadata as aboutPageMetadata } from "@/app/about/page";
 import BlogPage from "@/app/blog/page";
-import { generateMetadata as generateBlogPostMetadata } from "@/app/blog/[slug]/page";
+import BlogPostPage, { generateMetadata as generateBlogPostMetadata } from "@/app/blog/[slug]/page";
 import { generateMetadata as generateCompareDetailMetadata } from "@/app/compare/[slug]/page";
 import ComparePage, { metadata as compareHubMetadata } from "@/app/compare/page";
 import { metadata as healthcareIndustryMetadata } from "@/app/industries/healthcare/page";
@@ -675,6 +675,14 @@ test("marketing route metadata publishes route-specific social image urls", asyn
     blogTwitter?.images?.[0],
     `${siteOrigin}/blog/how-whatsapp-automation-helps-small-businesses-in-india/opengraph-image`,
   );
+  assert.equal(
+    blogMetadata.title,
+    "WhatsApp Automation for Small Businesses in India: Leads, Bookings, Payments, Support, and Follow-Ups | Crescora FLOW",
+  );
+  assert.equal(
+    blogMetadata.description,
+    "Learn how WhatsApp automation helps small businesses in India capture leads, book appointments, send reminders, follow up on payments, collect documents, route support, and grow faster with Crescora FLOW.",
+  );
   assert.deepEqual(workflowMetadata.title, {
     absolute: "Appointment Booking Automation for WhatsApp, Web, Reminders, Rescheduling, and Follow-Ups | Crescora FLOW",
   });
@@ -735,6 +743,714 @@ test("marketing route metadata publishes route-specific social image urls", asyn
   assert.equal(billingMetadata.alternates?.canonical, "/workflows/billing");
   assert.equal(billingOpenGraph?.title, "Billing and Collections Automation for Payment Reminders, Failed Payments, Disputes, and Follow-Ups | Crescora FLOW");
   assert.equal(billingOpenGraph?.url, `${siteOrigin}/workflows/billing`);
+});
+
+test("whatsapp small business blog post renders public article content instead of internal SEO planning copy", async () => {
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-whatsapp-automation-helps-small-businesses-in-india" }),
+    }),
+  );
+
+  assert.match(
+    html,
+    /How WhatsApp automation helps small businesses in India capture leads, book appointments, and follow up faster\./,
+  );
+  assert.match(html, /Table of contents/);
+  assert.match(html, /7 WhatsApp automation workflows small businesses should launch first/);
+  assert.match(html, /Example WhatsApp automation journey/);
+  assert.match(html, /Before WhatsApp automation vs after Crescora FLOW/);
+  assert.match(html, /Frequently asked questions/);
+  assert.match(html, /Book WhatsApp Automation Demo/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("healthcare chatbot blog post renders public hospital content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "best-ai-chatbot-use-cases-for-hospitals-and-clinics" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "best-ai-chatbot-use-cases-for-hospitals-and-clinics" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "Best AI Chatbot Use Cases for Hospitals and Clinics in India | FLOW");
+  assert.equal(
+    metadata.description,
+    "Explore the best AI chatbot use cases for hospitals and clinics in India, including appointment booking, patient enquiries, lab report updates, reminders, payments, documents, and human handoff.",
+  );
+  assert.match(html, /Best AI chatbot use cases for hospitals and clinics in India/);
+  assert.match(html, /Why hospitals and clinics need AI chatbot automation/);
+  assert.match(html, /Best AI chatbot use cases for hospitals and clinics/);
+  assert.match(html, /AI chatbot vs workflow automation for hospitals/);
+  assert.match(html, /Suggested hospital automation rollout plan/);
+  assert.match(html, /Frequently asked questions/);
+  assert.match(html, /Book Healthcare Demo/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("whatsapp appointment booking blog post renders public booking content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-automate-appointment-booking-using-whatsapp" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-automate-appointment-booking-using-whatsapp" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "WhatsApp Appointment Booking Automation for Clinics, Services, Salons, and Small Businesses | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Learn how WhatsApp appointment booking automation helps businesses capture enquiries, confirm slots, send reminders, support rescheduling, follow up on payments, and reduce manual coordination with Crescora FLOW.",
+  );
+  assert.match(html, /How to automate appointment booking using WhatsApp/);
+  assert.match(html, /Why manual appointment booking creates delays/);
+  assert.match(html, /Appointment booking workflow example/);
+  assert.match(html, /Before and after appointment automation/);
+  assert.match(html, /Who can use WhatsApp appointment booking automation\?/);
+  assert.match(html, /What to measure after automating appointment booking/);
+  assert.match(html, /Book WhatsApp Booking Demo/);
+  assert.match(html, /Discuss My Appointment Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("real estate lead follow-up blog post renders public property workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-real-estate-businesses-can-automate-lead-follow-ups" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-real-estate-businesses-can-automate-lead-follow-ups" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "How Real Estate Businesses Can Automate Lead Follow-Ups and Book More Site Visits | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Learn how real estate businesses can automate lead follow-ups, buyer qualification, project sharing, site visit booking, sales rep handover, and post-visit reminders with Crescora FLOW.",
+  );
+  assert.match(html, /How real estate businesses can automate lead follow-ups and book more site visits/);
+  assert.match(html, /What is real estate lead follow-up automation\?/);
+  assert.match(html, /Why real estate leads get missed/);
+  assert.match(html, /Real estate lead follow-up workflow example/);
+  assert.match(html, /How to automate project sharing/);
+  assert.match(html, /How to automate site visit booking/);
+  assert.match(html, /How to assign leads to sales reps/);
+  assert.match(html, /Post-site-visit follow-up automation/);
+  assert.match(html, /Best real estate workflows to automate first/);
+  assert.match(html, /How Crescora FLOW helps real estate teams/);
+  assert.match(html, /Book Real Estate Automation Demo/);
+  assert.match(html, /Map My Sales Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("customer support automation blog post renders public support workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "customer-support-automation-ideas-for-indian-businesses" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "customer-support-automation-ideas-for-indian-businesses" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "Customer Support Automation Ideas for Indian Businesses | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Explore customer support automation ideas for Indian businesses. Automate FAQs, WhatsApp support, ticket routing, payment queries, document follow-ups, complaint escalation, human handover, and support analytics with Crescora FLOW.",
+  );
+  assert.match(html, /Customer support automation ideas for Indian businesses/);
+  assert.match(html, /What is customer support automation\?/);
+  assert.match(html, /Why Indian businesses need support automation/);
+  assert.match(html, /Best customer support automation ideas/);
+  assert.match(html, /FAQ automation for repeated questions/);
+  assert.match(html, /WhatsApp support automation/);
+  assert.match(html, /Ticket creation and escalation workflows/);
+  assert.match(html, /Payment, order, and appointment support/);
+  assert.match(html, /Human handover with full context/);
+  assert.match(html, /Support automation by industry/);
+  assert.match(html, /How Crescora FLOW helps support teams/);
+  assert.match(html, /Before and after support automation/);
+  assert.match(html, /Book Support Automation Demo/);
+  assert.match(html, /Map My Support Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("clinic front desk automation blog post renders public clinic workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-clinics-can-reduce-front-desk-calls-with-automation" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-clinics-can-reduce-front-desk-calls-with-automation" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "How Clinics Can Reduce Front Desk Calls With Automation | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how clinics can reduce front desk calls with automation. Automate appointment booking, doctor availability questions, reminders, rescheduling, payments, reports, documents, FAQs, and human handover with Crescora FLOW.",
+  );
+  assert.match(html, /How clinics can reduce front desk calls with automation/);
+  assert.match(html, /What is clinic front desk automation\?/);
+  assert.match(html, /Why clinics receive too many front desk calls/);
+  assert.match(html, /Best clinic workflows to automate first/);
+  assert.match(html, /Appointment booking automation/);
+  assert.match(html, /Doctor availability enquiry automation/);
+  assert.match(html, /Reminder and rescheduling automation/);
+  assert.match(html, /Fee, payment, and billing support automation/);
+  assert.match(html, /Lab report and document support automation/);
+  assert.match(html, /Human handover for sensitive cases/);
+  assert.match(html, /How Crescora FLOW helps clinics/);
+  assert.match(html, /Before and after clinic automation/);
+  assert.match(html, /Book Clinic Automation Demo/);
+  assert.match(html, /Map My Clinic Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
+});
+
+test("no-code chatbot automation blog post renders public workflow education content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "what-is-no-code-chatbot-automation" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "what-is-no-code-chatbot-automation" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "What Is No-Code Chatbot Automation? Business Workflow Guide | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Learn what no-code chatbot automation is and how businesses use it to automate leads, appointments, support, payments, documents, reminders, WhatsApp workflows, and human handoff with Crescora FLOW.",
+  );
+  assert.match(html, /What is no-code chatbot automation\?/);
+  assert.match(html, /How no-code chatbot automation works/);
+  assert.match(html, /No-code chatbot vs normal chatbot/);
+  assert.match(html, /What businesses can automate first/);
+  assert.match(html, /Best no-code chatbot automation use cases/);
+  assert.match(html, /Benefits of no-code chatbot automation/);
+  assert.match(html, /What a good no-code chatbot builder should include/);
+  assert.match(html, /How Crescora FLOW helps/);
+  assert.match(html, /Recommended rollout plan/);
+  assert.match(html, /Before and after no-code chatbot automation/);
+  assert.match(html, /Industries that can use no-code chatbot automation/);
+  assert.match(html, /Book No-Code Automation Demo/);
+  assert.match(html, /Explore FLOW Workflows/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page|Explore the next page for your workflow decision/i,
+  );
+});
+
+test("payment reminder automation blog post renders public billing workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-automate-payment-reminders-for-customers" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-automate-payment-reminders-for-customers" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "How to Automate Payment Reminders for Customers | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how to automate payment reminders for customers with Crescora FLOW. Send due reminders, share payment links, collect status, recover failed payments, escalate overdue cases, and track billing outcomes.",
+  );
+  assert.match(html, /How to automate payment reminders for customers/);
+  assert.match(html, /What is payment reminder automation\?/);
+  assert.match(html, /Why manual payment follow-up fails/);
+  assert.match(html, /Payment reminder workflow example/);
+  assert.match(html, /What payment details should be captured/);
+  assert.match(html, /How to write payment reminders professionally/);
+  assert.match(html, /Reminder sequence before and after due date/);
+  assert.match(html, /Payment link and status collection/);
+  assert.match(html, /Failed payment and overdue escalation/);
+  assert.match(html, /Best payment workflows to automate first/);
+  assert.match(html, /How Crescora FLOW helps/);
+  assert.match(html, /Before and after payment reminder automation/);
+  assert.match(html, /Metrics to measure after payment automation/);
+  assert.match(html, /Book Payment Automation Demo/);
+  assert.match(html, /Map My Payment Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page|Explore the next page for your workflow decision/i,
+  );
+});
+
+test("hospital chatbot workflows blog post renders public healthcare workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "best-chatbot-workflows-for-hospitals" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "best-chatbot-workflows-for-hospitals" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "Best AI Chatbot Workflows for Hospitals and Clinics | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Explore the best AI chatbot workflows for hospitals and clinics, including appointment booking, doctor availability, lab report status, billing support, health packages, insurance queries, emergency routing, and patient follow-ups with Crescora FLOW.",
+  );
+  assert.match(html, /Best AI chatbot workflows for hospitals and clinics/);
+  assert.match(html, /Why hospital chatbot workflows matter/);
+  assert.match(html, /Best chatbot workflows for hospitals and clinics/);
+  assert.match(html, /How Crescora Flow connects the full patient journey/);
+  assert.match(html, /Built for healthcare workflows that need control/);
+  assert.match(html, /Hospital workflows that should not stay manual/);
+  assert.match(html, /What a strong hospital bot should handle/);
+  assert.match(html, /Book a Hospital Workflow Demo/);
+  assert.match(html, /Explore Healthcare Automation/);
+  assert.match(html, /Ready to automate your hospital patient workflows\?/);
+  assert.match(html, /Book a Hospital Demo/);
+  assert.match(html, /Discuss My Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("missed appointments ai blog post renders public healthcare conversion content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-ai-can-reduce-missed-appointments" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-ai-can-reduce-missed-appointments" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "How AI Can Reduce Missed Appointments for Hospitals and Clinics | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Learn how AI can reduce missed appointments for hospitals and clinics using automated confirmations, reminders, rescheduling, payment nudges, and staff escalation with Crescora FLOW.",
+  );
+  assert.match(html, /How AI can reduce missed appointments for hospitals and clinics/);
+  assert.match(html, /Why hospitals miss appointments/);
+  assert.match(html, /How AI reduces missed appointments/);
+  assert.match(html, /How Crescora Flow connects the appointment journey/);
+  assert.match(html, /Appointment automation with human control/);
+  assert.match(html, /Book a Healthcare Demo/);
+  assert.match(html, /Explore Appointment Workflow/);
+  assert.match(html, /Ready to reduce missed appointments in your hospital or clinic\?/);
+  assert.match(html, /Discuss My Appointment Flow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("website and whatsapp lead capture blog post renders public lead workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-collect-leads-automatically-from-website-and-whatsapp" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-collect-leads-automatically-from-website-and-whatsapp" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "How to Collect Leads Automatically From Website and WhatsApp | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Learn how to collect leads automatically from website and WhatsApp with Crescora FLOW. Capture enquiries, qualify intent, store lead records, alert your team, and automate follow-ups before leads go cold.",
+  );
+  assert.match(html, /Turn website visitors and WhatsApp enquiries into qualified leads automatically/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why businesses lose website and WhatsApp leads/);
+  assert.match(html, /How automatic lead capture works/);
+  assert.match(html, /Website and WhatsApp lead workflow example/);
+  assert.match(html, /How Crescora Flow connects website and WhatsApp lead capture/);
+  assert.match(html, /Lead automation with control, not random bot replies/);
+  assert.match(html, /Explore More Lead Automation Resources/);
+  assert.match(html, /Book a Lead Automation Demo/);
+  assert.match(html, /Explore Lead Capture Workflow/);
+  assert.match(html, /Ready to capture more leads automatically\?/);
+  assert.match(html, /Discuss My Lead Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("business support faq automation blog post renders public support faq content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-automate-faqs-for-business-support" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-automate-faqs-for-business-support" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "How to Automate FAQs for Business Support | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how to automate FAQs for business support with Crescora FLOW. Answer repeated customer questions, collect missing details, route unresolved issues, and escalate complex cases with human control.",
+  );
+  assert.match(html, /Reduce support workload by automating repeated customer questions/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why businesses need FAQ automation/);
+  assert.match(html, /How FAQ automation works in business support/);
+  assert.match(html, /Sample FAQ support workflow/);
+  assert.match(html, /How Crescora Flow connects FAQ automation to the full support journey/);
+  assert.match(html, /FAQ automation with control, not random AI replies/);
+  assert.match(html, /Explore More Support Automation Resources/);
+  assert.match(html, /Book Support Automation Demo/);
+  assert.match(html, /Explore FAQ Workflow/);
+  assert.match(html, /Ready to reduce repetitive support questions\?/);
+  assert.match(html, /Discuss My FAQ Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("human handoff blog post renders public escalation content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-use-human-handoff-in-chatbot-automation" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-use-human-handoff-in-chatbot-automation" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "How to Use Human Handoff in Chatbot Automation | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how to use human handoff in chatbot automation with Crescora FLOW. Detect escalation triggers, collect customer context, route cases to the right team, and keep urgent or sensitive conversations under human control.",
+  );
+  assert.match(html, /Automate routine chats, escalate critical conversations to humans/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why human handoff matters in chatbot automation/);
+  assert.match(html, /How human handoff works in a chatbot workflow/);
+  assert.match(html, /Sample human handoff workflow/);
+  assert.match(html, /How Crescora Flow connects human handoff to the full customer journey/);
+  assert.match(html, /Human handoff with control, not random escalation/);
+  assert.match(html, /Explore More Support Automation Resources/);
+  assert.match(html, /Book Handoff Demo/);
+  assert.match(html, /Explore Handoff Workflow/);
+  assert.match(html, /Ready to add human handoff to your chatbot workflow\?/);
+  assert.match(html, /Discuss My Support Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("whatsapp business api blog post renders public workflow content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "whatsapp-business-api-automation-explained" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "whatsapp-business-api-automation-explained" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "WhatsApp Business API Automation Explained | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how WhatsApp Business API automation helps businesses capture enquiries, qualify leads, send reminders, automate support, connect payments or bookings, and route complex cases with Crescora FLOW.",
+  );
+  assert.match(html, /Turn WhatsApp enquiries into automated leads, bookings, payments, and support workflows/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why WhatsApp Business API automation matters/);
+  assert.match(html, /What WhatsApp API automation can do for businesses/);
+  assert.match(html, /Sample WhatsApp lead and support workflow/);
+  assert.match(html, /How Crescora Flow connects WhatsApp automation to the full customer journey/);
+  assert.match(html, /WhatsApp automation with control, not random replies/);
+  assert.match(html, /Explore More WhatsApp Automation Resources/);
+  assert.match(html, /Book WhatsApp Automation Demo/);
+  assert.match(html, /Explore WhatsApp Workflow/);
+  assert.match(html, /Ready to automate your WhatsApp customer workflows\?/);
+  assert.match(html, /Discuss My WhatsApp Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("ai chatbot pricing blog post renders public pricing content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "ai-chatbot-pricing-in-india-what-businesses-should-know" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "ai-chatbot-pricing-in-india-what-businesses-should-know" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "AI Chatbot Pricing in India: What Businesses Should Know | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn what affects AI chatbot pricing in India, what businesses should compare, and how Crescora FLOW helps teams control automation cost through workflows, guardrails, analytics, and human handoff.",
+  );
+  assert.match(html, /Understand AI chatbot pricing before you pay for the wrong automation tool/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why AI chatbot pricing in India varies so much/);
+  assert.match(html, /What businesses should compare before buying an AI chatbot/);
+  assert.match(html, /Common pricing mistakes businesses make/);
+  assert.match(html, /How Crescora Flow connects pricing to real business value/);
+  assert.match(html, /Pricing should be transparent, predictable, and outcome-based/);
+  assert.match(html, /Explore More Pricing and Automation Resources/);
+  assert.match(html, /Book Pricing Consultation/);
+  assert.match(html, /Discuss My Workflow Cost/);
+  assert.match(html, /Ready to estimate the right AI chatbot cost for your business\?/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("customer follow-up blog post renders public follow-up content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-automate-customer-follow-ups-after-enquiry" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-automate-customer-follow-ups-after-enquiry" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "How to Automate Customer Follow-Ups After Enquiry | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how to automate customer follow-ups after enquiry with Crescora FLOW. Capture lead details, schedule reminders, notify teams, recover silent customers, and track every enquiry from first message to conversion.",
+  );
+  assert.match(html, /Stop losing interested customers after the first enquiry/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why customer follow-up automation matters/);
+  assert.match(html, /How automated follow-ups work after an enquiry/);
+  assert.match(html, /Example customer follow-up workflow/);
+  assert.match(html, /How Crescora Flow connects the complete follow-up journey/);
+  assert.match(html, /Follow-up automation with control, not message spam/);
+  assert.match(html, /Explore More Lead and Follow-Up Automation Resources/);
+  assert.match(html, /Book Follow-Up Demo/);
+  assert.match(html, /Explore Follow-Up Workflow/);
+  assert.match(html, /Ready to automate customer follow-ups after every enquiry\?/);
+  assert.match(html, /Discuss My Follow-Up Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("service workflow examples blog post renders public service-business content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "best-workflow-automation-examples-for-service-businesses" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "best-workflow-automation-examples-for-service-businesses" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "Best Workflow Automation Examples for Service Businesses | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Explore practical workflow automation examples for service businesses with Crescora FLOW, including lead capture, appointment booking, follow-ups, payments, support routing, document collection, renewals, and human handoff.",
+  );
+  assert.match(html, /Practical workflow automation examples that help service businesses save time and win more customers/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why workflow automation matters for service businesses/);
+  assert.match(html, /Best workflow automation examples for service businesses/);
+  assert.match(html, /Example service business workflow map/);
+  assert.match(html, /How Crescora Flow connects these workflows/);
+  assert.match(html, /Workflow automation with control, not random AI actions/);
+  assert.match(html, /Explore More Workflow Automation Resources/);
+  assert.match(html, /Book Workflow Demo/);
+  assert.match(html, /Explore Automation Examples/);
+  assert.match(html, /Ready to automate your service business workflows\?/);
+  assert.match(html, /Discuss My Business Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("hospital demo chatbot blog post renders public healthcare demo content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "how-to-build-a-hospital-demo-chatbot" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "how-to-build-a-hospital-demo-chatbot" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "How to Build a Hospital Demo Chatbot | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn how to build a hospital demo chatbot with Crescora FLOW. Show appointment booking, doctor availability, lab report status, billing help, insurance support, reminders, and safe human handoff in one controlled healthcare workflow.",
+  );
+  assert.match(html, /Build a hospital demo chatbot that automates appointments, reports, billing, and patient support/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why a hospital demo chatbot matters/);
+  assert.match(html, /What to include in a hospital demo chatbot/);
+  assert.match(html, /Example hospital demo flow map/);
+  assert.match(html, /How Crescora Flow connects the hospital demo journey/);
+  assert.match(html, /Hospital demo automation with safety and control/);
+  assert.match(html, /Explore More Healthcare Automation Resources/);
+  assert.match(html, /Book Hospital Demo/);
+  assert.match(html, /Explore Hospital Workflow/);
+  assert.match(html, /Ready to build a hospital demo chatbot that wins trust\?/);
+  assert.match(html, /Discuss My Hospital Workflow/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("small business conversation automation blog post renders public buyer-facing content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "why-small-businesses-need-conversation-automation" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "why-small-businesses-need-conversation-automation" }),
+    }),
+  );
+
+  assert.equal(metadata.title, "Why Small Businesses Need Conversation Automation | Crescora FLOW");
+  assert.equal(
+    metadata.description,
+    "Learn why small businesses need conversation automation to capture enquiries, answer faster, automate follow-ups, route serious leads, and stop losing customers across calls, WhatsApp, website chat, and social channels.",
+  );
+  assert.match(html, /Stop losing customers to missed messages, slow replies, and forgotten follow-ups/);
+  assert.match(html, /What you&#x27;ll learn|What you'll learn/);
+  assert.match(html, /Why conversation automation matters for small businesses/);
+  assert.match(html, /What conversation automation can do for small businesses/);
+  assert.match(html, /Example small business conversation workflow/);
+  assert.match(html, /How Crescora Flow connects conversations to business outcomes/);
+  assert.match(html, /Conversation automation with control, not random bot replies/);
+  assert.match(html, /Explore More Small Business Automation Resources/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /Discuss My Workflow/);
+  assert.match(html, /Ready to automate customer conversations for your business\?/);
+  assert.match(html, /shared-blog-featured\.png/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Use this article to improve|The page should/i,
+  );
+});
+
+test("whatsapp chatbot vs website chatbot blog post renders public comparison content and exact metadata", async () => {
+  const metadata = await generateBlogPostMetadata({
+    params: Promise.resolve({ slug: "whatsapp-chatbot-vs-website-chatbot-which-is-better" }),
+  });
+  const html = renderToStaticMarkup(
+    await BlogPostPage({
+      params: Promise.resolve({ slug: "whatsapp-chatbot-vs-website-chatbot-which-is-better" }),
+    }),
+  );
+
+  assert.equal(
+    metadata.title,
+    "WhatsApp Chatbot vs Website Chatbot: Which Is Better for Your Business? | Crescora FLOW",
+  );
+  assert.equal(
+    metadata.description,
+    "Compare WhatsApp chatbot vs website chatbot for lead capture, appointment booking, reminders, support, payments, and follow-ups. Learn when to use website chat, WhatsApp automation, or both with Crescora FLOW.",
+  );
+  assert.match(html, /WhatsApp chatbot vs website chatbot: which is better for your business\?/);
+  assert.match(html, /What is a website chatbot\?/);
+  assert.match(html, /What is a WhatsApp chatbot\?/);
+  assert.match(html, /Comparison table/);
+  assert.match(html, /Area/);
+  assert.match(html, /Website Chatbot/);
+  assert.match(html, /WhatsApp Chatbot/);
+  assert.match(html, /Best stage/);
+  assert.match(html, /First website visit/);
+  assert.match(html, /Follow-up and ongoing conversation/);
+  assert.match(html, /When a website chatbot is better/);
+  assert.match(html, /When a WhatsApp chatbot is better/);
+  assert.match(html, /Why many businesses need both/);
+  assert.match(html, /How Crescora FLOW connects both channels/);
+  assert.match(html, /Book Chatbot Strategy Demo/);
+  assert.match(html, /Compare My Workflow/);
+  assert.match(html, /"@type":"FAQPage"/);
+  assert.doesNotMatch(
+    html,
+    /Keyword target|SEO notes|Representative image|Each post should point back to the money pages|Why this keyword matters|What the post should explain|How to connect it to the site|Open page/i,
+  );
 });
 
 test("payment workflow metadata publishes the production title and canonical", async () => {

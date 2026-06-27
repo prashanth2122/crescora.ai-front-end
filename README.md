@@ -89,6 +89,16 @@ This keeps route components thin and makes future localization work straightforw
 - the workflows hub now uses launch-ready blueprint positioning, a customer-journey proof strip, richer workflow template cards, a why-templates-matter section, and a stronger bottom CTA
 - the templates hub now uses ready-to-use template positioning, a launch-coverage strip, filter chips, richer request-template cards, and a stronger bottom CTA
 - the WhatsApp automation, clinic appointment, hospital appointment booking, real estate lead follow-up, customer support FAQ, payment reminder flow, lab report notification flow, billing and collections, conversation observability dashboard, document collection, customer support, knowledge assistant, and service business template detail pages now use buyer-facing launch copy, workflow preview visuals, setup guidance, before/after proof, use-case cards, metrics, FAQ content, and stronger template-specific CTAs instead of the internal SEO-plan placeholders
+- blog detail pages rendered through `src/components/site/seo-blog-page.tsx` should stay public-facing: article TOCs, workflow visuals, FAQ schema, and conversion CTAs are allowed, but internal SEO labels, editorial instructions, and placeholder CTA text should not ship
+- blog detail overrides in `src/lib/seo-marketing-data.ts` can now supply page-specific hero headlines plus custom TOC and related-links headings without forking the shared blog layout, so blog rewrites keep the current styling while replacing generic labels with buyer-facing copy
+- the business-support FAQ blog detail page now uses buyer-facing support automation copy, FAQ escalation guidance, related support resources, and support-specific CTAs instead of the internal planning template
+- the human-handoff blog detail page now uses buyer-facing escalation copy, queue-routing guidance, agent-context coverage, and handoff-specific CTAs instead of the internal planning template
+- the WhatsApp Business API blog detail page now uses buyer-facing WhatsApp workflow copy, reminder and routing coverage, control-oriented trust messaging, and WhatsApp-specific CTAs instead of the internal planning template
+- the AI chatbot pricing blog detail page now uses buyer-facing cost-comparison copy, ROI framing, pricing-transparency guidance, and pricing-specific CTAs instead of the internal planning template
+- the customer follow-up blog detail page now uses buyer-facing lead-recovery copy, reminder and assignment guidance, re-engagement coverage, and follow-up-specific CTAs instead of the internal planning template
+- the service-business workflow examples blog detail page now uses buyer-facing workflow examples, service-operations use cases, routing and handoff coverage, and workflow-specific CTAs instead of the internal planning template
+- the hospital demo chatbot blog detail page now uses buyer-facing hospital workflow copy, patient-journey demo coverage, safety-aware escalation messaging, and healthcare-specific CTAs instead of the internal planning template
+- blog detail pages now use the shared `public/blog/shared-blog-featured.png` visual for the in-article featured image while keeping per-route Open Graph metadata images on `/blog/[slug]/opengraph-image`
 - the pricing page now uses automation-first wording, India/global billing-region pricing, richer best-for/includes tier detail, pricing-scope education, and an expanded FAQ plus CTA path
 - the solutions hub keeps the query-led structure but now uses equal-height cards and arrow-style solution links for clearer scanning
 - the lead form copy, country selector, country-aware phone validation, validation copy, and optional channel qualification field are centralized in `src/components/site/lead-form.tsx` and `src/lib/site-content.ts`
@@ -169,6 +179,7 @@ The current commercial setup uses:
 - `/solutions` and `src/app/solutions/[slug]/page.tsx` for the primary revenue pages
 - `src/components/site/revenue-solution-page.tsx` for the shared product-page layout
 - page-specific hero copy, section headings, metadata overrides, and final CTA variants are configured in `src/lib/revenue-pages.ts` so individual solution pages can be upgraded without forking the layout
+- repaired blog detail overrides in `src/lib/seo-marketing-data.ts` now replace internal SEO planning template copy with buyer-facing public content for high-priority slugs, with regression coverage in `src/lib/seo.test.ts`
 - visible implementation details, examples, proof points, outcomes, related links, and FAQ accordions on each primary solution page
 - product-surface panels embedded in the primary solution pages to show the operator, builder, and dashboard views referenced in the copy
 

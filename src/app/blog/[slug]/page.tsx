@@ -22,16 +22,35 @@ export async function generateMetadata({ params }: { params: Params }) {
     return {};
   }
 
+  const metadata = createArticleMetadata({
+    title: post.metadataTitle ?? post.title,
+    description: post.description,
+    path: `/blog/${post.slug}`,
+    publishedTime: post.publishedAt,
+    modifiedTime: post.modifiedAt,
+    authors: [post.author],
+    imagePath: buildRouteSocialImagePath(`/blog/${post.slug}`),
+  });
+
+  if (!post.metadataTitle) {
+    return metadata;
+  }
+
   return {
-    ...createArticleMetadata({
-      title: post.title,
-      description: post.description,
-      path: `/blog/${post.slug}`,
-      publishedTime: post.publishedAt,
-      modifiedTime: post.modifiedAt,
-      authors: [post.author],
-      imagePath: buildRouteSocialImagePath(`/blog/${post.slug}`),
-    }),
+    ...metadata,
+    title: post.metadataTitle,
+    openGraph: metadata.openGraph
+      ? {
+          ...metadata.openGraph,
+          title: post.metadataTitle,
+        }
+      : undefined,
+    twitter: metadata.twitter
+      ? {
+          ...metadata.twitter,
+          title: post.metadataTitle,
+        }
+      : undefined,
   };
 }
 
