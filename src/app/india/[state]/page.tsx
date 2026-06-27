@@ -213,11 +213,12 @@ export default async function StatePage({ params }: StatePageProps) {
   }
 
   const availableWorkflowSlugs = getStateWorkflowSlugs(seed.slug);
+  const availableWorkflowSlugSet = new Set<string>(availableWorkflowSlugs);
   const workflowCards = buildWorkflowCards(seed, availableWorkflowSlugs);
   const faqItems = buildFaqItems(seed);
   const faqSchema = buildFaqPageSchema(faqItems);
   const primaryIndustrySlug = getStatePrimaryIndustrySlug(seed.slug);
-  const relatedWorkflow = workflows.find((workflow) => availableWorkflowSlugs.includes(workflow.slug));
+  const relatedWorkflow = workflows.find((workflow) => availableWorkflowSlugSet.has(workflow.slug));
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", href: "https://www.crescora.ai" },
     { name: "India", href: "https://www.crescora.ai/india" },

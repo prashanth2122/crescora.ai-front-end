@@ -39,7 +39,7 @@ function buildWorkflowCards(stateSlug: string) {
       return {
         slug: workflowSlug,
         title: config.label,
-        description: config.workflowLine,
+        description: config.businessOutcomeLine,
       };
     })
     .slice(0, 4);
