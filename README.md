@@ -118,7 +118,7 @@ Core implementation points:
 
 - `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, FAQ/page/item-list schema, and `https://www.crescora.ai` URL generation
 - `src/lib/seo-social-image.tsx` is the shared route-image renderer used by Open Graph image files for share previews on key hub and detail routes
-- `src/app/favicon.ico`, `src/app/icon.png`, and `src/app/apple-icon.png` now use the Crescora brand mark for browser-tab, search-result, and device icon metadata instead of relying only on the hashed app-icon routes
+- `src/app/favicon.ico`, `src/app/icon.png`, and `src/app/apple-icon.png` are generated from `public/logo only no bg.png` so the browser-tab, search-result, and device icon metadata all use the same no-background Crescora mark
 - public route files should use `createPageMetadata`, `createExactPageMetadata`, or `createLocalizedMetadata` instead of exporting partial `{ title, description }` objects because Next.js metadata merging is shallow and can otherwise inherit the root homepage canonical/Open Graph values
 - `next.config.ts` redirects requests for `crescora.ai` to `https://www.crescora.ai/:path*`
 - `src/app/robots.ts` and `src/app/sitemap.ts` only publish the production host
