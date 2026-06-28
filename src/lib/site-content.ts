@@ -743,9 +743,9 @@ export const siteContent = {
     },
     details: {
       eyebrow: "Direct contact",
-      title: "Sales, support, and office details.",
+      title: "Sales, support, contact, and office details.",
       description:
-        "Use these contact points for new demos, technical help, executive correspondence, or office visits.",
+        "Use these contact points for new demos, technical help, phone contact, executive correspondence, or office visits.",
       items: [
         {
           label: "Sales",

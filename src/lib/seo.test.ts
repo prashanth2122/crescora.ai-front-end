@@ -1,3 +1,4 @@
+import { existsSync, statSync } from "node:fs";
 import assert from "node:assert/strict";
 import test from "node:test";
 
@@ -54,6 +55,13 @@ test("sitemap publishes each indexable route once on the production host", () =>
   assert.ok(urls.includes(`${siteOrigin}/hi`));
   assert.ok(urls.includes(`${siteOrigin}/india/maharashtra/workflows/whatsapp-automation`));
   assert.ok(urls.includes(`${siteOrigin}/india/maharashtra/cities/mumbai`));
+});
+
+test("root app favicon exists for browser and search icon crawlers", () => {
+  const faviconPath = `${process.cwd()}/src/app/favicon.ico`;
+
+  assert.equal(existsSync(faviconPath), true);
+  assert.ok(statSync(faviconPath).size > 0);
 });
 
 test("json-ld payloads are sanitized before rendering", () => {

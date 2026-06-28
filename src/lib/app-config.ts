@@ -7,8 +7,15 @@ export const customerIntakeApiConfig = {
 const DEFAULT_BOOK_A_CALL_PATH = "/contact";
 const DEFAULT_WHATSAPP_PHONE_NUMBER = "+91-9642021224";
 const DEFAULT_SUPPORT_EMAIL = "support@crescora.ai";
+const DEFAULT_CONTACT_PHONE_NUMBER = "+91-9642021224";
 const DEFAULT_WHATSAPP_PREFILL_TEXT =
   "I'm interested in your product";
+
+export type PublicDirectContactItem = {
+  label: "Contact";
+  value: string;
+  href: string;
+};
 
 function normalizeConfiguredUrl(value: string | undefined, fallback: string) {
   const normalized = value?.trim();
@@ -61,6 +68,26 @@ export function buildMailtoHref(emailAddress: string | undefined) {
   }
 
   return `mailto:${normalizedEmailAddress}`;
+}
+
+export function getPublicDirectContactItem(
+  env: NodeJS.ProcessEnv = process.env,
+): PublicDirectContactItem {
+  const contactPhoneCandidates = [
+    env.CONTACT_PHONE_NUMBER?.trim(),
+    env.SUPPORT_PHONE_NUMBER?.trim(),
+    env.WHATSAPP_PHONE_NUMBER?.trim(),
+    DEFAULT_CONTACT_PHONE_NUMBER,
+  ];
+  const contactPhoneNumber =
+    contactPhoneCandidates.find((candidate) => buildPhoneHref(candidate) !== null) ??
+    DEFAULT_CONTACT_PHONE_NUMBER;
+
+  return {
+    label: "Contact",
+    value: contactPhoneNumber,
+    href: buildPhoneHref(contactPhoneNumber) ?? "tel:+919642021224",
+  };
 }
 
 export function getPublicContactSurfaceConfig(

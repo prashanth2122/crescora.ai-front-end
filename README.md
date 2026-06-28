@@ -78,7 +78,7 @@ This keeps route components thin and makes future localization work straightforw
 - the acceptable use policy now renders at `/acceptable-use`
 - the legacy `siteContent.legal.acceptableUse` entry reuses the same acceptable-use policy content so older callers stay in sync
 - page transitions now use CSS-based entry animation so content paints immediately instead of waiting on a hydration timer
-- contact details are centralized in `src/lib/site-content.ts` and shown on the contact page plus the footer for sales, support, CEO correspondence, and office location
+- contact details are shown on the contact page plus the footer for sales, support, CEO correspondence, direct contact, and office location; the direct contact phone is read from `CONTACT_PHONE_NUMBER` in `src/lib/app-config.ts` and falls back to the configured support or WhatsApp number
 - the platform hero, workflow visual, capability cards, and start-here CTA are also centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts`
 - the industries hub now uses a stronger workflow-first hero, a platform proof strip, outcome-focused industry cards, a broader workflow-engine section, and a tighter public CTA
 - `/industries/hospitals` now uses dedicated hospital-facing copy, a patient-workflow hero visual, safety/handover guidance, workflow-specific sections, and a stronger hospital-demo CTA instead of the generic SEO-template page
@@ -105,8 +105,8 @@ This keeps route components thin and makes future localization work straightforw
 - the pricing page now uses automation-first wording, India/global billing-region pricing, richer best-for/includes tier detail, pricing-scope education, and an expanded FAQ plus CTA path
 - the solutions hub keeps the query-led structure but now uses equal-height cards and arrow-style solution links for clearer scanning
 - the lead form copy, country selector, country-aware phone validation, validation copy, and optional channel qualification field are centralized in `src/components/site/lead-form.tsx` and `src/lib/site-content.ts`
-- WhatsApp and support contact surfaces are centralized through `src/lib/app-config.ts`, `src/components/site/site-header.tsx`, and `src/components/site/whatsapp-floating-button.tsx`; if `WHATSAPP_PHONE_NUMBER` or `SUPPORT_EMAIL` is unset, the site falls back to the defaults in `src/lib/app-config.ts`, while the floating support menu can still expose the remaining actions when those are configured
-- `.env.example` now lists the public-site contact and analytics variables expected for local development and deployment
+- WhatsApp, direct contact phone, and support contact surfaces are centralized through `src/lib/app-config.ts`, `src/components/site/site-header.tsx`, `src/components/site/site-footer.tsx`, and `src/components/site/whatsapp-floating-button.tsx`; if the env vars are unset, the site falls back to the defaults in `src/lib/app-config.ts`
+- `.env.example` now lists the public-site contact, direct contact phone, and analytics variables expected for local development and deployment
 - the public lead form now posts to the local `/api/lead` route, which forwards submissions to the backend customer-intake API using a short-lived token; the shared backend origin lives in `src/lib/app-config.ts` and can still be overridden with `CUSTOMER_INTAKE_API_BASE_URL` (default `http://localhost:4000`)
 - footer brand copy and footer navigation labels are centralized in `src/lib/locales/en.ts` and `src/lib/locales/hi.ts` so locale-specific trust text stays aligned
 
@@ -118,7 +118,7 @@ Core implementation points:
 
 - `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, FAQ/page/item-list schema, and `https://www.crescora.ai` URL generation
 - `src/lib/seo-social-image.tsx` is the shared route-image renderer used by Open Graph image files for share previews on key hub and detail routes
-- `src/app/icon.png` and `src/app/apple-icon.png` now use the Crescora brand mark for browser-tab and device icon metadata instead of the default scaffolded favicon
+- `src/app/favicon.ico`, `src/app/icon.png`, and `src/app/apple-icon.png` now use the Crescora brand mark for browser-tab, search-result, and device icon metadata instead of relying only on the hashed app-icon routes
 - public route files should use `createPageMetadata`, `createExactPageMetadata`, or `createLocalizedMetadata` instead of exporting partial `{ title, description }` objects because Next.js metadata merging is shallow and can otherwise inherit the root homepage canonical/Open Graph values
 - `next.config.ts` redirects requests for `crescora.ai` to `https://www.crescora.ai/:path*`
 - `src/app/robots.ts` and `src/app/sitemap.ts` only publish the production host

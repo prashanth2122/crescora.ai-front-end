@@ -4,14 +4,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Separator } from "@/components/ui/separator";
+import type { PublicDirectContactItem } from "@/lib/app-config";
 import { siteContent } from "@/lib/site-content";
 import { site } from "@/lib/site-data";
 import { buildLocalizedHref, getLocaleCopy, getLocaleFromPath } from "@/lib/locales";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  directContactItem: PublicDirectContactItem;
+};
+
+export function SiteFooter({ directContactItem }: SiteFooterProps) {
   const pathname = usePathname();
   const locale = getLocaleFromPath(pathname ?? "/");
   const copy = getLocaleCopy(locale);
+  const addressItem = siteContent.contact.details.items.find((item) => item.label === "Address");
+  const contactItems = siteContent.contact.details.items.filter((item) => item.label !== "Address");
+  const footerContactItems = [...contactItems, directContactItem, ...(addressItem ? [addressItem] : [])];
 
   return (
     <footer className="border-t border-zinc-200 bg-white">
@@ -22,11 +30,11 @@ export function SiteFooter() {
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{copy.footer.title}</h2>
             <p className="mt-4 max-w-lg text-base leading-8 text-zinc-600">{copy.footer.intro}</p>
             <div className="mt-8 grid gap-3 rounded-3xl border border-zinc-200 bg-zinc-50/80 p-5 text-sm text-zinc-600 sm:grid-cols-2">
-              {siteContent.contact.details.items.map((item) => {
+              {footerContactItems.map((item) => {
                 const isAddress = item.label === "Address";
 
                 return (
-                  <div key={item.label} className="space-y-1">
+                  <div key={item.label} className={`space-y-1 ${isAddress ? "sm:col-span-2" : ""}`}>
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">{item.label}</p>
                     {isAddress ? (
                       <p className="leading-7 text-zinc-700">{item.value}</p>

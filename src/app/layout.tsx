@@ -7,13 +7,14 @@ import { AnalyticsWebVitals } from "@/components/analytics/web-vitals";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { WhatsAppFloatingButton } from "@/components/site/whatsapp-floating-button";
-import { getPublicContactSurfaceConfig } from "@/lib/app-config";
+import { getPublicContactSurfaceConfig, getPublicDirectContactItem } from "@/lib/app-config";
 import { createPageMetadata, siteMetadataBase } from "@/lib/seo";
 import { site } from "@/lib/site-data";
 import { getLocaleCopy } from "@/lib/locales";
 
 const copy = getLocaleCopy("en");
 const publicContactSurfaceConfig = getPublicContactSurfaceConfig();
+const publicDirectContactItem = getPublicDirectContactItem();
 
 export const metadata: Metadata = {
   ...createPageMetadata({
@@ -56,7 +57,7 @@ export default function RootLayout({
           supportEmailHref={publicContactSurfaceConfig.supportEmailHref}
           whatsappHref={publicContactSurfaceConfig.whatsappHref}
         />
-        <SiteFooter />
+        <SiteFooter directContactItem={publicDirectContactItem} />
       </body>
       <GoogleTag />
     </html>

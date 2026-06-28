@@ -6,6 +6,7 @@ import {
   buildPhoneHref,
   buildWhatsAppHref,
   getPublicContactSurfaceConfig,
+  getPublicDirectContactItem,
   normalizeEmailAddress,
   normalizeDialablePhoneNumber,
 } from "@/lib/app-config";
@@ -68,6 +69,41 @@ test("public contact surface config keeps a safe fallback when env is incomplete
       whatsappHref:
         "https://wa.me/919876543210?text=I'm%20interested%20in%20your%20product",
       whatsappPrefillText: "I'm interested in your product",
+    },
+  );
+});
+
+test("public direct contact item prefers the explicit contact phone and falls back safely", () => {
+  assert.deepEqual(
+    getPublicDirectContactItem({}),
+    {
+      label: "Contact",
+      value: "+91-9642021224",
+      href: "tel:+919642021224",
+    },
+  );
+
+  assert.deepEqual(
+    getPublicDirectContactItem({
+      CONTACT_PHONE_NUMBER: "+1 415 555 0199",
+      SUPPORT_PHONE_NUMBER: "+1 415 555 0123",
+      WHATSAPP_PHONE_NUMBER: "+91 98765 43210",
+    }),
+    {
+      label: "Contact",
+      value: "+1 415 555 0199",
+      href: "tel:+14155550199",
+    },
+  );
+
+  assert.deepEqual(
+    getPublicDirectContactItem({
+      SUPPORT_PHONE_NUMBER: "+1 415 555 0123",
+    }),
+    {
+      label: "Contact",
+      value: "+1 415 555 0123",
+      href: "tel:+14155550123",
     },
   );
 });
