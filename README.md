@@ -154,7 +154,7 @@ The current foundation includes:
 - localized hub/page body copy from page-specific language files
 - localized entry routes under `/hi`
 - locale-aware metadata helpers for canonical and `hreflang` output without request-time middleware
-- a cropped header logo asset in the header via `public/header-logo.png`
+- the shared header logo now uses `public/crescora_navbar_logo_white_header_2x.png` with the `.navbar-logo` sizing rule from `src/app/globals.css`
 
 Current Hindi entry routes:
 

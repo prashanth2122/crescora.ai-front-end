@@ -86,13 +86,13 @@ export function SiteHeader() {
             className="flex items-center"
           >
             <Image
-              src="/header-logo.png"
+              src="/crescora_navbar_logo_white_header_2x.png"
               alt={site.name}
-              width={1774}
-              height={387}
+              width={498}
+              height={96}
               priority
               sizes="(max-width: 639px) 120px, (max-width: 1023px) 145px, 160px"
-              className="h-8 w-auto object-contain sm:h-9 lg:h-10"
+              className="navbar-logo"
             />
           </Link>
 
@@ -152,12 +152,12 @@ export function SiteHeader() {
           <div className="ml-auto flex h-full w-[90vw] max-w-sm flex-col border-l border-zinc-200 bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-zinc-200 px-4 py-5">
               <Image
-                src="/header-logo.png"
+                src="/crescora_navbar_logo_white_header_2x.png"
                 alt={site.name}
-                width={1774}
-                height={387}
+                width={498}
+                height={96}
                 sizes="120px"
-                className="h-8 w-auto object-contain sm:h-9"
+                className="navbar-logo"
               />
               <Button
                 type="button"

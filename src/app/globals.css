@@ -177,6 +177,11 @@
 }
 
 @layer utilities {
+  .navbar-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+  }
   .animate-page-enter {
     animation: page-enter 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
