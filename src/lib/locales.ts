@@ -55,6 +55,13 @@ export type LocaleCopy = {
     openMenuLabel: string;
     closeMenuLabel: string;
     closeOverlayLabel: string;
+    bookCallLabel: string;
+    whatsappLabel: string;
+    supportWidgetLabel: string;
+    emailLabel: string;
+    callLabel: string;
+    openSupportWidgetLabel: string;
+    closeSupportWidgetLabel: string;
   };
   footer: {
     title: string;

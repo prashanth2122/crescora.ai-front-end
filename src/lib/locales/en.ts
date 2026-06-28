@@ -17,6 +17,13 @@ export const enLocaleCopy: LocaleCopy = {
     openMenuLabel: "Open navigation menu",
     closeMenuLabel: "Close navigation menu",
     closeOverlayLabel: "Close menu overlay",
+    bookCallLabel: "Book a Call",
+    whatsappLabel: "Chat on WhatsApp",
+    supportWidgetLabel: "Support",
+    emailLabel: "Email",
+    callLabel: "Call",
+    openSupportWidgetLabel: "Open support menu",
+    closeSupportWidgetLabel: "Close support menu",
   },
   footer: {
     title: `${productName} turns customer conversations into automated business outcomes.`,

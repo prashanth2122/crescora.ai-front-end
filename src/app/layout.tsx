@@ -6,11 +6,14 @@ import { SiteAnalytics } from "@/components/analytics/site-analytics";
 import { AnalyticsWebVitals } from "@/components/analytics/web-vitals";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { WhatsAppFloatingButton } from "@/components/site/whatsapp-floating-button";
+import { getPublicContactSurfaceConfig } from "@/lib/app-config";
 import { createPageMetadata, siteMetadataBase } from "@/lib/seo";
 import { site } from "@/lib/site-data";
 import { getLocaleCopy } from "@/lib/locales";
 
 const copy = getLocaleCopy("en");
+const publicContactSurfaceConfig = getPublicContactSurfaceConfig();
 
 export const metadata: Metadata = {
   ...createPageMetadata({
@@ -47,6 +50,12 @@ export default function RootLayout({
         <AnalyticsWebVitals />
         <SiteHeader />
         <main className="flex-1">{children}</main>
+        <WhatsAppFloatingButton
+          bookCallHref={publicContactSurfaceConfig.bookCallUrl}
+          callHref={publicContactSurfaceConfig.callHref}
+          supportEmailHref={publicContactSurfaceConfig.supportEmailHref}
+          whatsappHref={publicContactSurfaceConfig.whatsappHref}
+        />
         <SiteFooter />
       </body>
       <GoogleTag />

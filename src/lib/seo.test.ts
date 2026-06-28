@@ -1545,7 +1545,7 @@ test("mumbai city page renders generated city-seo content and exact metadata", a
   });
   assert.equal(
     metadata.description,
-    "Crescora FLOW helps businesses in Mumbai, Maharashtra automate missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+    "Crescora FLOW helps businesses in Mumbai, Maharashtra reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Marathi, Hindi, English support for hospitals, clinics, and real estate teams. Local workflow demand includes WhatsApp automation, appointment booking automation, and payment reminder automation.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/maharashtra/cities/mumbai");
   assert.match(html, /AI business automation for teams in Mumbai/);
@@ -1557,6 +1557,101 @@ test("mumbai city page renders generated city-seo content and exact metadata", a
   assert.match(html, /Ready to launch automation for your business in Mumbai\?/);
   assert.match(html, /Pune/);
   assert.match(html, /Marathi/);
+  assert.match(html, /What automation needs to get right in Mumbai/);
+  assert.match(html, /Lead speed matters more than generic chat coverage/);
+  assert.match(html, /Bookings and payments need the same workflow view/);
+  assert.match(html, /City-specific workflow priorities matter/);
+  assert.match(html, /slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility/i);
+  assert.match(html, /whatsapp automation mumbai/i);
+  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /"@type":"FAQPage"/);
+});
+
+test("visakhapatnam city page renders curated city proof and exact metadata", async () => {
+  const metadata = await generateIndiaCityMetadata({
+    params: Promise.resolve({ state: "andhra-pradesh", city: "visakhapatnam" }),
+  });
+  const html = renderToStaticMarkup(
+    await CitySeoPage({
+      params: Promise.resolve({ state: "andhra-pradesh", city: "visakhapatnam" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute: "AI Business Automation in Visakhapatnam, Andhra Pradesh, India | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps businesses in Visakhapatnam, Andhra Pradesh reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Telugu, English, Hindi support for hospitals, education institutes, and real estate teams. Local workflow demand includes Appointment booking automation, document collection automation, and human handoff automation.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/andhra-pradesh/cities/visakhapatnam");
+  assert.match(html, /AI business automation for teams in Visakhapatnam/);
+  assert.match(html, /Why businesses in Visakhapatnam choose FLOW/);
+  assert.match(html, /What automation needs to get right in Visakhapatnam/);
+  assert.match(html, /Booking intake should connect with downstream document work/);
+  assert.match(html, /Regional growth teams need cleaner ownership after the first reply/);
+  assert.match(html, /City-specific workflow priorities matter/);
+  assert.match(html, /Vijayawada/);
+  assert.match(html, /Telugu/);
+  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /"@type":"FAQPage"/);
+});
+
+test("port blair city page renders curated proof and shortened title-state metadata", async () => {
+  const metadata = await generateIndiaCityMetadata({
+    params: Promise.resolve({ state: "andaman-and-nicobar-islands", city: "port-blair" }),
+  });
+  const html = renderToStaticMarkup(
+    await CitySeoPage({
+      params: Promise.resolve({ state: "andaman-and-nicobar-islands", city: "port-blair" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute: "AI Business Automation in Port Blair, Andaman & Nicobar, India | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps businesses in Port Blair, Andaman and Nicobar Islands reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Hindi, English, Bengali, Tamil support for tourism businesses, hotels, and travel operators. Local workflow demand includes Appointment booking automation and customer support automation.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/andaman-and-nicobar-islands/cities/port-blair");
+  assert.match(html, /AI business automation for teams in Port Blair/);
+  assert.match(html, /What automation needs to get right in Port Blair/);
+  assert.match(html, /Booking progression should stay visible from enquiry to confirmation/);
+  assert.match(html, /Support and payment follow-up should stay inside one journey/);
+  assert.match(html, /City-specific workflow priorities matter/);
+  assert.match(html, /Andaman and Nicobar Islands/);
+  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /"@type":"FAQPage"/);
+});
+
+test("agartala city page renders generated city proof for long-tail coverage", async () => {
+  const metadata = await generateIndiaCityMetadata({
+    params: Promise.resolve({ state: "tripura", city: "agartala" }),
+  });
+  const html = renderToStaticMarkup(
+    await CitySeoPage({
+      params: Promise.resolve({ state: "tripura", city: "agartala" }),
+    }),
+  );
+
+  assert.deepEqual(metadata.title, {
+    absolute: "AI Business Automation in Agartala, Tripura, India | Crescora FLOW",
+  });
+  assert.equal(
+    metadata.description,
+    "Crescora FLOW helps businesses in Agartala, Tripura reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Bengali, Kokborok, English, Hindi support for education institutes, clinics, and retail businesses. Local workflow demand includes WhatsApp automation and appointment booking automation.",
+  );
+  assert.equal(metadata.alternates?.canonical, "/india/tripura/cities/agartala");
+  assert.match(html, /AI business automation for teams in Agartala/);
+  assert.match(html, /Local workflow proof/);
+  assert.match(html, /What automation needs to get right in Agartala/);
+  assert.match(html, /Response speed should stay owned from the first enquiry/);
+  assert.match(html, /WhatsApp automation and appointment booking should stay in one operating path/);
+  assert.match(html, /City-specific workflow priorities matter/);
+  assert.match(html, /Bengali/);
+  assert.match(html, /Dharmanagar/);
+  assert.match(html, /Book Growth Workflow Demo/);
   assert.match(html, /"@type":"FAQPage"/);
 });
 

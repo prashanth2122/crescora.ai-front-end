@@ -99,6 +99,11 @@ export function SiteAnalytics() {
       link.dataset.analyticsRole ||
       link.closest<HTMLElement>("[data-analytics-role]")?.dataset.analyticsRole ||
       "link";
+    const contactIntent =
+      link.dataset.contactIntent === "true" || destinationPath === "/contact";
+    const contactChannel =
+      link.dataset.contactChannel ||
+      (destinationPath === "/contact" ? "contact_form" : undefined);
 
     const payload = {
       ...context,
@@ -109,9 +114,10 @@ export function SiteAnalytics() {
       destination_path: destinationPath ?? "external",
       destination_url: href,
       targets_contact_form: destinationPath === "/contact",
+      contact_channel: contactChannel,
     };
 
-    if (destinationPath === "/contact") {
+    if (contactIntent) {
       trackEvent("contact_intent_click", payload);
       return;
     }

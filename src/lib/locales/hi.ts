@@ -17,6 +17,13 @@ export const hiLocaleCopy: LocaleCopy = {
     openMenuLabel: "नेविगेशन मेनू खोलें",
     closeMenuLabel: "नेविगेशन मेनू बंद करें",
     closeOverlayLabel: "मेनू ओवरले बंद करें",
+    bookCallLabel: "कॉल बुक करें",
+    whatsappLabel: "WhatsApp पर चैट करें",
+    supportWidgetLabel: "सपोर्ट",
+    emailLabel: "ईमेल",
+    callLabel: "कॉल",
+    openSupportWidgetLabel: "सपोर्ट मेनू खोलें",
+    closeSupportWidgetLabel: "सपोर्ट मेनू बंद करें",
   },
   footer: {
     title: `${productName} ग्राहक बातचीत को ऑटोमेटेड बिज़नेस नतीजों में बदलता है.`,

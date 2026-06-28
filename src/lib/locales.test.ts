@@ -48,6 +48,13 @@ test("footer copy reflects the cleaned public-facing labels", () => {
     enLocaleCopy.footer.intro,
     "Built for Indian businesses that want practical automation across enquiries, bookings, follow-ups, support, payments, and operations.",
   );
+  assert.equal(enLocaleCopy.ctas.talkToSales.label, "Talk to Sales");
+  assert.equal(enLocaleCopy.ctas.bookProjectDemo.label, "Book Free Demo");
+  assert.equal(enLocaleCopy.header.bookCallLabel, "Book a Call");
+  assert.equal(enLocaleCopy.header.whatsappLabel, "Chat on WhatsApp");
+  assert.equal(enLocaleCopy.header.supportWidgetLabel, "Support");
+  assert.equal(enLocaleCopy.header.emailLabel, "Email");
+  assert.equal(enLocaleCopy.header.callLabel, "Call");
   assert.equal(enLocaleCopy.ctas.requestScopeCall.label, "Discuss My Workflow");
   assert.equal(enLocaleCopy.footerGroups[1].links[2].label, "Education");
   assert.equal(enLocaleCopy.footerGroups[2].links[3].label, "Pilot Program");

@@ -11,12 +11,67 @@ import { buildLocalizedHref, getLocaleCopy, getLocaleFromPath } from "@/lib/loca
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
+function isExternalHref(href: string) {
+  return href.startsWith("http://") || href.startsWith("https://");
+}
+
+type ActionLinkProps = {
+  href: string;
+  label: string;
+  className?: string;
+  analyticsRole?: string;
+  analyticsArea?: string;
+  contactChannel?: string;
+  onClick?: () => void;
+};
+
+function ActionLink({
+  href,
+  label,
+  className,
+  analyticsRole,
+  analyticsArea,
+  contactChannel,
+  onClick,
+}: ActionLinkProps) {
+  const sharedProps = {
+    className,
+    "data-analytics-role": analyticsRole,
+    "data-analytics-area": analyticsArea,
+    "data-contact-intent": "true",
+    "data-contact-channel": contactChannel,
+    onClick,
+  } as const;
+
+  if (isExternalHref(href)) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" {...sharedProps}>
+        {label}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} {...sharedProps}>
+      {label}
+    </Link>
+  );
+}
+
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const locale = getLocaleFromPath(pathname ?? "/");
   const copy = getLocaleCopy(locale);
   const desktopNavItems = copy.navigation.slice(0, 5);
+  const localizedTalkToSalesHref = buildLocalizedHref(
+    copy.ctas.talkToSales.href,
+    locale,
+  );
+  const localizedBookDemoHref = buildLocalizedHref(
+    copy.ctas.bookProjectDemo.href,
+    locale,
+  );
 
   return (
     <>
@@ -58,21 +113,22 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-4 xl:flex">
-              <Link
-                href={buildLocalizedHref(copy.ctas.talkToSales.href, locale)}
-                data-analytics-role="cta"
+              <ActionLink
+                href={localizedTalkToSalesHref}
+                label={copy.ctas.talkToSales.label}
+                analyticsRole="cta"
+                analyticsArea="site_header"
+                contactChannel="sales"
                 className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950"
-              >
-                {copy.ctas.talkToSales.label}
-              </Link>
-              <Button asChild className="bg-zinc-950 text-white hover:bg-zinc-800">
-                <Link
-                  href={buildLocalizedHref(copy.ctas.bookProjectDemo.href, locale)}
-                  data-analytics-role="cta"
-                >
-                  {copy.ctas.bookProjectDemo.label}
-                </Link>
-              </Button>
+              />
+              <ActionLink
+                href={localizedBookDemoHref}
+                label={copy.ctas.bookProjectDemo.label}
+                analyticsRole="cta"
+                analyticsArea="site_header"
+                contactChannel="demo"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-zinc-950 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800"
+              />
             </div>
             <div className="lg:hidden">
               <Button
@@ -132,23 +188,24 @@ export function SiteHeader() {
               </nav>
 
               <div className="mt-5 grid gap-3">
-                <Link
-                  href={buildLocalizedHref(copy.ctas.talkToSales.href, locale)}
-                  data-analytics-role="cta"
+                <ActionLink
+                  href={localizedTalkToSalesHref}
+                  label={copy.ctas.talkToSales.label}
+                  analyticsRole="cta"
+                  analyticsArea="mobile_nav"
+                  contactChannel="sales"
                   onClick={() => setMobileOpen(false)}
                   className="rounded-2xl border border-zinc-200 px-4 py-3 text-center text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-950"
-                >
-                  {copy.ctas.talkToSales.label}
-                </Link>
-                <Button asChild className="justify-center rounded-2xl bg-zinc-950 text-white hover:bg-zinc-800">
-                  <Link
-                    href={buildLocalizedHref(copy.ctas.bookProjectDemo.href, locale)}
-                    data-analytics-role="cta"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {copy.ctas.bookProjectDemo.label}
-                  </Link>
-                </Button>
+                />
+                <ActionLink
+                  href={localizedBookDemoHref}
+                  label={copy.ctas.bookProjectDemo.label}
+                  analyticsRole="cta"
+                  analyticsArea="mobile_nav"
+                  contactChannel="demo"
+                  onClick={() => setMobileOpen(false)}
+                  className="inline-flex h-11 items-center justify-center rounded-2xl bg-zinc-950 px-4 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-zinc-800"
+                />
               </div>
             </div>
           </div>
