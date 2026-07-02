@@ -144,12 +144,13 @@ export function RevenueSolutionPage({ page, breadcrumbs }: RevenueSolutionPagePr
   const faqSection = page.faqSection ?? {
     eyebrow: "FAQ",
     title: "Implementation questions buyers ask before rollout.",
-    description: "The answers stay practical and product-specific instead of relying on search-result markup.",
+    description: "The answers stay practical, product-specific, and focused on how your team would operate the workflow after launch.",
   };
   const relatedSection = page.relatedSection ?? {
     eyebrow: "Related pages",
-    title: "Move buyers to the right next decision.",
-    description: "Primary solution pages should connect to proof, pricing, and decision-stage content instead of duplicating more thin keyword pages.",
+    title: "Related pages",
+    description:
+      "Explore practical pages that help you understand the rollout, pricing, trust controls, and industry-specific use cases before starting your first automation workflow.",
   };
   const finalCta: NonNullable<RevenuePage["finalCta"]> = page.finalCta ?? {
     eyebrow: "Next step",

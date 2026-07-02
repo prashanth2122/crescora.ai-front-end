@@ -1536,12 +1536,16 @@ test("india hub renders legitimate buyer-facing India workflow content", () => {
 
   assert.equal(
     indiaHubMetadata.description,
-    "Crescora AI helps Indian businesses automate enquiries, bookings, reminders, payments, documents, support, and handover across WhatsApp, web, and internal workflows.",
+    "Crescora AI helps Indian businesses automate enquiries, bookings, reminders, payments, documents, support, and human handover across WhatsApp, web, and internal workflows.",
   );
-  assert.match(html, /India workflow automation/);
-  assert.match(html, /Crescora AI is built for Indian teams that need faster response/);
-  assert.match(html, /Start with high-volume markets and repeatable customer journeys/);
+  assert.match(html, /AI automation services in India/);
+  assert.match(html, /AI automation services for Indian businesses/);
+  assert.match(html, /Service areas/);
+  assert.match(html, /Automation support for teams across Indian regions/);
+  assert.match(html, /View automation examples for this region/);
   assert.match(html, /Automate the customer steps that create the most delay/);
+  assert.match(html, /Workflows businesses can start with/);
+  assert.match(html, /How we support regional businesses/);
   assert.match(html, /Use real business context, real service areas, and honest proof/);
   assert.match(html, /Keep every rollout structured, measurable, and controlled/);
   assert.match(html, /Measure business outcomes before expanding into more workflows/);
@@ -1549,7 +1553,7 @@ test("india hub renders legitimate buyer-facing India workflow content", () => {
   assert.match(html, /Healthcare front desk, reminders, and document collection/);
   assert.doesNotMatch(
     html,
-    /India SEO|SEO architecture|national SEO program|keywordTarget|keyword target|report recommends|The report|BOFU|canonical URLs|indexed canonical|index quality|rank movement|Search Console|thin city pages|fake map listings/i,
+    /India SEO|SEO architecture|national SEO program|keywordTarget|keyword target|report recommends|The report|BOFU|canonical URLs|indexed canonical|index quality|rank movement|Search Console|thin city pages|fake map listings|state hubs|Priority workflows|Local trust|Open state hub|high-volume markets|regional rollout planning/i,
   );
 });
 

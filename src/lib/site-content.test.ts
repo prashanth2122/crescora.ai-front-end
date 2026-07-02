@@ -174,6 +174,14 @@ test("public source does not contain banned marketing or internal planning phras
     /Search target/,
     /SEO landing page/,
     /convert the SEO visitor/i,
+    /search-result markup/i,
+    /thin keyword/i,
+    /state hubs/i,
+    /Priority workflows/i,
+    /Local trust/i,
+    /Open state hub/i,
+    /report recommends/i,
+    /template-led pages/i,
     /Discuss My Workflow Cost/,
   ];
   const files = collectSourceFiles(join(process.cwd(), "src")).filter((file) => {

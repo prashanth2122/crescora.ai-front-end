@@ -108,6 +108,6 @@ export const enLocaleCopy: LocaleCopy = {
     openTemplate: "Open template",
     openWorkflowPage: "Open workflow page",
     openIndustryPage: "Open industry page",
-    openStateHub: "Open state hub",
+    openStateHub: "View automation examples for this region",
   },
 };

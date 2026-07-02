@@ -212,9 +212,9 @@ export const hiPageCopy = {
   },
   india: {
     metadata: {
-      title: "Hindi India Regional Hub | Crescora AI",
+      title: "AI Automation Services for Indian Businesses in Hindi | Crescora AI",
       description:
-        "Hindi regional hub for states, workflows, templates, industries, local trust signals, and rollout foundations.",
+        "Hindi page for Indian businesses exploring Crescora AI automation services across enquiries, bookings, reminders, payments, documents, support, and handover.",
     },
     breadcrumb: [
       { name: "होम", href: "https://www.crescora.ai/hi" },
@@ -222,37 +222,37 @@ export const hiPageCopy = {
     ],
     hero: {
       eyebrow: "इंडिया",
-      title: "India regional automation pages का Hindi hub.",
+      title: "Indian businesses के लिए AI automation services.",
       description:
-        "यह page state hubs, workflow hubs, template hubs, local trust signals, और rollout guidance का localized entry point है.",
+        "यह page Indian teams को समझने में मदद करता है कि Crescora AI enquiries, bookings, reminders, payments, documents, support, और handover workflows में कैसे मदद कर सकता है.",
     },
     stateSection: {
-      eyebrow: "States",
-      title: "Priority state hubs के लिए Hindi index.",
+      eyebrow: "Service areas",
+      title: "Indian regions के लिए automation examples.",
       description:
-        "A-tier states अभी English state pages से जुड़े हैं, लेकिन route base तैयार है.",
+        "इन regional examples से teams अपनी city, state, language, channels, और first workflow के हिसाब से rollout सोच सकती हैं.",
     },
     workflowSection: {
       eyebrow: "Workflows",
-      title: "Top workflow pages के लिए Hindi index.",
-      description: "ये pages non-brand search demand और operational outcomes को target करते हैं.",
+      title: "Workflows businesses start कर सकती हैं.",
+      description: "Start with one practical workflow such as enquiries, appointment booking, payment reminders, document collection, support, or human handover.",
     },
     templateSection: {
       eyebrow: "Templates",
-      title: "Template-led pages का Hindi index.",
-      description: "Workflow launch assets के लिए pages तैयार हैं.",
+      title: "Starter templates for practical automation.",
+      description: "Templates prompts, fields, routing, reminders, integrations, और human review के लिए starting structure देते हैं.",
     },
     localSection: {
-      eyebrow: "Local trust",
-      title: "Localized trust signals के लिए checklist.",
+      eyebrow: "Regional business support",
+      title: "Real service area, language, channel, और proof.",
       description:
-        "यह layer real offices, citations, directories, PR, और proof-led regional signals को support करता है.",
+        "Crescora AI regional claims को real service coverage, workflow scope, language needs, और approved proof तक सीमित रखता है.",
     },
     industrySection: {
       eyebrow: "Industries",
-      title: "Industry pages state and workflow architecture को support करती हैं.",
+      title: "Industry examples for teams with repeat customer work.",
       description:
-        "Hospitals, clinics, real estate, support teams, और service businesses पहले release में रहते हैं.",
+        "Hospitals, clinics, real estate, support teams, और service businesses enquiries, bookings, reminders, payments, documents, और escalations से शुरू कर सकते हैं.",
     },
   },
 } as const;

@@ -32,7 +32,7 @@ const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "India", href: "https://www.crescora.ai/india" },
 ]);
 
-export default function IndiaSeoHubPage() {
+export default function IndiaAutomationServicesPage() {
   return (
     <PageShell>
       <SeoJsonLd data={seoOrganizationSchema} />
@@ -61,7 +61,7 @@ export default function IndiaSeoHubPage() {
                     <p className="text-sm font-semibold text-zinc-950">{state.name}</p>
                     <p className="mt-1 text-sm leading-7 text-zinc-600">{state.stateFocus}</p>
                     <Button asChild variant="link" className="mt-2 h-auto p-0 text-zinc-950">
-                      <Link href={`/india/${state.slug}`}>Open state hub</Link>
+                      <Link href={`/india/${state.slug}`}>View automation examples for this region</Link>
                     </Button>
                   </div>
                 ))}
@@ -82,7 +82,7 @@ export default function IndiaSeoHubPage() {
                     <p className="text-sm font-semibold text-zinc-950">{workflow.title}</p>
                     <p className="mt-1 text-sm leading-7 text-zinc-600">{workflow.headline}</p>
                     <Button asChild variant="link" className="mt-2 h-auto p-0 text-zinc-950">
-                      <Link href={`/workflows/${workflow.slug}`}>Open workflow page</Link>
+                      <Link href={`/workflows/${workflow.slug}`}>View workflow example</Link>
                     </Button>
                   </div>
                 ))}
@@ -106,7 +106,7 @@ export default function IndiaSeoHubPage() {
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{template.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{template.headline}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={`/templates/${template.slug}`}>Open template</Link>
+                  <Link href={`/templates/${template.slug}`}>View starter template</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -179,7 +179,7 @@ export default function IndiaSeoHubPage() {
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{industry.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{industry.description}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={`/industries/${industry.slug}`}>Open industry page</Link>
+                  <Link href={`/industries/${industry.slug}`}>View industry example</Link>
                 </Button>
               </CardContent>
             </Card>

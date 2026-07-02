@@ -308,25 +308,25 @@ export type BreadcrumbItem = {
 
 export const indiaSeo = {
   metadata: {
-    title: "Conversational AI Workflow Automation in India | Crescora AI",
+    title: "AI Automation Services for Indian Businesses | Crescora AI",
     description:
-      "Crescora AI helps Indian businesses automate enquiries, bookings, reminders, payments, documents, support, and handover across WhatsApp, web, and internal workflows.",
+      "Crescora AI helps Indian businesses automate enquiries, bookings, reminders, payments, documents, support, and human handover across WhatsApp, web, and internal workflows.",
   },
   hero: {
-    eyebrow: "India workflow automation",
-    title: "Conversational AI workflow automation for teams across India.",
+    eyebrow: "AI automation services in India",
+    title: "AI automation services for Indian businesses.",
     description:
-      "Crescora AI is built for Indian teams that need faster response, cleaner follow-up, local-language customer journeys, and one controlled workflow layer across leads, appointments, payments, documents, and support.",
+      "Crescora AI helps Indian businesses respond faster, follow up consistently, support local-language customer journeys, and run leads, appointments, payments, documents, and support from one controlled workflow layer.",
   },
   sections: {
     statePriority: {
-      eyebrow: "Where teams start",
-      title: "Start with high-volume markets and repeatable customer journeys.",
+      eyebrow: "Service areas",
+      title: "Automation support for teams across Indian regions.",
       description:
-        "Crescora AI can support regional rollout planning for teams operating across major Indian business clusters, with workflows adapted to local languages, channels, and service patterns.",
+        "If your team serves customers across one city, one state, or multiple regions, Crescora AI can help map the first workflow, confirm the right channels, and adapt the rollout to local languages and service patterns.",
     },
     workflowPriority: {
-      eyebrow: "Priority workflows",
+      eyebrow: "Workflows businesses can start with",
       title: "Automate the customer steps that create the most delay.",
       description:
         "Most teams begin with one high-impact workflow: WhatsApp enquiries, appointment booking, payment reminders, document collection, customer support, or human handover.",
@@ -338,16 +338,15 @@ export const indiaSeo = {
         "Each template gives your team a starting structure for prompts, captured fields, routing rules, reminders, integrations, and human review before a founder-led pilot is scoped.",
     },
     local: {
-      eyebrow: "Local trust",
+      eyebrow: "How we support regional businesses",
       title: "Use real business context, real service areas, and honest proof.",
       description:
-        "Crescora AI should only publish local claims that match the real business footprint. Regional pages should explain practical workflow fit, language coverage, and service-area relevance without fake offices, fake testimonials, or fake certifications.",
+        "Crescora AI keeps regional automation claims tied to the real service area, language needs, channels, and customer workflows your business is ready to support. We do not use fake offices, fake testimonials, or fake certifications to make a region page look stronger.",
       items: [
-        "Publish local office or map details only where Crescora AI has a genuine office, partner location, or service presence to disclose.",
-        "Describe supported cities as service coverage, not as physical offices unless those details are verified.",
-        "Use regional language notes only where the workflow can actually be configured for that language in the pilot scope.",
-        "Keep healthcare, finance, education, and document workflows clear about human review, consent, and regulated-use boundaries.",
-        "Replace demo examples with real customer screenshots, case studies, or testimonials only after approval is supplied.",
+        "We describe supported cities as service coverage, not as physical offices unless those office details are verified.",
+        "We confirm language, channel, and integration requirements before promising a regional workflow rollout.",
+        "We keep healthcare, finance, education, and document workflows clear about human review, consent, and regulated-use boundaries.",
+        "We use demo examples until real customer screenshots, case studies, or testimonials are approved for public use.",
       ],
     },
     technical: {

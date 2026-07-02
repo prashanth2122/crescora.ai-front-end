@@ -10,8 +10,20 @@ test("Hindi home page copy includes the multilingual hub route set", () => {
 });
 
 test("Hindi India hub page copy keeps the localized hero labels together", () => {
-  assert.equal(hiPageCopy.india.hero.eyebrow, "इंडिया");
-  assert.equal(hiPageCopy.india.stateSection.title, "Priority state hubs के लिए Hindi index.");
-  assert.equal(hiPageCopy.india.localSection.title, "Localized trust signals के लिए checklist.");
+  assert.match(hiPageCopy.india.metadata.title, /AI Automation Services for Indian Businesses/i);
+  assert.match(hiPageCopy.india.hero.title, /Indian businesses/i);
+  assert.match(hiPageCopy.india.stateSection.title, /automation examples/i);
+  assert.match(hiPageCopy.india.localSection.title, /Real service area/i);
+  assert.doesNotMatch(
+    [
+      hiPageCopy.india.metadata.description,
+      hiPageCopy.india.hero.description,
+      hiPageCopy.india.stateSection.title,
+      hiPageCopy.india.workflowSection.description,
+      hiPageCopy.india.templateSection.title,
+      hiPageCopy.india.localSection.title,
+    ].join(" "),
+    /state hubs|Hindi index|Template-led pages|Localized trust signals|non-brand search/i,
+  );
 });
 
