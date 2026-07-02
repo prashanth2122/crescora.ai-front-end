@@ -32,7 +32,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for teams that need faster enquiry response, cleaner qualification, and more reliable follow-up from one WhatsApp-first workflow.",
     launchFocusLine:
       "Start with the highest-volume enquiry path, then expand into reminders, payments, support, and handoff once the first workflow proves value.",
-    ctaLabel: "Book WhatsApp Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   "appointment-booking": {
     slug: "appointment-booking",
@@ -45,7 +45,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for clinics, hospitals, education teams, hospitality operators, and service businesses that lose conversions during manual coordination.",
     launchFocusLine:
       "Start with intake, slot capture, confirmation, reminder, and reschedule logic before expanding into payments and post-visit follow-up.",
-    ctaLabel: "Book Appointment Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   payments: {
     slug: "payments",
@@ -58,7 +58,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for teams that need to recover pending payments, reduce billing delays, and keep finance follow-ups visible.",
     launchFocusLine:
       "Start with due reminders and payment confirmations, then expand into failed-payment recovery, receipts, and billing handoff.",
-    ctaLabel: "Book Payment Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   "document-collection": {
     slug: "document-collection",
@@ -71,7 +71,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for regulated, intake-heavy, or onboarding-heavy teams that need clean document status and fewer back-and-forth messages.",
     launchFocusLine:
       "Start with submission guidance, missing-file reminders, and review routing before expanding into approvals, audit visibility, and exceptions.",
-    ctaLabel: "Book Document Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   "customer-support": {
     slug: "customer-support",
@@ -84,7 +84,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for teams managing high support volume, repetitive questions, and slower response quality across channels.",
     launchFocusLine:
       "Start with approved answers, fallback rules, and escalation routing before expanding into analytics, queues, and support dashboards.",
-    ctaLabel: "Book Support Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   reminders: {
     slug: "reminders",
@@ -97,7 +97,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for teams that depend on follow-up timing for bookings, collections, document completion, or customer response.",
     launchFocusLine:
       "Start with one reminder path that directly protects revenue or service quality, then expand into more timed workflows and escalations.",
-    ctaLabel: "Book Reminder Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   "human-handoff": {
     slug: "human-handoff",
@@ -110,7 +110,7 @@ export const stateWorkflowSeoBySlug: Record<StateWorkflowSlug, StateWorkflowSeoC
       "Best for teams where automation should not guess and where staff need cleaner escalation, queue assignment, and context continuity.",
     launchFocusLine:
       "Start with clear escalation triggers, queue ownership, and handoff summaries before expanding into SLA visibility and outcome tracking.",
-    ctaLabel: "Book Handoff Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
 };
 

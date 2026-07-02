@@ -41,7 +41,7 @@ export default function BlogPage() {
         <SectionHeading
           eyebrow="Posts"
           title="Articles for operators and buyers"
-          description="Each article ties operational context back to the relevant solution, proof, comparison, or workflow page."
+          description="Each article explains a real automation problem, how the workflow can be structured, what to watch out for, and how to choose a practical first rollout."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {blogPosts.map((post) => (

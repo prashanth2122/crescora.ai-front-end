@@ -984,7 +984,7 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book WhatsApp Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "WhatsApp Workflow Template",
       heroTitle:
@@ -992,7 +992,7 @@ export const workflows: WorkflowSeo[] = [
       heroDescription:
         "Crescora AI helps businesses turn WhatsApp conversations into structured workflows. Capture enquiries, qualify intent, collect details, book appointments, send reminders, follow up on payments, route support requests, and hand over complex conversations to the right team.",
       heroPrimaryCta: {
-        label: "Book WhatsApp Workflow Demo",
+        label: "Book Free Demo",
         href: "/contact",
       },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
@@ -1056,7 +1056,7 @@ export const workflows: WorkflowSeo[] = [
               "Collect name, phone number, requirement, location, budget, urgency, preferred time, or service interest before routing to the team.",
           },
           {
-            title: "Booking and callback flow",
+            title: "Booking and callback Workflow",
             description:
               "Capture appointment or callback preference, confirm the next step, and send reminders where required.",
           },
@@ -1254,7 +1254,7 @@ export const workflows: WorkflowSeo[] = [
         description:
           "Tell us how your team currently handles WhatsApp enquiries, bookings, payments, documents, support questions, and follow-ups. We'll map your process and show the fastest Crescora AI workflow to launch first.",
         note: "Start with one WhatsApp workflow. Prove value. Expand into more channels, teams, and integrations.",
-        primary: { label: "Book WhatsApp Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -1282,7 +1282,7 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Appointment Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Appointment Workflow",
       heroTitle:
@@ -1290,7 +1290,7 @@ export const workflows: WorkflowSeo[] = [
       heroDescription:
         "Crescora AI helps businesses turn appointment enquiries from WhatsApp and website chat into structured booking workflows. Capture customer details, collect preferred date and time, confirm slots, send reminders, manage rescheduling, collect fees where required, and hand over exceptions to the right team.",
       heroPrimaryCta: {
-        label: "Book Appointment Workflow Demo",
+        label: "Book Free Demo",
         href: "/contact",
       },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
@@ -1354,7 +1354,7 @@ export const workflows: WorkflowSeo[] = [
               "Confirm selected appointment details and share the next step clearly with the customer.",
           },
           {
-            title: "Availability and rescheduling flow",
+            title: "Availability and rescheduling Workflow",
             description:
               "Handle preferred timing, unavailable slots, rescheduling requests, and fallback to staff when required.",
           },
@@ -1413,7 +1413,7 @@ export const workflows: WorkflowSeo[] = [
           },
           {
             before: "Payment or booking fee follow-up is manual",
-            after: "Payment reminders and confirmation flows can be added",
+            after: "Payment reminders and confirmation Workflows can be added",
           },
           {
             before: "Rescheduling creates confusion",
@@ -1556,7 +1556,7 @@ export const workflows: WorkflowSeo[] = [
         description:
           "Tell us how your team currently handles appointment enquiries, slot confirmation, reminders, rescheduling, payments, cancellations, and staff handover. We'll map your process and show the fastest Crescora AI workflow to launch first.",
         note: "Start with one appointment workflow. Prove value. Expand into payments, reminders, rescheduling, and customer follow-ups.",
-        primary: { label: "Book Appointment Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -1584,14 +1584,14 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Payment Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Payment Workflow",
       heroTitle:
         "Automate payment reminders, collections follow-ups, confirmations, and overdue escalation.",
       heroDescription:
         "Crescora AI helps businesses send structured payment reminders, share payment links, collect payment confirmation, verify payment status where supported, recover failed payments, alert teams about overdue cases, and track every collection workflow from request to outcome.",
-      heroPrimaryCta: { label: "Book Payment Workflow Demo", href: "/contact" },
+      heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportLine:
         "Built for payment reminders, billing follow-ups, consultation fees, booking tokens, invoice collections, failed-payment recovery, receipts, and human handover.",
@@ -1887,7 +1887,7 @@ export const workflows: WorkflowSeo[] = [
         description:
           "Tell us how your team currently handles payment reminders, pending collections, payment links, failed payments, receipts, billing handover, and overdue follow-ups. We'll map your process and show the fastest Crescora AI workflow to launch first.",
         note: "Start with one payment reminder workflow. Prove value. Expand into verification, receipts, billing escalation, and collection visibility.",
-        primary: { label: "Book Payment Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -1915,7 +1915,7 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Reminder Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Reminder Workflow",
       heroTitle:
@@ -1923,7 +1923,7 @@ export const workflows: WorkflowSeo[] = [
       heroDescription:
         "Crescora AI helps businesses send timely reminders, recover missed actions, reduce manual follow-up work, and escalate overdue cases to the right team. Use reminders for bookings, payments, pending documents, abandoned enquiries, service visits, renewals, and customer follow-ups across Web, WhatsApp, Telegram, email, and SMS.",
       heroPrimaryCta: {
-        label: "Book Reminder Workflow Demo",
+        label: "Book Free Demo",
         href: "/contact",
       },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
@@ -2230,7 +2230,7 @@ export const workflows: WorkflowSeo[] = [
         description:
           "Tell us how your team currently handles appointment reminders, payment follow-ups, pending documents, callbacks, renewals, missed actions, and escalation. We'll map your process and show the fastest Crescora AI reminder workflow to launch first.",
         note: "Start with one reminder workflow. Prove value. Expand into payments, documents, bookings, support, and renewals.",
-        primary: { label: "Book Reminder Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -2244,8 +2244,8 @@ export const workflows: WorkflowSeo[] = [
     keywordTarget: "document collection automation",
     headline: "Collect documents over chat without chasing them manually.",
     description:
-      "Use the page to highlight document request flows, upload tracking, missing-document reminders, and escalation.",
-    outline: ["Hero", "collection flow", "tracking", "security", "FAQs", "CTA"],
+      "Use the page to highlight document request workflows, upload tracking, missing-document reminders, and escalation.",
+    outline: ["Hero", "collection Workflow", "tracking", "security", "FAQs", "CTA"],
     ctaLabel: "Launch faster",
     metadataDescription:
       "Automate document collection, KYC intake, missing-file reminders, upload tracking, review routing, approval workflows, and customer follow-ups with Crescora AI.",
@@ -2256,7 +2256,7 @@ export const workflows: WorkflowSeo[] = [
       heroDescription:
         "Crescora AI helps teams collect required documents from customers, track missing files, send follow-up reminders, validate accepted file types, route unclear submissions for review, and keep every document request connected to the customer workflow.",
       heroPrimaryCta: {
-        label: "Book Document Workflow Demo",
+        label: "Book Free Demo",
         href: "/contact",
       },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
@@ -2462,7 +2462,7 @@ export const workflows: WorkflowSeo[] = [
         description:
           "Tell us how your team currently collects KYC files, forms, certificates, reports, payment proofs, claims, onboarding documents, or missing paperwork. We'll map the workflow and show how Crescora AI can reduce manual chasing, improve tracking, and route exceptions to the right team.",
         note: "Start with one document workflow. Prove value. Expand into review, approval, reminders, and status tracking.",
-        primary: { label: "Book Document Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -2488,14 +2488,14 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Support Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Support Workflow",
       heroTitle: "Automate customer support FAQs, issue triage, ticket routing, and human handover.",
       heroDescription:
         "Crescora AI helps support teams reduce repetitive questions, capture issue details, classify requests, route cases, escalate unresolved conversations, and track every support workflow from first message to resolution.",
-      heroPrimaryCta: { label: "Book Support Workflow Demo", href: "/contact" },
-      heroSecondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+      heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
+      heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportLine:
         "Built for FAQ resolution, issue triage, ticket creation, priority routing, status updates, human handover, queue visibility, and support analytics.",
       heroFlowSteps: [
@@ -2659,7 +2659,7 @@ export const workflows: WorkflowSeo[] = [
           {
             title: "Customer asks for a person",
             description:
-              "The support flow should always allow a direct human handoff when the customer requests it.",
+              "The support workflow should always allow a direct human handoff when the customer requests it.",
           },
         ],
       },
@@ -2795,8 +2795,8 @@ export const workflows: WorkflowSeo[] = [
           "Tell us how your team currently handles repeated questions, issue triage, ticket creation, escalations, status updates, and unresolved cases. We will map your current process and show the fastest Crescora AI support workflow to launch first.",
         note:
           "Start with FAQ and triage. Prove value. Expand into ticketing, handover, analytics, and support visibility.",
-        primary: { label: "Book Support Workflow Demo", href: "/contact" },
-        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -2822,15 +2822,15 @@ export const workflows: WorkflowSeo[] = [
       "gap tracking",
       "CTA",
     ],
-    ctaLabel: "Book Knowledge Assistant Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Knowledge Assistant Workflow",
       heroTitle:
         "Answer customer questions from approved knowledge - and hand off when confidence is low.",
       heroDescription:
         "Crescora AI helps support teams turn documents, FAQs, policies, service information, pricing details, and process guides into controlled customer answers. When the answer is unclear, sensitive, outdated, or unsupported, Crescora AI can route the conversation to a human team with full context.",
-      heroPrimaryCta: { label: "Book Knowledge Assistant Demo", href: "/contact" },
-      heroSecondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+      heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
+      heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportLine:
         "Built for FAQ automation, grounded answers, knowledge retrieval, fallback handling, human handover, answer quality review, and knowledge gap detection.",
       heroFlowSteps: [
@@ -3144,8 +3144,8 @@ export const workflows: WorkflowSeo[] = [
           "Tell us what your team currently answers again and again - FAQs, pricing, policies, documents, service steps, support questions, admissions, project details, or customer instructions. We'll map your knowledge assistant workflow and show where Crescora AI should answer, fallback, or hand off to humans.",
         note:
           "Start with one knowledge area. Prove answer quality. Expand into more FAQs, documents, channels, and support workflows.",
-        primary: { label: "Book Knowledge Assistant Demo", href: "/contact" },
-        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -3171,14 +3171,14 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Handoff Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Human Handoff Workflow",
       heroTitle:
         "Escalate complex conversations to the right human team with full context.",
       heroDescription:
         "Crescora AI helps businesses automate routine conversations while routing urgent, sensitive, high-value, angry, or unresolved cases to the right person or queue. Every handoff can include captured details, issue type, priority, conversation history, SLA expectations, and the next action.",
-      heroPrimaryCta: { label: "Book Handoff Workflow Demo", href: "/contact" },
+      heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportLine:
         "Built for support escalation, sales handover, billing disputes, emergency routing, admission support, insurance cases, payment issues, and high-value conversations.",
@@ -3523,7 +3523,7 @@ export const workflows: WorkflowSeo[] = [
         description:
           "Tell us how your team currently handles escalations, urgent cases, sales handover, support routing, payment disputes, document review, and unresolved conversations. We'll map your handoff rules, queue ownership, SLA expectations, and the fastest Crescora AI workflow to launch first.",
         note: "Start with one handoff workflow. Prove value. Expand into queues, SLA visibility, agent console, and outcome tracking.",
-        primary: { label: "Book Handoff Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -3550,14 +3550,14 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Billing Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Billing Workflow",
       heroTitle:
         "Automate billing reminders, collections follow-ups, payment status updates, and exception handover.",
       heroDescription:
         "Crescora AI helps service teams manage billing conversations from payment request to final outcome. Send reminders, share payment links, collect references, confirm payment status, recover failed payments, escalate overdue cases, route disputes to billing teams, and track every collection workflow clearly.",
-      heroPrimaryCta: { label: "Book Billing Workflow Demo", href: "/contact" },
+      heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportLine:
         "Built for billing follow-ups, invoice reminders, payment links, collection status, failed-payment recovery, overdue escalation, receipts, disputes, and human handover.",
@@ -3872,7 +3872,7 @@ export const workflows: WorkflowSeo[] = [
           "Tell us how your team currently handles billing reminders, payment links, pending collections, failed payments, receipts, disputes, and overdue escalation. We'll map your process and show the fastest Crescora AI billing workflow to launch first.",
         note:
           "Start with one billing follow-up workflow. Prove value. Expand into verification, receipts, disputes, escalation, and collection visibility.",
-        primary: { label: "Book Billing Workflow Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -3900,14 +3900,14 @@ export const workflows: WorkflowSeo[] = [
       "FAQs",
       "CTA",
     ],
-    ctaLabel: "Book Observability Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       eyebrow: "Conversation Visibility Workflow",
       heroTitle:
         "Track conversations, handovers, bottlenecks, and workflow outcomes in one dashboard.",
       heroDescription:
         "Crescora AI helps teams see what is happening across customer conversations and automation workflows. Track open conversations, pending follow-ups, escalations, handovers, SLA risk, repeated questions, drop-offs, completed outcomes, and team-owned actions without chasing updates manually.",
-      heroPrimaryCta: { label: "Book Observability Demo", href: "/contact" },
+      heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportLine:
         "Built for conversation tracking, queue visibility, handover monitoring, workflow analytics, SLA alerts, outcome reporting, and operational improvement.",
@@ -4226,7 +4226,7 @@ export const workflows: WorkflowSeo[] = [
           "Tell us how your team currently tracks conversations, handovers, follow-ups, escalations, payments, bookings, documents, and support cases. We'll map the dashboard views and workflow events your business should monitor first.",
         note:
           "Start with one dashboard view. Track the right events. Improve the workflow with real operational data.",
-        primary: { label: "Book Observability Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -4253,7 +4253,7 @@ export const templates: TemplateSeo[] = [
       "Document follow-up",
       "Support routing and human handover",
     ],
-    ctaLabel: "Book WhatsApp Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "WhatsApp Automation Template",
       hero: {
@@ -4263,7 +4263,7 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that turns WhatsApp conversations into structured business workflows. Capture enquiries, qualify intent, collect details, book appointments, send reminders, follow up on payments, route support requests, and hand over complex conversations to your team.",
         supportLine:
           "Built for WhatsApp enquiries, lead capture, appointment booking, payment reminders, support routing, document follow-ups, and human handover.",
-        primaryCta: { label: "Book WhatsApp Template Demo", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
         secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New",
@@ -4329,12 +4329,12 @@ export const templates: TemplateSeo[] = [
               "Capture booking preference, preferred date and time, service type, and confirmation details.",
           },
           {
-            title: "Payment reminder flow",
+            title: "Payment reminder workflow",
             description:
               "Send payment reminders, payment links, confirmation messages, and unresolved-payment escalation.",
           },
           {
-            title: "Document follow-up flow",
+            title: "Document follow-up workflow",
             description:
               "Request missing files, remind customers, and route submitted documents to the right team.",
           },
@@ -4526,7 +4526,7 @@ export const templates: TemplateSeo[] = [
           "Tell us how your team currently handles WhatsApp enquiries, bookings, reminders, payments, documents, support questions, and handovers. We'll map your process and show how this Crescora AI template can be adapted for your business.",
         note:
           "Start with one WhatsApp template. Prove value. Expand into more channels, teams, and workflows.",
-        primary: { label: "Book WhatsApp Template Demo", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
@@ -4550,7 +4550,7 @@ export const templates: TemplateSeo[] = [
       "Confirmation and reminder automation",
       "Fee follow-up, reschedule paths, and handover",
     ],
-    ctaLabel: "Book Clinic Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Clinic Appointment Bot Template",
       hero: {
@@ -4560,8 +4560,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps clinics and healthcare teams automate appointment enquiries, patient details collection, doctor or service selection, slot confirmation, reminders, consultation fee follow-up, rescheduling requests, and human handover for sensitive or urgent cases.",
         supportLine:
           "Built for clinics, hospitals, dental practices, diagnostics centers, wellness clinics, teleconsultation teams, and healthcare front desks.",
-        primaryCta: { label: "Book Clinic Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Clinic Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New Enquiry",
           "Details Captured",
@@ -4702,7 +4702,7 @@ export const templates: TemplateSeo[] = [
           },
           {
             before: "Slot confirmation happens through back-and-forth messages",
-            after: "Appointment date and slot flow becomes structured",
+            after: "Appointment date and slot workflow becomes structured",
           },
           {
             before: "Reminders depend on staff memory",
@@ -4726,7 +4726,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Use cases",
         title: "Use this clinic template for",
         description:
-          "Start with the booking flow that matters most to the clinic, then expand into reminders, payments, and handover paths.",
+          "Start with the booking workflow that matters most to the clinic, then expand into reminders, payments, and handover paths.",
         items: [
           {
             title: "General clinic appointment booking",
@@ -4764,7 +4764,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Metrics",
         title: "What to measure after launching this template",
         description:
-          "Treat the rollout as an operational improvement, not just a chatbot launch. Measure booking flow quality, reminders, handover, and visibility.",
+          "Treat the rollout as an operational improvement, not just a chatbot launch. Measure booking workflow quality, reminders, handover, and visibility.",
         items: [
           {
             title: "Appointment enquiry capture",
@@ -4837,8 +4837,8 @@ export const templates: TemplateSeo[] = [
           "Tell us how your clinic currently handles patient enquiries, appointment booking, doctor availability, reminders, consultation fees, rescheduling, and staff handover. We'll map your process and show how this Crescora AI template can be adapted for your clinic.",
         note:
           "Start with appointment booking. Prove value. Expand into reminders, payments, follow-ups, reports, and patient support.",
-        primary: { label: "Book Clinic Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Clinic Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -4862,7 +4862,7 @@ export const templates: TemplateSeo[] = [
       "Failed-payment recovery",
       "Overdue escalation and tracking",
     ],
-    ctaLabel: "Book Payment Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Payment Reminder Template",
       hero: {
@@ -4872,8 +4872,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps businesses send payment reminders, share payment links, collect payment references, confirm successful payments, recover failed payments, escalate overdue cases, and track every payment follow-up from request to outcome.",
         supportLine:
           "Built for payment reminders, invoice follow-ups, consultation fees, booking tokens, subscription renewals, failed-payment recovery, overdue escalation, and billing handover.",
-        primaryCta: { label: "Book Payment Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Payment Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Payment Due",
           "Reminder Sent",
@@ -5066,7 +5066,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Metrics",
         title: "What to measure after launching this template",
         description:
-          "Treat the rollout as a collections improvement, not just a reminder flow.",
+          "Treat the rollout as a collections improvement, not just a reminder workflow.",
         items: [
           {
             title: "Reminder delivery",
@@ -5140,8 +5140,8 @@ export const templates: TemplateSeo[] = [
           "Tell us how your team currently handles pending payments, payment links, reminders, failed payments, receipts, billing disputes, and overdue escalation. We'll map your process and show how this Crescora AI template can be adapted for your business.",
         note:
           "Start with one payment reminder template. Prove value. Expand into verification, receipts, billing escalation, and collection visibility.",
-        primary: { label: "Book Payment Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Payment Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -5158,14 +5158,14 @@ export const templates: TemplateSeo[] = [
     description:
       "A launch-ready document template for KYC intake, missing files, review routing, approval steps, and customer follow-ups.",
     included: [
-      "Document request flow",
+      "Document request workflow",
       "Clear upload instructions",
       "Accepted file checks",
       "Missing-document reminders",
       "Review routing",
       "Status tracking and audit trail",
     ],
-    ctaLabel: "Book Document Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Document Collection Template",
       hero: {
@@ -5175,8 +5175,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps teams collect required documents, track missing files, send follow-up reminders, route unclear submissions for review, and move every document request toward a clear outcome.",
         supportLine:
           "Built for KYC, admissions, insurance files, onboarding documents, claims, healthcare reports, payment proofs, and service forms.",
-        primaryCta: { label: "Book Document Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Document Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Requested",
           "Submitted",
@@ -5228,7 +5228,7 @@ export const templates: TemplateSeo[] = [
           "Use the template as a workflow for intake, verification, reminders, and review rather than a simple file request screen.",
         items: [
           {
-            title: "Document request flow",
+            title: "Document request workflow",
             description:
               "Ask the customer for the required files based on the workflow type: KYC, admission, claim, onboarding, insurance, report, payment proof, or service request.",
           },
@@ -5443,8 +5443,8 @@ export const templates: TemplateSeo[] = [
           "Tell us how your team currently collects KYC files, forms, certificates, reports, payment proofs, claims, onboarding documents, or missing paperwork. We'll map your process and show how this Crescora AI template can reduce manual chasing, improve tracking, and route exceptions to the right team.",
         note:
           "Start with one document template. Prove value. Expand into review, approval, reminders, and status tracking.",
-        primary: { label: "Book Document Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Document Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -5467,7 +5467,7 @@ export const templates: TemplateSeo[] = [
       "Support visibility and outcome tracking",
       "Status updates",
     ],
-    ctaLabel: "Book Support Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Customer Support Bot Template",
       hero: {
@@ -5477,8 +5477,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps support teams answer repeated questions, capture issue details, classify customer requests, route unresolved cases, hand off conversations with context, and track support outcomes from first message to resolution.",
         supportLine:
           "Built for FAQ automation, issue triage, ticket context, priority routing, human handover, status updates, and support visibility.",
-        primaryCta: { label: "Book Support Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New",
           "FAQ Resolved",
@@ -5602,7 +5602,7 @@ export const templates: TemplateSeo[] = [
       },
       setupNoteSection: {
         eyebrow: "Support workflow note",
-        title: "Design the support flow around a clear happy path, fallback path, and error path.",
+        title: "Design the support Workflow around a clear happy path, fallback path, and error path.",
         description:
           "The workflow should answer approved questions first, gather issue context early, and hand over unresolved cases without losing the conversation.",
         note:
@@ -5749,8 +5749,8 @@ export const templates: TemplateSeo[] = [
           "Tell us how your team currently handles repeated questions, support requests, complaints, ticket routing, escalations, and follow-ups. We'll map your process and show how this Crescora AI template can reduce repetitive support work and improve handover quality.",
         note:
           "Start with FAQ and triage. Prove value. Expand into ticketing, handover, analytics, and support visibility.",
-        primary: { label: "Book Support Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -5776,7 +5776,7 @@ export const templates: TemplateSeo[] = [
       "Support analytics",
       "Knowledge improvement loop",
     ],
-    ctaLabel: "Book Knowledge Assistant Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Knowledge Assistant Template",
       hero: {
@@ -5786,8 +5786,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps support teams answer repeated questions from approved documents, FAQs, policies, service information, pricing details, and process guides. When confidence is low or the question needs human judgment, Crescora AI can route the conversation to the right team with context.",
         supportLine:
           "Built for grounded answers, FAQ automation, knowledge retrieval, fallback handling, gap detection, answer quality review, and human handover.",
-        primaryCta: { label: "Book Knowledge Assistant Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Answered",
           "Fallback",
@@ -6046,8 +6046,8 @@ export const templates: TemplateSeo[] = [
           "Tell us what your team answers repeatedly - FAQs, pricing, policies, documents, service steps, admissions, project details, support questions, or internal process guidance. We'll map your knowledge assistant workflow and show where Crescora AI should answer, fallback, or hand off.",
         note:
           "Start with one knowledge area. Prove answer quality. Expand into more FAQs, documents, channels, and support workflows.",
-        primary: { label: "Book Knowledge Assistant Demo", href: "/contact" },
-        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -6080,7 +6080,7 @@ export const templates: TemplateSeo[] = [
     description:
       "A launch-ready service booking template for enquiry capture, booking confirmation, reminders, payment follow-up, staff handover, and repeat-service workflows.",
     included: [
-      "Service booking request flow",
+      "Service booking request workflow",
       "Customer detail capture",
       "Service selection",
       "Booking confirmation",
@@ -6090,7 +6090,7 @@ export const templates: TemplateSeo[] = [
       "Service status updates",
       "Feedback and repeat booking",
     ],
-    ctaLabel: "Book Service Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Service Business Booking Template",
       hero: {
@@ -6100,8 +6100,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps service businesses capture customer enquiries, collect service details, confirm bookings, send reminders, route requests to the right staff, follow up on payments, share service updates, collect feedback, and bring customers back for repeat visits.",
         supportLine:
           "Built for home services, salons, spas, wellness clinics, repair teams, cleaning services, consultants, agencies, maintenance teams, and booking-driven businesses.",
-        primaryCta: { label: "Book Service Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Booking Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New Enquiry",
           "Details Captured",
@@ -6144,7 +6144,7 @@ export const templates: TemplateSeo[] = [
           eyebrow: "What Is Included",
           title: "Everything needed to move from enquiry to booked service.",
           description:
-            "The template can include booking request flows, customer detail capture, service selection, location collection, reminder triggers, payment follow-up, staff or technician assignment, service status updates, feedback collection, and repeat-booking reminders.",
+            "The template can include booking request workflows, customer detail capture, service selection, location collection, reminder triggers, payment follow-up, staff or technician assignment, service status updates, feedback collection, and repeat-booking reminders.",
         },
       ],
       includedSection: {
@@ -6164,7 +6164,7 @@ export const templates: TemplateSeo[] = [
               "Let customers choose the service they need: consultation, repair, cleaning, maintenance, salon slot, wellness session, pickup, delivery, or callback.",
           },
           {
-            title: "Booking request flow",
+            title: "Booking request workflow",
             description:
               "Capture preferred date and time, urgency, visit type, and special instructions before confirmation.",
           },
@@ -6385,8 +6385,8 @@ export const templates: TemplateSeo[] = [
           "Tell us how your business currently handles enquiries, bookings, reminders, staff assignment, payments, service updates, and customer follow-ups. We'll map your process and show how this Crescora AI template can be adapted for your service workflow.",
         note:
           "Start with one booking workflow. Prove value. Expand into payments, staff assignment, feedback, and repeat bookings.",
-        primary: { label: "Book Service Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Booking Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -6404,7 +6404,7 @@ export const templates: TemplateSeo[] = [
     description:
       "A launch-ready billing workflow template for payment reminders, invoice follow-ups, failed-payment recovery, overdue escalation, dispute routing, and collection tracking.",
     included: [
-      "Billing reminder flow",
+      "Billing reminder workflow",
       "Payment link sharing",
       "Reminder sequence",
       "Payment reference capture",
@@ -6414,7 +6414,7 @@ export const templates: TemplateSeo[] = [
       "Dispute routing",
       "Collection status tracking",
     ],
-    ctaLabel: "Book Billing Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Billing and Collections Template",
       hero: {
@@ -6425,8 +6425,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps teams send billing reminders, share payment links or instructions, capture transaction references, confirm payment status, recover failed payments, escalate overdue cases, route disputes, and track every collection workflow from due date to final outcome.",
         supportLine:
           "Built for invoice reminders, payment follow-ups, due-date alerts, failed-payment recovery, receipt capture, billing disputes, overdue escalation, finance handover, and collection visibility.",
-        primaryCta: { label: "Book Billing Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Billing Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Due",
           "Reminder Sent",
@@ -6493,7 +6493,7 @@ export const templates: TemplateSeo[] = [
           "Use the template as a workflow for turning open invoices and pending balances into clear outcomes, then keep each case moving through reminders, verification, escalation, and closure.",
         items: [
           {
-            title: "Billing reminder flow",
+            title: "Billing reminder workflow",
             description:
               "Send payment due messages for invoices, consultation fees, service charges, booking tokens, subscription renewals, or pending balances.",
           },
@@ -6726,8 +6726,8 @@ export const templates: TemplateSeo[] = [
           "Tell us how your team currently handles invoices, pending payments, reminders, failed payments, receipts, disputes, overdue cases, and billing handover. We'll map your process and show how this Crescora AI template can reduce manual chasing and improve collection visibility.",
         note:
           "Start with one billing follow-up template. Prove value. Expand into verification, disputes, escalation, and collection dashboards.",
-        primary: { label: "Book Billing Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Billing Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -6754,7 +6754,7 @@ export const templates: TemplateSeo[] = [
       "Outcome analytics",
       "Improvement action path",
     ],
-    ctaLabel: "Book Observability Template Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
       breadcrumbTitle: "Conversation Observability Dashboard Template",
       hero: {
@@ -6765,8 +6765,8 @@ export const templates: TemplateSeo[] = [
           "Start from a practical Crescora AI template that helps teams track customer conversations, workflow stages, handovers, escalations, SLA risk, drop-offs, pending follow-ups, and completed outcomes across sales, support, booking, payment, document, and service workflows.",
         supportLine:
           "Built for conversation queues, workflow funnels, handover tracking, SLA visibility, drop-off analysis, repeated issue tracking, and business outcome reporting.",
-        primaryCta: { label: "Book Observability Template Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Dashboard Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New",
           "Active",
@@ -7055,29 +7055,29 @@ export const templates: TemplateSeo[] = [
           "Tell us how your team currently tracks conversations, handovers, follow-ups, escalations, payments, bookings, documents, and support outcomes. We'll map the dashboard views and workflow events your business should monitor first.",
         note:
           "Start with one dashboard view. Track the right events. Improve workflows with real operational data.",
-        primary: { label: "Book Observability Template Demo", href: "/contact" },
-        secondary: { label: "Discuss My Dashboard Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
   {
     slug: "hospital-appointment-booking-flow",
-    title: "Hospital Appointment Booking Flow | Crescora AI",
+    title: "Hospital Appointment Booking Workflow | Crescora AI",
     metadataTitle:
-      "Hospital Appointment Booking Flow for OPD, Reminders, Payments, and Patient Handover | Crescora AI",
+      "Hospital Appointment Booking Workflow for OPD, Reminders, Payments, and Patient Handover | Crescora AI",
     metadataDescription:
-      "Launch a hospital appointment booking flow with Crescora AI. Automate OPD enquiries, patient intake, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
+      "Launch a hospital appointment booking workflow with Crescora AI. Automate OPD enquiries, patient intake, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
     intent: "Decision workflow",
-    keywordTarget: "hospital appointment booking flow",
+    keywordTarget: "hospital appointment booking workflow",
     headline:
-      "Launch a hospital appointment booking flow for OPD visits, reminders, payments, and staff handover.",
+      "Launch a hospital appointment booking workflow for OPD visits, reminders, payments, and staff handover.",
     description:
       "A hospital-ready workflow template for OPD enquiries, patient intake, doctor routing, slot booking, appointment confirmations, reminders, consultation fee follow-up, rescheduling, and front-desk handover.",
     included: [
       "Patient enquiry capture",
       "Department and doctor routing",
       "Patient details collection",
-      "Slot booking flow",
+      "Slot booking workflow",
       "Appointment confirmation",
       "Reminder automation",
       "Consultation fee follow-up",
@@ -7085,19 +7085,19 @@ export const templates: TemplateSeo[] = [
       "Emergency and sensitive-case handover",
       "Outcome tracking",
     ],
-    ctaLabel: "Book Hospital Workflow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
-      breadcrumbTitle: "Hospital Appointment Booking Flow",
+      breadcrumbTitle: "Hospital Appointment Booking Workflow",
       hero: {
         eyebrow: "Hospital Template",
         title:
-          "Launch a hospital appointment booking flow for OPD visits, reminders, payments, and staff handover.",
+          "Launch a hospital appointment booking workflow for OPD visits, reminders, payments, and staff handover.",
         description:
           "Start from a hospital-ready Crescora AI template that helps front-desk teams capture patient enquiries, route by department or doctor, collect patient details, book appointment slots, send confirmations and reminders, handle consultation fee follow-ups, manage rescheduling, and escalate urgent or sensitive cases to staff.",
         supportLine:
           "Built for OPD appointments, doctor availability, patient intake, slot booking, consultation fee follow-up, appointment reminders, emergency escalation, and front-desk handover.",
-        primaryCta: { label: "Book Hospital Workflow Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Hospital Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New Enquiry",
           "Details Captured",
@@ -7146,7 +7146,7 @@ export const templates: TemplateSeo[] = [
       overviewCards: [
         {
           eyebrow: "Launch-Ready Structure",
-          title: "Publish a hospital-ready flow that handles appointments, reminders, and handoff.",
+          title: "Publish a hospital-ready Workflow that handles appointments, reminders, and handoff.",
           description:
             "This template gives your team a structured starting point for hospital appointment automation: patient intent capture, department or doctor routing, patient details, slot selection, appointment confirmation, reminders, payment follow-up, rescheduling, and staff handover.",
         },
@@ -7159,7 +7159,7 @@ export const templates: TemplateSeo[] = [
       ],
       includedSection: {
         eyebrow: "What this template includes",
-        title: "What this hospital appointment flow includes",
+        title: "What this hospital appointment workflow includes",
         description:
           "Use the template as a workflow for turning patient enquiries into confirmed appointments, then keep each case moving through reminders, payments, and handover when needed.",
         items: [
@@ -7179,7 +7179,7 @@ export const templates: TemplateSeo[] = [
               "Collect name, mobile number, age, gender, location, visit reason, preferred department, preferred doctor, and appointment preference.",
           },
           {
-            title: "Slot booking flow",
+            title: "Slot booking workflow",
             description:
               "Guide the patient through date and slot selection, then store the selected booking details for confirmation and next steps.",
           },
@@ -7237,7 +7237,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Healthcare safety note",
         title: "Important hospital workflow note",
         description:
-          "This flow should support appointment communication, hospital routing, and front-desk operations. It should not replace emergency care, medical diagnosis, or clinical judgment.",
+          "This workflow should support appointment communication, hospital routing, and front-desk operations. It should not replace emergency care, medical diagnosis, or clinical judgment.",
         note:
           "For urgent medical concerns or emergencies, patients should contact the hospital emergency number, call local emergency services, or visit the nearest emergency department. Crescora AI can help route urgent requests, but it should not replace medical care.",
       },
@@ -7279,7 +7279,7 @@ export const templates: TemplateSeo[] = [
       },
       useCasesSection: {
         eyebrow: "Use cases",
-        title: "Use this hospital flow for",
+        title: "Use this hospital Workflow for",
         description:
           "Start with the appointment workflow that matters most, then expand into reminders, payments, online consultations, and patient support.",
         items: [
@@ -7327,7 +7327,7 @@ export const templates: TemplateSeo[] = [
       },
       metricsSection: {
         eyebrow: "Metrics",
-        title: "What to measure after launching this flow",
+        title: "What to measure after launching this workflow",
         description:
           "Treat the first rollout as a measurable hospital appointment workflow, not a generic booking page.",
         items: [
@@ -7372,12 +7372,12 @@ export const templates: TemplateSeo[] = [
         eyebrow: "FAQ",
         title: "Frequently asked questions",
         description:
-          "Answer the rollout questions before implementation so the hospital booking flow can launch without ambiguity.",
+          "Answer the rollout questions before implementation so the hospital booking workflow can launch without ambiguity.",
         items: [
           {
-            question: "Can this hospital appointment flow be customized?",
+            question: "Can this hospital appointment workflow be customized?",
             answer:
-              "Yes. The flow can be adapted for your departments, doctors, branches, consultation types, timings, fee rules, reminder timing, and handover teams.",
+              "Yes. The workflow can be adapted for your departments, doctors, branches, consultation types, timings, fee rules, reminder timing, and handover teams.",
           },
           {
             question: "Can Crescora AI send appointment reminders?",
@@ -7385,7 +7385,7 @@ export const templates: TemplateSeo[] = [
               "Yes. Reminder workflows can be scheduled before the appointment using timezone-aware scheduler logic, dedupe rules, expiry handling, and fallback channels.",
           },
           {
-            question: "Can this flow collect consultation fees?",
+            question: "Can this workflow collect consultation fees?",
             answer:
               "Yes. Crescora AI supports payment collection and verification paths where payment provider setup is configured. The payment node can store payment status and route paid or failed outcomes for recovery or handover.",
           },
@@ -7403,53 +7403,53 @@ export const templates: TemplateSeo[] = [
       },
       finalCta: {
         eyebrow: "Next step",
-        title: "Ready to launch your hospital appointment booking flow?",
+        title: "Ready to launch your hospital appointment booking workflow?",
         description:
           "Tell us how your hospital currently handles OPD appointments, doctor availability, patient intake, reminders, payments, rescheduling, emergency routing, and front-desk handover. We'll map your process and show how this Crescora AI template can be adapted for your hospital workflow.",
         note:
           "Start with appointment booking. Prove value. Expand into reminders, payments, reports, online consultations, and patient support.",
-        primary: { label: "Book Hospital Workflow Demo", href: "/contact" },
-        secondary: { label: "Discuss My Hospital Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
   {
     slug: "real-estate-lead-followup-flow",
-    title: "Real Estate Lead Follow-Up Flow | Crescora AI",
+    title: "Real Estate Lead Follow-Up Workflow | Crescora AI",
     metadataTitle:
-      "Real Estate Lead Follow-Up Flow for Property Enquiries, Site Visits, Sales Handover, and Reminders | Crescora AI",
+      "Real Estate Lead Follow-Up Workflow for Property Enquiries, Site Visits, Sales Handover, and Reminders | Crescora AI",
     metadataDescription:
-      "Launch a real estate lead follow-up flow with Crescora AI. Capture property enquiries, qualify buyers, share projects, book site visits, assign sales reps, and automate follow-ups.",
+      "Launch a real estate lead follow-up workflow with Crescora AI. Capture property enquiries, qualify buyers, share projects, book site visits, assign sales reps, and automate follow-ups.",
     intent: "Decision workflow",
-    keywordTarget: "real estate lead follow-up flow",
+    keywordTarget: "real estate lead follow-up workflow",
     headline:
-      "Launch a real estate lead follow-up flow for property enquiries, site visits, and sales handover.",
+      "Launch a real estate lead follow-up workflow for property enquiries, site visits, and sales handover.",
     description:
       "A launch-ready workflow template for property enquiries, lead qualification, project sharing, callback requests, site visit booking, sales rep assignment, reminders, and lead status tracking.",
     included: [
       "Property enquiry capture",
       "Buyer qualification",
       "Project sharing",
-      "Callback request flow",
+      "Callback request workflow",
       "Site visit booking",
       "Sales rep handover",
       "Reminder automation",
       "Post-visit follow-up",
       "Lead status tracking",
     ],
-    ctaLabel: "Book Real Estate Follow-Up Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
-      breadcrumbTitle: "Real Estate Lead Follow-Up Flow",
+      breadcrumbTitle: "Real Estate Lead Follow-Up Workflow",
       hero: {
-        eyebrow: "Real Estate Flow",
+        eyebrow: "Real Estate Workflow",
         title:
-          "Launch a real estate lead follow-up flow for property enquiries, site visits, and sales handover.",
+          "Launch a real estate lead follow-up workflow for property enquiries, site visits, and sales handover.",
         description:
           "Start from a practical Crescora AI template that helps real estate teams capture property enquiries, qualify buyer intent, share project details, schedule site visits, assign leads to sales reps, send follow-up reminders, and track every lead from first message to next sales action.",
         supportLine:
           "Built for property enquiries, buyer qualification, project sharing, callback reminders, site visit booking, sales rep handover, post-visit follow-up, and lead status tracking.",
-        primaryCta: { label: "Book Real Estate Follow-Up Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Sales Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "New Lead",
           "Qualified",
@@ -7509,7 +7509,7 @@ export const templates: TemplateSeo[] = [
       ],
       includedSection: {
         eyebrow: "What this template includes",
-        title: "What this real estate follow-up flow includes",
+        title: "What this real estate follow-up workflow includes",
         description:
           "Use the template as a workflow for turning property enquiries into booked visits and sales-ready opportunities, then keep each lead moving through reminders, handover, and follow-up.",
         items: [
@@ -7529,7 +7529,7 @@ export const templates: TemplateSeo[] = [
               "Share project details, brochure links, location highlights, amenities, floor plans, price range, and visit options.",
           },
           {
-            title: "Callback request flow",
+            title: "Callback request workflow",
             description:
               "Let buyers request a sales callback and capture preferred time, language, project interest, and urgency.",
           },
@@ -7610,7 +7610,7 @@ export const templates: TemplateSeo[] = [
           },
           {
             before: "Follow-up depends on individual sales discipline",
-            after: "Reminder flows keep leads moving after enquiry and site visit",
+            after: "Reminder workflows keep leads moving after enquiry and site visit",
           },
           {
             before: "Managers cannot see lead status clearly",
@@ -7620,7 +7620,7 @@ export const templates: TemplateSeo[] = [
       },
       useCasesSection: {
         eyebrow: "Use cases",
-        title: "Use this real estate follow-up flow for",
+        title: "Use this real estate follow-up workflow for",
         description:
           "Start with the lead workflow that matters most, then expand into CRM sync, reminders, sales handover, and pipeline visibility.",
         items: [
@@ -7658,7 +7658,7 @@ export const templates: TemplateSeo[] = [
       },
       metricsSection: {
         eyebrow: "Metrics",
-        title: "What to measure after launching this flow",
+        title: "What to measure after launching this workflow",
         description:
           "Treat the first rollout as a measurable real estate sales workflow, not a generic lead page.",
         items: [
@@ -7711,9 +7711,9 @@ export const templates: TemplateSeo[] = [
           "Answer the rollout questions before implementation so the real estate workflow can launch without ambiguity.",
         items: [
           {
-            question: "Can this flow be customized for our projects?",
+            question: "Can this workflow be customized for our projects?",
             answer:
-              "Yes. The flow can be adapted for your project names, locations, price ranges, BHK types, possession timelines, sales teams, site visit rules, and follow-up process.",
+              "Yes. The workflow can be adapted for your project names, locations, price ranges, BHK types, possession timelines, sales teams, site visit rules, and follow-up process.",
           },
           {
             question: "Can Crescora AI qualify real estate leads automatically?",
@@ -7721,7 +7721,7 @@ export const templates: TemplateSeo[] = [
               "Yes. Crescora AI can collect buyer details, budget, location preference, property type, timeline, and project interest before routing the lead to your sales team.",
           },
           {
-            question: "Can this flow schedule site visits?",
+            question: "Can this workflow schedule site visits?",
             answer:
               "Yes. The workflow can capture preferred visit date and time, project interest, buyer contact details, and route the visit request to the right sales owner.",
           },
@@ -7739,32 +7739,32 @@ export const templates: TemplateSeo[] = [
       },
       finalCta: {
         eyebrow: "Next step",
-        title: "Ready to launch your real estate lead follow-up flow?",
+        title: "Ready to launch your real estate lead follow-up workflow?",
         description:
           "Tell us how your team currently handles property enquiries, buyer qualification, project sharing, site visit booking, sales rep assignment, CRM updates, and follow-ups. We'll map your process and show how this Crescora AI template can be adapted for your sales workflow.",
         note:
           "Start with lead qualification and site visit follow-up. Prove value. Expand into CRM sync, reminders, sales handover, and pipeline visibility.",
-        primary: { label: "Book Real Estate Follow-Up Demo", href: "/contact" },
-        secondary: { label: "Discuss My Sales Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
   {
     slug: "customer-support-faq-flow",
-    title: "Customer Support FAQ Flow | Crescora AI",
+    title: "Customer Support FAQ Workflow | Crescora AI",
     metadataTitle:
-      "Customer Support FAQ Flow for Approved Answers, Issue Triage, Human Handover, and Support Analytics | Crescora AI",
+      "Customer Support FAQ Workflow for Approved Answers, Issue Triage, Human Handover, and Support Analytics | Crescora AI",
     metadataDescription:
-      "Launch a customer support FAQ flow with Crescora AI. Automate approved answers, repeated questions, issue triage, fallback handling, human escalation, status updates, and support visibility.",
+      "Launch a customer support FAQ workflow with Crescora AI. Automate approved answers, repeated questions, issue triage, fallback handling, human escalation, status updates, and support visibility.",
     intent: "Decision workflow",
-    keywordTarget: "customer support faq flow",
+    keywordTarget: "customer support faq Workflow",
     headline:
-      "Launch a customer support FAQ flow for approved answers, issue triage, and human escalation.",
+      "Launch a customer support FAQ workflow for approved answers, issue triage, and human escalation.",
     description:
       "A launch-ready workflow template for FAQ automation, approved answers, issue triage, fallback handling, human escalation, status updates, and support visibility.",
     included: [
       "FAQ question capture",
-      "Approved answer flow",
+      "Approved answer Workflow",
       "Issue category routing",
       "Clarifying questions",
       "Fallback handling",
@@ -7772,19 +7772,19 @@ export const templates: TemplateSeo[] = [
       "Status updates",
       "Outcome tracking",
     ],
-    ctaLabel: "Book Support FAQ Flow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
-      breadcrumbTitle: "Customer Support FAQ Flow",
+      breadcrumbTitle: "Customer Support FAQ Workflow",
       hero: {
-        eyebrow: "Support FAQ Flow",
+        eyebrow: "Support FAQ Workflow",
         title:
-          "Launch a customer support FAQ flow for approved answers, issue triage, and human escalation.",
+          "Launch a customer support FAQ workflow for approved answers, issue triage, and human escalation.",
         description:
           "Start from a practical Crescora AI template that helps support teams answer repeated questions, guide customers to the right next step, capture issue details, route unresolved cases, escalate sensitive conversations, and track every support interaction from first question to resolution.",
         supportLine:
           "Built for FAQ automation, grounded responses, fallback handling, issue triage, support routing, human handover, status updates, and support visibility.",
-        primaryCta: { label: "Book Support FAQ Flow Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Support Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Question Asked",
           "FAQ Answered",
@@ -7838,12 +7838,12 @@ export const templates: TemplateSeo[] = [
           eyebrow: "What Is Included",
           title: "Everything needed to answer, triage, and escalate support questions.",
           description:
-            "The flow can include FAQ categories, approved answer paths, confidence fallback rules, issue triage questions, support detail capture, human handover rules, status update messages, support queue routing, and analytics events for unresolved questions.",
+            "The workflow can include FAQ categories, approved answer paths, confidence fallback rules, issue triage questions, support detail capture, human handover rules, status update messages, support queue routing, and analytics events for unresolved questions.",
         },
       ],
       includedSection: {
         eyebrow: "What this template includes",
-        title: "What this customer support FAQ flow includes",
+        title: "What this customer support FAQ workflow includes",
         description:
           "Use the template as a workflow for answering repeated support questions, then move each conversation toward clarification, escalation, or resolution when needed.",
         items: [
@@ -7853,7 +7853,7 @@ export const templates: TemplateSeo[] = [
               "Understand what the customer is asking about: pricing, service details, order status, documents, timings, policy, payment, refund, booking, technical issue, or human help.",
           },
           {
-            title: "Approved answer flow",
+            title: "Approved answer Workflow",
             description:
               "Answer common questions from approved support content instead of letting the bot guess or provide unsupported replies.",
           },
@@ -7870,7 +7870,7 @@ export const templates: TemplateSeo[] = [
           {
             title: "Fallback handling",
             description:
-              "When the answer is unavailable, unclear, low-confidence, or outside approved content, the flow should give a safe fallback and move toward human support.",
+              "When the answer is unavailable, unclear, low-confidence, or outside approved content, the workflow should give a safe fallback and move toward human support.",
           },
           {
             title: "Human escalation",
@@ -7908,9 +7908,9 @@ export const templates: TemplateSeo[] = [
       },
       setupNoteSection: {
         eyebrow: "Crescora AI capabilities used",
-        title: "Crescora AI capabilities used in this flow",
+        title: "Crescora AI capabilities used in this workflow",
         description:
-          "The runtime supports FAQ and intent-based support flows with validation, execution, human oversight, and multi-channel delivery across web widget, WhatsApp, Telegram, email, SMS, API calls, and records.",
+          "The runtime supports FAQ and intent-based support workflows with validation, execution, human oversight, and multi-channel delivery across web widget, WhatsApp, Telegram, email, SMS, API calls, and records.",
         note:
           "FAQ node for quick factual answers, intent routing for support categories, input and form steps for required details, safe fallback handling, human handover, queue and notification routing, and track-event analytics for FAQ resolved, fallback triggered, handover created, support escalated, or case closed.",
       },
@@ -7926,7 +7926,7 @@ export const templates: TemplateSeo[] = [
           },
           {
             before: "Customers ask vague questions and give incomplete details",
-            after: "The flow captures issue category, urgency, and required fields",
+            after: "The workflow captures issue category, urgency, and required fields",
           },
           {
             before: "Unanswered questions are handled inconsistently",
@@ -7942,13 +7942,13 @@ export const templates: TemplateSeo[] = [
           },
           {
             before: "Customers do not know the next step",
-            after: "The flow sends clear status and handover messages",
+            after: "The workflow sends clear status and handover messages",
           },
         ],
       },
       useCasesSection: {
         eyebrow: "Use cases",
-        title: "Use this support FAQ flow for",
+        title: "Use this support FAQ workflow for",
         description:
           "Start with the FAQ categories that generate the most repetitive work, then expand into triage, routing, escalation, and knowledge improvement.",
         items: [
@@ -7986,7 +7986,7 @@ export const templates: TemplateSeo[] = [
       },
       metricsSection: {
         eyebrow: "Metrics",
-        title: "What to measure after launching this flow",
+        title: "What to measure after launching this workflow",
         description:
           "Treat the first rollout as a measurable support workflow, not just an FAQ page.",
         items: [
@@ -7998,7 +7998,7 @@ export const templates: TemplateSeo[] = [
           {
             title: "Fallback rate",
             description:
-              "How often the flow cannot answer and needs fallback or clarification.",
+              "How often the workflow cannot answer and needs fallback or clarification.",
           },
           {
             title: "Handover rate",
@@ -8031,12 +8031,12 @@ export const templates: TemplateSeo[] = [
         eyebrow: "FAQ",
         title: "Frequently asked questions",
         description:
-          "Answer the rollout questions before implementation so the support FAQ flow can launch without ambiguity.",
+          "Answer the rollout questions before implementation so the support FAQ workflow can launch without ambiguity.",
         items: [
           {
-            question: "Can this FAQ flow be customized for our support team?",
+            question: "Can this FAQ workflow be customized for our support team?",
             answer:
-              "Yes. The flow can be adapted for your FAQ categories, support policies, customer fields, escalation rules, fallback messages, and handover teams.",
+              "Yes. The workflow can be adapted for your FAQ categories, support policies, customer fields, escalation rules, fallback messages, and handover teams.",
           },
           {
             question: "Can Crescora AI answer repeated support questions automatically?",
@@ -8044,45 +8044,45 @@ export const templates: TemplateSeo[] = [
               "Yes. Crescora AI can answer common questions using FAQ or approved knowledge paths, then route unclear or unresolved questions to fallback or human handover.",
           },
           {
-            question: "What happens when the flow cannot answer?",
+            question: "What happens when the workflow cannot answer?",
             answer:
-              "The flow should ask for clarification, provide a safe fallback, or escalate to a human support team with customer details and conversation history.",
+              "The workflow should ask for clarification, provide a safe fallback, or escalate to a human support team with customer details and conversation history.",
           },
           {
-            question: "Can this flow create support context before handover?",
+            question: "Can this workflow create support context before handover?",
             answer:
-              "Yes. The flow can collect issue type, urgency, customer details, order ID, service reference, screenshot reference, or message summary before routing the case.",
+              "Yes. The workflow can collect issue type, urgency, customer details, order ID, service reference, screenshot reference, or message summary before routing the case.",
           },
           {
             question: "Can managers track unresolved FAQs?",
             answer:
-              "Yes. The flow can track fallback events, handover volume, repeated unanswered topics, support categories, and resolution outcomes.",
+              "Yes. The workflow can track fallback events, handover volume, repeated unanswered topics, support categories, and resolution outcomes.",
           },
         ],
       },
       finalCta: {
         eyebrow: "Next step",
-        title: "Ready to launch your customer support FAQ flow?",
+        title: "Ready to launch your customer support FAQ workflow?",
         description:
-          "Tell us how your team currently handles repeated questions, support requests, complaints, billing queries, unresolved issues, and human escalation. We'll map your FAQ flow and show how Crescora AI can reduce repetitive support load while keeping human control for complex cases.",
+          "Tell us how your team currently handles repeated questions, support requests, complaints, billing queries, unresolved issues, and human escalation. We'll map your FAQ workflow and show how Crescora AI can reduce repetitive support load while keeping human control for complex cases.",
         note:
           "Start with FAQ resolution. Prove value. Expand into issue triage, ticket routing, handover, analytics, and knowledge improvement.",
-        primary: { label: "Book Support FAQ Flow Demo", href: "/contact" },
-        secondary: { label: "Discuss My Support Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
   {
     slug: "payment-reminder-flow",
-    title: "Payment Reminder Flow | Crescora AI",
+    title: "Payment Reminder Workflow | Crescora AI",
     metadataTitle:
-      "Payment Reminder Flow for Collections, Failed Payments, Overdue Escalation, and Billing Follow-Ups | Crescora AI",
+      "Payment Reminder Workflow for Collections, Failed Payments, Overdue Escalation, and Billing Follow-Ups | Crescora AI",
     metadataDescription:
-      "Launch a payment reminder flow with Crescora AI. Automate payment reminders, payment links, failed-payment recovery, receipt capture, overdue escalation, billing handover, and payment status tracking.",
+      "Launch a payment reminder workflow with Crescora AI. Automate payment reminders, payment links, failed-payment recovery, receipt capture, overdue escalation, billing handover, and payment status tracking.",
     intent: "Decision workflow",
-    keywordTarget: "payment reminder flow",
+    keywordTarget: "payment reminder workflow",
     headline:
-      "Launch a payment reminder flow for pending collections, failed payments, overdue escalation, and status updates.",
+      "Launch a payment reminder workflow for pending collections, failed payments, overdue escalation, and status updates.",
     description:
       "A launch-ready workflow template for payment due reminders, payment links, failed-payment recovery, pending verification, overdue escalation, billing handover, and payment status tracking.",
     included: [
@@ -8095,19 +8095,19 @@ export const templates: TemplateSeo[] = [
       "Overdue escalation",
       "Payment status update",
     ],
-    ctaLabel: "Book Payment Reminder Flow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
-      breadcrumbTitle: "Payment Reminder Flow",
+      breadcrumbTitle: "Payment Reminder Workflow",
       hero: {
-        eyebrow: "Payment Flow",
+        eyebrow: "Payment Workflow",
         title:
-          "Launch a payment reminder flow for pending collections, failed payments, overdue escalation, and status updates.",
+          "Launch a payment reminder workflow for pending collections, failed payments, overdue escalation, and status updates.",
         description:
           "Start from a practical Crescora AI template that helps teams send payment reminders, share payment links, collect payment references, confirm payment status, recover failed payments, escalate overdue cases, and track every payment follow-up from due notice to final outcome.",
         supportLine:
           "Built for payment due reminders, invoice follow-ups, consultation fees, booking tokens, payment links, receipt capture, failed-payment recovery, overdue escalation, and billing handover.",
-        primaryCta: { label: "Book Payment Reminder Flow Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Payment Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Due",
           "Reminder Sent",
@@ -8124,9 +8124,9 @@ export const templates: TemplateSeo[] = [
           eyebrow: "Workflow preview",
           title: "From payment due notice to a clear collection outcome.",
           description:
-            "The workflow keeps reminders, link sharing, verification, failed-payment recovery, and billing handover visible so teams can manage the collection path in one flow.",
+            "The workflow keeps reminders, link sharing, verification, failed-payment recovery, and billing handover visible so teams can manage the collection path in one workflow.",
           note:
-            "Start with one payment reminder flow. Prove value. Expand into verification, receipts, billing escalation, and collection dashboards.",
+            "Start with one payment reminder workflow. Prove value. Expand into verification, receipts, billing escalation, and collection dashboards.",
           path: [
             "Payment Due",
             "Reminder Sent",
@@ -8158,25 +8158,25 @@ export const templates: TemplateSeo[] = [
           eyebrow: "Launch-Ready Structure",
           title: "Show a clear reminder and escalation journey for collections.",
           description:
-            "This flow gives your team a structured payment follow-up path: payment due message, reminder sequence, payment link sharing, reference capture, verification status, failed-payment recovery, overdue escalation, billing handover, and outcome tracking.",
+            "This workflow gives your team a structured payment follow-up path: payment due message, reminder sequence, payment link sharing, reference capture, verification status, failed-payment recovery, overdue escalation, billing handover, and outcome tracking.",
         },
         {
           eyebrow: "What Is Included",
           title: "Everything needed to recover pending payments and track status.",
           description:
-            "The flow can include due-date triggers, reminder timing, payment links, receipt or transaction reference capture, payment verification, retry prompts, overdue rules, billing team handover, status updates, and analytics events for paid, failed, pending, and escalated payments.",
+            "The workflow can include due-date triggers, reminder timing, payment links, receipt or transaction reference capture, payment verification, retry prompts, overdue rules, billing team handover, status updates, and analytics events for paid, failed, pending, and escalated payments.",
         },
       ],
       includedSection: {
         eyebrow: "What this template includes",
-        title: "What this payment reminder flow includes",
+        title: "What this payment reminder workflow includes",
         description:
           "Use the template as a workflow for moving every pending payment toward a clear collection outcome instead of leaving reminders, receipts, and escalation scattered across channels.",
         items: [
           {
             title: "Payment due trigger",
             description:
-              "Start the flow when an invoice, booking fee, consultation fee, service charge, subscription, admission fee, or pending balance becomes due.",
+              "Start the workflow when an invoice, booking fee, consultation fee, service charge, subscription, admission fee, or pending balance becomes due.",
           },
           {
             title: "Reminder sequence",
@@ -8201,7 +8201,7 @@ export const templates: TemplateSeo[] = [
           {
             title: "Failed-payment recovery",
             description:
-              "If payment fails, the flow should offer retry guidance, alternate support, or billing handover instead of ending silently.",
+              "If payment fails, the workflow should offer retry guidance, alternate support, or billing handover instead of ending silently.",
           },
           {
             title: "Overdue escalation",
@@ -8235,7 +8235,7 @@ export const templates: TemplateSeo[] = [
       },
       setupNoteSection: {
         eyebrow: "Crescora AI capabilities used",
-        title: "Crescora AI capabilities used in this flow",
+        title: "Crescora AI capabilities used in this workflow",
         description:
           "The runtime supports durable reminder scheduling, payment verification, downstream status usage, human oversight, and multi-channel delivery across web widget, WhatsApp, SMS, email, API calls, and records.",
         note:
@@ -8253,7 +8253,7 @@ export const templates: TemplateSeo[] = [
           },
           {
             before: "Customers are unsure how to pay or confirm",
-            after: "The flow gives payment instructions and next steps",
+            after: "The workflow gives payment instructions and next steps",
           },
           {
             before: "Failed payments are handled inconsistently",
@@ -8275,7 +8275,7 @@ export const templates: TemplateSeo[] = [
       },
       useCasesSection: {
         eyebrow: "Use cases",
-        title: "Use this payment reminder flow for",
+        title: "Use this payment reminder workflow for",
         description:
           "Start with the payment workflow that matters most, then expand into verification, receipts, billing escalation, and collection dashboards.",
         items: [
@@ -8313,7 +8313,7 @@ export const templates: TemplateSeo[] = [
       },
       metricsSection: {
         eyebrow: "Metrics",
-        title: "What to measure after launching this flow",
+        title: "What to measure after launching this workflow",
         description:
           "Treat the first rollout as a measurable collections workflow, not just a reminder sequence.",
         items: [
@@ -8358,22 +8358,22 @@ export const templates: TemplateSeo[] = [
         eyebrow: "FAQ",
         title: "Frequently asked questions",
         description:
-          "Answer the rollout questions before implementation so the payment reminder flow can launch without ambiguity.",
+          "Answer the rollout questions before implementation so the payment reminder workflow can launch without ambiguity.",
         items: [
           {
-            question: "Can this payment reminder flow be customized?",
+            question: "Can this payment reminder workflow be customized?",
             answer:
-              "Yes. The flow can be adapted for your payment stages, reminder timing, payment provider, invoice process, customer segments, and escalation rules.",
+              "Yes. The workflow can be adapted for your payment stages, reminder timing, payment provider, invoice process, customer segments, and escalation rules.",
           },
           {
             question: "Can Crescora AI verify payment status automatically?",
             answer:
-              "Where provider support is configured, Crescora AI can verify payment status. If automatic verification is not available, the flow can collect transaction references, screenshots, or manual confirmation details.",
+              "Where provider support is configured, Crescora AI can verify payment status. If automatic verification is not available, the workflow can collect transaction references, screenshots, or manual confirmation details.",
           },
           {
             question: "What happens when payment fails?",
             answer:
-              "The flow should offer retry guidance, alternate help, or billing handover. Failed payments should not end silently.",
+              "The workflow should offer retry guidance, alternate help, or billing handover. Failed payments should not end silently.",
           },
           {
             question: "Can reminders be sent through WhatsApp, SMS, or email?",
@@ -8389,27 +8389,27 @@ export const templates: TemplateSeo[] = [
       },
       finalCta: {
         eyebrow: "Next step",
-        title: "Ready to launch your payment reminder flow?",
+        title: "Ready to launch your payment reminder workflow?",
         description:
           "Tell us how your team currently handles pending payments, payment links, reminders, failed payments, receipts, overdue cases, and billing handover. We'll map your process and show how this Crescora AI template can reduce manual chasing and improve collection visibility.",
         note:
-          "Start with one payment reminder flow. Prove value. Expand into verification, receipts, billing escalation, and collection dashboards.",
-        primary: { label: "Book Payment Reminder Flow Demo", href: "/contact" },
-        secondary: { label: "Discuss My Payment Workflow", href: "/contact" },
+          "Start with one payment reminder workflow. Prove value. Expand into verification, receipts, billing escalation, and collection dashboards.",
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
   {
     slug: "lab-report-notification-flow",
-    title: "Lab Report Notification Flow | Crescora AI",
+    title: "Lab Report Notification Workflow | Crescora AI",
     metadataTitle:
-      "Lab Report Notification Flow for Report-Ready Alerts, Secure Access, Receipt Confirmation, and Patient Handover | Crescora AI",
+      "Lab Report Notification Workflow for Report-Ready Alerts, Secure Access, Receipt Confirmation, and Patient Handover | Crescora AI",
     metadataDescription:
-      "Launch a lab report notification flow with Crescora AI. Notify patients when reports are ready, verify patient details, share secure access instructions, confirm receipt, handle failed delivery, and route report support cases to staff.",
+      "Launch a lab report notification workflow with Crescora AI. Notify patients when reports are ready, verify patient details, share secure access instructions, confirm receipt, handle failed delivery, and route report support cases to staff.",
     intent: "Decision workflow",
-    keywordTarget: "lab report notification flow",
+    keywordTarget: "lab report notification workflow",
     headline:
-      "Launch a lab report notification flow for report-ready alerts, secure access, and patient confirmation.",
+      "Launch a lab report notification workflow for report-ready alerts, secure access, and patient confirmation.",
     description:
       "A launch-ready workflow template for report-ready notifications, secure access guidance, receipt confirmation, failed-delivery fallback, and lab support handover.",
     included: [
@@ -8422,19 +8422,19 @@ export const templates: TemplateSeo[] = [
       "Report support handover",
       "Delivery and outcome tracking",
     ],
-    ctaLabel: "Book Lab Report Flow Demo",
+    ctaLabel: "Book Free Demo",
     publicPage: {
-      breadcrumbTitle: "Lab Report Notification Flow",
+      breadcrumbTitle: "Lab Report Notification Workflow",
       hero: {
-        eyebrow: "Lab Report Flow",
+        eyebrow: "Lab Report Workflow",
         title:
-          "Launch a lab report notification flow for report-ready alerts, secure access, and patient confirmation.",
+          "Launch a lab report notification workflow for report-ready alerts, secure access, and patient confirmation.",
         description:
           "Start from a practical Crescora AI template that helps hospitals, clinics, and diagnostic labs notify patients when reports are ready, verify patient details, share secure report access instructions, confirm receipt, handle failed delivery, and route sensitive or unresolved cases to staff.",
         supportLine:
           "Built for report-ready notifications, patient mobile verification, report ID lookup, secure report links, SMS/WhatsApp/email fallback, receipt confirmation, and lab staff handover.",
-        primaryCta: { label: "Book Lab Report Flow Demo", href: "/contact" },
-        secondaryCta: { label: "Discuss My Healthcare Workflow", href: "/contact" },
+        primaryCta: { label: "Book Free Demo", href: "/contact" },
+        secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
         statusChips: [
           "Report Ready",
           "Patient Matched",
@@ -8484,25 +8484,25 @@ export const templates: TemplateSeo[] = [
           eyebrow: "Launch-Ready Structure",
           title: "Notify patients when reports are ready, without manual calling.",
           description:
-            "This flow gives your team a structured report notification path: report-ready trigger, patient contact lookup, delivery channel selection, secure report access message, receipt confirmation, failed-delivery fallback, and staff handover when support is needed.",
+            "This workflow gives your team a structured report notification path: report-ready trigger, patient contact lookup, delivery channel selection, secure report access message, receipt confirmation, failed-delivery fallback, and staff handover when support is needed.",
         },
         {
           eyebrow: "What Is Included",
           title: "Everything needed to notify patients and track report delivery safely.",
           description:
-            "The flow can include report-ready triggers, patient mobile and report ID matching, WhatsApp, SMS, or email notification, secure link instructions, consent-aware delivery, receipt confirmation, failed-notification fallback, report support routing, and delivery status tracking.",
+            "The workflow can include report-ready triggers, patient mobile and report ID matching, WhatsApp, SMS, or email notification, secure link instructions, consent-aware delivery, receipt confirmation, failed-notification fallback, report support routing, and delivery status tracking.",
         },
       ],
       includedSection: {
         eyebrow: "What this template includes",
-        title: "What this lab report notification flow includes",
+        title: "What this lab report notification workflow includes",
         description:
           "Use the template as a workflow for sending traceable report-ready notifications, then keep each case moving through confirmation, fallback, or staff support when needed.",
         items: [
           {
             title: "Report-ready trigger",
             description:
-              "Start the flow when the lab, LIS, HMS, CRM, or internal system marks a report as ready.",
+              "Start the workflow when the lab, LIS, HMS, CRM, or internal system marks a report as ready.",
           },
           {
             title: "Patient lookup and verification",
@@ -8563,7 +8563,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Healthcare privacy note",
         title: "Important healthcare privacy note",
         description:
-          "This flow should support report notification and access guidance. It should not explain, diagnose, or interpret medical results unless a qualified healthcare professional has approved that communication.",
+          "This workflow should support report notification and access guidance. It should not explain, diagnose, or interpret medical results unless a qualified healthcare professional has approved that communication.",
         note:
           "Lab reports may contain sensitive health information. Crescora AI should notify patients that a report is ready and guide them to a secure access path. Medical interpretation, urgent findings, or sensitive report concerns should be routed to qualified hospital or lab staff.",
       },
@@ -8601,7 +8601,7 @@ export const templates: TemplateSeo[] = [
       },
       useCasesSection: {
         eyebrow: "Use cases",
-        title: "Use this lab report notification flow for",
+        title: "Use this lab report notification workflow for",
         description:
           "Start with report-ready notifications, then expand into receipt confirmation, fallback channels, and report support handover.",
         items: [
@@ -8639,7 +8639,7 @@ export const templates: TemplateSeo[] = [
       },
       capabilitiesSection: {
         eyebrow: "Crescora AI capabilities used",
-        title: "Crescora AI capabilities used in this flow",
+        title: "Crescora AI capabilities used in this workflow",
         description:
           "Notification, template-message, API or connector, record, media, handover, track-event, and audit-log capabilities combine to make this workflow traceable and production-ready.",
         items: [
@@ -8682,7 +8682,7 @@ export const templates: TemplateSeo[] = [
       },
       metricsSection: {
         eyebrow: "Metrics",
-        title: "What to measure after launching this flow",
+        title: "What to measure after launching this workflow",
         description:
           "Treat the first rollout as a measurable healthcare notification workflow, not just a message blast.",
         items: [
@@ -8727,10 +8727,10 @@ export const templates: TemplateSeo[] = [
         eyebrow: "FAQ",
         title: "Frequently asked questions",
         description:
-          "Answer the rollout questions before implementation so the lab report notification flow can launch without ambiguity.",
+          "Answer the rollout questions before implementation so the lab report notification workflow can launch without ambiguity.",
         items: [
           {
-            question: "Can this flow notify patients when reports are ready?",
+            question: "Can this workflow notify patients when reports are ready?",
             answer:
               "Yes. Crescora AI can trigger report-ready notifications through supported channels such as WhatsApp, SMS, email, or web chat depending on rollout scope and provider setup.",
           },
@@ -8742,12 +8742,12 @@ export const templates: TemplateSeo[] = [
           {
             question: "Can patients confirm they received the report?",
             answer:
-              "Yes. The flow can ask patients to confirm receipt or report access and store the status for lab or admin visibility.",
+              "Yes. The workflow can ask patients to confirm receipt or report access and store the status for lab or admin visibility.",
           },
           {
             question: "What happens if the notification fails?",
             answer:
-              "The flow should use fallback channels, retry logic, or staff handover. Crescora AI notification nodes support sent, partially sent, and failed outcomes with fallback design.",
+              "The workflow should use fallback channels, retry logic, or staff handover. Crescora AI notification nodes support sent, partially sent, and failed outcomes with fallback design.",
           },
           {
             question: "Can this connect with our lab software?",
@@ -8758,13 +8758,13 @@ export const templates: TemplateSeo[] = [
       },
       finalCta: {
         eyebrow: "Next step",
-        title: "Ready to launch your lab report notification flow?",
+        title: "Ready to launch your lab report notification workflow?",
         description:
           "Tell us how your lab or hospital currently handles report-ready alerts, patient verification, report links, receipt confirmation, failed delivery, and report support. We'll map your process and show how Crescora AI can reduce manual calls while keeping report communication controlled and traceable.",
         note:
           "Start with report-ready notifications. Prove value. Expand into report status lookup, secure access, receipt confirmation, and lab support handover.",
-        primary: { label: "Book Lab Report Flow Demo", href: "/contact" },
-        secondary: { label: "Discuss My Healthcare Workflow", href: "/contact" },
+        primary: { label: "Book Free Demo", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
@@ -8774,7 +8774,7 @@ export const industriesSeo: IndustrySeo[] = [
   {
     slug: "hospitals",
     name: "Hospitals",
-    title: "Hospital WhatsApp Automation and Patient Flows | Crescora AI",
+    title: "Hospital WhatsApp Automation and Patient Workflows | Crescora AI",
     h1: "Automate patient communication, reminders, and document collection",
     keywordTarget: "hospital whatsapp bot",
     description:
@@ -8787,7 +8787,7 @@ export const industriesSeo: IndustrySeo[] = [
     slug: "clinics",
     name: "Clinics",
     title: "Clinic Appointment Automation and Follow-Up | Crescora AI",
-    h1: "Automate clinic appointments and follow-up flows",
+    h1: "Automate clinic appointments and follow-up workflows",
     keywordTarget: "clinic appointment automation",
     description:
       "Crescora AI can help clinics capture appointment requests, confirm patient details, send reminders, collect follow-up needs, and route sensitive cases to staff.",

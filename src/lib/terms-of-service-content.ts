@@ -212,7 +212,11 @@ export const termsOfServiceContent = {
     },
     {
       title: "22. Contact",
-      paragraphs: ["Crescora AI", "Crescora AI, 2nd floor,Club house, Urbanrise oncloud 33, bachupally,hyderabad-90 Telangana,India", "Email: support@crescora.ai"],
+      paragraphs: [
+        "Crescora AI",
+        "2nd Floor, Club House, Urbanrise Oncloud 33, Bachupally, Hyderabad, Telangana, India",
+        "Email: support@crescora.ai",
+      ],
     },
   ],
 } as const satisfies LegalPageData;

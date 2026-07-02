@@ -30,7 +30,7 @@ export const stateIndustrySeoBySlug: Record<StateIndustrySlug, StateIndustrySeoC
       "Best for hospitals, diagnostics, and healthcare teams that need patient enquiries, appointment coordination, reminders, billing guidance, reports, and escalations under one workflow layer.",
     launchLine:
       "Start with one high-friction patient journey such as appointment booking, doctor availability, report support, or billing help, then expand into reminders, documents, and escalation paths.",
-    ctaLabel: "Book Hospital Demo",
+    ctaLabel: "Book Free Demo",
     outcomeAreas: ["Patient enquiries", "Appointments", "Reminders", "Reports and documents", "Billing and handoff"],
   },
   clinics: {
@@ -44,7 +44,7 @@ export const stateIndustrySeoBySlug: Record<StateIndustrySlug, StateIndustrySeoC
       "Best for clinics and healthcare teams that need enquiry capture, appointment booking, reminders, consultation fee follow-up, FAQs, and staff escalation.",
     launchLine:
       "Start with appointment intake, slot coordination, reminders, and reschedules before expanding into payments, document collection, and human handoff.",
-    ctaLabel: "Book Clinic Demo",
+    ctaLabel: "Book Free Demo",
     outcomeAreas: ["Booking enquiries", "Doctor or service selection", "Reminders", "Fee follow-up", "Patient handoff"],
   },
   "support-teams": {
@@ -58,7 +58,7 @@ export const stateIndustrySeoBySlug: Record<StateIndustrySlug, StateIndustrySeoC
       "Best for support operations that need approved answers, ticket triage, handoff rules, status updates, and operational visibility across high-volume conversations.",
     launchLine:
       "Start with FAQ resolution and escalation routing, then expand into analytics, queue ownership, SLA tracking, and support outcome reporting.",
-    ctaLabel: "Book Support Demo",
+    ctaLabel: "Book Free Demo",
     outcomeAreas: ["Approved answers", "Issue triage", "Escalation paths", "Queue visibility", "Support outcomes"],
   },
   "service-businesses": {
@@ -72,7 +72,7 @@ export const stateIndustrySeoBySlug: Record<StateIndustrySlug, StateIndustrySeoC
       "Best for booking-driven and follow-up-heavy teams that need enquiries, confirmations, reminders, payments, documents, and customer updates inside one operating layer.",
     launchLine:
       "Start with the workflow closest to revenue, such as lead capture, appointment booking, reminder automation, or collections follow-up, then expand into support and visibility.",
-    ctaLabel: "Book Service Business Demo",
+    ctaLabel: "Book Free Demo",
     outcomeAreas: ["Enquiries", "Bookings", "Reminders", "Payments", "Customer updates"],
   },
 };

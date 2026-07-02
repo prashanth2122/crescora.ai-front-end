@@ -272,8 +272,29 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="border-t border-zinc-200 p-5">
-                  <p className="text-sm font-semibold text-zinc-950">{review.name}</p>
-                  <p className="mt-2 text-sm leading-7 text-zinc-600">&quot;{review.quote}&quot;</p>
+                  <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+                    <span>{review.sourcePlatform}</span>
+                    <span aria-hidden="true">/</span>
+                    <span>{review.reviewDate}</span>
+                    <span aria-hidden="true">/</span>
+                    <span>{review.isPublicReviewScreenshot ? "Public review screenshot" : "Review capture"}</span>
+                  </div>
+                  <p className="mt-3 text-sm font-semibold text-zinc-950">{review.name}</p>
+                  {review.quote ? (
+                    <p className="mt-2 text-sm leading-7 text-zinc-600">&quot;{review.quote}&quot;</p>
+                  ) : (
+                    <p className="mt-2 text-sm leading-7 text-zinc-600">
+                      Customer quote is not transcribed because the supplied capture does not show a readable customer comment.
+                    </p>
+                  )}
+                  {review.sourceHref ? (
+                    <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
+                      <a href={review.sourceHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
+                        View source
+                        <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  ) : null}
                 </div>
               </CardContent>
             </Card>

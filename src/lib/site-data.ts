@@ -58,7 +58,7 @@ export type PricingPackage = {
 
 export const pricingPackages: readonly PricingPackage[] = [
   {
-    label: "FIRST WORKFLOW",
+    label: "FIRST AUTOMATION",
     title: "Starter",
     price: "₹10,000/mo",
     bestFor: "Small teams launching their first focused automation.",
@@ -132,7 +132,7 @@ export const pricingRegions = [
 
 const globalPricingPackages: readonly PricingPackage[] = [
   {
-    label: "FIRST WORKFLOW",
+    label: "FIRST AUTOMATION",
     title: "Starter",
     price: "$199/mo",
     bestFor: pricingPackages[0].bestFor,

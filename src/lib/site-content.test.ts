@@ -133,15 +133,17 @@ test("about page copy includes founder-led proof policy and safe legal identity 
   assert.match(siteContent.about.notOnly.summary, /workflow automation system/);
   assert.match(siteContent.about.proofPolicy.description, /fake testimonials/);
   assert.equal(siteContent.about.proofPolicy.reviewScreenshots.items.length, 4);
+  assert.equal(siteContent.about.proofPolicy.reviewScreenshots.items[3]?.quote, null);
+  assert.ok(siteContent.about.proofPolicy.reviewScreenshots.items.every((review) => review.isPublicReviewScreenshot));
   assert.match(siteContent.about.legalIdentity.description, /UDYAM-TS-02-0344089/);
-  assert.match(siteContent.about.legalIdentity.description, /08:00 AM to 12:00 PM IST/);
-  assert.match(siteContent.about.legalIdentity.description, /24x7/);
-  assert.ok(siteContent.about.legalIdentity.details.some((detail) => detail.value === "By invitation sent through email"));
+  assert.match(siteContent.about.legalIdentity.description, /Monday to Saturday, 10:00 AM to 6:00 PM IST/);
+  assert.match(siteContent.about.legalIdentity.description, /Support coverage depends on plan/);
+  assert.ok(siteContent.about.legalIdentity.details.some((detail) => detail.value === "By invitation or appointment through email"));
 });
 
 test("legal and lead-form content remains structured", () => {
   assert.equal(siteContent.leadForm.badge, "Workflow enquiry");
-  assert.equal(siteContent.leadForm.submitIdle, "Request Free Workflow Demo");
+  assert.equal(siteContent.leadForm.submitIdle, "Book Free Demo");
   assert.equal(isValidPhoneForCountry("+91 98765 43210", siteContent.leadForm.options.countries[0]), true);
   assert.equal(isValidPhoneForCountry("123", siteContent.leadForm.options.countries[0]), false);
   assert.ok(useCases.length >= 12);

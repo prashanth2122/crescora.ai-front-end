@@ -19,7 +19,6 @@ import { WorkflowVisual } from "@/components/site/workflow-visual";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   ArrowRight,
   BadgeCheck,
@@ -456,14 +455,14 @@ export default function HomePage() {
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{faq.eyebrow}</p>
-              <Accordion type="single" collapsible className="mt-4">
+              <div className="mt-6 space-y-4">
                 {faq.items.map((item) => (
-                  <AccordionItem key={item.question} value={item.question}>
-                    <AccordionTrigger>{item.question}</AccordionTrigger>
-                    <AccordionContent className="text-zinc-600">{item.answer}</AccordionContent>
-                  </AccordionItem>
+                  <div key={item.question} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+                    <h3 className="text-base font-semibold tracking-tight text-zinc-950">{item.question}</h3>
+                    <p className="mt-3 text-sm leading-7 text-zinc-600">{item.answer}</p>
+                  </div>
                 ))}
-              </Accordion>
+              </div>
             </CardContent>
           </Card>
         </div>

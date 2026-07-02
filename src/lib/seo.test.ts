@@ -240,7 +240,7 @@ test("whatsapp template detail page publishes buyer-facing copy and exact metada
     "Launch a WhatsApp automation template for lead capture, appointment booking, reminders, payment follow-ups, document requests, support routing, and human handover with Crescora AI.",
   );
   assert.match(html, /Launch a WhatsApp automation template for leads, bookings, reminders, support, and follow-ups\./);
-  assert.match(html, /Book WhatsApp Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this WhatsApp automation template includes/);
   assert.match(html, /What changes when Crescora AI runs the workflow/);
   assert.match(html, /Frequently asked questions/);
@@ -266,7 +266,7 @@ test("clinic template detail page publishes buyer-facing copy and exact metadata
     "Launch a clinic appointment booking template with Crescora AI. Automate patient enquiries, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
   );
   assert.match(html, /Launch a clinic appointment booking template for patient enquiries, reminders, and staff handover\./);
-  assert.match(html, /Book Clinic Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this clinic appointment template includes/);
   assert.match(html, /Important clinic workflow note/);
   assert.match(html, /Frequently asked questions/);
@@ -292,7 +292,7 @@ test("payment reminder template detail page publishes buyer-facing copy and exac
     "Launch a payment reminder template with Crescora AI. Automate payment reminders, payment links, failed-payment recovery, reference capture, overdue escalation, and billing handover.",
   );
   assert.match(html, /Launch a payment reminder template for collections, failed payments, and follow-ups\./);
-  assert.match(html, /Book Payment Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this payment reminder template includes/);
   assert.match(html, /Important setup note/);
   assert.match(html, /Frequently asked questions/);
@@ -321,7 +321,7 @@ test("document collection template detail page publishes buyer-facing copy and e
     html,
     /Launch a document collection template for KYC, intake, missing files, and review workflows\./,
   );
-  assert.match(html, /Book Document Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this document collection template includes/);
   assert.match(html, /Built for document workflows with privacy and control/);
   assert.match(html, /Frequently asked questions/);
@@ -350,7 +350,7 @@ test("customer support bot template detail page publishes buyer-facing copy and 
     html,
     /Launch a customer support bot template for FAQ resolution, issue triage, and human handover\./,
   );
-  assert.match(html, /Book Support Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this customer support template includes/);
   assert.match(html, /Open cases, escalated cases, repeated questions, and unresolved conversations\./);
   assert.match(html, /Frequently asked questions/);
@@ -379,7 +379,7 @@ test("knowledge assistant template detail page publishes buyer-facing copy and e
     html,
     /Launch a knowledge assistant template for approved answers, FAQ automation, and human handover\./,
   );
-  assert.match(html, /Book Knowledge Assistant Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this knowledge assistant template includes/);
   assert.match(html, /Start with one knowledge area\. Prove answer quality\./);
   assert.match(html, /Frequently asked questions/);
@@ -408,7 +408,7 @@ test("service business booking template detail page publishes buyer-facing copy 
     html,
     /Launch a service booking template for enquiries, appointments, reminders, payments, and follow-ups\./,
   );
-  assert.match(html, /Book Service Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this service booking template includes/);
   assert.match(html, /Start with one booking workflow\. Prove value\./);
   assert.match(html, /Frequently asked questions/);
@@ -437,7 +437,7 @@ test("billing and collections template detail page publishes buyer-facing copy a
     html,
     /Launch a billing and collections template for reminders, payment follow-ups, overdue cases, and exception handover\./,
   );
-  assert.match(html, /Book Billing Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this billing and collections template includes/);
   assert.match(html, /Built for billing workflows with control/);
   assert.match(html, /Frequently asked questions/);
@@ -466,14 +466,14 @@ test("observability dashboard template detail page publishes buyer-facing copy a
     html,
     /Launch a conversation observability dashboard template for workflow visibility, leakage tracking, and outcome reporting\./,
   );
-  assert.match(html, /Book Observability Template Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /What this observability dashboard template includes/);
   assert.match(html, /Built for observability with clean data and privacy control/);
   assert.match(html, /Frequently asked questions/);
   assert.doesNotMatch(html, /BOFU|What the template page should show|See dashboard/i);
 });
 
-test("hospital appointment booking flow detail page publishes buyer-facing copy and exact metadata", async () => {
+test("hospital appointment booking workflow detail page publishes buyer-facing copy and exact metadata", async () => {
   const metadata = await generateTemplateDetailMetadata({
     params: Promise.resolve({ template: "hospital-appointment-booking-flow" }),
   });
@@ -485,24 +485,24 @@ test("hospital appointment booking flow detail page publishes buyer-facing copy 
 
   assert.deepEqual(metadata.title, {
     absolute:
-      "Hospital Appointment Booking Flow for OPD, Reminders, Payments, and Patient Handover | Crescora AI",
+      "Hospital Appointment Booking Workflow for OPD, Reminders, Payments, and Patient Handover | Crescora AI",
   });
   assert.equal(
     metadata.description,
-    "Launch a hospital appointment booking flow with Crescora AI. Automate OPD enquiries, patient intake, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
+    "Launch a hospital appointment booking workflow with Crescora AI. Automate OPD enquiries, patient intake, doctor selection, slot booking, reminders, consultation fee follow-up, rescheduling, and staff handover.",
   );
   assert.match(
     html,
-    /Launch a hospital appointment booking flow for OPD visits, reminders, payments, and staff handover\./,
+    /Launch a hospital appointment booking workflow for OPD visits, reminders, payments, and staff handover\./,
   );
-  assert.match(html, /Book Hospital Workflow Demo/);
-  assert.match(html, /What this hospital appointment flow includes/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /What this hospital appointment workflow includes/);
   assert.match(html, /Important hospital workflow note/);
   assert.match(html, /Frequently asked questions/);
   assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
 });
 
-test("real estate lead follow-up flow detail page publishes buyer-facing copy and exact metadata", async () => {
+test("real estate lead follow-up workflow detail page publishes buyer-facing copy and exact metadata", async () => {
   const metadata = await generateTemplateDetailMetadata({
     params: Promise.resolve({ template: "real-estate-lead-followup-flow" }),
   });
@@ -514,18 +514,18 @@ test("real estate lead follow-up flow detail page publishes buyer-facing copy an
 
   assert.deepEqual(metadata.title, {
     absolute:
-      "Real Estate Lead Follow-Up Flow for Property Enquiries, Site Visits, Sales Handover, and Reminders | Crescora AI",
+      "Real Estate Lead Follow-Up Workflow for Property Enquiries, Site Visits, Sales Handover, and Reminders | Crescora AI",
   });
   assert.equal(
     metadata.description,
-    "Launch a real estate lead follow-up flow with Crescora AI. Capture property enquiries, qualify buyers, share projects, book site visits, assign sales reps, and automate follow-ups.",
+    "Launch a real estate lead follow-up workflow with Crescora AI. Capture property enquiries, qualify buyers, share projects, book site visits, assign sales reps, and automate follow-ups.",
   );
   assert.match(
     html,
-    /Launch a real estate lead follow-up flow for property enquiries, site visits, and sales handover\./,
+    /Launch a real estate lead follow-up workflow for property enquiries, site visits, and sales handover\./,
   );
-  assert.match(html, /Book Real Estate Follow-Up Demo/);
-  assert.match(html, /What this real estate follow-up flow includes/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /What this real estate follow-up workflow includes/);
   assert.match(html, /Start with lead qualification and site visit follow-up\. Prove value\./);
   assert.match(html, /Frequently asked questions/);
   assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
@@ -543,24 +543,24 @@ test("customer support faq flow detail page publishes buyer-facing copy and exac
 
   assert.deepEqual(metadata.title, {
     absolute:
-      "Customer Support FAQ Flow for Approved Answers, Issue Triage, Human Handover, and Support Analytics | Crescora AI",
+      "Customer Support FAQ Workflow for Approved Answers, Issue Triage, Human Handover, and Support Analytics | Crescora AI",
   });
   assert.equal(
     metadata.description,
-    "Launch a customer support FAQ flow with Crescora AI. Automate approved answers, repeated questions, issue triage, fallback handling, human escalation, status updates, and support visibility.",
+    "Launch a customer support FAQ workflow with Crescora AI. Automate approved answers, repeated questions, issue triage, fallback handling, human escalation, status updates, and support visibility.",
   );
   assert.match(
     html,
-    /Launch a customer support FAQ flow for approved answers, issue triage, and human escalation\./,
+    /Launch a customer support FAQ workflow for approved answers, issue triage, and human escalation\./,
   );
-  assert.match(html, /Book Support FAQ Flow Demo/);
-  assert.match(html, /What this customer support FAQ flow includes/);
-  assert.match(html, /Crescora AI capabilities used in this flow/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /What this customer support FAQ workflow includes/);
+  assert.match(html, /Crescora AI capabilities used in this workflow/);
   assert.match(html, /Frequently asked questions/);
   assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
 });
 
-test("payment reminder flow detail page publishes buyer-facing copy and exact metadata", async () => {
+test("payment reminder workflow detail page publishes buyer-facing copy and exact metadata", async () => {
   const metadata = await generateTemplateDetailMetadata({
     params: Promise.resolve({ template: "payment-reminder-flow" }),
   });
@@ -572,24 +572,24 @@ test("payment reminder flow detail page publishes buyer-facing copy and exact me
 
   assert.deepEqual(metadata.title, {
     absolute:
-      "Payment Reminder Flow for Collections, Failed Payments, Overdue Escalation, and Billing Follow-Ups | Crescora AI",
+      "Payment Reminder Workflow for Collections, Failed Payments, Overdue Escalation, and Billing Follow-Ups | Crescora AI",
   });
   assert.equal(
     metadata.description,
-    "Launch a payment reminder flow with Crescora AI. Automate payment reminders, payment links, failed-payment recovery, receipt capture, overdue escalation, billing handover, and payment status tracking.",
+    "Launch a payment reminder workflow with Crescora AI. Automate payment reminders, payment links, failed-payment recovery, receipt capture, overdue escalation, billing handover, and payment status tracking.",
   );
   assert.match(
     html,
-    /Launch a payment reminder flow for pending collections, failed payments, overdue escalation, and status updates\./,
+    /Launch a payment reminder workflow for pending collections, failed payments, overdue escalation, and status updates\./,
   );
-  assert.match(html, /Book Payment Reminder Flow Demo/);
-  assert.match(html, /What this payment reminder flow includes/);
-  assert.match(html, /Crescora AI capabilities used in this flow/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /What this payment reminder workflow includes/);
+  assert.match(html, /Crescora AI capabilities used in this workflow/);
   assert.match(html, /Frequently asked questions/);
   assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
 });
 
-test("lab report notification flow detail page publishes buyer-facing copy and exact metadata", async () => {
+test("lab report notification workflow detail page publishes buyer-facing copy and exact metadata", async () => {
   const metadata = await generateTemplateDetailMetadata({
     params: Promise.resolve({ template: "lab-report-notification-flow" }),
   });
@@ -601,20 +601,20 @@ test("lab report notification flow detail page publishes buyer-facing copy and e
 
   assert.deepEqual(metadata.title, {
     absolute:
-      "Lab Report Notification Flow for Report-Ready Alerts, Secure Access, Receipt Confirmation, and Patient Handover | Crescora AI",
+      "Lab Report Notification Workflow for Report-Ready Alerts, Secure Access, Receipt Confirmation, and Patient Handover | Crescora AI",
   });
   assert.equal(
     metadata.description,
-    "Launch a lab report notification flow with Crescora AI. Notify patients when reports are ready, verify patient details, share secure access instructions, confirm receipt, handle failed delivery, and route report support cases to staff.",
+    "Launch a lab report notification workflow with Crescora AI. Notify patients when reports are ready, verify patient details, share secure access instructions, confirm receipt, handle failed delivery, and route report support cases to staff.",
   );
   assert.match(
     html,
-    /Launch a lab report notification flow for report-ready alerts, secure access, and patient confirmation\./,
+    /Launch a lab report notification workflow for report-ready alerts, secure access, and patient confirmation\./,
   );
-  assert.match(html, /Book Lab Report Flow Demo/);
-  assert.match(html, /What this lab report notification flow includes/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /What this lab report notification workflow includes/);
   assert.match(html, /Important healthcare privacy note/);
-  assert.match(html, /Crescora AI capabilities used in this flow/);
+  assert.match(html, /Crescora AI capabilities used in this workflow/);
   assert.match(html, /Frequently asked questions/);
   assert.doesNotMatch(html, /BOFU|What the template page should show|Use this automation for your business/i);
 });
@@ -804,7 +804,7 @@ test("whatsapp small business blog post renders public article content instead o
   assert.match(html, /Example WhatsApp automation journey/);
   assert.match(html, /Before WhatsApp automation vs after Crescora AI/);
   assert.match(html, /Frequently asked questions/);
-  assert.match(html, /Book WhatsApp Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -834,7 +834,7 @@ test("healthcare chatbot blog post renders public hospital content and exact met
   assert.match(html, /AI chatbot vs workflow automation for hospitals/);
   assert.match(html, /Suggested hospital automation rollout plan/);
   assert.match(html, /Frequently asked questions/);
-  assert.match(html, /Book Healthcare Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -867,8 +867,8 @@ test("whatsapp appointment booking blog post renders public booking content and 
   assert.match(html, /Before and after appointment automation/);
   assert.match(html, /Who can use WhatsApp appointment booking automation\?/);
   assert.match(html, /What to measure after automating appointment booking/);
-  assert.match(html, /Book WhatsApp Booking Demo/);
-  assert.match(html, /Discuss My Appointment Workflow/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -905,7 +905,7 @@ test("real estate lead follow-up blog post renders public property workflow cont
   assert.match(html, /Post-site-visit follow-up automation/);
   assert.match(html, /Best real estate workflows to automate first/);
   assert.match(html, /How Crescora AI helps real estate teams/);
-  assert.match(html, /Book Real Estate Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Map My Sales Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
@@ -942,7 +942,7 @@ test("customer support automation blog post renders public support workflow cont
   assert.match(html, /Support automation by industry/);
   assert.match(html, /How Crescora AI helps support teams/);
   assert.match(html, /Before and after support automation/);
-  assert.match(html, /Book Support Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Map My Support Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
@@ -979,7 +979,7 @@ test("clinic front desk automation blog post renders public clinic workflow cont
   assert.match(html, /Human handover for sensitive cases/);
   assert.match(html, /How Crescora AI helps clinics/);
   assert.match(html, /Before and after clinic automation/);
-  assert.match(html, /Book Clinic Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Map My Clinic Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
@@ -1018,7 +1018,7 @@ test("no-code chatbot automation blog post renders public workflow education con
   assert.match(html, /Recommended rollout plan/);
   assert.match(html, /Before and after no-code chatbot automation/);
   assert.match(html, /Industries that can use no-code chatbot automation/);
-  assert.match(html, /Book No-Code Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Crescora AI Workflows/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
@@ -1056,7 +1056,7 @@ test("payment reminder automation blog post renders public billing workflow cont
   assert.match(html, /How Crescora AI helps/);
   assert.match(html, /Before and after payment reminder automation/);
   assert.match(html, /Metrics to measure after payment automation/);
-  assert.match(html, /Book Payment Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Map My Payment Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
@@ -1091,10 +1091,10 @@ test("hospital chatbot workflows blog post renders public healthcare workflow co
   assert.match(html, /Built for healthcare workflows that need control/);
   assert.match(html, /Hospital workflows that should not stay manual/);
   assert.match(html, /What a strong hospital bot should handle/);
-  assert.match(html, /Book a Hospital Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Healthcare Automation/);
   assert.match(html, /Ready to automate your hospital patient workflows\?/);
-  assert.match(html, /Book a Hospital Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
@@ -1127,10 +1127,10 @@ test("missed appointments ai blog post renders public healthcare conversion cont
   assert.match(html, /How AI reduces missed appointments/);
   assert.match(html, /How Crescora AI connects the appointment journey/);
   assert.match(html, /Appointment automation with human control/);
-  assert.match(html, /Book a Healthcare Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Appointment Workflow/);
   assert.match(html, /Ready to reduce missed appointments in your hospital or clinic\?/);
-  assert.match(html, /Discuss My Appointment Flow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1165,10 +1165,10 @@ test("website and whatsapp lead capture blog post renders public lead workflow c
   assert.match(html, /How Crescora AI connects website and WhatsApp lead capture/);
   assert.match(html, /Lead automation with control, not random bot replies/);
   assert.match(html, /Explore More Lead Automation Resources/);
-  assert.match(html, /Book a Lead Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Lead Capture Workflow/);
   assert.match(html, /Ready to capture more leads automatically\?/);
-  assert.match(html, /Discuss My Lead Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1200,10 +1200,10 @@ test("business support faq automation blog post renders public support faq conte
   assert.match(html, /How Crescora AI connects FAQ automation to the full support journey/);
   assert.match(html, /FAQ automation with control, not random AI replies/);
   assert.match(html, /Explore More Support Automation Resources/);
-  assert.match(html, /Book Support Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore FAQ Workflow/);
   assert.match(html, /Ready to reduce repetitive support questions\?/);
-  assert.match(html, /Discuss My FAQ Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1235,10 +1235,10 @@ test("human handoff blog post renders public escalation content and exact metada
   assert.match(html, /How Crescora AI connects human handoff to the full customer journey/);
   assert.match(html, /Human handoff with control, not random escalation/);
   assert.match(html, /Explore More Support Automation Resources/);
-  assert.match(html, /Book Handoff Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Handoff Workflow/);
   assert.match(html, /Ready to add human handoff to your chatbot workflow\?/);
-  assert.match(html, /Discuss My Support Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1270,10 +1270,10 @@ test("whatsapp business api blog post renders public workflow content and exact 
   assert.match(html, /How Crescora AI connects WhatsApp automation to the full customer journey/);
   assert.match(html, /WhatsApp automation with control, not random replies/);
   assert.match(html, /Explore More WhatsApp Automation Resources/);
-  assert.match(html, /Book WhatsApp Automation Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore WhatsApp Workflow/);
   assert.match(html, /Ready to automate your WhatsApp customer workflows\?/);
-  assert.match(html, /Discuss My WhatsApp Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1339,10 +1339,10 @@ test("customer follow-up blog post renders public follow-up content and exact me
   assert.match(html, /How Crescora AI connects the complete follow-up journey/);
   assert.match(html, /Follow-up automation with control, not message spam/);
   assert.match(html, /Explore More Lead and Follow-Up Automation Resources/);
-  assert.match(html, /Book Follow-Up Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Follow-Up Workflow/);
   assert.match(html, /Ready to automate customer follow-ups after every enquiry\?/);
-  assert.match(html, /Discuss My Follow-Up Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1374,10 +1374,10 @@ test("service workflow examples blog post renders public service-business conten
   assert.match(html, /How Crescora AI connects these workflows/);
   assert.match(html, /Workflow automation with control, not random AI actions/);
   assert.match(html, /Explore More Workflow Automation Resources/);
-  assert.match(html, /Book Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Automation Examples/);
   assert.match(html, /Ready to automate your service business workflows\?/);
-  assert.match(html, /Discuss My Business Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1405,14 +1405,14 @@ test("hospital demo chatbot blog post renders public healthcare demo content and
   assert.match(html, /What you&#x27;ll learn|What you'll learn/);
   assert.match(html, /Why a hospital demo chatbot matters/);
   assert.match(html, /What to include in a hospital demo chatbot/);
-  assert.match(html, /Example hospital demo flow map/);
+  assert.match(html, /Example hospital demo workflow map/);
   assert.match(html, /How Crescora AI connects the hospital demo journey/);
   assert.match(html, /Hospital demo automation with safety and control/);
   assert.match(html, /Explore More Healthcare Automation Resources/);
-  assert.match(html, /Book Hospital Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Explore Hospital Workflow/);
   assert.match(html, /Ready to build a hospital demo chatbot that wins trust\?/);
-  assert.match(html, /Discuss My Hospital Workflow/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /shared-blog-featured\.png/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1487,7 +1487,7 @@ test("whatsapp chatbot vs website chatbot blog post renders public comparison co
   assert.match(html, /When a WhatsApp chatbot is better/);
   assert.match(html, /Why many businesses need both/);
   assert.match(html, /How Crescora AI connects both channels/);
-  assert.match(html, /Book Chatbot Strategy Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Compare My Workflow/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
@@ -1623,7 +1623,7 @@ test("mumbai city page renders generated city-seo content and exact metadata", a
   assert.match(html, /City-specific workflow priorities matter/);
   assert.match(html, /slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility/i);
   assert.match(html, /whatsapp automation mumbai/i);
-  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /"@type":"FAQPage"/);
 });
 
@@ -1653,7 +1653,7 @@ test("visakhapatnam city page renders curated city proof and exact metadata", as
   assert.match(html, /City-specific workflow priorities matter/);
   assert.match(html, /Vijayawada/);
   assert.match(html, /Telugu/);
-  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /"@type":"FAQPage"/);
 });
 
@@ -1681,7 +1681,7 @@ test("port blair city page renders curated proof and shortened title-state metad
   assert.match(html, /Support and payment follow-up should stay inside one journey/);
   assert.match(html, /City-specific workflow priorities matter/);
   assert.match(html, /Andaman and Nicobar Islands/);
-  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /"@type":"FAQPage"/);
 });
 
@@ -1711,7 +1711,7 @@ test("agartala city page renders generated city proof for long-tail coverage", a
   assert.match(html, /City-specific workflow priorities matter/);
   assert.match(html, /Bengali/);
   assert.match(html, /Dharmanagar/);
-  assert.match(html, /Book Growth Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /"@type":"FAQPage"/);
 });
 
@@ -1806,7 +1806,7 @@ test("document collection workflow page renders customer-facing document workflo
   );
 
   assert.match(html, /Automate document collection, missing-file follow-ups, KYC intake, and review routing\./);
-  assert.match(html, /Book Document Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Document workflows Crescora AI can automate/);
   assert.match(html, /KYC document collection/);
   assert.match(html, /Before Crescora AI vs After Crescora AI/);
@@ -1826,7 +1826,7 @@ test("whatsapp workflow page renders customer-facing whatsapp workflow content",
   );
 
   assert.match(html, /Launch a WhatsApp automation workflow for leads, bookings, reminders, support, and follow-ups\./);
-  assert.match(html, /Book WhatsApp Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Start from a practical WhatsApp automation structure\./);
   assert.match(html, /What this WhatsApp workflow template includes/);
   assert.match(html, /Example WhatsApp automation journey/);
@@ -1852,7 +1852,7 @@ test("appointment booking workflow page renders customer-facing booking content"
   );
 
   assert.match(html, /Automate appointment booking, confirmations, reminders, rescheduling, and follow-ups\./);
-  assert.match(html, /Book Appointment Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Turn appointment enquiries into confirmed next steps\./);
   assert.match(html, /What this appointment workflow can automate/);
   assert.match(html, /Example appointment booking journey/);
@@ -1875,7 +1875,7 @@ test("payment workflow page renders customer-facing payment content", async () =
   );
 
   assert.match(html, /Automate payment reminders, collections follow-ups, confirmations, and overdue escalation\./);
-  assert.match(html, /Book Payment Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Stop chasing pending payments manually\./);
   assert.match(html, /Give failed or overdue payments a clear recovery path\./);
   assert.match(html, /What this payment workflow can automate/);
@@ -1900,7 +1900,7 @@ test("reminders workflow page renders customer-facing reminder content", async (
   );
 
   assert.match(html, /Automate reminders for appointments, payments, documents, callbacks, renewals, and follow-ups\./);
-  assert.match(html, /Book Reminder Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Stop depending on staff memory for follow-ups\./);
   assert.match(html, /Recover missed actions before they become lost opportunities\./);
   assert.match(html, /What this reminder workflow can automate/);
@@ -1925,8 +1925,8 @@ test("customer support workflow page renders customer-facing support content", a
   );
 
   assert.match(html, /Automate customer support FAQs, issue triage, ticket routing, and human handover\./);
-  assert.match(html, /Book Support Workflow Demo/);
-  assert.match(html, /Discuss My Support Workflow/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /What this customer support workflow can automate/);
   assert.match(html, /Turn repeated support questions into structured workflows\./);
   assert.match(html, /Escalate complex cases with context, not confusion\./);
@@ -1950,8 +1950,8 @@ test("knowledge assistant workflow page renders customer-facing grounded-answer 
   );
 
   assert.match(html, /Answer customer questions from approved knowledge - and hand off when confidence is low\./);
-  assert.match(html, /Book Knowledge Assistant Demo/);
-  assert.match(html, /Discuss My Support Workflow/);
+  assert.match(html, /Book Free Demo/);
+  assert.match(html, /Discuss My Workflow/);
   assert.match(html, /Answer from approved business knowledge, not random AI guesses\./);
   assert.match(html, /Hand off low-confidence or sensitive questions to humans\./);
   assert.match(html, /What this knowledge assistant workflow can automate/);
@@ -1976,7 +1976,7 @@ test("human handoff workflow page renders customer-facing escalation content", a
   );
 
   assert.match(html, /Escalate complex conversations to the right human team with full context\./);
-  assert.match(html, /Book Handoff Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Stop handing off conversations without the story\./);
   assert.match(html, /Route each handoff to the right owner, queue, or team\./);
   assert.match(html, /What this human handoff workflow can automate/);
@@ -2001,7 +2001,7 @@ test("billing workflow page renders customer-facing billing and collections cont
   );
 
   assert.match(html, /Automate billing reminders, collections follow-ups, payment status updates, and exception handover\./);
-  assert.match(html, /Book Billing Workflow Demo/);
+  assert.match(html, /Book Free Demo/);
   assert.match(html, /Stop chasing customers manually for billing updates\./);
   assert.match(html, /Give overdue, failed, or disputed payments a clear path\./);
   assert.match(html, /What this billing workflow can automate/);
@@ -2027,7 +2027,7 @@ test("public hub copy matches the indexable SEO strategy", () => {
   assert.match(blogHtml, /Articles for operators and buyers/);
   assert.doesNotMatch(blogHtml, /draft articles|search index/i);
 
-  assert.match(workflowsHtml, /Launch-ready workflows for leads, bookings, payments, support, and follow-ups/);
+  assert.match(workflowsHtml, /Pilot-ready workflow blueprints for leads, bookings, payments, support, and follow-ups/);
   assert.doesNotMatch(workflowsHtml, /internal linking|primary index targets/i);
 
   assert.match(templatesHtml, /Ready-to-use Crescora AI templates for leads, bookings, payments, support, and follow-ups/i);

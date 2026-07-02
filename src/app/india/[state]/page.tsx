@@ -235,7 +235,7 @@ export default async function StatePage({ params }: StatePageProps) {
         eyebrow={`Automation in ${seed.name}`}
         title={`WhatsApp automation and conversational AI workflows for businesses in ${seed.name}`}
         description={`Crescora AI helps teams across ${formatList(seed.cityClusters)} fix ${seed.primaryPain}. Support ${formatList(seed.languages)} customer journeys for ${formatList(seed.industries)} with workflow orchestration, AI operations, human handoff, knowledge flows, governance, billing, and analytics.`}
-        primaryCta={{ label: `Book ${seed.name} Demo`, href: "/contact" }}
+        primaryCta={{ label: "Book Free Demo", href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} Workflow`, href: "/contact" }}
         supportText={`Built for ${seed.commercialAngle}. Local search focus includes ${seed.localSearchTerms.join(", ")}.`}
       />
@@ -418,7 +418,7 @@ export default async function StatePage({ params }: StatePageProps) {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
-              <Link href="/contact">Book {seed.name} Demo</Link>
+              <Link href="/contact">Book Free Demo</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10">
               <Link href={relatedWorkflow ? `/india/${seed.slug}/workflows/${relatedWorkflow.slug}` : `/india/${seed.slug}/industries/${primaryIndustrySlug}`}>

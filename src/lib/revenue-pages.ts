@@ -123,8 +123,8 @@ export const revenuePages = [
     keywordTarget: "WhatsApp automation workflows",
     updatedAt: "2026-06-24",
     heroEyebrow: "WhatsApp Automation",
-    heroPrimaryCta: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
-    heroSecondaryCta: { label: "Discuss My WhatsApp Workflow", href: "/contact" },
+    heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
+    heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     heroSupportLine:
       "Built for WhatsApp + Web automation, lead capture, booking, reminders, support routing, payment follow-ups, and context-rich handover.",
     overviewSection: {
@@ -279,7 +279,7 @@ export const revenuePages = [
       { ...link("Pricing", "/pricing", "Choose a first-workflow pilot or a broader multi-team rollout based on scope, systems, and team coverage."), ctaLabel: "View Pricing ->" },
       { ...link("Contact sales", "/contact", "Map your current WhatsApp journey, handover points, and rollout priorities with the Crescora team."), ctaLabel: "Discuss My Workflow ->" },
     ],
-    ctaLabel: "Request WhatsApp workflow demo",
+    ctaLabel: "Book Free Demo",
     ctaHref: "/contact",
     finalCta: {
       eyebrow: "Next step",
@@ -287,7 +287,7 @@ export const revenuePages = [
       description:
         "Use Crescora AI to bring structure to leads, bookings, support questions, payments, reminders, and human handovers without losing ownership or queue visibility.",
       note: "Start with one WhatsApp workflow. Prove value. Expand into more channels and teams.",
-      primaryCta: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
+      primaryCta: { label: "Book Free Demo", href: "/contact" },
       secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
     },
   }),
@@ -870,7 +870,7 @@ export const revenuePages = [
       link("Pricing", "/pricing", "Scope a first reminder and collections rollout."),
       link("Contact", "/contact", "Map your reminder, status, and escalation path."),
     ],
-    ctaLabel: "Request collections workflow demo",
+    ctaLabel: "Book Free Demo",
     ctaHref: "/contact",
   }),
   page({
@@ -1064,7 +1064,7 @@ export const revenuePages = [
       link("Workflow automation", "/solutions/workflow-automation", "Place CRM and API sync inside the wider operating model."),
       link("Contact", "/contact", "Scope the first record update and downstream action flow."),
     ],
-    ctaLabel: "Request integration workflow demo",
+    ctaLabel: "Book Free Demo",
     ctaHref: "/contact",
   }),
   page({
@@ -1161,7 +1161,7 @@ export const revenuePages = [
       link("Workflow automation", "/solutions/workflow-automation", "Place escalation in the wider operating model."),
       link("Contact", "/contact", "Design your escalation triggers and owner paths."),
     ],
-    ctaLabel: "Request handover workflow demo",
+    ctaLabel: "Book Free Demo",
     ctaHref: "/contact",
   }),
 ] as const satisfies readonly RevenuePage[];

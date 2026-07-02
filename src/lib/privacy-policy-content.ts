@@ -10,7 +10,7 @@ export const privacyPolicyContent = {
     eyebrow: "Legal",
     title: "Privacy Policy",
     description:
-      'This Privacy Policy explains how Crescora AI, operating as Crescora AI and Crescora AI ("Crescora", "we", "our", or "us"), collects, uses, stores, shares, and protects information when you use our websites, applications, workspaces, automation builder, web chat widget, AI features, integrations, and related services.',
+      'This Privacy Policy explains how Crescora AI ("Crescora", "we", "our", or "us") collects, uses, stores, shares, and protects information when you use our websites, applications, workspaces, automation builder, web chat widget, AI features, integrations, and related services.',
   },
   dateLabel: "Effective date",
   updatedOn: "23-June 2026",
@@ -174,7 +174,7 @@ export const privacyPolicyContent = {
       paragraphs: ["For privacy questions, requests, or grievances, contact:"],
       bullets: [
         "Crescora AI",
-        "Crescora AI, 2nd floor,Club house, Urbanrise oncloud 33, bachupally,hyderabad-90 Telangana,India",
+        "2nd Floor, Club House, Urbanrise Oncloud 33, Bachupally, Hyderabad, Telangana, India",
         "Email: support@crescora.ai",
         "Grievance contact: support@crescora.ai",
       ],

@@ -10,7 +10,7 @@ export const cookiePolicyContent = {
     eyebrow: "Legal",
     title: "Cookie Policy",
     description:
-      "This Cookie Policy explains how Crescora AI, operating as Crescora AI and Crescora AI, uses cookies and similar technologies on https://www.crescora.ai, our application, dashboard, web widget, and related services.",
+      "This Cookie Policy explains how Crescora AI uses cookies and similar technologies on https://www.crescora.ai, our application, dashboard, web widget, and related services.",
   },
   dateLabel: "Effective date",
   updatedOn: "23-June 2026",

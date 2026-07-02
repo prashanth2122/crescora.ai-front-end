@@ -41,8 +41,8 @@ export function ProductProofSection({
                     <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-medium text-white/80">
-                      Demo panel
+                    <span className="max-w-[11rem] rounded-full border border-white/10 bg-white/10 px-3 py-1 text-right text-xs font-medium leading-4 text-white/80">
+                      Demo product screen using dummy data
                     </span>
                   </div>
                   <p className="mt-5 text-lg font-semibold tracking-tight">{panel.title}</p>

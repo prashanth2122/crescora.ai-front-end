@@ -56,7 +56,7 @@ const cityArchetypes: CityArchetype[] = [
     proofFocus: "lead routing, booking speed, and front-line sales follow-up",
     searchTheme: "ai business automation",
     workflowPriorityLine: "lead capture, booking speed, and revenue follow-up",
-    ctaLabel: "Book Growth Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   {
     key: "operationsCluster",
@@ -66,7 +66,7 @@ const cityArchetypes: CityArchetype[] = [
     proofFocus: "assignment visibility, reminder timing, and operational consistency",
     searchTheme: "operations automation",
     workflowPriorityLine: "assignment visibility, reminders, and operational handoff",
-    ctaLabel: "Book Operations Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   {
     key: "serviceCluster",
@@ -76,7 +76,7 @@ const cityArchetypes: CityArchetype[] = [
     proofFocus: "enquiry capture, booking coordination, and customer updates",
     searchTheme: "service business automation",
     workflowPriorityLine: "enquiry capture, booking coordination, and post-enquiry follow-up",
-    ctaLabel: "Book Service Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   {
     key: "supportCluster",
@@ -86,7 +86,7 @@ const cityArchetypes: CityArchetype[] = [
     proofFocus: "FAQ coverage, escalation discipline, and support visibility",
     searchTheme: "customer support automation",
     workflowPriorityLine: "FAQ resolution, escalation routing, and support visibility",
-    ctaLabel: "Book Support Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
   {
     key: "collectionsCluster",
@@ -96,7 +96,7 @@ const cityArchetypes: CityArchetype[] = [
     proofFocus: "collections discipline, document status, and follow-up control",
     searchTheme: "payment and reminder automation",
     workflowPriorityLine: "collections follow-up, document completion, and exception handling",
-    ctaLabel: "Book Collections Workflow Demo",
+    ctaLabel: "Book Free Demo",
   },
 ];
 
