@@ -63,7 +63,7 @@ export default function WhatsAppAutomationPage() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
                   <Badge variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700">
-                    FLOW
+                    Crescora AI
                   </Badge>
                   <p className="text-base font-medium text-zinc-950">{item}</p>
                 </div>

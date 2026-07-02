@@ -55,7 +55,7 @@ export function SiteFooter({ directContactItem }: SiteFooterProps) {
                 <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">{group.title}</h3>
                 <ul className="mt-4 space-y-3">
                   {group.links.map((link) => (
-                    <li key={link.href}>
+                    <li key={`${link.label}-${link.href}`}>
                       <Link
                         href={buildLocalizedHref(link.href, locale)}
                         className="text-sm text-zinc-700 transition-colors hover:text-zinc-950"

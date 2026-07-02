@@ -30,36 +30,36 @@ type WorkflowCard = {
 };
 
 const stateSeoTitleBySlug: Record<string, string> = {
-  maharashtra: "AI Business Automation in Maharashtra, India | Crescora FLOW",
-  "uttar-pradesh": "AI Business Automation in Uttar Pradesh, India | Crescora FLOW",
-  "tamil-nadu": "AI Business Automation in Tamil Nadu, India | Crescora FLOW",
-  "west-bengal": "AI Business Automation in West Bengal, India | Crescora FLOW",
-  karnataka: "AI Business Automation in Karnataka, India | Crescora FLOW",
-  "madhya-pradesh": "AI Business Automation in Madhya Pradesh, India | Crescora FLOW",
-  rajasthan: "AI Business Automation in Rajasthan, India | Crescora FLOW",
-  gujarat: "AI Business Automation in Gujarat, India | Crescora FLOW",
-  bihar: "AI Business Automation in Bihar, India | Crescora FLOW",
-  "andhra-pradesh": "AI Business Automation in Andhra Pradesh, India | Crescora FLOW",
-  telangana: "AI Business Automation in Telangana, India | Crescora FLOW",
-  odisha: "AI Business Automation in Odisha, India | Crescora FLOW",
-  "jammu-and-kashmir": "AI Business Automation in Jammu & Kashmir, India | Crescora FLOW",
-  uttarakhand: "AI Business Automation in Uttarakhand, India | Crescora FLOW",
-  "himachal-pradesh": "AI Business Automation in Himachal Pradesh, India | Crescora FLOW",
-  tripura: "AI Business Automation in Tripura, India | Crescora FLOW",
-  goa: "AI Business Automation in Goa, India | Crescora FLOW",
-  puducherry: "AI Business Automation in Puducherry, India | Crescora FLOW",
-  chandigarh: "AI Business Automation in Chandigarh, India | Crescora FLOW",
-  manipur: "AI Business Automation in Manipur, India | Crescora FLOW",
-  nagaland: "AI Business Automation in Nagaland, India | Crescora FLOW",
-  meghalaya: "AI Business Automation in Meghalaya, India | Crescora FLOW",
-  mizoram: "AI Business Automation in Mizoram, India | Crescora FLOW",
-  "arunachal-pradesh": "AI Business Automation in Arunachal Pradesh, India | Crescora FLOW",
-  sikkim: "AI Business Automation in Sikkim, India | Crescora FLOW",
-  "andaman-and-nicobar-islands": "AI Business Automation in Andaman & Nicobar, India | Crescora FLOW",
-  ladakh: "AI Business Automation in Ladakh, India | Crescora FLOW",
+  maharashtra: "AI Business Automation in Maharashtra, India | Crescora AI",
+  "uttar-pradesh": "AI Business Automation in Uttar Pradesh, India | Crescora AI",
+  "tamil-nadu": "AI Business Automation in Tamil Nadu, India | Crescora AI",
+  "west-bengal": "AI Business Automation in West Bengal, India | Crescora AI",
+  karnataka: "AI Business Automation in Karnataka, India | Crescora AI",
+  "madhya-pradesh": "AI Business Automation in Madhya Pradesh, India | Crescora AI",
+  rajasthan: "AI Business Automation in Rajasthan, India | Crescora AI",
+  gujarat: "AI Business Automation in Gujarat, India | Crescora AI",
+  bihar: "AI Business Automation in Bihar, India | Crescora AI",
+  "andhra-pradesh": "AI Business Automation in Andhra Pradesh, India | Crescora AI",
+  telangana: "AI Business Automation in Telangana, India | Crescora AI",
+  odisha: "AI Business Automation in Odisha, India | Crescora AI",
+  "jammu-and-kashmir": "AI Business Automation in Jammu & Kashmir, India | Crescora AI",
+  uttarakhand: "AI Business Automation in Uttarakhand, India | Crescora AI",
+  "himachal-pradesh": "AI Business Automation in Himachal Pradesh, India | Crescora AI",
+  tripura: "AI Business Automation in Tripura, India | Crescora AI",
+  goa: "AI Business Automation in Goa, India | Crescora AI",
+  puducherry: "AI Business Automation in Puducherry, India | Crescora AI",
+  chandigarh: "AI Business Automation in Chandigarh, India | Crescora AI",
+  manipur: "AI Business Automation in Manipur, India | Crescora AI",
+  nagaland: "AI Business Automation in Nagaland, India | Crescora AI",
+  meghalaya: "AI Business Automation in Meghalaya, India | Crescora AI",
+  mizoram: "AI Business Automation in Mizoram, India | Crescora AI",
+  "arunachal-pradesh": "AI Business Automation in Arunachal Pradesh, India | Crescora AI",
+  sikkim: "AI Business Automation in Sikkim, India | Crescora AI",
+  "andaman-and-nicobar-islands": "AI Business Automation in Andaman & Nicobar, India | Crescora AI",
+  ladakh: "AI Business Automation in Ladakh, India | Crescora AI",
   "dadra-and-nagar-haveli-and-daman-and-diu":
-    "AI Automation in Dadra, Nagar Haveli, Daman & Diu | Crescora FLOW",
-  lakshadweep: "AI Business Automation in Lakshadweep, India | Crescora FLOW",
+    "AI Automation in Dadra, Nagar Haveli, Daman & Diu | Crescora AI",
+  lakshadweep: "AI Business Automation in Lakshadweep, India | Crescora AI",
 };
 
 const workflowRouteSlugByKey: Partial<Record<WorkflowKey, string>> = {
@@ -136,11 +136,11 @@ function formatList(items: string[]) {
 }
 
 function buildStateTitle(seed: StateSeoSeed) {
-  return stateSeoTitleBySlug[seed.slug] ?? `AI Business Automation in ${seed.name}, India | Crescora FLOW`;
+  return stateSeoTitleBySlug[seed.slug] ?? `AI Business Automation in ${seed.name}, India | Crescora AI`;
 }
 
 function buildStateDescription(seed: StateSeoSeed) {
-  return `Crescora FLOW helps businesses in ${seed.name} automate ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
+  return `Crescora AI helps businesses in ${seed.name} automate ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
 }
 
 function buildWorkflowCards(seed: StateSeoSeed, availableWorkflowSlugs: string[]) {
@@ -161,24 +161,24 @@ function buildWorkflowCards(seed: StateSeoSeed, availableWorkflowSlugs: string[]
 function buildFaqItems(seed: StateSeoSeed) {
   return [
     {
-      question: `Why do businesses in ${seed.name} choose FLOW?`,
-      answer: `Businesses in ${seed.name} choose FLOW because they need a workflow platform that handles ${seed.primaryPain}. FLOW supports multi-channel conversations, AI routing, forms, records, reminders, notifications, human handoff, analytics, and governance in one controlled rollout.`,
+      question: `Why do businesses in ${seed.name} choose Crescora AI?`,
+      answer: `Businesses in ${seed.name} choose Crescora AI because they need a workflow platform that handles ${seed.primaryPain}. Crescora AI supports multi-channel conversations, AI routing, forms, records, reminders, notifications, human handoff, analytics, and governance in one controlled rollout.`,
     },
     {
       question: `Which industries in ${seed.name} benefit the most from automation?`,
       answer: `${formatList(seed.industries)} in ${seed.name} benefit when they need faster response times, cleaner lead capture, better booking coordination, reliable document follow-up, and less repetitive customer support work.`,
     },
     {
-      question: `Can FLOW support local language customer journeys in ${seed.name}?`,
-      answer: `Yes. FLOW can support ${formatList(seed.languages)} conversation paths, FAQs, routing prompts, and handoff workflows depending on the rollout scope, approval process, and the language coverage your business needs.`,
+      question: `Can Crescora AI support local language customer journeys in ${seed.name}?`,
+      answer: `Yes. Crescora AI can support ${formatList(seed.languages)} conversation paths, FAQs, routing prompts, and handoff workflows depending on the rollout scope, approval process, and the language coverage your business needs.`,
     },
     {
       question: `What should a business in ${seed.name} automate first?`,
       answer: `Start with the workflow causing the most loss or manual effort in ${seed.name}, such as ${seed.primaryPain}. The best first rollout is usually the one closest to revenue, bookings, collections, or support load.`,
     },
     {
-      question: `Can FLOW connect WhatsApp automation with records, notifications, and human handoff?`,
-      answer: `Yes. FLOW can connect WhatsApp-led journeys with forms, records, appointments, payment steps, document requests, notifications, audit-friendly actions, and human handoff so each conversation reaches a clear business outcome.`,
+      question: `Can Crescora AI connect WhatsApp automation with records, notifications, and human handoff?`,
+      answer: `Yes. Crescora AI can connect WhatsApp-led journeys with forms, records, appointments, payment steps, document requests, notifications, audit-friendly actions, and human handoff so each conversation reaches a clear business outcome.`,
     },
   ];
 }
@@ -234,7 +234,7 @@ export default async function StatePage({ params }: StatePageProps) {
       <PageHero
         eyebrow={`Automation in ${seed.name}`}
         title={`WhatsApp automation and conversational AI workflows for businesses in ${seed.name}`}
-        description={`FLOW helps teams across ${formatList(seed.cityClusters)} fix ${seed.primaryPain}. Support ${formatList(seed.languages)} customer journeys for ${formatList(seed.industries)} with workflow orchestration, AI operations, human handoff, knowledge flows, governance, billing, and analytics.`}
+        description={`Crescora AI helps teams across ${formatList(seed.cityClusters)} fix ${seed.primaryPain}. Support ${formatList(seed.languages)} customer journeys for ${formatList(seed.industries)} with workflow orchestration, AI operations, human handoff, knowledge flows, governance, billing, and analytics.`}
         primaryCta={{ label: `Book ${seed.name} Demo`, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} Workflow`, href: "/contact" }}
         supportText={`Built for ${seed.commercialAngle}. Local search focus includes ${seed.localSearchTerms.join(", ")}.`}
@@ -243,7 +243,7 @@ export default async function StatePage({ params }: StatePageProps) {
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="State overview"
-          title={`Why businesses in ${seed.name} choose FLOW`}
+          title={`Why businesses in ${seed.name} choose Crescora AI`}
           description={`The strongest opportunity in ${seed.name} is ${seed.commercialAngle}. Teams usually need one platform that can handle ${seed.primaryPain} without fragmenting leads, bookings, payments, support, and staff visibility.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -252,7 +252,7 @@ export default async function StatePage({ params }: StatePageProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Commercial angle</p>
               <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">Built for real operating pressure in {seed.name}</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                FLOW fits businesses facing {seed.commercialAngle} rather than generic chatbot use. The goal is measurable customer outcomes and cleaner operations.
+                Crescora AI fits businesses facing {seed.commercialAngle} rather than generic chatbot use. The goal is measurable customer outcomes and cleaner operations.
               </p>
             </CardContent>
           </Card>
@@ -302,7 +302,7 @@ export default async function StatePage({ params }: StatePageProps) {
         <SectionHeading
           eyebrow="Industries"
           title={`Industries we support in ${seed.name}`}
-          description={`FLOW supports buyers and operators in ${seed.name} who need controlled automation for enquiry capture, bookings, support, documents, payments, and team handoff.`}
+          description={`Crescora AI supports buyers and operators in ${seed.name} who need controlled automation for enquiry capture, bookings, support, documents, payments, and team handoff.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {seed.industries.map((industry) => (
@@ -351,7 +351,7 @@ export default async function StatePage({ params }: StatePageProps) {
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Implementation"
-                title={`How FLOW implementation works`}
+                title={`How Crescora AI implementation works`}
                 description={`A strong rollout in ${seed.name} should connect customer conversations to structured business outcomes instead of isolated chatbot replies.`}
               />
               <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -411,7 +411,7 @@ export default async function StatePage({ params }: StatePageProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch automation for your business in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use FLOW to automate {seed.primaryPain} for teams across {formatList(seed.cityClusters)} with a rollout built for {formatList(seed.industries)} and customer journeys in {formatList(seed.languages)}.
+            Use Crescora AI to automate {seed.primaryPain} for teams across {formatList(seed.cityClusters)} with a rollout built for {formatList(seed.industries)} and customer journeys in {formatList(seed.languages)}.
           </p>
           <p className="mt-4 text-sm leading-7 text-white/60">
             Search-intent coverage includes {seed.localSearchTerms.join(", ")} while the implementation stays grounded in real workflows, records, governance, analytics, and human handoff.

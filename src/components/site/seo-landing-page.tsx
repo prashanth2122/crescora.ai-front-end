@@ -66,7 +66,7 @@ export function SeoLandingPage({
         <div className="grid gap-6 lg:grid-cols-2">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Search target" title={keywordTarget} description={intro} />
+              <SectionHeading eyebrow="Workflow focus" title={keywordTarget} description={intro} />
               <p className="mt-6 text-sm leading-7 text-zinc-600">{description}</p>
             </CardContent>
           </Card>
@@ -74,15 +74,15 @@ export function SeoLandingPage({
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Decision support"
-                title="The page should guide the buyer to the next logical step."
-                description="Use the landing page to move from the search query to a template, comparison, or demo."
+                title="Guide the buyer to the next practical step."
+                description="Help visitors move from an automation question to the right template, comparison, workflow example, or demo request."
               />
               <div className="mt-6 flex flex-wrap gap-2">
                 <Badge variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700">
-                  SEO landing page
+                  Workflow guide
                 </Badge>
                 <Badge variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700">
-                  Internal links
+                  Related pages
                 </Badge>
                 <Badge variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700">
                   Clear CTA
@@ -111,7 +111,7 @@ export function SeoLandingPage({
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Related pages" title="Connect the landing page to the rest of the SEO graph." description="Every page should point readers toward the right next destination." />
+        <SectionHeading eyebrow="Related pages" title="Connect this page to the right next destination." description="Every page should help readers continue toward the most useful workflow, template, comparison, or demo path." />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {relatedLinks.map((link) => (
             <Card key={link.href} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
@@ -132,7 +132,7 @@ export function SeoLandingPage({
           <p className="text-sm uppercase tracking-[0.3em] text-white/50">CTA</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">{ctaLabel}</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72">
-            Use the CTA to convert the SEO visitor into a demo request or a scope call.
+            Use the CTA to help the visitor choose a demo request or a workflow scope discussion.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">

@@ -2,15 +2,15 @@ import type { LegalPageData } from "@/lib/site-content";
 
 export const acceptableUsePolicyContent = {
   metadata: {
-    title: "Acceptable Use Policy | Crescora Flow",
+    title: "Acceptable Use Policy | Crescora AI",
     description:
-      "Crescora Flow's Acceptable Use Policy explains prohibited uses, AI safety expectations, messaging rules, data restrictions, platform abuse rules, and enforcement actions.",
+      "Crescora AI's Acceptable Use Policy explains prohibited uses, AI safety expectations, messaging rules, data restrictions, platform abuse rules, and enforcement actions.",
   },
   hero: {
     eyebrow: "Legal",
     title: "Acceptable Use Policy",
     description:
-      'This Acceptable Use Policy ("Policy") explains what is not allowed when using Crescora Flow, Crescora AI websites, applications, workspaces, automation builder, AI features, integrations, channels, web widgets, APIs, and related services.',
+      'This Acceptable Use Policy ("Policy") explains what is not allowed when using Crescora AI, Crescora AI websites, applications, workspaces, automation builder, AI features, integrations, channels, web widgets, APIs, and related services.',
   },
   dateLabel: "Effective date",
   updatedOn: "06-June 2026",
@@ -19,8 +19,8 @@ export const acceptableUsePolicyContent = {
       title: "1. General Rule",
       paragraphs: [
         "This Policy applies to all customers, workspace owners, admins, agents, users, developers, and anyone using or accessing the Services.",
-        "You must use Crescora Flow responsibly, lawfully, and in a way that protects customers, businesses, third-party platforms, and the integrity of the Services.",
-        "You may not use Crescora Flow to create, automate, assist, promote, or conceal unlawful, harmful, deceptive, abusive, exploitative, infringing, unsafe, or unauthorized activity.",
+        "You must use Crescora AI responsibly, lawfully, and in a way that protects customers, businesses, third-party platforms, and the integrity of the Services.",
+        "You may not use Crescora AI to create, automate, assist, promote, or conceal unlawful, harmful, deceptive, abusive, exploitative, infringing, unsafe, or unauthorized activity.",
       ],
     },
     {
@@ -63,7 +63,7 @@ export const acceptableUsePolicyContent = {
     {
       title: "5. Sensitive and Regulated Use Cases",
       paragraphs: [
-        "You must apply extra care when using Crescora Flow for healthcare, finance, insurance, education, employment, legal, government, children's services, identity verification, KYC, documents, or other regulated workflows.",
+        "You must apply extra care when using Crescora AI for healthcare, finance, insurance, education, employment, legal, government, children's services, identity verification, KYC, documents, or other regulated workflows.",
         "You are responsible for collecting valid consent, providing required notices, using human review where appropriate, verifying AI output before action, maintaining audit evidence, and following sector-specific rules.",
         "Crescora may restrict workflows that create unacceptable legal, safety, privacy, or reputational risk.",
       ],
@@ -119,7 +119,7 @@ export const acceptableUsePolicyContent = {
     {
       title: "10. Prohibited High-Risk Automation",
       paragraphs: [
-        "You may not use Crescora Flow to fully automate final decisions that have serious legal, financial, health, employment, housing, education, or safety effects without appropriate human review, notices, and lawful authority.",
+        "You may not use Crescora AI to fully automate final decisions that have serious legal, financial, health, employment, housing, education, or safety effects without appropriate human review, notices, and lawful authority.",
         "Examples include denying insurance, loans, employment, education, healthcare, or essential services; providing emergency medical decisions without human intervention; approving or rejecting legal claims without qualified review; making eligibility decisions based only on AI output; and performing surveillance or profiling without lawful basis.",
       ],
     },

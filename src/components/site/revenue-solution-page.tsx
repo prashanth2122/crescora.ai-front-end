@@ -40,7 +40,7 @@ function ScreenshotSurface({ page, index }: { page: RevenuePage["screenshots"][n
                   <p className="text-xs uppercase tracking-[0.24em] text-white/50">Product View {index + 1}</p>
                   <p className="mt-2 text-lg font-semibold">{page.variant === "builder" ? "Workflow builder" : page.variant === "dashboard" ? "Operations dashboard" : "Conversation workspace"}</p>
                 </div>
-                <Badge className="border-white/10 bg-white/10 text-white hover:bg-white/15">FLOW</Badge>
+                <Badge className="border-white/10 bg-white/10 text-white hover:bg-white/15">Crescora AI</Badge>
               </div>
               <div className="mt-5 space-y-3">
                 {page.primaryItems.map((item) => (
@@ -149,7 +149,7 @@ export function RevenueSolutionPage({ page, breadcrumbs }: RevenueSolutionPagePr
   const relatedSection = page.relatedSection ?? {
     eyebrow: "Related pages",
     title: "Move buyers to the right next decision.",
-    description: "Primary revenue pages should connect to proof, pricing, and decision-stage content instead of duplicating more thin keyword pages.",
+    description: "Primary solution pages should connect to proof, pricing, and decision-stage content instead of duplicating more thin keyword pages.",
   };
   const finalCta: NonNullable<RevenuePage["finalCta"]> = page.finalCta ?? {
     eyebrow: "Next step",

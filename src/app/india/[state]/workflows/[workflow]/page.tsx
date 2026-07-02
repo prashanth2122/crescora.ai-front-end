@@ -130,7 +130,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
       <PageHero
         eyebrow={`${seed.name} workflow`}
         title={`${config.label} for businesses in ${seed.name}`}
-        description={`FLOW helps teams in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain}. Support ${formatStateSeoList(seed.languages)} customer journeys across ${formatStateSeoList(seed.cityClusters)} with workflow orchestration, AI routing, records, reminders, analytics, and human handoff.`}
+        description={`Crescora AI helps teams in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain}. Support ${formatStateSeoList(seed.languages)} customer journeys across ${formatStateSeoList(seed.cityClusters)} with workflow orchestration, AI routing, records, reminders, analytics, and human handoff.`}
         primaryCta={{ label: config.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} rollout`, href: "/contact" }}
         supportText={`Local search focus includes ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateSeoList(seed.industries)} in ${seed.name}.`}
@@ -140,7 +140,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
         <SectionHeading
           eyebrow="State fit"
           title={`Why ${config.titleNoun} matters in ${seed.name}`}
-          description={`Businesses in ${seed.name} usually need ${config.titleNoun} when they face ${seed.primaryPain}. FLOW keeps the customer journey structured instead of leaving it spread across manual chat messages and internal follow-up.`}
+          description={`Businesses in ${seed.name} usually need ${config.titleNoun} when they face ${seed.primaryPain}. Crescora AI keeps the customer journey structured instead of leaving it spread across manual chat messages and internal follow-up.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
@@ -215,7 +215,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Launch plan"
-                title={`How FLOW runs ${config.titleNoun} in ${seed.name}`}
+                title={`How Crescora AI runs ${config.titleNoun} in ${seed.name}`}
                 description={config.launchFocusLine}
               />
               <div className="mt-8 space-y-4">
@@ -263,8 +263,8 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
           <Card className="mt-10 overflow-hidden border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-0">
               <div className="grid grid-cols-2 border-b border-zinc-200 bg-zinc-50 text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">
-                <div className="px-6 py-4">Before FLOW</div>
-                <div className="border-l border-zinc-200 px-6 py-4">After FLOW</div>
+                <div className="px-6 py-4">Before Crescora AI</div>
+                <div className="border-l border-zinc-200 px-6 py-4">After Crescora AI</div>
               </div>
               {beforeAfterRows.map((row) => (
                 <div key={row.before} className="grid grid-cols-2 border-b border-zinc-200 last:border-b-0">
@@ -281,7 +281,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
         <SectionHeading
           eyebrow="FAQ"
           title={`FAQs about ${config.titleNoun} in ${seed.name}`}
-          description={`These are the questions buyers in ${seed.name} ask before they launch ${config.titleNoun} with FLOW.`}
+          description={`These are the questions buyers in ${seed.name} ask before they launch ${config.titleNoun} with Crescora AI.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {faqItems.map((item) => (
@@ -300,7 +300,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch {config.titleNoun} in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use FLOW to reduce {seed.primaryPain} across {formatStateSeoList(seed.cityClusters)} with a rollout built for {formatStateSeoList(seed.industries)} and customer journeys in {formatStateSeoList(seed.languages)}.
+            Use Crescora AI to reduce {seed.primaryPain} across {formatStateSeoList(seed.cityClusters)} with a rollout built for {formatStateSeoList(seed.industries)} and customer journeys in {formatStateSeoList(seed.languages)}.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/60">
             Search-intent coverage includes {seed.localSearchTerms.join(", ")} while the implementation stays grounded in real workflow outcomes, records, analytics, governance, and human handoff.

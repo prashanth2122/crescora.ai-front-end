@@ -112,7 +112,7 @@ const priorityCityProofBySlug: Record<
 > = {
   "maharashtra:mumbai": {
     intro:
-      "Mumbai pages should prove that FLOW can handle high-intent inbound demand, fast sales routing, and follow-up control across a dense commercial market instead of reading like generic statewide automation copy.",
+      "Mumbai pages should prove that Crescora AI can handle high-intent inbound demand, fast sales routing, and follow-up control across a dense commercial market instead of reading like generic statewide automation copy.",
     blocks: [
       {
         title: "Lead speed matters more than generic chat coverage",
@@ -332,7 +332,7 @@ const priorityCityProofBySlug: Record<
       {
         title: "Appointments and payments should move together",
         description:
-          "The city page should show how FLOW can connect booking, confirmation, payment follow-up, and escalation rather than describing each step as a disconnected automation use case.",
+          "The city page should show how Crescora AI can connect booking, confirmation, payment follow-up, and escalation rather than describing each step as a disconnected automation use case.",
       },
       {
         title: "The page should read as operationally grounded",
@@ -899,7 +899,7 @@ const priorityCityProofBySlug: Record<
       {
         title: "Support and payment questions should stay connected",
         description:
-          "A strong Shillong rollout should show how FLOW can keep repeated questions, payment steps, and escalations inside one operational system.",
+          "A strong Shillong rollout should show how Crescora AI can keep repeated questions, payment steps, and escalations inside one operational system.",
       },
       {
         title: "The page should feel more specific than a generic tourism city page",
@@ -1440,13 +1440,11 @@ function buildUserFacingProofIntro({
 
 function buildUserFacingLocalityBlock({
   city,
-  stateName,
   stateSeed,
   cityNeighbors,
   featuredWorkflowSlugs,
 }: {
   city: string;
-  stateName: string;
   stateSeed: StateSeoSeed;
   cityNeighbors: string[];
   featuredWorkflowSlugs: StateWorkflowSlug[];
@@ -1485,7 +1483,6 @@ function buildGeneratedProofIntro({
 
 function buildGeneratedProofBlocks({
   city,
-  stateName,
   stateSeed,
   cityNeighbors,
   featuredWorkflowSlugs,
@@ -1493,7 +1490,6 @@ function buildGeneratedProofBlocks({
   archetype,
 }: {
   city: string;
-  stateName: string;
   stateSeed: StateSeoSeed;
   cityNeighbors: string[];
   featuredWorkflowSlugs: StateWorkflowSlug[];
@@ -1537,7 +1533,6 @@ function buildGeneratedProofBlocks({
     },
     buildUserFacingLocalityBlock({
       city,
-      stateName,
       stateSeed,
       cityNeighbors,
       featuredWorkflowSlugs,
@@ -1573,21 +1568,18 @@ function normalizeCuratedProofIntro({
 function normalizeCuratedProofBlocks({
   blocks,
   city,
-  stateName,
   stateSeed,
   cityNeighbors,
   featuredWorkflowSlugs,
 }: {
   blocks: Array<{ title: string; description: string }>;
   city: string;
-  stateName: string;
   stateSeed: StateSeoSeed;
   cityNeighbors: string[];
   featuredWorkflowSlugs: StateWorkflowSlug[];
 }) {
   const localityBlock = buildUserFacingLocalityBlock({
     city,
-    stateName,
     stateSeed,
     cityNeighbors,
     featuredWorkflowSlugs,
@@ -1666,14 +1658,12 @@ export const citySeoSeedList: CitySeoSeed[] = Object.entries(cityNamesByStateSlu
           ? normalizeCuratedProofBlocks({
               blocks: curatedProof.blocks,
               city,
-              stateName: stateSeed.name,
               stateSeed,
               cityNeighbors,
               featuredWorkflowSlugs,
             })
           : buildGeneratedProofBlocks({
               city,
-              stateName: stateSeed.name,
               stateSeed,
               cityNeighbors,
               featuredWorkflowSlugs,

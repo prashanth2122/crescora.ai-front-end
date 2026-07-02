@@ -2,15 +2,15 @@ import type { LegalPageData } from "@/lib/site-content";
 
 export const cookiePolicyContent = {
   metadata: {
-    title: "Cookie Policy | Crescora Flow",
+    title: "Cookie Policy | Crescora AI",
     description:
-      "Understand how Crescora Flow uses cookies and similar technologies for authentication, security, preferences, analytics, performance, and marketing.",
+      "Understand how Crescora AI uses cookies and similar technologies for authentication, security, preferences, analytics, performance, and marketing.",
   },
   hero: {
     eyebrow: "Legal",
     title: "Cookie Policy",
     description:
-      "This Cookie Policy explains how Crescora AI, operating as Crescora Flow and Crescora AI, uses cookies and similar technologies on https://www.crescora.ai, our application, dashboard, web widget, and related services.",
+      "This Cookie Policy explains how Crescora AI, operating as Crescora AI and Crescora AI, uses cookies and similar technologies on https://www.crescora.ai, our application, dashboard, web widget, and related services.",
   },
   dateLabel: "Effective date",
   updatedOn: "23-June 2026",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
+import { MarketingImageShowcase } from "@/components/site/marketing-image-showcase";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,14 @@ export default function HealthcarePage() {
         description={page.hero.description}
         primaryCta={page.hero.primaryCta}
         secondaryCta={page.hero.secondaryCta}
+        visual={
+          <MarketingImageShowcase
+            src="/marketing/labs-test-usecases.png"
+            alt="Crescora AI medical labs and healthcare automation workflow graphic for test requests, report status, reminders, and staff review."
+            caption="Healthcare and labs marketing visual using demo workflow content, not a live diagnostic or hospital deployment."
+            priority
+          />
+        }
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -49,7 +58,7 @@ export default function HealthcarePage() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
                   <Badge variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700">
-                    FLOW
+                    Crescora AI
                   </Badge>
                   <p className="text-base font-medium text-zinc-950">{item}</p>
                 </div>

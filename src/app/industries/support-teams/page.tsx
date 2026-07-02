@@ -151,8 +151,8 @@ export default function SupportTeamsIndustryPage() {
           />
           <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-white/10">
             <div className="grid grid-cols-2 border-b border-white/10 bg-white/5 text-sm font-semibold uppercase tracking-[0.24em] text-white/55">
-              <div className="px-5 py-4">Before FLOW</div>
-              <div className="border-l border-white/10 px-5 py-4">After FLOW</div>
+              <div className="px-5 py-4">Before Crescora AI</div>
+              <div className="border-l border-white/10 px-5 py-4">After Crescora AI</div>
             </div>
             {page.comparison.rows.map((row, index) => (
               <div

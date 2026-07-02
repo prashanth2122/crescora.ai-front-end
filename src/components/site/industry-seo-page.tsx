@@ -23,7 +23,7 @@ export function IndustrySeoPage({ industry, breadcrumbs, backHref, backLabel }: 
       <PageHero
         eyebrow="Industry"
         title={industry.title}
-        description={`${industry.description} This page is built to match the commercial search intent behind ${industry.keywordTarget}.`}
+        description={`${industry.description} This page helps buyers understand the workflow scope, trust controls, and next step for ${industry.keywordTarget}.`}
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
@@ -32,7 +32,7 @@ export function IndustrySeoPage({ industry, breadcrumbs, backHref, backLabel }: 
         <div className="grid gap-6 lg:grid-cols-2">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Search target" title={industry.keywordTarget} description={industry.h1} />
+              <SectionHeading eyebrow="Industry focus" title={industry.keywordTarget} description={industry.h1} />
               <p className="mt-6 text-sm leading-7 text-zinc-600">{industry.focus}</p>
             </CardContent>
           </Card>
@@ -40,11 +40,11 @@ export function IndustrySeoPage({ industry, breadcrumbs, backHref, backLabel }: 
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Proof"
-                title="Build the page around what the buyer needs to see."
+                title="Show the operating details buyers need before a workflow discussion."
                 description={industry.proof}
               />
               <p className="mt-6 text-sm leading-7 text-zinc-600">
-                The report recommends using state proof, workflow proof, screenshots, and local citations to avoid thin industry pages.
+                Use workflow examples, relevant locations, demo-safe visuals, and clear human-review boundaries instead of vague automation claims.
               </p>
             </CardContent>
           </Card>
@@ -56,7 +56,7 @@ export function IndustrySeoPage({ industry, breadcrumbs, backHref, backLabel }: 
           <p className="text-sm uppercase tracking-[0.3em] text-white/50">CTA</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">{industry.ctaLabel}</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72">
-            Use the industry page to move from search intent into a booked conversation, then route buyers back to the right state and workflow pages.
+            Use the industry page to move from research into a booked conversation, then route buyers back to the right regional and workflow pages.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">

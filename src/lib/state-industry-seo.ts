@@ -90,30 +90,30 @@ export function formatStateIndustryList(items: string[]) {
 }
 
 export function buildStateIndustryTitle(seed: StateSeoSeed, config: StateIndustrySeoConfig) {
-  return `${config.label} in ${seed.name} for ${config.metadataFocus} | FLOW by Crescora AI`;
+  return `${config.label} in ${seed.name} for ${config.metadataFocus} | Crescora AI`;
 }
 
 export function buildStateIndustryDescription(seed: StateSeoSeed, config: StateIndustrySeoConfig) {
-  return `Crescora FLOW helps ${config.titleNoun} buyers in ${seed.name} reduce ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
+  return `Crescora AI helps ${config.titleNoun} buyers in ${seed.name} reduce ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
 }
 
 export function buildStateIndustryFaqItems(seed: StateSeoSeed, config: StateIndustrySeoConfig) {
   return [
     {
-      question: `Why do ${config.titleNoun} teams in ${seed.name} choose FLOW?`,
-      answer: `${config.titleNoun} teams in ${seed.name} choose FLOW because they need to reduce ${seed.primaryPain} while keeping conversations, workflow state, reminders, records, and human escalation under one controlled system.`,
+      question: `Why do ${config.titleNoun} teams in ${seed.name} choose Crescora AI?`,
+      answer: `${config.titleNoun} teams in ${seed.name} choose Crescora AI because they need to reduce ${seed.primaryPain} while keeping conversations, workflow state, reminders, records, and human escalation under one controlled system.`,
     },
     {
       question: `What should ${config.titleNoun} teams in ${seed.name} automate first?`,
       answer: `Start with the highest-friction workflow in ${seed.name}, such as the process most affected by ${seed.primaryPain}. The best first rollout is usually the one closest to bookings, collections, service quality, or staff workload reduction.`,
     },
     {
-      question: `Can FLOW support ${formatStateIndustryList(seed.languages)} customer journeys in ${seed.name}?`,
-      answer: `Yes. FLOW can support ${formatStateIndustryList(seed.languages)} prompts, FAQs, reminders, routing, records, and handoff paths depending on the rollout scope and language coverage needed in ${seed.name}.`,
+      question: `Can Crescora AI support ${formatStateIndustryList(seed.languages)} customer journeys in ${seed.name}?`,
+      answer: `Yes. Crescora AI can support ${formatStateIndustryList(seed.languages)} prompts, FAQs, reminders, routing, records, and handoff paths depending on the rollout scope and language coverage needed in ${seed.name}.`,
     },
     {
-      question: `Can FLOW connect ${config.titleNoun} workflows with human handoff and analytics?`,
-      answer: `Yes. FLOW can connect ${config.titleNoun} workflows with AI routing, forms, records, reminders, payment or document steps, analytics, queue visibility, and human handoff so teams in ${seed.name} can manage the full customer journey cleanly.`,
+      question: `Can Crescora AI connect ${config.titleNoun} workflows with human handoff and analytics?`,
+      answer: `Yes. Crescora AI can connect ${config.titleNoun} workflows with AI routing, forms, records, reminders, payment or document steps, analytics, queue visibility, and human handoff so teams in ${seed.name} can manage the full customer journey cleanly.`,
     },
     {
       question: `Which cities in ${seed.name} should this rollout prioritize?`,

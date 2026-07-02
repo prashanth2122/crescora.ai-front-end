@@ -81,7 +81,7 @@ function BlogHeroVisual({ chips }: { chips?: string[] }) {
                 <p className="text-xs uppercase tracking-[0.24em] text-white/50">Visible stages</p>
                 <p className="mt-2 text-lg font-semibold">Operational states your team can act on</p>
               </div>
-              <Badge className="border-white/10 bg-white/10 text-white hover:bg-white/15">FLOW</Badge>
+              <Badge className="border-white/10 bg-white/10 text-white hover:bg-white/15">Crescora AI</Badge>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
               {chips.map((chip) => (

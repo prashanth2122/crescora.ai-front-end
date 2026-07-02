@@ -20,7 +20,7 @@ export function createSocialImageResponse({
   eyebrow,
   title,
   description,
-  accentLabel = "FLOW",
+  accentLabel = "Crescora AI",
 }: SocialImageInput) {
   return new ImageResponse(
     (

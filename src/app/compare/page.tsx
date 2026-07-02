@@ -17,7 +17,7 @@ const compareBreadcrumbs = buildBreadcrumbSchema([
 ]);
 
 const comparePagesSchema = buildItemListSchema(
-  "FLOW comparison pages",
+  "Crescora AI comparison pages",
   comparisonCards.map((item) => ({
     name: item.title,
     url: buildAbsoluteUrl(item.href),

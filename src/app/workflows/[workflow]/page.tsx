@@ -46,7 +46,7 @@ function WorkflowHeroVisual({ workflow }: { workflow: NonNullable<WorkflowSeo["p
                 <p className="text-xs uppercase tracking-[0.24em] text-white/50">Status model</p>
                 <p className="mt-2 text-lg font-semibold">Workflow states the team can track</p>
               </div>
-              <Badge className="border-white/10 bg-white/10 text-white hover:bg-white/15">FLOW</Badge>
+              <Badge className="border-white/10 bg-white/10 text-white hover:bg-white/15">Crescora AI</Badge>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
             {workflow.heroStatusChips?.map((chip) => (
@@ -170,8 +170,8 @@ function renderPublicWorkflowPage(workflow: WorkflowSeo) {
         <Card className="mt-10 overflow-hidden border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
           <CardContent className="p-0">
             <div className="grid grid-cols-2 border-b border-zinc-200 bg-zinc-50 text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              <div className="px-6 py-4">Before FLOW</div>
-              <div className="border-l border-zinc-200 px-6 py-4">After FLOW</div>
+              <div className="px-6 py-4">Before Crescora AI</div>
+              <div className="border-l border-zinc-200 px-6 py-4">After Crescora AI</div>
             </div>
             {page.beforeAfterSection.rows.map((row) => (
               <div key={row.before} className="grid grid-cols-2 border-b border-zinc-200 last:border-b-0">
@@ -345,7 +345,7 @@ function renderDefaultWorkflowPage(workflow: WorkflowSeo) {
       <PageHero
         eyebrow="Workflow"
         title={workflow.title}
-        description={`${workflow.description} This page is a dedicated BOFU landing page rather than a generic feature page.`}
+        description={`${workflow.description} Use this workflow guide to understand scope, handover points, rollout readiness, and the safest next step for your team.`}
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
@@ -354,15 +354,15 @@ function renderDefaultWorkflowPage(workflow: WorkflowSeo) {
         <div className="grid gap-6 lg:grid-cols-2">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Search target" title={workflow.keywordTarget} description={workflow.headline} />
+              <SectionHeading eyebrow="Workflow focus" title={workflow.keywordTarget} description={workflow.headline} />
               <p className="mt-6 text-sm leading-7 text-zinc-600">
-                Use the first paragraph and subheads to mirror the buyer job. Search snippets often come from page content, not just metadata.
+                Start with the buyer job, then show the workflow steps, handover points, and rollout requirements clearly.
               </p>
             </CardContent>
           </Card>
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Outline" title="Keep the page structured and commercially explicit." description="A strong workflow page should read like a rollout guide, not a product brochure." />
+              <SectionHeading eyebrow="Outline" title="Keep the page structured around scope and next steps." description="A strong workflow page should read like a rollout guide, not a product brochure." />
               <div className="mt-6 space-y-2 text-sm leading-7 text-zinc-600">
                 {workflow.outline.map((item) => (
                   <p key={item}>{item}</p>
@@ -378,7 +378,7 @@ function renderDefaultWorkflowPage(workflow: WorkflowSeo) {
           <p className="text-sm uppercase tracking-[0.3em] text-white/50">Primary CTA</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">{workflow.ctaLabel}</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72">
-            Use a dedicated workflow page to convert search intent into a demo request, then support it with state and industry pages.
+            Use this workflow page to turn a business question into a practical demo request, then support it with regional and industry context.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">

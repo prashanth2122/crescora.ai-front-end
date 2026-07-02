@@ -112,14 +112,14 @@ export const revenuePages = [
   page({
     slug: "whatsapp-automation",
     title: "WhatsApp automation workflows for sales, support, and follow-up",
-    metadataTitle: "WhatsApp Automation Workflows for Sales, Support, Booking, Payments, and Follow-Ups | Crescora FLOW",
+    metadataTitle: "WhatsApp Automation Workflows for Sales, Support, Booking, Payments, and Follow-Ups | Crescora AI",
     heroTitle: "Automate WhatsApp conversations without losing the next business step.",
     heroDescription:
-      "Crescora FLOW turns WhatsApp enquiries into structured workflows for lead qualification, booking, reminders, support, payment follow-up, CRM updates, and human handover - so every conversation has ownership, context, and a clear next action.",
+      "Crescora AI turns WhatsApp enquiries into structured workflows for lead qualification, booking, reminders, support, payment follow-up, CRM updates, and human handover - so every conversation has ownership, context, and a clear next action.",
     description:
       "Turn WhatsApp from a busy shared inbox into a controlled workflow system. Capture the right fields, route the conversation correctly, trigger the next action, and keep the team aligned on what happens after the customer sends the first message.",
     metadataDescription:
-      "Automate WhatsApp enquiries, lead qualification, appointment booking, reminders, support routing, payment follow-ups, CRM updates, and human handover with Crescora FLOW.",
+      "Automate WhatsApp enquiries, lead qualification, appointment booking, reminders, support routing, payment follow-ups, CRM updates, and human handover with Crescora AI.",
     keywordTarget: "WhatsApp automation workflows",
     updatedAt: "2026-06-24",
     heroEyebrow: "WhatsApp Automation",
@@ -152,7 +152,7 @@ export const revenuePages = [
         "Each use case keeps the same operating model: capture intent, move the customer to the next controlled action, and keep handover quality visible.",
     },
     examplesSupportLine:
-      "These rollout paths are supported through forms, appointments, payments, notifications, records, scheduler, FAQ, handover, API or connector, and analytics nodes inside FLOW.",
+      "These rollout paths are supported through forms, appointments, payments, notifications, records, scheduler, FAQ, handover, API or connector, and analytics nodes inside Crescora AI.",
     proofSection: {
       eyebrow: "Proof",
       title: "What your team verifies during the pilot",
@@ -271,13 +271,13 @@ export const revenuePages = [
       },
       {
         question: "Can the same workflow run on website chat too?",
-        answer: "Yes. FLOW can reuse the same qualification, routing, and handover logic across WhatsApp and website chat when the operating model should stay aligned.",
+        answer: "Yes. Crescora AI can reuse the same qualification, routing, and handover logic across WhatsApp and website chat when the operating model should stay aligned.",
       },
     ],
     relatedLinks: [
-      { ...link("Workflow examples", "/proof", "Review rollout-oriented proof pages that show how Crescora FLOW is launched in real customer operations."), ctaLabel: "View Examples ->" },
+      { ...link("Workflow examples", "/proof", "Review rollout-oriented proof pages that show how Crescora AI is launched in real customer operations."), ctaLabel: "View Examples ->" },
       { ...link("Pricing", "/pricing", "Choose a first-workflow pilot or a broader multi-team rollout based on scope, systems, and team coverage."), ctaLabel: "View Pricing ->" },
-      { ...link("Contact sales", "/contact", "Map your current WhatsApp journey, handover points, and rollout priorities with the Crescora team."), ctaLabel: "Talk to Sales ->" },
+      { ...link("Contact sales", "/contact", "Map your current WhatsApp journey, handover points, and rollout priorities with the Crescora team."), ctaLabel: "Discuss My Workflow ->" },
     ],
     ctaLabel: "Request WhatsApp workflow demo",
     ctaHref: "/contact",
@@ -285,7 +285,7 @@ export const revenuePages = [
       eyebrow: "Next step",
       title: "Ready to turn WhatsApp enquiries into a workflow?",
       description:
-        "Use FLOW to bring structure to leads, bookings, support questions, payments, reminders, and human handovers without losing ownership or queue visibility.",
+        "Use Crescora AI to bring structure to leads, bookings, support questions, payments, reminders, and human handovers without losing ownership or queue visibility.",
       note: "Start with one WhatsApp workflow. Prove value. Expand into more channels and teams.",
       primaryCta: { label: "Request WhatsApp Workflow Demo", href: "/contact" },
       secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
@@ -296,7 +296,7 @@ export const revenuePages = [
     title: "AI Chatbots for Websites, WhatsApp, and Social Messaging",
     heroTitle: "Deploy AI chatbots that operate inside a real business workflow.",
     heroDescription:
-      "FLOW combines conversational AI with routing, task creation, reminders, and human takeover so the bot does more than answer FAQs.",
+      "Crescora AI combines conversational AI with routing, task creation, reminders, and human takeover so the bot does more than answer FAQs.",
     description:
       "Multi-channel AI chatbot delivery for businesses that need grounded answers, lead capture, support triage, and downstream workflow execution.",
     keywordTarget: "AI chatbot for website and WhatsApp",
@@ -382,7 +382,7 @@ export const revenuePages = [
     ],
     relatedLinks: [
       link("Support automation", "/solutions/customer-support-automation", "See how the bot layer feeds a support workflow."),
-      link("Compare FLOW vs chatbots", "/compare/flow-vs-chatbots", "Understand the difference between answers and end-to-end workflow execution."),
+      link("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "Understand the difference between answers and end-to-end workflow execution."),
       link("Trust", "/trust", "Review the product, workflow, and governance posture."),
     ],
     ctaLabel: "Request builder demo",
@@ -393,7 +393,7 @@ export const revenuePages = [
     title: "Business Workflow Automation for Enquiries, Follow-Up, and Operations",
     heroTitle: "Run the customer workflow from first message to logged outcome.",
     heroDescription:
-      "FLOW gives teams one operating layer for conversation handling, reminders, bookings, record updates, escalations, and proof of execution.",
+      "Crescora AI gives teams one operating layer for conversation handling, reminders, bookings, record updates, escalations, and proof of execution.",
     description:
       "Workflow automation for businesses that need a visible operating path across customer conversations, internal actions, and human handover.",
     keywordTarget: "workflow automation software",
@@ -490,7 +490,7 @@ export const revenuePages = [
     title: "Customer Support Automation for Triage, Answers, and Escalation",
     heroTitle: "Reduce repeated support work without losing control of escalations.",
     heroDescription:
-      "FLOW helps support teams answer common questions, capture issue detail, route cases, and surface unresolved work with full context for the next human owner.",
+      "Crescora AI helps support teams answer common questions, capture issue detail, route cases, and surface unresolved work with full context for the next human owner.",
     description:
       "Support workflow automation for businesses that need faster replies, better ticket quality, and visible escalation performance across customer channels.",
     keywordTarget: "customer support automation for small business",
@@ -576,7 +576,7 @@ export const revenuePages = [
     ],
     relatedLinks: [
       link("Support industry page", "/industries/support-teams", "See the support-specific positioning and examples."),
-      link("Compare FLOW vs chatbots", "/compare/flow-vs-chatbots", "Understand the difference between FAQ answers and operational support workflows."),
+      link("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "Understand the difference between FAQ answers and operational support workflows."),
       link("Trust", "/trust", "Review governance, rollout, and operating safeguards."),
     ],
     ctaLabel: "Request support demo",
@@ -587,7 +587,7 @@ export const revenuePages = [
     title: "Appointment Booking Automation for Scheduling, Confirmation, and Reminders",
     heroTitle: "Turn booking requests into confirmed appointments without back-and-forth overload.",
     heroDescription:
-      "FLOW handles booking intake, slot coordination, reminders, reschedules, and exception routing so the team spends less time chasing confirmations.",
+      "Crescora AI handles booking intake, slot coordination, reminders, reschedules, and exception routing so the team spends less time chasing confirmations.",
     description:
       "Appointment booking automation for clinics, hospitals, education teams, and service businesses that need fewer no-shows and cleaner scheduling workflows.",
     keywordTarget: "appointment booking automation",
@@ -684,7 +684,7 @@ export const revenuePages = [
     title: "Lead Capture Automation for Qualification, Routing, and Follow-Up",
     heroTitle: "Capture, qualify, and route leads before they go cold.",
     heroDescription:
-      "FLOW turns website, WhatsApp, and inbound conversation traffic into structured lead records with clear next actions for the sales team.",
+      "Crescora AI turns website, WhatsApp, and inbound conversation traffic into structured lead records with clear next actions for the sales team.",
     description:
       "Lead capture automation for businesses that need faster first response, better qualification, and cleaner sales follow-up from inbound enquiries.",
     keywordTarget: "lead capture automation software",
@@ -781,7 +781,7 @@ export const revenuePages = [
     title: "Payment Reminder Automation for Billing, Collections, and Status Follow-Up",
     heroTitle: "Move payments forward without relying on memory and manual chase lists.",
     heroDescription:
-      "FLOW automates reminder sequences, payment-status capture, owner notifications, and escalation for overdue or exception-driven cases.",
+      "Crescora AI automates reminder sequences, payment-status capture, owner notifications, and escalation for overdue or exception-driven cases.",
     description:
       "Payment reminder automation for teams that need cleaner collections follow-up, visible owner handoff, and fewer overdue actions slipping through the cracks.",
     keywordTarget: "payment reminder automation",
@@ -878,7 +878,7 @@ export const revenuePages = [
     title: "Document Collection Automation for Intake, KYC, and Missing-Item Follow-Up",
     heroTitle: "Collect documents without endless manual chasing.",
     heroDescription:
-      "FLOW coordinates request messages, upload status, missing-item reminders, and human follow-up so document-heavy processes move faster with better visibility.",
+      "Crescora AI coordinates request messages, upload status, missing-item reminders, and human follow-up so document-heavy processes move faster with better visibility.",
     description:
       "Document collection automation for businesses that need structured intake, missing-item tracking, and owner visibility across onboarding, KYC, and service workflows.",
     keywordTarget: "document collection automation",
@@ -975,7 +975,7 @@ export const revenuePages = [
     title: "CRM and API Workflow Automation for Record Sync and Operational Handover",
     heroTitle: "Keep the conversation workflow connected to the system of record.",
     heroDescription:
-      "FLOW updates CRM fields, creates downstream tasks, triggers internal APIs, and keeps human owners informed after the customer conversation moves forward.",
+      "Crescora AI updates CRM fields, creates downstream tasks, triggers internal APIs, and keeps human owners informed after the customer conversation moves forward.",
     description:
       "CRM and API workflow automation for teams that need conversation-driven record updates, notifications, and operational handover without brittle manual syncing.",
     keywordTarget: "CRM and API workflow automation",
@@ -1072,7 +1072,7 @@ export const revenuePages = [
     title: "Human Handover Automation for Escalation, Ownership, and Context Transfer",
     heroTitle: "Escalate to a person without resetting the conversation.",
     heroDescription:
-      "FLOW treats human handover as a planned workflow step, preserving context, queue ownership, and the exact reason the case left automation.",
+      "Crescora AI treats human handover as a planned workflow step, preserving context, queue ownership, and the exact reason the case left automation.",
     description:
       "Human handover automation for teams that need clean escalation from chatbot, WhatsApp, support, or sales workflows into a controlled manual owner path.",
     keywordTarget: "human handover automation",

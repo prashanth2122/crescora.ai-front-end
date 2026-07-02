@@ -29,7 +29,7 @@ export const metadata = {
 
 const breadcrumbSchema = buildBreadcrumbSchema([
   { name: "Home", href: "https://www.crescora.ai" },
-  { name: "India SEO", href: "https://www.crescora.ai/india" },
+  { name: "India", href: "https://www.crescora.ai/india" },
 ]);
 
 export default function IndiaSeoHubPage() {
@@ -102,7 +102,7 @@ export default function IndiaSeoHubPage() {
           {templates.slice(0, 6).map((template) => (
             <Card key={template.slug} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
               <CardContent className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{template.intent}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Workflow template</p>
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{template.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{template.headline}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
@@ -166,12 +166,16 @@ export default function IndiaSeoHubPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Industries" title="Industry pages support the state and workflow architecture." description="The report recommends hospitals, clinics, real estate, support teams, and service businesses as the first vertical coverage." />
+        <SectionHeading
+          eyebrow="Industries"
+          title="Industry workflows for teams that need faster response and cleaner handover."
+          description="Crescora AI can be scoped for hospitals, clinics, real estate teams, support teams, and service businesses where enquiries, bookings, reminders, payments, documents, and escalations need one operating path."
+        />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {industriesSeo.map((industry) => (
             <Card key={industry.slug} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
               <CardContent className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{industry.keywordTarget}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{industry.focus}</p>
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{industry.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{industry.description}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">

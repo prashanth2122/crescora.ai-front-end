@@ -89,6 +89,33 @@ export default function ContactPage() {
       </section>
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <LeadForm />
+        <div className="mt-8 grid gap-4 lg:grid-cols-[1fr_0.9fr]">
+          <Card className="border-zinc-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.05)]">
+            <CardContent className="p-6 sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">
+                {siteContent.contact.nextSteps.eyebrow}
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-zinc-950">
+                {siteContent.contact.nextSteps.title}
+              </h2>
+              <ul className="mt-6 space-y-3">
+                {siteContent.contact.nextSteps.items.map((item) => (
+                  <li key={item} className="text-sm leading-7 text-zinc-700">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="border-zinc-200 bg-zinc-950 text-white shadow-[0_18px_50px_rgba(15,23,42,0.12)]">
+            <CardContent className="p-6 sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/50">Response expectation</p>
+              <p className="mt-4 text-base leading-8 text-white/78">{siteContent.contact.responseExpectation}</p>
+              <p className="mt-4 text-base leading-8 text-white/78">{siteContent.contact.founderLedNote}</p>
+              <p className="mt-6 text-xs leading-6 text-white/55">{siteContent.contact.consent}</p>
+            </CardContent>
+          </Card>
+        </div>
       </section>
     </PageShell>
   );

@@ -12,6 +12,7 @@ import {
   websiteSchema,
 } from "@/lib/seo";
 import { PageShell } from "@/components/site/page-shell";
+import { ProductProofSection } from "@/components/site/product-proof-section";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { WorkflowVisual } from "@/components/site/workflow-visual";
@@ -97,6 +98,10 @@ export default function HomePage() {
     automation,
     outcomes,
     coverage,
+    founderTrust,
+    productProof,
+    pilotProcess,
+    pilotMetrics,
     industries,
     pilot,
     explore,
@@ -116,12 +121,12 @@ export default function HomePage() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-12">
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-[0_30px_120px_rgba(15,23,42,0.28)]">
           <div className="bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.28),transparent_22%),radial-gradient(circle_at_top_right,rgba(168,85,247,0.22),transparent_22%),linear-gradient(135deg,#050816_0%,#0b1220_50%,#111827_100%)] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-              <div className="text-white">
-                <Badge className="rounded-full border border-white/10 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.28em] text-white hover:bg-white/15">
+            <div className="grid min-w-0 gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div className="min-w-0 text-white">
+                <Badge className="h-auto max-w-full whitespace-normal rounded-full border border-white/10 bg-white/10 px-4 py-1 text-left text-xs font-medium uppercase leading-5 tracking-[0.22em] text-white hover:bg-white/15 sm:whitespace-nowrap sm:tracking-[0.28em]">
                   {hero.badge}
                 </Badge>
-                <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-7xl">
+                <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-7xl">
                   {hero.title}
                 </h1>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
@@ -159,13 +164,41 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="lg:pl-2">
+              <div className="min-w-0 lg:pl-2">
                 <WorkflowVisual className="shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{founderTrust.eyebrow}</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{founderTrust.title}</h2>
+              <p className="mt-4 text-base leading-8 text-zinc-600">{founderTrust.description}</p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {founderTrust.points.map((point) => (
+                <div key={point} className="flex items-start gap-3 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm leading-7 text-zinc-700">
+                  <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
+                  <span>{point}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ProductProofSection
+        eyebrow={productProof.eyebrow}
+        title={productProof.title}
+        description={productProof.description}
+        disclaimer={productProof.disclaimer}
+        panels={productProof.panels}
+      />
 
       <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <SectionHeading eyebrow={pain.eyebrow} title={pain.title} description={pain.description} />
@@ -262,6 +295,39 @@ export default function HomePage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div>
+            <SectionHeading
+              eyebrow={pilotProcess.eyebrow}
+              title={pilotProcess.title}
+              description={pilotProcess.description}
+            />
+            <div className="mt-10 grid gap-3">
+              {pilotProcess.steps.map((step, index) => (
+                <div key={step} className="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white px-5 py-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-950 text-sm font-semibold text-white">
+                    {index + 1}
+                  </span>
+                  <span className="text-sm font-medium text-zinc-800">{step}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{pilotMetrics.eyebrow}</p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{pilotMetrics.title}</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {pilotMetrics.items.map((item) => (
+                <div key={item} className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm leading-7 text-zinc-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

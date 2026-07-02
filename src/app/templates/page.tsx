@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
+import { MarketingImageShowcase } from "@/components/site/marketing-image-showcase";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { TemplateLibrarySection } from "@/components/site/template-library-section";
@@ -35,6 +36,14 @@ export default function TemplatesHubPage() {
         description={page.hero.description}
         primaryCta={page.hero.primaryCta}
         secondaryCta={page.hero.secondaryCta}
+        visual={
+          <MarketingImageShowcase
+            src="/marketing/coaching-centre-education-usecase.png"
+            alt="Crescora AI template workflow graphic showing coaching center, education, enrolment, reminders, and follow-up automation."
+            caption="Template marketing visual using demo workflow content, not a live coaching center deployment."
+            priority
+          />
+        }
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">

@@ -1,9 +1,9 @@
 export const hiPageCopy = {
   home: {
     metadata: {
-      title: "FLOW Hindi SEO Foundation | Crescora AI",
+      title: "Crescora AI Hindi SEO Foundation | Crescora AI",
       description:
-        "Hindi route structure, locale-aware navigation, and multilingual metadata foundations for FLOW by Crescora.",
+        "Hindi route structure, locale-aware navigation, and multilingual metadata foundations for Crescora AI.",
     },
     breadcrumb: [
       { name: "होम", href: "https://www.crescora.ai/hi" },
@@ -11,7 +11,7 @@ export const hiPageCopy = {
     ],
     hero: {
       eyebrow: "हिन्दी",
-      title: "FLOW by Crescora के लिए multilingual SEO foundation तैयार है.",
+      title: "Crescora AI के लिए multilingual SEO foundation तैयार है.",
       description:
         "यह route set locale-aware navigation, Hindi entry points, hreflang-ready metadata, और future translation rollout के लिए base बनाता है.",
       secondaryCta: "Hindi hubs देखें",
@@ -116,7 +116,7 @@ export const hiPageCopy = {
     metadata: {
       title: "Hindi Comparison Hub | Crescora AI",
       description:
-        "Hindi decision-stage comparison hub for buyers narrowing down FLOW against other automation options.",
+        "Hindi decision-stage comparison hub for buyers narrowing down Crescora AI against other automation options.",
     },
     breadcrumb: [
       { name: "होम", href: "https://www.crescora.ai/hi" },
@@ -172,7 +172,7 @@ export const hiPageCopy = {
       eyebrow: "वर्कफ़्लो",
       title: "Search-intent workflow pages के लिए Hindi hub.",
       description:
-        "यह route job-based SEO architecture के लिए base layer है, और future translated workflow pages के लिए placeholder नहीं बल्कि real structure है.",
+        "यह route workflow discovery और future translated workflow pages के लिए practical base layer देता है.",
       secondaryCta: "समाधान देखें",
     },
     section: {
@@ -205,26 +205,26 @@ export const hiPageCopy = {
         "Hindi route tree तैयार है, इसलिए future localization main architecture को नहीं बदलेगी.",
     },
     landingSection: {
-      eyebrow: "SEO landing pages",
+      eyebrow: "Industry pages",
       title: "Keyword-specific industry landing pages के लिए Hindi index.",
       description: "ये cards translated industry pages की roadmap का हिस्सा हैं.",
     },
   },
   india: {
     metadata: {
-      title: "Hindi India SEO Hub | Crescora AI",
+      title: "Hindi India Regional Hub | Crescora AI",
       description:
-        "Hindi regional SEO hub for states, workflows, templates, industries, local SEO, and technical foundations.",
+        "Hindi regional hub for states, workflows, templates, industries, local trust signals, and rollout foundations.",
     },
     breadcrumb: [
       { name: "होम", href: "https://www.crescora.ai/hi" },
       { name: "इंडिया", href: "https://www.crescora.ai/hi/india" },
     ],
     hero: {
-      eyebrow: "इंडिया SEO",
-      title: "India SEO architecture का Hindi hub.",
+      eyebrow: "इंडिया",
+      title: "India regional automation pages का Hindi hub.",
       description:
-        "यह page state hubs, workflow hubs, template hubs, local SEO, और technical SEO guidance का localized entry point है.",
+        "यह page state hubs, workflow hubs, template hubs, local trust signals, और rollout guidance का localized entry point है.",
     },
     stateSection: {
       eyebrow: "States",
@@ -240,10 +240,10 @@ export const hiPageCopy = {
     templateSection: {
       eyebrow: "Templates",
       title: "Template-led pages का Hindi index.",
-      description: "BOFU launch assets के लिए pages तैयार हैं.",
+      description: "Workflow launch assets के लिए pages तैयार हैं.",
     },
     localSection: {
-      eyebrow: "Local SEO",
+      eyebrow: "Local trust",
       title: "Localized trust signals के लिए checklist.",
       description:
         "यह layer real offices, citations, directories, PR, और proof-led regional signals को support करता है.",

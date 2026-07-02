@@ -27,7 +27,7 @@ const pricingBreadcrumbs = buildBreadcrumbSchema([
 ]);
 
 const pricingPackagesSchema = buildItemListSchema(
-  "FLOW pricing packages",
+  "Crescora AI pricing packages",
   pricingRegions.flatMap((region) =>
     pricingPackagesByRegion[region.value].map((pkg) => ({
       name: `${pkg.title} (${region.label})`,
@@ -93,6 +93,34 @@ export default function PricingPage() {
         />
 
         <section className="mt-16">
+          <div className="grid gap-6 lg:grid-cols-2">
+            {[siteContent.pricing.beforeLaunch, siteContent.pricing.mayCostExtra].map((section) => (
+              <Card key={section.title} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-6 sm:p-8">
+                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{section.eyebrow}</p>
+                  <h2 className="mt-4 text-2xl font-semibold tracking-tight text-zinc-950">{section.title}</h2>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {section.items.map((item) => (
+                      <div key={item} className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm leading-7 text-zinc-700">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-6 grid gap-4 lg:grid-cols-2">
+            <div className="rounded-[1.5rem] border border-zinc-200 bg-white p-6 text-sm leading-7 text-zinc-700 shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+              {siteContent.pricing.trustCopy}
+            </div>
+            <div className="rounded-[1.5rem] border border-zinc-200 bg-white p-6 text-sm leading-7 text-zinc-700 shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+              {siteContent.pricing.cancellationPolicy}
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-16">
           <SectionHeading
             eyebrow={siteContent.pricing.factors.eyebrow}
             title={siteContent.pricing.factors.title}
@@ -104,6 +132,26 @@ export default function PricingPage() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold tracking-tight text-zinc-950">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-zinc-600">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16">
+          <div className="grid gap-6 lg:grid-cols-2">
+            {[siteContent.pricing.clientReadiness, siteContent.pricing.scopeClarity].map((section) => (
+              <Card key={section.title} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-6 sm:p-8">
+                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{section.eyebrow}</p>
+                  <h2 className="mt-4 text-2xl font-semibold tracking-tight text-zinc-950">{section.title}</h2>
+                  <ul className="mt-6 space-y-3">
+                    {section.items.map((item) => (
+                      <li key={item} className="text-sm leading-7 text-zinc-700">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}

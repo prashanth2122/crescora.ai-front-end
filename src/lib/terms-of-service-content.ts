@@ -2,23 +2,23 @@ import type { LegalPageData } from "@/lib/site-content";
 
 export const termsOfServiceContent = {
   metadata: {
-    title: "Terms of Service | Crescora Flow",
+    title: "Terms of Service | Crescora AI",
     description:
-      "Review the terms that govern access to Crescora Flow, including workspaces, automation flows, AI features, integrations, billing, acceptable use, and service limitations.",
+      "Review the terms that govern access to Crescora AI, including workspaces, automation flows, AI features, integrations, billing, acceptable use, and service limitations.",
   },
   hero: {
     eyebrow: "Legal",
     title: "Terms of Service",
     description:
-      'These Terms of Service ("Terms") govern your access to and use of Crescora Flow, Crescora AI websites, applications, dashboards, workspaces, automation builder, APIs, web widgets, AI features, integrations, and related services ("Services").',
+      'These Terms of Service ("Terms") govern your access to and use of Crescora AI, Crescora AI websites, applications, dashboards, workspaces, automation builder, APIs, web widgets, AI features, integrations, and related services ("Services").',
   },
   dateLabel: "Effective date",
   updatedOn: "06-June 2026",
   sections: [
     {
-      title: "1. About Crescora Flow",
+      title: "1. About Crescora AI",
       paragraphs: [
-        "Crescora Flow is a no-code/low-code AI automation platform that helps businesses build, operate, and govern customer conversations and workflows across channels such as Web, WhatsApp, Telegram, email, SMS, APIs, and connected business systems.",
+        "Crescora AI is a no-code/low-code AI automation platform that helps businesses build, operate, and govern customer conversations and workflows across channels such as Web, WhatsApp, Telegram, email, SMS, APIs, and connected business systems.",
         "The Services may include visual flow building, runtime automation, AI features, knowledge base tools, human handoff, agent console, analytics, billing, integrations, templates, document workflows, payments, approvals, audit logs, and governance features.",
       ],
     },

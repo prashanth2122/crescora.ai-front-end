@@ -3,10 +3,11 @@ import Link from "next/link";
 import { siteContent } from "@/lib/site-content";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
+import { MarketingImageShowcase } from "@/components/site/marketing-image-showcase";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BellRing, CalendarDays, CheckCircle2, CreditCard, MessageSquareText, ShieldCheck, Stethoscope, UserRound } from "lucide-react";
+import { BellRing, CalendarDays, CheckCircle2, CreditCard, MessageSquareText, ShieldCheck, Stethoscope, UserRound } from "lucide-react";
 import { createExactPageMetadata } from "@/lib/seo";
 
 export const metadata = createExactPageMetadata({
@@ -29,24 +30,12 @@ export default function ClinicsIndustryPage() {
         primaryCta={page.hero.primaryCta}
         secondaryCta={page.hero.secondaryCta}
         visual={
-          <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(244,244,245,0.96)_100%)] p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">Clinic workflow path</p>
-            <div className="mt-6 space-y-3">
-              {page.hero.previewSteps.map((step, index) => (
-                <div key={step} className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-950 text-sm font-semibold text-white">
-                    {index + 1}
-                  </div>
-                  <div className="min-w-0 flex-1 rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm font-medium text-zinc-900 shadow-[0_10px_30px_rgba(15,23,42,0.04)]">
-                    {step}
-                  </div>
-                  {index < page.hero.previewSteps.length - 1 ? (
-                    <ArrowRight className="hidden h-4 w-4 shrink-0 text-zinc-400 sm:block" />
-                  ) : null}
-                </div>
-              ))}
-            </div>
-          </div>
+          <MarketingImageShowcase
+            src="/marketing/hospital-automation-template.png"
+            alt="Crescora AI healthcare automation workflow graphic for clinic appointments, reminders, payments, and staff handover."
+            caption="Clinic automation marketing visual using demo workflow content, not a live clinic deployment."
+            priority
+          />
         }
       />
 
@@ -105,8 +94,8 @@ export default function ClinicsIndustryPage() {
           />
           <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-white/10">
             <div className="grid grid-cols-2 border-b border-white/10 bg-white/5 text-sm font-semibold uppercase tracking-[0.24em] text-white/55">
-              <div className="px-5 py-4">Before FLOW</div>
-              <div className="border-l border-white/10 px-5 py-4">After FLOW</div>
+              <div className="px-5 py-4">Before Crescora AI</div>
+              <div className="border-l border-white/10 px-5 py-4">After Crescora AI</div>
             </div>
             {page.comparison.rows.map((row, index) => (
               <div

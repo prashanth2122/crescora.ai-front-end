@@ -105,7 +105,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
       <PageHero
         eyebrow={`${seed.name} industry`}
         title={`${config.label} for teams in ${seed.name}`}
-        description={`FLOW helps ${config.titleNoun} teams in ${seed.name} reduce ${seed.primaryPain}. Support ${formatStateIndustryList(seed.languages)} customer journeys across ${formatStateIndustryList(seed.cityClusters)} with workflow orchestration, AI routing, reminders, records, analytics, and human handoff.`}
+        description={`Crescora AI helps ${config.titleNoun} teams in ${seed.name} reduce ${seed.primaryPain}. Support ${formatStateIndustryList(seed.languages)} customer journeys across ${formatStateIndustryList(seed.cityClusters)} with workflow orchestration, AI routing, reminders, records, analytics, and human handoff.`}
         primaryCta={{ label: config.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} rollout`, href: "/contact" }}
         supportText={`Local search focus includes ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateIndustryList(seed.industries)} in ${seed.name}.`}
@@ -114,7 +114,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Industry fit"
-          title={`Why ${config.titleNoun} teams in ${seed.name} choose FLOW`}
+          title={`Why ${config.titleNoun} teams in ${seed.name} choose Crescora AI`}
           description={`${config.buyerLine} The strongest need in ${seed.name} usually comes from ${seed.commercialAngle}.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -160,7 +160,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
               <CardContent className="p-6">
                 <h2 className="text-lg font-semibold tracking-tight text-zinc-950">{area}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">
-                  Use FLOW to make {area.toLowerCase()} more visible, more consistent, and less dependent on manual follow-up across {seed.name}.
+                  Use Crescora AI to make {area.toLowerCase()} more visible, more consistent, and less dependent on manual follow-up across {seed.name}.
                 </p>
               </CardContent>
             </Card>
@@ -195,7 +195,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Implementation"
-                title={`How FLOW implementation works for ${industry.name.toLowerCase()} in ${seed.name}`}
+                title={`How Crescora AI implementation works for ${industry.name.toLowerCase()} in ${seed.name}`}
                 description={config.launchLine}
               />
               <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -254,7 +254,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
         <SectionHeading
           eyebrow="FAQ"
           title={`FAQs for ${industry.name.toLowerCase()} in ${seed.name}`}
-          description={`These are the rollout questions buyers in ${seed.name} ask before they commit to ${config.titleNoun} with FLOW.`}
+          description={`These are the rollout questions buyers in ${seed.name} ask before they commit to ${config.titleNoun} with Crescora AI.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {faqItems.map((item) => (
@@ -273,7 +273,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch {config.titleNoun} in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use FLOW to reduce {seed.primaryPain} across {formatStateIndustryList(seed.cityClusters)} with workflows built for {industry.name.toLowerCase()}, customer journeys in {formatStateIndustryList(seed.languages)}, and rollout control that does not depend on manual follow-up.
+            Use Crescora AI to reduce {seed.primaryPain} across {formatStateIndustryList(seed.cityClusters)} with workflows built for {industry.name.toLowerCase()}, customer journeys in {formatStateIndustryList(seed.languages)}, and rollout control that does not depend on manual follow-up.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/60">
             Search-intent coverage includes {seed.localSearchTerms.join(", ")} while the implementation stays grounded in real workflow outcomes, analytics, records, and human handoff.

@@ -1,12 +1,12 @@
 import type { LocaleCopy } from "@/lib/locales";
 
-const productName = "FLOW by Crescora AI";
+const productName = "Crescora AI";
 
 export const hiLocaleCopy: LocaleCopy = {
   site: {
-    seoTitle: "FLOW के लिए Hindi SEO Foundation",
+    seoTitle: "Crescora AI के लिए Hindi SEO Foundation",
     description:
-      "FLOW by Crescora AI ग्राहक पूछताछ को booked calls, स्पष्ट follow-ups, और completed projects में बदलने में मदद करता है.",
+      "Crescora AI ग्राहक पूछताछ को booked calls, स्पष्ट follow-ups, और completed projects में बदलने में मदद करता है.",
   },
   language: {
     label: "भाषा",
@@ -41,7 +41,7 @@ export const hiLocaleCopy: LocaleCopy = {
     { label: "मूल्य निर्धारण", href: "/pricing" },
     { label: "ब्लॉग", href: "/blog" },
     { label: "ट्रस्ट", href: "/trust" },
-    { label: "प्रूफ", href: "/resources" },
+    { label: "प्रूफ", href: "/workflow-examples" },
   ],
   footerGroups: [
     {
@@ -72,7 +72,7 @@ export const hiLocaleCopy: LocaleCopy = {
         { label: "हमारे बारे में", href: "/about" },
         { label: "संपर्क", href: "/contact" },
         { label: "ब्लॉग", href: "/blog" },
-        { label: "पायलट प्रोग्राम", href: "/proof" },
+        { label: "पायलट प्रोग्राम", href: "/workflow-examples" },
       ],
     },
     {

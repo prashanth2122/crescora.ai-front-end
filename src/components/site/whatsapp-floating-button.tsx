@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
   CalendarDays,
+  PlayCircle,
   Headset,
   type LucideIcon,
   Mail,
@@ -18,6 +19,7 @@ import { buildLocalizedHref, getLocaleCopy, getLocaleFromPath } from "@/lib/loca
 type SupportFloatingMenuProps = {
   bookCallHref: string;
   callHref: string | null;
+  demoHref: string;
   supportEmailHref: string | null;
   whatsappHref: string | null;
 };
@@ -114,6 +116,7 @@ function SupportActionLink({
 export function WhatsAppFloatingButton({
   bookCallHref,
   callHref,
+  demoHref,
   supportEmailHref,
   whatsappHref,
 }: SupportFloatingMenuProps) {
@@ -151,6 +154,13 @@ export function WhatsAppFloatingButton({
           tone: "brand",
         }
       : null,
+    {
+      id: "demo",
+      label: "Try Crescora AI Demo",
+      href: buildLocalizedHref(demoHref, locale),
+      Icon: PlayCircle,
+      tone: "brand",
+    },
     {
       id: "book_call",
       label: copy.header.bookCallLabel,

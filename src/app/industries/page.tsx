@@ -16,6 +16,7 @@ import { siteContent } from "@/lib/site-content";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
+import { MarketingImageShowcase } from "@/components/site/marketing-image-showcase";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -47,39 +48,6 @@ const industryIcons = {
   "Insurance / Finance Services": ShieldCheck,
 } as const;
 
-function IndustryWorkflowPreview() {
-  const page = siteContent.industriesIndex;
-
-  return (
-    <div className="space-y-4">
-      <Card className="overflow-hidden border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-        <CardContent className="p-0">
-          <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">
-              {page.hero.previewLabel}
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-zinc-950">
-              {page.hero.previewTitle}
-            </h2>
-          </div>
-          <div className="grid gap-3 p-6 sm:grid-cols-2">
-            {page.hero.previewSteps.map((step, index) => (
-              <div
-                key={step}
-                className="rounded-2xl border border-zinc-200 bg-white px-4 py-3 text-sm font-medium text-zinc-800 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
-              >
-                <span className="mr-2 text-zinc-400">{String(index + 1).padStart(2, "0")}</span>
-                {step}
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-      <p className="max-w-xl text-sm leading-7 text-zinc-600">{page.hero.trustLine}</p>
-    </div>
-  );
-}
-
 export default function IndustriesPage() {
   const page = siteContent.industriesIndex;
 
@@ -92,7 +60,6 @@ export default function IndustriesPage() {
         description={page.hero.description}
         primaryCta={page.hero.primaryCta}
         secondaryCta={page.hero.secondaryCta}
-        visual={<IndustryWorkflowPreview />}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
@@ -156,7 +123,7 @@ export default function IndustriesPage() {
           })}
         </div>
         <p className="mt-8 max-w-4xl text-base leading-8 text-zinc-600">
-          FLOW can run the intake, qualification, business rules, record updates, reminders, approvals, and human
+          Crescora AI can run the intake, qualification, business rules, record updates, reminders, approvals, and human
           escalation steps behind each of these workflows. The same engine can adapt to regulated, service-heavy, and
           high-follow-up teams without forcing every industry into the same shallow chatbot pattern.
         </p>
@@ -182,17 +149,26 @@ export default function IndustriesPage() {
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
         <div className="mt-8 rounded-[1.5rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
-          <SectionHeading
-            eyebrow={page.moreIndustries.eyebrow}
-            title={page.moreIndustries.title}
-            description={page.moreIndustries.description}
-          />
-          <div className="mt-5 flex flex-wrap gap-2">
-            {page.moreIndustries.chips.map((item) => (
-              <Badge key={item} variant="secondary" className="rounded-full bg-zinc-100 px-3 py-1 text-zinc-700">
-                {item}
-              </Badge>
-            ))}
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+            <div>
+              <SectionHeading
+                eyebrow={page.moreIndustries.eyebrow}
+                title={page.moreIndustries.title}
+                description={page.moreIndustries.description}
+              />
+              <div className="mt-5 flex flex-wrap gap-2">
+                {page.moreIndustries.chips.map((item) => (
+                  <Badge key={item} variant="secondary" className="rounded-full bg-zinc-100 px-3 py-1 text-zinc-700">
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+            <MarketingImageShowcase
+              src="/marketing/insurance-finance-usecases.png"
+              alt="Crescora AI insurance and finance workflow graphic for service requests, reminders, documents, and human review."
+              caption="Finance and insurance marketing visual for scope review, not a claim of regulated decision automation."
+            />
           </div>
         </div>
       </section>

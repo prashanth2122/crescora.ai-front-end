@@ -36,7 +36,7 @@ export function CompareHubPageTemplate({ page }: CompareHubPageTemplateProps) {
               <thead className="bg-zinc-950 text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
                 <tr>
                   <th className="px-6 py-4">Business need</th>
-                  <th className="px-6 py-4">What FLOW helps automate</th>
+                  <th className="px-6 py-4">What Crescora AI helps automate</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200">
@@ -67,7 +67,7 @@ export function CompareHubPageTemplate({ page }: CompareHubPageTemplateProps) {
                 <tr>
                   <th className="px-6 py-4">Platform</th>
                   <th className="px-6 py-4">Common strength</th>
-                  <th className="px-6 py-4">Where Crescora FLOW fits better</th>
+                  <th className="px-6 py-4">Where Crescora AI fits better</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200">
@@ -108,7 +108,7 @@ export function CompareHubPageTemplate({ page }: CompareHubPageTemplateProps) {
               <thead className="bg-zinc-950 text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
                 <tr>
                   <th className="px-6 py-4">Capability</th>
-                  <th className="px-6 py-4">Crescora FLOW focus</th>
+                  <th className="px-6 py-4">Crescora AI focus</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200">
@@ -182,7 +182,7 @@ export function CompareHubPageTemplate({ page }: CompareHubPageTemplateProps) {
                 <thead className="bg-zinc-950 text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
                   <tr>
                     <th className="px-5 py-4">Outcome</th>
-                    <th className="px-5 py-4">FLOW impact</th>
+                    <th className="px-5 py-4">Crescora AI impact</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-zinc-200">
@@ -219,10 +219,10 @@ export function CompareHubPageTemplate({ page }: CompareHubPageTemplateProps) {
           <div className="mt-8 rounded-3xl border border-zinc-200 bg-white p-6">
             <h2 className="text-3xl font-semibold tracking-tight text-zinc-950">Ready to automate your customer journeys?</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-zinc-600">
-              Crescora FLOW helps your business respond faster, reduce manual work, capture more opportunities, and deliver a more professional customer experience.
+              Crescora AI helps your business respond faster, reduce manual work, capture more opportunities, and deliver a more professional customer experience.
             </p>
             <p className="mt-3 text-sm leading-7 text-zinc-500">
-              See how FLOW can automate your customer conversations, workflows, and follow-ups.
+              See how Crescora AI can automate your customer conversations, workflows, and follow-ups.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">

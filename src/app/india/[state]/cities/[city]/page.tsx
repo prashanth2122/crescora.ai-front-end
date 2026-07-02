@@ -27,7 +27,7 @@ function buildCityTitle(stateSlug: string, citySlug: string) {
     return "";
   }
 
-  return `AI Business Automation in ${seed.name}, ${seed.titleStateName}, India | Crescora FLOW`;
+  return `AI Business Automation in ${seed.name}, ${seed.titleStateName}, India | Crescora AI`;
 }
 
 function buildCityDescription(stateSlug: string, citySlug: string) {
@@ -42,7 +42,7 @@ function buildCityDescription(stateSlug: string, citySlug: string) {
     return index === 0 ? label : label.charAt(0).toLowerCase() + label.slice(1);
   });
 
-  return `Crescora FLOW helps businesses in ${seed.name}, ${seed.stateName} reduce ${seed.localPainPoint} with ${seed.stateSeed.languages.join(", ")} support for ${formatStateIndustryList(seed.primaryIndustries)}. Local workflow demand includes ${formatStateIndustryList(workflowLabels)}.`;
+  return `Crescora AI helps businesses in ${seed.name}, ${seed.stateName} reduce ${seed.localPainPoint} with ${seed.stateSeed.languages.join(", ")} support for ${formatStateIndustryList(seed.primaryIndustries)}. Local workflow demand includes ${formatStateIndustryList(workflowLabels)}.`;
 }
 
 function buildCityFaqItems(stateSlug: string, citySlug: string) {
@@ -56,8 +56,8 @@ function buildCityFaqItems(stateSlug: string, citySlug: string) {
 
   return [
     {
-      question: `Why do businesses in ${seed.name} choose FLOW?`,
-      answer: `Businesses in ${seed.name} choose FLOW because they need to reduce ${seed.localPainPoint}. FLOW supports AI routing, forms, reminders, records, notifications, analytics, and human handoff in one controlled rollout for ${seed.marketRole}.`,
+      question: `Why do businesses in ${seed.name} choose Crescora AI?`,
+      answer: `Businesses in ${seed.name} choose Crescora AI because they need to reduce ${seed.localPainPoint}. Crescora AI supports AI routing, forms, reminders, records, notifications, analytics, and human handoff in one controlled rollout for ${seed.marketRole}.`,
     },
     {
       question: `Which industries in ${seed.name} benefit the most from automation?`,
@@ -68,8 +68,8 @@ function buildCityFaqItems(stateSlug: string, citySlug: string) {
       answer: `Most teams in ${seed.name} should start with ${formatStateIndustryList(workflowLabels)} because local rollout pressure usually comes from ${seed.workflowPriorityLine}.`,
     },
     {
-      question: `Can FLOW support local language customer journeys in ${seed.name}?`,
-      answer: `Yes. FLOW can support ${formatStateIndustryList(seed.stateSeed.languages)} prompts, FAQs, reminders, and handoff logic depending on the rollout scope and the language coverage your team needs in ${seed.name}.`,
+      question: `Can Crescora AI support local language customer journeys in ${seed.name}?`,
+      answer: `Yes. Crescora AI can support ${formatStateIndustryList(seed.stateSeed.languages)} prompts, FAQs, reminders, and handoff logic depending on the rollout scope and the language coverage your team needs in ${seed.name}.`,
     },
     {
       question: `How should a rollout in ${seed.name} stay locally relevant?`,
@@ -128,7 +128,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
       <PageHero
         eyebrow={`${seed.stateName} city`}
         title={`AI business automation for teams in ${seed.name}`}
-        description={`FLOW helps teams in ${seed.name} reduce ${seed.localPainPoint}. Support ${formatStateIndustryList(seed.stateSeed.languages)} customer journeys for ${formatStateIndustryList(seed.primaryIndustries)} with ${formatStateIndustryList(workflowLabels)} inside one workflow layer built for ${seed.marketRole}.`}
+        description={`Crescora AI helps teams in ${seed.name} reduce ${seed.localPainPoint}. Support ${formatStateIndustryList(seed.stateSeed.languages)} customer journeys for ${formatStateIndustryList(seed.primaryIndustries)} with ${formatStateIndustryList(workflowLabels)} inside one workflow layer built for ${seed.marketRole}.`}
         primaryCta={{ label: seed.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} Workflow`, href: "/contact" }}
         supportText={`Local search themes include ${seed.localSearchTerms.join(", ")}. ${seed.proofLine}`}
@@ -137,7 +137,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="City overview"
-          title={`Why businesses in ${seed.name} choose FLOW`}
+          title={`Why businesses in ${seed.name} choose Crescora AI`}
           description={`In ${seed.name}, the strongest fit is ${seed.marketRole}. Teams usually need one platform that can handle ${seed.localPainPoint} without fragmenting leads, bookings, payments, support, and staff visibility.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -146,7 +146,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">City focus</p>
               <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">Built for the buying pattern in {seed.name}</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                FLOW fits teams operating in {seed.marketRole}. The goal is measurable workflow outcomes and cleaner customer operations, not generic chatbot replies.
+                Crescora AI fits teams operating in {seed.marketRole}. The goal is measurable workflow outcomes and cleaner customer operations, not generic chatbot replies.
               </p>
             </CardContent>
           </Card>
@@ -220,7 +220,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
         <SectionHeading
           eyebrow="Industries"
           title={`Industries we support in ${seed.name}`}
-          description={`FLOW supports buyers and operators in ${seed.name} who need controlled automation that fits the city's workflow priorities rather than a generic statewide message.`}
+          description={`Crescora AI supports buyers and operators in ${seed.name} who need controlled automation that fits the city's workflow priorities rather than a generic statewide message.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {seed.primaryIndustries.map((industry) => (
@@ -277,7 +277,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Implementation"
-                title={`How FLOW implementation works in ${seed.name}`}
+                title={`How Crescora AI implementation works in ${seed.name}`}
                 description={`A strong rollout in ${seed.name} should connect customer conversations to structured business outcomes instead of isolated chatbot replies.`}
               />
               <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -314,7 +314,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
         <SectionHeading
           eyebrow="FAQ"
           title={`FAQs for ${seed.name} businesses`}
-          description={`These are the rollout questions buyers in ${seed.name} ask before they commit to AI business automation with FLOW.`}
+          description={`These are the rollout questions buyers in ${seed.name} ask before they commit to AI business automation with Crescora AI.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {faqItems.map((item) => (
@@ -333,7 +333,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch automation for your business in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use FLOW to reduce {seed.localPainPoint} for teams in {seed.name} with a rollout built for {formatStateIndustryList(seed.primaryIndustries)} and customer journeys in {formatStateIndustryList(seed.stateSeed.languages)}.
+            Use Crescora AI to reduce {seed.localPainPoint} for teams in {seed.name} with a rollout built for {formatStateIndustryList(seed.primaryIndustries)} and customer journeys in {formatStateIndustryList(seed.stateSeed.languages)}.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/60">
             Local workflow demand includes {formatStateIndustryList(workflowLabels)} while the implementation stays grounded in city-level search intent, records, reminders, analytics, and human handoff.

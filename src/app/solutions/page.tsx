@@ -14,8 +14,9 @@ import { siteContent } from "@/lib/site-content";
 
 export const metadata = {
   ...createPageMetadata({
-    title: "Solutions",
-    description: "Primary revenue pages for WhatsApp automation, AI chatbots, workflow automation, support, booking, and connected business operations.",
+    title: "Automation Solutions",
+    description:
+      "Automation solutions for enquiries, appointment booking, lead qualification, payment reminders, document collection, customer support, CRM updates, and human handover.",
     path: "/solutions",
     imagePath: buildRouteSocialImagePath("/solutions"),
   }),
@@ -32,17 +33,17 @@ export default function SolutionsPage() {
       <SeoJsonLd data={breadcrumbSchema} />
       <PageHero
         eyebrow="Solutions"
-        title="Primary revenue pages built around the workflows buyers actually need to launch."
-        description="Each solution page now carries implementation detail, product surfaces, rollout examples, FAQs, and proof signals so the commercial intent stays on the strongest URL."
+        title="Automation solutions for the workflows your business repeats every day."
+        description="Crescora AI helps businesses automate high-friction customer journeys such as enquiries, appointment booking, lead qualification, payment reminders, document collection, customer support, CRM updates, and human handover. Start with one workflow, prove the process, then expand into more channels, teams, and integrations."
         primaryCta={siteContent.ctas.bookProjectDemo}
         secondaryCta={siteContent.ctas.requestScopeCall}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Main pages"
-          title="Keep the commercial intent on a single canonical page per workflow category."
-          description="These are the URLs that now own the primary search demand while overlapping template, workflow, and draft article routes are demoted from the index."
+          eyebrow="Solution cards"
+          title="Pick the workflow that creates the clearest operational value first."
+          description="Each solution explains the business problem, what Crescora AI automates, where humans step in, and which outcomes to measure during the pilot."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {revenuePages.map((page) => (
@@ -54,6 +55,11 @@ export default function SolutionsPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{page.keywordTarget}</p>
                 <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{page.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{page.description}</p>
+                <div className="mt-5 space-y-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm leading-7 text-zinc-700">
+                  <p><span className="font-semibold text-zinc-950">Business problem:</span> Repeated customer steps stay manual, delayed, or hard to track.</p>
+                  <p><span className="font-semibold text-zinc-950">Crescora AI automates:</span> Intake, routing, reminders, records, handover, and outcome tracking based on the workflow.</p>
+                  <p><span className="font-semibold text-zinc-950">Pilot metric:</span> Response speed, completion rate, handover quality, and drop-off points.</p>
+                </div>
                 <Button asChild variant="link" className="mt-auto h-auto w-fit p-0 text-zinc-950 hover:no-underline">
                   <Link href={`/solutions/${page.slug}`} className="inline-flex items-center gap-1">
                     Open solution page

@@ -1,14 +1,5 @@
-import { ProofPageTemplate } from "@/components/site/decision-pages";
-import { proofPages } from "@/lib/decision-pages";
-import { buildRouteSocialImagePath, createExactPageMetadata } from "@/lib/seo";
+import { redirect } from "next/navigation";
 
-export const metadata = createExactPageMetadata({
-  title: proofPages["education-admissions-workflow"].metadata.title,
-  description: proofPages["education-admissions-workflow"].metadata.description,
-  path: "/proof/education-admissions-workflow",
-  imagePath: buildRouteSocialImagePath("/proof/education-admissions-workflow"),
-});
-
-export default function EducationAdmissionsWorkflowPage() {
-  return <ProofPageTemplate {...proofPages["education-admissions-workflow"]} />;
+export default function EducationAdmissionsWorkflowRedirectPage() {
+  redirect("/workflow-examples/education-admissions-workflow");
 }

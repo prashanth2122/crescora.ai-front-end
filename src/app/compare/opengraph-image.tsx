@@ -8,7 +8,7 @@ export const contentType = socialImageContentType;
 export default function Image() {
   return createSocialImageResponse({
     eyebrow: "Compare",
-    title: "Compare Crescora FLOW with leading AI automation platforms and workflow alternatives.",
+    title: "Compare Crescora AI with leading AI automation platforms and workflow alternatives.",
     description: "Yellow.ai, Kore.ai, Gupshup, Intercom, Zendesk AI, and workflow-level comparisons in one decision-stage cluster.",
     accentLabel: "Compare",
   });

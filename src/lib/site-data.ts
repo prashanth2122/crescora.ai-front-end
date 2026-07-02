@@ -117,7 +117,7 @@ export const pricingPackages: readonly PricingPackage[] = [
       "Rollout planning and dedicated support",
       "Multi-team automation strategy",
     ],
-    ctaLabel: "Talk to Sales",
+    ctaLabel: "Discuss My Workflow",
   },
 ] as const;
 

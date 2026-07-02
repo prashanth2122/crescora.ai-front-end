@@ -54,6 +54,7 @@ export default function RootLayout({
         <WhatsAppFloatingButton
           bookCallHref={publicContactSurfaceConfig.bookCallUrl}
           callHref={publicContactSurfaceConfig.callHref}
+          demoHref="/demo"
           supportEmailHref={publicContactSurfaceConfig.supportEmailHref}
           whatsappHref={publicContactSurfaceConfig.whatsappHref}
         />

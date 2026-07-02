@@ -191,13 +191,13 @@ function buildBlogSections(title: string, keywordTarget: string): BlogSection[] 
 export const solutionPages: SeoLandingPage[] = [
   {
     slug: "whatsapp-automation",
-    title: "WhatsApp Automation Workflows and AI Chatbots in India | FLOW by Crescora AI",
+    title: "WhatsApp Automation Workflows and AI Chatbots in India | Crescora AI",
     h1: "Automate WhatsApp conversations, AI follow-ups, and customer workflow actions.",
     keywordTarget: "WhatsApp automation workflows",
     description:
       "A solution page for businesses that need AI-powered WhatsApp automation, website chatbot handoff, social messaging follow-up, booking, reminders, payments, support, and human handoff.",
     intro:
-      "Use this page to explain how FLOW handles first response, qualification, reminders, escalation, website chatbot handoff, and outcome logging from the channel buyers already use most.",
+      "Use this page to explain how Crescora AI handles first response, qualification, reminders, escalation, website chatbot handoff, and outcome logging from the channel buyers already use most.",
     sections: [
       {
         eyebrow: "Problem",
@@ -211,7 +211,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "How it works",
-        title: "What FLOW automates across WhatsApp and connected channels",
+        title: "What Crescora AI automates across WhatsApp and connected channels",
         description: "The page should be explicit about the workflow, AI layer, and connected business systems.",
         bullets: [
           "Lead capture, qualification, and CRM routing.",
@@ -225,27 +225,27 @@ export const solutionPages: SeoLandingPage[] = [
         description: "Search visitors should move into templates, comparisons, and demos.",
         bullets: [
           "Open the matching workflow template.",
-          "Compare FLOW with manual WhatsApp and generic bots.",
+          "Compare Crescora AI with manual WhatsApp and generic bots.",
           "Book a demo if the workflow is high intent.",
         ],
       },
     ],
     relatedLinks: [
       relatedLink("WhatsApp templates", "/templates", "Workflow templates for launch-ready automations."),
-      relatedLink("Compare FLOW vs manual WhatsApp", "/compare/flow-vs-manual-whatsapp", "See why manual handling breaks at scale."),
+      relatedLink("Compare Crescora AI vs manual WhatsApp", "/compare/flow-vs-manual-whatsapp", "See why manual handling breaks at scale."),
       relatedLink("Book a demo", "/contact", "Start with one client journey and a rollout plan."),
     ],
     ctaLabel: "Request WhatsApp workflow demo",
   },
   {
     slug: "ai-chatbot-builder",
-    title: "AI Chatbots for Websites, WhatsApp, and Social Media | FLOW by Crescora AI",
+    title: "AI Chatbots for Websites, WhatsApp, and Social Media | Crescora AI",
     h1: "Deploy AI chatbots across website chat, WhatsApp, and social messaging.",
     keywordTarget: "AI chatbot for website and WhatsApp",
     description:
       "A solution page for buyers searching for AI chatbots that work across websites, WhatsApp, Instagram, Facebook Messenger, and workflow-driven business operations.",
     intro:
-      "This page should frame FLOW as a builder for customer conversations and workflow automation, not just a FAQ bot or website widget.",
+      "This page should frame Crescora AI as a builder for customer conversations and workflow automation, not just a FAQ bot or website widget.",
     sections: [
       {
         eyebrow: "Buyer intent",
@@ -259,7 +259,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Product fit",
-        title: "Where FLOW is different from generic chatbot tools",
+        title: "Where Crescora AI is different from generic chatbot tools",
         description: "Show the workflow layer that changes the business process, not just the bot output.",
         bullets: [
           "Templates for common Indian business journeys.",
@@ -280,14 +280,14 @@ export const solutionPages: SeoLandingPage[] = [
     ],
     relatedLinks: [
       relatedLink("Customer support automation", "/solutions/customer-support-automation", "A close-fit use case for chatbot buyers."),
-      relatedLink("Compare FLOW vs chatbots", "/compare/flow-vs-chatbots", "See how workflow automation differs from basic bots."),
+      relatedLink("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "See how workflow automation differs from basic bots."),
       relatedLink("Templates", "/templates", "Ready-made launch assets for common workflows."),
     ],
     ctaLabel: "Request builder demo",
   },
   {
     slug: "workflow-automation",
-    title: "Business Workflow Automation Software in India | FLOW by Crescora AI",
+    title: "Business Workflow Automation Software in India | Crescora AI",
     h1: "Automate customer-facing workflows from enquiry to outcome.",
     keywordTarget: "workflow automation software",
     description:
@@ -307,7 +307,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Architecture",
-        title: "How FLOW organizes the workflow layer",
+        title: "How Crescora AI organizes the workflow layer",
         description: "Show the orchestration role, not only the channels.",
         bullets: [
           "Templates for the most common business journeys.",
@@ -335,13 +335,13 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "customer-support-automation",
-    title: "Customer Support Automation for Small Businesses in India | FLOW by Crescora AI",
+    title: "Customer Support Automation for Small Businesses in India | Crescora AI",
     h1: "Automate support triage, FAQ resolution, and handoff.",
     keywordTarget: "customer support automation for small business",
     description:
       "A solution page for support buyers who need FAQ handling, queue deflection, and context-rich escalation.",
     intro:
-      "This page should show how FLOW handles repetitive support work without losing the ability to hand off complex or sensitive cases to humans.",
+      "This page should show how Crescora AI handles repetitive support work without losing the ability to hand off complex or sensitive cases to humans.",
     sections: [
       {
         eyebrow: "Support pain",
@@ -355,7 +355,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Solution",
-        title: "What FLOW changes for the support desk",
+        title: "What Crescora AI changes for the support desk",
         description: "The page should connect the conversation to the support process.",
         bullets: [
           "FAQ and knowledge-base answers.",
@@ -377,19 +377,19 @@ export const solutionPages: SeoLandingPage[] = [
     relatedLinks: [
       relatedLink("Observability template", "/templates/observability-dashboard-template", "See support leakage and conversion in one place."),
       relatedLink("Support teams", "/industries/support-teams", "Industry page for support operations."),
-      relatedLink("Compare FLOW vs chatbots", "/compare/flow-vs-chatbots", "Decision-stage comparison for support buyers."),
+      relatedLink("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "Decision-stage comparison for support buyers."),
     ],
     ctaLabel: "Request support demo",
   },
   {
     slug: "appointment-booking-automation",
-    title: "Appointment Booking Automation | FLOW by Crescora AI",
+    title: "Appointment Booking Automation | Crescora AI",
     h1: "Automate appointment booking, reminders, and rescheduling.",
     keywordTarget: "appointment booking automation",
     description:
       "A solution page for businesses that need availability checks, slot confirmation, reminders, and rescheduling without manual back-and-forth.",
     intro:
-      "Use this page to show how FLOW turns booking enquiries into confirmed appointments and reduces coordination load for staff.",
+      "Use this page to show how Crescora AI turns booking enquiries into confirmed appointments and reduces coordination load for staff.",
     sections: [
       {
         eyebrow: "Problem",
@@ -403,7 +403,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflow",
-        title: "What FLOW automates for bookings",
+        title: "What Crescora AI automates for bookings",
         description: "The page should make the booking path obvious.",
         bullets: [
           "Availability check and slot selection.",
@@ -431,13 +431,13 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "lead-capture-automation",
-    title: "Lead Capture Automation | FLOW by Crescora AI",
+    title: "Lead Capture Automation | Crescora AI",
     h1: "Capture leads and qualify them before they reach your team.",
     keywordTarget: "lead capture automation",
     description:
       "A solution page for businesses that want website, WhatsApp, and ad enquiries captured and qualified consistently.",
     intro:
-      "This page should explain how FLOW asks qualifying questions, captures contact details, and routes high-intent leads with context.",
+      "This page should explain how Crescora AI asks qualifying questions, captures contact details, and routes high-intent leads with context.",
     sections: [
       {
         eyebrow: "Problem",
@@ -451,7 +451,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflow",
-        title: "What FLOW automates for leads",
+        title: "What Crescora AI automates for leads",
         description: "Focus on the qualification journey, not just capture.",
         bullets: [
           "Lead capture from web, WhatsApp, and ads.",
@@ -465,7 +465,7 @@ export const solutionPages: SeoLandingPage[] = [
         description: "Lead readers into the demo and workflow paths.",
         bullets: [
           "Open the lead capture template.",
-          "Compare FLOW against manual enquiry handling.",
+          "Compare Crescora AI against manual enquiry handling.",
           "Book a lead automation demo.",
         ],
       },
@@ -479,13 +479,13 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "payment-reminder-automation",
-    title: "Payment Reminder Automation | FLOW by Crescora AI",
+    title: "Payment Reminder Automation | Crescora AI",
     h1: "Automate payment reminders and status follow-up.",
     keywordTarget: "payment reminder automation",
     description:
       "A solution page for teams that need reminder sequences, payment status capture, and escalation for overdue cases.",
     intro:
-      "Use this page to show how FLOW keeps reminders timely, structured, and tied to the right next action.",
+      "Use this page to show how Crescora AI keeps reminders timely, structured, and tied to the right next action.",
     sections: [
       {
         eyebrow: "Problem",
@@ -499,7 +499,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflow",
-        title: "What FLOW automates for payments",
+        title: "What Crescora AI automates for payments",
         description: "Show the reminder loop and escalation path.",
         bullets: [
           "Scheduled reminders and status prompts.",
@@ -513,7 +513,7 @@ export const solutionPages: SeoLandingPage[] = [
         description: "Direct the visitor into the rollout conversation.",
         bullets: [
           "Open the payment reminder template.",
-          "Compare FLOW with manual follow-up.",
+          "Compare Crescora AI with manual follow-up.",
           "Book a demo for collections workflows.",
         ],
       },
@@ -527,13 +527,13 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "document-collection-automation",
-    title: "Document Collection Automation | FLOW by Crescora AI",
+    title: "Document Collection Automation | Crescora AI",
     h1: "Collect documents without repeated manual chasing.",
     keywordTarget: "document collection automation",
     description:
       "A solution page for businesses that need IDs, forms, reports, and supporting documents gathered with less back-and-forth.",
     intro:
-      "This page should show how FLOW keeps document requests, follow-up, and completion tracking in one workflow.",
+      "This page should show how Crescora AI keeps document requests, follow-up, and completion tracking in one workflow.",
     sections: [
       {
         eyebrow: "Problem",
@@ -547,7 +547,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflow",
-        title: "What FLOW automates for documents",
+        title: "What Crescora AI automates for documents",
         description: "Keep the request chain visible and controlled.",
         bullets: [
           "Document request workflow.",
@@ -561,7 +561,7 @@ export const solutionPages: SeoLandingPage[] = [
         description: "Move the buyer toward the relevant automation path.",
         bullets: [
           "Open the document collection template.",
-          "Compare FLOW against manual chasing.",
+          "Compare Crescora AI against manual chasing.",
           "Book a workflow demo.",
         ],
       },
@@ -575,13 +575,13 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "crm-api-workflow-automation",
-    title: "CRM and API Workflow Automation | FLOW by Crescora AI",
+    title: "CRM and API Workflow Automation | Crescora AI",
     h1: "Send leads, bookings, and updates into your CRM and tools.",
     keywordTarget: "CRM and API workflow automation",
     description:
       "A solution page for businesses that need customer actions pushed into CRMs, spreadsheets, booking systems, or internal APIs.",
     intro:
-      "Use this page to explain how FLOW keeps customer actions synchronized with the systems your teams already use.",
+      "Use this page to explain how Crescora AI keeps customer actions synchronized with the systems your teams already use.",
     sections: [
       {
         eyebrow: "Problem",
@@ -595,7 +595,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflow",
-        title: "What FLOW automates across systems",
+        title: "What Crescora AI automates across systems",
         description: "The page should show concrete data movement.",
         bullets: [
           "CRM lead creation and updates.",
@@ -609,7 +609,7 @@ export const solutionPages: SeoLandingPage[] = [
         description: "Route the reader into a practical demo conversation.",
         bullets: [
           "Open the CRM sync template.",
-          "Compare FLOW against manual data entry.",
+          "Compare Crescora AI against manual data entry.",
           "Book a demo for your stack.",
         ],
       },
@@ -623,13 +623,13 @@ export const solutionPages: SeoLandingPage[] = [
   },
   {
     slug: "human-handover-automation",
-    title: "Human Handover Automation | FLOW by Crescora AI",
+    title: "Human Handover Automation | Crescora AI",
     h1: "Move sensitive or complex conversations to the right person.",
     keywordTarget: "human handover automation",
     description:
       "A solution page for businesses that need structured handover, context transfer, and escalation visibility.",
     intro:
-      "This page should make it clear that FLOW supports automation without losing human control when the case becomes high value or sensitive.",
+      "This page should make it clear that Crescora AI supports automation without losing human control when the case becomes high value or sensitive.",
     sections: [
       {
         eyebrow: "Problem",
@@ -643,7 +643,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflow",
-        title: "What FLOW automates around handover",
+        title: "What Crescora AI automates around handover",
         description: "Keep the escalation path clear and trackable.",
         bullets: [
           "Handover rules and priority routing.",
@@ -657,7 +657,7 @@ export const solutionPages: SeoLandingPage[] = [
         description: "Move the reader into the rollout conversation.",
         bullets: [
           "Open the handover template.",
-          "Compare FLOW with basic bot escalation.",
+          "Compare Crescora AI with basic bot escalation.",
           "Book a demo for your support or sales team.",
         ],
       },
@@ -701,9 +701,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
     title:
       "How WhatsApp automation helps small businesses in India capture leads, book appointments, and follow up faster.",
     metadataTitle:
-      "WhatsApp Automation for Small Businesses in India: Leads, Bookings, Payments, Support, and Follow-Ups | Crescora FLOW",
+      "WhatsApp Automation for Small Businesses in India: Leads, Bookings, Payments, Support, and Follow-Ups | Crescora AI",
     description:
-      "Learn how WhatsApp automation helps small businesses in India capture leads, book appointments, send reminders, follow up on payments, collect documents, route support, and grow faster with Crescora FLOW.",
+      "Learn how WhatsApp automation helps small businesses in India capture leads, book appointments, send reminders, follow up on payments, collect documents, route support, and grow faster with Crescora AI.",
     summary:
       "A practical guide to launching WhatsApp automation for enquiry capture, booking, reminders, payments, support, and human handover.",
     representativeImagePath: sharedBlogFeaturedImagePath,
@@ -739,7 +739,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Book Free Demo",
       ),
       relatedLink(
-        "Compare FLOW",
+        "Compare Crescora AI",
         "/compare",
         "Review comparison pages before choosing a rollout path.",
         "Compare Platforms",
@@ -747,7 +747,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
     ],
     publicPage: {
       heroDescription:
-        "Small businesses in India receive enquiries through WhatsApp every day, but many leads are lost because replies are delayed, follow-ups are manual, and customer details stay scattered. Crescora FLOW helps turn those conversations into structured workflows for lead capture, booking, reminders, payments, support, and human handover.",
+        "Small businesses in India receive enquiries through WhatsApp every day, but many leads are lost because replies are delayed, follow-ups are manual, and customer details stay scattered. Crescora AI helps turn those conversations into structured workflows for lead capture, booking, reminders, payments, support, and human handover.",
       heroPrimaryCta: { label: "Book WhatsApp Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore WhatsApp Workflows", href: "/workflows/whatsapp-automation" },
       heroSupportText:
@@ -921,12 +921,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "before-after",
           eyebrow: "Section",
-          title: "Before WhatsApp automation vs after Crescora FLOW",
+          title: "Before WhatsApp automation vs after Crescora AI",
           table: {
-            headers: ["Before WhatsApp automation", "After Crescora FLOW"],
+            headers: ["Before WhatsApp automation", "After Crescora AI"],
             rows: [
               ["Leads stay scattered in WhatsApp chats", "Enquiries enter structured workflows"],
-              ["Staff ask the same questions repeatedly", "FLOW captures required details automatically"],
+              ["Staff ask the same questions repeatedly", "Crescora AI captures required details automatically"],
               ["Follow-ups depend on memory", "Reminders can run based on workflow status"],
               ["Payment chasing is manual", "Payment follow-ups and escalations can be tracked"],
               ["Support questions repeat daily", "FAQs and triage can reduce repetitive workload"],
@@ -1028,9 +1028,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Start with the workflow causing the most loss or manual work: missed leads, appointment booking, payment follow-up, document collection, or repeated support questions.",
           },
           {
-            question: "Can Crescora FLOW work beyond WhatsApp?",
+            question: "Can Crescora AI work beyond WhatsApp?",
             answer:
-              "Yes. FLOW supports multi-channel workflows across web widget, WhatsApp, Telegram, email, SMS, template messages, notifications, APIs, records, and workflow runtime surfaces depending on rollout scope.",
+              "Yes. Crescora AI supports multi-channel workflows across web widget, WhatsApp, Telegram, email, SMS, template messages, notifications, APIs, records, and workflow runtime surfaces depending on rollout scope.",
           },
           {
             question: "Can WhatsApp reminders be sent automatically?",
@@ -1043,7 +1043,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate your WhatsApp enquiries?",
         description:
-          "Tell us how your business currently handles WhatsApp leads, bookings, payments, documents, support questions, and follow-ups. We will map your workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your business currently handles WhatsApp leads, bookings, payments, documents, support questions, and follow-ups. We will map your workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one WhatsApp workflow. Prove value. Expand into more channels, teams, reminders, payments, and dashboards.",
         primary: { label: "Book WhatsApp Automation Demo", href: "/contact" },
@@ -1053,13 +1053,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "best-ai-chatbot-use-cases-for-hospitals-and-clinics": {
     title: "Best AI chatbot use cases for hospitals and clinics in India",
-    metadataTitle: "Best AI Chatbot Use Cases for Hospitals and Clinics in India | FLOW",
+    metadataTitle: "Best AI Chatbot Use Cases for Hospitals and Clinics in India | Crescora AI",
     description:
       "Explore the best AI chatbot use cases for hospitals and clinics in India, including appointment booking, patient enquiries, lab report updates, reminders, payments, documents, and human handoff.",
     summary:
       "A practical guide to healthcare chatbot workflows for appointment booking, patient enquiries, reports, billing, documents, and safe human escalation.",
     relatedLinks: [
-      relatedLink("Hospitals page", "/industries/hospitals", "See how FLOW supports hospital front-desk, appointment, report, and patient-support workflows.", "Explore Hospitals"),
+      relatedLink("Hospitals page", "/industries/hospitals", "See how Crescora AI supports hospital front-desk, appointment, report, and patient-support workflows.", "Explore Hospitals"),
       relatedLink("Clinics page", "/industries/clinics", "Review clinic appointment, reminders, payments, and patient-follow-up workflows.", "Explore Clinics"),
       relatedLink("WhatsApp automation", "/solutions/whatsapp-automation", "Use WhatsApp to capture patient enquiries, reminders, and handoff paths.", "Explore WhatsApp Automation"),
       relatedLink("Workflow automation", "/solutions/workflow-automation", "Understand how patient conversations become structured operational workflows.", "Explore Workflow Automation"),
@@ -1067,12 +1067,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       relatedLink("Document collection", "/workflows/document-collection", "Collect insurance, admission, KYC, and supporting documents with reminders.", "See Document Workflow"),
       relatedLink("Payment automation", "/workflows/payments", "Handle reminders, payment status updates, and billing follow-up paths.", "See Payment Workflow"),
       relatedLink("Customer support", "/workflows/customer-support", "Route FAQs, unresolved patient questions, and support escalation cleanly.", "See Support Workflow"),
-      relatedLink("Pricing", "/pricing", "Review rollout packages before choosing a healthcare automation scope.", "See Pricing"),
+      relatedLink("Pricing", "/pricing", "Review rollout packages before choosing a healthcare automation scope.", "View Pricing"),
       relatedLink("Book a demo", "/contact", "Discuss your patient journey and pick the first hospital workflow to automate.", "Book Healthcare Demo"),
     ],
     publicPage: {
       heroDescription:
-        "Indian hospitals and clinics receive patient enquiries every day through WhatsApp, calls, website forms, walk-ins, Google search, and social media. The real challenge is responding fast, capturing the right details, following up properly, and routing each patient to the right team. FLOW by Crescora AI helps healthcare teams automate these conversations as real workflows, not just question-answer chat.",
+        "Indian hospitals and clinics receive patient enquiries every day through WhatsApp, calls, website forms, walk-ins, Google search, and social media. The real challenge is responding fast, capturing the right details, following up properly, and routing each patient to the right team. Crescora AI helps healthcare teams automate these conversations as real workflows, not just question-answer chat.",
       heroPrimaryCta: { label: "Book Healthcare Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Hospital Workflows", href: "/industries/hospitals" },
       heroSupportText:
@@ -1200,7 +1200,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Before hospital chatbot automation vs after workflow automation",
           table: {
-            headers: ["Manual patient communication", "After FLOW workflow automation"],
+            headers: ["Manual patient communication", "After Crescora AI workflow automation"],
             rows: [
               ["Calls and WhatsApp replies depend on staff availability", "Patient enquiries enter a structured workflow immediately"],
               ["Patients repeat the same booking and support questions", "Approved FAQs and guided steps handle repetitive queries"],
@@ -1326,9 +1326,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "It should collect patient name, mobile number, department, preferred date or time, location, service required, and urgency level.",
           },
           {
-            question: "Can FLOW support human handoff?",
+            question: "Can Crescora AI support human handoff?",
             answer:
-              "Yes. FLOW supports human handoff so hospital teams can take over when a case needs manual attention.",
+              "Yes. Crescora AI supports human handoff so hospital teams can take over when a case needs manual attention.",
           },
           {
             question: "How should a clinic start with AI automation?",
@@ -1352,9 +1352,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   "whatsapp-chatbot-vs-website-chatbot-which-is-better": {
     title: "WhatsApp chatbot vs website chatbot: which is better for your business?",
     metadataTitle:
-      "WhatsApp Chatbot vs Website Chatbot: Which Is Better for Your Business? | Crescora FLOW",
+      "WhatsApp Chatbot vs Website Chatbot: Which Is Better for Your Business? | Crescora AI",
     description:
-      "Compare WhatsApp chatbot vs website chatbot for lead capture, appointment booking, reminders, support, payments, and follow-ups. Learn when to use website chat, WhatsApp automation, or both with Crescora FLOW.",
+      "Compare WhatsApp chatbot vs website chatbot for lead capture, appointment booking, reminders, support, payments, and follow-ups. Learn when to use website chat, WhatsApp automation, or both with Crescora AI.",
     summary:
       "A practical comparison of website chatbots and WhatsApp chatbots for lead capture, follow-up, reminders, support, payments, and workflow automation.",
     relatedLinks: [
@@ -1383,10 +1383,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "See Appointment Workflow",
       ),
       relatedLink(
-        "Compare FLOW",
+        "Compare Crescora AI",
         "/compare",
-        "See why FLOW is built for business workflows, not just basic chatbot replies.",
-        "Compare FLOW",
+        "See why Crescora AI is built for business workflows, not just basic chatbot replies.",
+        "Compare Crescora AI",
       ),
     ],
     publicPage: {
@@ -1423,7 +1423,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Turn website visitors and WhatsApp enquiries into structured workflows.",
         description:
-          "FLOW by Crescora AI helps businesses capture leads from website chat, continue conversations on WhatsApp, send reminders, route support, collect payments, and hand off complex cases to the right team.",
+          "Crescora AI helps businesses capture leads from website chat, continue conversations on WhatsApp, send reminders, route support, collect payments, and hand off complex cases to the right team.",
       },
       sections: [
         {
@@ -1612,22 +1612,22 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-both-channels",
           eyebrow: "Section",
-          title: "How Crescora FLOW connects both channels",
+          title: "How Crescora AI connects both channels",
           paragraphs: [
-            "Crescora FLOW helps businesses connect website chat, WhatsApp automation, workflow routing, reminders, payment follow-ups, document collection, support handling, and human handover.",
-            "Instead of using separate tools for chatbot, WhatsApp follow-up, CRM updates, and reminders, FLOW helps create one connected workflow. The main value is not just chat automation. The value is turning conversations into business outcomes.",
+            "Crescora AI helps businesses connect website chat, WhatsApp automation, workflow routing, reminders, payment follow-ups, document collection, support handling, and human handover.",
+            "Instead of using separate tools for chatbot, WhatsApp follow-up, CRM updates, and reminders, Crescora AI helps create one connected workflow. The main value is not just chat automation. The value is turning conversations into business outcomes.",
           ],
         },
         {
           id: "before-and-after",
           eyebrow: "Section",
-          title: "Before FLOW vs after FLOW",
+          title: "Before Crescora AI vs after Crescora AI",
           table: {
-            headers: ["Before FLOW", "After FLOW"],
+            headers: ["Before Crescora AI", "After Crescora AI"],
             rows: [
               ["Website visitors leave without enquiry", "Website chatbot captures interest"],
               ["WhatsApp messages are handled manually", "WhatsApp workflows guide follow-up"],
-              ["Staff ask the same questions repeatedly", "FLOW captures structured details"],
+              ["Staff ask the same questions repeatedly", "Crescora AI captures structured details"],
               ["Leads are not followed up consistently", "Reminder flows keep conversations moving"],
               ["Payments and documents are chased manually", "Payment and document workflows can be added"],
               ["Complex cases lose context", "Human teams receive conversation history"],
@@ -1681,9 +1681,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "WhatsApp chatbot is usually stronger for appointment reminders, rescheduling, and confirmations. Website chatbot is useful for starting the booking request.",
           },
           {
-            question: "Can Crescora FLOW support both?",
+            question: "Can Crescora AI support both?",
             answer:
-              "Yes. Crescora FLOW can support website chat, WhatsApp automation, lead capture, reminders, workflow routing, human handover, and outcome tracking.",
+              "Yes. Crescora AI can support website chat, WhatsApp automation, lead capture, reminders, workflow routing, human handover, and outcome tracking.",
           },
         ],
       },
@@ -1691,7 +1691,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to choose the right chatbot setup for your business?",
         description:
-          "Tell us how your business currently gets enquiries from your website, WhatsApp, ads, calls, and social channels. We will map whether you need website chat, WhatsApp automation, or both, and show the fastest Crescora FLOW workflow to launch first.",
+          "Tell us how your business currently gets enquiries from your website, WhatsApp, ads, calls, and social channels. We will map whether you need website chat, WhatsApp automation, or both, and show the fastest Crescora AI workflow to launch first.",
         note:
           "Start with one channel. Prove value. Expand into WhatsApp follow-ups, booking, payments, documents, support, and dashboards.",
         primary: { label: "Book Chatbot Strategy Demo", href: "/contact" },
@@ -1702,9 +1702,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   "how-to-automate-appointment-booking-using-whatsapp": {
     title: "How to automate appointment booking using WhatsApp",
     metadataTitle:
-      "WhatsApp Appointment Booking Automation for Clinics, Services, Salons, and Small Businesses | Crescora FLOW",
+      "WhatsApp Appointment Booking Automation for Clinics, Services, Salons, and Small Businesses | Crescora AI",
     description:
-      "Learn how WhatsApp appointment booking automation helps businesses capture enquiries, confirm slots, send reminders, support rescheduling, follow up on payments, and reduce manual coordination with Crescora FLOW.",
+      "Learn how WhatsApp appointment booking automation helps businesses capture enquiries, confirm slots, send reminders, support rescheduling, follow up on payments, and reduce manual coordination with Crescora AI.",
     summary:
       "A practical guide to WhatsApp booking automation for appointment requests, reminders, rescheduling, payment follow-up, and staff handover.",
     relatedLinks: [
@@ -1730,12 +1730,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "Choose the right rollout plan for your appointment automation workflow.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroDescription:
-        "Many customers prefer to ask for appointments on WhatsApp because it is fast and familiar. But when booking is handled manually, teams waste time asking the same questions again and again. Crescora FLOW helps businesses turn WhatsApp enquiries into structured booking workflows with customer details, service selection, date preference, slot confirmation, reminders, rescheduling, payment follow-up, and staff handover.",
+        "Many customers prefer to ask for appointments on WhatsApp because it is fast and familiar. But when booking is handled manually, teams waste time asking the same questions again and again. Crescora AI helps businesses turn WhatsApp enquiries into structured booking workflows with customer details, service selection, date preference, slot confirmation, reminders, rescheduling, payment follow-up, and staff handover.",
       heroPrimaryCta: { label: "Book WhatsApp Booking Demo", href: "/contact" },
       heroSecondaryCta: { label: "Map My Appointment Workflow", href: "/contact" },
       heroSupportText:
@@ -1760,14 +1760,14 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Reader outcome",
           title: "Learn how to reduce booking back-and-forth",
           description:
-            "This guide explains how businesses can automate appointment booking, reminders, rescheduling, payment follow-ups, and handoff using Crescora FLOW.",
+            "This guide explains how businesses can automate appointment booking, reminders, rescheduling, payment follow-ups, and handoff using Crescora AI.",
         },
       ],
       featuredImage: {
         eyebrow: "Featured workflow example",
         title: "Book more appointments from faster WhatsApp replies and automated reminders.",
         description:
-          "FLOW by Crescora AI helps businesses turn WhatsApp enquiries into confirmed appointments with slot selection, reminders, rescheduling, payment follow-up, and human handover.",
+          "Crescora AI helps businesses turn WhatsApp enquiries into confirmed appointments with slot selection, reminders, rescheduling, payment follow-up, and human handover.",
       },
       sections: [
         {
@@ -1804,7 +1804,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Appointment booking workflow example",
           description:
-            "FLOW can help businesses create structured appointment workflows so every enquiry is captured, confirmed, reminded, and tracked.",
+            "Crescora AI can help businesses create structured appointment workflows so every enquiry is captured, confirmed, reminded, and tracked.",
           bullets: [
             "WhatsApp Message",
             "Appointment Intent",
@@ -1821,7 +1821,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "what-details-flow-can-collect",
           eyebrow: "Section",
-          title: "What details FLOW can collect",
+          title: "What details Crescora AI can collect",
           cards: [
             {
               title: "Customer details",
@@ -1861,7 +1861,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Payment and booking fee follow-up",
           paragraphs: [
             "Some appointment workflows need booking fee, consultation fee, or token payment follow-up before the booking is fully confirmed.",
-            "FLOW can add payment reminders, payment link sharing, fee confirmation, and staff handover for pending or unclear cases.",
+            "Crescora AI can add payment reminders, payment link sharing, fee confirmation, and staff handover for pending or unclear cases.",
           ],
         },
         {
@@ -1869,10 +1869,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Before and after appointment automation",
           table: {
-            headers: ["Manual WhatsApp booking", "With Crescora FLOW"],
+            headers: ["Manual WhatsApp booking", "With Crescora AI"],
             rows: [
-              ["Staff ask the same questions repeatedly", "FLOW captures required details automatically"],
-              ["Customers wait for slot confirmation", "FLOW guides them to the next booking step"],
+              ["Staff ask the same questions repeatedly", "Crescora AI captures required details automatically"],
+              ["Customers wait for slot confirmation", "Crescora AI guides them to the next booking step"],
               ["Reminders depend on staff memory", "Reminders can be scheduled automatically"],
               ["Rescheduling creates confusion", "Customers get a clear reschedule path"],
               ["Booking fees are chased manually", "Payment follow-up can be added"],
@@ -1920,9 +1920,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-flow-helps-automate-appointment-booking",
           eyebrow: "Section",
-          title: "How FLOW helps automate appointment booking",
+          title: "How Crescora AI helps automate appointment booking",
           paragraphs: [
-            "Crescora FLOW supports appointment scheduling automation across WhatsApp and connected workflows, including reminders, payment follow-up, rescheduling, and handoff.",
+            "Crescora AI supports appointment scheduling automation across WhatsApp and connected workflows, including reminders, payment follow-up, rescheduling, and handoff.",
             "It helps teams capture appointment intent, confirm the slot, keep reminders structured, and track outcomes across bookings, no-shows, pending payments, and completed visits.",
           ],
         },
@@ -1969,9 +1969,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Yes. A workflow can include rescheduling, cancellation, and staff handover paths.",
           },
           {
-            question: "Can FLOW send appointment reminders?",
+            question: "Can Crescora AI send appointment reminders?",
             answer:
-              "Yes. FLOW can support reminder workflows depending on channel setup and rollout scope.",
+              "Yes. Crescora AI can support reminder workflows depending on channel setup and rollout scope.",
           },
           {
             question: "Can this work for clinics and service businesses?",
@@ -1989,7 +1989,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate appointment booking on WhatsApp?",
         description:
-          "Tell us how your team currently handles WhatsApp enquiries, slot confirmation, reminders, rescheduling, payment follow-ups, and staff handover. We will map your booking workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your team currently handles WhatsApp enquiries, slot confirmation, reminders, rescheduling, payment follow-ups, and staff handover. We will map your booking workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one appointment workflow. Prove value. Expand into reminders, payments, rescheduling, CRM sync, and dashboards.",
         primary: { label: "Book WhatsApp Booking Demo", href: "/contact" },
@@ -2000,16 +2000,16 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   "how-real-estate-businesses-can-automate-lead-follow-ups": {
     title: "How real estate businesses can automate lead follow-ups and book more site visits",
     metadataTitle:
-      "How Real Estate Businesses Can Automate Lead Follow-Ups and Book More Site Visits | Crescora FLOW",
+      "How Real Estate Businesses Can Automate Lead Follow-Ups and Book More Site Visits | Crescora AI",
     description:
-      "Learn how real estate businesses can automate lead follow-ups, buyer qualification, project sharing, site visit booking, sales rep handover, and post-visit reminders with Crescora FLOW.",
+      "Learn how real estate businesses can automate lead follow-ups, buyer qualification, project sharing, site visit booking, sales rep handover, and post-visit reminders with Crescora AI.",
     summary:
       "A practical guide to real estate lead follow-up automation for property enquiries, buyer qualification, site visits, sales handover, and post-visit pipeline discipline.",
     relatedLinks: [
       relatedLink(
         "Real Estate Automation",
         "/industries/real-estate",
-        "See how FLOW supports property enquiries, site visits, sales handover, and follow-up workflows for builders, brokers, and developers.",
+        "See how Crescora AI supports property enquiries, site visits, sales handover, and follow-up workflows for builders, brokers, and developers.",
         "Explore Real Estate",
       ),
       relatedLink(
@@ -2034,12 +2034,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "Review rollout options before launching a real estate automation workflow.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroDescription:
-        "Real estate teams lose serious buyers when enquiries are delayed, follow-ups depend on sales reps, and leads stay scattered across WhatsApp, ads, calls, and website forms. Crescora FLOW helps property teams capture enquiries, qualify buyers, share project details, schedule site visits, assign sales reps, and follow up until every lead reaches a clear next step.",
+        "Real estate teams lose serious buyers when enquiries are delayed, follow-ups depend on sales reps, and leads stay scattered across WhatsApp, ads, calls, and website forms. Crescora AI helps property teams capture enquiries, qualify buyers, share project details, schedule site visits, assign sales reps, and follow up until every lead reaches a clear next step.",
       heroPrimaryCta: { label: "Book Real Estate Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Map My Sales Workflow", href: "/contact" },
       heroSupportText:
@@ -2071,9 +2071,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Book more site visits from faster real estate lead follow-ups.",
         description:
-          "FLOW by Crescora AI helps real estate teams turn WhatsApp, website, ad, and social enquiries into qualified leads with budget capture, project sharing, site visit scheduling, sales rep handover, reminders, and pipeline visibility.",
+          "Crescora AI helps real estate teams turn WhatsApp, website, ad, and social enquiries into qualified leads with budget capture, project sharing, site visit scheduling, sales rep handover, reminders, and pipeline visibility.",
         footer:
-          "FLOW · Real estate lead follow-up automation for property enquiries, site visits, sales handover, and post-visit follow-ups.",
+          "Crescora AI · Real estate lead follow-up automation for property enquiries, site visits, sales handover, and post-visit follow-ups.",
       },
       sections: [
         {
@@ -2127,7 +2127,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           paragraphs: [
             "A strong real estate workflow can look like this: Property Enquiry to Buyer Details to Budget Capture to Location Preference to Project Interest to Brochure Shared to Callback or Site Visit to Sales Rep Handover to Reminder to Post-Visit Follow-Up to Lead Outcome.",
             "This workflow helps the team know exactly where each buyer stands.",
-            "Example: a buyer sends a WhatsApp message saying they are looking for a 2BHK near Gachibowli. FLOW can capture budget, buying timeline, project interest, and site-visit preference before routing the buyer to the right sales rep with full context.",
+            "Example: a buyer sends a WhatsApp message saying they are looking for a 2BHK near Gachibowli. Crescora AI can capture budget, buying timeline, project interest, and site-visit preference before routing the buyer to the right sales rep with full context.",
           ],
           cta: { label: "View Real Estate Template", href: "/templates/real-estate-lead-followup-flow" },
         },
@@ -2137,7 +2137,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "What buyer details should be captured",
           paragraphs: [
             "Real estate sales teams should not send every enquiry directly to sales reps without context.",
-            "FLOW can capture the buyer information the sales team needs before a person steps in.",
+            "Crescora AI can capture the buyer information the sales team needs before a person steps in.",
           ],
           cards: [
             {
@@ -2185,7 +2185,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "How to automate site visit booking",
           paragraphs: [
             "Site visits are one of the strongest conversion points in real estate.",
-            "After the visit is booked, FLOW can send a confirmation and reminder. This reduces back-and-forth and helps sales teams focus on serious buyers.",
+            "After the visit is booked, Crescora AI can send a confirmation and reminder. This reduces back-and-forth and helps sales teams focus on serious buyers.",
           ],
           cards: [
             {
@@ -2256,12 +2256,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "before-and-after-flow",
           eyebrow: "Section",
-          title: "Before and after FLOW",
+          title: "Before and after Crescora AI",
           table: {
-            headers: ["Manual real estate follow-up", "With Crescora FLOW"],
+            headers: ["Manual real estate follow-up", "With Crescora AI"],
             rows: [
               ["Leads are scattered across WhatsApp, ads, calls, and forms", "Every enquiry enters a structured workflow"],
-              ["Sales reps ask the same questions repeatedly", "FLOW captures budget, location, BHK, and timeline first"],
+              ["Sales reps ask the same questions repeatedly", "Crescora AI captures budget, location, BHK, and timeline first"],
               ["Project details are shared manually", "Project information can be shared automatically"],
               ["Site visits require repeated coordination", "Visit requests and reminders can be structured"],
               ["Follow-ups depend on sales rep memory", "Reminder flows keep leads moving"],
@@ -2294,9 +2294,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-helps-real-estate-teams",
           eyebrow: "Section",
-          title: "How Crescora FLOW helps real estate teams",
+          title: "How Crescora AI helps real estate teams",
           paragraphs: [
-            "Crescora FLOW helps real estate businesses turn customer conversations into structured workflows.",
+            "Crescora AI helps real estate businesses turn customer conversations into structured workflows.",
             "The value is simple: faster lead response, better qualification, more site visits, cleaner sales handover, fewer missed follow-ups, and better pipeline visibility.",
           ],
           bullets: [
@@ -2341,9 +2341,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "At minimum, capture buyer name, mobile number, preferred location, budget range, property type, buying timeline, project interest, preferred callback or site visit time, and current lead status.",
           },
           {
-            question: "Can FLOW help with site visit booking and reminders?",
+            question: "Can Crescora AI help with site visit booking and reminders?",
             answer:
-              "Yes. FLOW can capture visit preferences, assign the right sales rep, send confirmations, and trigger reminders or post-visit follow-ups.",
+              "Yes. Crescora AI can capture visit preferences, assign the right sales rep, send confirmations, and trigger reminders or post-visit follow-ups.",
           },
           {
             question: "Can this work for builders, brokers, and channel partners?",
@@ -2361,7 +2361,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate your real estate lead follow-ups?",
         description:
-          "Tell us how your team currently handles WhatsApp enquiries, ad leads, project sharing, buyer qualification, site visit booking, sales handover, and post-visit follow-ups. We will map your sales workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your team currently handles WhatsApp enquiries, ad leads, project sharing, buyer qualification, site visit booking, sales handover, and post-visit follow-ups. We will map your sales workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one real estate workflow. Prove value. Expand into reminders, handover, dashboards, reactivation, and payment follow-up.",
         primary: { label: "Book Real Estate Automation Demo", href: "/contact" },
@@ -2371,9 +2371,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "customer-support-automation-ideas-for-indian-businesses": {
     title: "Customer support automation ideas for Indian businesses",
-    metadataTitle: "Customer Support Automation Ideas for Indian Businesses | Crescora FLOW",
+    metadataTitle: "Customer Support Automation Ideas for Indian Businesses | Crescora AI",
     description:
-      "Explore customer support automation ideas for Indian businesses. Automate FAQs, WhatsApp support, ticket routing, payment queries, document follow-ups, complaint escalation, human handover, and support analytics with Crescora FLOW.",
+      "Explore customer support automation ideas for Indian businesses. Automate FAQs, WhatsApp support, ticket routing, payment queries, document follow-ups, complaint escalation, human handover, and support analytics with Crescora AI.",
     summary:
       "A practical guide to customer support automation for FAQ replies, WhatsApp support, ticket routing, payment queries, complaint escalation, human handover, and support visibility.",
     relatedLinks: [
@@ -2405,12 +2405,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "Choose the right rollout plan for your customer support automation workflow.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroDescription:
-        "Indian businesses lose time and customers when support teams answer the same questions manually, miss WhatsApp messages, delay follow-ups, and escalate issues without context. Crescora FLOW helps businesses automate FAQs, support intake, ticket routing, payment queries, appointment updates, document follow-ups, human handover, and customer status tracking.",
+        "Indian businesses lose time and customers when support teams answer the same questions manually, miss WhatsApp messages, delay follow-ups, and escalate issues without context. Crescora AI helps businesses automate FAQs, support intake, ticket routing, payment queries, appointment updates, document follow-ups, human handover, and customer status tracking.",
       heroPrimaryCta: { label: "Book Support Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Map My Support Workflow", href: "/contact" },
       heroSupportText:
@@ -2442,9 +2442,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Resolve customer questions faster with automated support workflows.",
         description:
-          "FLOW by Crescora AI helps Indian businesses automate FAQ replies, issue triage, WhatsApp support, ticket routing, payment queries, appointment updates, document follow-ups, and human handover with full conversation context.",
+          "Crescora AI helps Indian businesses automate FAQ replies, issue triage, WhatsApp support, ticket routing, payment queries, appointment updates, document follow-ups, and human handover with full conversation context.",
         footer:
-          "FLOW · Customer support automation for WhatsApp, web chat, support teams, service businesses, clinics, education, ecommerce, and finance teams.",
+          "Crescora AI · Customer support automation for WhatsApp, web chat, support teams, service businesses, clinics, education, ecommerce, and finance teams.",
       },
       sections: [
         {
@@ -2518,7 +2518,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "FAQ automation for repeated questions",
           paragraphs: [
             "FAQ automation is the easiest support automation workflow to start with.",
-            "Instead of making staff answer the same questions manually, FLOW can respond with approved answers and guide customers to the next step.",
+            "Instead of making staff answer the same questions manually, Crescora AI can respond with approved answers and guide customers to the next step.",
           ],
           bullets: [
             "What are your timings?",
@@ -2585,7 +2585,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Payment, order, and appointment support",
           paragraphs: [
             "Payment questions, order status requests, service updates, and booking changes create a large share of support workload for Indian businesses.",
-            "FLOW can collect the required identifiers, route the issue correctly, and keep the customer updated without forcing staff to repeat the same intake work.",
+            "Crescora AI can collect the required identifiers, route the issue correctly, and keep the customer updated without forcing staff to repeat the same intake work.",
           ],
           cards: [
             {
@@ -2671,9 +2671,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-helps-support-teams",
           eyebrow: "Section",
-          title: "How Crescora FLOW helps support teams",
+          title: "How Crescora AI helps support teams",
           paragraphs: [
-            "Crescora FLOW helps businesses turn customer support conversations into structured workflows.",
+            "Crescora AI helps businesses turn customer support conversations into structured workflows.",
             "The value is simple: faster replies, fewer repeated questions, cleaner support routing, better team handover, more visibility into unresolved issues, and a better customer experience.",
           ],
           bullets: [
@@ -2697,11 +2697,11 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Before and after support automation",
           table: {
-            headers: ["Manual support process", "With Crescora FLOW"],
+            headers: ["Manual support process", "With Crescora AI"],
             rows: [
-              ["Customers wait for staff replies", "FLOW can respond instantly to common questions"],
+              ["Customers wait for staff replies", "Crescora AI can respond instantly to common questions"],
               ["Staff answer repeated questions manually", "FAQ automation handles repeat questions"],
-              ["Support details are collected randomly", "FLOW captures structured customer information"],
+              ["Support details are collected randomly", "Crescora AI captures structured customer information"],
               ["Issues are forwarded manually", "Routing sends cases to the right team"],
               ["Customers repeat their problem after handover", "Human teams receive conversation context"],
               ["Payment and document queries are scattered", "Support workflows track status and next steps"],
@@ -2770,14 +2770,14 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Start with the workflow creating the most repeated manual work: FAQs, WhatsApp support intake, payment queries, order status, appointment support, or complaint escalation.",
           },
           {
-            question: "Can FLOW create support tickets?",
+            question: "Can Crescora AI create support tickets?",
             answer:
-              "Yes. FLOW can collect support details and route cases into ticket, queue, CRM, sheet, or internal workflow systems depending on rollout scope.",
+              "Yes. Crescora AI can collect support details and route cases into ticket, queue, CRM, sheet, or internal workflow systems depending on rollout scope.",
           },
           {
-            question: "Can FLOW handle human handover?",
+            question: "Can Crescora AI handle human handover?",
             answer:
-              "Yes. FLOW can hand over complex conversations to human teams with customer details, issue summary, urgency, and conversation history.",
+              "Yes. Crescora AI can hand over complex conversations to human teams with customer details, issue summary, urgency, and conversation history.",
           },
           {
             question: "Can support analytics be tracked?",
@@ -2790,7 +2790,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate customer support for your business?",
         description:
-          "Tell us how your team currently handles WhatsApp messages, repeated questions, payment queries, document follow-ups, complaints, tickets, and human escalation. We will map your support workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your team currently handles WhatsApp messages, repeated questions, payment queries, document follow-ups, complaints, tickets, and human escalation. We will map your support workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one support workflow. Prove value. Expand into FAQ automation, tickets, payments, documents, handover, feedback, and dashboards.",
         primary: { label: "Book Support Automation Demo", href: "/contact" },
@@ -2800,9 +2800,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "how-clinics-can-reduce-front-desk-calls-with-automation": {
     title: "How clinics can reduce front desk calls with automation",
-    metadataTitle: "How Clinics Can Reduce Front Desk Calls With Automation | Crescora FLOW",
+    metadataTitle: "How Clinics Can Reduce Front Desk Calls With Automation | Crescora AI",
     description:
-      "Learn how clinics can reduce front desk calls with automation. Automate appointment booking, doctor availability questions, reminders, rescheduling, payments, reports, documents, FAQs, and human handover with Crescora FLOW.",
+      "Learn how clinics can reduce front desk calls with automation. Automate appointment booking, doctor availability questions, reminders, rescheduling, payments, reports, documents, FAQs, and human handover with Crescora AI.",
     summary:
       "A practical guide to clinic front desk automation for appointments, reminders, doctor availability, billing support, report support, document collection, and human handover.",
     relatedLinks: [
@@ -2834,12 +2834,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "Choose the right rollout plan for your clinic automation workflow.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroDescription:
-        "Clinics lose time every day answering repeated appointment calls, doctor availability questions, fee enquiries, location requests, report updates, rescheduling requests, and follow-up messages. Crescora FLOW helps clinics automate patient enquiries, appointment booking, reminders, payment follow-ups, document collection, report support, and human handover across WhatsApp, web chat, and connected workflows.",
+        "Clinics lose time every day answering repeated appointment calls, doctor availability questions, fee enquiries, location requests, report updates, rescheduling requests, and follow-up messages. Crescora AI helps clinics automate patient enquiries, appointment booking, reminders, payment follow-ups, document collection, report support, and human handover across WhatsApp, web chat, and connected workflows.",
       heroPrimaryCta: { label: "Book Clinic Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Map My Clinic Workflow", href: "/contact" },
       heroSupportText:
@@ -2871,9 +2871,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Reduce clinic front desk calls with faster patient enquiry automation.",
         description:
-          "FLOW by Crescora AI helps clinics turn WhatsApp, website, and patient enquiries into structured workflows for appointment booking, doctor availability, reminders, payments, reports, documents, and staff handover.",
+          "Crescora AI helps clinics turn WhatsApp, website, and patient enquiries into structured workflows for appointment booking, doctor availability, reminders, payments, reports, documents, and staff handover.",
         footer:
-          "FLOW · Clinic automation for appointments, reminders, patient enquiries, billing support, reports, and front-desk handover.",
+          "Crescora AI · Clinic automation for appointments, reminders, patient enquiries, billing support, reports, and front-desk handover.",
       },
       sections: [
         {
@@ -2953,7 +2953,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Appointment booking automation",
           paragraphs: [
             "Appointment booking is the most important clinic automation workflow.",
-            "FLOW can guide patients through a structured appointment booking path, send appointment details after confirmation, and schedule a reminder.",
+            "Crescora AI can guide patients through a structured appointment booking path, send appointment details after confirmation, and schedule a reminder.",
           ],
           cards: [
             {
@@ -2980,7 +2980,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Doctor availability enquiry automation",
           paragraphs: [
             "Doctor availability questions are repeated every day.",
-            "FLOW can answer availability questions using your configured clinic schedule or route the patient to the front desk when confirmation is required. The workflow can also move the patient directly into appointment booking after availability is shown.",
+            "Crescora AI can answer availability questions using your configured clinic schedule or route the patient to the front desk when confirmation is required. The workflow can also move the patient directly into appointment booking after availability is shown.",
           ],
           bullets: [
             "Is the doctor available today?",
@@ -2996,7 +2996,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Reminder and rescheduling automation",
           paragraphs: [
             "Many clinic no-shows happen because patients forget the appointment or do not receive timely reminders.",
-            "Rescheduling also creates a lot of front desk work. FLOW can send reminder messages, provide a reschedule path, and hand complex changes over to staff when required.",
+            "Rescheduling also creates a lot of front desk work. Crescora AI can send reminder messages, provide a reschedule path, and hand complex changes over to staff when required.",
           ],
           cards: [
             {
@@ -3022,7 +3022,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Fee, payment, and billing support automation",
           paragraphs: [
             "Patients often call only to ask fee-related questions.",
-            "FLOW can answer approved fee questions, share payment instructions, collect payment references, and route unresolved billing cases to staff.",
+            "Crescora AI can answer approved fee questions, share payment instructions, collect payment references, and route unresolved billing cases to staff.",
           ],
           bullets: [
             "What is the consultation fee?",
@@ -3085,9 +3085,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-helps-clinics",
           eyebrow: "Section",
-          title: "How Crescora FLOW helps clinics",
+          title: "How Crescora AI helps clinics",
           paragraphs: [
-            "Crescora FLOW helps clinics turn patient conversations into structured workflows across WhatsApp, web chat, and connected systems.",
+            "Crescora AI helps clinics turn patient conversations into structured workflows across WhatsApp, web chat, and connected systems.",
             "The value is simple: faster replies, fewer front desk calls, less manual follow-up, better patient communication, cleaner staff handover, and more visibility into pending patient conversations.",
           ],
           bullets: [
@@ -3111,15 +3111,15 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Before and after clinic automation",
           table: {
-            headers: ["Manual front desk process", "With Crescora FLOW"],
+            headers: ["Manual front desk process", "With Crescora AI"],
             rows: [
-              ["Patients call repeatedly for timings and availability", "FLOW answers approved clinic FAQs instantly"],
-              ["Staff manually book appointments through calls and WhatsApp", "FLOW captures details and guides booking requests"],
+              ["Patients call repeatedly for timings and availability", "Crescora AI answers approved clinic FAQs instantly"],
+              ["Staff manually book appointments through calls and WhatsApp", "Crescora AI captures details and guides booking requests"],
               ["Reminders depend on staff memory", "Appointment reminders can be scheduled"],
               ["Rescheduling creates confusion", "Patients get a structured reschedule path"],
               ["Report queries interrupt front desk work", "Report status or report support can be routed"],
               ["Documents are chased manually", "Missing document reminders can be automated"],
-              ["Staff receive vague patient requests", "FLOW captures context before handover"],
+              ["Staff receive vague patient requests", "Crescora AI captures context before handover"],
               ["Managers cannot see pending conversations", "Workflow status can be tracked"],
             ],
           },
@@ -3216,9 +3216,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Yes. Appointment reminder workflows can help reduce no-shows and reduce manual reminder calls.",
           },
           {
-            question: "Can FLOW handle WhatsApp enquiries for clinics?",
+            question: "Can Crescora AI handle WhatsApp enquiries for clinics?",
             answer:
-              "Yes. FLOW can help clinics automate WhatsApp enquiries, appointment requests, reminders, payment follow-ups, report support, and human handover.",
+              "Yes. Crescora AI can help clinics automate WhatsApp enquiries, appointment requests, reminders, payment follow-ups, report support, and human handover.",
           },
           {
             question: "Can automation replace clinic front desk staff?",
@@ -3236,9 +3236,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Most clinics should start with appointment booking, doctor availability enquiries, and reminders. These usually create the highest front desk call load.",
           },
           {
-            question: "Can FLOW support human handover?",
+            question: "Can Crescora AI support human handover?",
             answer:
-              "Yes. FLOW can route urgent, unclear, or complex conversations to clinic staff with patient details and conversation history.",
+              "Yes. Crescora AI can route urgent, unclear, or complex conversations to clinic staff with patient details and conversation history.",
           },
         ],
       },
@@ -3246,7 +3246,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to reduce front desk calls at your clinic?",
         description:
-          "Tell us how your clinic currently handles appointment calls, WhatsApp messages, doctor availability questions, reminders, rescheduling, payment queries, reports, documents, and patient handover. We will map your clinic workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your clinic currently handles appointment calls, WhatsApp messages, doctor availability questions, reminders, rescheduling, payment queries, reports, documents, and patient handover. We will map your clinic workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one clinic workflow. Prove value. Expand into reminders, payments, reports, documents, handover, and dashboards.",
         primary: { label: "Book Clinic Automation Demo", href: "/contact" },
@@ -3256,9 +3256,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "what-is-no-code-chatbot-automation": {
     title: "What is no-code chatbot automation?",
-    metadataTitle: "What Is No-Code Chatbot Automation? Business Workflow Guide | Crescora FLOW",
+    metadataTitle: "What Is No-Code Chatbot Automation? Business Workflow Guide | Crescora AI",
     description:
-      "Learn what no-code chatbot automation is and how businesses use it to automate leads, appointments, support, payments, documents, reminders, WhatsApp workflows, and human handoff with Crescora FLOW.",
+      "Learn what no-code chatbot automation is and how businesses use it to automate leads, appointments, support, payments, documents, reminders, WhatsApp workflows, and human handoff with Crescora AI.",
     summary:
       "A practical beginner-friendly guide to no-code chatbot automation for lead capture, booking, support, payments, documents, reminders, and human handoff.",
     relatedLinks: [
@@ -3287,17 +3287,17 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Templates",
       ),
       relatedLink(
-        "Compare FLOW",
+        "Compare Crescora AI",
         "/compare",
-        "See why FLOW is built for workflow automation, not just basic chatbot replies.",
-        "Compare FLOW",
+        "See why Crescora AI is built for workflow automation, not just basic chatbot replies.",
+        "Compare Crescora AI",
       ),
     ],
     publicPage: {
       heroDescription:
         "No-code chatbot automation helps businesses build customer conversation workflows without writing code. Instead of manually replying to every enquiry, booking request, payment follow-up, document request, or support question, businesses can use a visual workflow builder to automate repeatable steps and hand over complex cases to humans.",
       heroPrimaryCta: { label: "Book No-Code Automation Demo", href: "/contact" },
-      heroSecondaryCta: { label: "Explore FLOW Workflows", href: "/workflows" },
+      heroSecondaryCta: { label: "Explore Crescora AI Workflows", href: "/workflows" },
       heroSupportText:
         "Use this guide to understand what no-code chatbot automation means, what it can automate first, and how to launch it safely.",
       statusChips: [
@@ -3320,16 +3320,16 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Reader outcome",
           title: "From simple chatbot replies to real workflow automation",
           description:
-            "This guide explains what no-code chatbot automation means, how it works, what businesses can automate first, and how Crescora FLOW helps teams launch structured automation safely.",
+            "This guide explains what no-code chatbot automation means, how it works, what businesses can automate first, and how Crescora AI helps teams launch structured automation safely.",
         },
       ],
       featuredImage: {
         eyebrow: "Featured workflow example",
         title: "Build business chatbots without coding, then automate real workflows.",
         description:
-          "FLOW by Crescora AI helps teams create no-code chatbot workflows for lead capture, appointment booking, reminders, payment follow-ups, document collection, customer support, human handoff, and workflow tracking.",
+          "Crescora AI helps teams create no-code chatbot workflows for lead capture, appointment booking, reminders, payment follow-ups, document collection, customer support, human handoff, and workflow tracking.",
         footer:
-          "FLOW · No-code chatbot automation for WhatsApp, website chat, support, bookings, payments, documents, and follow-ups.",
+          "Crescora AI · No-code chatbot automation for WhatsApp, website chat, support, bookings, payments, documents, and follow-ups.",
       },
       sections: [
         {
@@ -3482,7 +3482,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "What a good no-code chatbot builder should include",
           paragraphs: [
             "A serious no-code chatbot automation platform should support the workflow building blocks teams need in production, not only simple reply trees.",
-            "FLOW supports these categories through node families for core conversation, logic and control, timing and reliability, integrations, communication, data and process, domain operations, and AI nodes.",
+            "Crescora AI supports these categories through node families for core conversation, logic and control, timing and reliability, integrations, communication, data and process, domain operations, and AI nodes.",
           ],
           bullets: [
             "Visual workflow builder.",
@@ -3506,9 +3506,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-helps",
           eyebrow: "Section",
-          title: "How Crescora FLOW helps",
+          title: "How Crescora AI helps",
           paragraphs: [
-            "Crescora FLOW helps businesses build, operate, and improve no-code chatbot automation workflows.",
+            "Crescora AI helps businesses build, operate, and improve no-code chatbot automation workflows.",
             "The value is simple: faster launches, fewer missed enquiries, less manual follow-up, cleaner handoff, better workflow visibility, and more completed customer actions.",
           ],
           bullets: [
@@ -3572,11 +3572,11 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Before and after no-code chatbot automation",
           table: {
-            headers: ["Manual process", "With Crescora FLOW"],
+            headers: ["Manual process", "With Crescora AI"],
             rows: [
-              ["Customers wait for staff replies", "FLOW can respond and guide the next step"],
+              ["Customers wait for staff replies", "Crescora AI can respond and guide the next step"],
               ["Leads stay scattered across chats", "Enquiries enter structured workflows"],
-              ["Staff ask the same questions repeatedly", "FLOW captures required details automatically"],
+              ["Staff ask the same questions repeatedly", "Crescora AI captures required details automatically"],
               ["Follow-ups depend on memory", "Reminders can be scheduled"],
               ["Payments and documents are chased manually", "Workflows can track pending actions"],
               ["Complex cases lose context", "Human teams receive conversation history"],
@@ -3633,7 +3633,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         description:
           "Start with one workflow, prove the value, and then expand into WhatsApp, website chat, reminders, payments, documents, support, and dashboards.",
         primary: { label: "Book No-Code Automation Demo", href: "/contact" },
-        secondary: { label: "Explore FLOW Workflows", href: "/workflows" },
+        secondary: { label: "Explore Crescora AI Workflows", href: "/workflows" },
       },
       faqSection: {
         eyebrow: "FAQ",
@@ -3672,9 +3672,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "No. It should reduce repetitive work and help your team focus on complex, urgent, or high-value conversations.",
           },
           {
-            question: "Can FLOW support human handoff?",
+            question: "Can Crescora AI support human handoff?",
             answer:
-              "Yes. FLOW supports handoff and agent console operations so human teams can take over conversations with context.",
+              "Yes. Crescora AI supports handoff and agent console operations so human teams can take over conversations with context.",
           },
           {
             question: "Is no-code chatbot automation useful for small businesses?",
@@ -3687,19 +3687,19 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to build chatbot automation without coding?",
         description:
-          "Tell us how your business currently handles enquiries, bookings, payments, documents, support, reminders, and handoffs. We will map your workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your business currently handles enquiries, bookings, payments, documents, support, reminders, and handoffs. We will map your workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one workflow. Prove value. Expand into WhatsApp, website chat, reminders, payments, documents, support, and dashboards.",
         primary: { label: "Book No-Code Automation Demo", href: "/contact" },
-        secondary: { label: "Explore FLOW Workflows", href: "/workflows" },
+        secondary: { label: "Explore Crescora AI Workflows", href: "/workflows" },
       },
     },
   },
   "how-to-automate-payment-reminders-for-customers": {
     title: "How to automate payment reminders for customers",
-    metadataTitle: "How to Automate Payment Reminders for Customers | Crescora FLOW",
+    metadataTitle: "How to Automate Payment Reminders for Customers | Crescora AI",
     description:
-      "Learn how to automate payment reminders for customers with Crescora FLOW. Send due reminders, share payment links, collect status, recover failed payments, escalate overdue cases, and track billing outcomes.",
+      "Learn how to automate payment reminders for customers with Crescora AI. Send due reminders, share payment links, collect status, recover failed payments, escalate overdue cases, and track billing outcomes.",
     summary:
       "A practical guide to payment reminder automation for due reminders, payment links, failed-payment recovery, overdue escalation, billing handover, and collection visibility.",
     relatedLinks: [
@@ -3731,12 +3731,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "Choose the right rollout plan for your payment automation workflow.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroDescription:
-        "Businesses lose time and cash flow when teams manually chase pending payments, resend payment links, confirm receipts, and follow up on overdue cases. Crescora FLOW helps teams automate payment reminders, payment status collection, failed-payment recovery, overdue escalation, billing handover, and follow-up tracking across WhatsApp, web chat, SMS, email, and connected workflows.",
+        "Businesses lose time and cash flow when teams manually chase pending payments, resend payment links, confirm receipts, and follow up on overdue cases. Crescora AI helps teams automate payment reminders, payment status collection, failed-payment recovery, overdue escalation, billing handover, and follow-up tracking across WhatsApp, web chat, SMS, email, and connected workflows.",
       heroPrimaryCta: { label: "Book Payment Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Map My Payment Workflow", href: "/contact" },
       heroSupportText:
@@ -3768,9 +3768,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Recover pending payments with automated reminders and clear follow-up workflows.",
         description:
-          "FLOW by Crescora AI helps businesses send payment reminders, share payment links, collect transaction references, track payment status, recover failed payments, escalate overdue cases, and hand over billing issues with full customer context.",
+          "Crescora AI helps businesses send payment reminders, share payment links, collect transaction references, track payment status, recover failed payments, escalate overdue cases, and hand over billing issues with full customer context.",
         footer:
-          "FLOW · Payment reminder automation for invoices, fees, bookings, subscriptions, billing, collections, and overdue follow-ups.",
+          "Crescora AI · Payment reminder automation for invoices, fees, bookings, subscriptions, billing, collections, and overdue follow-ups.",
       },
       sections: [
         {
@@ -3808,7 +3808,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "Payment reminder workflow example",
           paragraphs: [
             "A strong payment reminder workflow can look like this: Payment Due to Reminder Sent to Payment Link Shared to Customer Pays or No Response to Status Captured to Paid, Failed, Pending, or Overdue to Billing Handover to Outcome Tracking.",
-            "For example, when a customer has a pending consultation fee, booking token, invoice, or service payment, FLOW can send a reminder, share the payment link, ask the customer to confirm after payment, collect the transaction reference, and route unresolved cases to billing if payment is still pending.",
+            "For example, when a customer has a pending consultation fee, booking token, invoice, or service payment, Crescora AI can send a reminder, share the payment link, ask the customer to confirm after payment, collect the transaction reference, and route unresolved cases to billing if payment is still pending.",
           ],
         },
         {
@@ -3964,9 +3964,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-helps",
           eyebrow: "Section",
-          title: "How Crescora FLOW helps",
+          title: "How Crescora AI helps",
           paragraphs: [
-            "Crescora FLOW helps businesses turn payment follow-ups into structured workflows.",
+            "Crescora AI helps businesses turn payment follow-ups into structured workflows.",
             "The value is simple: less manual chasing, faster payment follow-up, cleaner billing handover, better customer communication, more visibility into pending payments, and improved collection discipline.",
           ],
           bullets: [
@@ -3990,9 +3990,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Before and after payment reminder automation",
           table: {
-            headers: ["Manual payment follow-up", "With Crescora FLOW"],
+            headers: ["Manual payment follow-up", "With Crescora AI"],
             rows: [
-              ["Staff manually chase every customer", "FLOW sends structured reminders"],
+              ["Staff manually chase every customer", "Crescora AI sends structured reminders"],
               ["Payment links are resent repeatedly", "Payment links can be shared through workflow steps"],
               ["Payment status is unclear", "Status can be captured and tracked"],
               ["Failed payments are forgotten", "Failed payment recovery can be triggered"],
@@ -4059,12 +4059,12 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Yes. WhatsApp payment reminders can be automated depending on channel setup, customer opt-in, and template approval requirements.",
           },
           {
-            question: "Can FLOW send payment links?",
+            question: "Can Crescora AI send payment links?",
             answer:
-              "Yes. FLOW can support payment link sharing depending on your payment provider and implementation setup.",
+              "Yes. Crescora AI can support payment link sharing depending on your payment provider and implementation setup.",
           },
           {
-            question: "Can FLOW verify payment status?",
+            question: "Can Crescora AI verify payment status?",
             answer:
               "Payment verification depends on payment gateway integration and rollout scope. If automatic verification is not available, the workflow can collect transaction IDs, receipt numbers, screenshots, or manual confirmation.",
           },
@@ -4094,7 +4094,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate payment reminders for your customers?",
         description:
-          "Tell us how your business currently handles pending payments, payment links, invoice reminders, failed payments, receipt confirmation, overdue cases, and billing handover. We will map your payment workflow and show the fastest Crescora FLOW rollout path.",
+          "Tell us how your business currently handles pending payments, payment links, invoice reminders, failed payments, receipt confirmation, overdue cases, and billing handover. We will map your payment workflow and show the fastest Crescora AI rollout path.",
         note:
           "Start with one payment reminder workflow. Prove value. Expand into payment verification, failed-payment recovery, receipts, billing escalation, and collection dashboards.",
         primary: { label: "Book Payment Automation Demo", href: "/contact" },
@@ -4105,16 +4105,16 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   "best-chatbot-workflows-for-hospitals": {
     title: "Best AI chatbot workflows for hospitals and clinics",
     metadataTitle:
-      "Best AI Chatbot Workflows for Hospitals and Clinics | Crescora FLOW",
+      "Best AI Chatbot Workflows for Hospitals and Clinics | Crescora AI",
     description:
-      "Explore the best AI chatbot workflows for hospitals and clinics, including appointment booking, doctor availability, lab report status, billing support, health packages, insurance queries, emergency routing, and patient follow-ups with Crescora FLOW.",
+      "Explore the best AI chatbot workflows for hospitals and clinics, including appointment booking, doctor availability, lab report status, billing support, health packages, insurance queries, emergency routing, and patient follow-ups with Crescora AI.",
     summary:
       "A practical guide to hospital chatbot workflows for front-desk automation, appointments, reports, billing, insurance support, emergency escalation, and patient follow-up.",
     relatedLinks: [
       relatedLink(
         "Hospital Automation Solutions",
         "/industries/hospitals",
-        "See how Crescora Flow automates appointments, reports, billing, and patient support.",
+        "See how Crescora AI automates appointments, reports, billing, and patient support.",
         "Explore Hospitals",
       ),
       relatedLink(
@@ -4124,15 +4124,15 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Healthcare Templates",
       ),
       relatedLink(
-        "Crescora Flow vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "Understand why workflow automation is stronger than simple FAQ chatbots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Appointment Booking Workflow",
         "/workflows/appointment-booking",
-        "See how doctor enquiries, slot confirmation, reminders, and reschedules move through FLOW.",
+        "See how doctor enquiries, slot confirmation, reminders, and reschedules move through Crescora AI.",
         "See Appointment Workflow",
       ),
       relatedLink(
@@ -4145,7 +4145,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
     publicPage: {
       heroTitle: "Automate hospital enquiries, appointments, reports, billing, and follow-ups with AI chatbot workflows",
       heroDescription:
-        "Hospitals lose patient trust when replies are delayed, appointments are handled manually, reports require repeated calls, and billing questions overload the front desk. Crescora Flow helps hospitals and clinics automate patient conversations, appointment booking, report status, health packages, billing support, insurance queries, and human escalation across WhatsApp, web, and other channels.",
+        "Hospitals lose patient trust when replies are delayed, appointments are handled manually, reports require repeated calls, and billing questions overload the front desk. Crescora AI helps hospitals and clinics automate patient conversations, appointment booking, report status, health packages, billing support, insurance queries, and human escalation across WhatsApp, web, and other channels.",
       heroPrimaryCta: { label: "Book a Hospital Workflow Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Healthcare Automation", href: "/industries/hospitals" },
       heroSupportText:
@@ -4195,7 +4195,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Reduce front desk load. Book more appointments. Respond faster to patients.",
         description:
-          "Crescora Flow helps hospitals and clinics automate patient enquiries, appointment booking, doctor availability, report status, payment reminders, health packages, insurance support, and follow-ups with human handover for sensitive or urgent cases.",
+          "Crescora AI helps hospitals and clinics automate patient enquiries, appointment booking, doctor availability, report status, payment reminders, health packages, insurance support, and follow-ups with human handover for sensitive or urgent cases.",
         footer:
           "Built for hospitals, clinics, diagnostics, and healthcare teams that need faster patient communication with better operational control.",
       },
@@ -4275,9 +4275,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-the-full-patient-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects the full patient journey",
+          title: "How Crescora AI connects the full patient journey",
           paragraphs: [
-            "Crescora Flow is not just a chatbot reply box. It connects enquiry capture, AI intent detection, structured forms, appointment booking, notifications, payments, document collection, records, reminders, analytics, and human handover into one workflow.",
+            "Crescora AI is not just a chatbot reply box. It connects enquiry capture, AI intent detection, structured forms, appointment booking, notifications, payments, document collection, records, reminders, analytics, and human handover into one workflow.",
           ],
           cards: [
             {
@@ -4312,7 +4312,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Built for healthcare workflows that need control",
           paragraphs: [
-            "Hospital automation cannot be careless. Every workflow must have clear routing, fallback handling, human escalation, and safe messaging. Crescora Flow helps healthcare teams automate routine communication while keeping sensitive decisions under human control.",
+            "Hospital automation cannot be careless. Every workflow must have clear routing, fallback handling, human escalation, and safe messaging. Crescora AI helps healthcare teams automate routine communication while keeping sensitive decisions under human control.",
           ],
           cards: [
             {
@@ -4368,14 +4368,14 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "Emergency cases should not stay inside a normal FAQ path. The workflow should show immediate emergency guidance and route the conversation to the hospital team or emergency contact pathway.",
           },
           {
-            question: "Can Crescora Flow support report status and document workflows?",
+            question: "Can Crescora AI support report status and document workflows?",
             answer:
-              "Yes. FLOW can support report status, document collection, patient notifications, and handover paths depending on your rollout scope and data integration setup.",
+              "Yes. Crescora AI can support report status, document collection, patient notifications, and handover paths depending on your rollout scope and data integration setup.",
           },
           {
             question: "Can hospital workflows keep humans in control?",
             answer:
-              "Yes. Crescora Flow is designed to automate routine communication while escalating urgent, sensitive, admission, billing, insurance, or complex patient requests to human teams with context.",
+              "Yes. Crescora AI is designed to automate routine communication while escalating urgent, sensitive, admission, billing, insurance, or complex patient requests to human teams with context.",
           },
         ],
       },
@@ -4383,7 +4383,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate your hospital patient workflows?",
         description:
-          "Reduce missed enquiries, front desk workload, repeated calls, manual follow-ups, and delayed patient updates with Crescora Flow.",
+          "Reduce missed enquiries, front desk workload, repeated calls, manual follow-ups, and delayed patient updates with Crescora AI.",
         note:
           "For hospitals, clinics, diagnostics, labs, and healthcare service teams.",
         primary: { label: "Book a Hospital Demo", href: "/contact" },
@@ -4394,9 +4394,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   "how-ai-can-reduce-missed-appointments": {
     title: "How AI can reduce missed appointments for hospitals and clinics",
     metadataTitle:
-      "How AI Can Reduce Missed Appointments for Hospitals and Clinics | Crescora FLOW",
+      "How AI Can Reduce Missed Appointments for Hospitals and Clinics | Crescora AI",
     description:
-      "Learn how AI can reduce missed appointments for hospitals and clinics using automated confirmations, reminders, rescheduling, payment nudges, and staff escalation with Crescora FLOW.",
+      "Learn how AI can reduce missed appointments for hospitals and clinics using automated confirmations, reminders, rescheduling, payment nudges, and staff escalation with Crescora AI.",
     summary:
       "A practical guide to reducing missed appointments with AI-powered patient follow-ups, confirmations, reminders, rescheduling, and healthcare workflow automation.",
     relatedLinks: [
@@ -4413,15 +4413,15 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Healthcare Templates",
       ),
       relatedLink(
-        "Crescora Flow vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple FAQ replies.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Appointment Booking Workflow",
         "/workflows/appointment-booking",
-        "See how confirmations, reminders, reschedules, and booking handover work in FLOW.",
+        "See how confirmations, reminders, reschedules, and booking handover work in Crescora AI.",
         "Explore Appointment Workflow",
       ),
       relatedLink(
@@ -4434,7 +4434,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
     publicPage: {
       heroTitle: "Reduce missed appointments with AI-powered patient follow-ups",
       heroDescription:
-        "Missed appointments happen when patients forget their slot, do not receive reminders, fail to confirm, cannot reschedule easily, or do not get quick answers before visiting. Crescora Flow helps hospitals and clinics automate appointment reminders, confirmations, rescheduling, patient follow-ups, payment nudges, and human escalation across WhatsApp, web, SMS, and email workflows.",
+        "Missed appointments happen when patients forget their slot, do not receive reminders, fail to confirm, cannot reschedule easily, or do not get quick answers before visiting. Crescora AI helps hospitals and clinics automate appointment reminders, confirmations, rescheduling, patient follow-ups, payment nudges, and human escalation across WhatsApp, web, SMS, and email workflows.",
       heroPrimaryCta: { label: "Book a Healthcare Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Appointment Workflow", href: "/workflows/appointment-booking" },
       heroSupportText:
@@ -4466,7 +4466,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Reduce no-shows. Confirm more visits. Keep patients on track.",
         description:
-          "Crescora Flow helps hospitals and clinics automate appointment reminders, patient confirmations, rescheduling requests, payment nudges, report updates, and follow-up communication with human handover for urgent or sensitive cases.",
+          "Crescora AI helps hospitals and clinics automate appointment reminders, patient confirmations, rescheduling requests, payment nudges, report updates, and follow-up communication with human handover for urgent or sensitive cases.",
         footer:
           "Built for hospitals, clinics, diagnostics, labs, and healthcare teams that need faster patient communication with better operational visibility.",
       },
@@ -4474,7 +4474,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "what-youll-learn-expanded",
           eyebrow: "Section",
-          title: "Where Crescora Flow fits",
+          title: "Where Crescora AI fits",
           paragraphs: [
             "Hospitals need more than a reminder tool. They need a workflow that connects booking, reminders, confirmations, payments, staff alerts, and escalation into one patient journey.",
           ],
@@ -4577,9 +4577,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-the-appointment-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects the appointment journey",
+          title: "How Crescora AI connects the appointment journey",
           paragraphs: [
-            "Crescora Flow does more than send reminders. It connects appointment booking, patient data capture, confirmation, reminders, rescheduling, payment follow-up, staff alerts, records, analytics, and handover into one controlled workflow.",
+            "Crescora AI does more than send reminders. It connects appointment booking, patient data capture, confirmation, reminders, rescheduling, payment follow-up, staff alerts, records, analytics, and handover into one controlled workflow.",
           ],
           cards: [
             {
@@ -4619,7 +4619,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Appointment automation with human control",
           paragraphs: [
-            "Healthcare automation should not blindly replace hospital staff. It should reduce repetitive work while keeping sensitive cases under human control. Crescora Flow helps hospitals automate routine appointment communication and escalate exceptions when human judgment is required.",
+            "Healthcare automation should not blindly replace hospital staff. It should reduce repetitive work while keeping sensitive cases under human control. Crescora AI helps hospitals automate routine appointment communication and escalate exceptions when human judgment is required.",
           ],
           cards: [
             {
@@ -4677,7 +4677,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           {
             question: "Can this include payment or token follow-up?",
             answer:
-              "Yes. FLOW can add consultation fee, booking token, or diagnostic payment steps inside the appointment journey depending on rollout scope.",
+              "Yes. Crescora AI can add consultation fee, booking token, or diagnostic payment steps inside the appointment journey depending on rollout scope.",
           },
           {
             question: "When should the workflow escalate to staff?",
@@ -4690,7 +4690,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to reduce missed appointments in your hospital or clinic?",
         description:
-          "Crescora Flow helps healthcare teams automate appointment confirmations, reminders, rescheduling, payment follow-ups, and staff escalation so fewer patients drop off before the visit.",
+          "Crescora AI helps healthcare teams automate appointment confirmations, reminders, rescheduling, payment follow-ups, and staff escalation so fewer patients drop off before the visit.",
         note:
           "For hospitals, clinics, diagnostics, labs, and healthcare service teams.",
         primary: { label: "Book a Healthcare Demo", href: "/contact" },
@@ -4701,16 +4701,16 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   "how-to-collect-leads-automatically-from-website-and-whatsapp": {
     title: "How to collect leads automatically from website and WhatsApp",
     metadataTitle:
-      "How to Collect Leads Automatically From Website and WhatsApp | Crescora FLOW",
+      "How to Collect Leads Automatically From Website and WhatsApp | Crescora AI",
     description:
-      "Learn how to collect leads automatically from website and WhatsApp with Crescora FLOW. Capture enquiries, qualify intent, store lead records, alert your team, and automate follow-ups before leads go cold.",
+      "Learn how to collect leads automatically from website and WhatsApp with Crescora AI. Capture enquiries, qualify intent, store lead records, alert your team, and automate follow-ups before leads go cold.",
     summary:
       "A practical guide to automatic lead capture from website chat and WhatsApp for qualification, routing, notifications, and follow-up automation.",
     relatedLinks: [
       relatedLink(
         "Lead Automation Solutions",
         "/use-cases/lead-capture-qualification",
-        "See how Crescora Flow captures, qualifies, routes, and tracks business enquiries.",
+        "See how Crescora AI captures, qualifies, routes, and tracks business enquiries.",
         "Explore Lead Automation",
       ),
       relatedLink(
@@ -4720,10 +4720,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Templates",
       ),
       relatedLink(
-        "Crescora Flow vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "Understand why workflow automation is stronger than simple auto-reply bots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "WhatsApp Automation",
@@ -4735,13 +4735,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for lead capture, routing, and follow-up automation.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Turn website visitors and WhatsApp enquiries into qualified leads automatically",
       heroDescription:
-        "Most businesses lose leads because visitors leave the website without taking action, WhatsApp messages get delayed, and follow-ups depend on manual effort. Crescora Flow captures enquiries from your website and messaging channels, qualifies the customer, stores lead details, alerts your team, and routes high-intent leads to the right person instantly.",
+        "Most businesses lose leads because visitors leave the website without taking action, WhatsApp messages get delayed, and follow-ups depend on manual effort. Crescora AI captures enquiries from your website and messaging channels, qualifies the customer, stores lead details, alerts your team, and routes high-intent leads to the right person instantly.",
       heroPrimaryCta: { label: "Book a Lead Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Lead Capture Workflow", href: "/use-cases/lead-capture-qualification" },
       heroSupportText:
@@ -4775,7 +4775,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         },
         {
           eyebrow: "What you'll learn",
-          title: "How Crescora Flow connects it",
+          title: "How Crescora AI connects it",
           description:
             "Learn how website chat, messaging channels, forms, notifications, records, and human handover work together.",
         },
@@ -4796,7 +4796,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Capture every enquiry. Qualify every lead. Follow up faster.",
         description:
-          "Crescora Flow helps businesses turn website visitors and WhatsApp enquiries into structured leads. Capture customer details, understand intent, store the enquiry, notify your team, and route high-value leads to sales before they lose interest.",
+          "Crescora AI helps businesses turn website visitors and WhatsApp enquiries into structured leads. Capture customer details, understand intent, store the enquiry, notify your team, and route high-value leads to sales before they lose interest.",
         footer:
           "Built for businesses that depend on fast response, clean lead tracking, and consistent follow-ups.",
       },
@@ -4839,7 +4839,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "1. Capture enquiries from website chat",
               description:
-                "When a visitor lands on your website, Crescora Flow can start a guided conversation instead of waiting for the visitor to fill a long form. The workflow can ask what they need, collect contact details, identify service interest, and save the enquiry as a lead.",
+                "When a visitor lands on your website, Crescora AI can start a guided conversation instead of waiting for the visitor to fill a long form. The workflow can ask what they need, collect contact details, identify service interest, and save the enquiry as a lead.",
             },
             {
               title: "2. Capture leads from WhatsApp enquiries",
@@ -4849,7 +4849,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "3. Qualify lead intent automatically",
               description:
-                "Not every enquiry has the same priority. Crescora Flow can classify leads based on requirement, urgency, service type, location, budget, appointment need, or callback preference so your team focuses on serious buyers first.",
+                "Not every enquiry has the same priority. Crescora AI can classify leads based on requirement, urgency, service type, location, budget, appointment need, or callback preference so your team focuses on serious buyers first.",
             },
             {
               title: "4. Store lead details in one place",
@@ -4869,7 +4869,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "7. Track lead outcomes",
               description:
-                "Crescora Flow helps managers understand how many leads were captured, which source performed better, which leads were assigned, where customers dropped off, and which workflows need improvement.",
+                "Crescora AI helps managers understand how many leads were captured, which source performed better, which leads were assigned, where customers dropped off, and which workflows need improvement.",
             },
           ],
         },
@@ -4885,9 +4885,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-website-and-whatsapp-lead-capture",
           eyebrow: "Section",
-          title: "How Crescora Flow connects website and WhatsApp lead capture",
+          title: "How Crescora AI connects website and WhatsApp lead capture",
           paragraphs: [
-            "Crescora Flow is not just a chat widget. It connects lead capture, AI intent detection, forms, records, notifications, team routing, follow-up reminders, human handover, and analytics into one controlled workflow.",
+            "Crescora AI is not just a chat widget. It connects lead capture, AI intent detection, forms, records, notifications, team routing, follow-up reminders, human handover, and analytics into one controlled workflow.",
           ],
           cards: [
             {
@@ -4927,7 +4927,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Lead automation with control, not random bot replies",
           paragraphs: [
-            "Lead capture should not feel robotic or uncontrolled. Crescora Flow helps businesses define exactly what information to collect, when to ask follow-up questions, when to notify the team, and when to move the conversation to a human.",
+            "Lead capture should not feel robotic or uncontrolled. Crescora AI helps businesses define exactly what information to collect, when to ask follow-up questions, when to notify the team, and when to move the conversation to a human.",
           ],
           cards: [
             {
@@ -4983,9 +4983,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "At minimum, collect name, phone number, requirement, source, urgency, preferred service, and the next action or callback preference. Budget or location can be added when needed.",
           },
           {
-            question: "Can Crescora Flow notify the team automatically?",
+            question: "Can Crescora AI notify the team automatically?",
             answer:
-              "Yes. Once a lead is captured, FLOW can alert the right team, assign ownership, and trigger the next follow-up step depending on the workflow design.",
+              "Yes. Once a lead is captured, Crescora AI can alert the right team, assign ownership, and trigger the next follow-up step depending on the workflow design.",
           },
           {
             question: "Can follow-ups be automated too?",
@@ -5004,7 +5004,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to capture more leads automatically?",
         description:
-          "Use Crescora Flow to capture website visitors, qualify WhatsApp enquiries, alert your team, and follow up faster before interested customers go cold.",
+          "Use Crescora AI to capture website visitors, qualify WhatsApp enquiries, alert your team, and follow up faster before interested customers go cold.",
         note:
           "For hospitals, schools, real estate, coaching centers, agencies, clinics, and service businesses.",
         primary: { label: "Book a Lead Automation Demo", href: "/contact" },
@@ -5014,9 +5014,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "how-to-automate-faqs-for-business-support": {
     title: "How to automate FAQs for business support",
-    metadataTitle: "How to Automate FAQs for Business Support | Crescora FLOW",
+    metadataTitle: "How to Automate FAQs for Business Support | Crescora AI",
     description:
-      "Learn how to automate FAQs for business support with Crescora FLOW. Answer repeated customer questions, collect missing details, route unresolved issues, and escalate complex cases with human control.",
+      "Learn how to automate FAQs for business support with Crescora AI. Answer repeated customer questions, collect missing details, route unresolved issues, and escalate complex cases with human control.",
     summary:
       "A practical guide to FAQ automation for business support teams that want faster answers, fewer repeated questions, safer escalation, and better support visibility.",
     relatedLinks: [
@@ -5033,10 +5033,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View FAQ Templates",
       ),
       relatedLink(
-        "Crescora Flow vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple FAQ auto-replies.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "AI Chatbot Solution",
@@ -5048,13 +5048,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for support FAQ automation, routing, knowledge operations, and handover workflows.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Reduce support workload by automating repeated customer questions",
       heroDescription:
-        "Most support teams spend hours answering the same questions about pricing, timings, services, bookings, payments, documents, delivery, reports, policies, and status updates. Crescora Flow helps businesses automate common FAQ responses, guide customers to the right next step, collect missing details, and escalate unresolved or sensitive cases to the right team.",
+        "Most support teams spend hours answering the same questions about pricing, timings, services, bookings, payments, documents, delivery, reports, policies, and status updates. Crescora AI helps businesses automate common FAQ responses, guide customers to the right next step, collect missing details, and escalate unresolved or sensitive cases to the right team.",
       heroPrimaryCta: { label: "Book Support Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore FAQ Workflow", href: "/use-cases/customer-support-automation" },
       heroSupportText:
@@ -5088,7 +5088,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         },
         {
           eyebrow: "What you'll learn",
-          title: "Where Crescora Flow fits",
+          title: "Where Crescora AI fits",
           description:
             "Learn how FAQ automation connects with forms, records, notifications, human handover, and analytics.",
         },
@@ -5109,7 +5109,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Answer repeated questions instantly. Escalate only what needs a human.",
         description:
-          "Crescora Flow helps businesses automate FAQ answers, guide customers through support steps, collect missing information, route unresolved cases, and reduce manual reply load across web and configured messaging channels.",
+          "Crescora AI helps businesses automate FAQ answers, guide customers through support steps, collect missing information, route unresolved cases, and reduce manual reply load across web and configured messaging channels.",
         footer:
           "Built for support teams that need faster responses, fewer repeated questions, and better control over escalations.",
       },
@@ -5172,7 +5172,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "5. Escalate unresolved questions to human support",
               description:
-                "If the answer is not available, confidence is low, or the customer needs personal assistance, Crescora Flow can route the conversation to a human team with the collected context.",
+                "If the answer is not available, confidence is low, or the customer needs personal assistance, Crescora AI can route the conversation to a human team with the collected context.",
             },
             {
               title: "6. Track repeated questions and knowledge gaps",
@@ -5193,9 +5193,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-faq-automation-to-the-full-support-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects FAQ automation to the full support journey",
+          title: "How Crescora AI connects FAQ automation to the full support journey",
           paragraphs: [
-            "Crescora Flow does more than answer FAQs. It connects knowledge-based answers with guided forms, support routing, team handover, notifications, records, analytics, and workflow governance so every customer question has a clear path.",
+            "Crescora AI does more than answer FAQs. It connects knowledge-based answers with guided forms, support routing, team handover, notifications, records, analytics, and workflow governance so every customer question has a clear path.",
           ],
           cards: [
             {
@@ -5229,7 +5229,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "FAQ automation with control, not random AI replies",
           paragraphs: [
-            "FAQ automation should not give uncontrolled answers. Crescora Flow helps businesses use approved knowledge, safe fallback paths, human escalation, and workflow visibility so automation improves support without creating risk.",
+            "FAQ automation should not give uncontrolled answers. Crescora AI helps businesses use approved knowledge, safe fallback paths, human escalation, and workflow visibility so automation improves support without creating risk.",
           ],
           cards: [
             {
@@ -5306,7 +5306,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to reduce repetitive support questions?",
         description:
-          "Use Crescora Flow to automate common FAQs, collect customer details, route unresolved issues, and help your team focus on conversations that actually need human attention.",
+          "Use Crescora AI to automate common FAQs, collect customer details, route unresolved issues, and help your team focus on conversations that actually need human attention.",
         note:
           "For hospitals, schools, real estate, coaching centers, diagnostics, agencies, ecommerce, and service businesses.",
         primary: { label: "Book Support Automation Demo", href: "/contact" },
@@ -5316,10 +5316,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "how-to-use-human-handoff-in-chatbot-automation": {
     title: "How to use human handoff in chatbot automation",
-    metadataTitle: "How to Use Human Handoff in Chatbot Automation | Crescora FLOW",
+    metadataTitle: "How to Use Human Handoff in Chatbot Automation | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
-      "Learn how to use human handoff in chatbot automation with Crescora FLOW. Detect escalation triggers, collect customer context, route cases to the right team, and keep urgent or sensitive conversations under human control.",
+      "Learn how to use human handoff in chatbot automation with Crescora AI. Detect escalation triggers, collect customer context, route cases to the right team, and keep urgent or sensitive conversations under human control.",
     summary:
       "A practical guide to safe chatbot escalation with context capture, routing, queue visibility, and human control.",
     relatedLinks: [
@@ -5336,10 +5336,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Handoff Workflow",
       ),
       relatedLink(
-        "Crescora Flow vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple auto-reply bots when trust and escalation matter.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Customer Support Automation",
@@ -5351,13 +5351,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for support automation, escalation logic, and human handoff workflows.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Automate routine chats, escalate critical conversations to humans",
       heroDescription:
-        "Chatbot automation should not trap customers in endless bot replies. Crescora Flow helps businesses answer routine questions automatically, collect customer context, detect urgent or unresolved issues, and hand off the conversation to the right team when human support is needed.",
+        "Chatbot automation should not trap customers in endless bot replies. Crescora AI helps businesses answer routine questions automatically, collect customer context, detect urgent or unresolved issues, and hand off the conversation to the right team when human support is needed.",
       heroPrimaryCta: { label: "Book Handoff Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Handoff Workflow", href: "/use-cases/human-handoff-automation" },
       heroSupportText:
@@ -5394,7 +5394,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Let AI handle routine chats. Let humans handle what matters most.",
         description:
-          "Crescora Flow helps businesses automate first responses, collect customer details, classify intent, detect escalation needs, and transfer unresolved or sensitive conversations to the right team with context.",
+          "Crescora AI helps businesses automate first responses, collect customer details, classify intent, detect escalation needs, and transfer unresolved or sensitive conversations to the right team with context.",
         footer:
           "Built for support, sales, healthcare, admissions, billing, real estate, and service teams that need speed without losing control.",
       },
@@ -5484,9 +5484,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-human-handoff-to-the-full-customer-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects human handoff to the full customer journey",
+          title: "How Crescora AI connects human handoff to the full customer journey",
           paragraphs: [
-            "Crescora Flow is not just a chatbot reply system. It connects AI classification, guided questions, support queues, human handoff, conversation history, notifications, records, analytics, and governance into one controlled workflow.",
+            "Crescora AI is not just a chatbot reply system. It connects AI classification, guided questions, support queues, human handoff, conversation history, notifications, records, analytics, and governance into one controlled workflow.",
           ],
           cards: [
             {
@@ -5526,7 +5526,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Human handoff with control, not random escalation",
           paragraphs: [
-            "A good chatbot should not escalate everything, and it should not automate everything. Crescora Flow helps businesses define when automation should continue, when a human should take over, and what context should move with the conversation.",
+            "A good chatbot should not escalate everything, and it should not automate everything. Crescora AI helps businesses define when automation should continue, when a human should take over, and what context should move with the conversation.",
           ],
           cards: [
             {
@@ -5582,9 +5582,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
               "At minimum, pass the customer's name, contact details, issue type, urgency, prior messages, collected data, and the reason the workflow triggered handoff.",
           },
           {
-            question: "Can Crescora Flow route handoffs to different teams?",
+            question: "Can Crescora AI route handoffs to different teams?",
             answer:
-              "Yes. Crescora Flow can route handoffs to support, sales, billing, admissions, front desk, technical, or management queues based on business rules and escalation logic.",
+              "Yes. Crescora AI can route handoffs to support, sales, billing, admissions, front desk, technical, or management queues based on business rules and escalation logic.",
           },
           {
             question: "How do managers know whether handoff is working?",
@@ -5603,7 +5603,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to add human handoff to your chatbot workflow?",
         description:
-          "Use Crescora Flow to automate routine conversations, collect customer context, route critical cases to the right team, and keep your business in control of every escalation.",
+          "Use Crescora AI to automate routine conversations, collect customer context, route critical cases to the right team, and keep your business in control of every escalation.",
         note:
           "For support teams, sales teams, hospitals, schools, real estate, diagnostics, agencies, and service businesses.",
         primary: { label: "Book Handoff Demo", href: "/contact" },
@@ -5613,10 +5613,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "whatsapp-business-api-automation-explained": {
     title: "WhatsApp Business API automation explained",
-    metadataTitle: "WhatsApp Business API Automation Explained | Crescora FLOW",
+    metadataTitle: "WhatsApp Business API Automation Explained | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
-      "Learn how WhatsApp Business API automation helps businesses capture enquiries, qualify leads, send reminders, automate support, connect payments or bookings, and route complex cases with Crescora FLOW.",
+      "Learn how WhatsApp Business API automation helps businesses capture enquiries, qualify leads, send reminders, automate support, connect payments or bookings, and route complex cases with Crescora AI.",
     summary:
       "A practical guide to turning WhatsApp messages into structured business workflows with tracking, escalation, and follow-up automation.",
     relatedLinks: [
@@ -5633,10 +5633,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Templates",
       ),
       relatedLink(
-        "Crescora Flow vs Basic WhatsApp Bots",
+        "Crescora AI vs Basic WhatsApp Bots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple auto-reply chatbots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Lead Capture Automation",
@@ -5648,17 +5648,17 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for WhatsApp automation, notifications, support workflows, and human escalation.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Turn WhatsApp enquiries into automated leads, bookings, payments, and support workflows",
       heroDescription:
-        "Many businesses receive customer enquiries on WhatsApp, but replies, follow-ups, lead tracking, booking updates, payment reminders, and support routing still happen manually. Crescora Flow helps businesses connect WhatsApp-style conversations with AI workflows, forms, notifications, records, human handoff, and analytics so every customer message moves toward a clear business outcome.",
+        "Many businesses receive customer enquiries on WhatsApp, but replies, follow-ups, lead tracking, booking updates, payment reminders, and support routing still happen manually. Crescora AI helps businesses connect WhatsApp-style conversations with AI workflows, forms, notifications, records, human handoff, and analytics so every customer message moves toward a clear business outcome.",
       heroPrimaryCta: { label: "Book WhatsApp Automation Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore WhatsApp Workflow", href: "/workflows/whatsapp-automation" },
       heroSupportText:
-        "Use this guide to understand what WhatsApp API automation means, where businesses use it, and how Crescora Flow connects chat with real operational workflows.",
+        "Use this guide to understand what WhatsApp API automation means, where businesses use it, and how Crescora AI connects chat with real operational workflows.",
       tocSection: {
         eyebrow: "Article guide",
         title: "What you'll learn",
@@ -5691,7 +5691,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Automate WhatsApp enquiries, follow-ups, reminders, and support",
         description:
-          "Crescora Flow helps businesses turn WhatsApp conversations into structured workflows. Capture leads, answer FAQs, collect details, send reminders, trigger payment updates, route support cases, and hand off complex conversations to the right team.",
+          "Crescora AI helps businesses turn WhatsApp conversations into structured workflows. Capture leads, answer FAQs, collect details, send reminders, trigger payment updates, route support cases, and hand off complex conversations to the right team.",
         footer:
           "Built for businesses that depend on fast replies, clean tracking, and consistent customer follow-up.",
       },
@@ -5780,9 +5780,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-whatsapp-automation-to-the-full-customer-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects WhatsApp automation to the full customer journey",
+          title: "How Crescora AI connects WhatsApp automation to the full customer journey",
           paragraphs: [
-            "Crescora Flow is not only a WhatsApp auto-reply tool. It connects customer conversations with AI intent detection, structured forms, records, notifications, payment steps, human handoff, webhooks, and analytics so every message can move toward a measurable outcome.",
+            "Crescora AI is not only a WhatsApp auto-reply tool. It connects customer conversations with AI intent detection, structured forms, records, notifications, payment steps, human handoff, webhooks, and analytics so every message can move toward a measurable outcome.",
           ],
           cards: [
             {
@@ -5823,7 +5823,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           title: "WhatsApp automation with control, not random replies",
           paragraphs: [
             "Businesses should not use WhatsApp automation only to send generic messages. A strong setup needs approved message flows, fallback handling, opt-out awareness, delivery tracking, human escalation, and clear business rules.",
-            "Crescora Flow helps businesses automate WhatsApp conversations while keeping control over what is sent, when it is sent, and who handles exceptions.",
+            "Crescora AI helps businesses automate WhatsApp conversations while keeping control over what is sent, when it is sent, and who handles exceptions.",
           ],
           cards: [
             {
@@ -5900,7 +5900,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate your WhatsApp customer workflows?",
         description:
-          "Use Crescora Flow to capture WhatsApp enquiries, qualify leads, send reminders, automate support, connect payments or bookings, and route complex cases to your team.",
+          "Use Crescora AI to capture WhatsApp enquiries, qualify leads, send reminders, automate support, connect payments or bookings, and route complex cases to your team.",
         note:
           "For hospitals, schools, real estate, coaching centers, diagnostics, clinics, agencies, ecommerce, and service businesses.",
         primary: { label: "Book WhatsApp Automation Demo", href: "/contact" },
@@ -5910,18 +5910,18 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "ai-chatbot-pricing-in-india-what-businesses-should-know": {
     title: "AI chatbot pricing in India: what businesses should know",
-    metadataTitle: "AI Chatbot Pricing in India: What Businesses Should Know | Crescora FLOW",
+    metadataTitle: "AI Chatbot Pricing in India: What Businesses Should Know | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
-      "Learn what affects AI chatbot pricing in India, what businesses should compare, and how Crescora FLOW helps teams control automation cost through workflows, guardrails, analytics, and human handoff.",
+      "Learn what affects AI chatbot pricing in India, what businesses should compare, and how Crescora AI helps teams control automation cost through workflows, guardrails, analytics, and human handoff.",
     summary:
       "A practical guide to comparing chatbot setup cost, AI usage, channel cost, workflow complexity, support, and ROI before choosing an automation plan.",
     relatedLinks: [
       relatedLink(
-        "Crescora FLOW Pricing Plans",
+        "Crescora AI Pricing Plans",
         "/pricing",
         "Compare plans based on workflows, channels, AI usage, support, integrations, and business scale.",
-        "See Pricing",
+        "View Pricing",
       ),
       relatedLink(
         "Automation ROI Calculator",
@@ -5930,10 +5930,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Book Pricing Consultation",
       ),
       relatedLink(
-        "Crescora FLOW vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "Understand why workflow automation creates more value than simple auto-reply bots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "WhatsApp Automation Solutions",
@@ -5951,9 +5951,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
     publicPage: {
       heroTitle: "Understand AI chatbot pricing before you pay for the wrong automation tool",
       heroDescription:
-        "AI chatbot pricing in India can look confusing because every business needs a different mix of channels, workflows, AI usage, integrations, support, setup, and scale. Crescora Flow helps businesses look beyond simple bot replies and evaluate the real cost of automation: lead capture, support handling, appointments, payments, reminders, human handoff, analytics, and ongoing workflow improvement.",
+        "AI chatbot pricing in India can look confusing because every business needs a different mix of channels, workflows, AI usage, integrations, support, setup, and scale. Crescora AI helps businesses look beyond simple bot replies and evaluate the real cost of automation: lead capture, support handling, appointments, payments, reminders, human handoff, analytics, and ongoing workflow improvement.",
       heroPrimaryCta: { label: "Book Pricing Consultation", href: "/contact" },
-      heroSecondaryCta: { label: "Discuss My Workflow Cost", href: "/contact" },
+      heroSecondaryCta: { label: "Discuss My Workflow", href: "/contact" },
       heroSupportText:
         "Use this guide to understand what affects chatbot pricing, what serious buyers should compare, and how cost control connects to real workflow value.",
       tocSection: {
@@ -5988,7 +5988,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Do not compare chatbot price alone. Compare business outcomes.",
         description:
-          "Crescora Flow helps businesses turn customer conversations into structured workflows for leads, support, bookings, reminders, payments, handoffs, and analytics so pricing is tied to real operational value, not just automated replies.",
+          "Crescora AI helps businesses turn customer conversations into structured workflows for leads, support, bookings, reminders, payments, handoffs, and analytics so pricing is tied to real operational value, not just automated replies.",
         footer:
           "Built for businesses that want automation cost to create measurable savings, faster response, and better conversion.",
       },
@@ -6090,9 +6090,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-pricing-to-real-business-value",
           eyebrow: "Section",
-          title: "How Crescora Flow connects pricing to real business value",
+          title: "How Crescora AI connects pricing to real business value",
           paragraphs: [
-            "Crescora Flow pricing should be explained around business outcomes, not only software access. The right plan depends on how much work the platform automates, how many channels it supports, how many workflows are deployed, and how much visibility the business needs.",
+            "Crescora AI pricing should be explained around business outcomes, not only software access. The right plan depends on how much work the platform automates, how many channels it supports, how many workflows are deployed, and how much visibility the business needs.",
           ],
           cards: [
             {
@@ -6164,7 +6164,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         description:
           "Start with the workflows, channels, integrations, and AI usage your business actually needs, then map the right operating model before comparing monthly fees in isolation.",
         primary: { label: "Book Pricing Consultation", href: "/contact" },
-        secondary: { label: "Discuss My Workflow Cost", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
       faqSection: {
         eyebrow: "FAQ",
@@ -6209,20 +6209,20 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to estimate the right AI chatbot cost for your business?",
         description:
-          "Use Crescora Flow to map your customer workflows, understand your channel and AI usage needs, and choose an automation plan that matches your business goals.",
+          "Use Crescora AI to map your customer workflows, understand your channel and AI usage needs, and choose an automation plan that matches your business goals.",
         note:
           "For hospitals, schools, real estate, coaching centers, diagnostics, clinics, agencies, ecommerce, and service businesses in India.",
         primary: { label: "Book Pricing Consultation", href: "/contact" },
-        secondary: { label: "Discuss My Workflow Cost", href: "/contact" },
+        secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
     },
   },
   "how-to-automate-customer-follow-ups-after-enquiry": {
     title: "How to automate customer follow-ups after enquiry",
-    metadataTitle: "How to Automate Customer Follow-Ups After Enquiry | Crescora FLOW",
+    metadataTitle: "How to Automate Customer Follow-Ups After Enquiry | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
-      "Learn how to automate customer follow-ups after enquiry with Crescora FLOW. Capture lead details, schedule reminders, notify teams, recover silent customers, and track every enquiry from first message to conversion.",
+      "Learn how to automate customer follow-ups after enquiry with Crescora AI. Capture lead details, schedule reminders, notify teams, recover silent customers, and track every enquiry from first message to conversion.",
     summary:
       "A practical guide to follow-up automation for enquiry capture, lead recovery, reminders, assignment, handoff, and conversion tracking.",
     relatedLinks: [
@@ -6239,10 +6239,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Templates",
       ),
       relatedLink(
-        "Crescora FLOW vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple auto-reply bots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "WhatsApp Automation Solutions",
@@ -6254,13 +6254,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for lead capture, reminder workflows, support routing, and follow-up automation.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Stop losing interested customers after the first enquiry",
       heroDescription:
-        "Most businesses capture enquiries but lose customers because follow-ups are delayed, forgotten, or handled manually. Crescora Flow helps businesses automate enquiry follow-ups, send reminders, qualify intent, notify teams, route high-value leads, and track every customer journey from first message to final outcome.",
+        "Most businesses capture enquiries but lose customers because follow-ups are delayed, forgotten, or handled manually. Crescora AI helps businesses automate enquiry follow-ups, send reminders, qualify intent, notify teams, route high-value leads, and track every customer journey from first message to final outcome.",
       heroPrimaryCta: { label: "Book Follow-Up Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Follow-Up Workflow", href: "/use-cases/lead-capture-qualification" },
       heroSupportText:
@@ -6297,7 +6297,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Turn every enquiry into a follow-up workflow",
         description:
-          "Crescora Flow helps businesses capture customer enquiries, qualify intent, send timely follow-ups, notify the right team, schedule reminders, recover silent leads, and track outcomes across web and configured messaging channels.",
+          "Crescora AI helps businesses capture customer enquiries, qualify intent, send timely follow-ups, notify the right team, schedule reminders, recover silent leads, and track outcomes across web and configured messaging channels.",
         footer:
           "Built for businesses that need faster response, cleaner lead tracking, and consistent follow-up discipline.",
       },
@@ -6350,7 +6350,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "3. Save the lead as a structured record",
               description:
-                "Instead of leaving the enquiry inside chat history, Crescora Flow can store it as a structured lead with source, requirement, status, follow-up stage, and assigned team.",
+                "Instead of leaving the enquiry inside chat history, Crescora AI can store it as a structured lead with source, requirement, status, follow-up stage, and assigned team.",
             },
             {
               title: "4. Send the first follow-up automatically",
@@ -6391,9 +6391,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-the-complete-follow-up-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects the complete follow-up journey",
+          title: "How Crescora AI connects the complete follow-up journey",
           paragraphs: [
-            "Crescora Flow is not just a reminder tool. It connects enquiry capture, AI intent detection, records, notifications, scheduling, team assignment, human handoff, and analytics so every customer enquiry has a clear next step.",
+            "Crescora AI is not just a reminder tool. It connects enquiry capture, AI intent detection, records, notifications, scheduling, team assignment, human handoff, and analytics so every customer enquiry has a clear next step.",
           ],
           cards: [
             {
@@ -6433,7 +6433,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Follow-up automation with control, not message spam",
           paragraphs: [
-            "Customer follow-up should feel helpful, not annoying. Crescora Flow helps businesses define when to follow up, what message to send, which channel to use, when to stop, and when to involve a human.",
+            "Customer follow-up should feel helpful, not annoying. Crescora AI helps businesses define when to follow up, what message to send, which channel to use, when to stop, and when to involve a human.",
           ],
           cards: [
             {
@@ -6510,7 +6510,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate customer follow-ups after every enquiry?",
         description:
-          "Use Crescora Flow to capture enquiries, qualify customer intent, schedule follow-ups, notify your team, recover silent leads, and track every outcome from first message to conversion.",
+          "Use Crescora AI to capture enquiries, qualify customer intent, schedule follow-ups, notify your team, recover silent leads, and track every outcome from first message to conversion.",
         note:
           "For hospitals, schools, real estate, coaching centers, diagnostics, clinics, agencies, ecommerce, and service businesses.",
         primary: { label: "Book Follow-Up Demo", href: "/contact" },
@@ -6520,10 +6520,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "best-workflow-automation-examples-for-service-businesses": {
     title: "Best workflow automation examples for service businesses",
-    metadataTitle: "Best Workflow Automation Examples for Service Businesses | Crescora FLOW",
+    metadataTitle: "Best Workflow Automation Examples for Service Businesses | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
-      "Explore practical workflow automation examples for service businesses with Crescora FLOW, including lead capture, appointment booking, follow-ups, payments, support routing, document collection, renewals, and human handoff.",
+      "Explore practical workflow automation examples for service businesses with Crescora AI, including lead capture, appointment booking, follow-ups, payments, support routing, document collection, renewals, and human handoff.",
     summary:
       "A practical guide to the service-business workflows teams can automate to save time, improve follow-up discipline, and win more customers.",
     relatedLinks: [
@@ -6540,10 +6540,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Templates",
       ),
       relatedLink(
-        "Crescora FLOW vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple auto-reply bots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Lead Automation Solutions",
@@ -6555,13 +6555,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for workflow automation, channel support, handoff, and business operations.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Practical workflow automation examples that help service businesses save time and win more customers",
       heroDescription:
-        "Service businesses lose time when enquiries, bookings, follow-ups, payments, documents, support requests, and internal handoffs are handled manually. Crescora Flow helps teams automate repeatable customer journeys while keeping human control for urgent, high-value, or sensitive cases.",
+        "Service businesses lose time when enquiries, bookings, follow-ups, payments, documents, support requests, and internal handoffs are handled manually. Crescora AI helps teams automate repeatable customer journeys while keeping human control for urgent, high-value, or sensitive cases.",
       heroPrimaryCta: { label: "Book Workflow Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Automation Examples", href: "/templates" },
       heroSupportText:
@@ -6598,7 +6598,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Automate the work between first enquiry and final outcome",
         description:
-          "Crescora Flow helps service businesses turn customer conversations into structured workflows for lead capture, appointment booking, payments, documents, support routing, follow-ups, and human handoff.",
+          "Crescora AI helps service businesses turn customer conversations into structured workflows for lead capture, appointment booking, payments, documents, support routing, follow-ups, and human handoff.",
         footer:
           "Built for hospitals, schools, real estate, coaching centers, diagnostics, agencies, clinics, and service teams that need faster execution with better control.",
       },
@@ -6702,9 +6702,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-these-workflows",
           eyebrow: "Section",
-          title: "How Crescora Flow connects these workflows",
+          title: "How Crescora AI connects these workflows",
           paragraphs: [
-            "Crescora Flow connects the full customer journey instead of automating one isolated reply. A request can move from intake to classification, data capture, record creation, notification, payment, scheduling, team assignment, human handoff, and outcome tracking in one controlled workflow.",
+            "Crescora AI connects the full customer journey instead of automating one isolated reply. A request can move from intake to classification, data capture, record creation, notification, payment, scheduling, team assignment, human handoff, and outcome tracking in one controlled workflow.",
           ],
           cards: [
             {
@@ -6744,7 +6744,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Workflow automation with control, not random AI actions",
           paragraphs: [
-            "Service businesses should not automate blindly. Crescora Flow helps teams define the exact path each request should follow, where AI can assist, when humans should review, and how managers can track the outcome.",
+            "Service businesses should not automate blindly. Crescora AI helps teams define the exact path each request should follow, where AI can assist, when humans should review, and how managers can track the outcome.",
           ],
           cards: [
             {
@@ -6797,7 +6797,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           {
             question: "Can one platform handle different workflows for different teams?",
             answer:
-              "Yes. Service businesses often need different workflows for sales, support, admissions, billing, operations, or front desk teams. Crescora Flow can route requests based on business rules and team ownership.",
+              "Yes. Service businesses often need different workflows for sales, support, admissions, billing, operations, or front desk teams. Crescora AI can route requests based on business rules and team ownership.",
           },
           {
             question: "What happens when a workflow needs human judgment?",
@@ -6821,7 +6821,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate your service business workflows?",
         description:
-          "Use Crescora Flow to capture enquiries, automate follow-ups, book appointments, send reminders, collect documents, route support cases, and track every customer outcome from first message to final resolution.",
+          "Use Crescora AI to capture enquiries, automate follow-ups, book appointments, send reminders, collect documents, route support cases, and track every customer outcome from first message to final resolution.",
         note:
           "For hospitals, schools, real estate, coaching centers, diagnostics, clinics, agencies, finance, insurance, and service businesses.",
         primary: { label: "Book Workflow Demo", href: "/contact" },
@@ -6831,10 +6831,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "how-to-build-a-hospital-demo-chatbot": {
     title: "How to build a hospital demo chatbot",
-    metadataTitle: "How to Build a Hospital Demo Chatbot | Crescora FLOW",
+    metadataTitle: "How to Build a Hospital Demo Chatbot | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
-      "Learn how to build a hospital demo chatbot with Crescora FLOW. Show appointment booking, doctor availability, lab report status, billing help, insurance support, reminders, and safe human handoff in one controlled healthcare workflow.",
+      "Learn how to build a hospital demo chatbot with Crescora AI. Show appointment booking, doctor availability, lab report status, billing help, insurance support, reminders, and safe human handoff in one controlled healthcare workflow.",
     summary:
       "A practical guide to designing a hospital demo chatbot that shows real patient journeys, front-desk relief, and safe escalation.",
     relatedLinks: [
@@ -6851,10 +6851,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Hospital Template",
       ),
       relatedLink(
-        "Crescora FLOW vs Basic Hospital Chatbots",
+        "Crescora AI vs Basic Hospital Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple FAQ replies.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Healthcare Automation",
@@ -6866,13 +6866,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "See rollout options for hospital workflows, channels, reminders, handoff, and patient operations.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Build a hospital demo chatbot that automates appointments, reports, billing, and patient support",
       heroDescription:
-        "A strong hospital demo chatbot should not only answer FAQs. It should show how patients can book appointments, check doctor availability, ask about lab reports, explore health packages, get billing or insurance help, receive reminders, and reach hospital staff when the case is urgent or sensitive. Crescora Flow helps hospitals turn these patient journeys into controlled AI workflows across web, WhatsApp-style messaging, and configured business channels.",
+        "A strong hospital demo chatbot should not only answer FAQs. It should show how patients can book appointments, check doctor availability, ask about lab reports, explore health packages, get billing or insurance help, receive reminders, and reach hospital staff when the case is urgent or sensitive. Crescora AI helps hospitals turn these patient journeys into controlled AI workflows across web, WhatsApp-style messaging, and configured business channels.",
       heroPrimaryCta: { label: "Book Hospital Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Hospital Workflow", href: "/templates/hospital-appointment-booking-flow" },
       heroSupportText:
@@ -6909,7 +6909,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Show hospitals how patient workflows can run faster",
         description:
-          "Crescora Flow helps hospitals and clinics automate appointment booking, doctor availability, lab report status, billing support, insurance queries, admission help, health packages, reminders, and human handoff all inside one controlled workflow.",
+          "Crescora AI helps hospitals and clinics automate appointment booking, doctor availability, lab report status, billing support, insurance queries, admission help, health packages, reminders, and human handoff all inside one controlled workflow.",
         footer:
           "Built for hospital demos that need to show patient convenience, front desk efficiency, and safe escalation.",
       },
@@ -6982,7 +6982,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "7. Health package discovery",
               description:
-                "Use structured package cards or choices to show health packages, inclusions, pricing placeholders, fasting instructions, booking options, and callback requests.",
+                "Use structured package cards or choices to show health packages, inclusions, pricing details, fasting instructions, booking options, and callback requests.",
             },
             {
               title: "8. Emergency and safety escalation",
@@ -7013,9 +7013,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-the-hospital-demo-journey",
           eyebrow: "Section",
-          title: "How Crescora Flow connects the hospital demo journey",
+          title: "How Crescora AI connects the hospital demo journey",
           paragraphs: [
-            "Crescora Flow connects the complete hospital patient journey. A patient request can move from chat intake to intent detection, appointment booking, payment step, report status, document collection, reminder, staff handoff, and outcome tracking in one workflow.",
+            "Crescora AI connects the complete hospital patient journey. A patient request can move from chat intake to intent detection, appointment booking, payment step, report status, document collection, reminder, staff handoff, and outcome tracking in one workflow.",
           ],
           cards: [
             {
@@ -7132,7 +7132,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to build a hospital demo chatbot that wins trust?",
         description:
-          "Use Crescora Flow to demonstrate appointment booking, doctor availability, lab report status, billing support, insurance help, admission guidance, reminders, and human handoff in one hospital-ready workflow.",
+          "Use Crescora AI to demonstrate appointment booking, doctor availability, lab report status, billing support, insurance help, admission guidance, reminders, and human handoff in one hospital-ready workflow.",
         note:
           "For hospitals, clinics, diagnostics, labs, and healthcare service teams.",
         primary: { label: "Book Hospital Demo", href: "/contact" },
@@ -7142,7 +7142,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
   },
   "why-small-businesses-need-conversation-automation": {
     title: "Why small businesses need conversation automation",
-    metadataTitle: "Why Small Businesses Need Conversation Automation | Crescora FLOW",
+    metadataTitle: "Why Small Businesses Need Conversation Automation | Crescora AI",
     representativeImagePath: sharedBlogFeaturedImagePath,
     description:
       "Learn why small businesses need conversation automation to capture enquiries, answer faster, automate follow-ups, route serious leads, and stop losing customers across calls, WhatsApp, website chat, and social channels.",
@@ -7162,10 +7162,10 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "View Workflow Template",
       ),
       relatedLink(
-        "Crescora FLOW vs Basic Chatbots",
+        "Crescora AI vs Basic Chatbots",
         "/compare/flow-vs-chatbots",
         "See why workflow automation is stronger than simple auto-reply bots.",
-        "Compare FLOW",
+        "Compare Crescora AI",
       ),
       relatedLink(
         "Workflow Automation",
@@ -7177,13 +7177,13 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         "Pricing",
         "/pricing",
         "Review rollout options for small-business automation, channels, follow-ups, handoff, and reporting.",
-        "See Pricing",
+        "View Pricing",
       ),
     ],
     publicPage: {
       heroTitle: "Stop losing customers to missed messages, slow replies, and forgotten follow-ups",
       heroDescription:
-        "Small businesses lose revenue when customer enquiries are scattered across calls, website forms, WhatsApp-style messages, social channels, and manual follow-up lists. Crescora Flow helps businesses automate customer conversations, capture leads, answer repeated questions, route serious enquiries, send reminders, and hand off complex cases to the right person.",
+        "Small businesses lose revenue when customer enquiries are scattered across calls, website forms, WhatsApp-style messages, social channels, and manual follow-up lists. Crescora AI helps businesses automate customer conversations, capture leads, answer repeated questions, route serious enquiries, send reminders, and hand off complex cases to the right person.",
       heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Conversation Workflow", href: "/solutions/workflow-automation" },
       heroSupportText:
@@ -7220,7 +7220,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Featured workflow example",
         title: "Capture every enquiry. Reply faster. Follow up without forgetting.",
         description:
-          "Crescora Flow helps small businesses turn customer messages into structured workflows for lead capture, FAQs, bookings, payments, support, reminders, and human handoff so every conversation has a clear next step.",
+          "Crescora AI helps small businesses turn customer messages into structured workflows for lead capture, FAQs, bookings, payments, support, reminders, and human handoff so every conversation has a clear next step.",
         footer:
           "Built for growing businesses that need faster replies, cleaner tracking, and consistent customer follow-up.",
       },
@@ -7278,7 +7278,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
             {
               title: "4. Route customers to the right team",
               description:
-                "Crescora Flow can route conversations to sales, support, front desk, admissions, billing, or operations based on customer intent.",
+                "Crescora AI can route conversations to sales, support, front desk, admissions, billing, or operations based on customer intent.",
             },
             {
               title: "5. Automate follow-ups and reminders",
@@ -7325,9 +7325,9 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         {
           id: "how-crescora-flow-connects-conversations-to-outcomes",
           eyebrow: "Section",
-          title: "How Crescora Flow connects conversations to business outcomes",
+          title: "How Crescora AI connects conversations to business outcomes",
           paragraphs: [
-            "Crescora Flow is not only a chatbot reply box. It connects customer conversations with AI intent detection, forms, records, notifications, follow-up scheduling, human handoff, analytics, and business rules so every enquiry can move toward a measurable outcome.",
+            "Crescora AI is not only a chatbot reply box. It connects customer conversations with AI intent detection, forms, records, notifications, follow-up scheduling, human handoff, analytics, and business rules so every enquiry can move toward a measurable outcome.",
           ],
           cards: [
             {
@@ -7367,7 +7367,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
           eyebrow: "Section",
           title: "Conversation automation with control, not random bot replies",
           paragraphs: [
-            "Small businesses need automation that feels professional, not robotic. Crescora Flow helps teams define what the bot should ask, what it should answer, when it should follow up, when it should notify staff, and when a human should take over.",
+            "Small businesses need automation that feels professional, not robotic. Crescora AI helps teams define what the bot should ask, what it should answer, when it should follow up, when it should notify staff, and when a human should take over.",
           ],
           cards: [
             {
@@ -7397,7 +7397,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate customer conversations for your business?",
         description:
-          "Use Crescora Flow to capture enquiries, answer repeated questions, qualify leads, route conversations, automate follow-ups, and hand off important customers to your team with full context.",
+          "Use Crescora AI to capture enquiries, answer repeated questions, qualify leads, route conversations, automate follow-ups, and hand off important customers to your team with full context.",
         primary: { label: "Book Free Demo", href: "/contact" },
         secondary: { label: "Discuss My Workflow", href: "/contact" },
       },
@@ -7443,7 +7443,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
         eyebrow: "Next step",
         title: "Ready to automate customer conversations for your business?",
         description:
-          "Use Crescora Flow to capture enquiries, answer repeated questions, qualify leads, route conversations, automate follow-ups, and hand off important customers to your team with full context.",
+          "Use Crescora AI to capture enquiries, answer repeated questions, qualify leads, route conversations, automate follow-ups, and hand off important customers to your team with full context.",
         note:
           "For clinics, schools, real estate, coaching centers, diagnostics, agencies, salons, ecommerce, consultants, and local service businesses.",
         primary: { label: "Book Free Demo", href: "/contact" },
@@ -7479,7 +7479,7 @@ export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTar
     relatedLinks: [
       relatedLink("Solutions hub", "/solutions", "Browse the core solution pages."),
       relatedLink("Templates", "/templates", "Find launch-ready workflow templates."),
-      relatedLink("Compare FLOW", "/compare", "Decision-stage comparison content."),
+      relatedLink("Compare Crescora AI", "/compare", "Decision-stage comparison content."),
     ],
     ctaLabel: `Read the ${category.toLowerCase()} workflow`,
     ...override,
@@ -7489,7 +7489,7 @@ export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTar
 export const demoFlowTemplates: DemoFlowTemplate[] = [
   {
     slug: "hospital-appointment-booking-flow",
-    title: "Hospital Appointment Booking Flow | FLOW",
+    title: "Hospital Appointment Booking Flow | Crescora AI",
     h1: "A ready-to-publish hospital appointment booking flow.",
     problem: "Hospitals lose time when appointment requests, reminders, and confirmations are handled manually.",
     flowDiagram: "Enquiry -> availability check -> booking -> reminder -> handoff -> outcome log",
@@ -7504,7 +7504,7 @@ export const demoFlowTemplates: DemoFlowTemplate[] = [
   },
   {
     slug: "real-estate-lead-followup-flow",
-    title: "Real Estate Lead Follow-Up Flow | FLOW",
+    title: "Real Estate Lead Follow-Up Flow | Crescora AI",
     h1: "A lead follow-up flow for property teams.",
     problem: "Property leads go stale quickly when qualification and follow-up are manual.",
     flowDiagram: "Lead capture -> qualification -> assignment -> visit booking -> reminder -> follow-up",
@@ -7519,7 +7519,7 @@ export const demoFlowTemplates: DemoFlowTemplate[] = [
   },
   {
     slug: "customer-support-faq-flow",
-    title: "Customer Support FAQ Flow | FLOW",
+    title: "Customer Support FAQ Flow | Crescora AI",
     h1: "A support workflow for FAQ and escalation.",
     problem: "Support teams need to answer common questions fast without losing context on escalations.",
     flowDiagram: "Question -> grounded answer -> unresolved check -> handoff -> ticket/update",
@@ -7534,7 +7534,7 @@ export const demoFlowTemplates: DemoFlowTemplate[] = [
   },
   {
     slug: "payment-reminder-flow",
-    title: "Payment Reminder Flow | FLOW",
+    title: "Payment Reminder Flow | Crescora AI",
     h1: "A workflow for reminders, follow-up, and escalation.",
     problem: "Payment follow-up is expensive when it depends on manual calls and one-off reminders.",
     flowDiagram: "Due date -> reminder -> retry -> escalation -> status update",
@@ -7549,7 +7549,7 @@ export const demoFlowTemplates: DemoFlowTemplate[] = [
   },
   {
     slug: "lab-report-notification-flow",
-    title: "Lab Report Notification Flow | FLOW",
+    title: "Lab Report Notification Flow | Crescora AI",
     h1: "A notification flow for healthcare document updates.",
     problem: "Patients need timely report updates and staff need a repeatable process for notices.",
     flowDiagram: "Report ready -> notify -> confirm receipt -> handoff if needed",
@@ -7567,11 +7567,11 @@ export const demoFlowTemplates: DemoFlowTemplate[] = [
 export const industrySeoLandingPages: SeoLandingPage[] = [
   {
     slug: "hospital-automation",
-    title: "Hospital Automation Software in India | FLOW by Crescora AI",
+    title: "Hospital Automation Software in India | Crescora AI",
     h1: "Automate hospital appointments, patient support, reminders, and handoffs.",
     keywordTarget: "hospital automation software India",
     description:
-      "SEO landing page for hospitals and clinics that need appointment booking, patient support, payments, and lab updates.",
+      "Workflow guide for hospitals and clinics that need appointment booking, patient support, payments, and lab updates.",
     intro:
       "This page should combine the words hospitals already search for with the operational flows that matter inside a front desk and patient support team.",
     sections: [
@@ -7587,7 +7587,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What FLOW should show",
+        title: "What Crescora AI should show",
         description: "Use business workflows that match the SEO intent.",
         bullets: [
           "Appointment booking and doctor availability.",
@@ -7602,7 +7602,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
         bullets: [
           "Book a healthcare demo.",
           "Open the hospital booking template.",
-          "Compare FLOW against manual workflows.",
+          "Compare Crescora AI against manual workflows.",
         ],
       },
     ],
@@ -7615,7 +7615,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
   },
   {
     slug: "real-estate-automation",
-    title: "Real Estate Lead Automation Software in India | FLOW",
+    title: "Real Estate Lead Automation Software in India | Crescora AI",
     h1: "Automate property lead follow-up, qualification, and site visits.",
     keywordTarget: "real estate lead automation India",
     description:
@@ -7635,7 +7635,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What FLOW should show for real estate",
+        title: "What Crescora AI should show for real estate",
         description: "The page should be specific about the lead journey.",
         bullets: [
           "Lead capture from WhatsApp and web forms.",
@@ -7649,7 +7649,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
         description: "Move the visitor into a template or a demo.",
         bullets: [
           "Open the real estate follow-up flow.",
-          "Compare FLOW against manual lead management.",
+          "Compare Crescora AI against manual lead management.",
           "Book a sales walkthrough.",
         ],
       },
@@ -7657,19 +7657,19 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
     relatedLinks: [
       relatedLink("Real estate follow-up template", "/templates/real-estate-lead-followup-flow", "A launch-ready real estate workflow."),
       relatedLink("Real estate industry page", "/industries/real-estate", "Existing vertical page for property teams."),
-      relatedLink("Compare FLOW vs CRM-only", "/compare/flow-vs-crm-only", "See why workflow matters before the CRM."),
+      relatedLink("Compare Crescora AI vs CRM-only", "/compare/flow-vs-crm-only", "See why workflow matters before the CRM."),
     ],
     ctaLabel: "Request real estate automation demo",
   },
   {
     slug: "education-automation",
-    title: "Education Admission Automation in India | FLOW",
+    title: "Education Admission Automation in India | Crescora AI",
     h1: "Automate enquiry handling, admissions follow-up, and counselor handoff.",
     keywordTarget: "education automation India",
     description:
       "A school, college, and admissions landing page for enquiry automation and demo class booking.",
     intro:
-      "This page should frame FLOW as the system that captures enquiries, books demo classes, and keeps admissions moving.",
+      "This page should frame Crescora AI as the system that captures enquiries, books demo classes, and keeps admissions moving.",
     sections: [
       {
         eyebrow: "Problems",
@@ -7683,7 +7683,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What FLOW should show for education",
+        title: "What Crescora AI should show for education",
         description: "Focus on admission journey automation.",
         bullets: [
           "Course enquiry response and demo booking.",
@@ -7697,7 +7697,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
         description: "Move the reader toward the admissions demo and template.",
         bullets: [
           "Open the admissions flow template.",
-          "Compare FLOW against manual support.",
+          "Compare Crescora AI against manual support.",
           "Book a demo for the admissions team.",
         ],
       },
@@ -7711,13 +7711,13 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
   },
   {
     slug: "small-business-automation",
-    title: "Small Business Automation Software in India | FLOW",
+    title: "Small Business Automation Software in India | Crescora AI",
     h1: "Automate support, booking, reminders, and follow-ups for small businesses.",
     keywordTarget: "small business automation software India",
     description:
       "A small business landing page that combines WhatsApp automation, bookings, support, and payments.",
     intro:
-      "This page should target buyers who want a broad automation platform but still need clear examples of what FLOW does for a small business.",
+      "This page should target buyers who want a broad automation platform but still need clear examples of what Crescora AI does for a small business.",
     sections: [
       {
         eyebrow: "Problems",
@@ -7731,7 +7731,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What FLOW should show for small businesses",
+        title: "What Crescora AI should show for small businesses",
         description: "Keep the page concrete and practical.",
         bullets: [
           "Appointment booking and reminders.",
@@ -7745,7 +7745,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
         description: "The page should funnel buyers to the right next step.",
         bullets: [
           "Open the small-business template.",
-          "Compare FLOW vs manual support.",
+          "Compare Crescora AI vs manual support.",
           "Book a demo for a business workflow.",
         ],
       },

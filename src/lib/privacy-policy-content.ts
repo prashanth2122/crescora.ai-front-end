@@ -2,15 +2,15 @@ import type { LegalPageData } from "@/lib/site-content";
 
 export const privacyPolicyContent = {
   metadata: {
-    title: "Privacy Policy | Crescora Flow",
+    title: "Privacy Policy | Crescora AI",
     description:
-      "Learn how Crescora Flow collects, uses, protects, and manages personal data across AI automation, workspaces, channels, integrations, and customer conversations.",
+      "Learn how Crescora AI collects, uses, protects, and manages personal data across AI automation, workspaces, channels, integrations, and customer conversations.",
   },
   hero: {
     eyebrow: "Legal",
     title: "Privacy Policy",
     description:
-      'This Privacy Policy explains how Crescora AI, operating as Crescora Flow and Crescora AI ("Crescora", "we", "our", or "us"), collects, uses, stores, shares, and protects information when you use our websites, applications, workspaces, automation builder, web chat widget, AI features, integrations, and related services.',
+      'This Privacy Policy explains how Crescora AI, operating as Crescora AI and Crescora AI ("Crescora", "we", "our", or "us"), collects, uses, stores, shares, and protects information when you use our websites, applications, workspaces, automation builder, web chat widget, AI features, integrations, and related services.',
   },
   dateLabel: "Effective date",
   updatedOn: "23-June 2026",
@@ -20,9 +20,9 @@ export const privacyPolicyContent = {
       paragraphs: ["This Privacy Policy applies to:"],
       bullets: [
         "Visitors to our website.",
-        "Users who create or access Crescora Flow accounts.",
+        "Users who create or access Crescora AI accounts.",
         "Workspace owners, admins, agents, and team members.",
-        "Customers or end users who interact with bots, web widgets, or automation flows powered by Crescora Flow.",
+        "Customers or end users who interact with bots, web widgets, or automation flows powered by Crescora AI.",
         "People who contact us for sales, support, demos, onboarding, or billing.",
         "This Policy does not apply to third-party websites, services, or platforms that we do not control.",
       ],
@@ -30,10 +30,10 @@ export const privacyPolicyContent = {
     {
       title: "2. Our Role in Data Processing",
       paragraphs: [
-        "Crescora Flow may process data in different roles depending on the context.",
+        "Crescora AI may process data in different roles depending on the context.",
         "For account, billing, website, security, support, and platform administration data, Crescora generally acts as the organization responsible for deciding why and how that data is processed.",
         "For customer conversation data, bot messages, workflow records, uploaded documents, channel messages, and business data processed inside a client workspace, the workspace owner or business customer usually controls the purpose of processing, and Crescora processes that data to provide the platform.",
-        "Business customers are responsible for ensuring that their use of Crescora Flow complies with applicable laws, consent requirements, sector-specific obligations, and messaging platform rules.",
+        "Business customers are responsible for ensuring that their use of Crescora AI complies with applicable laws, consent requirements, sector-specific obligations, and messaging platform rules.",
       ],
     },
     {
@@ -73,7 +73,7 @@ export const privacyPolicyContent = {
     {
       title: "5. AI Processing",
       paragraphs: [
-        "Crescora Flow includes AI-powered features that may classify messages, extract fields, generate responses, summarize conversations, evaluate quality, assist agents, or recommend workflow actions.",
+        "Crescora AI includes AI-powered features that may classify messages, extract fields, generate responses, summarize conversations, evaluate quality, assist agents, or recommend workflow actions.",
         "AI outputs may be incorrect, incomplete, or unsuitable for sensitive decisions without human review. Business customers are responsible for reviewing AI-generated content before using it in high-risk contexts such as healthcare, legal, financial, employment, insurance, eligibility, safety, or compliance-related workflows.",
         "We may use third-party AI providers depending on workspace settings, model routing, provider availability, cost controls, and customer configuration. Data sent to AI providers is limited to what is reasonably required to perform the requested AI task.",
       ],
@@ -106,7 +106,7 @@ export const privacyPolicyContent = {
     {
       title: "8. Third-Party Services",
       paragraphs: [
-        "Crescora Flow may integrate with services such as messaging platforms, AI providers, payment gateways, email providers, SMS providers, CRM systems, calendars, helpdesks, webhooks, and APIs.",
+        "Crescora AI may integrate with services such as messaging platforms, AI providers, payment gateways, email providers, SMS providers, CRM systems, calendars, helpdesks, webhooks, and APIs.",
         "Use of third-party services may be subject to their own terms, privacy policies, messaging rules, rate limits, and compliance requirements. Workspace owners are responsible for configuring integrations lawfully and securely.",
       ],
     },
@@ -136,7 +136,7 @@ export const privacyPolicyContent = {
     {
       title: "12. Children's Data",
       paragraphs: [
-        "Crescora Flow is a business platform and is not intended for direct use by children. Business customers must not use Crescora Flow to knowingly collect children's personal data unless they have appropriate authority, parental consent where required, and compliance controls in place.",
+        "Crescora AI is a business platform and is not intended for direct use by children. Business customers must not use Crescora AI to knowingly collect children's personal data unless they have appropriate authority, parental consent where required, and compliance controls in place.",
       ],
     },
     {

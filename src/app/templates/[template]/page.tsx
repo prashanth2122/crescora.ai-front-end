@@ -240,11 +240,11 @@ export default async function TemplatePage({ params }: { params: Params }) {
                   <CardContent className="p-6 sm:p-7">
                     <div className="grid gap-4 md:grid-cols-2">
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Before FLOW</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Before Crescora AI</p>
                         <p className="mt-3 text-sm leading-7 text-zinc-600">{row.before}</p>
                       </div>
                       <div className="md:border-l md:border-zinc-200 md:pl-4">
-                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">After FLOW</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">After Crescora AI</p>
                         <p className="mt-3 text-sm leading-7 text-zinc-600">{row.after}</p>
                       </div>
                     </div>

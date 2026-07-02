@@ -1,12 +1,12 @@
 import type { LocaleCopy } from "@/lib/locales";
 
-const productName = "FLOW by Crescora AI";
+const productName = "Crescora AI";
 
 export const enLocaleCopy: LocaleCopy = {
   site: {
-    seoTitle: "WhatsApp Automation, AI Chatbots, and Workflow Automation Software",
+    seoTitle: "AI Workflow Automation for Customer Conversations and Operations",
     description:
-      "FLOW by Crescora AI helps businesses run WhatsApp automation workflows, AI chatbots for websites, and connected customer workflows across social messaging, bookings, support, payments, and internal tools.",
+      "Crescora AI helps businesses automate enquiries, bookings, reminders, payments, documents, support, and human handover across customer channels and internal workflows.",
   },
   language: {
     label: "Language",
@@ -34,25 +34,27 @@ export const enLocaleCopy: LocaleCopy = {
     productLabel: "Product:",
   },
   navigation: [
-    { label: "How It Works", href: "/platform" },
-    { label: "Industries", href: "/industries" },
+    { label: "Product", href: "/platform" },
     { label: "Solutions", href: "/solutions" },
-    { label: "Use Cases", href: "/use-cases" },
+    { label: "Industries", href: "/industries" },
+    { label: "Workflow Examples", href: "/workflow-examples" },
+    { label: "Templates", href: "/templates" },
     { label: "Pricing", href: "/pricing" },
+    { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Trust", href: "/trust" },
-    { label: "Proof", href: "/resources" },
+    { label: "Contact", href: "/contact" },
   ],
   footerGroups: [
     {
       title: "Product",
       links: [
-        { label: "How It Works", href: "/platform" },
+        { label: "Platform Overview", href: "/platform" },
         { label: "Solutions", href: "/solutions" },
+        { label: "Workflow Examples", href: "/workflow-examples" },
         { label: "Workflows", href: "/workflows" },
         { label: "Templates", href: "/templates" },
         { label: "Pricing", href: "/pricing" },
-        { label: "Use Cases", href: "/use-cases" },
+        { label: "Integrations", href: "/platform" },
       ],
     },
     {
@@ -72,27 +74,31 @@ export const enLocaleCopy: LocaleCopy = {
         { label: "About", href: "/about" },
         { label: "Contact", href: "/contact" },
         { label: "Blog", href: "/blog" },
-        { label: "Pilot Program", href: "/proof" },
+        { label: "Support", href: "/support" },
+        { label: "Security", href: "/security" },
+        { label: "Responsible AI", href: "/responsible-ai" },
       ],
     },
     {
-      title: "Legal",
+      title: "Trust and Legal",
       links: [
         { label: "Privacy Policy", href: "/privacy" },
         { label: "Terms of Service", href: "/terms" },
         { label: "Cookie Policy", href: "/cookies" },
         { label: "Acceptable Use Policy", href: "/acceptable-use" },
+        { label: "Data Processing", href: "/data-processing" },
+        { label: "Subprocessors", href: "/subprocessors" },
       ],
     },
   ],
   ctas: {
     bookProjectDemo: { label: "Book Free Demo", href: "/contact" },
     requestScopeCall: { label: "Discuss My Workflow", href: "/contact" },
-    talkToSales: { label: "Talk to Sales", href: "/contact" },
+    talkToSales: { label: "Discuss My Workflow", href: "/contact" },
     viewSolutions: { label: "View Solutions", href: "/solutions" },
     viewBlog: { label: "View Blog", href: "/blog" },
     viewTemplates: { label: "View Templates", href: "/templates" },
-    seePricing: { label: "See Pricing", href: "/pricing" },
+    seePricing: { label: "View Pricing", href: "/pricing" },
   },
   pageActions: {
     openLocaleHub: "Open locale hub",

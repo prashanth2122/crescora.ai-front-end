@@ -174,34 +174,34 @@ export function isSupportedStateWorkflow(stateSlug: string, workflowSlug: string
 }
 
 export function buildStateWorkflowTitle(seed: StateSeoSeed, config: StateWorkflowSeoConfig) {
-  return `${config.label} in ${seed.name} for ${config.metadataFocus} | FLOW by Crescora AI`;
+  return `${config.label} in ${seed.name} for ${config.metadataFocus} | Crescora AI`;
 }
 
 export function buildStateWorkflowDescription(seed: StateSeoSeed, config: StateWorkflowSeoConfig) {
-  return `Crescora FLOW helps businesses in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
+  return `Crescora AI helps businesses in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
 }
 
 export function buildStateWorkflowFaqItems(seed: StateSeoSeed, config: StateWorkflowSeoConfig) {
   return [
     {
       question: `Why do businesses in ${seed.name} use ${config.titleNoun} automation?`,
-      answer: `Businesses in ${seed.name} use ${config.titleNoun} automation to reduce ${seed.primaryPain}. FLOW helps teams route conversations, capture the right details, send follow-ups, and move each customer toward a clear operational outcome.`,
+      answer: `Businesses in ${seed.name} use ${config.titleNoun} automation to reduce ${seed.primaryPain}. Crescora AI helps teams route conversations, capture the right details, send follow-ups, and move each customer toward a clear operational outcome.`,
     },
     {
       question: `Which industries in ${seed.name} benefit from ${config.titleNoun} workflows?`,
       answer: `${formatStateSeoList(seed.industries)} in ${seed.name} benefit when they need ${config.localUseCaseLine.toLowerCase()}`,
     },
     {
-      question: `Can FLOW support ${formatStateSeoList(seed.languages)} customer journeys in ${seed.name}?`,
-      answer: `Yes. FLOW can support ${formatStateSeoList(seed.languages)} prompts, FAQ paths, forms, reminders, routing, and handoff logic depending on the rollout scope and language coverage your team needs in ${seed.name}.`,
+      question: `Can Crescora AI support ${formatStateSeoList(seed.languages)} customer journeys in ${seed.name}?`,
+      answer: `Yes. Crescora AI can support ${formatStateSeoList(seed.languages)} prompts, FAQ paths, forms, reminders, routing, and handoff logic depending on the rollout scope and language coverage your team needs in ${seed.name}.`,
     },
     {
       question: `What should be included in a ${config.titleNoun} rollout for ${seed.name}?`,
       answer: `A strong rollout in ${seed.name} should include intake logic, workflow rules, reminders or next-step actions, records visibility, exception handling, and human handoff when automation should not guess.`,
     },
     {
-      question: `Can FLOW connect ${config.titleNoun} workflows with records, analytics, and human handoff?`,
-      answer: `Yes. FLOW can connect ${config.titleNoun} workflows with AI routing, forms, records, notifications, payment or document steps, analytics, queues, and human handoff so customer conversations stay operationally visible.`,
+      question: `Can Crescora AI connect ${config.titleNoun} workflows with records, analytics, and human handoff?`,
+      answer: `Yes. Crescora AI can connect ${config.titleNoun} workflows with AI routing, forms, records, notifications, payment or document steps, analytics, queues, and human handoff so customer conversations stay operationally visible.`,
     },
   ];
 }

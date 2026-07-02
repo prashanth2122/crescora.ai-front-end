@@ -110,12 +110,12 @@ export const competitorAlternativeCards: readonly ComparisonCard[] = [
   {
     title: "Yellow.ai Alternative",
     href: "/compare/yellow-ai-alternative",
-    text: "Compare FLOW with Yellow.ai when the business needs practical workflow automation without a heavyweight enterprise rollout.",
+    text: "Compare Crescora AI with Yellow.ai when the business needs practical workflow automation without a heavyweight enterprise rollout.",
   },
   {
     title: "Kore.ai Alternative",
     href: "/compare/kore-ai-alternative",
-    text: "See when FLOW is the simpler fit for operational workflows versus a broader enterprise AI agent platform.",
+    text: "See when Crescora AI is the simpler fit for operational workflows versus a broader enterprise AI agent platform.",
   },
   {
     title: "Gupshup Alternative",
@@ -125,35 +125,35 @@ export const competitorAlternativeCards: readonly ComparisonCard[] = [
   {
     title: "Intercom Alternative",
     href: "/compare/intercom-alternative",
-    text: "See where FLOW fits when automation needs to extend beyond support resolution into sales, service, and operations.",
+    text: "See where Crescora AI fits when automation needs to extend beyond support resolution into sales, service, and operations.",
   },
   {
     title: "Zendesk AI Alternative",
     href: "/compare/zendesk-ai-alternative",
-    text: "Compare FLOW with Zendesk AI when service automation must connect to business operations such as appointments, payments, documents, and approvals.",
+    text: "Compare Crescora AI with Zendesk AI when service automation must connect to business operations such as appointments, payments, documents, and approvals.",
   },
 ] as const;
 
 export const workflowComparisonCards: readonly ComparisonCard[] = [
   {
-    title: "FLOW vs Chatbots",
+    title: "Crescora AI vs Chatbots",
     href: "/compare/flow-vs-chatbots",
     text: "Understand the gap between answering questions and running a workflow that books, follows up, escalates, and updates records.",
   },
   {
-    title: "FLOW vs Manual WhatsApp",
+    title: "Crescora AI vs Manual WhatsApp",
     href: "/compare/flow-vs-manual-whatsapp",
     text: "See why shared inbox handling breaks down once volume, shift changes, and follow-up discipline start to matter.",
   },
   {
-    title: "FLOW vs Generic Automation",
+    title: "Crescora AI vs Generic Automation",
     href: "/compare/flow-vs-generic-automation",
     text: "Compare a full client-journey flow with simpler tools that only answer questions or pass messages along.",
   },
   {
-    title: "FLOW vs CRM-Led Process",
+    title: "Crescora AI vs CRM-Led Process",
     href: "/compare/flow-vs-crm-only",
-    text: "Show why the CRM should store the result after FLOW handles the conversation and follow-up.",
+    text: "Show why the CRM should store the result after Crescora AI handles the conversation and follow-up.",
   },
 ] as const;
 
@@ -164,21 +164,21 @@ export const comparisonCards: readonly ComparisonCard[] = [
 
 export const compareHubPage: CompareHubData = {
   metadata: {
-    title: "Crescora FLOW vs Other AI Automation Platforms | AI Workflow Automation for Businesses",
+    title: "Crescora AI vs Other AI Automation Platforms | AI Workflow Automation for Businesses",
     description:
-      "Compare Crescora FLOW with leading AI automation platforms. See why businesses choose FLOW for customer conversations, workflows, follow-ups, payments, appointments, handover, and operations.",
+      "Compare Crescora AI with leading AI automation platforms. See why businesses choose Crescora AI for customer conversations, workflows, follow-ups, payments, appointments, handover, and operations.",
   },
   hero: {
     eyebrow: "AI automation platform comparison",
-    title: "Compare AI Automation Platforms: Why Growing Businesses Choose Crescora FLOW",
+    title: "Compare AI Automation Platforms: Why Growing Businesses Choose Crescora AI",
     description:
-      "Most automation tools help businesses reply faster. Crescora FLOW helps businesses operate faster. FLOW is built for businesses that want to automate customer conversations, lead capture, appointment booking, payment collection, document intake, follow-ups, internal handovers, team notifications, and operational workflows from one visual automation platform.",
+      "Most automation tools help businesses reply faster. Crescora AI helps businesses operate faster. Crescora AI is built for businesses that want to automate customer conversations, lead capture, appointment booking, payment collection, document intake, follow-ups, internal handovers, team notifications, and operational workflows from one visual automation platform.",
   },
   businessNeeds: {
     eyebrow: "Workflow depth",
     title: "Not just a chatbot. A complete business workflow automation platform.",
     description:
-      "Many platforms focus mainly on customer support chats or AI replies. FLOW is designed for businesses that need automation beyond conversation.",
+      "Many platforms focus mainly on customer support chats or AI replies. Crescora AI is designed for businesses that need automation beyond conversation.",
     items: [
       { label: "Lead capture", value: "Capture name, phone, requirement, source, and route leads to the right team." },
       { label: "Customer support", value: "Answer FAQs, classify intent, escalate complex cases, and track outcomes." },
@@ -193,39 +193,39 @@ export const compareHubPage: CompareHubData = {
   },
   platformComparison: {
     eyebrow: "Platform comparison",
-    title: "Crescora FLOW vs leading AI automation platforms",
+    title: "Crescora AI vs leading AI automation platforms",
     description:
       "The important decision is not who can generate a reply. It is which platform can move the customer journey forward with the operational control your team actually needs.",
     items: [
       {
         platform: "Yellow.ai",
         strength: "Enterprise AI agents for customer and employee experience automation.",
-        fit: "FLOW is ideal for businesses that want faster implementation, practical workflow automation, and industry-specific use cases without enterprise complexity.",
+        fit: "Crescora AI is ideal for businesses that want faster implementation, practical workflow automation, and industry-specific use cases without enterprise complexity.",
       },
       {
         platform: "Kore.ai",
         strength: "Enterprise AI agent platform for customer and employee experiences with pre-built industry applications.",
-        fit: "FLOW is a strong fit for growing businesses that need a simpler, more service-led platform for real operational workflows.",
+        fit: "Crescora AI is a strong fit for growing businesses that need a simpler, more service-led platform for real operational workflows.",
       },
       {
         platform: "Gupshup",
         strength: "Conversational AI and business messaging for marketing, commerce, and support automation.",
-        fit: "FLOW goes beyond messaging by connecting conversations with records, payments, appointments, documents, reminders, and human handover.",
+        fit: "Crescora AI goes beyond messaging by connecting conversations with records, payments, appointments, documents, reminders, and human handover.",
       },
       {
         platform: "Intercom / Fin",
         strength: "AI-first customer service helpdesk and AI agent experience.",
-        fit: "FLOW is better suited when the business needs custom workflow automation, not only customer support resolution.",
+        fit: "Crescora AI is better suited when the business needs custom workflow automation, not only customer support resolution.",
       },
       {
         platform: "Zendesk AI",
         strength: "AI agents, copilots, automation, QA, and support workflows across customer service channels.",
-        fit: "FLOW is a strong choice when support automation must connect with business operations like bookings, payments, documents, approvals, and team routing.",
+        fit: "Crescora AI is a strong choice when support automation must connect with business operations like bookings, payments, documents, approvals, and team routing.",
       },
     ],
   },
   whyChoose: {
-    eyebrow: "Why businesses choose FLOW",
+    eyebrow: "Why businesses choose Crescora AI",
     title: "Built for workflows that have to reach a real business outcome.",
     description:
       "Customer conversations are only one part of the journey. The platform has to guide the next action, keep humans in control where needed, and make the workflow visible to the team.",
@@ -233,7 +233,7 @@ export const compareHubPage: CompareHubData = {
       {
         title: "Built for real business workflows",
         description:
-          "FLOW is designed for journeys that need information capture, validation, availability checks, record creation, team notifications, payments, follow-ups, and escalation handling.",
+          "Crescora AI is designed for journeys that need information capture, validation, availability checks, record creation, team notifications, payments, follow-ups, and escalation handling.",
       },
       {
         title: "Faster launch with industry templates",
@@ -253,7 +253,7 @@ export const compareHubPage: CompareHubData = {
       {
         title: "Automation across customer and internal operations",
         description:
-          "FLOW can support customer enquiries, sales qualification, appointment workflows, payment reminders, service requests, document collection, internal assignments, manager approvals, updates, and feedback collection.",
+          "Crescora AI can support customer enquiries, sales qualification, appointment workflows, payment reminders, service requests, document collection, internal assignments, manager approvals, updates, and feedback collection.",
       },
       {
         title: "Better visibility for owners and managers",
@@ -264,7 +264,7 @@ export const compareHubPage: CompareHubData = {
   },
   capabilities: {
     eyebrow: "Feature comparison",
-    title: "The FLOW product focus is workflow orchestration, not isolated chat responses.",
+    title: "The Crescora AI product focus is workflow orchestration, not isolated chat responses.",
     description:
       "These are the capability areas buyers usually need to compare once they move from basic bot evaluation to production workflow evaluation.",
     items: [
@@ -283,8 +283,8 @@ export const compareHubPage: CompareHubData = {
     ],
   },
   rightFit: {
-    eyebrow: "When FLOW is the right choice",
-    title: "FLOW is a strong fit when the business feels these operating problems already.",
+    eyebrow: "When Crescora AI is the right choice",
+    title: "Crescora AI is a strong fit when the business feels these operating problems already.",
     description:
       "These are the signals that the team has moved past a lightweight chatbot need and into workflow automation territory.",
     items: [
@@ -311,7 +311,7 @@ export const compareHubPage: CompareHubData = {
     eyebrow: "Why not build it manually",
     title: "Manual automation usually starts small and becomes fragmented fast.",
     description:
-      "A few scripts, forms, spreadsheets, and chat tools can quickly turn into disconnected systems. FLOW provides one workflow for conversation, action, follow-up, handover, and outcome tracking.",
+      "A few scripts, forms, spreadsheets, and chat tools can quickly turn into disconnected systems. Crescora AI provides one workflow for conversation, action, follow-up, handover, and outcome tracking.",
     items: [
       "One place to design customer journeys.",
       "One workflow for conversation, action, and follow-up.",
@@ -339,7 +339,7 @@ export const compareHubPage: CompareHubData = {
     eyebrow: "Start with one workflow",
     title: "You do not need to automate everything on day one.",
     description:
-      "Most businesses start with one high-value workflow such as lead capture, appointment booking, customer support, or payment follow-up. Once the first workflow is live, FLOW can expand into more departments and use cases.",
+      "Most businesses start with one high-value workflow such as lead capture, appointment booking, customer support, or payment follow-up. Once the first workflow is live, Crescora AI can expand into more departments and use cases.",
     items: [
       "Lead capture and qualification",
       "Appointment booking",
@@ -356,7 +356,7 @@ export const compareHubPage: CompareHubData = {
     eyebrow: "Related comparisons",
     title: "There is still a workflow-level comparison layer below the competitor pages.",
     description:
-      "These decision-stage pages help buyers compare FLOW with manual handling, generic automation, CRM-led process design, and basic chatbot approaches.",
+      "These decision-stage pages help buyers compare Crescora AI with manual handling, generic automation, CRM-led process design, and basic chatbot approaches.",
     items: workflowComparisonCards,
   },
   faq: {
@@ -366,39 +366,39 @@ export const compareHubPage: CompareHubData = {
       "The answers stay practical and product-specific so the FAQ matches the visible page content and remains useful for buyers, not just for markup.",
     items: [
       {
-        question: "Is Crescora FLOW a chatbot platform?",
+        question: "Is Crescora AI a chatbot platform?",
         answer:
-          "Crescora FLOW includes chatbot automation, but it is more than a chatbot. It is an AI workflow automation platform that helps businesses automate conversations, data collection, appointments, payments, follow-ups, handovers, and operational tasks.",
+          "Crescora AI includes chatbot automation, but it is more than a chatbot. It is an AI workflow automation platform that helps businesses automate conversations, data collection, appointments, payments, follow-ups, handovers, and operational tasks.",
       },
       {
-        question: "How is Crescora FLOW different from other AI automation platforms?",
+        question: "How is Crescora AI different from other AI automation platforms?",
         answer:
-          "FLOW focuses on practical business workflows. Instead of only answering customer messages, FLOW helps move work from enquiry to action through forms, records, routing, payment steps, reminders, approvals, and human handover.",
+          "Crescora AI focuses on practical business workflows. Instead of only answering customer messages, Crescora AI helps move work from enquiry to action through forms, records, routing, payment steps, reminders, approvals, and human handover.",
       },
       {
-        question: "Which businesses can use Crescora FLOW?",
+        question: "Which businesses can use Crescora AI?",
         answer:
-          "FLOW is suitable for hospitals, clinics, schools, coaching centers, real estate businesses, diagnostic labs, finance services, insurance teams, local service businesses, and any company that receives repetitive customer enquiries.",
+          "Crescora AI is suitable for hospitals, clinics, schools, coaching centers, real estate businesses, diagnostic labs, finance services, insurance teams, local service businesses, and any company that receives repetitive customer enquiries.",
       },
       {
-        question: "Can Crescora FLOW automate appointments and follow-ups?",
+        question: "Can Crescora AI automate appointments and follow-ups?",
         answer:
-          "Yes. FLOW can help automate appointment collection, slot selection, confirmation messages, reminders, and follow-up journeys.",
+          "Yes. Crescora AI can help automate appointment collection, slot selection, confirmation messages, reminders, and follow-up journeys.",
       },
       {
-        question: "Does Crescora FLOW support human handover?",
+        question: "Does Crescora AI support human handover?",
         answer:
-          "Yes. FLOW can route complex, urgent, high-value, or sensitive cases to a human team so automation does not block important customer situations.",
+          "Yes. Crescora AI can route complex, urgent, high-value, or sensitive cases to a human team so automation does not block important customer situations.",
       },
       {
-        question: "Can Crescora FLOW help reduce missed leads?",
+        question: "Can Crescora AI help reduce missed leads?",
         answer:
-          "Yes. FLOW can capture enquiries instantly, collect required customer details, notify the right team, store lead information, and trigger follow-ups so fewer opportunities are missed.",
+          "Yes. Crescora AI can capture enquiries instantly, collect required customer details, notify the right team, store lead information, and trigger follow-ups so fewer opportunities are missed.",
       },
       {
-        question: "Is Crescora FLOW suitable for small and medium businesses?",
+        question: "Is Crescora AI suitable for small and medium businesses?",
         answer:
-          "Yes. FLOW is designed to help growing businesses start with high-impact workflows and scale automation gradually without building everything manually.",
+          "Yes. Crescora AI is designed to help growing businesses start with high-impact workflows and scale automation gradually without building everything manually.",
       },
     ],
   },
@@ -407,21 +407,21 @@ export const compareHubPage: CompareHubData = {
 export const proofCards = [
   {
     title: "Healthcare Front Desk Automation",
-    href: "/proof/healthcare-front-desk-automation",
+    href: "/workflow-examples/healthcare-front-desk-automation",
     text: "See how hospitals and clinics can automate appointment intake, patient details collection, doctor or department routing, payment follow-up, lab report requests, reminders, and staff handover for urgent or complex cases.",
     ctaLabel: "View Healthcare Example →",
     outcomeTags: ["Reduce missed enquiries", "Improve follow-up discipline", "Route cases faster"],
   },
   {
     title: "Real Estate Lead Operations",
-    href: "/proof/real-estate-lead-operations",
+    href: "/workflow-examples/real-estate-lead-operations",
     text: "See how real estate teams can qualify property leads, collect budget and location preferences, share project details, schedule site visits, send reminders, and route hot leads to sales teams.",
     ctaLabel: "View Real Estate Example →",
     outcomeTags: ["Qualify faster", "Book more visits", "Route hot leads sooner"],
   },
   {
     title: "Education Admissions Workflow",
-    href: "/proof/education-admissions-workflow",
+    href: "/workflow-examples/education-admissions-workflow",
     text: "See how schools, colleges, and coaching centers can manage admission enquiries, course or batch questions, demo class booking, document collection, fee reminders, and counsellor handover.",
     ctaLabel: "View Education Example →",
     outcomeTags: ["Respond faster", "Collect the right details", "Improve counsellor handover"],
@@ -432,15 +432,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-chatbots": {
     path: "/compare/flow-vs-chatbots",
     metadata: {
-      title: "FLOW vs Chatbots | Comparison",
-      description: "See why FLOW is designed to complete workflows, while chatbots primarily answer questions.",
+      title: "Crescora AI vs Chatbots | Comparison",
+      description: "See why Crescora AI is designed to complete workflows, while chatbots primarily answer questions.",
     },
-    title: "FLOW vs Chatbots",
+    title: "Crescora AI vs Chatbots",
     eyebrow: "Comparison",
     description:
-      "A chatbot can answer. FLOW can answer and keep the business moving by completing the next step in the workflow.",
+      "A chatbot can answer. Crescora AI can answer and keep the business moving by completing the next step in the workflow.",
     bottomLine:
-      "Use a chatbot when you need lightweight Q&A. Use FLOW when the conversation must lead to a booked appointment, updated record, reminder, payment follow-up, or human handoff.",
+      "Use a chatbot when you need lightweight Q&A. Use Crescora AI when the conversation must lead to a booked appointment, updated record, reminder, payment follow-up, or human handoff.",
     rows: [
       {
         label: "Primary job",
@@ -494,15 +494,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-manual-whatsapp": {
     path: "/compare/flow-vs-manual-whatsapp",
     metadata: {
-      title: "FLOW vs Manual WhatsApp | Comparison",
-      description: "See how FLOW replaces inbox chaos with consistent, trackable WhatsApp workflow automation.",
+      title: "Crescora AI vs Manual WhatsApp | Comparison",
+      description: "See how Crescora AI replaces inbox chaos with consistent, trackable WhatsApp workflow automation.",
     },
-    title: "FLOW vs Manual WhatsApp",
+    title: "Crescora AI vs Manual WhatsApp",
     eyebrow: "Comparison",
     description:
       "Manual WhatsApp handling works until volume, staffing, and follow-up discipline turn every chat into a process risk.",
     bottomLine:
-      "Use manual handling for very low-volume, temporary, or experimental operations. Use FLOW when WhatsApp is a core customer channel and missed replies or inconsistent follow-up cost revenue.",
+      "Use manual handling for very low-volume, temporary, or experimental operations. Use Crescora AI when WhatsApp is a core customer channel and missed replies or inconsistent follow-up cost revenue.",
     rows: [
       {
         label: "Response speed",
@@ -556,16 +556,16 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-generic-automation": {
     path: "/compare/flow-vs-generic-automation",
     metadata: {
-      title: "FLOW vs Generic Automation | Comparison",
+      title: "Crescora AI vs Generic Automation | Comparison",
       description:
-        "Compare FLOW with generic automation tools that connect apps but do not run the customer conversation itself.",
+        "Compare Crescora AI with generic automation tools that connect apps but do not run the customer conversation itself.",
     },
-    title: "FLOW vs Generic Automation",
+    title: "Crescora AI vs Generic Automation",
     eyebrow: "Comparison",
     description:
-      "Generic automation tools connect apps. FLOW is designed to orchestrate customer conversations and outcomes across the full workflow.",
+      "Generic automation tools connect apps. Crescora AI is designed to orchestrate customer conversations and outcomes across the full workflow.",
     bottomLine:
-      "Use generic automation for internal data movement or one-off tasks. Use FLOW when the client conversation itself is part of the business process and the next step needs to be guided clearly.",
+      "Use generic automation for internal data movement or one-off tasks. Use Crescora AI when the client conversation itself is part of the business process and the next step needs to be guided clearly.",
     rows: [
       {
         label: "Conversation logic",
@@ -619,15 +619,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-crm-only": {
     path: "/compare/flow-vs-crm-only",
     metadata: {
-      title: "FLOW vs CRM-Led Process | Comparison",
-      description: "Compare FLOW against a CRM-led process and see why the client-flow layer matters before record storage.",
+      title: "Crescora AI vs CRM-Led Process | Comparison",
+      description: "Compare Crescora AI against a CRM-led process and see why the client-flow layer matters before record storage.",
     },
-    title: "FLOW vs CRM-Led Process",
+    title: "Crescora AI vs CRM-Led Process",
     eyebrow: "Comparison",
     description:
-      "A CRM stores the relationship. FLOW runs the conversation and follow-up that creates the result in the first place.",
+      "A CRM stores the relationship. Crescora AI runs the conversation and follow-up that creates the result in the first place.",
     bottomLine:
-      "Use the CRM as the record store. Use FLOW as the layer that qualifies, books, follows up, reminds, collects, and escalates before the record is updated.",
+      "Use the CRM as the record store. Use Crescora AI as the layer that qualifies, books, follows up, reminds, collects, and escalates before the record is updated.",
     rows: [
       {
         label: "Core role",
@@ -672,7 +672,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
       "There is no customer-facing automation requirement at all.",
     ],
     rolloutSteps: [
-      "Keep the CRM as the data store and FLOW as the client-flow layer.",
+      "Keep the CRM as the data store and Crescora AI as the client-flow layer.",
       "Agree on which fields and events should sync downstream.",
       "Design the conversation flow before the CRM setup.",
       "Audit handoff points so rep follow-up is not lost between systems.",
@@ -681,15 +681,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-chatbot-builder": {
     path: "/compare/flow-vs-chatbot-builder",
     metadata: {
-      title: "FLOW vs Chatbot Builder | Comparison",
-      description: "See why FLOW is a workflow engine, not just a chatbot builder.",
+      title: "Crescora AI vs Chatbot Builder | Comparison",
+      description: "See why Crescora AI is a workflow engine, not just a chatbot builder.",
     },
-    title: "FLOW vs Chatbot Builder",
+    title: "Crescora AI vs Chatbot Builder",
     eyebrow: "Comparison",
     description:
-      "A chatbot builder creates chat experiences. FLOW is designed to move the customer journey forward with booking, follow-up, handoff, and record updates.",
+      "A chatbot builder creates chat experiences. Crescora AI is designed to move the customer journey forward with booking, follow-up, handoff, and record updates.",
     bottomLine:
-      "Use a chatbot builder if you only need to assemble conversations. Use FLOW when the conversation must create an operational result.",
+      "Use a chatbot builder if you only need to assemble conversations. Use Crescora AI when the conversation must create an operational result.",
     rows: [
       { label: "Primary job", flow: "Run a customer workflow.", alternative: "Build a chat experience." },
       { label: "Business logic", flow: "Includes reminders, handoff, and records.", alternative: "Often needs extra automation around it." },
@@ -718,15 +718,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-whatsapp-chatbot-tools": {
     path: "/compare/flow-vs-whatsapp-chatbot-tools",
     metadata: {
-      title: "FLOW vs WhatsApp Chatbot Tools | Comparison",
-      description: "Compare FLOW with WhatsApp-only bot tools that do not manage the full workflow.",
+      title: "Crescora AI vs WhatsApp Chatbot Tools | Comparison",
+      description: "Compare Crescora AI with WhatsApp-only bot tools that do not manage the full workflow.",
     },
-    title: "FLOW vs WhatsApp Chatbot Tools",
+    title: "Crescora AI vs WhatsApp Chatbot Tools",
     eyebrow: "Comparison",
     description:
-      "WhatsApp chatbot tools are useful for conversation handling. FLOW is built to manage the business process that follows the conversation.",
+      "WhatsApp chatbot tools are useful for conversation handling. Crescora AI is built to manage the business process that follows the conversation.",
     bottomLine:
-      "Use WhatsApp-only tools for simple replies. Use FLOW when WhatsApp is the start of a broader workflow that needs a clear outcome.",
+      "Use WhatsApp-only tools for simple replies. Use Crescora AI when WhatsApp is the start of a broader workflow that needs a clear outcome.",
     rows: [
       { label: "Channel scope", flow: "Runs a multi-step workflow around WhatsApp.", alternative: "Usually limited to the chat layer." },
       { label: "Follow-up", flow: "Automated reminders and retries.", alternative: "Often manual or externally stitched together." },
@@ -755,15 +755,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-manual-customer-support": {
     path: "/compare/flow-vs-manual-customer-support",
     metadata: {
-      title: "FLOW vs Manual Customer Support | Comparison",
+      title: "Crescora AI vs Manual Customer Support | Comparison",
       description: "See why support teams need automation for triage, FAQs, and escalation.",
     },
-    title: "FLOW vs Manual Customer Support",
+    title: "Crescora AI vs Manual Customer Support",
     eyebrow: "Comparison",
     description:
       "Manual support is flexible, but it does not scale well when response speed, consistency, and escalation discipline matter.",
     bottomLine:
-      "Use manual support for low-volume, ad hoc communication. Use FLOW when support work needs repeatable triage, deflection, and handoff.",
+      "Use manual support for low-volume, ad hoc communication. Use Crescora AI when support work needs repeatable triage, deflection, and handoff.",
     rows: [
       { label: "Response speed", flow: "Immediate triage and response logic.", alternative: "Depends on staffing and inbox discipline." },
       { label: "Consistency", flow: "Every customer sees the same process.", alternative: "Varies by person and shift." },
@@ -792,15 +792,15 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
   "flow-vs-zapier-for-indian-businesses": {
     path: "/compare/flow-vs-zapier-for-indian-businesses",
     metadata: {
-      title: "FLOW vs Zapier for Indian Businesses | Comparison",
+      title: "Crescora AI vs Zapier for Indian Businesses | Comparison",
       description: "Compare customer-facing workflow orchestration with generic trigger-action automation.",
     },
-    title: "FLOW vs Zapier for Indian Businesses",
+    title: "Crescora AI vs Zapier for Indian Businesses",
     eyebrow: "Comparison",
     description:
-      "Zapier is excellent for connecting apps. FLOW is designed to orchestrate customer conversations and business outcomes across channels.",
+      "Zapier is excellent for connecting apps. Crescora AI is designed to orchestrate customer conversations and business outcomes across channels.",
     bottomLine:
-      "Use Zapier for internal task automation. Use FLOW when the customer journey itself needs to be managed from first message to final outcome.",
+      "Use Zapier for internal task automation. Use Crescora AI when the customer journey itself needs to be managed from first message to final outcome.",
     rows: [
       { label: "Primary role", flow: "Customer workflow orchestration.", alternative: "App-to-app trigger-action automation." },
       { label: "Conversation layer", flow: "Built into the product.", alternative: "Usually external to the automation." },
@@ -821,7 +821,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     ],
     rolloutSteps: [
       "Map the customer journey before picking tools.",
-      "Use FLOW for the conversation and Zapier only where app sync is required.",
+      "Use Crescora AI for the conversation and Zapier only where app sync is required.",
       "Keep the business outcome and escalation rules in one design.",
       "Expand the stack only after the first workflow is stable.",
     ],
@@ -831,14 +831,14 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     metadata: {
       title: "Best Yellow.ai Alternative for Business Workflow Automation",
       description:
-        "Compare Crescora FLOW vs Yellow.ai for businesses that need workflow automation across conversations, bookings, follow-ups, payments, documents, and human handover.",
+        "Compare Crescora AI vs Yellow.ai for businesses that need workflow automation across conversations, bookings, follow-ups, payments, documents, and human handover.",
     },
-    title: "Crescora FLOW vs Yellow.ai",
+    title: "Crescora AI vs Yellow.ai",
     eyebrow: "Yellow.ai alternative",
     description:
-      "Yellow.ai is built for enterprise customer and employee experience automation. FLOW is a better fit when the immediate priority is practical workflow automation around enquiries, bookings, reminders, payments, documents, routing, and human handover.",
+      "Yellow.ai is built for enterprise customer and employee experience automation. Crescora AI is a better fit when the immediate priority is practical workflow automation around enquiries, bookings, reminders, payments, documents, routing, and human handover.",
     bottomLine:
-      "Choose Yellow.ai when a large enterprise needs a broad AI agent program across customer and employee experiences. Choose FLOW when the team wants a more direct rollout focused on customer journeys and operational workflows that need to reach a business outcome quickly.",
+      "Choose Yellow.ai when a large enterprise needs a broad AI agent program across customer and employee experiences. Choose Crescora AI when the team wants a more direct rollout focused on customer journeys and operational workflows that need to reach a business outcome quickly.",
     rows: [
       {
         label: "Primary focus",
@@ -866,7 +866,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
         alternative: "Large enterprises with wider CX and EX automation requirements.",
       },
       {
-        label: "Where FLOW fits better",
+        label: "Where Crescora AI fits better",
         flow: "When the target is immediate workflow performance and faster implementation on a clearly defined customer journey.",
         alternative: "When the organization wants a broader AI platform evaluation across multiple enterprise functions.",
       },
@@ -890,8 +890,8 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     ],
     relatedPages: [
       { title: "Compare all AI automation platforms", href: "/compare", text: "See the full buyer-stage platform comparison hub." },
-      { title: "Kore.ai alternative", href: "/compare/kore-ai-alternative", text: "Compare FLOW with another enterprise-oriented AI platform." },
-      { title: "FLOW vs generic automation", href: "/compare/flow-vs-generic-automation", text: "See why customer workflows need more than trigger-action tooling." },
+      { title: "Kore.ai alternative", href: "/compare/kore-ai-alternative", text: "Compare Crescora AI with another enterprise-oriented AI platform." },
+      { title: "Crescora AI vs generic automation", href: "/compare/flow-vs-generic-automation", text: "See why customer workflows need more than trigger-action tooling." },
     ],
   },
   "kore-ai-alternative": {
@@ -899,14 +899,14 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     metadata: {
       title: "Best Kore.ai Alternative for Practical AI Workflow Automation",
       description:
-        "Compare Crescora FLOW vs Kore.ai for teams that need practical workflow automation, faster launch, and operational visibility across real customer journeys.",
+        "Compare Crescora AI vs Kore.ai for teams that need practical workflow automation, faster launch, and operational visibility across real customer journeys.",
     },
-    title: "Crescora FLOW vs Kore.ai",
+    title: "Crescora AI vs Kore.ai",
     eyebrow: "Kore.ai alternative",
     description:
-      "Kore.ai is known for enterprise AI agents and broader CX and EX programs. FLOW is a stronger fit when the goal is to launch operational workflows quickly and keep the implementation focused on measurable customer-journey outcomes.",
+      "Kore.ai is known for enterprise AI agents and broader CX and EX programs. Crescora AI is a stronger fit when the goal is to launch operational workflows quickly and keep the implementation focused on measurable customer-journey outcomes.",
     bottomLine:
-      "Choose Kore.ai when the organization needs a broad enterprise AI agent platform with larger-scale program scope. Choose FLOW when the business wants practical workflow automation, faster launch, and clearer operating control over high-frequency customer journeys.",
+      "Choose Kore.ai when the organization needs a broad enterprise AI agent platform with larger-scale program scope. Choose Crescora AI when the business wants practical workflow automation, faster launch, and clearer operating control over high-frequency customer journeys.",
     rows: [
       {
         label: "Primary focus",
@@ -915,7 +915,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
       },
       {
         label: "Launch motion",
-        flow: "Start with one production workflow and expand from a proven operating path.",
+        flow: "Start with one production workflow and expand from a validated operating path.",
         alternative: "Often part of a broader enterprise rollout with more stakeholders and scope.",
       },
       {
@@ -934,7 +934,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
         alternative: "Large organizations with wider enterprise-agent goals and program capacity.",
       },
       {
-        label: "Where FLOW fits better",
+        label: "Where Crescora AI fits better",
         flow: "When the priority is business outcomes such as more captured leads, faster responses, and fewer manual follow-ups.",
         alternative: "When the enterprise is investing in a broader AI platform strategy across departments.",
       },
@@ -958,8 +958,8 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     ],
     relatedPages: [
       { title: "Compare all AI automation platforms", href: "/compare", text: "Return to the full compare hub for the broader platform picture." },
-      { title: "Yellow.ai alternative", href: "/compare/yellow-ai-alternative", text: "Compare FLOW against another enterprise-focused alternative." },
-      { title: "FLOW vs CRM-led process", href: "/compare/flow-vs-crm-only", text: "See why the workflow layer matters before the record system." },
+      { title: "Yellow.ai alternative", href: "/compare/yellow-ai-alternative", text: "Compare Crescora AI against another enterprise-focused alternative." },
+      { title: "Crescora AI vs CRM-led process", href: "/compare/flow-vs-crm-only", text: "See why the workflow layer matters before the record system." },
     ],
   },
   "gupshup-alternative": {
@@ -967,14 +967,14 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     metadata: {
       title: "Best Gupshup Alternative for End-to-End Business Automation",
       description:
-        "Compare Crescora FLOW vs Gupshup for teams that need more than messaging and want end-to-end workflow automation tied to real business operations.",
+        "Compare Crescora AI vs Gupshup for teams that need more than messaging and want end-to-end workflow automation tied to real business operations.",
     },
-    title: "Crescora FLOW vs Gupshup",
+    title: "Crescora AI vs Gupshup",
     eyebrow: "Gupshup alternative",
     description:
-      "Gupshup is strong in conversational AI and business messaging. FLOW is built for businesses that need messaging plus workflow automation, so the conversation can trigger records, appointments, payments, documents, reminders, and human handover.",
+      "Gupshup is strong in conversational AI and business messaging. Crescora AI is built for businesses that need messaging plus workflow automation, so the conversation can trigger records, appointments, payments, documents, reminders, and human handover.",
     bottomLine:
-      "Choose Gupshup when the main requirement is conversational messaging infrastructure and engagement. Choose FLOW when a customer message must become a complete operational journey with clear next actions and team visibility.",
+      "Choose Gupshup when the main requirement is conversational messaging infrastructure and engagement. Choose Crescora AI when a customer message must become a complete operational journey with clear next actions and team visibility.",
     rows: [
       {
         label: "Primary focus",
@@ -1002,7 +1002,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
         alternative: "Teams prioritizing business messaging and conversational engagement first.",
       },
       {
-        label: "Where FLOW fits better",
+        label: "Where Crescora AI fits better",
         flow: "When messaging is only the start of the workflow and the business still needs process completion afterward.",
         alternative: "When conversation delivery and messaging scale are the main evaluation criteria.",
       },
@@ -1027,7 +1027,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     relatedPages: [
       { title: "Compare all AI automation platforms", href: "/compare", text: "See the full platform comparison hub." },
       { title: "Intercom alternative", href: "/compare/intercom-alternative", text: "Compare messaging-plus-workflow needs against support-led automation." },
-      { title: "FLOW vs WhatsApp chatbot tools", href: "/compare/flow-vs-whatsapp-chatbot-tools", text: "See why WhatsApp replies are not the full workflow." },
+      { title: "Crescora AI vs WhatsApp chatbot tools", href: "/compare/flow-vs-whatsapp-chatbot-tools", text: "See why WhatsApp replies are not the full workflow." },
     ],
   },
   "intercom-alternative": {
@@ -1035,14 +1035,14 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     metadata: {
       title: "Best Intercom Alternative for Workflow Automation Beyond Support",
       description:
-        "Compare Crescora FLOW vs Intercom for businesses that need workflow automation beyond support resolution across sales, booking, documents, payments, and operations.",
+        "Compare Crescora AI vs Intercom for businesses that need workflow automation beyond support resolution across sales, booking, documents, payments, and operations.",
     },
-    title: "Crescora FLOW vs Intercom",
+    title: "Crescora AI vs Intercom",
     eyebrow: "Intercom alternative",
     description:
-      "Intercom is a strong AI-first helpdesk for customer service teams. FLOW is a better fit when the business needs more than support resolution and wants automation across sales, service, booking, documents, payments, approvals, reminders, and handovers.",
+      "Intercom is a strong AI-first helpdesk for customer service teams. Crescora AI is a better fit when the business needs more than support resolution and wants automation across sales, service, booking, documents, payments, approvals, reminders, and handovers.",
     bottomLine:
-      "Choose Intercom when customer support and helpdesk efficiency are the center of the buying decision. Choose FLOW when the business needs custom workflow automation that connects customer communication with internal operations and measurable next actions.",
+      "Choose Intercom when customer support and helpdesk efficiency are the center of the buying decision. Choose Crescora AI when the business needs custom workflow automation that connects customer communication with internal operations and measurable next actions.",
     rows: [
       {
         label: "Primary focus",
@@ -1070,7 +1070,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
         alternative: "Support-led organizations optimizing service resolution and helpdesk performance.",
       },
       {
-        label: "Where FLOW fits better",
+        label: "Where Crescora AI fits better",
         flow: "When bookings, documents, payments, approvals, or operational tasks matter as much as answering the customer.",
         alternative: "When the product evaluation is centered on support and helpdesk outcomes first.",
       },
@@ -1095,7 +1095,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     relatedPages: [
       { title: "Compare all AI automation platforms", href: "/compare", text: "Review the broader AI automation platform landscape." },
       { title: "Zendesk AI alternative", href: "/compare/zendesk-ai-alternative", text: "See another support-led comparison in the same cluster." },
-      { title: "FLOW vs manual customer support", href: "/compare/flow-vs-manual-customer-support", text: "Compare workflow automation with fully manual support handling." },
+      { title: "Crescora AI vs manual customer support", href: "/compare/flow-vs-manual-customer-support", text: "Compare workflow automation with fully manual support handling." },
     ],
   },
   "zendesk-ai-alternative": {
@@ -1103,14 +1103,14 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     metadata: {
       title: "Best Zendesk AI Alternative for Business Workflow Automation",
       description:
-        "Compare Crescora FLOW vs Zendesk AI for teams that need support automation connected to bookings, payments, documents, approvals, and wider business workflows.",
+        "Compare Crescora AI vs Zendesk AI for teams that need support automation connected to bookings, payments, documents, approvals, and wider business workflows.",
     },
-    title: "Crescora FLOW vs Zendesk AI",
+    title: "Crescora AI vs Zendesk AI",
     eyebrow: "Zendesk AI alternative",
     description:
-      "Zendesk AI is strong for customer service automation, agents, QA, and support operations. FLOW is a stronger fit when the business wants support automation connected to wider workflows such as appointments, payments, lead intake, documents, approvals, and team routing.",
+      "Zendesk AI is strong for customer service automation, agents, QA, and support operations. Crescora AI is a stronger fit when the business wants support automation connected to wider workflows such as appointments, payments, lead intake, documents, approvals, and team routing.",
     bottomLine:
-      "Choose Zendesk AI when the main buying goal is customer service automation across helpdesk operations. Choose FLOW when support automation is only one part of a larger workflow model that also needs to handle operational actions and business follow-through.",
+      "Choose Zendesk AI when the main buying goal is customer service automation across helpdesk operations. Choose Crescora AI when support automation is only one part of a larger workflow model that also needs to handle operational actions and business follow-through.",
     rows: [
       {
         label: "Primary focus",
@@ -1138,7 +1138,7 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
         alternative: "Organizations optimizing customer service at helpdesk and support-team level.",
       },
       {
-        label: "Where FLOW fits better",
+        label: "Where Crescora AI fits better",
         flow: "When appointments, payments, documents, approvals, or cross-team ownership need to sit beside support automation.",
         alternative: "When the program is mainly about customer service automation and support governance.",
       },
@@ -1162,8 +1162,8 @@ export const comparisonPages: Record<string, ComparisonPageData> = {
     ],
     relatedPages: [
       { title: "Compare all AI automation platforms", href: "/compare", text: "Return to the full platform comparison hub." },
-      { title: "Intercom alternative", href: "/compare/intercom-alternative", text: "Compare FLOW with another support-led alternative." },
-      { title: "FLOW vs chatbots", href: "/compare/flow-vs-chatbots", text: "See why workflow completion matters beyond basic answers." },
+      { title: "Intercom alternative", href: "/compare/intercom-alternative", text: "Compare Crescora AI with another support-led alternative." },
+      { title: "Crescora AI vs chatbots", href: "/compare/flow-vs-chatbots", text: "See why workflow completion matters beyond basic answers." },
     ],
   },
 };
@@ -1190,7 +1190,7 @@ export const proofPages: Record<string, ProofPageData> = {
     ],
     workflow: [
       "Enquiry arrives through WhatsApp or web chat.",
-      "FLOW identifies the intent and asks the minimum qualification questions.",
+      "Crescora AI identifies the intent and asks the minimum qualification questions.",
       "The appointment or follow-up workflow starts immediately.",
       "Reminders, payment follow-up, and document requests run on schedule.",
       "Sensitive or complex cases are handed to staff with full conversation context.",
@@ -1237,7 +1237,7 @@ export const proofPages: Record<string, ProofPageData> = {
     ],
     workflow: [
       "Lead enters from a campaign, form, or WhatsApp message.",
-      "FLOW captures the source, intent, budget, and location signals.",
+      "Crescora AI captures the source, intent, budget, and location signals.",
       "Qualification and routing logic assigns the lead to the right owner.",
       "Visit scheduling, reminders, and follow-up messages run automatically.",
       "The CRM is updated with the result so management can see the pipeline state.",
@@ -1284,7 +1284,7 @@ export const proofPages: Record<string, ProofPageData> = {
     ],
     workflow: [
       "Enquiry enters from the web or WhatsApp.",
-      "FLOW classifies the program interest and collects the minimum details.",
+      "Crescora AI classifies the program interest and collects the minimum details.",
       "The demo class or counseling booking workflow starts immediately.",
       "Reminder and fee follow-up sequences run on schedule.",
       "Document requests and outstanding tasks are tracked before admissions handoff.",

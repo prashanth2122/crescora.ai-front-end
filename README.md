@@ -57,20 +57,31 @@ User-facing copy is centralized in `src/lib/site-content.ts`, with shared page d
 
 This keeps route components thin and makes future localization work straightforward:
 
+- public brand naming is `Crescora AI` only; do not introduce separate product names in public copy
+- approved primary CTAs are `Book Free Demo`, `Discuss My Workflow`, `View Pricing`, and `Book Founder-Led Pilot Review`; the floating support menu also includes `Try Crescora AI Demo`
+- the homepage positions Crescora AI as founder-led AI workflow automation for customer conversations, follow-ups, bookings, payments, documents, support, and human handover
+- public claims must stay proof-safe: avoid guaranteed percentages, unconditional launch timelines, fake logos, fake testimonials, or compliance certifications that are not actually held
+- `/demo` is the public sample-demo entry point; it links to workflow examples and workflow detail pages with clear demo disclaimers instead of presenting a fake live customer environment
+- `/workflow-examples` is the public workflow examples hub; old `/proof` URLs are compatibility redirects and should not be used for new public links
+- trust/support pages live at `/security`, `/responsible-ai`, `/data-processing`, `/subprocessors`, and `/support`
+- public legal identity currently uses `Crescora.ai` with business registration reference `UDYAM-TS-02-0344089`; business hours are `08:00 AM to 12:00 PM IST`, support coverage is `24x7`, and office visits are by invitation sent through email
+- founder profile links can be published only when supplied directly; current public founder links are the supplied LinkedIn profiles for Navya Chirumalla and Prashanth Chinala
+- public review screenshots can be shown only when supplied for public use, with copy that makes clear they are review captures rather than case studies, paid endorsements, logos, or guaranteed outcome claims
 - add a new locale content file
 - swap the active content source in one place
 - keep page structure and copy separate
 - homepage conversion copy, CTA labels, automation cards, outcomes copy, trust / FAQ / pricing text, and the right-side flow steps are centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts` so the public messaging can evolve without changing the route shell
-- the homepage now uses `Book Free Demo` and `View Industry Workflows` as the primary conversion path from the hero and pilot sections, while the full workflow enquiry form stays on `/contact`
-- the shared header now uses `Talk to Sales` plus `Book Free Demo`, while the root layout can also show a closable floating support menu on every page with WhatsApp, email, call, and booking actions when `BOOK_A_CALL_URL`, `WHATSAPP_PHONE_NUMBER`, optional `SUPPORT_PHONE_NUMBER`, optional `SUPPORT_EMAIL`, and optional `WHATSAPP_PREFILL_TEXT` are configured in the deployment environment; if the WhatsApp or email env vars are missing, the public fallbacks use `+91-9642021224`, `support@crescora.ai`, and the prefill text `I'm interested in your product`
+- the homepage now uses `Book Free Demo`, `Discuss My Workflow`, and `View Pricing` as the primary conversion path from the hero and pilot sections, while the full workflow enquiry form stays on `/contact`
+- the shared header now uses `Discuss My Workflow` plus `Book Free Demo`, while the root layout can also show a closable floating support menu on every page with WhatsApp, email, call, and booking actions when `BOOK_A_CALL_URL`, `WHATSAPP_PHONE_NUMBER`, optional `SUPPORT_PHONE_NUMBER`, optional `SUPPORT_EMAIL`, and optional `WHATSAPP_PREFILL_TEXT` are configured in the deployment environment; if the WhatsApp or email env vars are missing, the public fallbacks use `+91-9642021224`, `support@crescora.ai`, and the prefill text `I'm interested in your product`
 - the floating support menu now renders the WhatsApp action with the custom asset at `public/whatsapp-icon.jpg` instead of the default Lucide message glyph
 - homepage terminology now prefers `handover` over `handoff`, the workflow step copy uses the booking/payment/document wording, and the homepage FAQ is collapsed by default so the route stays easier to scan
 - the shared header currently omits the language switcher and keeps only navigation plus sales/demo CTAs
+- dedicated high-risk industry pages for diagnostics, labs, finance, and insurance must keep human-review and regulated-use disclaimers visible
 - the about page uses the same product-first CTA labels and automation-focused positioning so it stays aligned with the rest of the site
-- the about page now includes a workflow-path hero visual, stronger platform and trust proof, a clearer Crescora-vs-FLOW product relationship section, and a stronger bottom CTA so the company story stays centralized in `src/lib/site-content.ts`
+- the about page now includes a workflow-path hero visual, stronger platform and trust proof, a clearer Crescora-vs-Crescora AI product relationship section, and a stronger bottom CTA so the company story stays centralized in `src/lib/site-content.ts`
 - the homepage now stays focused on hero, pain, workflow automation, featured industries, pilot scope, trust / FAQ, and a compact deeper-links block; detailed solutions, pricing, blog content, and the full lead intake live on their dedicated routes
 - the homepage now also carries a shared SEO coverage section for channels, integrations, and service categories so core search intent stays centralized in `src/lib/site-content.ts`
-- the proof route now uses workflow-example language, a stronger enquiry-to-outcome hero, richer industry example cards, a before-vs-after comparison block, pilot outcome metrics, and a stronger workflow-pilot CTA
+- the workflow examples route uses transparent sample-workflow language, a stronger enquiry-to-outcome hero, richer industry example cards, pilot outcome metrics, and a stronger workflow-pilot CTA
 - the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
 - the privacy policy now renders at `/privacy`
 - the terms of service now render at `/terms`
@@ -124,13 +135,13 @@ Core implementation points:
 - `src/app/robots.ts` and `src/app/sitemap.ts` only publish the production host
 - `src/app/sitemap.ts` uses source-file mtimes for `lastModified` instead of `new Date()`
 - `src/lib/revenue-pages.ts` is the canonical source for the primary solution pages
-- generated blog, workflow, template, use-case, India, industry, comparison, proof, and Hindi routes are included in the sitemap
+- generated blog, workflow, template, use-case, India, industry, comparison, workflow-example, trust, and Hindi routes are included in the sitemap
 - `/compare` is now the primary AI automation platform comparison page, with visible FAQ markup, competitor-intent internal links, and a supporting cluster for `/compare/yellow-ai-alternative`, `/compare/kore-ai-alternative`, `/compare/gupshup-alternative`, `/compare/intercom-alternative`, and `/compare/zendesk-ai-alternative`
 
 Current indexable route families include:
 
-- primary company, product, pricing, trust, resources, contact, and legal pages
-- `/solutions`, `/industries`, `/use-cases`, `/blog`, `/workflows`, `/templates`, `/compare`, and `/proof` hubs and detail pages
+- primary company, product, pricing, demo, trust, support, security, responsible-AI, data-processing, subprocessors, resources, contact, and legal pages
+- `/solutions`, `/industries`, `/use-cases`, `/blog`, `/workflows`, `/templates`, `/compare`, and `/workflow-examples` hubs and detail pages
 - `/india`, every generated state page, configured state-workflow pages, and state-primary-industry pages
 - localized Hindi hubs under `/hi/*`, with self-canonicals and English/Hindi `hreflang` alternates
 
@@ -181,7 +192,7 @@ Primary commercial pages are centralized in `src/lib/revenue-pages.ts`, while su
 
 The current commercial setup uses:
 
-- `/solutions` and `src/app/solutions/[slug]/page.tsx` for the primary revenue pages
+- `/solutions` and `src/app/solutions/[slug]/page.tsx` for the primary solution pages
 - `src/components/site/revenue-solution-page.tsx` for the shared product-page layout
 - page-specific hero copy, section headings, metadata overrides, and final CTA variants are configured in `src/lib/revenue-pages.ts` so individual solution pages can be upgraded without forking the layout
 - repaired blog detail overrides in `src/lib/seo-marketing-data.ts` now replace internal SEO planning template copy with buyer-facing public content for high-priority slugs, with regression coverage in `src/lib/seo.test.ts`
@@ -205,7 +216,7 @@ The shared metadata and structured-data rules now include:
 
 - `src/app/layout.tsx` for site-wide defaults and the non-duplicating title template
 - `src/lib/seo.ts` for canonical host generation, robots, Open Graph, article metadata, FAQ/page/item-list schema helpers, and JSON-LD sanitization
-- route-specific `opengraph-image.tsx` files on key solution, compare, proof, and blog routes so share metadata no longer points at a single global image
+- route-specific `opengraph-image.tsx` files on key solution, compare, workflow-example compatibility, and blog routes so share metadata no longer points at a single global image
 - `src/lib/seo-marketing-data.ts` for article authorship, published/modified dates, and representative image metadata on blog content
 - homepage FAQ schema, pricing FAQ schema, solution-page FAQ schema, and route-level page / breadcrumb / item-list JSON-LD on key commercial routes
 

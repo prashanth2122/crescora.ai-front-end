@@ -46,6 +46,21 @@ export default function PlatformPage() {
         </div>
       </section>
 
+      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow={page.architecture.eyebrow}
+          title={page.architecture.title}
+          description={page.architecture.description}
+        />
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {page.architecture.items.map((item) => (
+            <div key={item} className="rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-sm font-medium text-zinc-800 shadow-[0_14px_40px_rgba(15,23,42,0.04)]">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-[1fr_0.95fr]">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">

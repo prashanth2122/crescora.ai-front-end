@@ -283,7 +283,7 @@ export const softwareSchema = {
 export const homepageServicesListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "FLOW automation services",
+  name: "Crescora AI automation services",
   itemListElement: homepageAutomationServices.map((service, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -311,7 +311,7 @@ export const whatsappAutomationSchema = {
 export const whatsappAutomationServicesListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "WhatsApp automation services supported by FLOW",
+  name: "WhatsApp automation services supported by Crescora AI",
   itemListElement: [
     ...siteContent.useCases.whatsapp.automations,
     ...siteContent.useCases.whatsapp.services,

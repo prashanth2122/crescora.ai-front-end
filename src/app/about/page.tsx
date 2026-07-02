@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { createExactPageMetadata } from "@/lib/seo";
@@ -15,6 +16,7 @@ import {
   Building2,
   CalendarDays,
   CheckCircle2,
+  ExternalLink,
   FileText,
   GraduationCap,
   Headphones,
@@ -48,6 +50,11 @@ export default function AboutPage() {
     whatWeBuild,
     whyWeBuiltFlow,
     belief,
+    founderLed,
+    whatWeWillNotDo,
+    notOnly,
+    proofPolicy,
+    legalIdentity,
     whoWeHelp,
     howWeWork,
     different,
@@ -86,7 +93,7 @@ export default function AboutPage() {
         secondaryCta={hero.secondaryCta}
         visual={
           <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-[linear-gradient(180deg,rgba(255,255,255,0.94)_0%,rgba(244,244,245,0.96)_100%)] p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">FLOW operating path</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">Crescora AI operating path</p>
             <div className="mt-6 space-y-3">
               {heroStepLabels.map((step, index) => (
                 <div key={step} className="flex items-center gap-3">
@@ -169,7 +176,7 @@ export default function AboutPage() {
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Why FLOW exists" title={whyWeBuiltFlow.title} />
+              <SectionHeading eyebrow="Why Crescora AI exists" title={whyWeBuiltFlow.title} />
               <div className="mt-5 space-y-5 text-sm leading-8 text-zinc-600">
                 {whyWeBuiltFlow.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
@@ -193,6 +200,88 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-0 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+            <CardContent className="p-6 sm:p-8">
+              <SectionHeading eyebrow="Founder-led" title={founderLed.title} />
+              <div className="mt-5 space-y-5 text-sm leading-8 text-zinc-600">
+                {founderLed.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {founderLed.founders.map((founder) => (
+                  <div key={founder.linkedin} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+                    <p className="text-lg font-semibold tracking-tight text-zinc-950">{founder.name}</p>
+                    <p className="mt-1 text-sm font-medium text-zinc-500">{founder.role}</p>
+                    <p className="mt-3 text-sm leading-7 text-zinc-600">{founder.summary}</p>
+                    <Button asChild variant="link" className="mt-4 h-auto p-0 text-zinc-950">
+                      <a href={founder.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
+                        View LinkedIn
+                        <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="space-y-6">
+            <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+              <CardContent className="p-6 sm:p-8">
+                <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">{proofPolicy.title}</h2>
+                <p className="mt-4 text-sm leading-8 text-zinc-600">{proofPolicy.description}</p>
+              </CardContent>
+            </Card>
+            <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+              <CardContent className="p-6 sm:p-8">
+                <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">{legalIdentity.title}</h2>
+                <p className="mt-4 text-sm leading-8 text-zinc-600">{legalIdentity.description}</p>
+                <dl className="mt-6 divide-y divide-zinc-200 rounded-2xl border border-zinc-200 bg-zinc-50">
+                  {legalIdentity.details.map((detail) => (
+                    <div key={detail.label} className="grid gap-1 px-4 py-3 sm:grid-cols-[0.8fr_1.2fr] sm:gap-4">
+                      <dt className="text-sm font-medium text-zinc-500">{detail.label}</dt>
+                      <dd className="text-sm font-semibold text-zinc-950">{detail.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow={proofPolicy.reviewScreenshots.eyebrow}
+          title={proofPolicy.reviewScreenshots.title}
+          description={proofPolicy.reviewScreenshots.description}
+        />
+        <div className="mt-10 grid gap-5">
+          {proofPolicy.reviewScreenshots.items.map((review) => (
+            <Card key={review.image} className="overflow-hidden border-zinc-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.05)]">
+              <CardContent className="p-0">
+                <div className="relative aspect-[3.3/1] bg-zinc-50">
+                  <Image
+                    src={review.image}
+                    alt={review.alt}
+                    fill
+                    sizes="(min-width: 1024px) 82vw, 92vw"
+                    className="object-contain"
+                  />
+                </div>
+                <div className="border-t border-zinc-200 p-5">
+                  <p className="text-sm font-semibold text-zinc-950">{review.name}</p>
+                  <p className="mt-2 text-sm leading-7 text-zinc-600">&quot;{review.quote}&quot;</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-0 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Who we help" title={whoWeHelp.title} description={whoWeHelp.description} />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {whoWeHelp.cards.map((card, index) => {
@@ -210,6 +299,32 @@ export default function AboutPage() {
               </Card>
             );
           })}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+            <CardContent className="p-6 sm:p-8">
+              <h2 className="text-2xl font-semibold tracking-tight text-zinc-950">{whatWeWillNotDo.title}</h2>
+              <ul className="mt-6 space-y-3">
+                {whatWeWillNotDo.items.map((item) => (
+                  <li key={item} className="text-sm leading-7 text-zinc-700">{item}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="border-zinc-200 bg-zinc-950 text-white shadow-[0_20px_60px_rgba(15,23,42,0.14)]">
+            <CardContent className="p-6 sm:p-8">
+              <h2 className="text-2xl font-semibold tracking-tight text-white">{notOnly.title}</h2>
+              <ul className="mt-6 space-y-3">
+                {notOnly.items.map((item) => (
+                  <li key={item} className="text-sm leading-7 text-white/78">{item}</li>
+                ))}
+              </ul>
+              <p className="mt-6 text-sm leading-8 text-white/72">{notOnly.summary}</p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -336,7 +451,7 @@ export default function AboutPage() {
                 <Link href={pilot.cta.href}>{pilot.cta.label}</Link>
               </Button>
               <Button asChild variant="outline" className="h-12 rounded-full border-white/15 bg-white/5 px-6 text-white hover:bg-white/10 hover:text-white">
-                <Link href={hero.secondaryCta?.href ?? "/platform"}>Explore FLOW</Link>
+                <Link href={hero.secondaryCta?.href ?? "/platform"}>Explore Crescora AI</Link>
               </Button>
             </div>
           </div>

@@ -86,6 +86,52 @@ type UseCaseDetailPageContent = {
   cta?: { label: string; href: string };
 };
 
+const kycUseCasePage: UseCaseDetailPageContent = {
+  metadata: {
+    title: "KYC Document Collection Automation | Crescora AI",
+    description:
+      "Collect KYC files, missing documents, intake details, and review-ready context with human approval controls.",
+  },
+  hero: {
+    eyebrow: "Use case",
+    title: "Collect KYC documents with clear status, reminders, and human review.",
+    description:
+      "Crescora AI helps teams request required KYC files, track missing items, collect supporting details, and route unclear or sensitive submissions to staff for review instead of letting automation make regulated decisions.",
+    primaryCta: { label: "Book Free Demo", href: "/contact" },
+    secondaryCta: { label: "Discuss My Workflow", href: "/contact" },
+    supportText:
+      "Built for intake and review workflows. Crescora AI does not replace legal, financial, compliance, or identity-verification judgment.",
+  },
+  rollout: {
+    eyebrow: "Controlled rollout",
+    title: "Start with document intake before any regulated decision step.",
+    description:
+      "The safest KYC pilot collects the right files, shows status clearly, reminds customers about missing items, and hands review decisions to an accountable team.",
+  },
+  items: [
+    "Required document request flow",
+    "Missing-file and invalid-file reminders",
+    "Status tracking for requested, submitted, missing, under review, and escalated files",
+    "Human review routing for unclear, sensitive, or low-confidence submissions",
+  ],
+  itemDescriptions: [
+    "Ask only for the files required by the scoped workflow and explain what each file is used for.",
+    "Prompt customers when documents are missing, unreadable, unsupported, or incomplete.",
+    "Keep staff and customers aligned on where each document request stands.",
+    "Send high-risk or unclear cases to the right reviewer with context and an audit-friendly status trail.",
+  ],
+  finalCta: {
+    eyebrow: "Next step",
+    title: "Ready to scope a KYC document collection workflow?",
+    description:
+      "Tell us which documents you collect, who reviews them, what systems need updates, and where customers usually drop off. We will map the safest first workflow.",
+    note: "KYC and compliance workflows should use human review, consent, access control, and clear data-retention rules.",
+    primary: { label: "Book Free Demo", href: "/contact" },
+    secondary: { label: "Discuss My Workflow", href: "/contact" },
+  },
+  cta: { label: "Book Free Demo", href: "/contact" },
+};
+
 const useCasePages: Record<string, UseCaseDetailPageContent> = {
   "lead-capture-qualification": siteContent.useCases.leadCaptureQualification,
   "faq-automation": siteContent.useCases.faqAutomation,
@@ -93,6 +139,12 @@ const useCasePages: Record<string, UseCaseDetailPageContent> = {
   "reminder-automation": siteContent.useCases.reminderAutomation,
   "ticket-creation-escalation": siteContent.useCases.ticketCreationEscalation,
   "feedback-collection": siteContent.useCases.feedbackCollection,
+  "appointment-booking-automation": siteContent.useCases.appointment,
+  "customer-support-automation": siteContent.useCases.customerSupport,
+  "document-collection-automation": siteContent.useCases.document,
+  "payment-follow-up-automation": siteContent.useCases.payment,
+  "human-handoff-automation": siteContent.useCases.humanHandoff,
+  kyc: kycUseCasePage,
 } as const;
 
 type UseCaseSlug = keyof typeof useCasePages;
@@ -140,7 +192,7 @@ export default async function UseCaseDetailPage({ params }: { params: Params }) 
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow={page.rollout?.eyebrow ?? "What FLOW handles"}
+          eyebrow={page.rollout?.eyebrow ?? "What Crescora AI handles"}
           title={page.rollout?.title ?? "A practical rollout path for this workflow."}
           description={
             page.rollout?.description ??
@@ -231,11 +283,11 @@ export default async function UseCaseDetailPage({ params }: { params: Params }) 
                 <CardContent className="p-6 sm:p-7">
                   <div className="grid gap-4 md:grid-cols-2">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Before FLOW</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Before Crescora AI</p>
                       <p className="mt-3 text-sm leading-7 text-zinc-600">{row.before}</p>
                     </div>
                     <div className="md:border-l md:border-zinc-200 md:pl-4">
-                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">After FLOW</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">After Crescora AI</p>
                       <p className="mt-3 text-sm leading-7 text-zinc-600">{row.after}</p>
                     </div>
                   </div>
@@ -316,7 +368,7 @@ export default async function UseCaseDetailPage({ params }: { params: Params }) 
                 {page.finalCta?.eyebrow ?? "Next step"}
               </p>
               <h3 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
-                {page.finalCta?.title ?? "See how FLOW can automate this workflow."}
+                {page.finalCta?.title ?? "See how Crescora AI can automate this workflow."}
               </h3>
               <p className="mt-4 text-sm leading-7 text-white/70">
                 {page.finalCta?.description ??
