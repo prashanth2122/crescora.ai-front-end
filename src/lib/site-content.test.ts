@@ -138,7 +138,7 @@ test("about page copy includes founder-led proof policy and safe legal identity 
   assert.match(siteContent.about.legalIdentity.description, /UDYAM-TS-02-0344089/);
   assert.match(siteContent.about.legalIdentity.description, /Monday to Saturday, 10:00 AM to 6:00 PM IST/);
   assert.match(siteContent.about.legalIdentity.description, /Support coverage depends on plan/);
-  assert.ok(siteContent.about.legalIdentity.details.some((detail) => detail.value === "By invitation or appointment through email"));
+  assert.ok(siteContent.about.legalIdentity.details.some((detail) => detail.value === "By appointment through email"));
 });
 
 test("legal and lead-form content remains structured", () => {
@@ -185,6 +185,8 @@ test("public source does not contain banned marketing or internal planning phras
     /launch-ready/i,
     /search-result markup/i,
     /thin keyword/i,
+    /Proof pages/i,
+    /Request support demo/i,
     /state hubs/i,
     /Priority workflows/i,
     /Local trust/i,

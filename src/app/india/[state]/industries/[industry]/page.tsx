@@ -14,7 +14,7 @@ import {
   seoOrganizationSchema,
 } from "@/lib/india-seo-data";
 import { buildFaqPageSchema, createPageMetadata } from "@/lib/seo";
-import { stateSeoSeedBySlug, stateSeoSeedList } from "@/lib/state-seo-seeds";
+import { getStatePublicServiceExamples, stateSeoSeedBySlug, stateSeoSeedList } from "@/lib/state-seo-seeds";
 import {
   buildStateIndustryDescription,
   buildStateIndustryFaqItems,
@@ -81,6 +81,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
 
   const config = stateIndustrySeoBySlug[industrySlug];
   const industry = industryBySlug.get(industrySlug);
+  const publicServiceExamples = getStatePublicServiceExamples(seed);
 
   if (!industry) {
     notFound();
@@ -108,7 +109,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
         description={`Crescora AI helps ${config.titleNoun} teams in ${seed.name} reduce ${seed.primaryPain}. Support ${formatStateIndustryList(seed.languages)} customer journeys across ${formatStateIndustryList(seed.cityClusters)} with workflow orchestration, AI routing, reminders, records, analytics, and human handoff.`}
         primaryCta={{ label: config.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} rollout`, href: "/contact" }}
-        supportText={`Service examples include ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateIndustryList(seed.industries)} in ${seed.name}.`}
+        supportText={`Service examples include ${formatStateIndustryList(publicServiceExamples)}. Best fit for ${formatStateIndustryList(seed.industries)} in ${seed.name}.`}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -141,7 +142,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Coverage</p>
               <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">Built for {formatStateIndustryList(seed.cityClusters)}</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                Launch with support for {formatStateIndustryList(seed.languages)} customer journeys while keeping one reusable industry playbook across the state.
+                Launch with support for {formatStateIndustryList(seed.languages)} customer journeys while keeping routing, service quality, and human handover consistent across the state.
               </p>
             </CardContent>
           </Card>

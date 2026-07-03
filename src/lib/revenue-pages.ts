@@ -275,7 +275,7 @@ export const revenuePages = [
       },
     ],
     relatedLinks: [
-      { ...link("Workflow examples", "/proof", "Review rollout-oriented proof pages that show how Crescora AI is launched in real customer operations."), ctaLabel: "View Examples ->" },
+      { ...link("Workflow examples", "/workflow-examples", "Review rollout-oriented workflow examples that show how Crescora AI is launched in real customer operations."), ctaLabel: "View Examples ->" },
       { ...link("Pricing", "/pricing", "Choose a first-workflow pilot or a broader multi-team rollout based on scope, systems, and team coverage."), ctaLabel: "View Pricing ->" },
       { ...link("Contact sales", "/contact", "Map your current WhatsApp journey, handover points, and rollout priorities with the Crescora team."), ctaLabel: "Discuss My Workflow ->" },
     ],
@@ -385,7 +385,7 @@ export const revenuePages = [
       link("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "Understand the difference between answers and end-to-end workflow execution."),
       link("Trust", "/trust", "Review the product, workflow, and governance posture."),
     ],
-    ctaLabel: "Request builder demo",
+    ctaLabel: "Discuss My Workflow",
     ctaHref: "/contact",
   }),
   page({
@@ -479,10 +479,10 @@ export const revenuePages = [
     ],
     relatedLinks: [
       link("Platform", "/platform", "See the broader orchestration and product positioning."),
-      link("Proof pages", "/proof", "Review concrete rollout narratives."),
-      link("Talk to sales", "/contact", "Map the first workflow with the implementation team."),
+      link("Workflow examples", "/workflow-examples", "Review practical demo workflows and rollout narratives."),
+      link("Discuss My Workflow", "/contact", "Map the first workflow with the implementation team."),
     ],
-    ctaLabel: "Book workflow demo",
+    ctaLabel: "Discuss My Workflow",
     ctaHref: "/contact",
   }),
   page({
@@ -574,12 +574,24 @@ export const revenuePages = [
         answer: "Limit the first rollout to approved answer sources, explicit fallback rules, and clear escalation for anything sensitive or uncertain.",
       },
     ],
+    faqSection: {
+      eyebrow: "FAQ",
+      title: "Implementation questions buyers ask before rollout.",
+      description: "These answers cover practical rollout questions buyers ask before launching support automation.",
+    },
+    relatedSection: {
+      eyebrow: "Related pages",
+      title: "Related pages",
+      description:
+        "Explore support examples, pricing, comparison, and trust pages to decide the right first rollout path.",
+    },
     relatedLinks: [
-      link("Support industry page", "/industries/support-teams", "See the support-specific positioning and examples."),
+      link("Support workflow example", "/workflows/customer-support", "See how FAQ handling, triage, and handoff work in a practical support flow."),
+      link("View Pricing", "/pricing", "Review pilot scope, inclusions, and rollout planning."),
       link("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "Understand the difference between FAQ answers and operational support workflows."),
       link("Trust", "/trust", "Review governance, rollout, and operating safeguards."),
     ],
-    ctaLabel: "Request support demo",
+    ctaLabel: "Discuss My Workflow",
     ctaHref: "/contact",
   }),
   page({
@@ -676,7 +688,7 @@ export const revenuePages = [
       link("Education workflows", "/industries/education", "Use the same model for demos, admissions calls, and counselor bookings."),
       link("Pricing", "/pricing", "Scope a first-booking workflow pilot."),
     ],
-    ctaLabel: "Request booking automation demo",
+    ctaLabel: "Discuss My Workflow",
     ctaHref: "/contact",
   }),
   page({
@@ -773,7 +785,7 @@ export const revenuePages = [
       link("Workflow automation", "/solutions/workflow-automation", "Connect lead capture to the broader operating model."),
       link("Contact", "/contact", "Scope the first qualification and routing workflow."),
     ],
-    ctaLabel: "Request lead capture demo",
+    ctaLabel: "Discuss My Workflow",
     ctaHref: "/contact",
   }),
   page({
@@ -967,7 +979,7 @@ export const revenuePages = [
       link("Education workflows", "/industries/education", "Use document collection for admissions and onboarding journeys."),
       link("Contact", "/contact", "Scope the first intake checklist and reminder path."),
     ],
-    ctaLabel: "Request document collection demo",
+    ctaLabel: "Discuss My Workflow",
     ctaHref: "/contact",
   }),
   page({

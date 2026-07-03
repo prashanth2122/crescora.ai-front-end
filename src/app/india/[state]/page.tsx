@@ -15,7 +15,13 @@ import {
   workflows,
 } from "@/lib/india-seo-data";
 import { buildFaqPageSchema, createExactPageMetadata } from "@/lib/seo";
-import { stateSeoSeedBySlug, stateSeoSeedList, type StateSeoSeed, type WorkflowKey } from "@/lib/state-seo-seeds";
+import {
+  getStatePublicServiceExamples,
+  stateSeoSeedBySlug,
+  stateSeoSeedList,
+  type StateSeoSeed,
+  type WorkflowKey,
+} from "@/lib/state-seo-seeds";
 import { getStateWorkflowSlugs } from "@/lib/state-workflow-seo";
 
 type StatePageProps = {
@@ -219,6 +225,7 @@ export default async function StatePage({ params }: StatePageProps) {
   const faqSchema = buildFaqPageSchema(faqItems);
   const primaryIndustrySlug = getStatePrimaryIndustrySlug(seed.slug);
   const relatedWorkflow = workflows.find((workflow) => availableWorkflowSlugSet.has(workflow.slug));
+  const publicServiceExamples = getStatePublicServiceExamples(seed);
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", href: "https://www.crescora.ai" },
     { name: "India", href: "https://www.crescora.ai/india" },
@@ -237,7 +244,7 @@ export default async function StatePage({ params }: StatePageProps) {
         description={`Crescora AI helps teams across ${formatList(seed.cityClusters)} fix ${seed.primaryPain}. Support ${formatList(seed.languages)} customer journeys for ${formatList(seed.industries)} with workflow orchestration, AI operations, human handoff, knowledge flows, governance, billing, and analytics.`}
         primaryCta={{ label: "Book Free Demo", href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} Workflow`, href: "/contact" }}
-        supportText={`Built for ${seed.commercialAngle}. Service examples include ${seed.localSearchTerms.join(", ")}.`}
+        supportText={`Built for ${seed.commercialAngle}. Service examples include ${formatList(publicServiceExamples)}.`}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -268,7 +275,7 @@ export default async function StatePage({ params }: StatePageProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">City clusters</p>
               <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">Focus on the strongest demand clusters</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                This page is built to stay relevant across {formatList(seed.cityClusters)} while keeping one reusable template and state-specific SEO data.
+                Teams across {formatList(seed.cityClusters)} can start in the highest-demand service areas, then expand once the first workflow is stable and measurable.
               </p>
             </CardContent>
           </Card>
@@ -341,7 +348,7 @@ export default async function StatePage({ params }: StatePageProps) {
               </div>
               <div className="mt-6 space-y-3 text-sm leading-7 text-zinc-600">
                 <p>Priority city clusters: {formatList(seed.cityClusters)}</p>
-                <p>Workflow examples: {seed.localSearchTerms.join(", ")}</p>
+                <p>Service examples: {formatList(publicServiceExamples)}</p>
                 <p>Best fit for: {formatList(seed.industries)}</p>
               </div>
             </CardContent>

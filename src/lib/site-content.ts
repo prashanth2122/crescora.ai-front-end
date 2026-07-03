@@ -794,7 +794,7 @@ export const siteContent = {
         { label: "Business availability", value: "Monday to Saturday, 10:00 AM to 6:00 PM IST" },
         { label: "Support coverage", value: "Based on plan and agreed rollout scope" },
         { label: "Emergency support", value: "Available only for active clients where explicitly agreed" },
-        { label: "Office visits", value: "By invitation or appointment through email" },
+        { label: "Office visits", value: "By appointment through email" },
       ],
     },
     whoWeHelp: {
@@ -2089,7 +2089,7 @@ export const siteContent = {
   resources: {
     metadata: {
       title: "Resources | Crescora AI",
-      description: "Playbooks, comparisons, proof pages, and guides for client businesses.",
+      description: "Playbooks, comparisons, workflow examples, and guides for client businesses.",
     },
     hero: {
       eyebrow: "Resources",
@@ -2101,11 +2101,11 @@ export const siteContent = {
     },
     decisionSection: {
       eyebrow: "Decision-stage content",
-      title: "Comparisons and proof pages for buyers close to a decision.",
+      title: "Comparisons and workflow examples for buyers close to a decision.",
       description: "These pages help visitors understand why Crescora AI is the right fit before they book a demo.",
     },
     comparisonLabel: "Comparison pages",
-    proofLabel: "Proof pages",
+    proofLabel: "Workflow examples",
     contentHub: {
       eyebrow: "Content hub",
       title: "Built to grow into a client proof library",

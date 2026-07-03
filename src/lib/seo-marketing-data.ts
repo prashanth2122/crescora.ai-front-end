@@ -235,7 +235,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Compare Crescora AI vs manual WhatsApp", "/compare/flow-vs-manual-whatsapp", "See why manual handling breaks at scale."),
       relatedLink("Book Free Demo", "/contact", "Start with one client journey and a rollout plan."),
     ],
-    ctaLabel: "Request WhatsApp workflow demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "ai-chatbot-builder",
@@ -283,7 +283,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "See how workflow automation differs from basic bots."),
       relatedLink("Templates", "/templates", "Ready-made launch assets for common workflows."),
     ],
-    ctaLabel: "Request builder demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "workflow-automation",
@@ -379,7 +379,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Support teams", "/industries/support-teams", "Industry page for support operations."),
       relatedLink("Compare Crescora AI vs chatbots", "/compare/flow-vs-chatbots", "Decision-stage comparison for support buyers."),
     ],
-    ctaLabel: "Request support demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "appointment-booking-automation",
@@ -427,7 +427,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("WhatsApp automation", "/solutions/whatsapp-automation", "Channel automation for booking enquiries."),
       relatedLink("Book Free Demo", "/contact", "Discuss your appointment workflow."),
     ],
-    ctaLabel: "Request booking demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "lead-capture-automation",
@@ -475,7 +475,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Real estate automation", "/industries/real-estate", "A high-intent industry use case."),
       relatedLink("Book Free Demo", "/contact", "Map your lead routing path."),
     ],
-    ctaLabel: "Request lead capture demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "payment-reminder-automation",
@@ -523,7 +523,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("WhatsApp automation", "/solutions/whatsapp-automation", "Channel-specific payment follow-up."),
       relatedLink("Book Free Demo", "/contact", "Talk through your payment workflow."),
     ],
-    ctaLabel: "Request payment demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "document-collection-automation",
@@ -571,7 +571,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Education automation", "/industries/education", "Admissions and document-heavy workflows."),
       relatedLink("Book Free Demo", "/contact", "Plan your document workflow."),
     ],
-    ctaLabel: "Request document demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "crm-api-workflow-automation",
@@ -619,7 +619,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Workflow automation", "/solutions/workflow-automation", "The broader product layer."),
       relatedLink("Book Free Demo", "/contact", "Map your integration path."),
     ],
-    ctaLabel: "Request integration demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "human-handover-automation",
@@ -667,7 +667,7 @@ export const solutionPages: SeoLandingPage[] = [
       relatedLink("Customer support automation", "/solutions/customer-support-automation", "Context-rich escalation and support."),
       relatedLink("Book Free Demo", "/contact", "Discuss your escalation path."),
     ],
-    ctaLabel: "Request handover demo",
+    ctaLabel: "Discuss My Workflow",
   },
 ];
 
@@ -7611,7 +7611,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       relatedLink("Healthcare use case", "/industries/hospitals", "Existing healthcare-focused industry page."),
       relatedLink("Book Free Demo", "/contact", "Talk through a healthcare rollout."),
     ],
-    ctaLabel: "Request hospital automation demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "real-estate-automation",
@@ -7659,7 +7659,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       relatedLink("Real estate industry page", "/industries/real-estate", "Existing vertical page for property teams."),
       relatedLink("Compare Crescora AI vs CRM-only", "/compare/flow-vs-crm-only", "See why workflow matters before the CRM."),
     ],
-    ctaLabel: "Request real estate automation demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "education-automation",
@@ -7707,7 +7707,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       relatedLink("Education industry page", "/industries/education", "Existing education-focused page."),
       relatedLink("Proof page", "/proof/education-admissions-workflow", "Illustrative rollout narrative."),
     ],
-    ctaLabel: "Request admissions demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "small-business-automation",
@@ -7755,7 +7755,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       relatedLink("WhatsApp solution", "/solutions/whatsapp-automation", "Core channel automation page."),
       relatedLink("Pricing", "/pricing", "See package-based pricing for rollout."),
     ],
-    ctaLabel: "Request small business demo",
+    ctaLabel: "Discuss My Workflow",
   },
 ];
 

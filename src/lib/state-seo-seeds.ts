@@ -22,6 +22,23 @@ export type StateSeoSeed = {
   localSearchTerms: string[];
 };
 
+const publicServiceExamplesByWorkflow: Record<WorkflowKey, string[]> = {
+  lead: ["WhatsApp enquiry handling", "website chat"],
+  appointment: ["appointment booking"],
+  payment: ["payment reminders"],
+  document: ["document collection"],
+  support: ["customer support workflows"],
+  education: ["admission enquiry handling"],
+  healthcare: ["patient intake and support"],
+  realEstate: ["real estate lead follow-up"],
+  hospitality: ["booking and guest follow-up"],
+  sales: ["lead qualification and follow-up"],
+};
+
+export function getStatePublicServiceExamples(seed: StateSeoSeed) {
+  return Array.from(new Set(seed.workflows.flatMap((workflow) => publicServiceExamplesByWorkflow[workflow] ?? [])));
+}
+
 export const stateSeoSeeds: Record<string, StateSeoSeed> = {
   maharashtra: {
     slug: "maharashtra",

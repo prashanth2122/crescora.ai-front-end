@@ -14,7 +14,7 @@ import {
   workflowBySlug,
 } from "@/lib/india-seo-data";
 import { buildFaqPageSchema, createPageMetadata } from "@/lib/seo";
-import { stateSeoSeedBySlug } from "@/lib/state-seo-seeds";
+import { getStatePublicServiceExamples, stateSeoSeedBySlug } from "@/lib/state-seo-seeds";
 import {
   buildStateWorkflowDescription,
   buildStateWorkflowFaqItems,
@@ -108,6 +108,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
   const automationCards = buildAutomationCards(workflowSlug);
   const launchSteps = buildLaunchSteps(workflowSlug);
   const beforeAfterRows = buildBeforeAfterRows(workflowSlug);
+  const publicServiceExamples = getStatePublicServiceExamples(seed);
   const faqItems = buildStateWorkflowFaqItems(seed, config);
   const faqSchema = buildFaqPageSchema(faqItems);
   const primaryIndustrySlug = getStatePrimaryIndustrySlug(seed.slug);
@@ -133,7 +134,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
         description={`Crescora AI helps teams in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain}. Support ${formatStateSeoList(seed.languages)} customer journeys across ${formatStateSeoList(seed.cityClusters)} with workflow orchestration, AI routing, records, reminders, analytics, and human handoff.`}
         primaryCta={{ label: config.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} rollout`, href: "/contact" }}
-        supportText={`Service examples include ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateSeoList(seed.industries)} in ${seed.name}.`}
+        supportText={`Service examples include ${formatStateSeoList(publicServiceExamples)}. Best fit for ${formatStateSeoList(seed.industries)} in ${seed.name}.`}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -164,7 +165,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Local coverage</p>
               <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">Built for {formatStateSeoList(seed.cityClusters)}</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                Launch with support for {formatStateSeoList(seed.languages)} customer journeys and workflow examples such as {seed.localSearchTerms.join(", ")}.
+                Launch with support for {formatStateSeoList(seed.languages)} customer journeys and service examples such as {formatStateSeoList(publicServiceExamples)}.
               </p>
             </CardContent>
           </Card>
@@ -193,7 +194,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
         <SectionHeading
           eyebrow="Industry use"
           title={`Where teams in ${seed.name} use this workflow`}
-          description={`${config.localUseCaseLine} The page stays reusable, but the local SEO value comes from state-specific industries, cities, languages, and search demand.`}
+          description={`${config.localUseCaseLine} This workflow is useful for businesses that need a structured way to capture requests, guide the next step, send reminders, route exceptions, and hand over sensitive cases across ${seed.name} service areas.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {seed.industries.map((industry) => (
@@ -240,7 +241,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
                 <p>Priority cities: {formatStateSeoList(seed.cityClusters)}</p>
                 <p>Languages: {formatStateSeoList(seed.languages)}</p>
                 <p>Industries: {formatStateSeoList(seed.industries)}</p>
-                <p>Workflow examples: {seed.localSearchTerms.join(", ")}</p>
+                <p>Service examples: {formatStateSeoList(publicServiceExamples)}</p>
               </div>
               <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
                 <h3 className="text-lg font-semibold tracking-tight text-zinc-950">What the rollout should protect</h3>

@@ -144,7 +144,7 @@ export function RevenueSolutionPage({ page, breadcrumbs }: RevenueSolutionPagePr
   const faqSection = page.faqSection ?? {
     eyebrow: "FAQ",
     title: "Implementation questions buyers ask before rollout.",
-    description: "The answers stay practical, product-specific, and focused on how your team would operate the workflow after launch.",
+    description: "These answers cover practical rollout questions buyers ask before launching this automation workflow.",
   };
   const relatedSection = page.relatedSection ?? {
     eyebrow: "Related pages",

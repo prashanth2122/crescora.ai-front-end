@@ -8780,7 +8780,7 @@ export const industriesSeo: IndustrySeo[] = [
       "Crescora AI can help hospital teams manage appointment enquiries, patient reminders, document requests, billing follow-up, and staff handover with healthcare-specific review controls.",
     focus: "Healthcare front desk, reminders, and document collection.",
     proof: "Best for workflows where patients need fast guidance and staff need clear escalation context.",
-    ctaLabel: "Request healthcare demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "clinics",
@@ -8792,7 +8792,7 @@ export const industriesSeo: IndustrySeo[] = [
       "Crescora AI can help clinics capture appointment requests, confirm patient details, send reminders, collect follow-up needs, and route sensitive cases to staff.",
     focus: "Appointment booking, reminders, and patient follow-up.",
     proof: "Best for clinics that want fewer missed calls and cleaner front-desk coordination.",
-    ctaLabel: "Request healthcare demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "real-estate",
@@ -8804,7 +8804,7 @@ export const industriesSeo: IndustrySeo[] = [
       "Lead qualification, site-visit booking, and follow-up discipline are the main conversion points.",
     focus: "Lead capture, qualification, and visit scheduling.",
     proof: "Best for sales teams that need faster lead response, budget capture, project matching, and site-visit reminders.",
-    ctaLabel: "Request real estate demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "support-teams",
@@ -8816,7 +8816,7 @@ export const industriesSeo: IndustrySeo[] = [
       "Crescora AI can help support teams answer repeated questions, classify issues, collect required details, route tickets, and hand over unresolved cases with context.",
     focus: "Ticket routing, FAQ resolution, and context-rich handoff.",
     proof: "Best for teams that need support automation without losing visibility into open cases and escalations.",
-    ctaLabel: "Request support demo",
+    ctaLabel: "Discuss My Workflow",
   },
   {
     slug: "service-businesses",
