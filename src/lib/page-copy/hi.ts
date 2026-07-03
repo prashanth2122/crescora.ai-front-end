@@ -69,7 +69,7 @@ export const hiPageCopy = {
     metadata: {
       title: "Hindi Solutions Hub | Crescora AI",
       description:
-        "Hindi entry point for solution-led searches covering WhatsApp automation, workflow automation, and customer support automation.",
+        "Hindi entry point for Crescora AI solution pages covering WhatsApp automation, workflow automation, and customer support automation.",
     },
     breadcrumb: [
       { name: "होम", href: "https://www.crescora.ai/hi" },
@@ -77,15 +77,15 @@ export const hiPageCopy = {
     ],
     hero: {
       eyebrow: "समाधान",
-      title: "Product-intent खोजों के लिए Hindi entry point.",
+      title: "Crescora AI solutions के लिए Hindi entry point.",
       description:
-        "यह hub exact search intent को route करता है और bilingual rollout के अगले चरण के लिए base तैयार करता है.",
+        "यह hub teams को WhatsApp automation, workflow automation, और customer support automation समझने में मदद करता है.",
       secondaryCta: "Hindi blog देखें",
     },
     section: {
       eyebrow: "Solution pages",
-      title: "हर card एक commercial keyword cluster को target करता है.",
-      description: "ये pages future Hindi translations के साथ exact product-intent coverage के लिए बने हैं.",
+      title: "हर card एक practical automation solution दिखाता है.",
+      description: "इन pages से teams first workflow, rollout scope, और customer handover path समझ सकती हैं.",
     },
   },
   blog: {
@@ -162,7 +162,7 @@ export const hiPageCopy = {
     metadata: {
       title: "Hindi Workflow Hub | Crescora AI",
       description:
-        "Hindi workflow hub for search-intent pages around WhatsApp, booking, payments, reminders, support, and handoff.",
+        "Hindi workflow hub for WhatsApp, booking, payments, reminders, support, and handoff automation examples.",
     },
     breadcrumb: [
       { name: "होम", href: "https://www.crescora.ai/hi" },
@@ -170,15 +170,15 @@ export const hiPageCopy = {
     ],
     hero: {
       eyebrow: "वर्कफ़्लो",
-      title: "Search-intent workflow pages के लिए Hindi hub.",
+      title: "Hindi workflow automation examples.",
       description:
-        "यह route workflow discovery और future translated workflow pages के लिए practical base layer देता है.",
+        "यह route teams को WhatsApp, booking, payments, reminders, support, और handoff workflows समझने में मदद करता है.",
       secondaryCta: "समाधान देखें",
     },
     section: {
-      eyebrow: "Landing pages",
-      title: "Workflow keywords अभी English page content के साथ routed हैं.",
-      description: "Hindi index structure तैयार है ताकि नए translations उसी path tree पर जा सकें.",
+      eyebrow: "Workflow examples",
+      title: "Start with one practical automation workflow.",
+      description: "Pick a workflow, review the English detail page, and use the contact path to discuss Hindi or local-language rollout scope.",
     },
   },
   industries: {

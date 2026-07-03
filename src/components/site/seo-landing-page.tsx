@@ -111,7 +111,7 @@ export function SeoLandingPage({
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Related pages" title="Connect this page to the right next destination." description="Every page should help readers continue toward the most useful workflow, template, comparison, or demo path." />
+        <SectionHeading eyebrow="Related pages" title="Continue with the most useful next page." description="Choose the workflow, template, comparison, or demo path that best fits your next step." />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {relatedLinks.map((link) => (
             <Card key={link.href} className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
@@ -119,7 +119,7 @@ export function SeoLandingPage({
                 <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{link.label}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{link.description}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={link.href}>Open page</Link>
+                  <Link href={link.href}>View details</Link>
                 </Button>
               </CardContent>
             </Card>

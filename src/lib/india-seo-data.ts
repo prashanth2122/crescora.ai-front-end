@@ -413,7 +413,7 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Mumbai, Pune, and other commercial clusters benefit from workflows around WhatsApp, booking, reminders, billing, payments, and document collection.",
     stateFocus:
-      "High-density commercial and service demand with strong WhatsApp-led buyer intent.",
+      "Service, retail, healthcare, and property teams can start with WhatsApp-led enquiries, booking, and follow-up workflows.",
     workflowSlugs: ["whatsapp-automation", "appointment-booking", "payments"],
     industryFocus: "Hospitals, clinics, and service businesses",
     localProof:
@@ -421,8 +421,8 @@ export const indiaStates: IndiaStateSeo[] = [
     localFaqNote:
       "Marathi and English FAQ coverage can be added when the pilot scope includes those customer journeys.",
     localSeeds: [
-      "à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤®à¤¹à¤¾à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°",
-      "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤®à¤¹à¤¾à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°",
+      "Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤Â®Ã Â¤Â¹Ã Â¤Â¾Ã Â¤Â°Ã Â¤Â¾Ã Â¤Â·Ã Â¥ÂÃ Â¤Å¸Ã Â¥ÂÃ Â¤Â°",
+      "Ã Â¤â€¦Ã Â¤ÂªÃ Â¥â€°Ã Â¤â€¡Ã Â¤â€šÃ Â¤Å¸Ã Â¤Â®Ã Â¥â€¡Ã Â¤â€šÃ Â¤Å¸ Ã Â¤Â¬Ã Â¥ÂÃ Â¤â€¢Ã Â¤Â¿Ã Â¤â€šÃ Â¤â€” Ã Â¤Â®Ã Â¤Â¹Ã Â¤Â¾Ã Â¤Â°Ã Â¤Â¾Ã Â¤Â·Ã Â¥ÂÃ Â¤Å¸Ã Â¥ÂÃ Â¤Â°",
     ],
   },
   {
@@ -434,9 +434,9 @@ export const indiaStates: IndiaStateSeo[] = [
     h1: "Workflow automation for teams in Uttar Pradesh",
     keywordTarget: "whatsapp automation uttar pradesh",
     description:
-      "High-volume service, education, healthcare, and distributed sales operations create strong demand for structured follow-up and booking workflows.",
+      "Service, education, healthcare, and distributed sales teams can use structured follow-up and booking workflows.",
     stateFocus:
-      "Large business base with high commercial volume and Hindi-first demand.",
+      "Regional teams can support Hindi-first enquiries, bookings, reminders, documents, and handover workflows.",
     workflowSlugs: [
       "whatsapp-automation",
       "appointment-booking",
@@ -447,8 +447,8 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use city-specific examples only when the workflow scope and supported service areas are clear.",
     localFaqNote: "English first, then Hindi coverage when the team can support Hindi customer journeys.",
     localSeeds: [
-      "à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤‰à¤¤à¥à¤¤à¤° à¤ªà¥à¤°à¤¦à¥‡à¤¶",
-      "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤‰à¤¤à¥à¤¤à¤° à¤ªà¥à¤°à¤¦à¥‡à¤¶",
+      "Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤â€°Ã Â¤Â¤Ã Â¥ÂÃ Â¤Â¤Ã Â¤Â° Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â°Ã Â¤Â¦Ã Â¥â€¡Ã Â¤Â¶",
+      "Ã Â¤â€¦Ã Â¤ÂªÃ Â¥â€°Ã Â¤â€¡Ã Â¤â€šÃ Â¤Å¸Ã Â¤Â®Ã Â¥â€¡Ã Â¤â€šÃ Â¤Å¸ Ã Â¤Â¬Ã Â¥ÂÃ Â¤â€¢Ã Â¤Â¿Ã Â¤â€šÃ Â¤â€” Ã Â¤â€°Ã Â¤Â¤Ã Â¥ÂÃ Â¤Â¤Ã Â¤Â° Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â°Ã Â¤Â¦Ã Â¥â€¡Ã Â¤Â¶",
     ],
   },
   {
@@ -472,7 +472,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Add Tamil-language examples only when the workflow and support process can handle Tamil customer journeys.",
     localFaqNote: "Use Tamil and English FAQ coverage when those languages are included in the rollout scope.",
-    localSeeds: ["à®µà®¾à®Ÿà¯à®¸à¯à®…à®ªà¯ à®†à®Ÿà¯à®Ÿà¯‹à®®à¯‡à®·à®©à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯", "à®…à®ªà®¾à®¯à®¿à®©à¯à®Ÿà¯à®®à¯†à®£à¯à®Ÿà¯ à®ªà¯à®•à¯à®•à®¿à®™à¯"],
+    localSeeds: ["Ã Â®ÂµÃ Â®Â¾Ã Â®Å¸Ã Â¯ÂÃ Â®Â¸Ã Â¯ÂÃ Â®â€¦Ã Â®ÂªÃ Â¯Â Ã Â®â€ Ã Â®Å¸Ã Â¯ÂÃ Â®Å¸Ã Â¯â€¹Ã Â®Â®Ã Â¯â€¡Ã Â®Â·Ã Â®Â©Ã Â¯Â Ã Â®Â¤Ã Â®Â®Ã Â®Â¿Ã Â®Â´Ã Â¯ÂÃ Â®Â¨Ã Â®Â¾Ã Â®Å¸Ã Â¯Â", "Ã Â®â€¦Ã Â®ÂªÃ Â®Â¾Ã Â®Â¯Ã Â®Â¿Ã Â®Â©Ã Â¯ÂÃ Â®Å¸Ã Â¯ÂÃ Â®Â®Ã Â¯â€ Ã Â®Â£Ã Â¯ÂÃ Â®Å¸Ã Â¯Â Ã Â®ÂªÃ Â¯ÂÃ Â®â€¢Ã Â¯ÂÃ Â®â€¢Ã Â®Â¿Ã Â®â„¢Ã Â¯Â"],
   },
   {
     slug: "west-bengal",
@@ -485,14 +485,14 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Kolkata and nearby commercial areas can use hospital and service workflow pages with Bengali FAQ support and local proof.",
     stateFocus:
-      "Healthcare and service-business demand with Bengali-first opportunity.",
+      "Healthcare and service businesses can support Bengali-first enquiries, reminders, and handover workflows.",
     workflowSlugs: ["appointment-booking", "reminders", "customer-support"],
     industryFocus: "Hospitals, clinics, and service businesses",
     localProof:
       "Use Bengali examples only where the team can support Bengali customer conversations and handover.",
     localFaqNote:
       "Combine Bengali and English FAQs where they match the actual customer support scope.",
-    localSeeds: ["à¦¹à§‹à¦¯à¦¼à¦¾à¦Ÿà¦¸à¦…à§à¦¯à¦¾à¦ª à¦…à¦Ÿà§‹à¦®à§‡à¦¶à¦¨ à¦ªà¦¶à§à¦šà¦¿à¦®à¦¬à¦™à§à¦—", "à¦…à§à¦¯à¦¾à¦ªà¦¯à¦¼à§‡à¦¨à§à¦Ÿà¦®à§‡à¦¨à§à¦Ÿ à¦¬à§à¦•à¦¿à¦‚"],
+    localSeeds: ["Ã Â¦Â¹Ã Â§â€¹Ã Â¦Â¯Ã Â¦Â¼Ã Â¦Â¾Ã Â¦Å¸Ã Â¦Â¸Ã Â¦â€¦Ã Â§ÂÃ Â¦Â¯Ã Â¦Â¾Ã Â¦Âª Ã Â¦â€¦Ã Â¦Å¸Ã Â§â€¹Ã Â¦Â®Ã Â§â€¡Ã Â¦Â¶Ã Â¦Â¨ Ã Â¦ÂªÃ Â¦Â¶Ã Â§ÂÃ Â¦Å¡Ã Â¦Â¿Ã Â¦Â®Ã Â¦Â¬Ã Â¦â„¢Ã Â§ÂÃ Â¦â€”", "Ã Â¦â€¦Ã Â§ÂÃ Â¦Â¯Ã Â¦Â¾Ã Â¦ÂªÃ Â¦Â¯Ã Â¦Â¼Ã Â§â€¡Ã Â¦Â¨Ã Â§ÂÃ Â¦Å¸Ã Â¦Â®Ã Â§â€¡Ã Â¦Â¨Ã Â§ÂÃ Â¦Å¸ Ã Â¦Â¬Ã Â§ÂÃ Â¦â€¢Ã Â¦Â¿Ã Â¦â€š"],
   },
   {
     slug: "karnataka",
@@ -505,13 +505,13 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Bengaluru and broader Karnataka demand support-team automation, knowledge-base use cases, and observability-rich workflows.",
     stateFocus:
-      "Strong SaaS, service, and support-team demand with Kannada FAQ potential.",
+      "SaaS, service, and support teams can use Kannada-aware FAQ, routing, and handover workflows.",
     workflowSlugs: ["customer-support", "human-handoff", "reminders"],
     industryFocus: "Support teams and service businesses",
     localProof:
       "Use workflow visibility examples and Kannada FAQ coverage only when they match the implementation scope.",
     localFaqNote: "Kannada + English FAQs are a priority localized module.",
-    localSeeds: ["à²µà²¾à²Ÿà³à²¸à²¾à²ªà³ à²†à²Ÿà³‹à²®à³‡à²·à²¨à³ à²•à²°à³à²¨à²¾à²Ÿà²•", "à²¸à²ªà³‹à²°à³à²Ÿà³ à²¬à²¾à²Ÿà³ à²•à²°à³à²¨à²¾à²Ÿà²•"],
+    localSeeds: ["Ã Â²ÂµÃ Â²Â¾Ã Â²Å¸Ã Â³ÂÃ Â²Â¸Ã Â²Â¾Ã Â²ÂªÃ Â³Â Ã Â²â€ Ã Â²Å¸Ã Â³â€¹Ã Â²Â®Ã Â³â€¡Ã Â²Â·Ã Â²Â¨Ã Â³Â Ã Â²â€¢Ã Â²Â°Ã Â³ÂÃ Â²Â¨Ã Â²Â¾Ã Â²Å¸Ã Â²â€¢", "Ã Â²Â¸Ã Â²ÂªÃ Â³â€¹Ã Â²Â°Ã Â³ÂÃ Â²Å¸Ã Â³Â Ã Â²Â¬Ã Â²Â¾Ã Â²Å¸Ã Â³Â Ã Â²â€¢Ã Â²Â°Ã Â³ÂÃ Â²Â¨Ã Â²Â¾Ã Â²Å¸Ã Â²â€¢"],
   },
   {
     slug: "madhya-pradesh",
@@ -524,14 +524,14 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Service and trading teams in Madhya Pradesh often need support, reminders, appointments, billing, and document collection in one workflow path.",
     stateFocus:
-      "Broad Hindi-first commercial demand and high utility for workflow pages.",
+      "Hindi-first teams can start with booking, support, reminder, and document workflows.",
     workflowSlugs: ["whatsapp-automation", "payments", "document-collection"],
     industryFocus: "Service businesses and healthcare",
     localProof: "Use regional examples and Hindi support where the workflow can route enquiries, bookings, and follow-ups reliably.",
     localFaqNote: "Local proof beats generic feature claims for this state.",
     localSeeds: [
-      "à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤®à¤§à¥à¤¯ à¤ªà¥à¤°à¤¦à¥‡à¤¶",
-      "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤®à¤§à¥à¤¯ à¤ªà¥à¤°à¤¦à¥‡à¤¶",
+      "Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤Â®Ã Â¤Â§Ã Â¥ÂÃ Â¤Â¯ Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â°Ã Â¤Â¦Ã Â¥â€¡Ã Â¤Â¶",
+      "Ã Â¤â€¦Ã Â¤ÂªÃ Â¥â€°Ã Â¤â€¡Ã Â¤â€šÃ Â¤Å¸Ã Â¤Â®Ã Â¥â€¡Ã Â¤â€šÃ Â¤Å¸ Ã Â¤Â¬Ã Â¥ÂÃ Â¤â€¢Ã Â¤Â¿Ã Â¤â€šÃ Â¤â€” Ã Â¤Â®Ã Â¤Â§Ã Â¥ÂÃ Â¤Â¯ Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â°Ã Â¤Â¦Ã Â¥â€¡Ã Â¤Â¶",
     ],
   },
   {
@@ -552,7 +552,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use local examples and FAQs that reflect real service workflows rather than generic platform claims.",
     localFaqNote:
       "Keep the page English-first until Hindi coverage is part of the actual support scope.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤°à¤¾à¤œà¤¸à¥à¤¥à¤¾à¤¨", "à¤°à¤¿à¤®à¤¾à¤‡à¤‚à¤¡à¤° à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤Â°Ã Â¤Â¾Ã Â¤Å“Ã Â¤Â¸Ã Â¥ÂÃ Â¤Â¥Ã Â¤Â¾Ã Â¤Â¨", "Ã Â¤Â°Ã Â¤Â¿Ã Â¤Â®Ã Â¤Â¾Ã Â¤â€¡Ã Â¤â€šÃ Â¤Â¡Ã Â¤Â° Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨"],
   },
   {
     slug: "gujarat",
@@ -565,12 +565,12 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Gujarat benefits from workflow pages focused on support, billing, reminders, and document collection for trading and service businesses.",
     stateFocus:
-      "Business-heavy service demand with Gujarati, Hindi, and English customer communication needs.",
+      "Service teams can support Gujarati, Hindi, and English customer communication from one workflow layer.",
     workflowSlugs: ["payments", "document-collection", "customer-support"],
     industryFocus: "Service businesses and billing/collections",
     localProof: "Use Gujarati and English FAQ coverage only when those languages are supported in the workflow.",
     localFaqNote: "English first, then Gujarati or Hindi when the rollout scope includes those conversations.",
-    localSeeds: ["àªµà«‹àªŸà«àª¸àªàªª àª“àªŸà«‹àª®à«‡àª¶àª¨ àª—à«àªœàª°àª¾àª¤", "àªªà«‡àª®à«‡àª¨à«àªŸ àª°àª¿àª®àª¾àª‡àª¨à«àª¡àª°"],
+    localSeeds: ["Ã ÂªÂµÃ Â«â€¹Ã ÂªÅ¸Ã Â«ÂÃ ÂªÂ¸Ã ÂªÂÃ ÂªÂª Ã Âªâ€œÃ ÂªÅ¸Ã Â«â€¹Ã ÂªÂ®Ã Â«â€¡Ã ÂªÂ¶Ã ÂªÂ¨ Ã Âªâ€”Ã Â«ÂÃ ÂªÅ“Ã ÂªÂ°Ã ÂªÂ¾Ã ÂªÂ¤", "Ã ÂªÂªÃ Â«â€¡Ã ÂªÂ®Ã Â«â€¡Ã ÂªÂ¨Ã Â«ÂÃ ÂªÅ¸ Ã ÂªÂ°Ã ÂªÂ¿Ã ÂªÂ®Ã ÂªÂ¾Ã Âªâ€¡Ã ÂªÂ¨Ã Â«ÂÃ ÂªÂ¡Ã ÂªÂ°"],
   },
   {
     slug: "bihar",
@@ -583,7 +583,7 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Bihar teams often need clear workflows around booking, support, reminders, collections, and staff handover.",
     stateFocus:
-      "Large Hindi-first demand with straightforward workflow intent.",
+      "Hindi-first teams can begin with simple enquiry, booking, reminder, and support workflows.",
     workflowSlugs: [
       "whatsapp-automation",
       "appointment-booking",
@@ -593,7 +593,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof: "Use practical examples tied to bookings, support, reminders, and handover.",
     localFaqNote:
       "Hindi modules can be added when the team is ready to support Hindi customer journeys.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤¬à¤¿à¤¹à¤¾à¤°", "à¤…à¤ªà¥‰à¤‡à¤‚à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤¬à¥à¤•à¤¿à¤‚à¤— à¤¬à¤¿à¤¹à¤¾à¤°"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤Â¬Ã Â¤Â¿Ã Â¤Â¹Ã Â¤Â¾Ã Â¤Â°", "Ã Â¤â€¦Ã Â¤ÂªÃ Â¥â€°Ã Â¤â€¡Ã Â¤â€šÃ Â¤Å¸Ã Â¤Â®Ã Â¥â€¡Ã Â¤â€šÃ Â¤Å¸ Ã Â¤Â¬Ã Â¥ÂÃ Â¤â€¢Ã Â¤Â¿Ã Â¤â€šÃ Â¤â€” Ã Â¤Â¬Ã Â¤Â¿Ã Â¤Â¹Ã Â¤Â¾Ã Â¤Â°"],
   },
   {
     slug: "andhra-pradesh",
@@ -606,7 +606,7 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "Andhra Pradesh teams often need bookings, reminders, document collection, and handoff workflows with Telugu, Hindi, and English support.",
     stateFocus:
-      "Telugu-first regional opportunity with strong appointment and support workflows.",
+      "Telugu-first teams can start with appointment, support, reminder, and document workflows.",
     workflowSlugs: [
       "appointment-booking",
       "document-collection",
@@ -616,7 +616,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof: "Use Telugu FAQ coverage and regional examples only when they match the supported workflow.",
     localFaqNote:
       "Add Telugu and English local modules when those languages are included in the rollout scope.",
-    localSeeds: ["à°µà°¾à°Ÿà±à°¸à°¾à°ªà± à°†à°Ÿà±‹à°®à±‡à°·à°¨à± à°†à°‚à°§à±à°°à°ªà±à°°à°¦à±‡à°¶à±", "à°…à°ªà°¾à°¯à°¿à°‚à°Ÿà±à°®à±†à°‚à°Ÿà± à°¬à±à°•à°¿à°‚à°—à±"],
+    localSeeds: ["Ã Â°ÂµÃ Â°Â¾Ã Â°Å¸Ã Â±ÂÃ Â°Â¸Ã Â°Â¾Ã Â°ÂªÃ Â±Â Ã Â°â€ Ã Â°Å¸Ã Â±â€¹Ã Â°Â®Ã Â±â€¡Ã Â°Â·Ã Â°Â¨Ã Â±Â Ã Â°â€ Ã Â°â€šÃ Â°Â§Ã Â±ÂÃ Â°Â°Ã Â°ÂªÃ Â±ÂÃ Â°Â°Ã Â°Â¦Ã Â±â€¡Ã Â°Â¶Ã Â±Â", "Ã Â°â€¦Ã Â°ÂªÃ Â°Â¾Ã Â°Â¯Ã Â°Â¿Ã Â°â€šÃ Â°Å¸Ã Â±ÂÃ Â°Â®Ã Â±â€ Ã Â°â€šÃ Â°Å¸Ã Â±Â Ã Â°Â¬Ã Â±ÂÃ Â°â€¢Ã Â°Â¿Ã Â°â€šÃ Â°â€”Ã Â±Â"],
   },
   {
     slug: "telangana",
@@ -628,13 +628,13 @@ export const indiaStates: IndiaStateSeo[] = [
     keywordTarget: "whatsapp automation telangana",
     description:
       "Hyderabad-centered pages can emphasize sales, support, billing, document collection, and payment follow-up workflows.",
-    stateFocus: "High-value SaaS, service, and collections intent.",
+    stateFocus: "SaaS, service, and collections teams can start with controlled follow-up workflows.",
     workflowSlugs: ["whatsapp-automation", "payments", "document-collection"],
     industryFocus: "Support teams and billing/collections",
     localProof:
       "Include Telugu FAQ coverage and workflow examples where they match service coverage and team readiness.",
     localFaqNote: "Telugu + English modules are a near-term priority.",
-    localSeeds: ["à°µà°¾à°Ÿà±à°¸à°¾à°ªà± à°†à°Ÿà±‹à°®à±‡à°·à°¨à± à°¤à±†à°²à°‚à°—à°¾à°£", "à°ªà±‡à°®à±†à°‚à°Ÿà± à°°à°¿à°®à±ˆà°‚à°¡à°°à±"],
+    localSeeds: ["Ã Â°ÂµÃ Â°Â¾Ã Â°Å¸Ã Â±ÂÃ Â°Â¸Ã Â°Â¾Ã Â°ÂªÃ Â±Â Ã Â°â€ Ã Â°Å¸Ã Â±â€¹Ã Â°Â®Ã Â±â€¡Ã Â°Â·Ã Â°Â¨Ã Â±Â Ã Â°Â¤Ã Â±â€ Ã Â°Â²Ã Â°â€šÃ Â°â€”Ã Â°Â¾Ã Â°Â£", "Ã Â°ÂªÃ Â±â€¡Ã Â°Â®Ã Â±â€ Ã Â°â€šÃ Â°Å¸Ã Â±Â Ã Â°Â°Ã Â°Â¿Ã Â°Â®Ã Â±Ë†Ã Â°â€šÃ Â°Â¡Ã Â°Â°Ã Â±Â"],
   },
   {
     slug: "odisha",
@@ -654,7 +654,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use localized FAQs and examples only when they match real Odia or English workflow support.",
     localFaqNote:
       "Keep the page English-first and add Odia when the rollout scope includes Odia customer journeys.",
-    localSeeds: ["à°µà°¾à°Ÿà±à°¸à°¾à°ªà± à°†à°Ÿà±‹à°®à±‡à°·à°¨à± à°’à°¡à°¿à°¶à°¾", "à°…à°ªà±à°ªà°¾à°¯à°¿à°‚à°Ÿà±à°®à±†à°‚à°Ÿà± à°¬à±à°•à°¿à°‚à°—à±"],
+    localSeeds: ["Ã Â°ÂµÃ Â°Â¾Ã Â°Å¸Ã Â±ÂÃ Â°Â¸Ã Â°Â¾Ã Â°ÂªÃ Â±Â Ã Â°â€ Ã Â°Å¸Ã Â±â€¹Ã Â°Â®Ã Â±â€¡Ã Â°Â·Ã Â°Â¨Ã Â±Â Ã Â°â€™Ã Â°Â¡Ã Â°Â¿Ã Â°Â¶Ã Â°Â¾", "Ã Â°â€¦Ã Â°ÂªÃ Â±ÂÃ Â°ÂªÃ Â°Â¾Ã Â°Â¯Ã Â°Â¿Ã Â°â€šÃ Â°Å¸Ã Â±ÂÃ Â°Â®Ã Â±â€ Ã Â°â€šÃ Â°Å¸Ã Â±Â Ã Â°Â¬Ã Â±ÂÃ Â°â€¢Ã Â°Â¿Ã Â°â€šÃ Â°â€”Ã Â±Â"],
   },
   {
     slug: "jammu-and-kashmir",
@@ -673,7 +673,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Keep the page compact and only add unique regional proof when available.",
     localFaqNote: "English first, Hindi only after validated demand.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤œà¤®à¥à¤®à¥‚ à¤•à¤¶à¥à¤®à¥€à¤°"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤Å“Ã Â¤Â®Ã Â¥ÂÃ Â¤Â®Ã Â¥â€š Ã Â¤â€¢Ã Â¤Â¶Ã Â¥ÂÃ Â¤Â®Ã Â¥â‚¬Ã Â¤Â°"],
   },
   {
     slug: "uttarakhand",
@@ -686,13 +686,13 @@ export const indiaStates: IndiaStateSeo[] = [
     description:
       "English-first state coverage that can expand into Hindi workflow modules when the team can support Hindi customer journeys.",
     stateFocus:
-      "Compact hub for hospitality, healthcare, and service workflow intent.",
+      "Hospitality, healthcare, and service teams can start with practical booking and support workflows.",
     workflowSlugs: ["appointment-booking", "reminders"],
     industryFocus: "Healthcare and service businesses",
     localProof:
       "Use state-specific examples without making the page a duplicate of the India hub.",
     localFaqNote: "Hindi modules only when Hindi is part of the supported workflow scope.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤‰à¤¤à¥à¤¤à¤°à¤¾à¤–à¤‚à¤¡"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤â€°Ã Â¤Â¤Ã Â¥ÂÃ Â¤Â¤Ã Â¤Â°Ã Â¤Â¾Ã Â¤â€“Ã Â¤â€šÃ Â¤Â¡"],
   },
   {
     slug: "himachal-pradesh",
@@ -710,7 +710,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Do not publish thin clone pages; keep the page compact and useful.",
     localFaqNote: "Hindi variants only after demand is visible.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤¹à¤¿à¤®à¤¾à¤šà¤² à¤ªà¥à¤°à¤¦à¥‡à¤¶"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤Â¹Ã Â¤Â¿Ã Â¤Â®Ã Â¤Â¾Ã Â¤Å¡Ã Â¤Â² Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â°Ã Â¤Â¦Ã Â¥â€¡Ã Â¤Â¶"],
   },
   {
     slug: "tripura",
@@ -729,7 +729,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Add Bengali FAQ modules and localized examples once pages gain traction.",
     localFaqNote: "English first, Bengali modules as demand grows.",
-    localSeeds: ["à¦¹à§‹à¦¯à¦¼à¦¾à¦Ÿà¦¸à¦…à§à¦¯à¦¾à¦ª à¦…à¦Ÿà§‹à¦®à§‡à¦¶à¦¨ à¦¤à§à¦°à¦¿à¦ªà§à¦°à¦¾"],
+    localSeeds: ["Ã Â¦Â¹Ã Â§â€¹Ã Â¦Â¯Ã Â¦Â¼Ã Â¦Â¾Ã Â¦Å¸Ã Â¦Â¸Ã Â¦â€¦Ã Â§ÂÃ Â¦Â¯Ã Â¦Â¾Ã Â¦Âª Ã Â¦â€¦Ã Â¦Å¸Ã Â§â€¹Ã Â¦Â®Ã Â§â€¡Ã Â¦Â¶Ã Â¦Â¨ Ã Â¦Â¤Ã Â§ÂÃ Â¦Â°Ã Â¦Â¿Ã Â¦ÂªÃ Â§ÂÃ Â¦Â°Ã Â¦Â¾"],
   },
   {
     slug: "goa",
@@ -748,7 +748,7 @@ export const indiaStates: IndiaStateSeo[] = [
       "Use local business examples only when they are distinct from the India hub.",
     localFaqNote:
       "Add Konkani or Hindi only when those languages are part of the supported customer journey.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤—à¥‹à¤µà¤¾"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤â€”Ã Â¥â€¹Ã Â¤ÂµÃ Â¤Â¾"],
   },
   {
     slug: "puducherry",
@@ -767,7 +767,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Localized proof and Tamil FAQ modules should be added carefully.",
     localFaqNote: "English first; add Tamil when the rollout scope includes Tamil customer journeys.",
-    localSeeds: ["à®µà®¾à®Ÿà¯à®¸à¯à®…à®ªà¯ à®†à®Ÿà¯à®Ÿà¯‹à®®à¯‡à®·à®©à¯ à®ªà¯à®¤à¯à®šà¯à®šà¯‡à®°à®¿"],
+    localSeeds: ["Ã Â®ÂµÃ Â®Â¾Ã Â®Å¸Ã Â¯ÂÃ Â®Â¸Ã Â¯ÂÃ Â®â€¦Ã Â®ÂªÃ Â¯Â Ã Â®â€ Ã Â®Å¸Ã Â¯ÂÃ Â®Å¸Ã Â¯â€¹Ã Â®Â®Ã Â¯â€¡Ã Â®Â·Ã Â®Â©Ã Â¯Â Ã Â®ÂªÃ Â¯ÂÃ Â®Â¤Ã Â¯ÂÃ Â®Å¡Ã Â¯ÂÃ Â®Å¡Ã Â¯â€¡Ã Â®Â°Ã Â®Â¿"],
   },
   {
     slug: "chandigarh",
@@ -785,7 +785,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Add Punjabi and Hindi modules when those languages are part of the supported customer journey.",
     localFaqNote: "English first, local languages later.",
-    localSeeds: ["à¨µà¨¾à¨Ÿà¨¸à¨à¨ª à¨†à¨Ÿà©‹à¨®à©‡à¨¸à¨¼à¨¨ à¨šà©°à¨¡à©€à¨—à©œà©à¨¹"],
+    localSeeds: ["Ã Â¨ÂµÃ Â¨Â¾Ã Â¨Å¸Ã Â¨Â¸Ã Â¨ÂÃ Â¨Âª Ã Â¨â€ Ã Â¨Å¸Ã Â©â€¹Ã Â¨Â®Ã Â©â€¡Ã Â¨Â¸Ã Â¨Â¼Ã Â¨Â¨ Ã Â¨Å¡Ã Â©Â°Ã Â¨Â¡Ã Â©â‚¬Ã Â¨â€”Ã Â©Å“Ã Â©ÂÃ Â¨Â¹"],
   },
   {
     slug: "manipur",
@@ -870,7 +870,7 @@ export const indiaStates: IndiaStateSeo[] = [
     industryFocus: "Service businesses",
     localProof: "Only expand with unique proof and demand evidence.",
     localFaqNote: "English first; Hindi when the workflow support scope includes Hindi customer journeys.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤…à¤°à¥à¤£à¤¾à¤šà¤² à¤ªà¥à¤°à¤¦à¥‡à¤¶"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤â€¦Ã Â¤Â°Ã Â¥ÂÃ Â¤Â£Ã Â¤Â¾Ã Â¤Å¡Ã Â¤Â² Ã Â¤ÂªÃ Â¥ÂÃ Â¤Â°Ã Â¤Â¦Ã Â¥â€¡Ã Â¤Â¶"],
   },
   {
     slug: "sikkim",
@@ -905,7 +905,7 @@ export const indiaStates: IndiaStateSeo[] = [
     localProof:
       "Use local business context only if it is meaningfully distinct.",
     localFaqNote: "English first, Hindi modules only when justified.",
-    localSeeds: ["à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤‘à¤Ÿà¥‹à¤®à¥‡à¤¶à¤¨ à¤…à¤‚à¤¡à¤®à¤¾à¤¨"],
+    localSeeds: ["Ã Â¤ÂµÃ Â¥ÂÃ Â¤Â¹Ã Â¤Â¾Ã Â¤Å¸Ã Â¥ÂÃ Â¤Â¸Ã Â¤ÂÃ Â¤Âª Ã Â¤â€˜Ã Â¤Å¸Ã Â¥â€¹Ã Â¤Â®Ã Â¥â€¡Ã Â¤Â¶Ã Â¤Â¨ Ã Â¤â€¦Ã Â¤â€šÃ Â¤Â¡Ã Â¤Â®Ã Â¤Â¾Ã Â¤Â¨"],
   },
   {
     slug: "ladakh",
@@ -939,7 +939,7 @@ export const indiaStates: IndiaStateSeo[] = [
     industryFocus: "Service businesses",
     localProof: "Distinct proof is required before adding more content.",
     localFaqNote: "English first; Gujarati or Hindi when those languages are supported in the rollout.",
-    localSeeds: ["àªµà«‹àªŸà«àª¸àªàªª àª“àªŸà«‹àª®à«‡àª¶àª¨ àª¦àª®àª£ àª…àª¨à«‡ àª¦àª¿àª¯à«"],
+    localSeeds: ["Ã ÂªÂµÃ Â«â€¹Ã ÂªÅ¸Ã Â«ÂÃ ÂªÂ¸Ã ÂªÂÃ ÂªÂª Ã Âªâ€œÃ ÂªÅ¸Ã Â«â€¹Ã ÂªÂ®Ã Â«â€¡Ã ÂªÂ¶Ã ÂªÂ¨ Ã ÂªÂ¦Ã ÂªÂ®Ã ÂªÂ£ Ã Âªâ€¦Ã ÂªÂ¨Ã Â«â€¡ Ã ÂªÂ¦Ã ÂªÂ¿Ã ÂªÂ¯Ã Â«Â"],
   },
   {
     slug: "lakshadweep",
@@ -4243,7 +4243,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "WhatsApp automation template",
     headline: "Start with a practical WhatsApp workflow structure.",
     description:
-      "A launch-ready WhatsApp template for lead capture, booking, reminders, support, payment follow-up, document requests, and human handover.",
+      "A pilot-ready WhatsApp template for lead capture, booking, reminders, support, payment follow-up, document requests, and human handover.",
     included: [
       "Greeting and intent capture",
       "Lead qualification",
@@ -4384,7 +4384,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should make the operational shift obvious: from manual inbox handling to a structured workflow that captures context and moves each conversation forward.",
+          "Show the operational shift clearly: from manual inbox handling to a structured workflow that captures context and moves each conversation forward.",
         rows: [
           {
             before: "WhatsApp messages pile up in a shared inbox",
@@ -4540,7 +4540,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "clinic appointment booking template",
     headline: "Launch a clinic-ready appointment workflow for patient enquiries, reminders, and handover.",
     description:
-      "A launch-ready clinic template for appointment enquiries, patient intake, slot confirmation, reminders, fee follow-up, rescheduling, and staff handover.",
+      "A pilot-ready clinic template for appointment enquiries, patient intake, slot confirmation, reminders, fee follow-up, rescheduling, and staff handover.",
     included: [
       "Patient enquiry capture",
       "Patient details collection",
@@ -4689,7 +4689,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should make the operational shift obvious: from manual front-desk handling to a structured workflow that keeps appointment status visible.",
+          "Show the operational shift clearly: from manual front-desk handling to a structured workflow that keeps appointment status visible.",
         rows: [
           {
             before: "Front desk answers repeated appointment questions manually",
@@ -4852,7 +4852,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "payment reminder template",
     headline: "Launch a payment reminder template for collections, failed payments, and follow-ups.",
     description:
-      "A launch-ready payment template for reminders, payment links, failed-payment recovery, overdue escalation, and billing handover.",
+      "A pilot-ready payment template for reminders, payment links, failed-payment recovery, overdue escalation, and billing handover.",
     included: [
       "Payment due reminder",
       "Payment link or instruction sharing",
@@ -4995,7 +4995,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show how the workflow changes payment follow-up from manual chasing to structured collection management.",
+          "Show how the workflow changes payment follow-up from manual chasing to structured collection management.",
         rows: [
           {
             before: "Staff manually chase customers for pending payments",
@@ -5155,7 +5155,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "document collection template",
     headline: "Launch a document collection template for KYC, intake, missing files, and review workflows.",
     description:
-      "A launch-ready document template for KYC intake, missing files, review routing, approval steps, and customer follow-ups.",
+      "A pilot-ready document template for KYC intake, missing files, review routing, approval steps, and customer follow-ups.",
     included: [
       "Document request workflow",
       "Clear upload instructions",
@@ -5208,7 +5208,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Collect documents over chat without manual chasing.",
           description:
             "This template gives your team a structured starting point for document workflows: request required files, explain upload instructions, collect references, track missing documents, send reminders, and move accepted submissions to the next step.",
@@ -5298,7 +5298,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the operational shift from manual chasing to a structured, trackable document workflow.",
+          "Show the operational shift from manual chasing to a structured, trackable document workflow.",
         rows: [
           {
             before: "Staff repeatedly ask customers for missing documents",
@@ -5458,7 +5458,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "support bot template",
     headline: "Launch a customer support bot template for FAQ resolution, issue triage, and human handover.",
     description:
-      "A launch-ready support template for FAQ resolution, issue triage, human handover, and support visibility.",
+      "A pilot-ready support template for FAQ resolution, issue triage, human handover, and support visibility.",
     included: [
       "FAQ resolution paths",
       "Issue routing rules",
@@ -5522,7 +5522,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Resolve repetitive queries and escalate the rest clearly.",
           description:
             "This template gives your team a structured starting point for support automation: FAQ paths, issue categories, customer detail capture, fallback responses, priority routing, human handover, and support outcome tracking.",
@@ -5611,7 +5611,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from repetitive manual support to a structured, visible support workflow.",
+          "Show the shift from repetitive manual support to a structured, visible support workflow.",
         rows: [
           {
             before: "Agents answer the same questions repeatedly",
@@ -5764,7 +5764,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "knowledge assistant template",
     headline: "Launch a knowledge assistant template for approved answers, FAQ automation, and human handover.",
     description:
-      "A launch-ready knowledge assistant template for approved answers, fallback handling, gap detection, draft review, and human handover.",
+      "A pilot-ready knowledge assistant template for approved answers, fallback handling, gap detection, draft review, and human handover.",
     included: [
       "Approved knowledge search",
       "Grounded answer generation",
@@ -5817,7 +5817,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Answer from approved knowledge, then hand off when needed.",
           description:
             "This template gives your team a structured starting point for knowledge automation: customer question capture, approved knowledge search, grounded answer generation, confidence check, fallback message, human handover, and knowledge gap tracking.",
@@ -5906,7 +5906,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from repetitive manual answers to a structured, controlled knowledge workflow.",
+          "Show the shift from repetitive manual answers to a structured, controlled knowledge workflow.",
         rows: [
           {
             before: "Agents answer the same questions repeatedly",
@@ -6077,7 +6077,7 @@ export const templates: TemplateSeo[] = [
     keywordTarget: "service business booking template",
     headline: "Launch a service booking template for enquiries, appointments, reminders, payments, and follow-ups.",
     description:
-      "A launch-ready service booking template for enquiry capture, booking confirmation, reminders, payment follow-up, staff handover, and repeat-service workflows.",
+      "A pilot-ready service booking template for enquiry capture, booking confirmation, reminders, payment follow-up, staff handover, and repeat-service workflows.",
     included: [
       "Service booking request workflow",
       "Customer detail capture",
@@ -6134,7 +6134,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Turn enquiries into confirmed bookings with reminders built in.",
           description:
             "This template gives your team a structured starting point for service booking automation: enquiry capture, service type, customer details, location, preferred date and time, booking confirmation, reminder messages, payment follow-up, staff handover, and outcome tracking.",
@@ -6231,7 +6231,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual service coordination to a structured, trackable booking workflow.",
+          "Show the shift from manual service coordination to a structured, trackable booking workflow.",
         rows: [
           {
             before: "Enquiries arrive across calls, WhatsApp, forms, and website chat",
@@ -6401,7 +6401,7 @@ export const templates: TemplateSeo[] = [
     headline:
       "Launch a billing and collections template for reminders, payment follow-ups, overdue cases, and exception handover.",
     description:
-      "A launch-ready billing workflow template for payment reminders, invoice follow-ups, failed-payment recovery, overdue escalation, dispute routing, and collection tracking.",
+      "A pilot-ready billing workflow template for payment reminders, invoice follow-ups, failed-payment recovery, overdue escalation, dispute routing, and collection tracking.",
     included: [
       "Billing reminder workflow",
       "Payment link sharing",
@@ -6473,7 +6473,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Automate billing reminders, follow-ups, and exception handling.",
           description:
             "This template gives your team a structured starting point for billing workflows: payment due reminders, payment link sharing, reference capture, confirmation messages, failed-payment recovery, overdue escalation, billing handover, and collection status tracking.",
@@ -6568,7 +6568,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual chasing to a structured, trackable billing workflow.",
+          "Show the shift from manual chasing to a structured, trackable billing workflow.",
         rows: [
           {
             before: "Staff manually chase customers for payments",
@@ -6742,7 +6742,7 @@ export const templates: TemplateSeo[] = [
     headline:
       "Launch a conversation observability dashboard template for workflow visibility, leakage tracking, and outcome reporting.",
     description:
-      "A launch-ready observability dashboard template for tracking customer conversations, workflow stages, handovers, SLA risk, drop-offs, follow-ups, escalations, and completed outcomes.",
+      "A pilot-ready observability dashboard template for tracking customer conversations, workflow stages, handovers, SLA risk, drop-offs, follow-ups, escalations, and completed outcomes.",
     included: [
       "Conversation queue visibility",
       "Workflow funnel tracking",
@@ -6811,7 +6811,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "See resolution, leakage, escalation, and conversion in one view.",
           description:
             "This template gives your team a structured starting point for conversation visibility: open conversations, workflow stages, handovers, queue pressure, SLA risk, drop-offs, completed outcomes, and follow-up leakage.",
@@ -6900,7 +6900,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual reporting to a structured, trackable dashboard workflow.",
+          "Show the shift from manual reporting to a structured, trackable dashboard workflow.",
         rows: [
           {
             before: "Managers rely on manual updates from teams",
@@ -7144,7 +7144,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Publish a hospital-ready Workflow that handles appointments, reminders, and handoff.",
           description:
             "This template gives your team a structured starting point for hospital appointment automation: patient intent capture, department or doctor routing, patient details, slot selection, appointment confirmation, reminders, payment follow-up, rescheduling, and staff handover.",
@@ -7244,7 +7244,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual appointment handling to a structured, trackable hospital booking workflow.",
+          "Show the shift from manual appointment handling to a structured, trackable hospital booking workflow.",
         rows: [
           {
             before: "Front desk answers repeated appointment questions manually",
@@ -7424,7 +7424,7 @@ export const templates: TemplateSeo[] = [
     headline:
       "Launch a real estate lead follow-up workflow for property enquiries, site visits, and sales handover.",
     description:
-      "A launch-ready workflow template for property enquiries, lead qualification, project sharing, callback requests, site visit booking, sales rep assignment, reminders, and lead status tracking.",
+      "A pilot-ready workflow template for property enquiries, lead qualification, project sharing, callback requests, site visit booking, sales rep assignment, reminders, and lead status tracking.",
     included: [
       "Property enquiry capture",
       "Buyer qualification",
@@ -7494,7 +7494,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Move property leads from enquiry to visit booking and follow-up.",
           description:
             "This template gives your team a structured starting point for real estate follow-up: enquiry capture, buyer qualification, budget and location filters, project interest, callback request, site visit scheduling, sales rep assignment, reminder messages, and lead outcome tracking.",
@@ -7589,7 +7589,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual follow-up to a structured, trackable real estate lead workflow.",
+          "Show the shift from manual follow-up to a structured, trackable real estate lead workflow.",
         rows: [
           {
             before: "Leads come from ads, WhatsApp, forms, calls, and social channels",
@@ -7760,7 +7760,7 @@ export const templates: TemplateSeo[] = [
     headline:
       "Launch a customer support FAQ workflow for approved answers, issue triage, and human escalation.",
     description:
-      "A launch-ready workflow template for FAQ automation, approved answers, issue triage, fallback handling, human escalation, status updates, and support visibility.",
+      "A pilot-ready workflow template for FAQ automation, approved answers, issue triage, fallback handling, human escalation, status updates, and support visibility.",
     included: [
       "FAQ question capture",
       "Approved answer Workflow",
@@ -7828,7 +7828,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Answer repeated support questions and escalate unresolved cases clearly.",
           description:
             "This template gives your team a structured starting point for customer support FAQ automation: question capture, approved answer lookup, fallback response, issue category routing, customer detail capture, human escalation, and support outcome tracking.",
@@ -7917,7 +7917,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from repetitive manual answering to a structured, trackable support FAQ workflow.",
+          "Show the shift from repetitive manual answering to a structured, trackable support FAQ workflow.",
         rows: [
           {
             before: "Agents answer the same support questions repeatedly",
@@ -8083,7 +8083,7 @@ export const templates: TemplateSeo[] = [
     headline:
       "Launch a payment reminder workflow for pending collections, failed payments, overdue escalation, and status updates.",
     description:
-      "A launch-ready workflow template for payment due reminders, payment links, failed-payment recovery, pending verification, overdue escalation, billing handover, and payment status tracking.",
+      "A pilot-ready workflow template for payment due reminders, payment links, failed-payment recovery, pending verification, overdue escalation, billing handover, and payment status tracking.",
     included: [
       "Payment due trigger",
       "Reminder sequence",
@@ -8154,7 +8154,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Show a clear reminder and escalation journey for collections.",
           description:
             "This workflow gives your team a structured payment follow-up path: payment due message, reminder sequence, payment link sharing, reference capture, verification status, failed-payment recovery, overdue escalation, billing handover, and outcome tracking.",
@@ -8244,7 +8244,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual chasing to a structured, trackable payment follow-up workflow.",
+          "Show the shift from manual chasing to a structured, trackable payment follow-up workflow.",
         rows: [
           {
             before: "Staff manually chase customers for payments",
@@ -8410,7 +8410,7 @@ export const templates: TemplateSeo[] = [
     headline:
       "Launch a lab report notification workflow for report-ready alerts, secure access, and patient confirmation.",
     description:
-      "A launch-ready workflow template for report-ready notifications, secure access guidance, receipt confirmation, failed-delivery fallback, and lab support handover.",
+      "A pilot-ready workflow template for report-ready notifications, secure access guidance, receipt confirmation, failed-delivery fallback, and lab support handover.",
     included: [
       "Report-ready trigger",
       "Patient lookup and verification",
@@ -8480,7 +8480,7 @@ export const templates: TemplateSeo[] = [
       },
       overviewCards: [
         {
-          eyebrow: "Launch-Ready Structure",
+          eyebrow: "Pilot-ready structure",
           title: "Notify patients when reports are ready, without manual calling.",
           description:
             "This workflow gives your team a structured report notification path: report-ready trigger, patient contact lookup, delivery channel selection, secure report access message, receipt confirmation, failed-delivery fallback, and staff handover when support is needed.",
@@ -8570,7 +8570,7 @@ export const templates: TemplateSeo[] = [
         eyebrow: "Before and after",
         title: "What changes when Crescora AI runs the workflow",
         description:
-          "The page should show the shift from manual report-ready communication to a structured, trackable lab notification workflow.",
+          "Show the shift from manual report-ready communication to a structured, trackable lab notification workflow.",
         rows: [
           {
             before: "Staff manually call or message patients when reports are ready",
@@ -8938,4 +8938,5 @@ export const seoSoftwareSchema = {
   description: siteContent.site.description,
   url: "https://www.crescora.ai",
 };
+
 

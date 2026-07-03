@@ -106,7 +106,7 @@ export const enLocaleCopy: LocaleCopy = {
     openArticle: "Open article",
     openComparePage: "Open comparison page",
     openTemplate: "Open template",
-    openWorkflowPage: "Open workflow page",
+    openWorkflowPage: "View workflow example",
     openIndustryPage: "Open industry page",
     openStateHub: "View automation examples for this region",
   },

@@ -133,7 +133,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
         description={`Crescora AI helps teams in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain}. Support ${formatStateSeoList(seed.languages)} customer journeys across ${formatStateSeoList(seed.cityClusters)} with workflow orchestration, AI routing, records, reminders, analytics, and human handoff.`}
         primaryCta={{ label: config.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} rollout`, href: "/contact" }}
-        supportText={`Local search focus includes ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateSeoList(seed.industries)} in ${seed.name}.`}
+        supportText={`Service examples include ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateSeoList(seed.industries)} in ${seed.name}.`}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -164,7 +164,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">Local coverage</p>
               <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">Built for {formatStateSeoList(seed.cityClusters)}</h2>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                Launch with support for {formatStateSeoList(seed.languages)} customer journeys and local search themes such as {seed.localSearchTerms.join(", ")}.
+                Launch with support for {formatStateSeoList(seed.languages)} customer journeys and workflow examples such as {seed.localSearchTerms.join(", ")}.
               </p>
             </CardContent>
           </Card>
@@ -240,7 +240,7 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
                 <p>Priority cities: {formatStateSeoList(seed.cityClusters)}</p>
                 <p>Languages: {formatStateSeoList(seed.languages)}</p>
                 <p>Industries: {formatStateSeoList(seed.industries)}</p>
-                <p>Search themes: {seed.localSearchTerms.join(", ")}</p>
+                <p>Workflow examples: {seed.localSearchTerms.join(", ")}</p>
               </div>
               <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
                 <h3 className="text-lg font-semibold tracking-tight text-zinc-950">What the rollout should protect</h3>
@@ -300,20 +300,20 @@ export default async function StateWorkflowPage({ params }: { params: Params }) 
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch {config.titleNoun} in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use Crescora AI to reduce {seed.primaryPain} across {formatStateSeoList(seed.cityClusters)} with a rollout built for {formatStateSeoList(seed.industries)} and customer journeys in {formatStateSeoList(seed.languages)}.
+            Built for local teams: Crescora AI helps businesses in {seed.name} automate {config.titleNoun} workflows across {formatStateSeoList(seed.cityClusters)}. The rollout can support {formatStateSeoList(seed.languages)} customer journeys for {formatStateSeoList(seed.industries)}.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/60">
-            Search-intent coverage includes {seed.localSearchTerms.join(", ")} while the implementation stays grounded in real workflow outcomes, records, analytics, governance, and human handoff.
+            Local rollout focus: this page shows how businesses in this region can start with one practical {config.titleNoun} workflow and expand safely after the first rollout is tested.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
               <Link href="/contact">{config.ctaLabel}</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10">
-              <Link href={`/workflows/${workflow.slug}`}>Open full workflow page</Link>
+              <Link href={`/workflows/${workflow.slug}`}>View full workflow example</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10">
-              <Link href={`/india/${seed.slug}/industries/${primaryIndustrySlug}`}>Open state industry page</Link>
+              <Link href={`/india/${seed.slug}/industries/${primaryIndustrySlug}`}>View regional industry example</Link>
             </Button>
           </div>
         </div>

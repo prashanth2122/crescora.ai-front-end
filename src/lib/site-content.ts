@@ -2802,7 +2802,7 @@ export const siteContent = {
         eyebrow: "Buyer journey",
         title: "Example real estate buyer journey",
         description:
-          "This page should show that Crescora AI is a structured sales workflow layer, not only a real estate chatbot.",
+          "Crescora AI works as a structured sales workflow layer, not only a real estate chatbot.",
         steps: [
           "Buyer starts a chat from website, WhatsApp, ad campaign, or social channel.",
           "Crescora AI asks what they are looking for: apartment, villa, plot, commercial space, rental, resale, or project details.",
@@ -2985,7 +2985,7 @@ export const siteContent = {
         eyebrow: "Admissions journey",
         title: "Example education admissions journey",
         description:
-          "This page should show the full operational value of admissions automation, not only a list of features.",
+          "Show the full operational value of admissions automation, not only a list of features.",
         steps: [
           "Student or parent starts a chat from website, WhatsApp, or another supported channel.",
           "Crescora AI asks what they need: course details, admission process, fee structure, demo class, documents, payment, or counsellor call.",
@@ -3203,7 +3203,7 @@ export const siteContent = {
         eyebrow: "Support journey",
         title: "Example customer support journey",
         description:
-          "This page should show that Crescora AI is a support workflow system, not just a support chatbot.",
+          "Crescora AI works as a support workflow system, not just a support chatbot.",
         steps: [
           "Customer starts a chat from website, WhatsApp, or another supported channel.",
           "Crescora AI asks what the customer needs: FAQ, order or status query, billing issue, technical issue, document request, complaint, or human support.",
@@ -3448,7 +3448,7 @@ export const siteContent = {
         eyebrow: "Service journey",
         title: "Example service business journey",
         description:
-          "This page should feel like a real operational workflow, not just a service booking bot.",
+          "This workflow should feel operational and practical, not just like a service booking bot.",
         steps: [
           "Customer starts a chat from website, WhatsApp, or another supported channel.",
           "Crescora AI asks what they need: new booking, reschedule, payment, complaint, service update, or support.",

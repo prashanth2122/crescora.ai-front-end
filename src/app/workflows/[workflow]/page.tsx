@@ -362,7 +362,7 @@ function renderDefaultWorkflowPage(workflow: WorkflowSeo) {
           </Card>
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
-              <SectionHeading eyebrow="Outline" title="Keep the page structured around scope and next steps." description="A strong workflow page should read like a rollout guide, not a product brochure." />
+              <SectionHeading eyebrow="Outline" title="Scope and next steps for this workflow." description="Use this guide to review rollout scope, handover points, and the next practical step." />
               <div className="mt-6 space-y-2 text-sm leading-7 text-zinc-600">
                 {workflow.outline.map((item) => (
                   <p key={item}>{item}</p>
@@ -378,14 +378,14 @@ function renderDefaultWorkflowPage(workflow: WorkflowSeo) {
           <p className="text-sm uppercase tracking-[0.3em] text-white/50">Primary CTA</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">{workflow.ctaLabel}</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72">
-            Use this workflow page to turn a business question into a practical demo request, then support it with regional and industry context.
+            Use this workflow guide to understand the business problem, rollout scope, and the next practical step for your team.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
               <Link href={siteContent.ctas.bookProjectDemo.href}>{siteContent.ctas.bookProjectDemo.label}</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/15 bg-white/5 px-6 text-white hover:bg-white/10 hover:text-white">
-              <Link href="/india">Open India hub</Link>
+              <Link href="/india">View India service areas</Link>
             </Button>
           </div>
         </div>

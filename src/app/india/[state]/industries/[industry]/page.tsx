@@ -108,7 +108,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
         description={`Crescora AI helps ${config.titleNoun} teams in ${seed.name} reduce ${seed.primaryPain}. Support ${formatStateIndustryList(seed.languages)} customer journeys across ${formatStateIndustryList(seed.cityClusters)} with workflow orchestration, AI routing, reminders, records, analytics, and human handoff.`}
         primaryCta={{ label: config.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} rollout`, href: "/contact" }}
-        supportText={`Local search focus includes ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateIndustryList(seed.industries)} in ${seed.name}.`}
+        supportText={`Service examples include ${seed.localSearchTerms.join(", ")}. Best fit for ${formatStateIndustryList(seed.industries)} in ${seed.name}.`}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -181,7 +181,7 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
                 <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{card.title}</h2>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{card.description}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={`/india/${seed.slug}/workflows/${card.slug}`}>Open workflow page</Link>
+                  <Link href={`/india/${seed.slug}/workflows/${card.slug}`}>View workflow example</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -231,13 +231,13 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
               <SectionHeading
                 eyebrow="Local relevance"
                 title={`Local language and market coverage in ${seed.name}`}
-                description={`A strong ${config.titleNoun} page should stay relevant across ${formatStateIndustryList(seed.cityClusters)} while supporting ${formatStateIndustryList(seed.languages)} customer journeys.`}
+                description={`${config.label} rollouts can support ${formatStateIndustryList(seed.cityClusters)} while keeping ${formatStateIndustryList(seed.languages)} customer journeys, routing, and handover clear.`}
               />
               <div className="mt-6 space-y-3 text-sm leading-7 text-zinc-600">
                 <p>Priority cities: {formatStateIndustryList(seed.cityClusters)}</p>
                 <p>Languages: {formatStateIndustryList(seed.languages)}</p>
                 <p>Industry fit: {formatStateIndustryList(seed.industries)}</p>
-                <p>Search themes: {seed.localSearchTerms.join(", ")}</p>
+                <p>Workflow examples: {seed.localSearchTerms.join(", ")}</p>
               </div>
               <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
                 <h3 className="text-lg font-semibold tracking-tight text-zinc-950">What the rollout should protect</h3>
@@ -273,20 +273,20 @@ export default async function StateIndustryPage({ params }: { params: Params }) 
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch {config.titleNoun} in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use Crescora AI to reduce {seed.primaryPain} across {formatStateIndustryList(seed.cityClusters)} with workflows built for {industry.name.toLowerCase()}, customer journeys in {formatStateIndustryList(seed.languages)}, and rollout control that does not depend on manual follow-up.
+            Built for local teams: Crescora AI supports {industry.name.toLowerCase()} workflows across {formatStateIndustryList(seed.cityClusters)}. The rollout can support {formatStateIndustryList(seed.languages)} customer journeys for teams that need cleaner enquiries, booking, reminders, documents, payments, analytics, and human handover.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/60">
-            Search-intent coverage includes {seed.localSearchTerms.join(", ")} while the implementation stays grounded in real workflow outcomes, analytics, records, and human handoff.
+            Local rollout focus: this page shows how businesses in this region can start with one practical industry workflow and expand safely after the first rollout is tested.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
               <Link href="/contact">{config.ctaLabel}</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10">
-              <Link href={`/industries/${industry.slug}`}>Open full industry page</Link>
+              <Link href={`/industries/${industry.slug}`}>View full industry example</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10">
-              <Link href={`/india/${seed.slug}`}>Open state page</Link>
+              <Link href={`/india/${seed.slug}`}>View regional service area</Link>
             </Button>
           </div>
         </div>

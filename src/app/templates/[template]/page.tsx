@@ -353,7 +353,7 @@ export default async function TemplatePage({ params }: { params: Params }) {
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
                 <CardContent className="p-6 sm:p-8">
-                  <SectionHeading eyebrow="Launch-ready structure" title={template.headline} description={template.description} />
+                      <SectionHeading eyebrow="Pilot-ready structure" title={template.headline} description={template.description} />
                   <p className="mt-6 text-sm leading-7 text-zinc-600">
                     Use this template as a practical starting point, then adapt the prompts, routing, and handover rules to match your workflow.
                   </p>

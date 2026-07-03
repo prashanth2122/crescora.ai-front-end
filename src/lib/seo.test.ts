@@ -1511,7 +1511,7 @@ test("maharashtra state hub renders generated state-seo content and exact metada
   });
   assert.equal(
     metadata.description,
-    "Crescora AI helps businesses in Maharashtra automate missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection across Mumbai, Pune, Nagpur, Nashik, Thane with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+    "Crescora AI helps businesses in Maharashtra automate customer workflows across Mumbai, Pune, Nagpur, Nashik, Thane. The rollout can support Marathi, Hindi, English customer journeys for hospitals, clinics, real estate teams, education institutes, service businesses.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/maharashtra");
   assert.match(html, /Why businesses in Maharashtra choose Crescora AI/);
@@ -1523,7 +1523,8 @@ test("maharashtra state hub renders generated state-seo content and exact metada
   assert.match(html, /Ready to launch automation for your business in Maharashtra\?/);
   assert.match(html, /Mumbai/);
   assert.match(html, /Marathi/);
-  assert.match(html, /whatsapp automation maharashtra/);
+  assert.match(html, /Built for local teams/);
+  assert.match(html, /Local rollout focus/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
     html,
@@ -1573,7 +1574,7 @@ test("maharashtra whatsapp workflow page renders generated state-workflow seo co
   );
   assert.equal(
     metadata.description,
-    "Crescora AI helps businesses in Maharashtra use WhatsApp automation workflows to reduce missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection across Mumbai, Pune, Nagpur, Nashik, Thane with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+    "Crescora AI helps businesses in Maharashtra automate WhatsApp automation workflows across Mumbai, Pune, Nagpur, Nashik, Thane. The rollout can support Marathi, Hindi, English customer journeys for hospitals, clinics, real estate teams, education institutes, service businesses.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/maharashtra/workflows/whatsapp-automation");
   assert.match(html, /WhatsApp automation for businesses in Maharashtra/);
@@ -1586,7 +1587,8 @@ test("maharashtra whatsapp workflow page renders generated state-workflow seo co
   assert.match(html, /Ready to launch WhatsApp automation in Maharashtra\?/);
   assert.match(html, /Mumbai/);
   assert.match(html, /Marathi/);
-  assert.match(html, /whatsapp automation maharashtra/);
+  assert.match(html, /Built for local teams/);
+  assert.match(html, /Local rollout focus/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
     html,
@@ -1609,12 +1611,12 @@ test("mumbai city page renders generated city-seo content and exact metadata", a
   });
   assert.equal(
     metadata.description,
-    "Crescora AI helps businesses in Mumbai, Maharashtra reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Marathi, Hindi, English support for hospitals, clinics, and real estate teams. Local workflow demand includes WhatsApp automation, appointment booking automation, and payment reminder automation.",
+    "Crescora AI helps businesses in Mumbai, Maharashtra reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Marathi, Hindi, English support for hospitals, clinics, and real estate teams. Teams can start with WhatsApp automation, appointment booking automation, and payment reminder automation.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/maharashtra/cities/mumbai");
   assert.match(html, /AI business automation for teams in Mumbai/);
   assert.match(html, /Why businesses in Mumbai choose Crescora AI/);
-  assert.match(html, /High-impact automation workflows for Mumbai/);
+  assert.match(html, /Practical automation workflows for Mumbai/);
   assert.match(html, /Industries we support in Mumbai/);
   assert.match(html, /How Crescora AI implementation works in Mumbai/);
   assert.match(html, /FAQs for Mumbai businesses/);
@@ -1622,11 +1624,10 @@ test("mumbai city page renders generated city-seo content and exact metadata", a
   assert.match(html, /Pune/);
   assert.match(html, /Marathi/);
   assert.match(html, /What automation needs to get right in Mumbai/);
-  assert.match(html, /Lead speed matters more than generic chat coverage/);
   assert.match(html, /Bookings and payments need the same workflow view/);
   assert.match(html, /City-specific workflow priorities matter/);
   assert.match(html, /slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility/i);
-  assert.match(html, /whatsapp automation mumbai/i);
+  assert.match(html, /Workflow examples/);
   assert.match(html, /Book Free Demo/);
   assert.match(html, /"@type":"FAQPage"/);
 });
@@ -1646,7 +1647,7 @@ test("visakhapatnam city page renders curated city proof and exact metadata", as
   });
   assert.equal(
     metadata.description,
-    "Crescora AI helps businesses in Visakhapatnam, Andhra Pradesh reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Telugu, English, Hindi support for hospitals, education institutes, and real estate teams. Local workflow demand includes Appointment booking automation, document collection automation, and human handoff automation.",
+    "Crescora AI helps businesses in Visakhapatnam, Andhra Pradesh reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Telugu, English, Hindi support for hospitals, education institutes, and real estate teams. Teams can start with Appointment booking automation, document collection automation, and human handoff automation.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/andhra-pradesh/cities/visakhapatnam");
   assert.match(html, /AI business automation for teams in Visakhapatnam/);
@@ -1676,7 +1677,7 @@ test("port blair city page renders curated proof and shortened title-state metad
   });
   assert.equal(
     metadata.description,
-    "Crescora AI helps businesses in Port Blair, Andaman and Nicobar Islands reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Hindi, English, Bengali, Tamil support for tourism businesses, hotels, and travel operators. Local workflow demand includes Appointment booking automation and customer support automation.",
+    "Crescora AI helps businesses in Port Blair, Andaman and Nicobar Islands reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Hindi, English, Bengali, Tamil support for tourism businesses, hotels, and travel operators. Teams can start with Appointment booking automation and customer support automation.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/andaman-and-nicobar-islands/cities/port-blair");
   assert.match(html, /AI business automation for teams in Port Blair/);
@@ -1704,14 +1705,14 @@ test("agartala city page renders generated city proof for long-tail coverage", a
   });
   assert.equal(
     metadata.description,
-    "Crescora AI helps businesses in Agartala, Tripura reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Bengali, Kokborok, English, Hindi support for education institutes, clinics, and retail businesses. Local workflow demand includes WhatsApp automation and appointment booking automation.",
+    "Crescora AI helps businesses in Agartala, Tripura reduce slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility with Bengali, Kokborok, English, Hindi support for education institutes, clinics, and retail businesses. Teams can start with WhatsApp automation and appointment booking automation.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/tripura/cities/agartala");
   assert.match(html, /AI business automation for teams in Agartala/);
   assert.match(html, /Local workflow proof/);
   assert.match(html, /What automation needs to get right in Agartala/);
-  assert.match(html, /Response speed should stay owned from the first enquiry/);
-  assert.match(html, /WhatsApp automation and appointment booking should stay in one operating path/);
+  assert.match(html, /Response speed needs clear ownership from the first enquiry/);
+  assert.match(html, /WhatsApp automation and appointment booking work best in one operating path/);
   assert.match(html, /City-specific workflow priorities matter/);
   assert.match(html, /Bengali/);
   assert.match(html, /Dharmanagar/);
@@ -1735,7 +1736,7 @@ test("maharashtra service business page renders generated state-industry seo con
   );
   assert.equal(
     metadata.description,
-    "Crescora AI helps service business automation buyers in Maharashtra reduce missed WhatsApp leads, delayed follow-ups, manual booking coordination, payment reminders, and document collection across Mumbai, Pune, Nagpur, Nashik, Thane with Marathi, Hindi, English support for hospitals, clinics, real estate teams, education institutes, service businesses.",
+    "Crescora AI supports service business automation in Maharashtra across Mumbai, Pune, Nagpur, Nashik, Thane. The rollout can support Marathi, Hindi, English customer journeys for hospitals, clinics, real estate teams, education institutes, service businesses.",
   );
   assert.equal(metadata.alternates?.canonical, "/india/maharashtra/industries/service-businesses");
   assert.match(html, /Service business automation for teams in Maharashtra/);
@@ -1747,7 +1748,8 @@ test("maharashtra service business page renders generated state-industry seo con
   assert.match(html, /Ready to launch service business automation in Maharashtra\?/);
   assert.match(html, /Mumbai/);
   assert.match(html, /Marathi/);
-  assert.match(html, /whatsapp automation maharashtra/);
+  assert.match(html, /Built for local teams/);
+  assert.match(html, /Local rollout focus/);
   assert.match(html, /"@type":"FAQPage"/);
   assert.doesNotMatch(
     html,

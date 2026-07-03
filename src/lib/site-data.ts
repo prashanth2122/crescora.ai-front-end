@@ -179,7 +179,7 @@ export const leadFormOptions = siteContent.leadForm.options;
 
 export const homepageFlowSteps = [
   "New customer enquiry received",
-  "Bot understands customer need",
+  "Crescora AI identifies the customer need",
   "Lead details captured",
   "Booking, payment, or document step completed",
   "Follow-up reminder scheduled",

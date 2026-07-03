@@ -178,7 +178,7 @@ export function buildStateWorkflowTitle(seed: StateSeoSeed, config: StateWorkflo
 }
 
 export function buildStateWorkflowDescription(seed: StateSeoSeed, config: StateWorkflowSeoConfig) {
-  return `Crescora AI helps businesses in ${seed.name} use ${config.titleNoun} workflows to reduce ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
+  return `Crescora AI helps businesses in ${seed.name} automate ${config.titleNoun} workflows across ${seed.cityClusters.join(", ")}. The rollout can support ${seed.languages.join(", ")} customer journeys for ${seed.industries.join(", ")}.`;
 }
 
 export function buildStateWorkflowFaqItems(seed: StateSeoSeed, config: StateWorkflowSeoConfig) {

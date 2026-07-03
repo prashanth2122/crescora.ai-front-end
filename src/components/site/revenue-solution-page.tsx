@@ -302,7 +302,7 @@ export function RevenueSolutionPage({ page, breadcrumbs }: RevenueSolutionPagePr
                 <h3 className="text-xl font-semibold tracking-tight text-zinc-950">{item.label}</h3>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{item.description}</p>
                 <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                  <Link href={item.href}>{item.ctaLabel ?? "Open page"}</Link>
+                  <Link href={item.href}>{item.ctaLabel ?? "View details"}</Link>
                 </Button>
               </CardContent>
             </Card>

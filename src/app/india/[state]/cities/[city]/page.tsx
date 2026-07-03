@@ -42,7 +42,7 @@ function buildCityDescription(stateSlug: string, citySlug: string) {
     return index === 0 ? label : label.charAt(0).toLowerCase() + label.slice(1);
   });
 
-  return `Crescora AI helps businesses in ${seed.name}, ${seed.stateName} reduce ${seed.localPainPoint} with ${seed.stateSeed.languages.join(", ")} support for ${formatStateIndustryList(seed.primaryIndustries)}. Local workflow demand includes ${formatStateIndustryList(workflowLabels)}.`;
+  return `Crescora AI helps businesses in ${seed.name}, ${seed.stateName} reduce ${seed.localPainPoint} with ${seed.stateSeed.languages.join(", ")} support for ${formatStateIndustryList(seed.primaryIndustries)}. Teams can start with ${formatStateIndustryList(workflowLabels)}.`;
 }
 
 function buildCityFaqItems(stateSlug: string, citySlug: string) {
@@ -73,7 +73,7 @@ function buildCityFaqItems(stateSlug: string, citySlug: string) {
     },
     {
       question: `How should a rollout in ${seed.name} stay locally relevant?`,
-      answer: `${seed.proofLine} The rollout should use city-specific workflow priorities, language coverage, and commercial context rather than generic state copy alone.`,
+      answer: `${seed.proofLine} The rollout should use city-specific workflow priorities, language coverage, and verified service-area context rather than generic regional copy alone.`,
     },
   ];
 }
@@ -131,7 +131,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
         description={`Crescora AI helps teams in ${seed.name} reduce ${seed.localPainPoint}. Support ${formatStateIndustryList(seed.stateSeed.languages)} customer journeys for ${formatStateIndustryList(seed.primaryIndustries)} with ${formatStateIndustryList(workflowLabels)} inside one workflow layer built for ${seed.marketRole}.`}
         primaryCta={{ label: seed.ctaLabel, href: "/contact" }}
         secondaryCta={{ label: `Discuss ${seed.name} Workflow`, href: "/contact" }}
-        supportText={`Local search themes include ${seed.localSearchTerms.join(", ")}. ${seed.proofLine}`}
+        supportText={`Service area coverage includes ${seed.name} and nearby cities such as ${seed.cityNeighbors.join(", ")}. ${seed.proofLine}`}
       />
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
@@ -192,7 +192,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Workflows"
-          title={`High-impact automation workflows for ${seed.name}`}
+          title={`Practical automation workflows for ${seed.name}`}
           description={`These workflow patterns best match customer pressure and operational bottlenecks in ${seed.name}.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -207,7 +207,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
                     {workflow.businessOutcomeLine} In {seed.name}, this usually matters most when teams need {workflow.localUseCaseLine.toLowerCase()}
                   </p>
                   <Button asChild variant="link" className="mt-3 h-auto p-0 text-zinc-950">
-                    <Link href={`/india/${seed.stateSlug}/workflows/${workflowSlug}`}>Open workflow page</Link>
+                    <Link href={`/india/${seed.stateSlug}/workflows/${workflowSlug}`}>View workflow example</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -220,7 +220,7 @@ export default async function CitySeoPage({ params }: { params: Params }) {
         <SectionHeading
           eyebrow="Industries"
           title={`Industries we support in ${seed.name}`}
-          description={`Crescora AI supports buyers and operators in ${seed.name} who need controlled automation that fits the city's workflow priorities rather than a generic statewide message.`}
+          description={`Crescora AI supports teams in ${seed.name} that need controlled automation matched to local service patterns, language needs, and customer handover requirements.`}
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {seed.primaryIndustries.map((industry) => (
@@ -236,10 +236,10 @@ export default async function CitySeoPage({ params }: { params: Params }) {
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
-            <Link href={`/india/${seed.stateSlug}/industries/${primaryIndustrySlug}`}>Open state industry page</Link>
+            <Link href={`/india/${seed.stateSlug}/industries/${primaryIndustrySlug}`}>View regional industry example</Link>
           </Button>
           <Button asChild variant="outline" className="h-12 rounded-full border-zinc-300 px-6 text-zinc-950 hover:bg-zinc-50">
-            <Link href={`/india/${seed.stateSlug}`}>Open state page</Link>
+            <Link href={`/india/${seed.stateSlug}`}>View regional service area</Link>
           </Button>
         </div>
       </section>
@@ -250,8 +250,8 @@ export default async function CitySeoPage({ params }: { params: Params }) {
             <CardContent className="p-6 sm:p-8">
               <SectionHeading
                 eyebrow="Language coverage"
-                title="Local language and search-intent coverage"
-                description={`Support customer journeys in ${formatStateIndustryList(seed.stateSeed.languages)} while keeping local workflow priorities, search intent, and handoff under one operational system.`}
+                title="Local language and workflow coverage"
+                description={`Support customer journeys in ${formatStateIndustryList(seed.stateSeed.languages)} while keeping local workflow priorities, routing, and handoff under one operational system.`}
               />
               <div className="mt-6 flex flex-wrap gap-2">
                 {seed.stateSeed.languages.map((language) => (
@@ -264,10 +264,10 @@ export default async function CitySeoPage({ params }: { params: Params }) {
                 <p>Primary city: {seed.name}</p>
                 <p>Nearby cities: {seed.cityNeighbors.join(", ")}</p>
                 <p>Priority industries: {formatStateIndustryList(seed.primaryIndustries)}</p>
-                <p>High-intent search themes: {seed.localSearchTerms.join(", ")}</p>
+                <p>Workflow examples: {formatStateIndustryList(workflowLabels)}</p>
               </div>
               <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-                <h3 className="text-lg font-semibold tracking-tight text-zinc-950">What makes the city page locally relevant</h3>
+                <h3 className="text-lg font-semibold tracking-tight text-zinc-950">What makes the rollout locally relevant</h3>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">{seed.proofLine}</p>
               </div>
             </CardContent>
@@ -333,17 +333,17 @@ export default async function CitySeoPage({ params }: { params: Params }) {
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">Next step</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">Ready to launch automation for your business in {seed.name}?</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-white/75">
-            Use Crescora AI to reduce {seed.localPainPoint} for teams in {seed.name} with a rollout built for {formatStateIndustryList(seed.primaryIndustries)} and customer journeys in {formatStateIndustryList(seed.stateSeed.languages)}.
+            Built for local teams: Crescora AI helps businesses in {seed.name} reduce {seed.localPainPoint} with workflows for {formatStateIndustryList(seed.primaryIndustries)} and customer journeys in {formatStateIndustryList(seed.stateSeed.languages)}.
           </p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-white/60">
-            Local workflow demand includes {formatStateIndustryList(workflowLabels)} while the implementation stays grounded in city-level search intent, records, reminders, analytics, and human handoff.
+            Local rollout focus: start with {formatStateIndustryList(workflowLabels)}, connect records, reminders, analytics, and human handoff, then expand after the first workflow is tested.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
               <Link href="/contact">{seed.ctaLabel}</Link>
             </Button>
             <Button asChild variant="outline" className="h-12 rounded-full border-white/20 bg-transparent px-6 text-white hover:bg-white/10">
-              <Link href={`/india/${seed.stateSlug}`}>Open {seed.stateName} page</Link>
+              <Link href={`/india/${seed.stateSlug}`}>View {seed.stateName} service area</Link>
             </Button>
           </div>
         </div>

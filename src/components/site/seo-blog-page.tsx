@@ -34,7 +34,7 @@ function buildFallbackPublicPage(post: BlogPost): BlogPublicPage {
       {
         eyebrow: "Reader outcome",
         title: `What this ${post.category.toLowerCase()} article covers`,
-        description: "Use this article to move readers from search intent into a practical next workflow step.",
+        description: "Understand the workflow options, rollout risks, and next steps before choosing the best first automation for your business.",
       },
     ],
     featuredImage: {
@@ -52,7 +52,7 @@ function buildFallbackPublicPage(post: BlogPost): BlogPublicPage {
     finalCta: {
       eyebrow: "Next step",
       title: "Ready to map this workflow to your business?",
-      description: "Use the matching workflow, template, or demo path to move from research into rollout planning.",
+      description: "Explore the matching workflow, template, or demo path before planning the first rollout.",
       primary: siteContent.ctas.bookProjectDemo,
       secondary: siteContent.ctas.requestScopeCall,
     },

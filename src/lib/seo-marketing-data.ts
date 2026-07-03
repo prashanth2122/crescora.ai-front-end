@@ -159,30 +159,30 @@ function relatedLink(label: string, href: string, description: string, ctaLabel?
 function buildBlogSections(title: string, keywordTarget: string): BlogSection[] {
   return [
     {
-      title: "Why this keyword matters",
-      description: `The query '${keywordTarget}' signals a buyer who wants a practical workflow, not abstract AI commentary.`,
+      title: "What this workflow helps your team improve",
+      description: `${title} is useful when your team needs a practical workflow for ${keywordTarget}, not abstract AI commentary.`,
       bullets: [
-        "Match the H1 and first paragraph to the search intent.",
-        "Use examples from Indian businesses and one clear operational result.",
-        "Keep the page focused on one job to avoid thin, generic content.",
+        "Reduce slow replies, missed follow-ups, and scattered customer information.",
+        "Show the customer the next step clearly across chat, forms, reminders, or handover.",
+        "Keep the first rollout focused on one measurable business outcome.",
       ],
     },
     {
-      title: "What the post should explain",
+      title: "How the workflow can be structured",
       description: `Explain how ${title.toLowerCase()} changes the client journey from first message to final outcome.`,
       bullets: [
         "The pain point that causes lost leads, delays, or manual work.",
         "The workflow steps and human handoff rules that make the process reliable.",
-        "The pages or assets the reader should open next.",
+        "The records, analytics, and escalation paths your team should check before rollout.",
       ],
     },
     {
-      title: "How to connect it to the site",
-      description: "Every blog post should link back to money pages and proof pages so it supports the commercial SEO tree.",
+      title: "What to review before rollout",
+      description: "Before choosing the first automation, compare the related workflow, template, pricing, trust, and industry examples.",
       bullets: [
-        "Link to the matching solution page.",
-        "Link to the closest industry and template pages.",
-        "Link to one comparison page for decision-stage readers.",
+        "Review the matching solution page.",
+        "Check the closest industry and template examples.",
+        "Compare rollout scope, support needs, and human handover expectations.",
       ],
     },
   ];
@@ -212,7 +212,7 @@ export const solutionPages: SeoLandingPage[] = [
       {
         eyebrow: "How it works",
         title: "What Crescora AI automates across WhatsApp and connected channels",
-        description: "The page should be explicit about the workflow, AI layer, and connected business systems.",
+        description: "See the workflow, AI layer, and connected business systems clearly.",
         bullets: [
           "Lead capture, qualification, and CRM routing.",
           "Appointment booking, confirmations, and reminder workflows.",
@@ -222,7 +222,7 @@ export const solutionPages: SeoLandingPage[] = [
       {
         eyebrow: "Next step",
         title: "Where the reader should go next",
-        description: "Search visitors should move into templates, comparisons, and demos.",
+        description: "Move from this overview into the most relevant template, comparison, or demo path.",
         bullets: [
           "Open the matching workflow template.",
           "Compare Crescora AI with manual WhatsApp and generic bots.",
@@ -231,7 +231,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
     ],
     relatedLinks: [
-      relatedLink("WhatsApp templates", "/templates", "Workflow templates for launch-ready automations."),
+      relatedLink("WhatsApp templates", "/templates", "Workflow templates for pilot-ready automations."),
       relatedLink("Compare Crescora AI vs manual WhatsApp", "/compare/flow-vs-manual-whatsapp", "See why manual handling breaks at scale."),
       relatedLink("Book Free Demo", "/contact", "Start with one client journey and a rollout plan."),
     ],
@@ -245,12 +245,12 @@ export const solutionPages: SeoLandingPage[] = [
     description:
       "A solution page for buyers searching for AI chatbots that work across websites, WhatsApp, Instagram, Facebook Messenger, and workflow-driven business operations.",
     intro:
-      "This page should frame Crescora AI as a builder for customer conversations and workflow automation, not just a FAQ bot or website widget.",
+      "Crescora AI combines customer conversations and workflow automation, not just FAQ answers or a website widget.",
     sections: [
       {
         eyebrow: "Buyer intent",
         title: "What buyers expect from a business AI chatbot",
-        description: "The page should show outcomes such as booking, lead capture, support routing, and multi-channel consistency.",
+        description: "See outcomes such as booking, lead capture, support routing, and multi-channel consistency.",
         bullets: [
           "No-code setup with business-friendly controls.",
           "Works across websites, WhatsApp, and social messaging.",
@@ -269,11 +269,11 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Decision support",
-        title: "What to link to from this page",
-        description: "The page should support comparison, template, and pricing discovery.",
+        title: "Where buyers usually go next",
+        description: "Use comparison, template, and pricing pages to review the rollout path.",
         bullets: [
           "Comparison pages for buyers comparing tools.",
-          "Templates for launch-ready use cases.",
+          "Templates for pilot-ready use cases.",
           "Pricing and demo pages for conversion.",
         ],
       },
@@ -293,16 +293,16 @@ export const solutionPages: SeoLandingPage[] = [
     description:
       "A solution page for teams that want a clear business workflow layer for conversations, tasks, reminders, and records.",
     intro:
-      "Use this page to capture broader workflow intent and route visitors into the industry and template pages that match their business context.",
+      "Use Crescora AI to connect customer conversations, workflow steps, records, reminders, analytics, and human handoff in one controlled operating layer.",
     sections: [
       {
         eyebrow: "Positioning",
-        title: "What this page should explain",
+        title: "What this workflow layer helps teams improve",
         description: "It should not read like generic automation copy.",
         bullets: [
           "Workflow automation across WhatsApp and web chat.",
           "Human-in-the-loop support where needed.",
-          "Built for Indian teams and buyer intent.",
+          "Built for Indian teams that need clear customer routing and measurable follow-up.",
         ],
       },
       {
@@ -318,7 +318,7 @@ export const solutionPages: SeoLandingPage[] = [
       {
         eyebrow: "Conversion",
         title: "What the reader should do next",
-        description: "The page should push the reader toward the highest-intent path.",
+        description: "Review the next page that best matches your rollout decision.",
         bullets: [
           "Open the relevant industry page.",
           "Review a matching template.",
@@ -341,12 +341,12 @@ export const solutionPages: SeoLandingPage[] = [
     description:
       "A solution page for support buyers who need FAQ handling, queue deflection, and context-rich escalation.",
     intro:
-      "This page should show how Crescora AI handles repetitive support work without losing the ability to hand off complex or sensitive cases to humans.",
+      "Crescora AI handles repetitive support work while keeping complex or sensitive cases ready for human handoff.",
     sections: [
       {
         eyebrow: "Support pain",
         title: "Why support teams need automation",
-        description: "Fast response and consistent routing are the SEO intent behind the query.",
+        description: "Fast response and consistent routing matter when support queues grow.",
         bullets: [
           "Repeated questions consume agent time.",
           "Customers get inconsistent answers from different channels.",
@@ -356,7 +356,7 @@ export const solutionPages: SeoLandingPage[] = [
       {
         eyebrow: "Solution",
         title: "What Crescora AI changes for the support desk",
-        description: "The page should connect the conversation to the support process.",
+        description: "Connect the customer conversation to the support process.",
         bullets: [
           "FAQ and knowledge-base answers.",
           "Human handoff with conversation history.",
@@ -365,7 +365,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Trust",
-        title: "Why this page should be proof-led",
+        title: "Why proof and controls matter",
         description: "Support buyers want control and visibility, not hype.",
         bullets: [
           "Show reply quality controls and escalation logic.",
@@ -404,7 +404,7 @@ export const solutionPages: SeoLandingPage[] = [
       {
         eyebrow: "Workflow",
         title: "What Crescora AI automates for bookings",
-        description: "The page should make the booking path obvious.",
+        description: "Make the booking path obvious from first enquiry to confirmed slot.",
         bullets: [
           "Availability check and slot selection.",
           "Reminder sequence and confirmation follow-up.",
@@ -423,7 +423,7 @@ export const solutionPages: SeoLandingPage[] = [
       },
     ],
     relatedLinks: [
-      relatedLink("Booking templates", "/templates", "Launch-ready booking workflow assets."),
+      relatedLink("Booking templates", "/templates", "Pilot-ready booking workflow assets."),
       relatedLink("WhatsApp automation", "/solutions/whatsapp-automation", "Channel automation for booking enquiries."),
       relatedLink("Book Free Demo", "/contact", "Discuss your appointment workflow."),
     ],
@@ -437,7 +437,7 @@ export const solutionPages: SeoLandingPage[] = [
     description:
       "A solution page for businesses that want website, WhatsApp, and ad enquiries captured and qualified consistently.",
     intro:
-      "This page should explain how Crescora AI asks qualifying questions, captures contact details, and routes high-intent leads with context.",
+      "Crescora AI asks qualifying questions, captures contact details, and routes serious leads with context.",
     sections: [
       {
         eyebrow: "Problem",
@@ -533,7 +533,7 @@ export const solutionPages: SeoLandingPage[] = [
     description:
       "A solution page for businesses that need IDs, forms, reports, and supporting documents gathered with less back-and-forth.",
     intro:
-      "This page should show how Crescora AI keeps document requests, follow-up, and completion tracking in one workflow.",
+      "Crescora AI keeps document requests, follow-up, and completion tracking in one workflow.",
     sections: [
       {
         eyebrow: "Problem",
@@ -596,7 +596,7 @@ export const solutionPages: SeoLandingPage[] = [
       {
         eyebrow: "Workflow",
         title: "What Crescora AI automates across systems",
-        description: "The page should show concrete data movement.",
+        description: "Show concrete data movement between the workflow and your systems.",
         bullets: [
           "CRM lead creation and updates.",
           "Spreadsheet or dashboard sync.",
@@ -629,7 +629,7 @@ export const solutionPages: SeoLandingPage[] = [
     description:
       "A solution page for businesses that need structured handover, context transfer, and escalation visibility.",
     intro:
-      "This page should make it clear that Crescora AI supports automation without losing human control when the case becomes high value or sensitive.",
+      "Crescora AI supports automation without losing human control when a case becomes high value or sensitive.",
     sections: [
       {
         eyebrow: "Problem",
@@ -717,7 +717,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       relatedLink(
         "WhatsApp Automation Template",
         "/templates/whatsapp-automation-template",
-        "Start from a launch-ready WhatsApp workflow template for leads, bookings, payments, support, and follow-ups.",
+        "Start from a pilot-ready WhatsApp workflow blueprint for leads, bookings, payments, support, and follow-ups.",
         "View WhatsApp Template",
       ),
       relatedLink(
@@ -751,7 +751,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore WhatsApp Workflows", href: "/workflows/whatsapp-automation" },
       heroSupportText:
-        "Link this article to your WhatsApp workflow, template, pricing, and comparison path so readers can move from research to rollout.",
+        "Related rollout pages: Explore the WhatsApp workflow, pricing, template, and comparison pages to decide the best first automation for your business.",
       statusChips: [
         "Lead Captured",
         "Qualified",
@@ -1076,7 +1076,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Explore Hospital Workflows", href: "/industries/hospitals" },
       heroSupportText:
-        "Use this article to decide which patient workflow to automate first: appointments, enquiries, reports, billing, documents, reminders, or support handoff.",
+        "Compare the patient workflows your team could automate first: appointments, enquiries, reports, billing, documents, reminders, or support handoff.",
       statusChips: [
         "Enquiry Captured",
         "Appointment Requested",
@@ -1723,7 +1723,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       relatedLink(
         "Service Business Booking Template",
         "/templates/service-business-booking-template",
-        "Start from a launch-ready booking template for service teams, clinics, salons, consultants, and local businesses.",
+        "Start from a pilot-ready booking template for service teams, clinics, salons, consultants, and local businesses.",
         "View Booking Template",
       ),
       relatedLink(
@@ -1739,7 +1739,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       heroPrimaryCta: { label: "Book Free Demo", href: "/contact" },
       heroSecondaryCta: { label: "Map My Appointment Workflow", href: "/contact" },
       heroSupportText:
-        "Use this article to decide how your team should automate appointment requests, slot confirmation, reminders, rescheduling, fees, and handoff.",
+        "Compare how your team could automate appointment requests, slot confirmation, reminders, rescheduling, fees, and handoff.",
       statusChips: [
         "Request Started",
         "Details Captured",
@@ -2021,7 +2021,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       relatedLink(
         "Real Estate Follow-Up Template",
         "/templates/real-estate-lead-followup-flow",
-        "Start from a launch-ready workflow for property enquiries, qualification, site visits, and sales rep handover.",
+        "Start from a pilot-ready workflow for property enquiries, qualification, site visits, and sales rep handover.",
         "View Real Estate Template",
       ),
       relatedLink(
@@ -3283,7 +3283,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       relatedLink(
         "Templates",
         "/templates",
-        "Start faster with launch-ready workflow templates for leads, bookings, payments, documents, and support.",
+        "Start faster with pilot-ready workflow templates for leads, bookings, payments, documents, and support.",
         "View Templates",
       ),
       relatedLink(
@@ -3724,7 +3724,7 @@ const blogPostOverrides: Record<string, Partial<BlogPost>> = {
       relatedLink(
         "Billing and Collections Template",
         "/templates/payment-reminder-template",
-        "Start from a launch-ready workflow for reminders, follow-up, collections, and exception handling.",
+        "Start from a pilot-ready workflow for reminders, follow-up, collections, and exception handling.",
         "View Billing Template",
       ),
       relatedLink(
@@ -7469,8 +7469,8 @@ export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTar
     title,
     category,
     keywordTarget,
-    description: `Practical SEO article for ${keywordTarget} with business-focused examples for Indian buyers.`,
-    summary: `Use this article to target ${keywordTarget} while linking into solution, industry, comparison, and template pages.`,
+    description: `Practical guidance for ${keywordTarget} with business-focused examples for Indian buyers.`,
+    summary: `Learn how ${keywordTarget} can support faster response, cleaner follow-up, better routing, and safer human handover in a real business workflow.`,
     author: editorialAuthor,
     publishedAt,
     modifiedAt,
@@ -7478,7 +7478,7 @@ export const blogPosts: BlogPost[] = blogSpecs.map(([title, category, keywordTar
     sections: buildBlogSections(title, keywordTarget),
     relatedLinks: [
       relatedLink("Solutions hub", "/solutions", "Browse the core solution pages."),
-      relatedLink("Templates", "/templates", "Find launch-ready workflow templates."),
+      relatedLink("Templates", "/templates", "Find pilot-ready workflow templates."),
       relatedLink("Compare Crescora AI", "/compare", "Decision-stage comparison content."),
     ],
     ctaLabel: `Read the ${category.toLowerCase()} workflow`,
@@ -7573,12 +7573,12 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
     description:
       "Workflow guide for hospitals and clinics that need appointment booking, patient support, payments, and lab updates.",
     intro:
-      "This page should combine the words hospitals already search for with the operational Workflows that matter inside a front desk and patient support team.",
+      "Hospital and clinic teams need operational workflows that support front desk coordination, patient communication, and human handoff.",
     sections: [
       {
         eyebrow: "Problems",
         title: "What hospitals need to fix first",
-        description: "The page should lead with the pain points, not the feature list.",
+        description: "Start with the operational pain points teams need to fix first.",
         bullets: [
           "Front desk overload and missed calls.",
           "Appointment confirmations and reminders.",
@@ -7587,8 +7587,8 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What Crescora AI should show",
-        description: "Use business workflows that match the SEO intent.",
+        title: "What Crescora AI automates for hospitals",
+        description: "Use business workflows that match booking, patient support, reports, and handoff needs.",
         bullets: [
           "Appointment booking and doctor availability.",
           "Lab report notification and reminders.",
@@ -7597,7 +7597,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "CTA",
-        title: "What to offer next",
+        title: "Where teams usually go next",
         description: "The buyer should move into the healthcare demo path.",
         bullets: [
           "Book Free Demo.",
@@ -7607,7 +7607,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
     ],
     relatedLinks: [
-      relatedLink("Hospital booking template", "/templates/hospital-appointment-booking-flow", "Launch-ready hospital automation."),
+      relatedLink("Hospital booking template", "/templates/hospital-appointment-booking-flow", "Pilot-ready hospital automation."),
       relatedLink("Healthcare use case", "/industries/hospitals", "Existing healthcare-focused industry page."),
       relatedLink("Book Free Demo", "/contact", "Talk through a healthcare rollout."),
     ],
@@ -7621,12 +7621,12 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
     description:
       "A real estate landing page designed for lead automation, visit booking, and agent assignment.",
     intro:
-      "This page should capture real estate intent and push into templates, comparison pages, and the booking workflow that turns enquiries into visits.",
+      "Real estate teams need a lead workflow that turns enquiries into site visits, rep handoff, and follow-up.",
     sections: [
       {
         eyebrow: "Problems",
         title: "Why property teams need workflow automation",
-        description: "Speed and consistency are the ranking and conversion drivers.",
+        description: "Speed and consistency decide whether property enquiries turn into visits and callbacks.",
         bullets: [
           "Leads go cold when follow-up is slow.",
           "Property qualification is inconsistent.",
@@ -7635,8 +7635,8 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What Crescora AI should show for real estate",
-        description: "The page should be specific about the lead journey.",
+        title: "What Crescora AI automates for real estate",
+        description: "Be specific about the lead journey from enquiry to visit and rep handoff.",
         bullets: [
           "Lead capture from WhatsApp and web forms.",
           "Qualification, routing, and site visit scheduling.",
@@ -7645,7 +7645,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "CTA",
-        title: "What to offer next",
+        title: "Where teams usually go next",
         description: "Move the visitor into a template or a demo.",
         bullets: [
           "Open the real estate follow-up workflow.",
@@ -7655,7 +7655,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
     ],
     relatedLinks: [
-      relatedLink("Real estate follow-up template", "/templates/real-estate-lead-followup-flow", "A launch-ready real estate workflow."),
+      relatedLink("Real estate follow-up template", "/templates/real-estate-lead-followup-flow", "A pilot-ready real estate workflow."),
       relatedLink("Real estate industry page", "/industries/real-estate", "Existing vertical page for property teams."),
       relatedLink("Compare Crescora AI vs CRM-only", "/compare/flow-vs-crm-only", "See why workflow matters before the CRM."),
     ],
@@ -7669,7 +7669,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
     description:
       "A school, college, and admissions landing page for enquiry automation and demo class booking.",
     intro:
-      "This page should frame Crescora AI as the system that captures enquiries, books demo classes, and keeps admissions moving.",
+      "Crescora AI captures enquiries, books demo classes, and keeps admissions follow-up moving.",
     sections: [
       {
         eyebrow: "Problems",
@@ -7683,7 +7683,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What Crescora AI should show for education",
+        title: "What Crescora AI automates for education",
         description: "Focus on admission journey automation.",
         bullets: [
           "Course enquiry response and demo booking.",
@@ -7693,7 +7693,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "CTA",
-        title: "What to offer next",
+        title: "Where teams usually go next",
         description: "Move the reader toward the admissions demo and template.",
         bullets: [
           "Open the admissions Workflow template.",
@@ -7717,12 +7717,12 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
     description:
       "A small business landing page that combines WhatsApp automation, bookings, support, and payments.",
     intro:
-      "This page should target buyers who want a broad automation platform but still need clear examples of what Crescora AI does for a small business.",
+      "Small businesses often want a broad automation platform with clear examples for bookings, support, reminders, and payments.",
     sections: [
       {
         eyebrow: "Problems",
         title: "Where small businesses lose time",
-        description: "This page should sound commercial, not abstract.",
+        description: "Keep the examples practical, operational, and easy to relate to.",
         bullets: [
           "Leads arrive from WhatsApp, web chat, and calls.",
           "Follow-up is inconsistent across the team.",
@@ -7731,7 +7731,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "Workflows",
-        title: "What Crescora AI should show for small businesses",
+        title: "What Crescora AI automates for small businesses",
         description: "Keep the page concrete and practical.",
         bullets: [
           "Appointment booking and reminders.",
@@ -7741,8 +7741,8 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
       {
         eyebrow: "CTA",
-        title: "What to offer next",
-        description: "The page should funnel buyers to the right next step.",
+        title: "Where teams usually go next",
+        description: "Choose the next page based on your first workflow and rollout scope.",
         bullets: [
           "Open the small-business template.",
           "Compare Crescora AI vs manual support.",
@@ -7751,7 +7751,7 @@ export const industrySeoLandingPages: SeoLandingPage[] = [
       },
     ],
     relatedLinks: [
-      relatedLink("Service business template", "/templates/service-business-booking-template", "A launch-ready small-business workflow."),
+      relatedLink("Service business template", "/templates/service-business-booking-template", "A pilot-ready small-business workflow."),
       relatedLink("WhatsApp solution", "/solutions/whatsapp-automation", "Core channel automation page."),
       relatedLink("Pricing", "/pricing", "See package-based pricing for rollout."),
     ],

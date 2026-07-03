@@ -94,7 +94,7 @@ export function buildStateIndustryTitle(seed: StateSeoSeed, config: StateIndustr
 }
 
 export function buildStateIndustryDescription(seed: StateSeoSeed, config: StateIndustrySeoConfig) {
-  return `Crescora AI helps ${config.titleNoun} buyers in ${seed.name} reduce ${seed.primaryPain} across ${seed.cityClusters.join(", ")} with ${seed.languages.join(", ")} support for ${seed.industries.join(", ")}.`;
+  return `Crescora AI supports ${config.label.toLowerCase()} in ${seed.name} across ${seed.cityClusters.join(", ")}. The rollout can support ${seed.languages.join(", ")} customer journeys for ${seed.industries.join(", ")}.`;
 }
 
 export function buildStateIndustryFaqItems(seed: StateSeoSeed, config: StateIndustrySeoConfig) {

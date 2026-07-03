@@ -50,7 +50,7 @@ const stateTitleNameBySlug: Record<string, string> = {
 const cityArchetypes: CityArchetype[] = [
   {
     key: "commercialHub",
-    marketRole: "a high-volume commercial hub where response speed directly affects revenue",
+    marketRole: "a busy commercial hub where response speed directly affects customer conversion",
     localPainPoint:
       "slow lead response, sales follow-up leakage, booking delays, and fragmented customer conversation visibility",
     proofFocus: "lead routing, booking speed, and front-line sales follow-up",
@@ -1504,23 +1504,23 @@ function buildGeneratedProofBlocks({
     { title: string; description: string }
   > = {
     commercialHub: {
-      title: "Response speed should stay owned from the first enquiry",
+      title: "Response speed needs clear ownership from the first enquiry",
       description: `In ${city}, the local market is shaped by ${stateSeed.commercialAngle}, which usually creates pressure around ${archetype.proofFocus} for ${industryLine}. Teams need clearer ownership than manual chat handling can provide.`,
     },
     operationsCluster: {
-      title: "Assignment and reminder discipline should stay visible",
+      title: "Assignment and reminder discipline need to stay visible",
       description: `${city} teams often feel the cost of weak handoff and reminder timing first, so ${archetype.proofFocus} usually matters more than adding another messaging channel.`,
     },
     serviceCluster: {
-      title: "Enquiry handling should move customers to the next step",
+      title: "Enquiry handling needs to move customers to the next step",
       description: `For ${industryLine} in ${city}, the biggest operational gap is usually not awareness. It is whether teams can turn enquiries into structured next steps through ${archetype.proofFocus}.`,
     },
     supportCluster: {
-      title: "Support coverage should stay structured under repeat demand",
+      title: "Support coverage needs structure when repeat questions increase",
       description: `${city} teams usually need better ${archetype.proofFocus} because repeated customer questions, escalations, and status requests create daily operational load across ${industryLine}.`,
     },
     collectionsCluster: {
-      title: "Follow-up and collections should stay visible to the team",
+      title: "Follow-up and collections need team visibility",
       description: `${city} teams often need tighter ${archetype.proofFocus} because delayed reminders, scattered document status, and exception handling create avoidable revenue drag for ${industryLine}.`,
     },
   };
@@ -1528,8 +1528,8 @@ function buildGeneratedProofBlocks({
   return [
     localPressureBlockByArchetype[archetype.key],
     {
-      title: `${workflowLine.charAt(0).toUpperCase() + workflowLine.slice(1)} should stay in one operating path`,
-      description: `A strong ${city} rollout should connect ${workflowLine} with records, reminders, escalation rules, and human handoff so teams can reduce ${stateSeed.primaryPain}.`,
+      title: `${workflowLine.charAt(0).toUpperCase() + workflowLine.slice(1)} work best in one operating path`,
+      description: `A strong ${city} rollout can connect ${workflowLine} with records, reminders, escalation rules, and human handoff so teams can reduce ${stateSeed.primaryPain}.`,
     },
     buildUserFacingLocalityBlock({
       city,
@@ -1553,7 +1553,7 @@ function normalizeCuratedProofIntro({
   primaryIndustries: string[];
   featuredWorkflowSlugs: StateWorkflowSlug[];
 }) {
-  if (/\bpages?\b|\bcopy\b/i.test(intro)) {
+  if (/\bpages?\b|\bcopy\b|\bSEO\b|\bsearch\b|\bbuyer intent\b|\bhigh-volume\b|\blocation-modified\b|\bname swap\b/i.test(intro)) {
     return buildUserFacingProofIntro({
       city,
       stateSeed,
@@ -1587,8 +1587,8 @@ function normalizeCuratedProofBlocks({
 
   return blocks.map((block) => {
     if (
-      /\bpage\b|\bcopy\b/i.test(block.title) ||
-      /\bpage\b|\bcopy\b/i.test(block.description)
+      /\bpage\b|\bcopy\b|\bSEO\b|\bsearch\b|\bbuyer intent\b|\bhigh-volume\b|\blocation-modified\b|\bname swap\b/i.test(block.title) ||
+      /\bpage\b|\bcopy\b|\bSEO\b|\bsearch\b|\bbuyer intent\b|\bhigh-volume\b|\blocation-modified\b|\bname swap\b/i.test(block.description)
     ) {
       return localityBlock;
     }

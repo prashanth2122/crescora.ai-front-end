@@ -80,7 +80,7 @@ This keeps route components thin and makes future localization work straightforw
 - the about page uses the same product-first CTA labels and automation-focused positioning so it stays aligned with the rest of the site
 - the about page now includes a workflow-path hero visual, stronger platform and trust proof, a clearer Crescora-vs-Crescora AI product relationship section, and a stronger bottom CTA so the company story stays centralized in `src/lib/site-content.ts`
 - the homepage now stays focused on hero, pain, workflow automation, featured industries, pilot scope, trust / FAQ, and a compact deeper-links block; detailed solutions, pricing, blog content, and the full lead intake live on their dedicated routes
-- the homepage now also carries a shared SEO coverage section for channels, integrations, and service categories so core search intent stays centralized in `src/lib/site-content.ts`
+- the homepage now also carries a shared service coverage section for channels, integrations, and service categories so buyer-facing discovery copy stays centralized in `src/lib/site-content.ts`
 - the workflow examples route uses transparent sample-workflow language, a stronger enquiry-to-outcome hero, richer industry example cards, pilot outcome metrics, and a stronger workflow-pilot CTA
 - the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
 - the privacy policy now renders at `/privacy`
