@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   CalendarDays,
   PlayCircle,
@@ -45,14 +45,15 @@ function isExternalHref(href: string) {
 function SupportActionLink({
   action,
   index,
+  isInteractive,
   onSelect,
 }: {
   action: SupportAction;
   index: number;
+  isInteractive: boolean;
   onSelect: () => void;
 }) {
-  const wrapperClassName =
-    "pointer-events-auto flex items-center gap-3 transition-all duration-300";
+  const wrapperClassName = `${isInteractive ? "pointer-events-auto" : "pointer-events-none"} flex items-center gap-3 transition-all duration-300`;
   const labelClassName =
     "relative inline-flex max-w-[min(14rem,calc(100vw-7rem))] items-center justify-end rounded-full bg-white px-5 py-3 text-right text-sm font-semibold text-slate-900 shadow-[0_14px_30px_rgba(15,23,42,0.12)] after:absolute after:-right-2 after:top-1/2 after:h-4 after:w-4 after:-translate-y-1/2 after:rotate-45 after:rounded-[4px] after:bg-white";
   const iconClassName =
@@ -88,6 +89,8 @@ function SupportActionLink({
         data-contact-channel={action.id}
         className={wrapperClassName}
         style={sharedStyle}
+        tabIndex={isInteractive ? 0 : -1}
+        aria-hidden={!isInteractive}
         onClick={onSelect}
       >
         <span className={labelClassName}>{action.label}</span>
@@ -105,6 +108,8 @@ function SupportActionLink({
       data-contact-channel={action.id}
       className={wrapperClassName}
       style={sharedStyle}
+      tabIndex={isInteractive ? 0 : -1}
+      aria-hidden={!isInteractive}
       onClick={onSelect}
     >
       <span className={labelClassName}>{action.label}</span>
@@ -121,6 +126,7 @@ export function WhatsAppFloatingButton({
   whatsappHref,
 }: SupportFloatingMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const locale = getLocaleFromPath(pathname ?? "/");
   const copy = getLocaleCopy(locale);
@@ -173,17 +179,43 @@ export function WhatsAppFloatingButton({
     (action): action is SupportAction => action !== null,
   );
 
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const root = menuRef.current;
+      const target = event.target;
+
+      if (!root || !(target instanceof Node) || root.contains(target)) {
+        return;
+      }
+
+      setIsOpen(false);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [isOpen]);
+
   if (actions.length === 0) {
     return null;
   }
 
   return (
-    <div className="pointer-events-none fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 sm:bottom-5 sm:right-5">
+    <div
+      ref={menuRef}
+      className="pointer-events-none fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 sm:bottom-5 sm:right-5"
+    >
       <div
         aria-hidden={!isOpen}
         className={`flex flex-col items-end gap-4 transition-all duration-300 ${
           isOpen
-            ? "translate-y-0 opacity-100"
+            ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
         }`}
       >
@@ -192,6 +224,7 @@ export function WhatsAppFloatingButton({
             key={action.id}
             action={action}
             index={index}
+            isInteractive={isOpen}
             onSelect={() => setIsOpen(false)}
           />
         ))}
