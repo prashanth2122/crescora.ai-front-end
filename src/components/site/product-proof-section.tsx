@@ -1,4 +1,4 @@
-import { BarChart3, BookOpenText, CreditCard, FileText, MessageSquareText, UserCheck, Workflow } from "lucide-react";
+import { BarChart3, BookOpenText, CreditCard, FileText, MessageSquareText, PlugZap, ShieldCheck, UserCheck, Workflow } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -13,17 +13,15 @@ type ProductProofSectionProps = {
   eyebrow: string;
   title: string;
   description: string;
-  disclaimer: string;
   panels: readonly ProductProofPanel[];
 };
 
-const proofIcons = [Workflow, MessageSquareText, UserCheck, BookOpenText, BarChart3, CreditCard, FileText];
+const proofIcons = [Workflow, MessageSquareText, UserCheck, BookOpenText, BarChart3, CreditCard, FileText, PlugZap, ShieldCheck];
 
 export function ProductProofSection({
   eyebrow,
   title,
   description,
-  disclaimer,
   panels,
 }: ProductProofSectionProps) {
   return (
@@ -42,14 +40,14 @@ export function ProductProofSection({
                       <Icon className="h-5 w-5" />
                     </div>
                     <span className="max-w-[11rem] rounded-full border border-white/10 bg-white/10 px-3 py-1 text-right text-xs font-medium leading-4 text-white/80">
-                      Demo product screen using dummy data
+                      Product demo · Sample data
                     </span>
                   </div>
                   <p className="mt-5 text-lg font-semibold tracking-tight">{panel.title}</p>
                   <p className="mt-2 text-sm leading-7 text-white/70">{panel.description}</p>
                 </div>
                 <div className="bg-white p-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">What it proves</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">What this demonstrates</p>
                   <p className="mt-2 text-base font-semibold text-zinc-950">{panel.metric}</p>
                 </div>
               </CardContent>
@@ -57,9 +55,6 @@ export function ProductProofSection({
           );
         })}
       </div>
-      <p className="mt-6 max-w-4xl rounded-3xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-950">
-        {disclaimer}
-      </p>
     </section>
   );
 }

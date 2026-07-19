@@ -229,47 +229,64 @@ export const siteContent = {
       ],
     },
     productProof: {
-      eyebrow: "See Crescora AI in action",
-      title: "Product proof through demo workflow panels.",
+      eyebrow: "See Crescora.ai in action",
+      title: "Explore Crescora.ai through guided product demos.",
       description:
-        "These code-built panels show the public product surfaces Crescora AI is designed around. They use dummy data and do not represent a live customer, hospital, real estate company, or institution.",
-      disclaimer:
-        "Sample demo using dummy data. Real approved product screenshots can replace these panels when they are available.",
+        "See how Crescora.ai helps businesses design, automate, and manage customer journeys across conversations, AI, integrations, payments, documents, and human support. All names and data shown in these demos are fictional and used only for demonstration purposes.",
       panels: [
         {
           title: "Automation Builder",
-          description: "Design customer journeys step by step with questions, branches, fallbacks, reminders, and handover paths.",
-          metric: "50 automation node types",
+          description:
+            "Design multi-step customer journeys using messages, forms, decisions, AI, integrations, retries, fallbacks, and human escalation.",
+          metric: "Visual orchestration across 50 supported node types",
         },
         {
           title: "Customer Chat Experience",
-          description: "Show how customers move through intake, FAQs, booking, payment, document, support, and next-step prompts.",
-          metric: "Conversation path",
+          description:
+            "Experience how customers complete enquiries, bookings, payments, document uploads, and support requests through one guided conversation.",
+          metric: "End-to-end conversational journeys",
         },
         {
-          title: "Human Handover Queue",
-          description: "Move unresolved, sensitive, or high-value cases to the team with context and ownership.",
-          metric: "Handover quality",
+          title: "Human Handover & Queue",
+          description:
+            "Route unresolved, sensitive, or high-value conversations to the right team with conversation context, ownership, priority, and SLA visibility.",
+          metric: "Context-rich human escalation",
         },
         {
-          title: "Knowledge Base",
-          description: "Use approved business knowledge for safer answers, routing, summarization, and escalation.",
-          metric: "Grounded answers",
+          title: "Knowledge & Grounded Answers",
+          description:
+            "Deliver answers from approved business knowledge with grounding, citations, confidence controls, fallback responses, and human escalation.",
+          metric: "Grounded and governed answers",
         },
         {
-          title: "Analytics Dashboard",
-          description: "Track leads, bookings, handovers, follow-ups, drop-offs, and workflow improvement opportunities.",
-          metric: "Pilot metrics",
+          title: "Analytics & Outcomes",
+          description:
+            "Monitor leads, bookings, conversions, handovers, drop-offs, workflow health, and opportunities to improve customer journeys.",
+          metric: "Operational and outcome visibility",
         },
         {
-          title: "Payment and Reminder Workflow",
-          description: "Request payment steps, send pending reminders, confirm status, and hand over exceptions.",
-          metric: "Follow-up completion",
+          title: "Payments & Reminders",
+          description:
+            "Create payment requests, verify status, send pending reminders, handle failures, and route exceptions without manual follow-up.",
+          metric: "Automated payment follow-up",
         },
         {
-          title: "Document Collection Workflow",
-          description: "Request documents, capture status, remind customers, and route review cases to staff.",
-          metric: "Document completion",
+          title: "Document Intake & Review",
+          description:
+            "Request documents, validate file types, track completion, send reminders, process files, and route exceptions for human review.",
+          metric: "Structured document collection",
+        },
+        {
+          title: "Integrations & Channels",
+          description:
+            "Connect customer journeys with APIs, business systems, WhatsApp, Telegram, email, SMS, webhooks, and managed integrations.",
+          metric: "Connected multi-channel automation",
+        },
+        {
+          title: "Governance & Flow Health",
+          description:
+            "Validate variables, branches, fallback routes, errors, permissions, publish blockers, and release readiness before deployment.",
+          metric: "Pre-publish validation and governance",
         },
       ],
     },

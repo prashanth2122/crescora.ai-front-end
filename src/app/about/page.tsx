@@ -201,7 +201,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-0 sm:px-6 lg:px-8">
-        <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr] xl:items-start">
+        <div className="grid gap-6">
           <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
             <CardContent className="p-6 sm:p-8">
               <SectionHeading eyebrow="Founder-led" title={founderLed.title} />
@@ -218,6 +218,7 @@ export default function AboutPage() {
                         src={founder.image.src}
                         alt={founder.image.alt}
                         fill
+                        loading="eager"
                         sizes="(min-width: 1024px) 280px, (min-width: 768px) 40vw, 100vw"
                         className="object-cover object-top"
                       />

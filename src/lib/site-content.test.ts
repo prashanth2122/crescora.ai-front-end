@@ -53,7 +53,11 @@ test("public brand positioning uses Crescora AI without separate product brandin
   );
   assert.match(siteContent.homepage.hero.description, /enquiries, appointment booking, lead qualification/);
   assert.match(siteContent.homepage.founderTrust.description, /selected businesses/);
-  assert.equal(siteContent.homepage.productProof.panels[0]?.metric, "50 automation node types");
+  assert.equal(siteContent.homepage.productProof.title, "Explore Crescora.ai through guided product demos.");
+  assert.equal(siteContent.homepage.productProof.panels.length, 9);
+  assert.equal(siteContent.homepage.productProof.panels[0]?.metric, "Visual orchestration across 50 supported node types");
+  assert.equal(siteContent.homepage.productProof.panels[8]?.title, "Governance & Flow Health");
+  assert.equal(siteContent.homepage.productProof.panels[8]?.metric, "Pre-publish validation and governance");
 });
 
 test("homepage uses proof-safe claims and measurable pilot language", () => {

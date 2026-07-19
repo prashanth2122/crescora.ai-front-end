@@ -114,6 +114,7 @@ This keeps route components thin and makes future localization work straightforw
 - blog detail pages now use the shared `public/blog/shared-blog-featured.png` visual for the in-article featured image while keeping per-route Open Graph metadata images on `/blog/[slug]/opengraph-image`
 - `/india` is a buyer-facing service-area page for Indian businesses, and `/india/[state]` pages use reusable service-area content driven by `src/lib/state-seo-seeds.ts`, with state-specific cities, languages, industries, workflow themes, FAQs, and CTA copy
 - the about page founder cards render founder photos from `public/founders/` using fixed-ratio `next/image` assets alongside expanded founder summaries covering AI-company, enterprise architecture, and workflow automation experience
+- product proof sections use guided demo positioning with nine product-coverage cards, read-only sample-data badges, and a 3 by 3 desktop grid
 - the pricing page now uses automation-first wording, India/global billing-region pricing, richer best-for/includes tier detail, pricing-scope education, and an expanded FAQ plus CTA path
 - the pricing cards are loaded from the public customer-facing pricing API at `GET /customer-facing-website/pricing` with the existing static pricing copy as a fallback when the API is unavailable
 - the solutions hub keeps the query-led structure but now uses equal-height cards and arrow-style solution links for clearer scanning

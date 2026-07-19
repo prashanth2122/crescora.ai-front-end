@@ -86,7 +86,6 @@ export default function DemoPage() {
         eyebrow={siteContent.homepage.productProof.eyebrow}
         title={siteContent.homepage.productProof.title}
         description={siteContent.homepage.productProof.description}
-        disclaimer={siteContent.homepage.productProof.disclaimer}
         panels={siteContent.homepage.productProof.panels}
       />
     </PageShell>

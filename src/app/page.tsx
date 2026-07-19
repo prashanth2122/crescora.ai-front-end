@@ -195,7 +195,6 @@ export default function HomePage() {
         eyebrow={productProof.eyebrow}
         title={productProof.title}
         description={productProof.description}
-        disclaimer={productProof.disclaimer}
         panels={productProof.panels}
       />
 
