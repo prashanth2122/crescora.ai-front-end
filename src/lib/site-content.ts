@@ -684,7 +684,7 @@ export const siteContent = {
       title: "Built by a founder-led software team",
       paragraphs: [
         "Crescora AI is built by a small software engineering team from Hyderabad focused on one clear problem: businesses lose leads, bookings, payments, and support quality when customer conversations are scattered across chats, calls, forms, spreadsheets, and manual follow-ups.",
-        "The founding team brings hands-on experience from AI-company work and larger enterprise ecommerce environments, with a practical focus on product engineering, workflow automation, customer operations, and scalable business systems.",
+        "The founding team brings hands-on experience from several AI-company and large enterprise environments, with a practical focus on artificial intelligence, product engineering, workflow automation, customer operations, and scalable business systems.",
         "We are early, hands-on, and product-led. Your first workflow is not passed through multiple layers. The founding team studies your current process, maps the automation, builds the workflow, tests edge cases, and supports the pilot launch directly.",
         "We do not pretend to have a large portfolio. We are software developers building Crescora AI from the ground up, and we work with selected businesses where we can prove value through one practical workflow first.",
       ],
@@ -693,15 +693,23 @@ export const siteContent = {
           name: "Navya Chirumalla",
           role: "Co-founder",
           summary:
-            "Founder with experience across AI-company work, product execution, and customer workflow automation.",
+            "Founder with experience across several AI companies, product execution, and customer workflow automation. Navya focuses on turning real-world business challenges into practical AI-assisted workflows that teams can understand, operate, and improve.",
           linkedin: "https://www.linkedin.com/in/navyachirumalla",
+          image: {
+            src: "/founders/navya-chirumalla-founder.png",
+            alt: "Navya Chirumalla, co-founder of Crescora AI.",
+          },
         },
         {
           name: "Prashanth Chinala",
           role: "Co-founder",
           summary:
-            "Founder with experience across larger enterprise ecommerce environments, software engineering, and workflow systems.",
+            "Founder and architect with experience across billion-dollar enterprise environments, software engineering, artificial intelligence, and workflow systems. Prashanth focuses on solving real-world operational problems with scalable architecture, AI-assisted automation, and reliable product engineering.",
           linkedin: "https://www.linkedin.com/in/prashanth-chinala/",
+          image: {
+            src: "/founders/prashanth-chinala-founder.png",
+            alt: "Prashanth Chinala, co-founder of Crescora AI.",
+          },
         },
       ],
     },
@@ -954,7 +962,7 @@ export const siteContent = {
     metadata: {
       title: "Contact | Crescora AI",
       description:
-        "Contact Crescora AI for sales, support, CEO correspondence, and office location details.",
+        "Contact Crescora AI for sales, support, phone contact, and office location details.",
     },
     hero: {
       eyebrow: "Contact",
@@ -966,7 +974,7 @@ export const siteContent = {
       eyebrow: "Direct contact",
       title: "Sales, support, contact, and office details.",
       description:
-        "Use these contact points for new demos, technical help, phone contact, executive correspondence, or office visits.",
+        "Use these contact points for new demos, technical help, phone contact, or office visits.",
       items: [
         {
           label: "Sales",
@@ -977,11 +985,6 @@ export const siteContent = {
           label: "Support",
           value: "support@crescora.ai",
           href: "mailto:support@crescora.ai",
-        },
-        {
-          label: "CEO",
-          value: "navya@crescora.ai",
-          href: "mailto:navya@crescora.ai",
         },
         {
           label: "Address",

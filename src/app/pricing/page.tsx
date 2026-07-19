@@ -1,4 +1,3 @@
-import { defaultPricingRegion, pricingPackagesByRegion, pricingRegions } from "@/lib/site-data";
 import { siteContent } from "@/lib/site-content";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { PageShell } from "@/components/site/page-shell";
@@ -14,6 +13,7 @@ import {
   buildPageSchema,
   createExactPageMetadata,
 } from "@/lib/seo";
+import { getPublicPricingData, type PublicPricingData } from "@/lib/public-pricing";
 
 export const metadata = createExactPageMetadata({
   title: siteContent.pricing.metadata.title,
@@ -26,18 +26,22 @@ const pricingBreadcrumbs = buildBreadcrumbSchema([
   { name: "Pricing", href: buildAbsoluteUrl("/pricing") },
 ]);
 
-const pricingPackagesSchema = buildItemListSchema(
-  "Crescora AI pricing packages",
-  pricingRegions.flatMap((region) =>
-    pricingPackagesByRegion[region.value].map((pkg) => ({
-      name: `${pkg.title} (${region.label})`,
-      url: buildAbsoluteUrl("/pricing"),
-      description: `${pkg.price}${pkg.priceDetail ? ` (${pkg.priceDetail})` : ""} - Best for ${pkg.bestFor}`,
-    })),
-  ),
-);
+function buildPricingPackagesSchema(pricingData: PublicPricingData) {
+  return buildItemListSchema(
+    "Crescora AI pricing packages",
+    pricingData.regionOptions.flatMap((region) =>
+      (pricingData.packagesByRegion[region.value] ?? []).map((pkg) => ({
+        name: `${pkg.title} (${region.label})`,
+        url: buildAbsoluteUrl("/pricing"),
+        description: `${pkg.price}${pkg.priceDetail ? ` (${pkg.priceDetail})` : ""} - Best for ${pkg.bestFor}`,
+      })),
+    ),
+  );
+}
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const pricingData = await getPublicPricingData();
+
   return (
     <PageShell>
       <SeoJsonLd
@@ -48,7 +52,7 @@ export default function PricingPage() {
         })}
       />
       <SeoJsonLd data={pricingBreadcrumbs} />
-      <SeoJsonLd data={pricingPackagesSchema} />
+      <SeoJsonLd data={buildPricingPackagesSchema(pricingData)} />
       <SeoJsonLd data={buildFaqPageSchema(siteContent.pricing.faq.items)} />
 
       <PageHero
@@ -81,12 +85,12 @@ export default function PricingPage() {
         </section>
 
         <PricingPackagesSection
-          defaultRegion={defaultPricingRegion}
-          regionLabel={siteContent.pricing.regionSelector.label}
-          regionHelperText={siteContent.pricing.regionSelector.helperText}
-          regionOptions={pricingRegions}
-          regionNotes={siteContent.pricing.regionNotes}
-          packagesByRegion={pricingPackagesByRegion}
+          defaultRegion={pricingData.defaultRegion}
+          regionLabel={pricingData.regionLabel}
+          regionHelperText={pricingData.regionHelperText}
+          regionOptions={pricingData.regionOptions}
+          regionNotes={pricingData.regionNotes}
+          packagesByRegion={pricingData.packagesByRegion}
           scopeNote={siteContent.pricing.scopeNote}
           primaryCta={siteContent.pricing.ctas.primary}
           secondaryCta={siteContent.pricing.ctas.secondary}

@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Phone, UserRound } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { getPublicDirectContactItem } from "@/lib/app-config";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { buildAbsoluteUrl, buildPageSchema, createExactPageMetadata, organizationSchema } from "@/lib/seo";
@@ -56,7 +56,7 @@ export default function ContactPage() {
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           {detailItems.map((item) => {
             const isAddress = item.label === "Address";
-            const Icon = isAddress ? MapPin : item.label === "CEO" ? UserRound : item.label === "Contact" ? Phone : Mail;
+            const Icon = isAddress ? MapPin : item.label === "Contact" ? Phone : Mail;
             const linkHref = "href" in item ? item.href : undefined;
 
             return (

@@ -12,6 +12,7 @@ import { enLocaleCopy } from "@/lib/locales/en";
 import { siteContent } from "@/lib/site-content";
 import { termsOfServiceContent } from "@/lib/terms-of-service-content";
 import { pricingPackages, pricingPackagesByRegion, pricingRegions, useCases } from "@/lib/site-data";
+import { buildPublicPricingDataFromApiResponse } from "@/lib/public-pricing";
 
 const approvedCtaLabels = new Set([
   "Book Free Demo",
@@ -115,6 +116,88 @@ test("pricing and contact copy clarify scope, extras, cancellation, and consent"
   assert.match(siteContent.contact.responseExpectation, /1 business day/);
 });
 
+test("public pricing API data maps to selectable pricing cards", () => {
+  const pricingData = buildPublicPricingDataFromApiResponse({
+    generatedAt: "2026-07-19T00:00:00.000Z",
+    billingRegion: {
+      title: "Billing region",
+      description: "Pricing changes by billing region.",
+      defaultRegionCode: "IN",
+      regions: [
+        { code: "IN", label: "India - INR ₹", currency: "INR", currencySymbol: "₹", isDefault: true },
+        { code: "ROW", label: "Rest of World - USD $", currency: "USD", currencySymbol: "$", isDefault: false },
+      ],
+    },
+    plans: [
+      {
+        code: "growth",
+        name: "Growth",
+        eyebrow: "Growing operations",
+        badge: "Most Popular",
+        sortOrder: 20,
+        isCustomPricing: false,
+        bestFor: "Growing operations",
+        description: "Best for teams expanding automation.",
+        includes: ["5 active flows", "15,000 AI credits/month"],
+        channels: ["WEB", "WHATSAPP"],
+        ctaLabel: "Choose Growth",
+        price: {
+          currency: "INR",
+          regionCode: "IN",
+          interval: "month",
+          amountPaise: 2999900,
+          amountMajor: 29999,
+          display: "₹29,999/mo",
+          startsFromDisplay: null,
+          baseAmountPaise: 4999900,
+          discountedAmountPaise: 2999900,
+        },
+        pricesByRegion: {
+          IN: {
+            currency: "INR",
+            regionCode: "IN",
+            interval: "month",
+            amountPaise: 2999900,
+            amountMajor: 29999,
+            display: "₹29,999/mo",
+            startsFromDisplay: null,
+            baseAmountPaise: 4999900,
+            discountedAmountPaise: 2999900,
+          },
+          ROW: {
+            currency: "USD",
+            regionCode: "ROW",
+            interval: "month",
+            amountPaise: 59900,
+            amountMajor: 599,
+            display: "$599/mo",
+            startsFromDisplay: null,
+            baseAmountPaise: 59900,
+            discountedAmountPaise: null,
+          },
+        },
+        limits: {
+          bots: 1,
+          flows: 5,
+          users: 3,
+          aiCredits: 15000,
+          monthlyConversations: 10000,
+          kbStorageMb: 2048,
+          whatsappTemplates: 10,
+        },
+      },
+    ],
+  });
+
+  assert.equal(pricingData.source, "api");
+  assert.equal(pricingData.defaultRegion, "IN");
+  assert.equal(pricingData.regionOptions[1]?.value, "ROW");
+  assert.equal(pricingData.packagesByRegion.IN?.[0]?.price, "₹29,999/mo");
+  assert.equal(pricingData.packagesByRegion.ROW?.[0]?.price, "$599/mo");
+  assert.equal(pricingData.packagesByRegion.IN?.[0]?.badge, "Most Popular");
+  assert.deepEqual(pricingData.packagesByRegion.IN?.[0]?.includes, ["5 active flows", "15,000 AI credits/month"]);
+});
+
 test("trust pages publish honest early-stage security and responsible AI boundaries", () => {
   assert.match(siteContent.trustPages.security.hero.description, /we do not claim certifications/);
   assert.ok(siteContent.trustPages.security.sections[1]?.items.includes("SOC 2 certification"));
@@ -129,6 +212,10 @@ test("about page copy includes founder-led proof policy and safe legal identity 
   assert.equal(siteContent.about.founderLed.founders.length, 2);
   assert.match(siteContent.about.founderLed.founders[0]?.linkedin ?? "", /linkedin\.com\/in\/navyachirumalla/);
   assert.match(siteContent.about.founderLed.founders[1]?.linkedin ?? "", /linkedin\.com\/in\/prashanth-chinala/);
+  assert.equal(siteContent.about.founderLed.founders[0]?.image.src, "/founders/navya-chirumalla-founder.png");
+  assert.equal(siteContent.about.founderLed.founders[1]?.image.src, "/founders/prashanth-chinala-founder.png");
+  assert.match(siteContent.about.founderLed.founders[0]?.summary ?? "", /several AI companies/);
+  assert.match(siteContent.about.founderLed.founders[1]?.summary ?? "", /billion-dollar enterprise environments/);
   assert.ok(siteContent.about.whatWeWillNotDo.items.includes("We will not show fake client logos"));
   assert.match(siteContent.about.notOnly.summary, /workflow automation system/);
   assert.match(siteContent.about.proofPolicy.description, /fake testimonials/);

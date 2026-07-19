@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import type { PricingPackage, PricingRegion } from "@/lib/site-data";
+import type { PricingPackage } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,12 +16,12 @@ import {
 } from "@/components/ui/select";
 
 type PricingPackagesSectionProps = {
-  defaultRegion: PricingRegion;
+  defaultRegion: string;
   regionLabel: string;
   regionHelperText: string;
-  regionOptions: readonly { value: PricingRegion; label: string }[];
-  regionNotes: Record<PricingRegion, string>;
-  packagesByRegion: Record<PricingRegion, readonly PricingPackage[]>;
+  regionOptions: readonly { value: string; label: string }[];
+  regionNotes: Record<string, string>;
+  packagesByRegion: Record<string, readonly PricingPackage[]>;
   scopeNote: string;
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
@@ -38,8 +38,8 @@ export function PricingPackagesSection({
   primaryCta,
   secondaryCta,
 }: PricingPackagesSectionProps) {
-  const [region, setRegion] = useState<PricingRegion>(defaultRegion);
-  const packages = packagesByRegion[region];
+  const [region, setRegion] = useState(defaultRegion);
+  const packages = packagesByRegion[region] ?? [];
 
   return (
     <section className="mt-10">
@@ -50,7 +50,7 @@ export function PricingPackagesSection({
             <p className="mt-2 text-sm leading-7 text-zinc-600">{regionHelperText}</p>
           </div>
           <div className="w-full max-w-sm">
-            <Select value={region} onValueChange={(value) => setRegion(value as PricingRegion)}>
+            <Select value={region} onValueChange={setRegion}>
               <SelectTrigger
                 aria-label={regionLabel}
                 className="h-12 w-full rounded-full border-zinc-200 bg-white px-4 text-left text-sm font-medium text-zinc-950"

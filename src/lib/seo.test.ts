@@ -2066,9 +2066,16 @@ test("article metadata includes authorship and publication dates", () => {
   assert.equal(articleOpenGraph.modifiedTime, "2026-06-24T00:00:00.000Z");
 });
 
-test("representative pages emit FAQ and discovery JSON-LD on indexable commercial routes", () => {
+test("representative pages emit FAQ and discovery JSON-LD on indexable commercial routes", async () => {
   const homeHtml = renderToStaticMarkup(HomePage());
-  const pricingHtml = renderToStaticMarkup(PricingPage());
+  const previousPricingApiDisabled = process.env.CRESCORA_PRICING_API_DISABLED;
+  process.env.CRESCORA_PRICING_API_DISABLED = "true";
+  const pricingHtml = renderToStaticMarkup(await PricingPage());
+  if (previousPricingApiDisabled === undefined) {
+    delete process.env.CRESCORA_PRICING_API_DISABLED;
+  } else {
+    process.env.CRESCORA_PRICING_API_DISABLED = previousPricingApiDisabled;
+  }
   const compareHtml = renderToStaticMarkup(ComparePage());
   const proofHtml = renderToStaticMarkup(WorkflowExamplesPage());
   const solutionHtml = renderToStaticMarkup(

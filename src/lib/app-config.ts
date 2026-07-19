@@ -2,6 +2,7 @@ export const customerIntakeApiConfig = {
   baseUrl: process.env.CUSTOMER_INTAKE_API_BASE_URL ?? "https://api.crescora.ai",
   tokenPath: "/customer-facing-website/token",
   intakesPath: "/customer-facing-website/intakes",
+  pricingPath: "/customer-facing-website/pricing",
 } as const;
 
 const DEFAULT_BOOK_A_CALL_PATH = "/contact";
@@ -16,6 +17,8 @@ export type PublicDirectContactItem = {
   value: string;
   href: string;
 };
+
+type PublicConfigEnv = Record<string, string | undefined>;
 
 function normalizeConfiguredUrl(value: string | undefined, fallback: string) {
   const normalized = value?.trim();
@@ -71,7 +74,7 @@ export function buildMailtoHref(emailAddress: string | undefined) {
 }
 
 export function getPublicDirectContactItem(
-  env: NodeJS.ProcessEnv = process.env,
+  env: PublicConfigEnv = process.env,
 ): PublicDirectContactItem {
   const contactPhoneCandidates = [
     env.CONTACT_PHONE_NUMBER?.trim(),
@@ -91,7 +94,7 @@ export function getPublicDirectContactItem(
 }
 
 export function getPublicContactSurfaceConfig(
-  env: NodeJS.ProcessEnv = process.env,
+  env: PublicConfigEnv = process.env,
 ) {
   const supportPhoneNumber =
     env.SUPPORT_PHONE_NUMBER?.trim() || env.WHATSAPP_PHONE_NUMBER?.trim();

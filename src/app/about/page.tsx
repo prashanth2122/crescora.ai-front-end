@@ -5,6 +5,7 @@ import { SeoJsonLd } from "@/components/site/seo-json-ld";
 import { createExactPageMetadata } from "@/lib/seo";
 import { buildBreadcrumbSchema } from "@/lib/india-seo-data";
 import { siteContent } from "@/lib/site-content";
+
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { SectionHeading } from "@/components/site/section-heading";
@@ -212,7 +213,16 @@ export default function AboutPage() {
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {founderLed.founders.map((founder) => (
                   <div key={founder.linkedin} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-                    <p className="text-lg font-semibold tracking-tight text-zinc-950">{founder.name}</p>
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100">
+                      <Image
+                        src={founder.image.src}
+                        alt={founder.image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 280px, (min-width: 768px) 40vw, 100vw"
+                        className="object-cover object-top"
+                      />
+                    </div>
+                    <p className="mt-5 text-lg font-semibold tracking-tight text-zinc-950">{founder.name}</p>
                     <p className="mt-1 text-sm font-medium text-zinc-500">{founder.role}</p>
                     <p className="mt-3 text-sm leading-7 text-zinc-600">{founder.summary}</p>
                     <Button asChild variant="link" className="mt-4 h-auto p-0 text-zinc-950">
