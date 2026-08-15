@@ -1,113 +1,174 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { trustPoints } from "@/lib/site-data";
+import { getHomepageDemoVideoUrl, getPublicContactSurfaceConfig } from "@/lib/app-config";
+import { homepageReviews } from "@/lib/homepage-reviews";
 import { siteContent } from "@/lib/site-content";
 import {
+  buildAbsoluteUrl,
   buildFaqPageSchema,
-  createPageMetadata,
+  createExactPageMetadata,
   homepageServicesListSchema,
   organizationSchema,
   softwareSchema,
   websiteSchema,
 } from "@/lib/seo";
+import { buildYoutubeEmbedUrl, getYoutubeVideoId } from "@/lib/youtube";
+import { HomepageDemoVideoSection } from "@/components/site/homepage-demo-video-section";
+import { HomepagePlatformShowcase } from "@/components/site/homepage-platform-showcase";
+import { ProductScreenshotViewer } from "@/components/site/product-screenshot-viewer";
+import { HomepageTestimonialCarousel } from "@/components/site/homepage-testimonial-carousel";
+import { LeadForm } from "@/components/site/lead-form";
 import { PageShell } from "@/components/site/page-shell";
-import { ProductProofSection } from "@/components/site/product-proof-section";
 import { SectionHeading } from "@/components/site/section-heading";
 import { SeoJsonLd } from "@/components/site/seo-json-ld";
-import { WorkflowVisual } from "@/components/site/workflow-visual";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight,
   BadgeCheck,
+  Bot,
   Building2,
-  CalendarDays,
+  CalendarClock,
   CheckCircle2,
+  ClipboardList,
+  CreditCard,
+  FileText,
+  GraduationCap,
   Headphones,
-  Hospital,
-  MessageSquareText,
-  Sparkles,
+  HeartPulse,
+  LifeBuoy,
+  Route,
+  ShieldCheck,
   Stethoscope,
-  Workflow,
   Wrench,
 } from "lucide-react";
 
-const automationIcons = [MessageSquareText, Workflow, CalendarDays, Headphones, BadgeCheck, ArrowRight];
-const exploreIcons = [Building2, Workflow, BadgeCheck, Sparkles];
+const automationIcons = [ClipboardList, CalendarClock, CreditCard, Bot, FileText, LifeBuoy];
+const industryIcons = [HeartPulse, Building2, GraduationCap, Stethoscope, Wrench, Headphones];
+const trustIcons = [BadgeCheck, LifeBuoy, Route, ShieldCheck];
+
+const homepageMetadata = siteContent.homepage.metadata;
 
 export const metadata: Metadata = {
-  ...createPageMetadata({
-    title: "WhatsApp Automation, AI Chatbots, and Workflow Automation",
-    description: siteContent.homepage.hero.description,
+  ...createExactPageMetadata({
+    title: homepageMetadata.title,
+    description: homepageMetadata.description,
     path: "/",
   }),
+  openGraph: {
+    title: homepageMetadata.socialTitle,
+    description: homepageMetadata.socialDescription,
+    url: buildAbsoluteUrl("/"),
+    type: "website",
+    siteName: siteContent.site.name,
+    locale: "en_IN",
+    images: [
+      {
+        url: buildAbsoluteUrl("/opengraph-image"),
+        alt: "Turn Customer Conversations Into Business Actions",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homepageMetadata.socialTitle,
+    description: homepageMetadata.socialDescription,
+    images: [buildAbsoluteUrl("/opengraph-image")],
+  },
 };
 
-const homepageIndustryCards = [
-  {
-    title: "Hospitals",
-    href: "/industries/hospitals",
-    description: "Automate appointments, patient reminders, document collection, and safe handover for sensitive cases.",
-    ctaLabel: "View Hospital Workflows",
-    icon: Hospital,
-  },
-  {
-    title: "Clinics",
-    href: "/industries/clinics",
-    description: "Book appointments, send reminders, collect patient details, and reduce front-desk call load.",
-    ctaLabel: "View Clinic Workflows",
-    icon: Stethoscope,
-  },
-  {
-    title: "Real Estate",
-    href: "/industries/real-estate",
-    description: "Qualify leads, share project details, book site visits, and keep follow-ups consistent.",
-    ctaLabel: "View Real Estate Workflows",
-    icon: Building2,
-  },
-  {
-    title: "Education",
-    href: "/industries/education",
-    description: "Answer admission questions, collect student details, manage documents, and route applicants to counselors.",
-    ctaLabel: "View Education Workflows",
-    icon: Sparkles,
-  },
-  {
-    title: "Support Teams",
-    href: "/industries/support-teams",
-    description: "Resolve repeated questions, capture issue details, and hand over complex cases with full context.",
-    ctaLabel: "View Support Workflows",
-    icon: Headphones,
-  },
-  {
-    title: "Service Businesses",
-    href: "/industries/service-businesses",
-    description: "Automate bookings, reminders, payment follow-ups, service requests, and customer updates.",
-    ctaLabel: "View Service Workflows",
-    icon: Wrench,
-  },
-] as const;
+function buildVideoSchema(youtubeUrl: string | null) {
+  const videoId = getYoutubeVideoId(youtubeUrl);
+  const embedUrl = buildYoutubeEmbedUrl(youtubeUrl);
+
+  if (!videoId || !embedUrl) {
+    return null;
+  }
+
+  const durationSeconds = siteContent.homepage.demoVideo.videoDurationSeconds;
+  const durationMinutes = Math.floor(durationSeconds / 60);
+  const remainingSeconds = durationSeconds % 60;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: siteContent.homepage.demoVideo.videoTitle,
+    description: siteContent.homepage.demoVideo.videoDescription,
+    thumbnailUrl: [siteContent.homepage.demoVideo.videoThumbnailUrl],
+    uploadDate: siteContent.homepage.demoVideo.videoUploadDate,
+    duration: `PT${durationMinutes}M${remainingSeconds}S`,
+    embedUrl,
+    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+  };
+}
+
+function HeroVisual() {
+  return (
+    <ProductScreenshotViewer
+      viewerId="homepage-hero"
+      title={siteContent.homepage.hero.title}
+      eyebrow="Platform overview"
+      image={siteContent.homepage.hero.visual}
+      previewMaxHeightClassName="max-h-none sm:max-h-[30rem] lg:max-h-[34rem]"
+      previewScrollable={false}
+      previewImageClassName="origin-top scale-100 sm:scale-[1.08]"
+      disableModalOnMobile
+      previewOverlay={
+        <>
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0)_36%,rgba(9,9,11,0.05)_100%)]" />
+          <div className="absolute bottom-5 left-4 right-4 hidden flex-col gap-4 sm:right-auto sm:flex sm:max-w-sm">
+            <div className="rounded-[1.4rem] border border-zinc-200 bg-white/95 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.16)] backdrop-blur">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Platform coverage</p>
+              <div className="mt-3 space-y-2">
+                {["Build and validate workflows", "Run live operations", "Deploy with governance"].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-zinc-700">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="hidden flex-wrap gap-3 sm:flex">
+              <div className="rounded-full border border-white/15 bg-zinc-950 px-4 py-2 text-sm font-medium text-white shadow-[0_12px_28px_rgba(15,23,42,0.2)]">
+                Quality & outcomes
+              </div>
+              <div className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 shadow-[0_12px_28px_rgba(15,23,42,0.12)]">
+                Channels & integrations
+              </div>
+            </div>
+          </div>
+        </>
+      }
+    />
+  );
+}
+
+function ProofStrip() {
+  return (
+    <div className="mt-8 border-t border-zinc-200 pt-6">
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-sm font-medium text-zinc-600">
+        {siteContent.homepage.hero.proofStrip.map((item, index) => (
+          <div key={item} className="flex items-center gap-5">
+            {index > 0 ? <span className="hidden h-1 w-1 rounded-full bg-zinc-300 sm:inline-flex" /> : null}
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function HomePage() {
-  const {
-    hero,
-    pain,
-    automation,
-    outcomes,
-    coverage,
-    founderTrust,
-    productProof,
-    pilotProcess,
-    pilotMetrics,
-    industries,
-    pilot,
-    explore,
-    trust,
-    faq,
-    finalCta,
-  } = siteContent.homepage;
+  const homepageDemoVideoUrl = getHomepageDemoVideoUrl();
+  const whatsappHref =
+    getPublicContactSurfaceConfig().whatsappHref ?? siteContent.homepage.finalCta.secondary.href;
+  const videoSchema = buildVideoSchema(homepageDemoVideoUrl);
 
   return (
     <PageShell>
@@ -115,313 +176,80 @@ export default function HomePage() {
       <SeoJsonLd data={websiteSchema} />
       <SeoJsonLd data={softwareSchema} />
       <SeoJsonLd data={homepageServicesListSchema} />
-      <SeoJsonLd data={buildFaqPageSchema(faq.items)} />
+      <SeoJsonLd data={buildFaqPageSchema(siteContent.homepage.faq.items)} />
+      {videoSchema ? <SeoJsonLd data={videoSchema} /> : null}
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pt-12">
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-[0_30px_120px_rgba(15,23,42,0.28)]">
-          <div className="bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.28),transparent_22%),radial-gradient(circle_at_top_right,rgba(168,85,247,0.22),transparent_22%),linear-gradient(135deg,#050816_0%,#0b1220_50%,#111827_100%)] px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-            <div className="grid min-w-0 gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-              <div className="min-w-0 text-white">
-                <Badge className="h-auto max-w-full whitespace-normal rounded-full border border-white/10 bg-white/10 px-4 py-1 text-left text-xs font-medium uppercase leading-5 tracking-[0.22em] text-white hover:bg-white/15 sm:whitespace-nowrap sm:tracking-[0.28em]">
-                  {hero.badge}
-                </Badge>
-                <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-7xl">
-                  {hero.title}
-                </h1>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
-                  {hero.description}
-                </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
-                    <Link href={siteContent.ctas.bookProjectDemo.href}>{siteContent.ctas.bookProjectDemo.label}</Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="h-12 rounded-full border-white/15 bg-white/5 px-6 text-white hover:bg-white/10 hover:text-white"
-                  >
-                    <Link href={siteContent.ctas.viewIndustryWorkflow.href}>
-                      {siteContent.ctas.viewIndustryWorkflow.label}
-                    </Link>
-                  </Button>
-                </div>
+      <section className="mx-auto w-full max-w-7xl px-4 pb-14 pt-8 sm:px-6 lg:px-8 lg:pt-12">
+        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div className="min-w-0">
+            <Badge className="rounded-full border-zinc-200 bg-zinc-50 px-4 py-1 text-xs uppercase tracking-[0.28em] text-zinc-700 hover:bg-zinc-100">
+              {siteContent.homepage.hero.badge}
+            </Badge>
+            <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl lg:text-6xl">
+              {siteContent.homepage.hero.title}
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-600 sm:text-lg">
+              {siteContent.homepage.hero.description}
+            </p>
 
-                <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <p className="text-xs uppercase tracking-[0.28em] text-white/50">{hero.builtForLabel}</p>
-                  <p className="mt-2 text-sm leading-7 text-white/80">{hero.builtForText}</p>
-                </div>
-
-                <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                  {hero.stats.map((stat) => (
-                    <Card key={stat.label} className="border-white/10 bg-white/5 text-white">
-                      <CardContent className="p-4">
-                        <p className="text-3xl font-semibold tracking-tight">{stat.value}</p>
-                        <p className="mt-2 text-sm leading-6 text-white/65">{stat.label}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-
-              <div className="min-w-0 lg:pl-2">
-                <WorkflowVisual className="shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
-              </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Button asChild className="h-12 w-full rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800 sm:w-auto">
+                <Link
+                  href={siteContent.ctas.bookProjectDemo.href}
+                  data-analytics-role="cta"
+                  data-analytics-area="homepage_hero"
+                  data-analytics-event="hero_demo_click"
+                >
+                  {siteContent.ctas.bookProjectDemo.label}
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="h-12 w-full rounded-full px-6 sm:w-auto">
+                <Link
+                  href={siteContent.homepage.hero.secondaryCtaHref}
+                  data-analytics-role="cta"
+                  data-analytics-area="homepage_hero"
+                  data-analytics-event="product_demo_click"
+                  className="inline-flex items-center gap-2"
+                >
+                  <span>{siteContent.homepage.hero.secondaryCtaLabel}</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
+
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-zinc-500">
+              {siteContent.homepage.hero.supportingText}
+            </p>
+
+            <ProofStrip />
           </div>
+
+          <HeroVisual />
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{founderTrust.eyebrow}</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{founderTrust.title}</h2>
-              <p className="mt-4 text-base leading-8 text-zinc-600">{founderTrust.description}</p>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {founderTrust.points.map((point) => (
-                <div key={point} className="flex items-start gap-3 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm leading-7 text-zinc-700">
-                  <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
-                  <span>{point}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ProductProofSection
-        eyebrow={productProof.eyebrow}
-        title={productProof.title}
-        description={productProof.description}
-        panels={productProof.panels}
-      />
+      <HomepageDemoVideoSection copy={siteContent.homepage.demoVideo} youtubeUrl={homepageDemoVideoUrl} />
 
       <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow={pain.eyebrow} title={pain.title} description={pain.description} />
+        <SectionHeading
+          eyebrow={siteContent.homepage.automation.eyebrow}
+          title={siteContent.homepage.automation.title}
+          description={siteContent.homepage.automation.description}
+        />
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {pain.cards.map((point) => (
-            <Card key={point.title} className="border-zinc-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.05)]">
-              <CardContent className="flex items-start gap-4 p-6">
-                <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-emerald-600" />
-                <div>
-                  <p className="text-base font-medium text-zinc-950">{point.title}</p>
-                  <p className="mt-2 text-sm leading-7 text-zinc-600">{point.text}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div>
-            <SectionHeading eyebrow={automation.eyebrow} title={automation.title} description={automation.description} />
-            <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {automation.cards.map((item, index) => {
-                const Icon = automationIcons[index % automationIcons.length];
-
-                return (
-                  <Card key={item.title} className="border-zinc-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.05)]">
-                    <CardContent className="p-6">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-white">
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <p className="mt-4 text-base font-medium text-zinc-950">{item.title}</p>
-                      <p className="mt-3 text-[15px] leading-7 text-zinc-600">{item.text}</p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-
-          <Card className="border-zinc-200 bg-[linear-gradient(180deg,#111827_0%,#0f172a_100%)] text-white shadow-[0_20px_60px_rgba(15,23,42,0.16)]">
-            <CardContent className="p-6 sm:p-8">
-              <Badge className="rounded-full border-white/10 bg-white/10 px-4 py-1 text-xs text-white hover:bg-white/15">
-                {outcomes.impactLabel}
-              </Badge>
-              <h2 className="mt-5 text-[1.75rem] font-semibold leading-tight tracking-tight">{outcomes.automationClaim}</h2>
-              <p className="mt-4 text-[15px] leading-8 text-white/72">{outcomes.description}</p>
-
-              <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/50">{outcomes.eyebrow}</p>
-                <p className="mt-3 text-lg font-semibold text-white">{outcomes.title}</p>
-                <div className="mt-5 space-y-3">
-                  {outcomes.items.map((item) => (
-                    <div key={item} className="flex items-start gap-3">
-                      <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-zinc-950">
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </div>
-                      <p className="text-sm leading-7 text-white/80">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <p className="mt-6 text-[15px] leading-8 text-white/72">{outcomes.automationSupport}</p>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {outcomes.results.map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-xs uppercase tracking-[0.22em] text-white/55">Result</p>
-                    <p className="mt-2 text-[15px] font-medium leading-6">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow={coverage.eyebrow} title={coverage.title} description={coverage.description} />
-
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
-          {coverage.cards.map((card) => (
-            <Card key={card.title} className="border-zinc-200 bg-white shadow-[0_18px_60px_rgba(15,23,42,0.05)]">
-              <CardContent className="p-6">
-                <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{card.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-zinc-600">{card.description}</p>
-                <ul className="mt-5 space-y-3 text-sm leading-7 text-zinc-700">
-                  {card.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div>
-            <SectionHeading
-              eyebrow={pilotProcess.eyebrow}
-              title={pilotProcess.title}
-              description={pilotProcess.description}
-            />
-            <div className="mt-10 grid gap-3">
-              {pilotProcess.steps.map((step, index) => (
-                <div key={step} className="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white px-5 py-4 shadow-[0_14px_40px_rgba(15,23,42,0.04)]">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-950 text-sm font-semibold text-white">
-                    {index + 1}
-                  </span>
-                  <span className="text-sm font-medium text-zinc-800">{step}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{pilotMetrics.eyebrow}</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{pilotMetrics.title}</h2>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              {pilotMetrics.items.map((item) => (
-                <div key={item} className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm leading-7 text-zinc-700">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow={industries.eyebrow} title={industries.title} description={industries.description} />
-
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {homepageIndustryCards.map((industry) => {
-            const Icon = industry.icon;
-
-            return (
-              <Card
-                key={industry.title}
-                className="h-full border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)] transition-transform duration-300 hover:-translate-y-1"
-              >
-                <CardContent className="flex h-full flex-col p-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-white">
-                    <Icon className="h-4 w-4" />
-                  </div>
-                  <Badge variant="secondary" className="mt-4 w-fit rounded-full bg-zinc-100 text-zinc-700">
-                    {industry.title}
-                  </Badge>
-                  <p className="mt-4 text-[15px] leading-7 text-zinc-800">{industry.description}</p>
-                  <Button asChild variant="link" className="mt-auto w-fit px-0 pt-4 text-zinc-950">
-                    <Link href={industry.href} className="inline-flex items-center gap-2">
-                      <span>{industry.ctaLabel}</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-[1.5rem] border border-zinc-200 bg-white px-5 py-4 shadow-[0_18px_60px_rgba(15,23,42,0.05)]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">Need a different industry?</p>
-            <p className="mt-2 text-base font-medium text-zinc-950">Explore the full industry workflow library.</p>
-          </div>
-          <Button asChild className="h-11 rounded-full bg-zinc-950 px-5 text-white hover:bg-zinc-800">
-            <Link href={siteContent.ctas.viewIndustryWorkflow.href}>{siteContent.ctas.viewIndustryWorkflow.label}</Link>
-          </Button>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="rounded-[1.75rem] border border-zinc-200 bg-[linear-gradient(180deg,#111827_0%,#0f172a_100%)] p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.16)] sm:p-8">
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">{pilot.eyebrow}</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight">{pilot.title}</h2>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-white/72">{pilot.description}</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button asChild className="h-12 rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-200">
-                  <Link href={pilot.primaryCta.href}>{pilot.primaryCta.label}</Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="h-12 rounded-full border-white/15 bg-white/5 px-6 text-white hover:bg-white/10 hover:text-white"
-                >
-                  <Link href={pilot.secondaryCta.href}>{pilot.secondaryCta.label}</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/50">Included</p>
-              <div className="mt-4 grid gap-3">
-                {pilot.bullets.map((bullet) => (
-                  <div key={bullet} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" />
-                    <p className="text-sm leading-7 text-white/80">{bullet}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow={explore.eyebrow} title={explore.title} description={explore.description} />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {explore.cards.map((item, index) => {
-            const Icon = exploreIcons[index % exploreIcons.length];
+          {siteContent.homepage.automation.cards.map((item, index) => {
+            const Icon = automationIcons[index % automationIcons.length];
 
             return (
               <Card key={item.title} className="h-full border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
                 <CardContent className="flex h-full flex-col p-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-white">
-                    <Icon className="h-4 w-4" />
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-950 text-white">
+                    <Icon className="h-5 w-5" />
                   </div>
-                  <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{item.title}</h2>
-                  <p className="mt-3 text-[15px] leading-7 text-zinc-600">{item.description}</p>
-                  <Button asChild variant="link" className="mt-auto w-fit px-0 pt-4 text-zinc-950">
+                  <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{item.title}</h3>
+                  <p className="mt-3 text-[15px] leading-7 text-zinc-600">{item.text}</p>
+                  <Button asChild variant="link" className="mt-auto w-fit px-0 pt-5 text-zinc-950">
                     <Link href={item.href} className="inline-flex items-center gap-2">
                       <span>{item.ctaLabel}</span>
                       <ArrowRight className="h-4 w-4" />
@@ -432,55 +260,257 @@ export default function HomePage() {
             );
           })}
         </div>
-      </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-            <CardContent className="p-6 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{trust.eyebrow}</p>
-              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-zinc-950">{trust.title}</h3>
-              <div className="mt-6 space-y-3">
-                {trustPoints.map((point) => (
-                  <div key={point} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
-                    <p className="text-sm leading-7 text-zinc-700">{point}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
-            <CardContent className="p-6 sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{faq.eyebrow}</p>
-              <div className="mt-6 space-y-4">
-                {faq.items.map((item) => (
-                  <div key={item.question} className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-                    <h3 className="text-base font-semibold tracking-tight text-zinc-950">{item.question}</h3>
-                    <p className="mt-3 text-sm leading-7 text-zinc-600">{item.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+        <div className="mt-8">
+          <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
+            <Link href={siteContent.homepage.automation.cta.href} className="inline-flex items-center gap-2">
+              <span>{siteContent.homepage.automation.cta.label}</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading
+          title={siteContent.homepage.howItWorks.title}
+          description={siteContent.homepage.howItWorks.description}
+        />
+
+        <div className="mt-10 grid gap-4 lg:grid-cols-4">
+          {siteContent.homepage.howItWorks.steps.map((step, index) => (
+            <div key={step.title} className="relative">
+              <Card className="h-full border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{step.text}</p>
+                </CardContent>
+              </Card>
+              {index < siteContent.homepage.howItWorks.steps.length - 1 ? (
+                <div className="hidden lg:flex absolute -right-6 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-[0_12px_32px_rgba(15,23,42,0.08)]">
+                  <ArrowRight className="h-5 w-5 text-zinc-500" />
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8 max-w-4xl text-base leading-8 text-zinc-600">
+          {siteContent.homepage.howItWorks.resultStatement}
+        </p>
+      </section>
+
+      <HomepagePlatformShowcase copy={siteContent.homepage.platformProof} />
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow={siteContent.homepage.industries.eyebrow}
+          title={siteContent.homepage.industries.title}
+          description={siteContent.homepage.industries.description}
+        />
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {siteContent.homepage.industries.cards.map((item, index) => {
+            const Icon = industryIcons[index % industryIcons.length];
+
+            return (
+              <Card key={item.title} className="h-full border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="flex h-full flex-col p-6">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-950 text-white">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{item.title}</h3>
+                  <p className="mt-3 text-[15px] leading-7 text-zinc-600">{item.text}</p>
+                  <Button asChild variant="link" className="mt-auto w-fit px-0 pt-5 text-zinc-950">
+                    <Link
+                      href={item.href}
+                      data-analytics-area="homepage_industries"
+                      data-analytics-role="cta"
+                      data-analytics-event="industry_workflow_click"
+                      className="inline-flex items-center gap-2"
+                    >
+                      <span>{item.ctaLabel}</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        <div className="mt-8">
+          <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
+            <Link
+              href={siteContent.homepage.industries.cta.href}
+              data-analytics-area="homepage_industries"
+              data-analytics-role="cta"
+              data-analytics-event="industry_workflow_click"
+              className="inline-flex items-center gap-2"
+            >
+              <span>{siteContent.homepage.industries.cta.label}</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow={siteContent.homepage.trust.eyebrow}
+          title={siteContent.homepage.trust.title}
+          description={siteContent.homepage.trust.description}
+        />
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {siteContent.homepage.trust.cards.map((item, index) => {
+            const Icon = trustIcons[index % trustIcons.length];
+
+            return (
+              <Card key={item.title} className="h-full border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-6">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-950 text-white">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-zinc-600">{item.text}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          {siteContent.homepage.trust.links.map((item) => (
+            <Link key={item.href} href={item.href} className="text-sm font-medium text-zinc-700 underline-offset-4 hover:text-zinc-950 hover:underline">
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div>
+            <SectionHeading
+              eyebrow={siteContent.homepage.implementation.eyebrow}
+              title={siteContent.homepage.implementation.title}
+              description={siteContent.homepage.implementation.description}
+            />
+
+            <div className="mt-10 grid gap-3">
+              {siteContent.homepage.implementation.steps.map((step, index) => (
+                <div key={step.title} className="rounded-[1.5rem] border border-zinc-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.05)]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 text-lg font-semibold text-zinc-950">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-zinc-600">{step.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-[1.75rem] border border-zinc-200 bg-zinc-950 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.14)]">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">
+                {siteContent.homepage.implementation.founderCallout.eyebrow}
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+                {siteContent.homepage.implementation.founderCallout.title}
+              </h3>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {siteContent.homepage.implementation.founderCallout.items.map((item) => (
+                  <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/82">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="mt-8 text-sm leading-7 text-zinc-600">
+              {siteContent.homepage.implementation.rolloutNote}{" "}
+              <Link
+                href="/pricing"
+                className="font-medium text-zinc-950 underline-offset-4 hover:underline"
+                data-analytics-area="homepage_implementation"
+                data-analytics-role="cta"
+                data-analytics-event="pricing_click"
+              >
+                View pricing.
+              </Link>
+            </p>
+
+            <p className="mt-8 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">
+              {siteContent.homepage.implementation.metricsEyebrow}
+            </p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              {siteContent.homepage.implementation.metrics.map((item) => (
+                <div key={item} className="rounded-[1.25rem] border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <LeadForm variant="homepage" />
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <SectionHeading eyebrow={siteContent.homepage.faq.eyebrow} title={siteContent.homepage.faq.title} />
+        <Card className="mt-10 border-zinc-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.05)]">
+          <CardContent className="p-6 sm:p-8">
+            <Accordion type="single" collapsible className="w-full">
+              {siteContent.homepage.faq.items.map((item) => (
+                <AccordionItem key={item.question} value={item.question}>
+                  <AccordionTrigger>{item.question}</AccordionTrigger>
+                  <AccordionContent className="text-zinc-600">{item.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </CardContent>
+        </Card>
+      </section>
+
+      <HomepageTestimonialCarousel copy={siteContent.homepage.testimonial} items={homepageReviews} />
+
       <section className="mx-auto w-full max-w-7xl px-4 pb-20 pt-0 sm:px-6 lg:px-8">
-        <div className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.05)] sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">{finalCta.eyebrow}</p>
+        <div className="rounded-[2rem] border border-zinc-200 bg-zinc-950 px-6 py-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.16)] sm:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/55">
+            {siteContent.homepage.finalCta.eyebrow}
+          </p>
           <div className="mt-4 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-950">{finalCta.title}</h2>
-              <p className="mt-3 max-w-2xl text-base leading-8 text-zinc-600">{finalCta.description}</p>
+              <h2 className="text-3xl font-semibold tracking-tight">{siteContent.homepage.finalCta.title}</h2>
+              <p className="mt-3 max-w-2xl text-base leading-8 text-white/72">
+                {siteContent.homepage.finalCta.description}
+              </p>
+              <p className="mt-4 text-sm text-white/58">{siteContent.homepage.finalCta.note}</p>
             </div>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild className="h-12 rounded-full bg-zinc-950 px-6 text-white hover:bg-zinc-800">
-                <Link href={finalCta.primary.href}>{finalCta.primary.label}</Link>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Button asChild className="h-12 w-full rounded-full bg-white px-6 text-zinc-950 hover:bg-zinc-100 sm:w-auto">
+                <Link
+                  href={siteContent.homepage.finalCta.primary.href}
+                  data-analytics-area="homepage_final_cta"
+                  data-analytics-role="cta"
+                  data-analytics-event="hero_demo_click"
+                >
+                  {siteContent.homepage.finalCta.primary.label}
+                </Link>
               </Button>
-              <Button asChild variant="outline" className="h-12 rounded-full px-6">
-                <Link href={finalCta.secondary.href}>{finalCta.secondary.label}</Link>
+              <Button asChild variant="outline" className="h-12 w-full rounded-full border-white/15 bg-white/5 px-6 text-white hover:bg-white/10 hover:text-white sm:w-auto">
+                <Link
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-analytics-area="homepage_final_cta"
+                  data-analytics-role="cta"
+                  data-analytics-event="whatsapp_click"
+                >
+                  {siteContent.homepage.finalCta.secondary.label}
+                </Link>
               </Button>
             </div>
           </div>
@@ -489,3 +519,4 @@ export default function HomePage() {
     </PageShell>
   );
 }
+

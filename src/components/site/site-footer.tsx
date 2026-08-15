@@ -19,12 +19,18 @@ export function SiteFooter({ directContactItem }: SiteFooterProps) {
   const copy = getLocaleCopy(locale);
   const addressItem = siteContent.contact.details.items.find((item) => item.label === "Address");
   const contactItems = siteContent.contact.details.items.filter((item) => item.label !== "Address");
-  const footerContactItems = [...contactItems, directContactItem, ...(addressItem ? [addressItem] : [])];
+  const footerAddressItem = addressItem
+    ? {
+        ...addressItem,
+        value: siteContent.ui.footer.publicLocation,
+      }
+    : null;
+  const footerContactItems = [...contactItems, directContactItem, ...(footerAddressItem ? [footerAddressItem] : [])];
 
   return (
     <footer className="border-t border-zinc-200 bg-white">
       <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_1.4fr]">
           <div className="max-w-xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">{site.name}</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950">{copy.footer.title}</h2>
@@ -49,7 +55,7 @@ export function SiteFooter({ directContactItem }: SiteFooterProps) {
             </div>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
             {copy.footerGroups.map((group) => (
               <div key={group.title}>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-zinc-500">{group.title}</h3>

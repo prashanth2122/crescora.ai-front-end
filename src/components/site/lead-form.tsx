@@ -3,9 +3,6 @@
 import type { FormEvent, ReactNode } from "react";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
-import { leadFormOptions } from "@/lib/site-data";
-import { siteContent } from "@/lib/site-content";
-import { isValidPhoneForCountry } from "@/lib/lead-form-validation";
 import {
   ANALYTICS_ENABLED,
   buildLeadFormProgress,
@@ -13,6 +10,10 @@ import {
   getPageAnalyticsContext,
   trackEvent,
 } from "@/lib/analytics";
+import { leadFormOptions } from "@/lib/site-data";
+import { isValidPhoneForCountry } from "@/lib/lead-form-validation";
+import { siteContent } from "@/lib/site-content";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -25,7 +26,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
 import { ChevronDown, Loader2, ShieldCheck } from "lucide-react";
 
 type FormState = {
@@ -43,6 +43,8 @@ type FormState = {
   keyProblem: string;
 };
 
+type LeadFormVariant = "contact" | "homepage";
+
 const initialState: FormState = {
   fullName: "",
   companyName: "",
@@ -58,41 +60,69 @@ const initialState: FormState = {
   keyProblem: "",
 };
 
-const requiredFields: Array<keyof FormState> = [
-  "fullName",
-  "companyName",
-  "workEmail",
-  "country",
-  "phoneOrWhatsapp",
-  "industry",
-  "primaryUseCase",
-  "monthlyEnquiryVolume",
-  "timeline",
-];
+const variantConfig = {
+  contact: {
+    analyticsVariant: "contact_detailed_demo",
+    requiredFields: [
+      "fullName",
+      "companyName",
+      "workEmail",
+      "country",
+      "phoneOrWhatsapp",
+      "primaryUseCase",
+    ] as const,
+    showCountry: true,
+    showIndustry: true,
+    showMonthlyVolume: true,
+    showTimeline: true,
+    showPreferredChannel: true,
+    showCurrentTools: true,
+  },
+  homepage: {
+    analyticsVariant: "homepage_demo_request",
+    requiredFields: [
+      "fullName",
+      "companyName",
+      "workEmail",
+      "phoneOrWhatsapp",
+      "primaryUseCase",
+    ] as const,
+    showCountry: false,
+    showIndustry: false,
+    showMonthlyVolume: false,
+    showTimeline: false,
+    showPreferredChannel: false,
+    showCurrentTools: false,
+  },
+} as const;
 
 function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 }
 
-function getCompletedRequiredFieldCount(form: FormState) {
+function getCompletedRequiredFieldCount(
+  form: FormState,
+  requiredFields: readonly (keyof FormState)[],
+) {
   return requiredFields.filter((field) => form[field].trim()).length;
 }
 
-export function LeadForm() {
+export function LeadForm({ variant = "contact" }: { variant?: LeadFormVariant }) {
   const [form, setForm] = useState<FormState>(initialState);
-  const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState<string>("");
   const containerRef = useRef<HTMLDivElement>(null);
   const hasTrackedFormViewRef = useRef(false);
   const hasTrackedFormStartRef = useRef(false);
   const trackedCompletedFieldsRef = useRef<Set<keyof FormState>>(new Set());
+  const config = variantConfig[variant];
+  const copy = siteContent.leadForm.variants[variant];
+  const requiredFields = config.requiredFields;
 
   const trackFormView = useEffectEvent(() => {
     trackEvent("lead_form_view", {
       ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-      form_variant: "workflow_demo_contact",
+      form_variant: config.analyticsVariant,
     });
   });
 
@@ -126,12 +156,9 @@ export function LeadForm() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [trackFormView]);
 
-  function updateField<K extends keyof FormState>(
-    field: K,
-    value: FormState[K],
-  ) {
+  function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setForm((current) => ({ ...current, [field]: value }));
   }
 
@@ -141,10 +168,12 @@ export function LeadForm() {
     }
 
     hasTrackedFormStartRef.current = true;
-    trackEvent("lead_form_start", {
+    const payload = {
       ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-      form_variant: "workflow_demo_contact",
-    });
+      form_variant: config.analyticsVariant,
+    };
+    trackEvent("lead_form_start", payload);
+    trackEvent("demo_form_start", payload);
   }
 
   function trackRequiredFieldCompletion(
@@ -163,7 +192,7 @@ export function LeadForm() {
     trackedCompletedFieldsRef.current.add(field);
     trackEvent("lead_form_field_complete", {
       ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-      form_variant: "workflow_demo_contact",
+      form_variant: config.analyticsVariant,
       field_name: field,
       field_type: fieldType,
       ...buildLeadFormProgress(
@@ -177,20 +206,19 @@ export function LeadForm() {
     event.preventDefault();
     setStatus("submitting");
     setMessage("");
+
     const selectedCountry =
       leadFormOptions.countries.find((item) => item.value === form.country) ??
       leadFormOptions.countries[0];
     const missing = requiredFields.filter((field) => !form[field].trim());
-    const completedRequiredFields = getCompletedRequiredFieldCount(form);
-    const progress = buildLeadFormProgress(
-      completedRequiredFields,
-      requiredFields.length,
-    );
+    const completedRequiredFields = getCompletedRequiredFieldCount(form, requiredFields);
+    const progress = buildLeadFormProgress(completedRequiredFields, requiredFields.length);
     const selectionSnapshot = buildLeadFormSelectionSnapshot(form);
+
     if (missing.length > 0) {
       trackEvent("lead_form_validation_error", {
         ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-        form_variant: "workflow_demo_contact",
+        form_variant: config.analyticsVariant,
         validation_type: "missing_required_fields",
         missing_fields: missing.join("|"),
         missing_fields_count: missing.length,
@@ -202,9 +230,7 @@ export function LeadForm() {
     }
 
     const invalidFields: string[] = [];
-    if (
-      !isValidEmail(form.workEmail)
-    ) {
+    if (!isValidEmail(form.workEmail)) {
       invalidFields.push("workEmail");
     }
 
@@ -215,7 +241,7 @@ export function LeadForm() {
     if (invalidFields.length > 0) {
       trackEvent("lead_form_validation_error", {
         ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-        form_variant: "workflow_demo_contact",
+        form_variant: config.analyticsVariant,
         validation_type: "invalid_contact_details",
         invalid_fields: invalidFields.join("|"),
         invalid_fields_count: invalidFields.length,
@@ -229,12 +255,15 @@ export function LeadForm() {
     let failureTracked = false;
 
     try {
-      trackEvent("lead_form_submit", {
+      const submitPayload = {
         ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-        form_variant: "workflow_demo_contact",
+        form_variant: config.analyticsVariant,
         ...selectionSnapshot,
         ...progress,
-      });
+      };
+
+      trackEvent("lead_form_submit", submitPayload);
+      trackEvent("demo_form_submit", submitPayload);
 
       const pageUrl = window.location.href;
       const referrerUrl = document.referrer || null;
@@ -243,7 +272,7 @@ export function LeadForm() {
       const utmMedium = currentUrl.searchParams.get("utm_medium");
       const utmCampaign = currentUrl.searchParams.get("utm_campaign");
 
-      const response = await fetch(`/api/lead`, {
+      const response = await fetch("/api/lead", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -262,7 +291,7 @@ export function LeadForm() {
         failureTracked = true;
         trackEvent("lead_form_failure", {
           ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-          form_variant: "workflow_demo_contact",
+          form_variant: config.analyticsVariant,
           failure_stage: "api_response",
           http_status: response.status,
           ...selectionSnapshot,
@@ -273,7 +302,7 @@ export function LeadForm() {
 
       trackEvent("lead_form_success", {
         ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-        form_variant: "workflow_demo_contact",
+        form_variant: config.analyticsVariant,
         ...selectionSnapshot,
         ...progress,
       });
@@ -286,7 +315,7 @@ export function LeadForm() {
       if (!failureTracked) {
         trackEvent("lead_form_failure", {
           ...getPageAnalyticsContext(window.location.pathname, window.location.search),
-          form_variant: "workflow_demo_contact",
+          form_variant: config.analyticsVariant,
           failure_stage: "network_or_runtime",
           ...selectionSnapshot,
           ...progress,
@@ -305,17 +334,14 @@ export function LeadForm() {
     >
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <Badge
-            variant="secondary"
-            className="rounded-full bg-zinc-100 text-zinc-700"
-          >
-            {siteContent.leadForm.badge}
+          <Badge variant="secondary" className="rounded-full bg-zinc-100 text-zinc-700">
+            {copy.badge}
           </Badge>
           <h3 className="mt-4 text-2xl font-semibold tracking-tight text-zinc-950">
-            {siteContent.leadForm.title}
+            {copy.title}
           </h3>
           <p className="mt-3 max-w-2xl text-base leading-8 text-zinc-600">
-            {siteContent.leadForm.description}
+            {copy.description}
           </p>
         </div>
         <div className="flex items-center gap-2 text-sm text-zinc-500">
@@ -325,11 +351,7 @@ export function LeadForm() {
       </div>
 
       <form className="mt-8 grid gap-5 sm:grid-cols-2" onSubmit={onSubmit}>
-        <Field
-          id="fullName"
-          label={siteContent.leadForm.labels.fullName}
-          required
-        >
+        <Field id="fullName" label={siteContent.leadForm.labels.fullName} required>
           <Input
             id="fullName"
             value={form.fullName}
@@ -343,11 +365,8 @@ export function LeadForm() {
             placeholder={siteContent.leadForm.placeholders.fullName}
           />
         </Field>
-        <Field
-          id="companyName"
-          label={siteContent.leadForm.labels.companyName}
-          required
-        >
+
+        <Field id="companyName" label={siteContent.leadForm.labels.companyName} required>
           <Input
             id="companyName"
             value={form.companyName}
@@ -361,11 +380,8 @@ export function LeadForm() {
             placeholder={siteContent.leadForm.placeholders.companyName}
           />
         </Field>
-        <Field
-          id="workEmail"
-          label={siteContent.leadForm.labels.workEmail}
-          required
-        >
+
+        <Field id="workEmail" label={siteContent.leadForm.labels.workEmail} required>
           <Input
             id="workEmail"
             type="email"
@@ -380,31 +396,31 @@ export function LeadForm() {
             placeholder={siteContent.leadForm.placeholders.workEmail}
           />
         </Field>
-        <Field
-          id="country"
-          label={siteContent.leadForm.labels.country}
-          required
-        >
-          <div className="relative">
-            <select
-              id="country"
-              value={form.country}
-              onChange={(event) => {
-                trackFormStart();
-                updateField("country", event.target.value);
-                trackRequiredFieldCompletion("country", event.target.value, "select");
-              }}
-              className="h-8 w-full appearance-none rounded-lg border border-input bg-transparent px-2.5 pr-8 py-1 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50 md:text-sm dark:bg-input/30 dark:disabled:bg-input/80"
-            >
-              {leadFormOptions.countries.map((item) => (
-                <option key={item.value} value={item.value}>
-                  {item.label}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
-          </div>
-        </Field>
+
+        {config.showCountry ? (
+          <Field id="country" label={siteContent.leadForm.labels.country} required>
+            <div className="relative">
+              <select
+                id="country"
+                value={form.country}
+                onChange={(event) => {
+                  trackFormStart();
+                  updateField("country", event.target.value);
+                  trackRequiredFieldCompletion("country", event.target.value, "select");
+                }}
+                className="h-10 w-full appearance-none rounded-lg border border-input bg-transparent px-3 py-2 pr-8 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm"
+              >
+                {leadFormOptions.countries.map((item) => (
+                  <option key={item.value} value={item.value}>
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+            </div>
+          </Field>
+        ) : null}
+
         <Field
           id="phoneOrWhatsapp"
           label={siteContent.leadForm.labels.phoneOrWhatsapp}
@@ -427,38 +443,31 @@ export function LeadForm() {
             placeholder={siteContent.leadForm.placeholders.phoneOrWhatsapp}
           />
         </Field>
-        <Field
-          id="industry"
-          label={siteContent.leadForm.labels.industry}
-          required
-        >
-          <Select
-            value={form.industry}
-            onValueChange={(value) => {
-              trackFormStart();
-              updateField("industry", value);
-              trackRequiredFieldCompletion("industry", value, "select");
-            }}
-          >
-            <SelectTrigger id="industry">
-              <SelectValue
-                placeholder={siteContent.leadForm.selectPlaceholders.industry}
-              />
-            </SelectTrigger>
-            <SelectContent>
-              {leadFormOptions.industries.map((item) => (
-                <SelectItem key={item} value={item}>
-                  {item}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </Field>
-        <Field
-          id="primaryUseCase"
-          label={siteContent.leadForm.labels.primaryUseCase}
-          required
-        >
+
+        {config.showIndustry ? (
+          <Field id="industry" label={siteContent.leadForm.labels.industry}>
+            <Select
+              value={form.industry}
+              onValueChange={(value) => {
+                trackFormStart();
+                updateField("industry", value);
+              }}
+            >
+              <SelectTrigger id="industry">
+                <SelectValue placeholder={siteContent.leadForm.selectPlaceholders.industry} />
+              </SelectTrigger>
+              <SelectContent>
+                {leadFormOptions.industries.map((item) => (
+                  <SelectItem key={item} value={item}>
+                    {item}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </Field>
+        ) : null}
+
+        <Field id="primaryUseCase" label={siteContent.leadForm.labels.primaryUseCase} required>
           <Select
             value={form.primaryUseCase}
             onValueChange={(value) => {
@@ -468,11 +477,7 @@ export function LeadForm() {
             }}
           >
             <SelectTrigger id="primaryUseCase">
-              <SelectValue
-                placeholder={
-                  siteContent.leadForm.selectPlaceholders.primaryUseCase
-                }
-              />
+              <SelectValue placeholder={siteContent.leadForm.selectPlaceholders.primaryUseCase} />
             </SelectTrigger>
             <SelectContent>
               {leadFormOptions.useCases.map((item) => (
@@ -483,88 +488,24 @@ export function LeadForm() {
             </SelectContent>
           </Select>
         </Field>
-        <Field
-          id="monthlyEnquiryVolume"
-          label={siteContent.leadForm.labels.monthlyEnquiryVolume}
-          required
-        >
-          <Select
-            value={form.monthlyEnquiryVolume}
-            onValueChange={(value) => {
-              trackFormStart();
-              updateField("monthlyEnquiryVolume", value);
-              trackRequiredFieldCompletion(
-                "monthlyEnquiryVolume",
-                value,
-                "select",
-              );
-            }}
-          >
-            <SelectTrigger id="monthlyEnquiryVolume">
-              <SelectValue
-                placeholder={
-                  siteContent.leadForm.selectPlaceholders.monthlyEnquiryVolume
-                }
-              />
-            </SelectTrigger>
-            <SelectContent>
-              {leadFormOptions.volumes.map((item) => (
-                <SelectItem key={item} value={item}>
-                  {item}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </Field>
-        <Field
-          id="timeline"
-          label={siteContent.leadForm.labels.timeline}
-          required
-        >
-          <Select
-            value={form.timeline}
-            onValueChange={(value) => {
-              trackFormStart();
-              updateField("timeline", value);
-              trackRequiredFieldCompletion("timeline", value, "select");
-            }}
-          >
-            <SelectTrigger id="timeline">
-              <SelectValue
-                placeholder={siteContent.leadForm.selectPlaceholders.timeline}
-              />
-            </SelectTrigger>
-            <SelectContent>
-              {leadFormOptions.timelines.map((item) => (
-                <SelectItem key={item} value={item}>
-                  {item}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </Field>
-        <div className="sm:col-span-2">
+
+        {config.showMonthlyVolume ? (
           <Field
-            id="preferredChannel"
-            label={siteContent.leadForm.labels.preferredChannel}
-            hint={siteContent.leadForm.hints.preferredChannel}
+            id="monthlyEnquiryVolume"
+            label={siteContent.leadForm.labels.monthlyEnquiryVolume}
           >
             <Select
-              value={form.preferredChannel}
+              value={form.monthlyEnquiryVolume}
               onValueChange={(value) => {
                 trackFormStart();
-                updateField("preferredChannel", value);
+                updateField("monthlyEnquiryVolume", value);
               }}
             >
-              <SelectTrigger id="preferredChannel">
-                <SelectValue
-                  placeholder={
-                    siteContent.leadForm.selectPlaceholders.preferredChannel
-                  }
-                />
+              <SelectTrigger id="monthlyEnquiryVolume">
+                <SelectValue placeholder={siteContent.leadForm.selectPlaceholders.monthlyEnquiryVolume} />
               </SelectTrigger>
               <SelectContent>
-                {leadFormOptions.channels.map((item) => (
+                {leadFormOptions.volumes.map((item) => (
                   <SelectItem key={item} value={item}>
                     {item}
                   </SelectItem>
@@ -572,24 +513,80 @@ export function LeadForm() {
               </SelectContent>
             </Select>
           </Field>
-        </div>
-        <div className="sm:col-span-2">
-          <Field
-            id="currentTools"
-            label={siteContent.leadForm.labels.currentTools}
-            hint={siteContent.leadForm.hints.currentTools}
-          >
-            <Input
-              id="currentTools"
-              value={form.currentTools}
-              onChange={(event) => {
+        ) : null}
+
+        {config.showTimeline ? (
+          <Field id="timeline" label={siteContent.leadForm.labels.timeline}>
+            <Select
+              value={form.timeline}
+              onValueChange={(value) => {
                 trackFormStart();
-                updateField("currentTools", event.target.value);
+                updateField("timeline", value);
               }}
-              placeholder={siteContent.leadForm.placeholders.currentTools}
-            />
+            >
+              <SelectTrigger id="timeline">
+                <SelectValue placeholder={siteContent.leadForm.selectPlaceholders.timeline} />
+              </SelectTrigger>
+              <SelectContent>
+                {leadFormOptions.timelines.map((item) => (
+                  <SelectItem key={item} value={item}>
+                    {item}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </Field>
-        </div>
+        ) : null}
+
+        {config.showPreferredChannel ? (
+          <div className="sm:col-span-2">
+            <Field
+              id="preferredChannel"
+              label={siteContent.leadForm.labels.preferredChannel}
+              hint={siteContent.leadForm.hints.preferredChannel}
+            >
+              <Select
+                value={form.preferredChannel}
+                onValueChange={(value) => {
+                  trackFormStart();
+                  updateField("preferredChannel", value);
+                }}
+              >
+                <SelectTrigger id="preferredChannel">
+                  <SelectValue placeholder={siteContent.leadForm.selectPlaceholders.preferredChannel} />
+                </SelectTrigger>
+                <SelectContent>
+                  {leadFormOptions.channels.map((item) => (
+                    <SelectItem key={item} value={item}>
+                      {item}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </Field>
+          </div>
+        ) : null}
+
+        {config.showCurrentTools ? (
+          <div className="sm:col-span-2">
+            <Field
+              id="currentTools"
+              label={siteContent.leadForm.labels.currentTools}
+              hint={siteContent.leadForm.hints.currentTools}
+            >
+              <Input
+                id="currentTools"
+                value={form.currentTools}
+                onChange={(event) => {
+                  trackFormStart();
+                  updateField("currentTools", event.target.value);
+                }}
+                placeholder={siteContent.leadForm.placeholders.currentTools}
+              />
+            </Field>
+          </div>
+        ) : null}
+
         <div className="sm:col-span-2">
           <Field
             id="keyProblem"
@@ -604,7 +601,7 @@ export function LeadForm() {
                 updateField("keyProblem", event.target.value);
               }}
               placeholder={siteContent.leadForm.placeholders.keyProblem}
-              className="min-h-32"
+              className={variant === "homepage" ? "min-h-28" : "min-h-32"}
             />
           </Field>
         </div>
@@ -622,20 +619,12 @@ export function LeadForm() {
                 {siteContent.leadForm.submitLoading}
               </>
             ) : (
-              siteContent.leadForm.submitIdle
+              copy.submitIdle
             )}
           </Button>
-          <p className="text-sm leading-7 text-zinc-500">
-            {siteContent.leadForm.note}
-          </p>
+          <p className="text-sm leading-7 text-zinc-500">{copy.note}</p>
           {message ? (
-            <p
-              className={
-                status === "success"
-                  ? "text-sm text-emerald-700"
-                  : "text-sm text-rose-600"
-              }
-            >
+            <p className={status === "success" ? "text-sm text-emerald-700" : "text-sm text-rose-600"}>
               {message}
             </p>
           ) : null}

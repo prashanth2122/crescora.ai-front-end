@@ -46,10 +46,11 @@ test("keeps locale prefix helper deterministic", () => {
 test("footer copy reflects the cleaned public-facing labels", () => {
   assert.equal(
     enLocaleCopy.footer.intro,
-    "Built for Indian businesses that want practical automation across enquiries, bookings, follow-ups, support, payments, and operations.",
+    "Crescora.ai helps businesses turn customer conversations into completed business actions across enquiries, bookings, payments, support, documents, and follow-ups.",
   );
   assert.equal(enLocaleCopy.ctas.talkToSales.label, "Discuss My Workflow");
-  assert.equal(enLocaleCopy.ctas.bookProjectDemo.label, "Book Free Demo");
+  assert.equal(enLocaleCopy.ctas.bookProjectDemo.label, "Book a Free Demo");
+  assert.equal(enLocaleCopy.ctas.signIn.label, "Sign In");
   assert.equal(enLocaleCopy.header.bookCallLabel, "Book a Call");
   assert.equal(enLocaleCopy.header.whatsappLabel, "Chat on WhatsApp");
   assert.equal(enLocaleCopy.header.supportWidgetLabel, "Support");
@@ -58,7 +59,8 @@ test("footer copy reflects the cleaned public-facing labels", () => {
   assert.equal(enLocaleCopy.ctas.requestScopeCall.label, "Discuss My Workflow");
   assert.equal(enLocaleCopy.footerGroups[1].links[2].label, "Education");
   assert.equal(enLocaleCopy.footerGroups[2].links[3].label, "Support");
-  assert.equal(enLocaleCopy.footerGroups[2].links[4].href, "/security");
-  assert.equal(enLocaleCopy.footerGroups[3].links[4].href, "/data-processing");
-  assert.equal(enLocaleCopy.footerGroups[3].links[2].href, "/cookies");
+  assert.equal(enLocaleCopy.footerGroups[2].links[0].label, "Product Demo");
+  assert.equal(enLocaleCopy.footerGroups[3].links[1].href, "/contact");
+  assert.equal(enLocaleCopy.footerGroups[4].links[4].href, "/data-processing");
+  assert.equal(enLocaleCopy.footerGroups[4].links[5].href, "/subprocessors");
 });

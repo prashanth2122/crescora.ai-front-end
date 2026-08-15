@@ -115,15 +115,15 @@ function buildCustomerIntakePayload(body: LeadPayload, request: Request) {
   const utm = extractUtmParams(pageUrl);
 
   return {
-    formName: "Project enquiry",
+    formName: "Demo request",
     fullName: body.fullName?.trim(),
     companyName: body.companyName?.trim(),
     workEmail: body.workEmail?.trim(),
     phoneNumber: body.phoneOrWhatsapp?.trim(),
-    industry: body.industry?.trim(),
+    industry: body.industry?.trim() || null,
     primaryWorkflowToAutomate: body.primaryUseCase?.trim(),
-    monthlyEnquiryVolume: body.monthlyEnquiryVolume?.trim(),
-    expectedTimeline: body.timeline?.trim(),
+    monthlyEnquiryVolume: body.monthlyEnquiryVolume?.trim() || null,
+    expectedTimeline: body.timeline?.trim() || null,
     preferredChannel: toCleanString(body.preferredChannel),
     currentTools: toCleanString(body.currentTools),
     mainProblemToSolve: toCleanString(body.keyProblem),
@@ -201,12 +201,8 @@ export async function POST(request: Request) {
       body.fullName,
       body.companyName,
       body.workEmail,
-      body.country,
       body.phoneOrWhatsapp,
-      body.industry,
       body.primaryUseCase,
-      body.monthlyEnquiryVolume,
-      body.timeline,
     ];
 
     if (required.some(isBlank)) {

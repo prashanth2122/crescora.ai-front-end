@@ -63,9 +63,9 @@ export function SiteHeader() {
   const pathname = usePathname();
   const locale = getLocaleFromPath(pathname ?? "/");
   const copy = getLocaleCopy(locale);
-  const desktopNavItems = copy.navigation.slice(0, 5);
-  const localizedTalkToSalesHref = buildLocalizedHref(
-    copy.ctas.talkToSales.href,
+  const navigationItems = copy.navigation;
+  const localizedSignInHref = buildLocalizedHref(
+    copy.ctas.signIn.href,
     locale,
   );
   const localizedBookDemoHref = buildLocalizedHref(
@@ -100,7 +100,7 @@ export function SiteHeader() {
             data-analytics-area="site_header_nav"
             className="hidden items-center justify-center gap-5 lg:flex"
           >
-            {desktopNavItems.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 href={buildLocalizedHref(item.href, locale)}
@@ -112,13 +112,13 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div className="hidden items-center gap-4 xl:flex">
+            <div className="hidden items-center gap-4 lg:flex">
               <ActionLink
-                href={localizedTalkToSalesHref}
-                label={copy.ctas.talkToSales.label}
+                href={localizedSignInHref}
+                label={copy.ctas.signIn.label}
                 analyticsRole="cta"
                 analyticsArea="site_header"
-                contactChannel="sales"
+                contactChannel="signin"
                 className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950"
               />
               <ActionLink
@@ -130,7 +130,15 @@ export function SiteHeader() {
                 className="inline-flex h-10 items-center justify-center rounded-md bg-zinc-950 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800"
               />
             </div>
-            <div className="lg:hidden">
+            <div className="flex items-center gap-2 lg:hidden">
+              <ActionLink
+                href={localizedBookDemoHref}
+                label={copy.ctas.bookProjectDemo.label}
+                analyticsRole="cta"
+                analyticsArea="site_header"
+                contactChannel="demo"
+                className="inline-flex h-10 items-center justify-center rounded-full bg-zinc-950 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-zinc-800 sm:px-4 sm:text-sm"
+              />
               <Button
                 type="button"
                 variant="outline"
@@ -173,7 +181,7 @@ export function SiteHeader() {
 
             <div className="flex-1 overflow-auto px-4 py-5">
               <nav data-analytics-area="mobile_nav" className="flex flex-col gap-2">
-                {copy.navigation.map((item) => (
+                {navigationItems.map((item) => (
                   <Link
                     key={item.href}
                     href={buildLocalizedHref(item.href, locale)}
@@ -189,11 +197,11 @@ export function SiteHeader() {
 
               <div className="mt-5 grid gap-3">
                 <ActionLink
-                  href={localizedTalkToSalesHref}
-                  label={copy.ctas.talkToSales.label}
+                  href={localizedSignInHref}
+                  label={copy.ctas.signIn.label}
                   analyticsRole="cta"
                   analyticsArea="mobile_nav"
-                  contactChannel="sales"
+                  contactChannel="signin"
                   onClick={() => setMobileOpen(false)}
                   className="rounded-2xl border border-zinc-200 px-4 py-3 text-center text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-50 hover:text-zinc-950"
                 />

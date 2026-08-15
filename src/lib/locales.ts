@@ -76,6 +76,7 @@ export type LocaleCopy = {
     bookProjectDemo: { label: string; href: string };
     requestScopeCall: { label: string; href: string };
     talkToSales: { label: string; href: string };
+    signIn: { label: string; href: string };
     viewSolutions: { label: string; href: string };
     viewBlog: { label: string; href: string };
     viewTemplates: { label: string; href: string };

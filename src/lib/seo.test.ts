@@ -2067,7 +2067,14 @@ test("article metadata includes authorship and publication dates", () => {
 });
 
 test("representative pages emit FAQ and discovery JSON-LD on indexable commercial routes", async () => {
+  const previousHomepageDemoVideoUrl = process.env.HOMEPAGE_DEMO_VIDEO_URL;
+  process.env.HOMEPAGE_DEMO_VIDEO_URL = "https://youtu.be/dQw4w9WgXcQ";
   const homeHtml = renderToStaticMarkup(HomePage());
+  if (previousHomepageDemoVideoUrl === undefined) {
+    delete process.env.HOMEPAGE_DEMO_VIDEO_URL;
+  } else {
+    process.env.HOMEPAGE_DEMO_VIDEO_URL = previousHomepageDemoVideoUrl;
+  }
   const previousPricingApiDisabled = process.env.CRESCORA_PRICING_API_DISABLED;
   process.env.CRESCORA_PRICING_API_DISABLED = "true";
   const pricingHtml = renderToStaticMarkup(await PricingPage());
@@ -2090,6 +2097,9 @@ test("representative pages emit FAQ and discovery JSON-LD on indexable commercia
   );
 
   assert.match(homeHtml, /"@type":"FAQPage"/);
+  assert.match(homeHtml, /"@type":"VideoObject"/);
+  assert.match(homeHtml, /See one complete business workflow in action/);
+  assert.match(homeHtml, /https:\/\/www\.youtube\.com\/watch\?v=dQw4w9WgXcQ/);
 
   assert.match(pricingHtml, /"@type":"FAQPage"/);
   assert.match(pricingHtml, /"@type":"BreadcrumbList"/);
@@ -2103,6 +2113,54 @@ test("representative pages emit FAQ and discovery JSON-LD on indexable commercia
   assert.match(proofHtml, /"@type":"ItemList"/);
 
   assert.match(solutionHtml, /"@type":"FAQPage"/);
+});
+
+test("homepage places testimonial proof after the FAQ and before the final CTA", () => {
+  const previousHomepageDemoVideoUrl = process.env.HOMEPAGE_DEMO_VIDEO_URL;
+  process.env.HOMEPAGE_DEMO_VIDEO_URL = "https://youtu.be/dQw4w9WgXcQ";
+  const homeHtml = renderToStaticMarkup(HomePage());
+  if (previousHomepageDemoVideoUrl === undefined) {
+    delete process.env.HOMEPAGE_DEMO_VIDEO_URL;
+  } else {
+    process.env.HOMEPAGE_DEMO_VIDEO_URL = previousHomepageDemoVideoUrl;
+  }
+
+  const faqIndex = homeHtml.indexOf("Frequently asked questions");
+  const testimonialIndex = homeHtml.indexOf("What clients say about Crescora.ai");
+  const finalCtaIndex = homeHtml.indexOf("Start with one workflow that is costing your team time or customers.");
+
+  assert.notEqual(faqIndex, -1);
+  assert.notEqual(testimonialIndex, -1);
+  assert.notEqual(finalCtaIndex, -1);
+  assert.ok(faqIndex < testimonialIndex);
+  assert.ok(testimonialIndex < finalCtaIndex);
+  assert.match(homeHtml, /Feedback from businesses exploring and using Crescora\.ai to automate customer conversations and workflows\./);
+  assert.match(homeHtml, /Google Review · 24 Jun/);
+});
+
+test("homepage shows a local setup notice in development when the demo video url is missing", () => {
+  const previousNodeEnv = process.env.NODE_ENV;
+  const previousHomepageDemoVideoUrl = process.env.HOMEPAGE_DEMO_VIDEO_URL;
+
+  process.env.NODE_ENV = "development";
+  delete process.env.HOMEPAGE_DEMO_VIDEO_URL;
+
+  const homeHtml = renderToStaticMarkup(HomePage());
+
+  if (previousNodeEnv === undefined) {
+    delete process.env.NODE_ENV;
+  } else {
+    process.env.NODE_ENV = previousNodeEnv;
+  }
+
+  if (previousHomepageDemoVideoUrl === undefined) {
+    delete process.env.HOMEPAGE_DEMO_VIDEO_URL;
+  } else {
+    process.env.HOMEPAGE_DEMO_VIDEO_URL = previousHomepageDemoVideoUrl;
+  }
+
+  assert.match(homeHtml, /Local setup required/);
+  assert.match(homeHtml, /HOMEPAGE_DEMO_VIDEO_URL=https:\/\/www\.youtube\.com\/watch\?v=YOUR_VIDEO_ID/);
 });
 
 test("compare hub metadata publishes the production comparison title and canonical", () => {

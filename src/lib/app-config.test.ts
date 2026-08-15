@@ -5,6 +5,7 @@ import {
   buildMailtoHref,
   buildPhoneHref,
   buildWhatsAppHref,
+  getHomepageDemoVideoUrl,
   getPublicContactSurfaceConfig,
   getPublicDirectContactItem,
   normalizeEmailAddress,
@@ -105,5 +106,15 @@ test("public direct contact item prefers the explicit contact phone and falls ba
       value: "+1 415 555 0123",
       href: "tel:+14155550123",
     },
+  );
+});
+
+test("homepage demo video config only enables the section when a url is configured", () => {
+  assert.equal(getHomepageDemoVideoUrl({}), null);
+  assert.equal(
+    getHomepageDemoVideoUrl({
+      HOMEPAGE_DEMO_VIDEO_URL: " https://youtu.be/dQw4w9WgXcQ ",
+    }),
+    "https://youtu.be/dQw4w9WgXcQ",
   );
 });

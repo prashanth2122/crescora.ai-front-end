@@ -99,6 +99,7 @@ export function SiteAnalytics() {
       link.dataset.analyticsRole ||
       link.closest<HTMLElement>("[data-analytics-role]")?.dataset.analyticsRole ||
       "link";
+    const explicitEvent = link.dataset.analyticsEvent;
     const contactIntent =
       link.dataset.contactIntent === "true" || destinationPath === "/contact";
     const contactChannel =
@@ -117,8 +118,16 @@ export function SiteAnalytics() {
       contact_channel: contactChannel,
     };
 
+    if (explicitEvent) {
+      trackEvent(explicitEvent, payload);
+    }
+
     if (contactIntent) {
       trackEvent("contact_intent_click", payload);
+      return;
+    }
+
+    if (explicitEvent) {
       return;
     }
 

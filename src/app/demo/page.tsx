@@ -83,10 +83,14 @@ export default function DemoPage() {
       </section>
 
       <ProductProofSection
-        eyebrow={siteContent.homepage.productProof.eyebrow}
-        title={siteContent.homepage.productProof.title}
-        description={siteContent.homepage.productProof.description}
-        panels={siteContent.homepage.productProof.panels}
+        eyebrow={siteContent.homepage.platformProof.eyebrow}
+        title={siteContent.homepage.platformProof.title}
+        description={siteContent.homepage.platformProof.description}
+        panels={siteContent.homepage.platformProof.tabs.map((tab) => ({
+          title: tab.title,
+          description: tab.description,
+          metric: tab.proofPoints[0] ?? "Actual platform capture",
+        }))}
       />
     </PageShell>
   );

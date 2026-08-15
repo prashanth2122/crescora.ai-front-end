@@ -57,9 +57,9 @@ User-facing copy is centralized in `src/lib/site-content.ts`, with shared page d
 
 This keeps route components thin and makes future localization work straightforward:
 
-- public brand naming is `Crescora AI` only; do not introduce separate product names in public copy
-- approved primary CTAs are `Book Free Demo`, `Discuss My Workflow`, `View Pricing`, and `Book Founder-Led Pilot Review`; the floating support menu also includes `Try Crescora AI Demo`
-- the homepage positions Crescora AI as founder-led AI workflow automation for customer conversations, follow-ups, bookings, payments, documents, support, and human handover
+- public brand naming is `Crescora.ai`; keep visible homepage, footer, metadata, and social references aligned to that canonical spelling
+- approved homepage CTAs are `Book a Free Demo`, `Watch the Product Demo`, `Book a Demo for My Business`, `Request My Demo`, `Chat on WhatsApp`, and `Sign In`
+- the homepage positions Crescora.ai as AI workflow automation for customer operations, ordered as hero, product demo video, automation coverage, workflow model, platform showcase, industries, control/trust, implementation, FAQ, testimonial proof, and final conversion CTA
 - public claims must stay proof-safe: avoid guaranteed percentages, unconditional launch timelines, fake logos, fake testimonials, or compliance certifications that are not actually held
 - `/demo` is the public sample-demo entry point; it links to workflow examples and workflow detail pages with clear demo disclaimers instead of presenting a fake live customer environment
 - `/workflow-examples` is the public workflow examples hub; old `/proof` URLs are compatibility redirects and should not be used for new public links
@@ -67,20 +67,25 @@ This keeps route components thin and makes future localization work straightforw
 - public legal identity currently uses `Crescora.ai` with business registration reference `UDYAM-TS-02-0344089`; business availability is Monday to Saturday, 10:00 AM to 6:00 PM IST; support coverage is based on plan and agreed rollout scope; emergency support is available only for active clients where explicitly agreed; and office visits are by invitation or appointment through email
 - founder profile links can be published only when supplied directly; current public founder links are the supplied LinkedIn profiles for Navya Chirumalla and Prashanth Chinala
 - public review screenshots can be shown only when supplied for public use, with source platform, review date, and source link when available; owner responses are not customer quotes, and copy must make clear these are review captures rather than case studies, paid endorsements, logos, or guaranteed outcome claims
+- the homepage testimonial section is implemented as a future-ready carousel in `src/components/site/homepage-testimonial-carousel.tsx`; with one testimonial it renders as a static full-width proof panel with no arrows or autoplay, and once more approved reviews are added the numeric review controls can activate without changing the layout
 - add a new locale content file
 - swap the active content source in one place
 - keep page structure and copy separate
-- homepage conversion copy, CTA labels, automation cards, outcomes copy, trust / FAQ / pricing text, and the right-side flow steps are centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts` so the public messaging can evolve without changing the route shell
-- the homepage now uses `Book Free Demo`, `Discuss My Workflow`, and `View Pricing` as the primary conversion path from the hero and pilot sections, while the full workflow enquiry form stays on `/contact`
-- the shared header now uses `Discuss My Workflow` plus `Book Free Demo`, while the root layout can also show a closable floating support menu on every page with WhatsApp, email, call, and booking actions when `BOOK_A_CALL_URL`, `WHATSAPP_PHONE_NUMBER`, optional `SUPPORT_PHONE_NUMBER`, optional `SUPPORT_EMAIL`, and optional `WHATSAPP_PREFILL_TEXT` are configured in the deployment environment; clicking outside the menu closes it and the collapsed state leaves the page beneath interactive, and if the WhatsApp or email env vars are missing, the public fallbacks use `+91-9642021224`, `support@crescora.ai`, and the prefill text `I'm interested in your product`
+- homepage conversion copy, CTA labels, automation cards, platform showcase tabs, FAQ text, and implementation sequencing are centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts` so the public messaging can evolve without changing the route shell
+- the homepage product screenshots now render through `src/components/site/product-screenshot-viewer.tsx`; desktop keeps the cropped preview plus full-screen modal proof, while mobile disables the full-screen trigger, shows the screenshots directly, and uses a native selector for the platform-section view switcher
+- homepage testimonial section copy stays in `src/lib/site-content.ts`, while the editable review entries now live in `src/content/homepage-reviews.json` and are validated through `src/lib/homepage-reviews.ts`; each review can now include optional `imageUrl` and `imageAlt` fields, and the homepage renders that proof image inside the testimonial card when supplied
+- the homepage now uses `Book a Free Demo` as the primary conversion path, keeps `Watch the Product Demo` anchored to `#homepage-demo`, and uses a shorter homepage lead form while the fuller workflow enquiry intake stays on `/contact`
+- the homepage can now render a trust-focused YouTube demo section when `HOMEPAGE_DEMO_VIDEO_URL` is configured; the site accepts standard YouTube watch/share/embed URLs and normalizes them into a privacy-friendlier embed, and the chosen YouTube video must allow embedding or YouTube will block playback inside the page
+- in local development, if `HOMEPAGE_DEMO_VIDEO_URL` is missing or invalid, the homepage now shows a visible setup notice instead of failing silently
+- the shared header keeps only `Product`, `Solutions`, `Industries`, `Resources`, and `Pricing` in the main nav, with `Sign In` plus `Book a Free Demo` on the right; on mobile the primary demo CTA remains visible beside the menu button
+- the public footer keeps sales and support contact points visible while reducing the marketing-site location display to `Hyderabad, Telangana, India`; full legal-address detail remains on the dedicated legal pages
 - the floating support menu now renders the WhatsApp action with the custom asset at `public/whatsapp-icon.jpg` instead of the default Lucide message glyph
 - homepage terminology now prefers `handover` over `handoff`, the workflow step copy uses the booking/payment/document wording, and homepage FAQ answers are visible in the rendered page so visitors and crawlers can read the actual answers
 - the shared header currently omits the language switcher and keeps only navigation plus sales/demo CTAs
 - dedicated high-risk industry pages for diagnostics, labs, finance, and insurance must keep human-review and regulated-use disclaimers visible
 - the about page uses the same product-first CTA labels and automation-focused positioning so it stays aligned with the rest of the site
 - the about page now includes a workflow-path hero visual, stronger platform and trust proof, a clearer Crescora-vs-Crescora AI product relationship section, and a stronger bottom CTA so the company story stays centralized in `src/lib/site-content.ts`
-- the homepage now stays focused on hero, pain, workflow automation, featured industries, pilot scope, trust / FAQ, and a compact deeper-links block; detailed solutions, pricing, blog content, and the full lead intake live on their dedicated routes
-- the homepage now also carries a shared service coverage section for channels, integrations, and service categories so buyer-facing discovery copy stays centralized in `src/lib/site-content.ts`
+- the homepage now stays focused on hero, real product proof, automation coverage, workflow explanation, industries, trust, implementation, FAQ, and one final CTA; detailed solution inventories, deep feature explanations, and broader content discovery live on their dedicated routes
 - the workflow examples route uses transparent sample-workflow language, a stronger enquiry-to-outcome hero, richer industry example cards, pilot outcome metrics, and a stronger workflow-pilot CTA
 - the legal routes now render through `src/components/site/legal-page.tsx` and pull sectioned policy copy from dedicated legal content modules so the privacy, terms, cookies, and acceptable-use pages stay centralized
 - the privacy policy now renders at `/privacy`
@@ -121,6 +126,7 @@ This keeps route components thin and makes future localization work straightforw
 - the lead form copy, country selector, country-aware phone validation, validation copy, and optional channel qualification field are centralized in `src/components/site/lead-form.tsx` and `src/lib/site-content.ts`
 - WhatsApp, direct contact phone, and support contact surfaces are centralized through `src/lib/app-config.ts`, `src/components/site/site-header.tsx`, `src/components/site/site-footer.tsx`, and `src/components/site/whatsapp-floating-button.tsx`; if the env vars are unset, the site falls back to the defaults in `src/lib/app-config.ts`
 - `.env.example` now lists the public-site contact, direct contact phone, and analytics variables expected for local development and deployment
+- `.env.example` also includes `HOMEPAGE_DEMO_VIDEO_URL` for the optional homepage demo video embed
 - the public lead form now posts to the local `/api/lead` route, which forwards submissions to the backend customer-intake API using a short-lived token; the shared backend origin lives in `src/lib/app-config.ts` and can still be overridden with `CUSTOMER_INTAKE_API_BASE_URL` (default `http://localhost:4000`)
 - footer brand copy and footer navigation labels are centralized in `src/lib/locales/en.ts` and `src/lib/locales/hi.ts` so locale-specific trust text stays aligned
 

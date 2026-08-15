@@ -1,16 +1,16 @@
 import type { LocaleCopy } from "@/lib/locales";
 
-const productName = "Crescora AI";
+const productName = "Crescora.ai";
 
 export const hiLocaleCopy: LocaleCopy = {
   site: {
-    seoTitle: "Crescora AI के लिए Hindi SEO Foundation",
+    seoTitle: "AI Workflow Automation for WhatsApp & Web Chat | Crescora.ai",
     description:
-      "Crescora AI ग्राहक पूछताछ को booked calls, स्पष्ट follow-ups, और completed projects में बदलने में मदद करता है.",
+      "Crescora.ai helps businesses turn customer conversations into completed business actions across enquiries, bookings, payments, support, documents, and follow-ups.",
   },
   language: {
     label: "भाषा",
-    current: "हिन्दी",
+    current: "हिंदी",
     switchTo: "अंग्रेज़ी में देखें",
   },
   header: {
@@ -26,69 +26,75 @@ export const hiLocaleCopy: LocaleCopy = {
     closeSupportWidgetLabel: "सपोर्ट मेनू बंद करें",
   },
   footer: {
-    title: `${productName} ग्राहक बातचीत को ऑटोमेटेड बिज़नेस नतीजों में बदलता है.`,
+    title: "Automate Work. Accelerate Growth.",
     intro:
-      "भारतीय व्यवसायों के लिए बनाया गया है जो पूछताछ, बुकिंग, फ़ॉलो-अप, सपोर्ट, भुगतान और संचालन में व्यावहारिक ऑटोमेशन चाहते हैं.",
+      "Crescora.ai helps businesses turn customer conversations into completed business actions across enquiries, bookings, payments, support, documents, and follow-ups.",
     allRightsReserved: "सर्वाधिकार सुरक्षित.",
     companyReferenceLabel: "कंपनी संदर्भ:",
     productLabel: "प्रोडक्ट:",
   },
   navigation: [
-    { label: "यह कैसे काम करता है", href: "/platform" },
-    { label: "इंडस्ट्रीज़", href: "/industries" },
-    { label: "समाधान", href: "/solutions" },
-    { label: "उपयोग के मामले", href: "/use-cases" },
-    { label: "मूल्य निर्धारण", href: "/pricing" },
-    { label: "ब्लॉग", href: "/blog" },
-    { label: "ट्रस्ट", href: "/trust" },
-    { label: "प्रूफ", href: "/workflow-examples" },
+    { label: "Product", href: "/platform" },
+    { label: "Solutions", href: "/solutions" },
+    { label: "Industries", href: "/industries" },
+    { label: "Resources", href: "/resources" },
+    { label: "Pricing", href: "/pricing" },
   ],
   footerGroups: [
     {
-      title: "प्रोडक्ट",
+      title: "Product",
       links: [
-        { label: "यह कैसे काम करता है", href: "/platform" },
-        { label: "समाधान", href: "/solutions" },
-        { label: "वर्कफ़्लो", href: "/workflows" },
-        { label: "टेम्पलेट", href: "/templates" },
-        { label: "मूल्य निर्धारण", href: "/pricing" },
-        { label: "उपयोग के मामले", href: "/use-cases" },
+        { label: "Platform", href: "/platform" },
+        { label: "Solutions", href: "/solutions" },
+        { label: "Integrations", href: "/platform" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "Templates", href: "/templates" },
       ],
     },
     {
-      title: "इंडस्ट्रीज़",
+      title: "Industries",
       links: [
-        { label: "अस्पताल", href: "/industries/hospitals" },
-        { label: "क्लिनिक", href: "/industries/clinics" },
-        { label: "शिक्षा", href: "/industries/education" },
-        { label: "रियल एस्टेट", href: "/industries/real-estate" },
-        { label: "सपोर्ट टीम", href: "/industries/support-teams" },
-        { label: "सेवा व्यवसाय", href: "/industries/service-businesses" },
+        { label: "Healthcare", href: "/industries/healthcare" },
+        { label: "Real Estate", href: "/industries/real-estate" },
+        { label: "Education", href: "/industries/education" },
+        { label: "Diagnostics", href: "/industries/diagnostics" },
+        { label: "Service Businesses", href: "/industries/service-businesses" },
+        { label: "Support Teams", href: "/industries/support-teams" },
       ],
     },
     {
-      title: "कंपनी",
+      title: "Resources",
       links: [
-        { label: "हमारे बारे में", href: "/about" },
-        { label: "संपर्क", href: "/contact" },
-        { label: "ब्लॉग", href: "/blog" },
-        { label: "पायलट प्रोग्राम", href: "/workflow-examples" },
+        { label: "Product Demo", href: "/#homepage-demo" },
+        { label: "Workflow Examples", href: "/workflow-examples" },
+        { label: "Blog", href: "/blog" },
+        { label: "Support", href: "/support" },
       ],
     },
     {
-      title: "कानूनी",
+      title: "Company",
       links: [
-        { label: "गोपनीयता नीति", href: "/privacy" },
-        { label: "सेवा की शर्तें", href: "/terms" },
-        { label: "कुकी नीति", href: "/cookies" },
-        { label: "स्वीकार्य उपयोग नीति", href: "/acceptable-use" },
+        { label: "About", href: "/about" },
+        { label: "Contact", href: "/contact" },
+      ],
+    },
+    {
+      title: "Trust & Legal",
+      links: [
+        { label: "Security", href: "/security" },
+        { label: "Responsible AI", href: "/responsible-ai" },
+        { label: "Privacy", href: "/privacy" },
+        { label: "Terms", href: "/terms" },
+        { label: "Data Processing", href: "/data-processing" },
+        { label: "Subprocessors", href: "/subprocessors" },
       ],
     },
   ],
   ctas: {
-    bookProjectDemo: { label: "फ्री डेमो बुक करें", href: "/contact" },
+    bookProjectDemo: { label: "Book a Free Demo", href: "/contact" },
     requestScopeCall: { label: "मेरे वर्कफ़्लो पर चर्चा करें", href: "/contact" },
     talkToSales: { label: "सेल्स से बात करें", href: "/contact" },
+    signIn: { label: "Sign In", href: "https://app.crescora.ai" },
     viewSolutions: { label: "समाधान देखें", href: "/solutions" },
     viewBlog: { label: "ब्लॉग देखें", href: "/blog" },
     viewTemplates: { label: "टेम्पलेट देखें", href: "/templates" },

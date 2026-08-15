@@ -7,6 +7,7 @@ import { proofCards } from "@/lib/decision-pages";
 import { acceptableUsePolicyContent } from "@/lib/acceptable-use-policy-content";
 import { isValidPhoneForCountry } from "@/lib/lead-form-validation";
 import { cookiePolicyContent } from "@/lib/cookie-policy-content";
+import { homepageReviews } from "@/lib/homepage-reviews";
 import { privacyPolicyContent } from "@/lib/privacy-policy-content";
 import { enLocaleCopy } from "@/lib/locales/en";
 import { siteContent } from "@/lib/site-content";
@@ -15,7 +16,7 @@ import { pricingPackages, pricingPackagesByRegion, pricingRegions, useCases } fr
 import { buildPublicPricingDataFromApiResponse } from "@/lib/public-pricing";
 
 const approvedCtaLabels = new Set([
-  "Book Free Demo",
+  "Book a Free Demo",
   "Discuss My Workflow",
   "View Pricing",
   "Book Founder-Led Pilot Review",
@@ -42,48 +43,69 @@ function collectSourceFiles(dir: string): string[] {
   });
 }
 
-test("public brand positioning uses Crescora AI without separate product branding", () => {
-  assert.equal(siteContent.site.name, "Crescora AI");
+test("homepage content matches the new brand, structure, and proof model", () => {
+  assert.equal(siteContent.site.name, "Crescora.ai");
   assert.equal(siteContent.site.product, "Crescora AI");
   assert.equal(siteContent.site.productFull, "Crescora AI");
-  assert.equal(siteContent.homepage.hero.badge, "Founder-led AI workflow automation");
+  assert.equal(siteContent.site.seoTitle, "AI Workflow Automation for WhatsApp & Web Chat | Crescora.ai");
+  assert.equal(siteContent.homepage.hero.badge, "AI WORKFLOW AUTOMATION FOR CUSTOMER OPERATIONS");
   assert.equal(
     siteContent.homepage.hero.title,
-    "AI workflow automation for customer conversations, follow-ups, and business operations.",
+    "AI Workflow Automation That Turns Conversations Into Business Actions.",
   );
-  assert.match(siteContent.homepage.hero.description, /enquiries, appointment booking, lead qualification/);
-  assert.match(siteContent.homepage.founderTrust.description, /selected businesses/);
-  assert.equal(siteContent.homepage.productProof.title, "Explore Crescora.ai through guided product demos.");
-  assert.equal(siteContent.homepage.productProof.panels.length, 9);
-  assert.equal(siteContent.homepage.productProof.panels[0]?.metric, "Visual orchestration across 50 supported node types");
-  assert.equal(siteContent.homepage.productProof.panels[8]?.title, "Governance & Flow Health");
-  assert.equal(siteContent.homepage.productProof.panels[8]?.metric, "Pre-publish validation and governance");
+  assert.equal(siteContent.homepage.hero.secondaryCtaHref, "#homepage-demo");
+  assert.equal(siteContent.homepage.hero.proofStrip.length, 6);
+  assert.equal(siteContent.homepage.hero.proofStrip[5], "Governance & Control");
+  assert.equal(siteContent.homepage.demoVideo.title, "See one complete business workflow in action.");
+  assert.equal(siteContent.homepage.demoVideo.whatYouWillSee.length, 4);
+  assert.equal(siteContent.homepage.testimonial.title, "What clients say about Crescora.ai");
+  assert.equal(homepageReviews.length, 1);
+  assert.equal(homepageReviews[0]?.sourceLabel, "Google Review");
+  assert.equal(homepageReviews[0]?.logoName, "Google");
+  assert.equal(homepageReviews[0]?.imageUrl, "/reviews/vidya-review.png");
+  assert.match(homepageReviews[0]?.imageAlt ?? "", /Vidya/);
+  assert.match(siteContent.homepage.demoVideo.note, /product walkthrough/);
+  assert.equal(
+    siteContent.homepage.platformProof.title,
+    "Build, operate, and improve customer automation from one workspace.",
+  );
+  assert.equal(siteContent.homepage.platformProof.tabs.length, 5);
+  assert.equal(siteContent.homepage.platformProof.tabs[0]?.proofPoints[0], "50 supported workflow node types");
+  assert.equal(siteContent.homepage.platformProof.tabs[4]?.proofPoints[0], "Web Widget");
+  assert.equal(siteContent.homepage.automation.cards.length, 6);
+  assert.equal(siteContent.homepage.industries.cards.length, 6);
+  assert.equal(siteContent.homepage.trust.cards.length, 4);
+  assert.equal(siteContent.homepage.implementation.steps.length, 3);
+  assert.equal(siteContent.homepage.implementation.metrics.length, 4);
+  assert.equal(siteContent.homepage.faq.items.length, 6);
 });
 
-test("homepage uses proof-safe claims and measurable pilot language", () => {
+test("homepage uses proof-safe claims and focused rollout language", () => {
   const homepageText = JSON.stringify(siteContent.homepage);
 
   assert.doesNotMatch(homepageText, /70-90%|70–90%|70â/i);
   assert.doesNotMatch(homepageText, /14 days/i);
-  assert.match(siteContent.homepage.outcomes.automationClaim, /large share of repetitive FAQs/);
-  assert.match(siteContent.homepage.outcomes.automationSupport, /response speed, lead capture rate/);
-  assert.match(siteContent.homepage.pilot.description, /around two weeks/);
-  assert.deepEqual(siteContent.homepage.pilotProcess.steps, [
-    "Workflow discovery",
-    "Pilot scope",
-    "Workflow design",
-    "Build and test",
-    "Launch and monitor",
-    "Expand safely",
-  ]);
+  assert.match(siteContent.homepage.implementation.rolloutNote, /workflow complexity/);
+  assert.deepEqual(
+    siteContent.homepage.implementation.steps.map((step) => step.title),
+    ["Map the workflow", "Build & test", "Launch & improve"],
+  );
+  assert.equal(siteContent.homepage.implementation.metricsEyebrow, "WHAT WE MEASURE AFTER LAUNCH");
+  assert.ok(siteContent.homepage.implementation.founderCallout.items.includes("Fallback paths tested"));
+  assert.ok(siteContent.homepage.trust.links.some((item) => item.label === "Responsible AI"));
+  assert.doesNotMatch(homepageText, /Role and company not published/);
+  assert.match(siteContent.homepage.trust.description, /human oversight/);
 });
 
-test("navigation and workflow examples use the new public route", () => {
-  assert.equal(siteContent.navigation[3]?.href, "/workflow-examples");
-  assert.equal(siteContent.navigation[3]?.label, "Workflow Examples");
-  assert.equal(enLocaleCopy.navigation[3]?.href, "/workflow-examples");
+test("navigation and resources keep workflow examples off the top-level nav", () => {
+  assert.equal(siteContent.navigation.length, 5);
+  assert.equal(enLocaleCopy.navigation.length, 5);
+  assert.equal(siteContent.navigation[3]?.href, "/resources");
+  assert.equal(siteContent.navigation[3]?.label, "Resources");
+  assert.equal(enLocaleCopy.navigation[3]?.href, "/resources");
   assert.ok(proofCards.every((card) => card.href.startsWith("/workflow-examples/")));
-  assert.equal(siteContent.ctas.openProofPage.label, "Open workflow example →");
+  assert.equal(siteContent.footerGroups[2]?.links[1]?.label, "Workflow Examples");
+  assert.equal(siteContent.ctas.openProofPage.label, "Open workflow example ->");
 });
 
 test("approved CTAs are used for conversion actions", () => {
@@ -99,7 +121,7 @@ test("approved CTAs are used for conversion actions", () => {
     pricingPackages[3].ctaLabel,
   ];
 
-  assert.equal(siteContent.ctas.bookProjectDemo.label, "Book Free Demo");
+  assert.equal(siteContent.ctas.bookProjectDemo.label, "Book a Free Demo");
   assert.equal(siteContent.ctas.requestScopeCall.label, "Discuss My Workflow");
   assert.equal(siteContent.ctas.seePricing.label, "View Pricing");
   assert.equal(siteContent.ctas.tryDemo.href, "/demo");
@@ -233,8 +255,15 @@ test("about page copy includes founder-led proof policy and safe legal identity 
 });
 
 test("legal and lead-form content remains structured", () => {
-  assert.equal(siteContent.leadForm.badge, "Workflow enquiry");
-  assert.equal(siteContent.leadForm.submitIdle, "Book Free Demo");
+  assert.equal(siteContent.leadForm.badge, "Demo request");
+  assert.equal(siteContent.leadForm.submitIdle, "Request My Demo");
+  assert.equal(siteContent.leadForm.variants.homepage.submitIdle, "Request My Demo");
+  assert.equal(siteContent.leadForm.variants.homepage.badge, "Book a free demo");
+  assert.equal(
+    siteContent.leadForm.successMessage,
+    "Thanks — your demo request has been received. We'll review your workflow and contact you to schedule the next step.",
+  );
+  assert.equal(siteContent.ui.footer.publicLocation, "Hyderabad, Telangana, India");
   assert.equal(isValidPhoneForCountry("+91 98765 43210", siteContent.leadForm.options.countries[0]), true);
   assert.equal(isValidPhoneForCountry("123", siteContent.leadForm.options.countries[0]), false);
   assert.ok(useCases.length >= 12);
@@ -304,3 +333,4 @@ test("public source does not contain banned marketing or internal planning phras
     }
   }
 });
+

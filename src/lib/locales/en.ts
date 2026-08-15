@@ -1,12 +1,12 @@
 import type { LocaleCopy } from "@/lib/locales";
 
-const productName = "Crescora AI";
+const productName = "Crescora.ai";
 
 export const enLocaleCopy: LocaleCopy = {
   site: {
-    seoTitle: "AI Workflow Automation for Customer Conversations and Operations",
+    seoTitle: "AI Workflow Automation for WhatsApp & Web Chat | Crescora.ai",
     description:
-      "Crescora AI helps businesses automate enquiries, bookings, reminders, payments, documents, support, and human handover across customer channels and internal workflows.",
+      "Crescora.ai helps businesses turn customer conversations into completed business actions across enquiries, bookings, payments, support, documents, and follow-ups.",
   },
   language: {
     label: "Language",
@@ -26,9 +26,9 @@ export const enLocaleCopy: LocaleCopy = {
     closeSupportWidgetLabel: "Close support menu",
   },
   footer: {
-    title: `${productName} turns customer conversations into automated business outcomes.`,
+    title: "Automate Work. Accelerate Growth.",
     intro:
-      "Built for Indian businesses that want practical automation across enquiries, bookings, follow-ups, support, payments, and operations.",
+      "Crescora.ai helps businesses turn customer conversations into completed business actions across enquiries, bookings, payments, support, documents, and follow-ups.",
     allRightsReserved: "All rights reserved.",
     companyReferenceLabel: "Company reference:",
     productLabel: "Product:",
@@ -37,35 +37,38 @@ export const enLocaleCopy: LocaleCopy = {
     { label: "Product", href: "/platform" },
     { label: "Solutions", href: "/solutions" },
     { label: "Industries", href: "/industries" },
-    { label: "Workflow Examples", href: "/workflow-examples" },
-    { label: "Templates", href: "/templates" },
+    { label: "Resources", href: "/resources" },
     { label: "Pricing", href: "/pricing" },
-    { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
   ],
   footerGroups: [
     {
       title: "Product",
       links: [
-        { label: "Platform Overview", href: "/platform" },
+        { label: "Platform", href: "/platform" },
         { label: "Solutions", href: "/solutions" },
-        { label: "Workflow Examples", href: "/workflow-examples" },
-        { label: "Workflows", href: "/workflows" },
-        { label: "Templates", href: "/templates" },
-        { label: "Pricing", href: "/pricing" },
         { label: "Integrations", href: "/platform" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "Templates", href: "/templates" },
       ],
     },
     {
       title: "Industries",
       links: [
-        { label: "Hospitals", href: "/industries/hospitals" },
-        { label: "Clinics", href: "/industries/clinics" },
-        { label: "Education", href: "/industries/education" },
+        { label: "Healthcare", href: "/industries/healthcare" },
         { label: "Real Estate", href: "/industries/real-estate" },
-        { label: "Support Teams", href: "/industries/support-teams" },
+        { label: "Education", href: "/industries/education" },
+        { label: "Diagnostics", href: "/industries/diagnostics" },
         { label: "Service Businesses", href: "/industries/service-businesses" },
+        { label: "Support Teams", href: "/industries/support-teams" },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Product Demo", href: "/#homepage-demo" },
+        { label: "Workflow Examples", href: "/workflow-examples" },
+        { label: "Blog", href: "/blog" },
+        { label: "Support", href: "/support" },
       ],
     },
     {
@@ -73,28 +76,25 @@ export const enLocaleCopy: LocaleCopy = {
       links: [
         { label: "About", href: "/about" },
         { label: "Contact", href: "/contact" },
-        { label: "Blog", href: "/blog" },
-        { label: "Support", href: "/support" },
-        { label: "Security", href: "/security" },
-        { label: "Responsible AI", href: "/responsible-ai" },
       ],
     },
     {
-      title: "Trust and Legal",
+      title: "Trust & Legal",
       links: [
-        { label: "Privacy Policy", href: "/privacy" },
-        { label: "Terms of Service", href: "/terms" },
-        { label: "Cookie Policy", href: "/cookies" },
-        { label: "Acceptable Use Policy", href: "/acceptable-use" },
+        { label: "Security", href: "/security" },
+        { label: "Responsible AI", href: "/responsible-ai" },
+        { label: "Privacy", href: "/privacy" },
+        { label: "Terms", href: "/terms" },
         { label: "Data Processing", href: "/data-processing" },
         { label: "Subprocessors", href: "/subprocessors" },
       ],
     },
   ],
   ctas: {
-    bookProjectDemo: { label: "Book Free Demo", href: "/contact" },
+    bookProjectDemo: { label: "Book a Free Demo", href: "/contact" },
     requestScopeCall: { label: "Discuss My Workflow", href: "/contact" },
     talkToSales: { label: "Discuss My Workflow", href: "/contact" },
+    signIn: { label: "Sign In", href: "https://app.crescora.ai" },
     viewSolutions: { label: "View Solutions", href: "/solutions" },
     viewBlog: { label: "View Blog", href: "/blog" },
     viewTemplates: { label: "View Templates", href: "/templates" },

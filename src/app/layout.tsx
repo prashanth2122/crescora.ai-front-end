@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   creator: site.name,
   publisher: site.name,
   title: {
-    default: `${copy.site.seoTitle} | ${site.productFull}`,
+    default: copy.site.seoTitle,
     template: "%s",
   },
 };

@@ -3,9 +3,9 @@ import { industriesSeo } from "@/lib/india-seo-data";
 
 export const { site, navigation, footerGroups } = siteContent;
 
-export const homepagePainPoints = siteContent.homepage.pain.cards;
+export const homepagePainPoints = siteContent.homepage.automation.cards;
 
-export const homepageOutcomes = siteContent.homepage.outcomes.items;
+export const homepageOutcomes = siteContent.homepage.implementation.metrics;
 
 export const homepageCapabilities = [
   {
@@ -177,12 +177,4 @@ export const faqItems = siteContent.homepage.faq.items;
 
 export const leadFormOptions = siteContent.leadForm.options;
 
-export const homepageFlowSteps = [
-  "New customer enquiry received",
-  "Crescora AI identifies the customer need",
-  "Lead details captured",
-  "Booking, payment, or document step completed",
-  "Follow-up reminder scheduled",
-  "Sales or support team notified",
-  "Outcome tracked in dashboard",
-] as const;
+export const homepageFlowSteps = siteContent.homepage.howItWorks.steps.map((step) => step.title);

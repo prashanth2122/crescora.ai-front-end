@@ -40,7 +40,7 @@ export function ProductProofSection({
                       <Icon className="h-5 w-5" />
                     </div>
                     <span className="max-w-[11rem] rounded-full border border-white/10 bg-white/10 px-3 py-1 text-right text-xs font-medium leading-4 text-white/80">
-                      Product demo · Sample data
+                      Product demo | Sample data
                     </span>
                   </div>
                   <p className="mt-5 text-lg font-semibold tracking-tight">{panel.title}</p>
@@ -58,3 +58,4 @@ export function ProductProofSection({
     </section>
   );
 }
+

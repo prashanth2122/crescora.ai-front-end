@@ -25,6 +25,11 @@ function normalizeConfiguredUrl(value: string | undefined, fallback: string) {
   return normalized && normalized.length > 0 ? normalized : fallback;
 }
 
+export function getHomepageDemoVideoUrl(env: PublicConfigEnv = process.env) {
+  const normalized = env.HOMEPAGE_DEMO_VIDEO_URL?.trim();
+  return normalized && normalized.length > 0 ? normalized : null;
+}
+
 export function normalizeEmailAddress(value: string | undefined) {
   const normalized = value?.trim() ?? "";
   return normalized.includes("@") ? normalized : null;

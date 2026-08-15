@@ -20,7 +20,7 @@ export function createSocialImageResponse({
   eyebrow,
   title,
   description,
-  accentLabel = "Crescora AI",
+  accentLabel = "Crescora.ai",
 }: SocialImageInput) {
   return new ImageResponse(
     (
@@ -34,7 +34,7 @@ export function createSocialImageResponse({
           padding: 56,
           color: "#ffffff",
           background:
-            "radial-gradient(circle at 18% 18%, rgba(56,189,248,0.28), transparent 26%), radial-gradient(circle at 82% 18%, rgba(168,85,247,0.24), transparent 24%), linear-gradient(135deg, #050816 0%, #0b1220 50%, #10172a 100%)",
+            "radial-gradient(circle at 18% 18%, rgba(56,189,248,0.26), transparent 26%), radial-gradient(circle at 82% 18%, rgba(16,185,129,0.2), transparent 24%), linear-gradient(135deg, #050816 0%, #0b1220 50%, #10172a 100%)",
           fontFamily: "Inter, Arial, sans-serif",
         }}
       >
@@ -60,7 +60,7 @@ export function createSocialImageResponse({
               }}
             >
               <span>{siteContent.site.name}</span>
-              <span style={{ opacity: 0.5 }}>•</span>
+              <span style={{ opacity: 0.5 }}>|</span>
               <span>{eyebrow}</span>
             </div>
             <div
@@ -108,7 +108,7 @@ export function createSocialImageResponse({
                 textTransform: "uppercase",
               }}
             >
-              {siteContent.site.product}
+              {siteContent.site.name}
             </div>
             <span>{siteContent.site.tagline}</span>
           </div>
@@ -148,7 +148,8 @@ export function createSocialImageResponse({
                 display: "flex",
                 fontSize: 42,
                 fontWeight: 700,
-                letterSpacing: 4,
+                letterSpacing: 2,
+                textAlign: "center",
               }}
             >
               {accentLabel}
@@ -163,7 +164,7 @@ export function createSocialImageResponse({
                 textAlign: "center",
               }}
             >
-              {siteContent.site.productFull}
+              {siteContent.site.name}
             </div>
           </div>
         </div>
@@ -172,3 +173,4 @@ export function createSocialImageResponse({
     socialImageSize,
   );
 }
+
