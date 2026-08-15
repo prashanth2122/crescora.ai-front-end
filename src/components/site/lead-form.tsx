@@ -117,7 +117,7 @@ export function LeadForm({ variant = "contact" }: { variant?: LeadFormVariant })
   const trackedCompletedFieldsRef = useRef<Set<keyof FormState>>(new Set());
   const config = variantConfig[variant];
   const copy = siteContent.leadForm.variants[variant];
-  const requiredFields = config.requiredFields;
+  const requiredFields: readonly (keyof FormState)[] = config.requiredFields;
 
   const trackFormView = useEffectEvent(() => {
     trackEvent("lead_form_view", {

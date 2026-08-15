@@ -1,5 +1,6 @@
 "use client";
 
+import type { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -55,6 +56,12 @@ export function HomepagePlatformShowcase({ copy }: HomepagePlatformShowcaseProps
     deploy: "origin-top scale-100 sm:scale-[1.18]",
   };
 
+  function handleMobileTabSelect(
+    event: ChangeEvent<HTMLSelectElement> | FormEvent<HTMLSelectElement>,
+  ) {
+    setActiveTabId(event.currentTarget.value);
+  }
+
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
       <SectionHeading eyebrow={copy.eyebrow} title={copy.title} description={copy.description} />
@@ -68,7 +75,8 @@ export function HomepagePlatformShowcase({ copy }: HomepagePlatformShowcaseProps
             <select
               id="homepage-platform-tab-select"
               value={activeTab.id}
-              onChange={(event) => setActiveTabId(event.target.value)}
+              onChange={handleMobileTabSelect}
+              onInput={handleMobileTabSelect}
               className="h-12 w-full rounded-[0.95rem] border border-zinc-200 bg-white px-4 text-sm font-medium text-zinc-900 outline-none ring-0"
               aria-label="Select platform view"
             >
@@ -101,7 +109,7 @@ export function HomepagePlatformShowcase({ copy }: HomepagePlatformShowcaseProps
           </div>
         </div>
 
-        <div className="pt-4">
+        <div key={activeTab.id} className="pt-4">
           <div className="grid gap-6 rounded-[2rem] border border-zinc-200 bg-[linear-gradient(135deg,rgba(255,255,255,1),rgba(244,244,245,0.96))] p-6 shadow-[0_24px_72px_rgba(15,23,42,0.06)] lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div className="order-2 lg:order-1">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">{activeTab.eyebrow}</p>
