@@ -1,12 +1,40 @@
 import { getLocaleFromPath, normalizePathname, stripLocalePrefix } from "@/lib/locales";
 
+export function resolveGoogleTagId(value: string | undefined, fallback: string) {
+  const normalizedValue = value?.trim();
+
+  return normalizedValue ? normalizedValue : fallback;
+}
+
+export function hasGoogleTagId(value: string) {
+  return value.trim().length > 0;
+}
+
 export const DEFAULT_GA_MEASUREMENT_ID = "G-027GJ53KYV";
-export const GOOGLE_ANALYTICS_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || DEFAULT_GA_MEASUREMENT_ID;
+export const GOOGLE_ANALYTICS_ID = resolveGoogleTagId(
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+  DEFAULT_GA_MEASUREMENT_ID,
+);
+export const DEFAULT_CONTACT_PAGE_GOOGLE_ADS_ID = "AW-18408106899";
+export const CONTACT_PAGE_GOOGLE_ADS_ID = resolveGoogleTagId(
+  process.env.NEXT_PUBLIC_CONTACT_PAGE_GOOGLE_ADS_ID,
+  DEFAULT_CONTACT_PAGE_GOOGLE_ADS_ID,
+);
+export const DEFAULT_CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ID =
+  "AW-18408106899/pi2pCJS3rOccEJPX1clE";
+export const CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ID = resolveGoogleTagId(
+  process.env.NEXT_PUBLIC_CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ID ??
+    process.env.NEXT_PUBLIC_CONTACT_FORM_GOOGLE_ADS_CONVERSION_ID,
+  DEFAULT_CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ID,
+);
 export const ANALYTICS_ENABLED =
-  GOOGLE_ANALYTICS_ID.length > 0 &&
+  hasGoogleTagId(GOOGLE_ANALYTICS_ID) &&
   (process.env.NODE_ENV === "production" ||
     process.env.NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV === "true");
+export const CONTACT_PAGE_GOOGLE_ADS_ENABLED =
+  hasGoogleTagId(CONTACT_PAGE_GOOGLE_ADS_ID);
+export const CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ENABLED =
+  hasGoogleTagId(CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ID);
 
 const EVENT_NAME_MAX_LENGTH = 40;
 const PARAM_VALUE_MAX_LENGTH = 100;
@@ -264,7 +292,7 @@ export function buildLeadFormProgress(
   };
 }
 
-function queueAnalyticsCommand(...args: unknown[]) {
+export function queueAnalyticsCommand(...args: unknown[]) {
   if (typeof window === "undefined") {
     return;
   }

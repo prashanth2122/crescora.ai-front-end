@@ -6,14 +6,8 @@ type LeadPayload = {
   fullName?: string;
   companyName?: string;
   workEmail?: string;
-  country?: string;
   phoneOrWhatsapp?: string;
-  industry?: string;
   primaryUseCase?: string;
-  monthlyEnquiryVolume?: string;
-  timeline?: string;
-  preferredChannel?: string;
-  currentTools?: string;
   keyProblem?: string;
   pageUrl?: string;
   referrerUrl?: string | null;
@@ -120,12 +114,7 @@ function buildCustomerIntakePayload(body: LeadPayload, request: Request) {
     companyName: body.companyName?.trim(),
     workEmail: body.workEmail?.trim(),
     phoneNumber: body.phoneOrWhatsapp?.trim(),
-    industry: body.industry?.trim() || null,
     primaryWorkflowToAutomate: body.primaryUseCase?.trim(),
-    monthlyEnquiryVolume: body.monthlyEnquiryVolume?.trim() || null,
-    expectedTimeline: body.timeline?.trim() || null,
-    preferredChannel: toCleanString(body.preferredChannel),
-    currentTools: toCleanString(body.currentTools),
     mainProblemToSolve: toCleanString(body.keyProblem),
     pageUrl,
     referrerUrl,

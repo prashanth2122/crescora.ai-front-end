@@ -1,3 +1,4 @@
+import { ContactGoogleTag } from "@/components/analytics/contact-google-tag";
 import { LeadForm } from "@/components/site/lead-form";
 import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
@@ -28,6 +29,7 @@ export default function ContactPage() {
 
   return (
     <PageShell>
+      <ContactGoogleTag />
       <SeoJsonLd
         data={buildPageSchema({
           type: "ContactPage",

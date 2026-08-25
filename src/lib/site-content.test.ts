@@ -260,6 +260,19 @@ test("legal and lead-form content remains structured", () => {
   assert.equal(siteContent.leadForm.variants.homepage.submitIdle, "Request My Demo");
   assert.equal(siteContent.leadForm.variants.homepage.badge, "Book a free demo");
   assert.equal(
+    siteContent.leadForm.variants.contact.title,
+    "See How Crescora.ai Can Automate Your Business",
+  );
+  assert.equal(
+    siteContent.leadForm.variants.contact.submitIdle,
+    "Book My Free Demo",
+  );
+  assert.deepEqual(siteContent.leadForm.variants.contact.benefits, [
+    "No commitment",
+    "Personalized business demo",
+    "Our team will contact you to schedule a convenient time",
+  ]);
+  assert.equal(
     siteContent.leadForm.successMessage,
     "Thanks — your demo request has been received. We'll review your workflow and contact you to schedule the next step.",
   );

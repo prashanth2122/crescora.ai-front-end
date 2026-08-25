@@ -13,7 +13,7 @@ export const cookiePolicyContent = {
       "This Cookie Policy explains how Crescora AI uses cookies and similar technologies on https://www.crescora.ai, our application, dashboard, web widget, and related services.",
   },
   dateLabel: "Effective date",
-  updatedOn: "23-June 2026",
+  updatedOn: "25-August 2026",
   sections: [
     {
       title: "1. What Are Cookies?",
@@ -68,7 +68,7 @@ export const cookiePolicyContent = {
       title: "5. Third-Party Cookies",
       paragraphs: [
         "Some cookies may be set by third-party providers that support hosting, analytics, payments, customer support, security, email, advertising, or embedded content.",
-        "The public marketing site currently uses Google tag / Google Analytics for website analytics and lead-funnel measurement.",
+        "The public marketing site currently uses Google tag / Google Analytics for website analytics, and the contact page also configures a Google Ads conversion tag for lead-funnel measurement.",
         "Third-party providers may process cookie data according to their own privacy and cookie policies.",
       ],
     },

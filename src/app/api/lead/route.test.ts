@@ -66,14 +66,8 @@ test("forwards the lead form to the customer intake API with a signed token", as
         fullName: "Asha Patel",
         companyName: "Blue River Logistics",
         workEmail: "asha@blueriver.com",
-        country: "India",
         phoneOrWhatsapp: "+91 9876543210",
-        industry: "Logistics",
         primaryUseCase: "Lead Capture and Qualification",
-        monthlyEnquiryVolume: "100-250",
-        timeline: "This month",
-        preferredChannel: "Email",
-        currentTools: "Sheets",
         keyProblem: "Manual lead triage",
       }),
     });
@@ -102,6 +96,13 @@ test("forwards the lead form to the customer intake API with a signed token", as
       companyName?: string;
       workEmail?: string;
       phoneNumber?: string;
+      primaryWorkflowToAutomate?: string;
+      mainProblemToSolve?: string | null;
+      industry?: string | null;
+      monthlyEnquiryVolume?: string | null;
+      expectedTimeline?: string | null;
+      preferredChannel?: string | null;
+      currentTools?: string | null;
       pageUrl?: string | null;
       utmSource?: string | null;
       utmMedium?: string | null;
@@ -109,7 +110,16 @@ test("forwards the lead form to the customer intake API with a signed token", as
     };
 
     assert.equal(intakeBody.fullName, "Asha Patel");
+    assert.equal(intakeBody.companyName, "Blue River Logistics");
+    assert.equal(intakeBody.workEmail, "asha@blueriver.com");
     assert.equal(intakeBody.phoneNumber, "+91 9876543210");
+    assert.equal(intakeBody.primaryWorkflowToAutomate, "Lead Capture and Qualification");
+    assert.equal(intakeBody.mainProblemToSolve, "Manual lead triage");
+    assert.equal(intakeBody.industry, undefined);
+    assert.equal(intakeBody.monthlyEnquiryVolume, undefined);
+    assert.equal(intakeBody.expectedTimeline, undefined);
+    assert.equal(intakeBody.preferredChannel, undefined);
+    assert.equal(intakeBody.currentTools, undefined);
     assert.equal(intakeBody.pageUrl, "http://localhost:3001/?utm_source=google&utm_medium=cpc&utm_campaign=demo");
     assert.equal(intakeBody.utmSource, "google");
     assert.equal(intakeBody.utmMedium, "cpc");
@@ -169,12 +179,8 @@ test("returns service unavailable when the backend cannot be reached", async () 
         fullName: "Asha Patel",
         companyName: "Blue River Logistics",
         workEmail: "asha@blueriver.com",
-        country: "India",
         phoneOrWhatsapp: "+91 9876543210",
-        industry: "Logistics",
         primaryUseCase: "Lead Capture and Qualification",
-        monthlyEnquiryVolume: "100-250",
-        timeline: "This month",
       }),
     });
 

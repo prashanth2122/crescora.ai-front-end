@@ -633,20 +633,26 @@ export const siteContent = {
           "Share the workflow you want to improve. We will review it and schedule the next step.",
         submitIdle: "Request My Demo",
         note: "Your demo will focus on a real workflow from your business.",
+        benefits: [] as const,
       },
       contact: {
-        badge: "Workflow enquiry",
-        title: "Request a Crescora.ai demo",
+        badge: "Book a free demo",
+        title: "See How Crescora.ai Can Automate Your Business",
         description:
-          "Tell us about your workflow, timeline, and operating context. We will review it and suggest the best next step.",
-        submitIdle: "Request My Demo",
-        note: "We review the workflow first and follow up with the right next step.",
+          "Tell us what you'd like to automate. We'll show you a personalized workflow for your business.",
+        submitIdle: "Book My Free Demo",
+        note: "Your demo will focus on the workflow that matters most to your business.",
+        benefits: [
+          "No commitment",
+          "Personalized business demo",
+          "Our team will contact you to schedule a convenient time",
+        ] as const,
       },
     },
     labels: {
       fullName: "Full name",
       companyName: "Company name",
-      workEmail: "Work email",
+      workEmail: "Email",
       country: "Country",
       phoneOrWhatsapp: "Phone / WhatsApp",
       industry: "Industry",
@@ -655,7 +661,7 @@ export const siteContent = {
       timeline: "Expected timeline",
       preferredChannel: "Preferred channel",
       currentTools: "Current tools",
-      keyProblem: "Tell us briefly how you handle this today",
+      keyProblem: "Tell us briefly about your requirement",
     },
     hints: {
       currentTools: "Optional",
@@ -670,7 +676,7 @@ export const siteContent = {
       country: "Select country",
       currentTools: "Website, WhatsApp, CRM, Google Sheets, team inbox, etc.",
       keyProblem:
-        "Briefly explain your current process, tools, or bottlenecks.",
+        "Briefly tell us what you want to automate.",
     },
     selectPlaceholders: {
       industry: "Select industry",
@@ -1045,7 +1051,7 @@ export const siteContent = {
       note: "Start with one workflow. Prove value. Expand with confidence.",
       summary:
         "Tell us how your team currently handles enquiries, bookings, documents, payments, support, or follow-ups. We will map your process and show the fastest Crescora AI automation to launch first.",
-      description: "Tell us your industry and current process. We’ll suggest the best starting workflow for your business.",
+      description: "Tell us your current process. We’ll suggest the best starting workflow for your business.",
       primary: { label: "Book Free Demo", href: "/contact" },
       secondary: { label: "Discuss My Workflow", href: "/contact" },
     },
@@ -1089,7 +1095,7 @@ export const siteContent = {
       eyebrow: "What happens next?",
       title: "Your request becomes a workflow review, not just a sales callback.",
       items: [
-        "We review your business, industry, and workflow",
+        "We review your business and workflow",
         "We identify the best first automation",
         "We map the customer journey and handover points",
         "We confirm scope, channels, timeline, and provider costs",
@@ -4186,13 +4192,14 @@ export const siteContent = {
         description:
           "This policy explains the information we collect through the website, demo forms, and related communications, and how we use that information to respond to requests and operate our business.",
       },
-      updatedOn: "June 23, 2026",
+      updatedOn: "August 25, 2026",
       sections: [
         {
           title: "Information we collect",
           paragraphs: [
-            "When you contact us or request a demo, we may collect your name, company name, work email, phone or WhatsApp number, country, industry, primary use case, expected timeline, monthly enquiry volume, preferred channel, current tools, and the problem you want to solve.",
-            "We may also collect page URL, referrer URL, campaign parameters such as UTM values, and high-level website interaction data such as page views, CTA clicks, contact-page visits, scroll depth, and lead-form funnel events so we can understand where an enquiry came from and how visitors move through the site.",
+            "When you contact us or request a demo, we may collect your name, company name, work email, phone or WhatsApp number, the workflow you want to automate, and an optional description of your requirement through the initial website form.",
+            "We may collect additional qualification details later during follow-up, such as industry, country, expected timeline, monthly enquiry volume, preferred channel, or current tools, when needed to prepare the right demo or proposal.",
+            "We may also collect page URL, referrer URL, campaign parameters such as UTM values, and high-level website interaction data such as page views, CTA clicks, contact-page visits, scroll depth, lead-form funnel events, and contact-page conversion measurement so we can understand where an enquiry came from and how visitors move through the site.",
           ],
         },
         {
@@ -4299,20 +4306,20 @@ export const siteContent = {
         description:
           "This policy explains the current cookie and storage behavior on the website and how you can control browser-based preferences.",
       },
-      updatedOn: "June 18, 2026",
+      updatedOn: "August 25, 2026",
       sections: [
         {
           title: "Current cookie behavior",
           paragraphs: [
-            "The checked-in website now loads Google tag / Google Analytics on the public marketing site to measure page views, CTA clicks, contact-page traffic, scroll depth, lead-form funnel events, and frontend performance metrics.",
+            "The checked-in website now loads Google tag / Google Analytics on the public marketing site to measure page views, CTA clicks, contact-page traffic, scroll depth, lead-form funnel events, and frontend performance metrics, and the contact page also configures a Google Ads conversion tag for lead-funnel measurement.",
             "The checked-in site still does not ship a cookie banner or preference center. Browser, hosting, or embedded services may also set technical data needed to deliver the page, protect the site, or support third-party features.",
           ],
         },
         {
           title: "How we use similar technologies",
           paragraphs: [
-            "Analytics is currently used to understand site performance, campaign quality, contact intent, and lead-form completion patterns so we can improve the marketing funnel and page experience.",
-            "We still keep the implementation limited to operational analytics rather than ad personalization, and we will update this policy again if the behavior changes materially.",
+            "Analytics is currently used to understand site performance, campaign quality, contact intent, lead-form completion patterns, and contact-page conversion measurement so we can improve the marketing funnel and page experience.",
+            "We still keep the implementation limited to operational analytics and contact-page conversion measurement rather than broad ad personalization, and we will update this policy again if the behavior changes materially.",
           ],
         },
         {

@@ -9,6 +9,9 @@ import {
   getMarketingParams,
   getPageAnalyticsContext,
   getPageCategory,
+  hasGoogleTagId,
+  queueAnalyticsCommand,
+  resolveGoogleTagId,
   sanitizeEventName,
 } from "@/lib/analytics";
 
@@ -104,4 +107,66 @@ test("marketing helper only keeps supported parameters", () => {
       utm_term: "workflow",
     },
   );
+});
+
+test("google tag helpers normalize ids and empty values", () => {
+  assert.equal(resolveGoogleTagId("  AW-18408106899  ", "fallback"), "AW-18408106899");
+  assert.equal(resolveGoogleTagId("   ", "fallback"), "fallback");
+  assert.equal(hasGoogleTagId(" G-027GJ53KYV "), true);
+  assert.equal(hasGoogleTagId("   "), false);
+});
+
+test("analytics queue uses gtag when available", () => {
+  const originalWindow = globalThis.window;
+  const calls: unknown[][] = [];
+
+  globalThis.window = {
+    dataLayer: [],
+    gtag: (...args: unknown[]) => {
+      calls.push(args);
+    },
+    location: {
+      assign: () => {},
+    },
+  } as Window & typeof globalThis;
+
+  try {
+    queueAnalyticsCommand("event", "conversion", {
+      send_to: "AW-18408106899/pi2pCJS3rOccEJPX1clE",
+    });
+    assert.equal(calls.length, 1);
+    assert.equal(calls[0]?.[0], "event");
+    assert.equal(calls[0]?.[1], "conversion");
+    assert.equal(
+      (calls[0]?.[2] as { send_to?: string })?.send_to,
+      "AW-18408106899/pi2pCJS3rOccEJPX1clE",
+    );
+  } finally {
+    globalThis.window = originalWindow;
+  }
+});
+
+test("analytics queue falls back to dataLayer when gtag is not ready", () => {
+  const originalWindow = globalThis.window;
+  const dataLayer: unknown[] = [];
+
+  globalThis.window = {
+    dataLayer,
+  } as Window & typeof globalThis;
+
+  try {
+    queueAnalyticsCommand("event", "conversion", {
+      send_to: "AW-18408106899/pi2pCJS3rOccEJPX1clE",
+    });
+    assert.equal(dataLayer.length, 1);
+    const queued = dataLayer[0] as unknown[];
+    assert.equal(queued[0], "event");
+    assert.equal(queued[1], "conversion");
+    assert.equal(
+      (queued[2] as { send_to?: string })?.send_to,
+      "AW-18408106899/pi2pCJS3rOccEJPX1clE",
+    );
+  } finally {
+    globalThis.window = originalWindow;
+  }
 });

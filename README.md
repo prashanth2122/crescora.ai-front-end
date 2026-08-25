@@ -36,8 +36,11 @@ The public site now includes a Google tag / GA4 integration for the marketing fu
 
 - default measurement ID fallback: `G-027GJ53KYV`
 - override it with `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- the `/contact` page also configures a Google Ads tag with fallback ID `AW-18408106899`; override it with `NEXT_PUBLIC_CONTACT_PAGE_GOOGLE_ADS_ID`
+- the `/contact` page also emits the Google Ads conversion event `AW-18408106899/pi2pCJS3rOccEJPX1clE` on page load; override it with `NEXT_PUBLIC_CONTACT_PAGE_GOOGLE_ADS_CONVERSION_ID`
 - production sends analytics automatically when a measurement ID is available
 - local development does **not** send analytics unless you opt in with `NEXT_PUBLIC_ENABLE_ANALYTICS_IN_DEV=true`
+- when global GA is disabled, the contact page still loads its own Google tag so the Ads conversion config can run on `/contact`
 
 The shared analytics layer emits:
 
@@ -74,7 +77,7 @@ This keeps route components thin and makes future localization work straightforw
 - homepage conversion copy, CTA labels, automation cards, platform showcase tabs, FAQ text, and implementation sequencing are centralized in `src/lib/site-content.ts` and `src/lib/site-data.ts` so the public messaging can evolve without changing the route shell
 - the homepage product screenshots now render through `src/components/site/product-screenshot-viewer.tsx`; desktop keeps the cropped preview plus full-screen modal proof, while mobile disables the full-screen trigger, shows the screenshots directly, and uses a native selector for the platform-section view switcher
 - homepage testimonial section copy stays in `src/lib/site-content.ts`, while the editable review entries now live in `src/content/homepage-reviews.json` and are validated through `src/lib/homepage-reviews.ts`; each review can now include optional `imageUrl` and `imageAlt` fields, and the homepage renders that proof image inside the testimonial card when supplied
-- the homepage now uses `Book a Free Demo` as the primary conversion path, keeps `Watch the Product Demo` anchored to `#homepage-demo`, and uses a shorter homepage lead form while the fuller workflow enquiry intake stays on `/contact`
+- the homepage now uses `Book a Free Demo` as the primary conversion path, keeps `Watch the Product Demo` anchored to `#homepage-demo`, and the `/contact` form now uses a shorter first-step demo enquiry focused on lead capture rather than full qualification
 - the homepage can now render a trust-focused YouTube demo section when `HOMEPAGE_DEMO_VIDEO_URL` is configured; the site accepts standard YouTube watch/share/embed URLs and normalizes them into a privacy-friendlier embed, and the chosen YouTube video must allow embedding or YouTube will block playback inside the page
 - in local development, if `HOMEPAGE_DEMO_VIDEO_URL` is missing or invalid, the homepage now shows a visible setup notice instead of failing silently
 - the shared header keeps only `Product`, `Solutions`, `Industries`, `Resources`, and `Pricing` in the main nav, with `Sign In` plus `Book a Free Demo` on the right; on mobile the primary demo CTA remains visible beside the menu button

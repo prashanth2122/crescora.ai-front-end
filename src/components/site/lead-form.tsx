@@ -26,7 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { ChevronDown, Loader2, ShieldCheck } from "lucide-react";
+import { ArrowRight, Check, Loader2, ShieldCheck } from "lucide-react";
 
 type FormState = {
   fullName: string;
@@ -67,16 +67,15 @@ const variantConfig = {
       "fullName",
       "companyName",
       "workEmail",
-      "country",
       "phoneOrWhatsapp",
       "primaryUseCase",
     ] as const,
-    showCountry: true,
-    showIndustry: true,
-    showMonthlyVolume: true,
-    showTimeline: true,
-    showPreferredChannel: true,
-    showCurrentTools: true,
+    showCountry: false,
+    showIndustry: false,
+    showMonthlyVolume: false,
+    showTimeline: false,
+    showPreferredChannel: false,
+    showCurrentTools: false,
   },
   homepage: {
     analyticsVariant: "homepage_demo_request",
@@ -278,7 +277,12 @@ export function LeadForm({ variant = "contact" }: { variant?: LeadFormVariant })
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...form,
+          fullName: form.fullName,
+          companyName: form.companyName,
+          workEmail: form.workEmail,
+          phoneOrWhatsapp: form.phoneOrWhatsapp,
+          primaryUseCase: form.primaryUseCase,
+          keyProblem: form.keyProblem,
           pageUrl,
           referrerUrl,
           utmSource,
@@ -381,46 +385,6 @@ export function LeadForm({ variant = "contact" }: { variant?: LeadFormVariant })
           />
         </Field>
 
-        <Field id="workEmail" label={siteContent.leadForm.labels.workEmail} required>
-          <Input
-            id="workEmail"
-            type="email"
-            value={form.workEmail}
-            onChange={(event) => {
-              trackFormStart();
-              updateField("workEmail", event.target.value);
-            }}
-            onBlur={(event) =>
-              trackRequiredFieldCompletion("workEmail", event.target.value, "input")
-            }
-            placeholder={siteContent.leadForm.placeholders.workEmail}
-          />
-        </Field>
-
-        {config.showCountry ? (
-          <Field id="country" label={siteContent.leadForm.labels.country} required>
-            <div className="relative">
-              <select
-                id="country"
-                value={form.country}
-                onChange={(event) => {
-                  trackFormStart();
-                  updateField("country", event.target.value);
-                  trackRequiredFieldCompletion("country", event.target.value, "select");
-                }}
-                className="h-10 w-full appearance-none rounded-lg border border-input bg-transparent px-3 py-2 pr-8 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm"
-              >
-                {leadFormOptions.countries.map((item) => (
-                  <option key={item.value} value={item.value}>
-                    {item.label}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
-            </div>
-          </Field>
-        ) : null}
-
         <Field
           id="phoneOrWhatsapp"
           label={siteContent.leadForm.labels.phoneOrWhatsapp}
@@ -444,13 +408,30 @@ export function LeadForm({ variant = "contact" }: { variant?: LeadFormVariant })
           />
         </Field>
 
+        <Field id="workEmail" label={siteContent.leadForm.labels.workEmail} required>
+          <Input
+            id="workEmail"
+            type="email"
+            value={form.workEmail}
+            onChange={(event) => {
+              trackFormStart();
+              updateField("workEmail", event.target.value);
+            }}
+            onBlur={(event) =>
+              trackRequiredFieldCompletion("workEmail", event.target.value, "input")
+            }
+            placeholder={siteContent.leadForm.placeholders.workEmail}
+          />
+        </Field>
+
         {config.showIndustry ? (
-          <Field id="industry" label={siteContent.leadForm.labels.industry}>
+          <Field id="industry" label={siteContent.leadForm.labels.industry} required>
             <Select
               value={form.industry}
               onValueChange={(value) => {
                 trackFormStart();
                 updateField("industry", value);
+                trackRequiredFieldCompletion("industry", value, "select");
               }}
             >
               <SelectTrigger id="industry">
@@ -619,10 +600,27 @@ export function LeadForm({ variant = "contact" }: { variant?: LeadFormVariant })
                 {siteContent.leadForm.submitLoading}
               </>
             ) : (
-              copy.submitIdle
+              <>
+                <span>{copy.submitIdle}</span>
+                {variant === "contact" ? <ArrowRight className="ml-2 h-4 w-4" /> : null}
+              </>
             )}
           </Button>
-          <p className="text-sm leading-7 text-zinc-500">{copy.note}</p>
+          {copy.benefits.length > 0 ? (
+            <div className="grid gap-2 text-sm text-zinc-600 sm:grid-cols-3">
+              {copy.benefits.map((benefit) => (
+                <div
+                  key={benefit}
+                  className="flex items-start gap-2 rounded-2xl border border-zinc-200 bg-zinc-50/80 px-3 py-3"
+                >
+                  <Check className="mt-0.5 h-4 w-4 flex-none text-emerald-600" />
+                  <span className="leading-6">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm leading-7 text-zinc-500">{copy.note}</p>
+          )}
           {message ? (
             <p className={status === "success" ? "text-sm text-emerald-700" : "text-sm text-rose-600"}>
               {message}
