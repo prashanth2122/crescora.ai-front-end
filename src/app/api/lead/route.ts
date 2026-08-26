@@ -16,6 +16,8 @@ type LeadPayload = {
   utmCampaign?: string | null;
 };
 
+const DEFAULT_MAIN_PROBLEM_TO_SOLVE = "No additional requirement provided.";
+
 function isBlank(value: unknown) {
   return typeof value !== "string" || value.trim().length === 0;
 }
@@ -107,6 +109,11 @@ function buildCustomerIntakePayload(body: LeadPayload, request: Request) {
     toCleanString(request.headers.get("referer"));
   const referrerUrl = toCleanString(body.referrerUrl);
   const utm = extractUtmParams(pageUrl);
+  const mainProblemToSolve =
+    toCleanString(body.keyProblem) ?? DEFAULT_MAIN_PROBLEM_TO_SOLVE;
+  const utmSource = toCleanString(body.utmSource) ?? utm.utmSource;
+  const utmMedium = toCleanString(body.utmMedium) ?? utm.utmMedium;
+  const utmCampaign = toCleanString(body.utmCampaign) ?? utm.utmCampaign;
 
   return {
     formName: "Demo request",
@@ -115,12 +122,12 @@ function buildCustomerIntakePayload(body: LeadPayload, request: Request) {
     workEmail: body.workEmail?.trim(),
     phoneNumber: body.phoneOrWhatsapp?.trim(),
     primaryWorkflowToAutomate: body.primaryUseCase?.trim(),
-    mainProblemToSolve: toCleanString(body.keyProblem),
-    pageUrl,
-    referrerUrl,
-    utmSource: toCleanString(body.utmSource) ?? utm.utmSource,
-    utmMedium: toCleanString(body.utmMedium) ?? utm.utmMedium,
-    utmCampaign: toCleanString(body.utmCampaign) ?? utm.utmCampaign,
+    mainProblemToSolve,
+    ...(pageUrl ? { pageUrl } : {}),
+    ...(referrerUrl ? { referrerUrl } : {}),
+    ...(utmSource ? { utmSource } : {}),
+    ...(utmMedium ? { utmMedium } : {}),
+    ...(utmCampaign ? { utmCampaign } : {}),
   };
 }
 

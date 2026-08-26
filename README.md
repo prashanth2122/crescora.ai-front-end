@@ -130,7 +130,7 @@ This keeps route components thin and makes future localization work straightforw
 - WhatsApp, direct contact phone, and support contact surfaces are centralized through `src/lib/app-config.ts`, `src/components/site/site-header.tsx`, `src/components/site/site-footer.tsx`, and `src/components/site/whatsapp-floating-button.tsx`; if the env vars are unset, the site falls back to the defaults in `src/lib/app-config.ts`
 - `.env.example` now lists the public-site contact, direct contact phone, and analytics variables expected for local development and deployment
 - `.env.example` also includes `HOMEPAGE_DEMO_VIDEO_URL` for the optional homepage demo video embed
-- the public lead form now posts to the local `/api/lead` route, which forwards submissions to the backend customer-intake API using a short-lived token; the shared backend origin lives in `src/lib/app-config.ts` and can still be overridden with `CUSTOMER_INTAKE_API_BASE_URL` (default `http://localhost:4000`)
+- the public lead form now posts to the local `/api/lead` route, which forwards submissions to the backend customer-intake API using a short-lived token; the shared backend origin lives in `src/lib/app-config.ts` and can still be overridden with `CUSTOMER_INTAKE_API_BASE_URL` (default `http://localhost:4000`). A blank requirement textarea is forwarded as the default `mainProblemToSolve` value `No additional requirement provided.` so the backend always receives a valid string, while other blank optional attribution fields are still omitted instead of being serialized as `null`.
 - footer brand copy and footer navigation labels are centralized in `src/lib/locales/en.ts` and `src/lib/locales/hi.ts` so locale-specific trust text stays aligned
 
 ## SEO Architecture

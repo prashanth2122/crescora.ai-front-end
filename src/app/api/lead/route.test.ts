@@ -131,6 +131,80 @@ test("forwards the lead form to the customer intake API with a signed token", as
   }
 });
 
+test("uses a default requirement text when the optional textarea is blank", async () => {
+  const originalFetch = globalThis.fetch;
+  const calls: Array<{
+    url: string;
+    init?: RequestInit;
+  }> = [];
+
+  globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
+    const url = String(input);
+    calls.push({ url, init });
+
+    if (url.endsWith("/customer-facing-website/token")) {
+      return new Response(
+        JSON.stringify({
+          tokenType: "Bearer",
+          token: "signed-token",
+          expiresAt: "2026-06-07T00:05:00.000Z",
+          expiresInSeconds: 300,
+        }),
+        {
+          status: 200,
+          headers: {
+            "content-type": "application/json",
+          },
+        },
+      );
+    }
+
+    if (url.endsWith("/customer-facing-website/intakes")) {
+      return new Response(JSON.stringify({ id: "inq_2" }), {
+        status: 201,
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+    }
+
+    throw new Error(`Unexpected fetch call: ${url}`);
+  }) as typeof fetch;
+
+  try {
+    const request = new Request("http://localhost:3001/api/lead", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        origin: "http://localhost:3001",
+        referer: "http://localhost:3001/contact",
+      },
+      body: JSON.stringify({
+        fullName: "Asha Patel",
+        companyName: "Blue River Logistics",
+        workEmail: "asha@blueriver.com",
+        phoneOrWhatsapp: "+91 9876543210",
+        primaryUseCase: "Lead Capture and Qualification",
+        keyProblem: "   ",
+      }),
+    });
+
+    const response = await POST(request);
+    const intakeBody = JSON.parse(String(calls[1]?.init?.body)) as Record<
+      string,
+      unknown
+    >;
+
+    assert.equal(response.status, 201);
+    assert.equal(
+      intakeBody.mainProblemToSolve,
+      "No additional requirement provided.",
+    );
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
+
 test("rejects incomplete submissions before calling the backend", async () => {
   const originalFetch = globalThis.fetch;
   let called = false;
