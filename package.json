@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "seo:indexnow": "node scripts/indexnow.mjs",
+    "test:indexnow": "node --test scripts/indexnow.test.mjs",
     "dev": "node --max-old-space-size=2048 ./node_modules/next/dist/bin/next dev --webpack",
     "dev:turbo": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/analytics.test.ts src/lib/app-config.test.ts src/lib/locales.test.ts src/lib/page-copy/hi.test.ts src/lib/product-image-dimensions.test.ts src/lib/seo.test.ts src/lib/site-content.test.ts src/lib/youtube.test.ts src/app/api/lead/route.test.ts"
+    "test": "tsx --test src/lib/analytics.test.ts src/lib/app-config.test.ts src/lib/locales.test.ts src/lib/page-copy/hi.test.ts src/lib/product-image-dimensions.test.ts src/lib/seo.test.ts src/lib/site-content.test.ts src/lib/youtube.test.ts src/app/api/lead/route.test.ts scripts/indexnow.test.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

@@ -136,6 +136,14 @@ This keeps route components thin and makes future localization work straightforw
 
 ## SEO Architecture
 
+### Search engine submissions
+
+- Submit `https://www.crescora.ai/sitemap.xml` through Google Search Console and Bing Webmaster Tools. Discovered URLs, accepted submissions, and indexed pages are different evidence levels.
+- IndexNow support: `npm run seo:indexnow -- / /pricing` previews changed production URLs without submitting. After deploying the public ownership file, run `npm run seo:indexnow -- / /pricing --submit` to notify participating engines. Supply only added, changed, or deleted page URLs after a successful production deployment; this command is manual and is not automatically wired into Vercel builds.
+- `scripts/indexnow.mjs` validates the production origin, rejects query/fragment variants, deduplicates URLs, checks the live ownership file, and sends one bounded request without retries. The key file in `public/` is a public ownership proof, not an account credential. HTTP 202 means validation is pending; HTTP 200 does not guarantee indexing. Review submission status in Bing before retrying an ambiguous timeout.
+- Run `npm run test:indexnow` for ownership, URL boundary, pending-validation and throttling coverage. IndexNow supplements the sitemap; it does not submit pages to every search engine.
+- The support widget's WhatsApp image deliberately uses `alt=""` and `aria-hidden="true"` because its adjacent link text supplies the accessible name. An automated empty-alt notice should not be resolved by duplicating that label for screen readers.
+
 The SEO stack now uses a single production host, shared metadata helpers, self-canonical public routes, localized alternates, and sitemap coverage generated from the application route data.
 
 Core implementation points:
