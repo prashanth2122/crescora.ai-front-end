@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     path: "/",
   }),
   metadataBase: siteMetadataBase,
+  verification: {
+    other: {
+      "msvalidate.01": "260344519E18042598E2759429608AD6",
+    },
+  },
   applicationName: site.productFull,
   category: "Business automation software",
   creator: site.name,

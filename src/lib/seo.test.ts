@@ -2135,7 +2135,19 @@ test("homepage places testimonial proof after the FAQ and before the final CTA",
   assert.ok(faqIndex < testimonialIndex);
   assert.ok(testimonialIndex < finalCtaIndex);
   assert.match(homeHtml, /Feedback from businesses exploring and using Crescora\.ai to automate customer conversations and workflows\./);
-  assert.match(homeHtml, /Google Review · 24 Jun/);
+  assert.match(homeHtml, /Justdial Review · 24 Jun/);
+});
+
+test("homepage moves from the workflow model to platform proof without the removed touchpoint section", () => {
+  const homeHtml = renderToStaticMarkup(HomePage());
+  const workflowIndex = homeHtml.indexOf("One workflow from customer conversation to completed action.");
+  const platformIndex = homeHtml.indexOf("Build, operate, and improve customer automation from one workspace.");
+
+  assert.ok(workflowIndex >= 0);
+  assert.ok(platformIndex > workflowIndex);
+  assert.doesNotMatch(homeHtml, /One intelligent workflow\. Every customer touchpoint\./);
+  assert.doesNotMatch(homeHtml, /aria-label="Connected customer touchpoints"/);
+  assert.doesNotMatch(homeHtml, /class="homepage-ecosystem/);
 });
 
 test("homepage shows a local setup notice in development when the demo video url is missing", () => {

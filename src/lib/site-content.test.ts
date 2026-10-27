@@ -58,10 +58,14 @@ test("homepage content matches the new brand, structure, and proof model", () =>
   assert.equal(siteContent.homepage.hero.proofStrip[5], "Governance & Control");
   assert.equal(siteContent.homepage.demoVideo.title, "See one complete business workflow in action.");
   assert.equal(siteContent.homepage.demoVideo.whatYouWillSee.length, 4);
+  assert.equal(siteContent.homepage.ecosystem.nodes.length, 8);
+  assert.equal(siteContent.homepage.ecosystem.nodes[0]?.id, "crm");
+  assert.equal(siteContent.homepage.ecosystem.nodes[7]?.id, "outcomes");
+  assert.equal(siteContent.homepage.ecosystem.principles.length, 3);
   assert.equal(siteContent.homepage.testimonial.title, "What clients say about Crescora.ai");
   assert.equal(homepageReviews.length, 1);
-  assert.equal(homepageReviews[0]?.sourceLabel, "Google Review");
-  assert.equal(homepageReviews[0]?.logoName, "Google");
+  assert.equal(homepageReviews[0]?.sourceLabel, "Justdial Review");
+  assert.equal(homepageReviews[0]?.logoName, "Brand");
   assert.equal(homepageReviews[0]?.imageUrl, "/reviews/vidya-review.png");
   assert.match(homepageReviews[0]?.imageAlt ?? "", /Vidya/);
   assert.match(siteContent.homepage.demoVideo.note, /product walkthrough/);

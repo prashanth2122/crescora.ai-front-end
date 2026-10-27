@@ -62,7 +62,8 @@ This keeps route components thin and makes future localization work straightforw
 
 - public brand naming is `Crescora.ai`; keep visible homepage, footer, metadata, and social references aligned to that canonical spelling
 - approved homepage CTAs are `Book a Free Demo`, `Watch the Product Demo`, `Book a Demo for My Business`, `Request My Demo`, `Chat on WhatsApp`, and `Sign In`
-- the homepage positions Crescora.ai as AI workflow automation for customer operations, ordered as hero, product demo video, automation coverage, workflow model, platform showcase, industries, control/trust, implementation, FAQ, testimonial proof, and final conversion CTA
+- the homepage positions Crescora.ai as AI workflow automation for customer operations, ordered as hero, product demo video, automation coverage, workflow model, connected customer journey, platform showcase, industries, control/trust, implementation, FAQ, testimonial proof, and final conversion CTA
+- the homepage moves directly from the workflow model to the platform showcase; the connected customer journey diagram ("One intelligent workflow. Every customer touchpoint.") is no longer displayed
 - public claims must stay proof-safe: avoid guaranteed percentages, unconditional launch timelines, fake logos, fake testimonials, or compliance certifications that are not actually held
 - `/demo` is the public sample-demo entry point; it links to workflow examples and workflow detail pages with clear demo disclaimers instead of presenting a fake live customer environment
 - `/workflow-examples` is the public workflow examples hub; old `/proof` URLs are compatibility redirects and should not be used for new public links
@@ -139,6 +140,7 @@ The SEO stack now uses a single production host, shared metadata helpers, self-c
 
 Core implementation points:
 
+- `src/app/layout.tsx` publishes the Bing Webmaster Tools ownership tag through Next.js `metadata.verification.other`. Keep this tag after verification so ownership remains valid. Deploy the change before selecting **Verify** in Bing, then submit `https://www.crescora.ai/sitemap.xml`. A local tag or successful ownership verification does not prove search indexing.
 - `src/lib/seo.ts` is the shared metadata and JSON-LD helper layer for canonicals, robots, Open Graph, article metadata, FAQ/page/item-list schema, and `https://www.crescora.ai` URL generation
 - `src/lib/seo-social-image.tsx` is the shared route-image renderer used by Open Graph image files for share previews on key hub and detail routes
 - `src/app/favicon.ico`, `src/app/icon.png`, and `src/app/apple-icon.png` are generated from `public/logo only no bg.png` so the browser-tab, search-result, and device icon metadata all use the same no-background Crescora mark

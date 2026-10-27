@@ -343,6 +343,26 @@ export const siteContent = {
         },
       ],
     },
+    ecosystem: {
+      eyebrow: "ONE CONNECTED CUSTOMER JOURNEY",
+      title: "One intelligent workflow. Every customer touchpoint.",
+      description:
+        "Carry the conversation, customer context, and next best action across every channel and the systems your team already runs.",
+      coreLabel: "CRESCORA.AI",
+      coreTitle: "AI workflow engine",
+      coreDescription: "One shared context. A clear next action.",
+      nodes: [
+        { id: "crm", title: "CRM & systems", description: "Keep records in sync" },
+        { id: "voice", title: "Voice", description: "Guide natural conversations" },
+        { id: "whatsapp", title: "WhatsApp", description: "Continue without a reset" },
+        { id: "team", title: "Human team", description: "Step in with context" },
+        { id: "sms", title: "SMS", description: "Follow through at the right moment" },
+        { id: "web", title: "Web chat", description: "Turn visits into action" },
+        { id: "calendar", title: "Calendar", description: "Book in the same journey" },
+        { id: "outcomes", title: "Outcomes", description: "See what happens next" },
+      ],
+      principles: ["One customer context", "Connected business actions", "People stay in control"],
+    },
     platformProof: {
       eyebrow: "THE CRESCORA.AI PLATFORM",
       title: "Build, operate, and improve customer automation from one workspace.",
